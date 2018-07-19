@@ -1,0 +1,169 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a9d:2363:0:0:0:0:0 with SMTP id k32-v6csp695629otd;
+        Wed, 18 Jul 2018 09:29:42 -0700 (PDT)
+X-Google-Smtp-Source: AAOMgpfVp/QJFgys4Rzf7n4GKABc/EVRCgcSl+x8hC14/tya+jkZiR29HRX+s55j9+s8baZqpNdZ
+X-Received: by 2002:ac8:32a:: with SMTP id q42-v6mr6337391qtg.343.1531931382362;
+        Wed, 18 Jul 2018 09:29:42 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1531931382; cv=none;
+        d=google.com; s=arc-20160816;
+        b=MdvX3t5CIzbCH+Dxcmwo/RXCaiB8Vv6HIgH5+lU0GduteDfCjJwkAG2Vx0bkettFNk
+         UwCMuX585KVZHP2/jkHJy+cF65e47KNl59XxB0IkSl8owiYCT0Wgwfdm/nlbj1PPIbJV
+         AdW5WrZGhEn6piR0eW6D8PXWKu/YsKI6w+Lkbah3D+JCufR9gAQDmYwK8OCxoQgjRA0C
+         TvDLNgzBtdm4P9x3J2PbIYz8sq1FhZlO3xlN9mu/sNZPDTZdM4azlNtEDUaQy3FsBO/4
+         1SOC8EXwomzWX04WcCOwcuIzw1LAXJz1ty/Akk36uxSPq/C+BcUC7FYBDVi3VpO4Lpwt
+         z5jQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=references:in-reply-to:subject:date:content-transfer-encoding
+         :mime-version:to:from:message-id:dkim-signature:dkim-signature
+         :arc-authentication-results;
+        bh=TPyXGtYt8t2sI/dWbwbzywyb0cLPbKDHN7mVaPZQSAQ=;
+        b=Z8ig7dnj5PiSYJJrKvDtrM2DcvaRyuGECR2xQnYND4Y9H+W6br3LRmL6O/p0EJCnGs
+         DtbsKPoswZZy4hWwGTdzUpqwtkehBAx3C0Tz/gplX1UicCHQiKJG8Jf4Du6YZjcyQ23K
+         zKvgWC+b3NAvjx2MWG1TJlxCGC7Tw+hZ7uDze5PkOyiQc1xdAMpe3ju84k0NPWOavXCb
+         ZYEWJx4oTFiPUMuGfLkTrecqf+vgN9OIY6ZPFbFsMBuTBmwjCGk7AblEEuRuUa0HbfFy
+         8BwaXITGyaH/2oQee/Glf8b6EwmEp4XKk8FHFm2/Z+5X6BfbzhRayKJuiPZO3MbwiECK
+         pgWg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@kluyver.me.uk header.s=fm3 header.b=LoiIbn5C;
+       dkim=pass header.i=@messagingengine.com header.s=fm3 header.b=eyTIrBqp;
+       spf=pass (google.com: domain of thomas@kluyver.me.uk designates 64.147.123.21 as permitted sender) smtp.mailfrom=thomas@kluyver.me.uk
+Return-Path: <thomas@kluyver.me.uk>
+Received: from wout5-smtp.messagingengine.com (wout5-smtp.messagingengine.com. [64.147.123.21])
+        by mx.google.com with ESMTPS id j9-v6si3586665qtb.398.2018.07.18.09.29.41
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 18 Jul 2018 09:29:42 -0700 (PDT)
+Received-SPF: pass (google.com: domain of thomas@kluyver.me.uk designates 64.147.123.21 as permitted sender) client-ip=64.147.123.21;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@kluyver.me.uk header.s=fm3 header.b=LoiIbn5C;
+       dkim=pass header.i=@messagingengine.com header.s=fm3 header.b=eyTIrBqp;
+       spf=pass (google.com: domain of thomas@kluyver.me.uk designates 64.147.123.21 as permitted sender) smtp.mailfrom=thomas@kluyver.me.uk
+Received: from compute2.internal (compute2.nyi.internal [10.202.2.42])
+	by mailout.west.internal (Postfix) with ESMTP id 07089574
+	for <kurt@seifried.org>; Wed, 18 Jul 2018 12:29:40 -0400 (EDT)
+Received: from web3 ([10.202.2.213])
+  by compute2.internal (MEProxy); Wed, 18 Jul 2018 12:29:41 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=kluyver.me.uk;
+	 h=content-transfer-encoding:content-type:date:from:in-reply-to
+	:message-id:mime-version:references:subject:to:x-me-sender
+	:x-me-sender:x-sasl-enc; s=fm3; bh=TPyXGtYt8t2sI/dWbwbzywyb0cLPb
+	KDHN7mVaPZQSAQ=; b=LoiIbn5CqEtYZq0Rupu95XUmLPw7liBW4LBmeUFpYT1QZ
+	ymJagdN/Hn17M9JeFVt1QoEaPYCKwpfUTxisD/jqeTQ0lm6W/MHbWoSGQlsowKZr
+	cwbHqYM/ZTqFCTd+M9F9ff4M663dv5lrCnbtb/5ixQhCtsaYJt+DxHpbw3WJUEEw
+	XIUhLKCi6caKsHKF6QS6lVlY+mOl7VALlL35Az7EB1A/gQ5YEBILank9lwLWdmXK
+	V+WouJwJYU3SQPj5uq26wyNd0ALNREj2LF59hAIqZsewmRHI6lmzib1wNy8xKZVb
+	QdNoRQ13hCF4Gvkx+nQmDNKx+dqIZklftBewZ784Q==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=
+	messagingengine.com; h=content-transfer-encoding:content-type
+	:date:from:in-reply-to:message-id:mime-version:references
+	:subject:to:x-me-sender:x-me-sender:x-sasl-enc; s=fm3; bh=TPyXGt
+	Yt8t2sI/dWbwbzywyb0cLPbKDHN7mVaPZQSAQ=; b=eyTIrBqpdDXNa6cTGm08Xg
+	JVhkIWTmNHeGtZ7h1YoVaFwLaa/u7aL1HOR02mkeF7ex3aKrMBzf6k9FxytGsmy3
+	pDriJU2wvOhoqm61kjMQ/sx4GDcNNt/VmJwSwHiQ+z/WxV3hoZz4eq1eaBdjmEY/
+	fjE2Tu9Xd00BgFs5E1jJvWVb2UWXQaI4MTTAkQ9EIeFcobKcGPjid1n5Z3ZnSCg4
+	L2GurTuSmguTm8i1TXkoOf583djOhpl98hfe2VO0ITB56XL1yL3f2HJF+Yp/xmYT
+	5UHG0HD864lm8jlpOFqxrzLpVnrJeWxvjRoeMhZtIaSJjhz2OwRH5viteDPhng4Q
+	==
+X-ME-Proxy: <xmx:9GpPWzB7RFHidHlhGaBUwaXGlrLJyIZIEpVL7JHrAWoj7zM--4CS6Q>
+    <xmx:9GpPWyUDKahHLMMfP8CMpkpomB16pTqffghM9bDVZ9kmHTFZJjfU4Q>
+    <xmx:9GpPW1hPOnD-AHdRIO12GkVETxfQfnlj7E7QZcmXiPQtqrhZeLE6aA>
+    <xmx:9GpPW_UNsGvQazNwuUYgIy1hJwfgSCVp244o_ELpK2iWcL1qx7a1Uw>
+    <xmx:9GpPWxIHKrcI8_xKelxN8XT-t_ztKe-CqvDWohkqz8cqm7JAO5B03w>
+    <xmx:9GpPWykZ0Y8AV5gK7UJeEIQv0en5tIXRHxy5Yjz_WVVsezwuGZLlDw>
+X-ME-Sender: <xms:9GpPW0rYuiDsnbZqpyMGwS6lyYq7Z1hgy6jmhsCHR1velC6eUsMKaw>
+Received: by mailuser.nyi.internal (Postfix, from userid 99)
+	id 4877E9E488; Wed, 18 Jul 2018 12:29:40 -0400 (EDT)
+Message-Id: <1531931380.767231.1445071792.618D9F7C@webmail.messagingengine.com>
+From: Thomas Kluyver <thomas@kluyver.me.uk>
+To: kurt@seifried.org
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+X-Mailer: MessagingEngine.com Webmail Interface - ajax-e74bb3a0
+Date: Wed, 18 Jul 2018 17:29:40 +0100
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ thomas@kluyver.me.uk
+In-Reply-To: <20180718161512.5378.99256@shiny-2.local>
+References: <20180718161512.5378.99256@shiny-2.local>
+
+I accept
+
+On Wed, Jul 18, 2018, at 5:15 PM, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at=20
+> https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use=20
+> (assuming you filled out the CVE form and want one, we can't use the=20
+> data until you accept the MITRE CVE Terms of Use).=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you agree=
+=20
+> to the MITRE CVE Terms of Use and we will add a copy of the email to the=
+=20
+> DWF MITRE CVE Terms of Use acceptance data at=20
+> https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/ma=
+ster/Terms-Of-Use
+>=20
+> The reason we use a complete copy of the email is that it provides an=20
+> artifact showing that the email address accepted the Terms of Use, when=20
+> they were accepted and so on.=20
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore=20
+> this message, however we may resend it at some point in the future, if=20
+> you don't want any future emails simply reply with "unsubscribe" or=20
+> "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to=
+=20
+> the block list so we don't spam you with these, please note that this=20
+> will prevent you from being able to accept the MITRE CVE Terms of Use=20
+> via the DWF automatically in future (you'll have to manually ask). But=20
+> again, if you have no idea what a CVE is then you can ignore this/ask to=
+=20
+> be added to the block list with no problems.=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common Vulnerabilities=20
+> and Exposures (CVE=C2=AE), you hereby grant to The MITRE Corporation (MIT=
+RE)=20
+> and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-
+> exclusive, no-charge, royalty-free, irrevocable copyright license to=20
+> reproduce, prepare derivative works of, publicly display, publicly=20
+> perform, sublicense, and distribute such materials and derivative works.=
+=20
+> Unless required by applicable law or agreed to in writing, you provide=20
+> such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF=20
+> ANY KIND, either express or implied, including, without limitation, any=20
+> warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or=
+=20
+> FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-
+> exclusive, no-charge, royalty-free, irrevocable copyright license to=20
+> reproduce, prepare derivative works of, publicly display, publicly=20
+> perform, sublicense, and distribute Common Vulnerabilities and Exposures=
+=20
+> (CVE=C2=AE). Any copy you make for such purposes is authorized provided t=
+hat=20
+> you reproduce MITRE's copyright designation and this license in any such=
+=20
+> copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE=20
+> ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION=20
+> HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION,=20
+> ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL=20
+> WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY=20
+> WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY=20
+> RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A=20
+> PARTICULAR PURPOSE.
+>=20
+> A copy is available at=20
+> https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/ma=
+ster/Terms-Of-Use.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org manually=
+=20
+> with your question/concerns/etc.=20
+>=20

@@ -40,6 +40,7 @@ amies8888test@gmail.com
 an7i21@gmail.com
 anagawat@fb.com
 anandkmr27@gmail.com
+andres@clarifiedsecurity.com
 andrewklaus@gmail.com
 andrewsh@debian.org
 anemec@redhat.com
@@ -334,6 +335,7 @@ parichay1012@gmail.com
 patrick@puiterwijk.org
 paul-emmanuel.raoul@skyplabs.net
 paul.sokolovsky+cve@linaro.org
+paulcher@icloud.com
 payloads@aliyun.com
 pdp@exim.org
 penghua@silence.com.cn
@@ -432,6 +434,7 @@ theblazehen@theblazehen.com
 thom@chef.io
 thomas.gerbet@enalean.com
 thomas.ward@owasp.org
+thomas@kluyver.me.uk
 thomas@orgis.org
 thomasv@electrum.org
 tmilos@gmail.com
@@ -451,6 +454,7 @@ vuln_reporter@srcms.xyz
 vulncoord@ficora.fi
 wangyihanger@gmail.com
 whitehatck01@gmail.com
+whoisclay@outlook.com
 wireghoul@gmail.com
 wissambashour@gmail.com
 wojciech.regula@securing.pl
