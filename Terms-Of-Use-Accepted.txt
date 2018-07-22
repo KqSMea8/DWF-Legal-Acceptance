@@ -340,6 +340,7 @@ paul.sokolovsky+cve@linaro.org
 paulcher@icloud.com
 payloads@aliyun.com
 pdp@exim.org
+pear-group@php.net
 penghua@silence.com.cn
 petr.spacek@nic.cz
 pilou@gmx.com
