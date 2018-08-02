@@ -102,6 +102,7 @@ cve-dwf-request@leo.gaspard.io
 cve.tigusoft@gmail.com
 cve@unsecure.blog
 cve@whitehats.nl
+cvereports@movermeyer.com
 cvereq+adv20181@moritz-naumann.com
 d.naumenko.a@gmail.com
 daniel@elttam.com.au
@@ -148,6 +149,7 @@ eystein.maloy.stenberg@northern.tech
 f3i@t00ls.net
 fabian.freyer@physik.tu-berlin.de
 fabian.ullrich@stud.tu-darmstadt.de
+fabio.alessandrelli@gmail.com
 fdcarl@fdcarl.com
 fedor@indutny.com
 fhalva@gmail.com
