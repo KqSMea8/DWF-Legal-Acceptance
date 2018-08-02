@@ -5,6 +5,7 @@
 651162013@qq.com
 CYoung@tripwire.com
 David.Turner@twosigma.com
+Esdevelo@Gmail.com
 Evan.Ward@nrl.navy.mil
 Grega.Preseren@snt-svetovanje.si
 Melbourne@sectalks.org
@@ -128,6 +129,7 @@ drumsmith101@hotmail.com
 dwfault@163.com
 dwmw2@infradead.org
 dylanishappy1@gmail.com
+ebeltiesdamian@gmail.com
 ehashman@debian.org
 ekwan@tyro.com
 elarlang@gmail.com
@@ -197,6 +199,7 @@ illya@iluxonchik.me
 imdb95@gmail.com
 info@mahara.org
 insaneboarder234@gmail.com
+iremembermodems@gmail.com
 ismail.sec.dev@gmail.com
 j.singh@sec-consult.com
 jacksonfylle@gmail.com
@@ -324,6 +327,7 @@ nazira.carlage@dell.com
 neal@fb.com
 ned@forallsecure.com
 nenolod@dereferenced.org
+nenolod@gmail.com
 ngregory@nyu.edu
 nhoyadx@gmail.com
 niteshvai67@gmail.com
