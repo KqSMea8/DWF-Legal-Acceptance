@@ -1,0 +1,131 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a9d:2363:0:0:0:0:0 with SMTP id k32-v6csp907765otd;
+        Sat, 11 Aug 2018 03:02:43 -0700 (PDT)
+X-Google-Smtp-Source: AA+uWPxZSHQgEBNAb625MBBm9SgwPVwQ4fOuPOMft/Pgxio9n7cPTJqeQLhqbFE48jMo1R1855tf
+X-Received: by 2002:a1c:5c4:: with SMTP id 187-v6mr3608950wmf.10.1533981763243;
+        Sat, 11 Aug 2018 03:02:43 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1533981763; cv=none;
+        d=google.com; s=arc-20160816;
+        b=KZmtqWoofI+IMJsP7xl01m5boTLtD4xe7hS2H+45rYh8ejrYtP14wTaWcPtrwhYFtn
+         bQrGqwtf5TsyU4xlEgiKGylmpLjAsLjF56NXqzB7vPk0CDQm5jzHApt4HmeBsbuSmPUC
+         wOiWQou8dLfVLxzIxs/ztZp92ylD4A2tYwKF6UWlLpTwHSOr/W+tGxwSjxe7vaC3BBBS
+         4KTfddT0wm/u6zpCHc2auBmoTEZjtmbRMrNwb4u/Qp+a8ko0gJSJnNbJLk3bRx3z613m
+         5Q9s9FdbYV+iRSHZ38qPIfHATGYSexv8nmcT1ryuJcvzcYpwLohRmc3lgqXjT9I/mQsn
+         t29A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-transfer-encoding:references:in-reply-to:date
+         :to:from:subject:message-id:arc-authentication-results;
+        bh=h+ey4QXh7FC709e2ohxjx/EWV0h0PnqKWHlEaWAQt4k=;
+        b=SAHdPkJfLaVFjV0QK2zx8XYFYSdzRyDBhGwNYi8xGUj0EL5O9oKyLMLrPvyW24QATA
+         O5rxXjDQN17lE2naq6WjZDbORBJP+8r2XKdMip4d4psFcvSCrdKz7djMMF1jBk5k+Jwi
+         GzexyV9h5/70cqdqjXcqFJL9AuVKNbzNkDfAeowIuWJxtlkWdFo91ThXc57up6qGwcuN
+         3xgPFv8W0HM5qz/00ON3u2gWfsWYTvdbqfMqdBGyyKUBWyDZ6DcqSUKKM0w7fqoRWwEm
+         3ZhY1ThOF9OWCots1eYqJpEglHr3j1VkKxNUFPdrAGzI5Xh8OcM2X+nlHWQ7C0XxOyOB
+         3pmQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of ben@decadent.org.uk designates 88.96.1.126 as permitted sender) smtp.mailfrom=ben@decadent.org.uk
+Return-Path: <ben@decadent.org.uk>
+Received: from shadbolt.e.decadent.org.uk (shadbolt.e.decadent.org.uk. [88.96.1.126])
+        by mx.google.com with ESMTPS id z74-v6si3052002wmc.51.2018.08.11.03.02.42
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 11 Aug 2018 03:02:43 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ben@decadent.org.uk designates 88.96.1.126 as permitted sender) client-ip=88.96.1.126;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of ben@decadent.org.uk designates 88.96.1.126 as permitted sender) smtp.mailfrom=ben@decadent.org.uk
+Received: from cpc118546-reig6-2-0-cust980.6-3.cable.virginm.net ([86.18.191.213] helo=deadeye)
+	by shadbolt.decadent.org.uk with esmtps (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256)
+	(Exim 4.84_2)
+	(envelope-from <ben@decadent.org.uk>)
+	id 1foQjK-0003WH-7w
+	for kurt@seifried.org; Sat, 11 Aug 2018 11:02:42 +0100
+Received: from ben by deadeye with local (Exim 4.91)
+	(envelope-from <ben@decadent.org.uk>)
+	id 1foQj8-0003Bu-4Q
+	for kurt@seifried.org; Sat, 11 Aug 2018 11:02:30 +0100
+Message-ID: <9feb47be333c7b371a7485ae08b2203e55dcb161.camel@decadent.org.uk>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ ben@decadent.org.uk
+From: Ben Hutchings <ben@decadent.org.uk>
+To: kurt@seifried.org
+Date: Sat, 11 Aug 2018 11:02:30 +0100
+In-Reply-To: <20180810221311.2668.91952@shiny-2.local>
+References: <20180810221311.2668.91952@shiny-2.local>
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+X-Mailer: Evolution 3.28.2-1 
+Mime-Version: 1.0
+X-SA-Exim-Connect-IP: 86.18.191.213
+X-SA-Exim-Mail-From: ben@decadent.org.uk
+X-SA-Exim-Scanned: No (on shadbolt.decadent.org.uk); SAEximRunCond expanded to false
+
+I accept
+
+On Fri, 2018-08-10 at 16:13 -0600, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwanta=
+cve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you fill=
+ed out the CVE form and want one, we can't use the data until you accept th=
+e MITRE CVE Terms of Use).=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you agree =
+to the MITRE CVE Terms of Use and we will add a copy of the email to the DW=
+F MITRE CVE Terms of Use acceptance data at https://github.com/distributedw=
+eaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>=20
+> The reason we use a complete copy of the email is that it provides an art=
+ifact showing that the email address accepted the Terms of Use, when they w=
+ere accepted and so on.=20
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore this=
+ message, however we may resend it at some point in the future, if you don'=
+t want any future emails simply reply with "unsubscribe" or "DON'T SEND ME =
+THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so=
+ we don't spam you with these, please note that this will prevent you from =
+being able to accept the MITRE CVE Terms of Use via the DWF automatically i=
+n future (you'll have to manually ask). But again, if you have no idea what=
+ a CVE is then you can ignore this/ask to be added to the block list with n=
+o problems.=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common Vulnerabilities a=
+nd Exposures (CVE), you hereby grant to The MITRE Corporation (MITRE) and a=
+ll CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable copyright license to reproduce, prepar=
+e derivative works of, publicly display, publicly perform, sublicense, and =
+distribute such materials and derivative works. Unless required by applicab=
+le law or agreed to in writing, you provide such materials on an "AS IS" BA=
+SIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implie=
+d, including, without limitation, any warranties or conditions of TITLE, NO=
+N-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,=
+ no-charge, royalty-free, irrevocable copyright license to reproduce, prepa=
+re derivative works of, publicly display, publicly perform, sublicense, and=
+ distribute Common Vulnerabilities and Exposures (CVE). Any copy you make f=
+or such purposes is authorized provided that you reproduce MITRE's copyrigh=
+t designation and this license in any such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE=
+ PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE =
+REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF=
+ TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRES=
+S OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE=
+ INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES=
+ OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-L=
+egal-Acceptance/blob/master/Terms-Of-Use.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org manually =
+with your question/concerns/etc.=20
+>=20
+--=20
+Ben Hutchings
+Time is nature's way of making sure that
+everything doesn't happen at once.
+

@@ -63,6 +63,7 @@ bascule@gmail.com
 bazy@safecomp.com
 becholey@gmail.com
 ben.hutchings@codethink.co.uk
+ben@decadent.org.uk
 ben@langfeld.me
 benoit@akeneo.com
 bgonzalez@unicon.net
@@ -138,6 +139,7 @@ email@jasonkohles.com
 email@liamsomerville.com
 emeric.vernat@gmail.com
 engineering@sensu.io
+epitectus.agamemon@gmail.com
 eprom@toor.si
 eschwartz@archlinux.org
 etoledano@stone.com.br
@@ -159,6 +161,7 @@ finbar.crago@gmail.com
 firace@gmail.com
 florent.daigniere@trustmatta.com
 for3022235906@qq.com
+for565666416@qq.com
 for577796224@qq.com
 forkira_cxy@foxmail.com
 forpayloads@aliyun.com
@@ -242,6 +245,7 @@ kadatushar@gmail.com
 kaendfinger@gmail.com
 kamil.frankowicz@cert.pl
 kamil@frankowicz.me
+karan.ramani@gmail.com
 kay_malwarebenchmark@outlook.com
 keith.lee2012@gmail.com
 kestrel@trylinux.us
@@ -278,7 +282,9 @@ lucascilento1995@gmail.com
 lukas@nextcloud.com
 luto@kernel.org
 m.daniel.legall@gmail.com
+m.dominiak@samsung.com
 m.spahn@metaways.de
+m.t.b.carroll@dundee.ac.uk
 magicsbro@gmail.com
 maidou.t00ls@gmail.com
 mail.bourbon@gmail.com
@@ -324,6 +330,7 @@ mp15@sanger.ac.uk
 mrothbart@nettitude.com
 myvyang@gmail.com
 nafiez.skins@gmail.com
+nambiarnikhil@outlook.com
 narvaneni.suresh@gmail.com
 naveen.velusamy@comodo.com
 nazira.carlage@dell.com
@@ -438,6 +445,7 @@ suhas_setikere@sutd.edu.sg
 support@teluu.com
 sylvain.corlay@gmail.com
 sysadmin@openmicroscopy.org
+system@lz1y.cn
 t-beu@users.sourceforge.net
 taouirsa@gmail.com
 teddy.reed@gmail.com
