@@ -84,6 +84,7 @@ cert@cert.org
 cert@intrinsec.com
 cgincdev@gmail.com
 chenruiqi@360.cn
+chrisrose5389@yahoo.com
 christof.ferreira.torres@gmail.com
 christopher.w.clark@gmail.com
 chybet4@gmail.com
@@ -99,6 +100,7 @@ cptest311@frontier.com
 craig.ingram@salesforce.com
 crich@thedefaced.org
 cslab223a@gmail.com
+csxqli@gmail.com
 cve-dwf-request@leo.gaspard.io
 cve.tigusoft@gmail.com
 cve@unsecure.blog
@@ -424,7 +426,9 @@ shachy12@gmail.com
 shadowm2006@gmail.com
 shayanqwerty@gmail.com
 shiham.wang@gmail.com
+shnatsel@gmail.com
 silviavali14@gmail.com
+situlingyun@gmail.com
 siva.infosec@gmail.com
 sjglover@gmail.com
 skanthak@nexgo.de
