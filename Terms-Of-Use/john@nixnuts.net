@@ -1,0 +1,191 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a9d:2363:0:0:0:0:0 with SMTP id k32-v6csp2588651otd;
+        Mon, 3 Sep 2018 06:40:15 -0700 (PDT)
+X-Google-Smtp-Source: ANB0VdadsJWtULCI0XRr2mqmtKJfR+T/2xA2A3dBQDpXIQ7Dv5tbgXWXmLQq6VT9YxQV0sIYRsWk
+X-Received: by 2002:aca:90d:: with SMTP id 13-v6mr18135437oij.300.1535982015540;
+        Mon, 03 Sep 2018 06:40:15 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1535982015; cv=none;
+        d=google.com; s=arc-20160816;
+        b=bxir9V68jfUPOpLrrNlDzGwZs0mFuFTRehgv20t9eo7TEDtt21qP/8PLLzqFVF1Mjn
+         SMfcm+/wmvTQMOHhaAZmpH4NznJxR2OKdJg4rXgXQXCLxKZJ31vVH2BVCiQJJ+23wLQ/
+         rHTPL/pHIQLBn2SWQWbIF2wEZtQ/WItMRDSLqY3ALHRdlhjBFFj1+4W42lj10IaUReYr
+         9yt/+IJaXhQTvC+tje6TvQ7V0VvTeH/002Azpmb1ZZIiiAvW5wwko/jcPQ3oeKw1JLvf
+         2HA4eBLd66fVlLak3eIocXB1gl96WJCYhEfvgCsb1pHnS2f6Q/BfkH7g18uvk1UStvEG
+         Dp6A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:references:in-reply-to:date:to:from:subject:message-id
+         :arc-authentication-results;
+        bh=SZX+Hukjnzru1ZFu9XrLbPs34KdMPWCXHK0Fxps9ocE=;
+        b=pVB9Xg95m7cc4DPPBG0cVraVdWLwaLvKCW6r4JOe2J9hztwfp0+nHolgYVs6BceRPL
+         OgROJkvdaiyp6f/NCoX76VRmwLkkgKBGnjYf/VyvpQ+GwV7PQxcS61NRcYvccTb53zrc
+         sczDPkFIWMg9NU1IJqmAsOaMqWV+C7kR8rCW0hlQJbPyFJdZE37aOVQs22I8TJzyGQ1X
+         xji3KxRjKhSsXEqFw8aGllsJnAip1QK4VrzNrkIu/4QUhh+izY5qnrZVmaPXQensp2io
+         cmFmwtPm8DB8UwMXrvpzMEmJrjfT/0hN0Q0nSiH4HzUegp2Mzrg++cxyFXMIK+qMokg7
+         PNtA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of john@nixnuts.net designates 208.74.120.37 as permitted sender) smtp.mailfrom=john@nixnuts.net
+Return-Path: <john@nixnuts.net>
+Received: from mail.wazzim.com (mail.wazzim.com. [208.74.120.37])
+        by mx.google.com with ESMTPS id s126-v6si11975848oie.201.2018.09.03.06.40.15
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+        Mon, 03 Sep 2018 06:40:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of john@nixnuts.net designates 208.74.120.37 as permitted sender) client-ip=208.74.120.37;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of john@nixnuts.net designates 208.74.120.37 as permitted sender) smtp.mailfrom=john@nixnuts.net
+Message-ID: <1535982006.2778.0.camel@nixnuts.net>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ john@nixnuts.net
+From: John Lightsey <john@nixnuts.net>
+To: kurt@seifried.org
+Date: Mon, 03 Sep 2018 08:40:06 -0500
+In-Reply-To: <20180903005756.6662.71096@shiny-2.local>
+References: <20180903005756.6662.71096@shiny-2.local>
+Content-Type: multipart/signed; micalg="pgp-sha512";
+	protocol="application/pgp-signature"; boundary="=-CNaN0QsLeEBKwHKPsNEk"
+X-Mailer: Evolution 3.22.6-1+deb9u1 
+Mime-Version: 1.0
+X-Spam_score: -1.1
+X-Spam_score_int: -10
+X-Spam_bar: -
+X-Spam_report: Spam detection software, running on the system "nixnuts.net",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ the administrator of that system for details.
+ 
+ Content preview:  I accept On Sun, 2018-09-02 at 18:57 -0600, kurt@seifried.org
+    wrote: > This is a confirmation email sent from CVE request form at https://iw
+    > antacve.org/ asking you to accept the MITRE CVE Terms of Use > (assuming
+    you filled out the CVE form and want one, we can't use the > data until you
+    accept the MITRE CVE Terms of Use).  > > Simply quote the email and reply
+    with "I accept" at the top if you > agree to the MITRE CVE Terms of Use and
+    we will add a copy of the > email to the DWF MITRE CVE Terms of Use acceptance
+    data at https://gi > thub.com/distributedweaknessfiling/DWF-Legal- > Acceptance/tree/master/Terms-Of-Use
+    > > The reason we use a complete copy of the email is that it provides an
+    > artifact showing that the email address accepted the Terms of Use, > when
+    they were accepted and so on.  > > If you did not submit a CVE request to
+    the DWF you can safely ignore > this message, however we may resend it at
+    some point in the future, > if you don't want any future emails simply reply
+    with "unsubscribe" > or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add
+    your email > address to the block list so we don't spam you with these, please
+    > note that this will prevent you from being able to accept the MITRE > CVE
+    Terms of Use via the DWF automatically in future (you'll have to > manually
+    ask). But again, if you have no idea what a CVE is then you > can ignore
+   this/ask to be added to the block list with no problems.  > > MITRE CVE Terms
+    of Use > > LICENSE > > Submissions: For all materials you submit to the Common
+    > Vulnerabilities and Exposures (CVE), you hereby grant to The MITRE > Corporation
+    (MITRE) and all CVE Numbering Authorities (CNAs) a > perpetual, worldwide,
+    non-exclusive, no-charge, royalty-free, > irrevocable copyright license to
+    reproduce, prepare derivative works > of, publicly display, publicly perform,
+    sublicense, and distribute > such materials and derivative works. Unless
+   required by applicable > law or agreed to in writing, you provide such materials
+    on an "AS IS" > BASIS, WITHOUT WARRANTIES OR CONDITIONS [...] 
+ 
+ Content analysis details:   (-1.1 points, 3.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -1.0 ALL_TRUSTED            Passed through trusted hosts only via SMTP
+ -0.1 BAYES_05               BODY: Bayes spam probability is 1 to 5%
+                             [score: 0.0283]
+
+
+--=-CNaN0QsLeEBKwHKPsNEk
+Content-Type: text/plain; charset="ISO-8859-15"
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+On Sun, 2018-09-02 at 18:57 -0600, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iw
+> antacve.org/ asking you to accept the MITRE CVE Terms of Use
+> (assuming you filled out the CVE form and want one, we can't use the
+> data until you accept the MITRE CVE Terms of Use).=A0
+>=20
+> Simply quote the email and reply with "I accept" at the top if you
+> agree to the MITRE CVE Terms of Use and we will add a copy of the
+> email to the DWF MITRE CVE Terms of Use acceptance data at https://gi
+> thub.com/distributedweaknessfiling/DWF-Legal-
+> Acceptance/tree/master/Terms-Of-Use
+>=20
+> The reason we use a complete copy of the email is that it provides an
+> artifact showing that the email address accepted the Terms of Use,
+> when they were accepted and so on.=A0
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore
+> this message, however we may resend it at some point in the future,
+> if you don't want any future emails simply reply with "unsubscribe"
+> or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email
+> address to the block list so we don't spam you with these, please
+> note that this will prevent you from being able to accept the MITRE
+> CVE Terms of Use via the DWF automatically in future (you'll have to
+> manually ask). But again, if you have no idea what a CVE is then you
+> can ignore this/ask to be added to the block list with no problems.=A0
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common
+> Vulnerabilities and Exposures (CVE), you hereby grant to The MITRE
+> Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a
+> perpetual, worldwide, non-exclusive, no-charge, royalty-free,
+> irrevocable copyright license to reproduce, prepare derivative works
+> of, publicly display, publicly perform, sublicense, and distribute
+> such materials and derivative works. Unless required by applicable
+> law or agreed to in writing, you provide such materials on an "AS IS"
+> BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+> or implied, including, without limitation, any warranties or
+> conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS
+> FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-
+> exclusive, no-charge, royalty-free, irrevocable copyright license to
+> reproduce, prepare derivative works of, publicly display, publicly
+> perform, sublicense, and distribute Common Vulnerabilities and
+> Exposures (CVE). Any copy you make for such purposes is authorized
+> provided that you reproduce MITRE's copyright designation and this
+> license in any such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE
+> ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE
+> ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE
+> CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES,
+> DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+> LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL
+> NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY
+> OR FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> A copy is available at https://github.com/distributedweaknessfiling/D
+> WF-Legal-Acceptance/blob/master/Terms-Of-Use.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org
+> manually with your question/concerns/etc.=A0
+>=20
+--=-CNaN0QsLeEBKwHKPsNEk
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: This is a digitally signed message part
+Content-Transfer-Encoding: 7bit
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEGNgF+IF46Km9DAl95E+AFtNjD4kFAluNObYACgkQ5E+AFtNj
+D4kOYRAAnC+97Pr+BxgR6FR85RBFsc28SSBryvmLK1C048rBGNUDFoIQKvGuMajL
+JjcmoEulID1vOBNXzpa4J5aux9ZwiUnG4qFecjhJwAw9YbtFPFgP6i1fOfurN9Dg
+ylIemv+vF5XiiY9dSeyB9ewzBGAJZxhwDw6JiI870at0pADASflmmtD3/hswXvHa
+AwyUVob9auHc0LwEwRqFXQ3+L2aOqZYOCM+3l8Iz9mk9K+WJXREu5B/72yyTfFKj
+EdWdmOXfplc/qS/Skn6n2WdaPvJ6QIljgx2C/2m2iclqjrIn5ATrh8Hh44BN2jIw
+8Y+IhLRexEXRmExEx3cYKKSDF7ZXSSHGbAHye/KzL3Fc3u4dq7+9hAsRRsBDDNnA
+VyfwDOpugVwPDv/KW17eysLcq1T8Qlf1VHBZe8ogkAn/wQWmLcVh812dMiyXJKoJ
+XWi9ZbUJ32THslXdp4zGUBl3a5J+bTXkWbOt2lDm8nxr3f81tuWb+/bLD/iXH3nx
+5nQDrJx4WneKR5PsQ/GqXHj4COqVLHNsFDWM2XwWXcDBd/t6r2ktEs5ntQdWYPjg
+tn0oquPh9sXUsxrcqu+5cLnhMjO8Q1iOMfjS3DDcLYBJAB+6RTm/u9LOdOnGzD4l
+2lcD8oIyZ/7FcFjtnS4ezBWtUTp8tDEKRtLnBQ+0m7yuw+0iBoU=
+=63EV
+-----END PGP SIGNATURE-----
+
+--=-CNaN0QsLeEBKwHKPsNEk--
+

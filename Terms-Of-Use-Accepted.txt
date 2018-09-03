@@ -5,6 +5,7 @@
 651162013@qq.com
 CYoung@tripwire.com
 David.Turner@twosigma.com
+Deepak.vksharma09@gmail.com
 Esdevelo@Gmail.com
 Evan.Ward@nrl.navy.mil
 Grega.Preseren@snt-svetovanje.si
@@ -170,6 +171,7 @@ forpayloads@aliyun.com
 fortanjingli@shuziguanxing.com
 fortaoge@5ecurity.cn
 franco@opnsense.org
+frankmorgner@gmail.com
 fwaggle@fwaggle.org
 gcaminer@flowgate.net
 glennmcguire9@gmail.com
@@ -208,6 +210,7 @@ info@mahara.org
 insaneboarder234@gmail.com
 iremembermodems@gmail.com
 ismail.sec.dev@gmail.com
+ivanaf@mit.edu
 j.singh@sec-consult.com
 jacksonfylle@gmail.com
 jakob@kastelo.net
@@ -221,9 +224,11 @@ javijmor@gmail.com
 jaybosamiya@gmail.com
 jb@videolan.org
 jd@cpanel.net
+jechoi@redhat.com
 jelosua@npr.org
 jens.neureither@gmail.com
 jfolkins@threathound.com
+jiakyooi95@hotmail.com
 jliggitt@redhat.com
 jmbourbon@excellium-services.com
 joakim.bech@linaro.org
@@ -232,6 +237,8 @@ johanna@icir.org
 johannes.rudolph@lightbend.com
 john.bjorkhaug@nttsecurity.com
 john@betterment.com
+john@nixnuts.net
+joran.herve@gmail.com
 jordan.potti@state.mn.us
 joseph.bisch@gmail.com
 joseph.m.mcdonagh@gmail.com
@@ -347,6 +354,7 @@ nitin.arya@owasp.org
 nullsec.anon@gmail.com
 ocve@wolke7.net
 officialyogeshmodi@gmail.com
+olangomark@gmail.com
 olt@omniscale.de
 ondrej@sury.org
 panos122008@gmail.com
@@ -420,6 +428,8 @@ security@plone.org
 security@rancher.com
 security@rocket.chat
 security@zammad.com
+seeroot@protonmail.com
+setenforce1@gmail.com
 sfeldmann@teknik.io
 sfowler@redhat.com
 shachy12@gmail.com
@@ -484,6 +494,7 @@ wissambashour@gmail.com
 wojciech.regula@securing.pl
 wykcomputer@gmail.com
 xct@r3v3rse.de
+xct@vulndev.io
 xiao.gong@chaitin.com
 xiaoyin.l@outlook.com
 yann.chalencon@gmail.com
