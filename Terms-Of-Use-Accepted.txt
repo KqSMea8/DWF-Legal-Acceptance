@@ -46,6 +46,7 @@ andres@clarifiedsecurity.com
 andrewklaus@gmail.com
 andrewsh@debian.org
 anemec@redhat.com
+anthony.maestre@ebrc.com
 antirais@gmail.com
 antoniociscobg@gmail.com
 antukh@opera.com
@@ -54,6 +55,7 @@ ariel@twistlock.com
 art-dev@jfrog.com
 arteau.olivier@gmail.com
 artem.moskowsky@gmail.com
+arthurnn@gmail.com
 asgrant@oakland.edu
 ashutoss@andrew.cmu.edu
 au1ge.xyz@gmail.com
@@ -83,6 +85,7 @@ carljordan90@gmail.com
 carnil@debian.org
 cert@cert.org
 cert@intrinsec.com
+cezar97@protonmail.com
 cgincdev@gmail.com
 chenruiqi@360.cn
 chrisrose5389@yahoo.com
@@ -103,6 +106,7 @@ crich@thedefaced.org
 cslab223a@gmail.com
 csxqli@gmail.com
 cve-dwf-request@leo.gaspard.io
+cve.reporting@gmail.com
 cve.tigusoft@gmail.com
 cve@unsecure.blog
 cve@whitehats.nl
@@ -216,6 +220,7 @@ jacksonfylle@gmail.com
 jakob@kastelo.net
 jan.ruge@mailbox.org
 jared@jaredbeck.com
+jarlob@gmail.com
 jarrod.farncomb@datacom.com.au
 jason@modx.com
 jasonmagic.cisco@gmail.com
@@ -260,8 +265,10 @@ keith.lee2012@gmail.com
 kestrel@trylinux.us
 kev@semmle.com
 kevinoclam@126.com
+koby.kilimnik@imperva.com
 kochukov.ma@gmail.com
 kongwenbin@live.com
+konrad@borowski.pw
 kpolulak@gmail.com
 krzysztof.stopczanski@codilime.com
 kseifried@redhat.com
@@ -285,6 +292,7 @@ lionel_debroux@yahoo.fr
 liusscs@163.com
 ljames@flashpoint-intel.com
 lkiesow@uos.de
+lopezi@objectcomputing.com
 lpu@protonmail.ch
 luanjunchao@163.com
 lucas.carmo@stone.com.br
@@ -331,6 +339,7 @@ mgerstner@suse.de
 micaksica@gmx.com
 mike.gualtieri@gmail.com
 mikeycgto@gmail.com
+misi@majd.eu
 ml@beckweb.net
 mmo@semmle.com
 moh_amgad@hotmail.com
@@ -385,6 +394,7 @@ ramadhan@cybersecurity.my
 ranjitsingh785@gmail.com
 rchase@rchase.com
 reed@reedloden.com
+responsible-disclosure@usd.de
 reversebrain@protonmail.com
 ricardobgoncales@gmail.com
 riley@mailo.com
@@ -393,8 +403,10 @@ rmgrandgenett@unomaha.edu
 robin.verton@telekom.de
 robin.williams@rsmus.com
 rockindaworld207@gmail.com
+root@mtk911.cf
 rotimiakinyele60@gmail.com
 rperaglie@ripstech.com
+rschiron@redhat.com
 ruigu@cs.columbia.edu
 rwightman@dragos.com
 ryabinin.a.a@gmail.com
@@ -419,6 +431,7 @@ secure@veritas.com
 security@agel-nash.ru
 security@atlassian.com
 security@dxw.com
+security@hr.nl
 security@mercurial-scm.org
 security@mycroft.ai
 security@openproject.org
@@ -475,6 +488,7 @@ thomasv@electrum.org
 tmilos@gmail.com
 toan.nguyen@techlabcorp.com
 tom@dxw.com
+tonix0114@gmail.com
 tschmid@ernw.de
 tuzovakaoff@gmail.com
 tyler.price@rsmus.com
@@ -490,6 +504,7 @@ vulncoord@ficora.fi
 wangyihanger@gmail.com
 whitehatck01@gmail.com
 whoisclay@outlook.com
+windham.wong@stormeye.io
 wireghoul@gmail.com
 wissambashour@gmail.com
 wojciech.regula@securing.pl
