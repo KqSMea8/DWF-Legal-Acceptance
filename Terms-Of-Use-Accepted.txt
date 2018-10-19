@@ -35,6 +35,7 @@ alex.gaynor@gmail.com
 alexander.kjall@gmail.com
 alexander.kuntschik@uni-ulm.de
 alexbirsan@intigriti.me
+aliferopoulos@icloud.com
 alvaro.hoyos@onelogin.com
 amanion@cert.org
 amaris@redhat.com
@@ -77,6 +78,7 @@ blackzert@gmail.com
 bmartin@tenable.com
 bond@casaba.com
 boothf@boothlabs.me
+bousalman@protonmail.com
 brandon.philips@coreos.com
 bshastry@sec.t-labs.tu-berlin.de
 btiszka@gmail.com
@@ -100,6 +102,7 @@ coolerlair@gmail.com
 coolteygame@gmail.com
 cor3sm4sh3r@gmail.com
 coreyf@rwell.org
+cpearson9@yahoo.com
 cptest311@frontier.com
 craig.ingram@salesforce.com
 crich@thedefaced.org
@@ -148,6 +151,7 @@ emeric.vernat@gmail.com
 engineering@sensu.io
 epitectus.agamemon@gmail.com
 eprom@toor.si
+esben@semmle.com
 eschwartz@archlinux.org
 etoledano@stone.com.br
 etovio@gmail.com
@@ -178,6 +182,7 @@ franco@opnsense.org
 frankmorgner@gmail.com
 fwaggle@fwaggle.org
 gcaminer@flowgate.net
+gdhucheat@gmail.com
 glennmcguire9@gmail.com
 grega.preseren@outlook.com
 gregory.draperi@gmail.com
@@ -351,6 +356,7 @@ myvyang@gmail.com
 nafiez.skins@gmail.com
 nambiarnikhil@outlook.com
 narvaneni.suresh@gmail.com
+nate@quicksketch.org
 naveen.velusamy@comodo.com
 nazira.carlage@dell.com
 neal@fb.com
@@ -413,6 +419,7 @@ ryabinin.a.a@gmail.com
 s0m30ne@163.com
 sajeeb.lohani@bulletproof.sh
 sajeeb@0dd.zone
+saleh.elsayed@syss.de
 saloh2@student.monash.edu
 sam@samwhited.com
 sang.ly@techlabcorp.com
