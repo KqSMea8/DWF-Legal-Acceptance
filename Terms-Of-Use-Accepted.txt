@@ -13,6 +13,7 @@ Melbourne@sectalks.org
 Mukhammad.khalilov@helpag.com
 Phk@phk.freebsd.dk
 Reimar.Doeffinger@gmx.de
+Socket_0x03@teraexe.com
 Thanat.Sirithawornsant@dionach.com
 a.kruger@psiphon.ca
 aacid@kde.org
@@ -331,6 +332,7 @@ matthieu.chevrier@synhack.fr
 mattj@odnd.com
 mattjoeland@gmail.com
 max@appcanary.com
+max@semmle.com
 maxime@cyberwatch.fr
 mbrooks@snap.com
 mcatanzaro@gnome.org
