@@ -83,6 +83,7 @@ bousalman@protonmail.com
 brandon.philips@coreos.com
 bshastry@sec.t-labs.tu-berlin.de
 btiszka@gmail.com
+cam@0dd.zone
 carl@cjc.im
 carljordan90@gmail.com
 carnil@debian.org
@@ -209,6 +210,7 @@ helpme@gmail.com
 hi.haozhezhang@gmail.com
 hkario@redhat.com
 hongkun.zeng@dbappsecurity.com.cn
+honnix@spotify.com
 hsadkhk@gmail.com
 huyngocbk@gmail.com
 i.elsayed92@gmail.com
@@ -300,6 +302,7 @@ lionel_debroux@yahoo.fr
 liusscs@163.com
 ljames@flashpoint-intel.com
 lkiesow@uos.de
+lo@microlab.red
 lokalhorst@protonmail.com
 lopezi@objectcomputing.com
 luanjunchao@163.com
@@ -340,6 +343,7 @@ mcatanzaro@gnome.org
 mcatanzaro@igalia.com
 me@cydrobolt.com
 me@justinbull.ca
+me@lucapezzolla.com
 me@spoock.com
 medmunds@gmail.com
 medsgerj@gmail.com
@@ -390,6 +394,7 @@ penghua@silence.com.cn
 petr.spacek@nic.cz
 pilou@gmx.com
 pkarolak@trustwave.com
+pouyadarabi@yahoo.com
 predrag.gruevski@gmail.com
 przemyslaw.duda@intel.com
 psirt@lenovo.com
@@ -442,6 +447,7 @@ secure@veritas.com
 security@agel-nash.ru
 security@atlassian.com
 security@dxw.com
+security@fatfreecrm.com
 security@hr.nl
 security@mercurial-scm.org
 security@mycroft.ai
@@ -489,6 +495,7 @@ t-beu@users.sourceforge.net
 taouirsa@gmail.com
 teddy.reed@gmail.com
 terrycwk1994@gmail.com
+tharris9@gmu.edu
 theblazehen@theblazehen.com
 thom@chef.io
 thomas.gerbet@enalean.com
@@ -528,6 +535,7 @@ yann.chalencon@gmail.com
 ydahhrk@gmail.com
 yeraymathrandom@gmail.com
 yzy9952@gmail.com
+zacharymillerconsulting@gmail.com
 zeng.ambulong@gmail.com
 zhouzhen@nsfocus.com
 zise.shi@dbappsecurity.com.cn
