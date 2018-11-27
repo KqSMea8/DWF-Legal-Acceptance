@@ -68,6 +68,7 @@ bascule@gmail.com
 bazy@safecomp.com
 becholey@gmail.com
 ben.hutchings@codethink.co.uk
+ben.kurtovic@gmail.com
 ben@decadent.org.uk
 ben@langfeld.me
 benoit@akeneo.com
