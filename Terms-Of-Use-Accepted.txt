@@ -113,11 +113,13 @@ csxqli@gmail.com
 cve-dwf-request@leo.gaspard.io
 cve.reporting@gmail.com
 cve.tigusoft@gmail.com
+cve@max-weller.de
 cve@unsecure.blog
 cve@whitehats.nl
 cvereports@movermeyer.com
 cvereq+adv20181@moritz-naumann.com
 d.naumenko.a@gmail.com
+d@duniel.no
 daniel@elttam.com.au
 daniel@inversoft.com
 daniel@scrt.ch
@@ -255,6 +257,7 @@ john@betterment.com
 john@nixnuts.net
 joran.herve@gmail.com
 jordan.potti@state.mn.us
+jordy@simplyhacker.com
 joseph.bisch@gmail.com
 joseph.m.mcdonagh@gmail.com
 jpv@gumcode.com
@@ -281,6 +284,7 @@ kongwenbin@live.com
 konrad@borowski.pw
 kpolulak@gmail.com
 krzysztof.stopczanski@codilime.com
+krzysztof@burghardt.pl
 kseifried@redhat.com
 kuestatv@gmail.com
 kurt.boberg@docusign.com
@@ -328,6 +332,7 @@ martin.tenek@gmail.com
 mateusz.stahl@codeblanc.it
 mateusz.stahl@intive.com
 mathias.morbitzer@aisec.fraunhofer.de
+matias@bitpay.com
 matt@shadow-vault.com
 mattd@bugfuzz.com
 matteo@beccati.com
@@ -348,6 +353,7 @@ me@spoock.com
 medmunds@gmail.com
 medsgerj@gmail.com
 mereportertmp12432@trash-mail.com
+meridian.miftarii@gmail.com
 mgerstner@suse.de
 micaksica@gmx.com
 mike.gualtieri@gmail.com
@@ -381,6 +387,7 @@ officialyogeshmodi@gmail.com
 olangomark@gmail.com
 olt@omniscale.de
 ondrej@sury.org
+oscar@sakerhetskontoret.com
 panos122008@gmail.com
 parichay1012@gmail.com
 patrick@puiterwijk.org
@@ -392,6 +399,7 @@ pdp@exim.org
 pear-group@php.net
 penghua@silence.com.cn
 petr.spacek@nic.cz
+piem@aubio.org
 pilou@gmx.com
 pkarolak@trustwave.com
 pouyadarabi@yahoo.com
@@ -419,6 +427,7 @@ robin.verton@telekom.de
 robin.williams@rsmus.com
 rockindaworld207@gmail.com
 root@mtk911.cf
+rosa@basecamp.com
 rotimiakinyele60@gmail.com
 rperaglie@ripstech.com
 rschiron@redhat.com
@@ -487,6 +496,7 @@ steve@steveklabnik.com
 strparser@gmail.com
 strukt93@gmail.com
 suhas_setikere@sutd.edu.sg
+sujendra.m@gmail.com
 support@teluu.com
 sylvain.corlay@gmail.com
 sysadmin@openmicroscopy.org
@@ -506,6 +516,7 @@ thomasv@electrum.org
 tmilos@gmail.com
 toan.nguyen@techlabcorp.com
 tom@dxw.com
+tom@powell.io
 tonix0114@gmail.com
 tschmid@ernw.de
 tuzovakaoff@gmail.com
@@ -517,8 +528,10 @@ us3r777@n0b0.so
 v.tyukhmenev@bi.zone
 viccon@126.com
 viennadd@gmail.com
+vjenck@bishopfox.com
 vuln_reporter@srcms.xyz
 vulncoord@ficora.fi
+wampserver@otomatic.net
 wangyihanger@gmail.com
 whitehatck01@gmail.com
 whoisclay@outlook.com

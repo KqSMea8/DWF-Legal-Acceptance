@@ -1,0 +1,126 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a9d:3a09:0:0:0:0:0 with SMTP id j9csp23896otc;
+        Tue, 27 Nov 2018 08:59:41 -0800 (PST)
+X-Google-Smtp-Source: AJdET5dTvvBMRcowFdFUi9aVw+2oWgRmAQswZLTDzQCceC8VRihhpU6fKqDO9b4tGwUr4aS0t8dX
+X-Received: by 2002:a1c:dfc1:: with SMTP id w184mr27323014wmg.2.1543337981771;
+        Tue, 27 Nov 2018 08:59:41 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1543337981; cv=none;
+        d=google.com; s=arc-20160816;
+        b=kmAvXc84yWmRjsRpDOvq7TKKjCXVuwTGxkNIeg8/5nfgLnlgiKb/Xlcda7REIaoax9
+         wEJvDaksXoLMJqqJns4N+IbAisEXlZP+eD1f7+Rh7uuJ7tr30+INNq4QKcZ0SEYqyYpW
+         EUSw36mi/KQbR57snQJCGHLh4oSO7iU3UtizDVWkfedgqjylituNp4R4TLrO3QfUQW6j
+         BJQ739ZvCzvSEXyeTg1vTMxVsO1RRc4gMMDrRUHFKy54KOwVCbdlx53TIMsY164VLysj
+         9spevfy+ahD2IKQgBHcfZUTO9FOKbLzEBLEs1Sd60VOpmubs0B9UCPL7XW9rcfXBJ+up
+         pyug==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:references:in-reply-to
+         :subject:to:message-id:organization:reply-to:from:date;
+        bh=7K4EqC0q1mzqqQOPjmr2JzdkSqQQJ7KmcObBgsTfTks=;
+        b=e/5GEiSVbLcE5xdmARp0Dmif2NLlYDpMPXPuqMWI8clczDkB7lRA9CMVpu/0+Xa4PK
+         ycbLYSSXdfXsAR4ozkFpjKTLEEjx5t2IpeK3c5a8j5VvO7jWyK8MGk9RLZiOQ8ONzqQ8
+         Jo7RVHcsnbJ+ZYEvVi3QZNfgt6MnMd4iQDmELrfo8ggJ6hJQJ5yrUI5wRSGKABJpTxWW
+         Uo6QdQRHD97zFQ4J3hL/lpiNgVHbiRcvNTuBESo2nvubh8fZSPniG/T/nLHH4qekC1JQ
+         u2I6GYH6sJyE8F5zsbbVA9EwsicS1hqDJBRzU5xMqA+RC5OVS8FkmEoMDg9SoF8HFzi2
+         4aqA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of wampserver@otomatic.net designates 217.70.183.199 as permitted sender) smtp.mailfrom=wampserver@otomatic.net
+Return-Path: <wampserver@otomatic.net>
+Received: from relay9-d.mail.gandi.net (relay9-d.mail.gandi.net. [217.70.183.199])
+        by mx.google.com with ESMTPS id o186-v6si3590631wmo.112.2018.11.27.08.59.41
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+        Tue, 27 Nov 2018 08:59:41 -0800 (PST)
+Received-SPF: pass (google.com: domain of wampserver@otomatic.net designates 217.70.183.199 as permitted sender) client-ip=217.70.183.199;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of wampserver@otomatic.net designates 217.70.183.199 as permitted sender) smtp.mailfrom=wampserver@otomatic.net
+X-Originating-IP: 88.190.208.237
+Received: from [192.168.0.10] (unknown [88.190.208.237])
+	(Authenticated sender: wampserver@otomatic.net)
+	by relay9-d.mail.gandi.net (Postfix) with ESMTPA id 4BAF7FF808
+	for <kurt@seifried.org>; Tue, 27 Nov 2018 16:59:41 +0000 (UTC)
+Date: Tue, 27 Nov 2018 17:59:20 +0100
+From: Wampserver-Otomatic <wampserver@otomatic.net>
+X-Mailer: The Bat! (v8.6) Home
+Reply-To: Wampserver Otomatic <wampserver@otomatic.net>
+Organization: PCatHome&Me
+Message-ID: <1582893494.20181127175920@otomatic.net>
+To: kurt@seifried.org
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for wampserver@otomatic.net
+In-Reply-To: <20181127154054.36526.45519@bigbox.local>
+References: <20181127154054.36526.45519@bigbox.local>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=windows-1250
+Content-Transfer-Encoding: 8bit
+
+I accept
+
+> This is a confirmation email sent from CVE request form at
+> https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use
+> (assuming you filled out the CVE form and want one, we can't use the
+> data until you accept the MITRE CVE Terms of Use). 
+
+> Simply quote the email and reply with "I accept" at the top if you
+> agree to the MITRE CVE Terms of Use and we will add a copy of the
+> email to the DWF MITRE CVE Terms of Use acceptance data at
+> https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+
+> The reason we use a complete copy of the email is that it provides an
+> artifact showing that the email address accepted the Terms of Use,
+> when they were accepted and so on. 
+
+> If you did not submit a CVE request to the DWF you can safely ignore
+> this message, however we may resend it at some point in the future, if
+> you don't want any future emails simply reply with "unsubscribe" or
+> "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address
+> to the block list so we don't spam you with these, please note that
+> this will prevent you from being able to accept the MITRE CVE Terms of
+> Use via the DWF automatically in future (you'll have to manually ask).
+> But again, if you have no idea what a CVE is then you can ignore
+> this/ask to be added to the block list with no problems. 
+
+> MITRE CVE Terms of Use
+
+> LICENSE
+
+> Submissions: For all materials you submit to the Common
+> Vulnerabilities and Exposures (CVE®), you hereby grant to The MITRE
+> Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a
+> perpetual, worldwide, non-exclusive, no-charge, royalty-free,
+> irrevocable copyright license to reproduce, prepare derivative works
+> of, publicly display, publicly perform, sublicense, and distribute
+> such materials and derivative works. Unless required by applicable law
+> or agreed to in writing, you provide such materials on an "AS IS"
+> BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+> implied, including, without limitation, any warranties or conditions
+> of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide,
+> non-exclusive, no-charge, royalty-free, irrevocable copyright license
+> to reproduce, prepare derivative works of, publicly display, publicly
+> perform, sublicense, and distribute Common Vulnerabilities and
+> Exposures (CVE®). Any copy you make for such purposes is authorized
+> provided that you reproduce MITRE's copyright designation and this license in any such copy.
+
+> DISCLAIMERS
+
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE
+> ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION
+> HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION,
+> ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL
+> WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY
+> WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY
+> RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+> A copy is available at
+> https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/master/Terms-Of-Use.md
+
+> To contact the DWF either hit reply, or email kurt@seifried.org
+> manually with your question/concerns/etc. 
+
+
+
+
+-- 
+Cordialement,
+ Wampserver-Otomatic                            e-mail : wampserver@otomatic.net
+

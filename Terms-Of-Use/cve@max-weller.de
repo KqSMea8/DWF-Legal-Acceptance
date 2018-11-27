@@ -1,0 +1,113 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a9d:3a09:0:0:0:0:0 with SMTP id j9csp50616otc;
+        Tue, 27 Nov 2018 09:21:11 -0800 (PST)
+X-Google-Smtp-Source: AFSGD/WIyX5elN3N58SJUlNwgc89KllzaBPN6WtWG67cwJFBOhDKIgWjptkS+chqUvPa2ElF7Vqb
+X-Received: by 2002:a5d:61c4:: with SMTP id q4mr27195566wrv.308.1543339271451;
+        Tue, 27 Nov 2018 09:21:11 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1543339271; cv=none;
+        d=google.com; s=arc-20160816;
+        b=enjkMKtRrtmFwugrXIg1/uTlhCVuu7q/V9RpLFhAFK/z6e4tjHktxEm9W08NNinLQG
+         Kh/aczL/8OKSaD4G5c+JqyBz09X7usgh57IOsgsgBbL8p0Xz9W6zWR8kx6LcSyAl/IdJ
+         bOgyLcy6RZycSGGaErXbbE0mDipKWJM9I8Yvl5IQlS/wiJAU/zOO9GYVMHmCH+U7JLkI
+         J8yk56+Lxk+x7oFgL5JImFm3BQGXAj0u7EQprAvJeel5DywNDQQCmF+jb3z8RbwhpbOl
+         /c/0RQk49bUgKa3fsLVEXYKUkI/1+eEirWhbTse5Uk5vckwDhEg+1k+p1SnvPbqW4SIL
+         Ec9A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:content-language:in-reply-to:mime-version
+         :user-agent:date:message-id:autocrypt:openpgp:from:references:to
+         :subject;
+        bh=/XCfC8OG6iPNlDz1BqmnQDu8/sNmuGgdyw5dv0NaSQY=;
+        b=G8KIY0qZCaknP344c3/SIizL8vLfesrs6v6WoxKQMvsfNwWsidWW+sQQGFTpU49eth
+         YcDRgMgNWDxMs+/WGSu33PPLPxUGPz/EqNCFBfQK+xR769H76eeOq2/cOpIQEf7Nx1vF
+         ZgnioQxpi6grtCrPtVhqnAydafQFwZcH3DZjTPFiFgpT5P6Eu6uPDWz6XayqnUD0bhz+
+         QOw6l4aLD+97YT7KuVxWr8Bui6pi4B/pfwgHfTJiOg9N/E6uF/yHWDKJ7kPufb6/WP/p
+         3RUumhaNQhM37M3an+W9evSK73EyhW0Mz0ZJXim3h58tKYGLA+hJzm9rP/7YG9Shtqt0
+         d53A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of cve@max-weller.de designates 178.32.190.12 as permitted sender) smtp.mailfrom=cve@max-weller.de
+Return-Path: <cve@max-weller.de>
+Received: from maple.teamwiki.net (mail.teamwiki.net. [178.32.190.12])
+        by mx.google.com with ESMTPS id x20si3687375wme.179.2018.11.27.09.21.11
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 27 Nov 2018 09:21:11 -0800 (PST)
+Received-SPF: pass (google.com: domain of cve@max-weller.de designates 178.32.190.12 as permitted sender) client-ip=178.32.190.12;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of cve@max-weller.de designates 178.32.190.12 as permitted sender) smtp.mailfrom=cve@max-weller.de
+Received: from [IPv6:2003:e5:3f40:2700:a065:24ff:fed1:49ca] (p200300E53F402700A06524FFFED149CA.dip0.t-ipconnect.de [IPv6:2003:e5:3f40:2700:a065:24ff:fed1:49ca])
+	by maple.teamwiki.net (Postfix) with ESMTPSA id 377491403DD
+	for <kurt@seifried.org>; Tue, 27 Nov 2018 18:22:32 +0100 (CET)
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ cve@max-weller.de
+To: kurt@seifried.org
+References: <20181127153946.36526.28954@bigbox.local>
+From: Max Weller <cve@max-weller.de>
+Openpgp: preference=signencrypt
+Autocrypt: addr=cve@max-weller.de; prefer-encrypt=mutual; keydata=
+ xsBNBE9adOgBCAC0OXq8zffZ74kBBaRyC5PvFAZ7iFKzCQBYUDC6Do7E0QeZ8Xjs+eVHJPqw
+ +RVrbP47usD3KeBwdeD11CCA3Rje5Vgp4mc/8gHTU1b1GL3aq4MalFNheevLP28FM7C8bKKA
+ c2yOLXrG88OSSMR+FChUb+JIa4g/gMAmUC6dDipLLUx9j3gYWWA+LCks2YUNKgljvYCxaSS0
+ Fv2NycXfoyVbQCdFhr5VQhVnVlyPRG0jFRId6G0ngftRxllGbNKjFNwAy1ZTvMlWkp3JDamZ
+ SfOP9z3zeVzh+swaE67fjEkILztUBxqnDWMSnPARczmUy9+MzXRRNsab7ptt9SAS6IwLABEB
+ AAHNJU1heGltaWxpYW4gV2VsbGVyIDxtYXhAbWF4LXdlbGxlci5kZT7CwIEEEwECACsCGyMF
+ CRwyBIAGCwkIBwMCBhUIAgkKCwQWAgMBAh4BAheABQJSl0rqAhkBAAoJEEWF7UyywxMJqLYH
+ /3XaN5Zvx5k1oztTZ0CEFSKGSJrLQcExhoJ6zqJUAUNgdputM4TNGKJFTNnPQSlwDYZYiWCm
+ 81nB0NzbddmuRcXmcFqqVnV0aNZ+HAVK7rfKYz6lCubuwmKNvYvx3WLi4CJ8rHY3kXx4Lmgb
+ 4fuML4dBmg9b2UqscflMP1VJwNGCE1zU5yP/x8HVbio1Yxf9dKJREwaISFu/DPwuHliQnZW6
+ Q4GoipuvKuPTWk6s4REReUTjFf5qM299t005nZmnF2s+1X+8qDoHRW6WLM2publIStWjj6ve
+ AF6lu0U+al7TDkQ81sBZey+NinzE2PtEYp3op6OTj5xEoOs/riJHtKzOwE0ET1p06AEIAM09
+ udSlvasSt+nDUW5K8kJ9zA+2vFuxZ8LTL92Q1lDXUfGrwM1iu1a+z0HbZMGYxTa93igtfsS9
+ ph7KRReU8a0ZCDLskZ0ajGKmAtZX53VEE1LW4Ed0ahJeaseuxDDronq+TxJ5gMYoELZDBhyo
+ UzQVfKIaU81fHrOhvpuLBTPPFGvbUN0kTMjWntM0KX+l9QZVdOP2x3RM0zlNAKb70Skl/s4u
+ gTRwNBvO2TpgbyaUW8aKXU8d9t9M0rsQqfnciKKffddqYUCY7IeVo9qR/f99p2nMt0cwypCO
+ wp4zPd61M5VkX0xk2Bsscd34VRnyUpOEnItZFCvRZi1z22DAp6UAEQEAAcLAZQQYAQIADwUC
+ T1p06AIbDAUJHDIEgAAKCRBFhe1MssMTCaFcB/43SraZCGyGovj20YA21prvubW0XSbhkbJT
+ r8zyVdmBPxU6O63qcipmKR2KCcmbJaelfwFvCC35pDcvEnqa0ABm4B0fD1bS/p/oUtKaWrs9
+ D8lXRHwGIhvstD396mtsIfRACerjnDH+6gI/1OJF45QZ15rQuoNm2HNOwdWg7ncPT7zmAnLi
+ 7avC+I7VVC3SYr+252Tf5or9LX27XCV08BaY0jjTicH21NnLoSyiBpHhY/zYJDarE5aAwyZN
+ 1j2MCZaVL0kiR+GngrjAKgbGDwmoETxBJnoDNF9O7C6MlYSW/dvvNGwnGdoNkTwG7+DYXIMg
+ YbEB7PeaJh7mLWTjoaWL
+Message-ID: <74f367ea-37ef-0f60-b732-bc0d3a0b65f5@max-weller.de>
+Date: Tue, 27 Nov 2018 18:21:09 +0100
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.3.0
+MIME-Version: 1.0
+In-Reply-To: <20181127153946.36526.28954@bigbox.local>
+Content-Type: text/plain; charset=utf-8
+Content-Language: en-US
+Content-Transfer-Encoding: 8bit
+
+I accept.
+
+On 27.11.18 16:39, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled out the CVE form and want one, we can't use the data until you accept the MITRE CVE Terms of Use). 
+> 
+> Simply quote the email and reply with "I accept" at the top if you agree to the MITRE CVE Terms of Use and we will add a copy of the email to the DWF MITRE CVE Terms of Use acceptance data at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+> 
+> The reason we use a complete copy of the email is that it provides an artifact showing that the email address accepted the Terms of Use, when they were accepted and so on. 
+> 
+> If you did not submit a CVE request to the DWF you can safely ignore this message, however we may resend it at some point in the future, if you don't want any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so we don't spam you with these, please note that this will prevent you from being able to accept the MITRE CVE Terms of Use via the DWF automatically in future (you'll have to manually ask). But again, if you have no idea what a CVE is then you can ignore this/ask to be added to the block list with no problems. 
+> 
+> MITRE CVE Terms of Use
+> 
+> LICENSE
+> 
+> Submissions: For all materials you submit to the Common Vulnerabilities and Exposures (CVEÂ®), you hereby grant to The MITRE Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute such materials and derivative works. Unless required by applicable law or agreed to in writing, you provide such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute Common Vulnerabilities and Exposures (CVEÂ®). Any copy you make for such purposes is authorized provided that you reproduce MITRE's copyright designation and this license in any such copy.
+> 
+> DISCLAIMERS
+> 
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/master/Terms-Of-Use.md
+> 
+> To contact the DWF either hit reply, or email kurt@seifried.org manually with your question/concerns/etc. 
+> 
+
+
+-- 
+Freundliche Grüße
+Max Weller
+
+Aktuelle Kontaktdaten unter https://max.weller.io

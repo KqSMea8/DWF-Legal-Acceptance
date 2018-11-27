@@ -1,0 +1,255 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a9d:3a09:0:0:0:0:0 with SMTP id j9csp1579026otc;
+        Tue, 27 Nov 2018 07:46:18 -0800 (PST)
+X-Google-Smtp-Source: AJdET5fHGozI3pFY77AMDU1ZopVZ8yvEKz4JX3XSR8ZrczSqayUsyuwHAha3AoTjfnw/2cFqiCEd
+X-Received: by 2002:a1c:b54b:: with SMTP id e72mr28189346wmf.73.1543333578412;
+        Tue, 27 Nov 2018 07:46:18 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1543333578; cv=none;
+        d=google.com; s=arc-20160816;
+        b=JuUt6I9tUm0ttemPpeBGPlkR3mP1ZmmGrKS8HEswFWQYz+PTLgKA9jcKr0/opnXcWp
+         U/DYHyo3Ihu2myVVAWz8GZR86HKEsl8kpPSCv5pUd2wBTFjreIWFA3HEphxdsFrmRcA8
+         Rq+u5d2jU5eW+sJ97ERBhEt4QhulU2v3zD7dzkMD7AToBuRLQIu2pKUayDESs/N0FpkD
+         MQ4ppGFeiA3IdZvL4I5+j63iglthGwCNIn/XrpC5dhHNdddBAaZPmd74aIjkRPDVjH9D
+         LyX4S2i6j/eLHKaL2Mq41vLPVEImwfWNBmq7K9ctFexdJqvwfMfbbZ9ByXiByerYtswv
+         31kQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:feedback-id:references:in-reply-to:message-id:subject
+         :reply-to:from:to:dkim-signature:date;
+        bh=XQKpFUKvafAMvzlI5e6Od1I3iPA1pqc0FnyNh0BYpLg=;
+        b=h0UnHLMoz8dTcJWyPZvQ/CX47HBiTpxddrjt8njBpn96z/2jG5N2rPqen0qAn7JBlr
+         5Wt6hI9cyZp04z6O1Kdyi5exeKxFuXMNIB+g8YIhezLMQP8IEMHlnyc4l0L98YvoECNN
+         hmeYqF8Ni4IzCwvmYiS08dzz0SHWRqQPVjql58ivhy8UMM3rPvQIVPIp9V0jx5eTDfpP
+         hQPrP4anbs+6F4ztOwxSL/Po5kK2HR54wFO9BctXx1JhofFZv6bORPxYizTA854er7aU
+         7eLjPg/qZQiy5D51VQOsHGdLzjZq4uh8kMD9FbtED0AazqORTY1b01wxdIjEUBswu8hq
+         ju4A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@duniel.no header.s=protonmail header.b=fjvzLIsR;
+       spf=pass (google.com: domain of d@duniel.no designates 185.70.40.18 as permitted sender) smtp.mailfrom=d@duniel.no
+Return-Path: <d@duniel.no>
+Received: from mail1.protonmail.ch (mail1.protonmail.ch. [185.70.40.18])
+        by mx.google.com with ESMTPS id z6si3119894wrh.223.2018.11.27.07.46.17
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 27 Nov 2018 07:46:18 -0800 (PST)
+Received-SPF: pass (google.com: domain of d@duniel.no designates 185.70.40.18 as permitted sender) client-ip=185.70.40.18;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@duniel.no header.s=protonmail header.b=fjvzLIsR;
+       spf=pass (google.com: domain of d@duniel.no designates 185.70.40.18 as permitted sender) smtp.mailfrom=d@duniel.no
+Date: Tue, 27 Nov 2018 15:46:07 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=duniel.no;
+	s=protonmail; t=1543333571;
+	bh=XQKpFUKvafAMvzlI5e6Od1I3iPA1pqc0FnyNh0BYpLg=;
+	h=Date:To:From:Reply-To:Subject:In-Reply-To:References:Feedback-ID:
+	 From;
+	b=fjvzLIsRQlFZVJjFQlDqT9qMAWxEzTXom4H/3YIJxCLlm2FGzEQ3FWQZ1YlYBZrNC
+	 YJ/jEslhMK8izykBgQF85DQWZXa9th+thmfB1Y2lXrOV5eSJro9Ejrv6nD7ge4Xwxo
+	 BJtx7b/+8Y/wnNrtKRPBIJeHLL5w6s+YF21oqJWU=
+To: "kurt@seifried.org" <kurt@seifried.org>
+From: Daniel Isaksen <d@duniel.no>
+Reply-To: Daniel Isaksen <d@duniel.no>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for d@duniel.no
+Message-ID: <Cyz44xUenrMUmh-ACN94A8Aw7gTD6R2VprQIBZCCpuMpfJqJame62402zmxaF2F8IR7nuxNQm2K8UBFvb9K5Kwu5YO6xvHd6Wvl5AWIF-hQ=@duniel.no>
+In-Reply-To: <20181127154219.36526.45645@bigbox.local>
+References: <20181127154219.36526.45645@bigbox.local>
+Feedback-ID: M6UsohadiIq4-vYRqoWvKyHDv4Mn9fTsg5lc0N5mVVAl_YZi3-tewmHYawfeFjjEIM9MeRHncCndifkvu9Zl9Q==:Ext:ProtonMail
+MIME-Version: 1.0
+Content-Type: multipart/signed; protocol="application/pgp-signature"; micalg=pgp-sha256; boundary="---------------------e5d63b021b8d3ea7c8a73cba9469f257"; charset=UTF-8
+X-Spam-Status: No, score=-1.1 required=7.0 tests=ALL_TRUSTED,DKIM_SIGNED,
+	DKIM_VALID,DKIM_VALID_AU autolearn=ham autolearn_force=no version=3.4.0
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on mail.protonmail.ch
+
+This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
+-----------------------e5d63b021b8d3ea7c8a73cba9469f257
+Content-Type: multipart/mixed;boundary=---------------------7c3f886f7fbac0ebc8be9cdea4e0a299
+
+-----------------------7c3f886f7fbac0ebc8be9cdea4e0a299
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;charset=utf-8
+
+I accept.
+
+
+-----
+Sincerely / Med vennlig hilsen,
+Daniel Isaksen <d@duniel.no> (https://duniel.no)
+
+=E2=80=90=E2=80=90=E2=80=90=E2=80=90=E2=80=90=E2=80=90=E2=80=90 Original M=
+essage =E2=80=90=E2=80=90=E2=80=90=E2=80=90=E2=80=90=E2=80=90=E2=80=90
+On Tuesday, November 27, 2018 4:42 PM, <kurt@seifried.org> wrote:
+
+> This is a confirmation email sent from CVE request form at https://iwant=
+acve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you fi=
+lled out the CVE form and want one, we can't use the data until you accept=
+ the MITRE CVE Terms of Use).
+> =
+
+
+> Simply quote the email and reply with "I accept" at the top if you agree=
+ to the MITRE CVE Terms of Use and we will add a copy of the email to the =
+DWF MITRE CVE Terms of Use acceptance data at https://github.com/distribut=
+edweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+> =
+
+
+> The reason we use a complete copy of the email is that it provides an ar=
+tifact showing that the email address accepted the Terms of Use, when they=
+ were accepted and so on.
+> =
+
+
+> If you did not submit a CVE request to the DWF you can safely ignore thi=
+s message, however we may resend it at some point in the future, if you do=
+n't want any future emails simply reply with "unsubscribe" or "DON'T SEND =
+ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block lis=
+t so we don't spam you with these, please note that this will prevent you =
+from being able to accept the MITRE CVE Terms of Use via the DWF automatic=
+ally in future (you'll have to manually ask). But again, if you have no id=
+ea what a CVE is then you can ignore this/ask to be added to the block lis=
+t with no problems.
+> =
+
+
+> MITRE CVE Terms of Use
+> =
+
+
+> LICENSE
+> =
+
+
+> Submissions: For all materials you submit to the Common Vulnerabilities =
+and Exposures (CVE=C3=82=C2=AE), you hereby grant to The MITRE Corporation=
+ (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, =
+non-exclusive, no-charge, royalty-free, irrevocable copyright license to r=
+eproduce, prepare derivative works of, publicly display, publicly perform,=
+ sublicense, and distribute such materials and derivative works. Unless re=
+quired by applicable law or agreed to in writing, you provide such materia=
+ls on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, eith=
+er express or implied, including, without limitation, any warranties or co=
+nditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PAR=
+TICULAR PURPOSE.
+> =
+
+
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive=
+, no-charge, royalty-free, irrevocable copyright license to reproduce, pre=
+pare derivative works of, publicly display, publicly perform, sublicense, =
+and distribute Common Vulnerabilities and Exposures (CVE=C3=82=C2=AE). Any=
+ copy you make for such purposes is authorized provided that you reproduce=
+ MITRE's copyright designation and this license in any such copy.
+> =
+
+
+> DISCLAIMERS
+> =
+
+
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE AR=
+E PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SH=
+E REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD=
+ OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EX=
+PRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE O=
+F THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARR=
+ANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+> =
+
+
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-=
+Legal-Acceptance/blob/master/Terms-Of-Use.md
+> =
+
+
+> To contact the DWF either hit reply, or email kurt@seifried.org manually=
+ with your question/concerns/etc.
+
+
+-----------------------7c3f886f7fbac0ebc8be9cdea4e0a299
+Content-Type: application/pgp-keys; filename="publickey - d@duniel.no - 0x1E863687.asc"; name="publickey - d@duniel.no - 0x1E863687.asc"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="publickey - d@duniel.no - 0x1E863687.asc"; name="publickey - d@duniel.no - 0x1E863687.asc"
+
+LS0tLS1CRUdJTiBQR1AgUFVCTElDIEtFWSBCTE9DSy0tLS0tDQpWZXJzaW9uOiBPcGVuUEdQLmpz
+IHYzLjEuMw0KQ29tbWVudDogaHR0cHM6Ly9vcGVucGdwanMub3JnDQoNCnhzRk5CRm5UZ05RQkVB
+Q3NCaHpwT0RlcSthMzVzTlRRS0Y5ck1yem1lZFcwZ29vRzRnOG1RKzl2L1NqagpLWkhEbkgzbHNu
+MmxCcFlFaVBEQlh4aUY1ckcxdlRoaVNmamVqSUxzV0c4aHFDaEVCd2N3emt4NHErOU4KYXhQTlR4
+Y0JYdWJ4YjJjVC9laHViaXRuWWxERHEzbUowYkk5eklkRS9ES3JCeDU5WHNvMThLTmJBQ0o5CkF5
+UTV2d2RkaFEzcGxaWVBKY2hjdEdqRFN4VFZJaWxFQStZdjR0cHVDN1BXcm56K1pCdklBMjVVdzJU
+ZAoycHRramoxdnY1YWwwcjVVTHdndmtuRDV4TUk3WkRCdHBNQmpsYXRWeTZwMyttcDQxNUI0ZmNX
+dFE1disKWDQvVmtrbmVrcExkRFhiY2JCNGVQajg1M1JKbS9pemxUV0RpYzJJNkN1Ym9qQU9qSDFX
+bW5ZbzRhOFhSCmVYOHk0SVoyRk1GN05LZkJmcnJjd3c2MGwvRFVZMlYzV21IVUdWRkQ4Ly90TjZk
+bmxSdlM4RlBxeXNTUQphdnErRUI2eVBac0I3bWw5ckREakNEYWJuTGowWjBkZ1IzOFhxMDR4Q0Zu
+S1c2UmoxR1ZrWGVYSS8rMlgKc0V5N2IvSThRREFZMzB1cFFrOFoxYjY2dTVzNXlsZUFZd2pTYkZG
+NzR1aUEvRWV1Y0pQb2t5RHdiUFlYCmRzSzdQUUJreFdqS283cG9zTHd2T2hRM0FrWWlQTWs1Mm9i
+K0dYVWhPK1JzNkpIZS9qaU11ZTBqa2llNAoyNW1jenZpSjNrakcrU3lzR0xSNUlOSUdNbXlEdWx3
+clluK0ZFSjQ0ZXVGbURTSTJQbCtBcW9hVHR5VE8KZFFKQmU2czlBSE9iamYzeUFQVUlnTlIwRmE1
+SlMvWFBRRm1wWVFBUkFRQUJ6UnNpWkVCa2RXNXBaV3d1CmJtOGlJRHhrUUdSMWJtbGxiQzV1Yno3
+Q3dYVUVFQUVJQUNrRkFsdjRnUlFHQ3drSENBTUNDUkJ5WEJ4TgpnZjQ1aEFRVkNBb0NBeFlDQVFJ
+WkFRSWJBd0llQVFBQUhuNFAvUm9TY2twbEg1NHcyT2FLOTRVaTNhRkYKcnZFNFRpcFZ1bms3RWZQ
+UVI2Mk9PLzUxTHdwYmtKMVh5TnhPME11ajlBc3B1dEhJN1dBSnFZdThrMXJrCndQTTRReWRuZkF3
+ZE1NQnVXQWlTQ2VyNDFaVkhuTHhab0NWckxyYnpDQ2FZM1FUSVhTVUYzbWIwL1ZmMgp5bldVbS9W
+blhnSDJ2MU9sajc2YVltazloZldENzNpZ2Urd0xHMFdDUldmUHJDajZva212MjFzK05kdjUKZnpz
+dmxoSXZKSTBWazBqSHA0My9kck9GVDRUa0JzTStKZnhMbDRya2prNlZGSU1iMlZoUUpscC9sMDFj
+ClVxaGdCU1Qra1JWcVJPNjdYbUpCZTFqNVl2Sy9VemJadVN0dEdwNis3SEY1NkRjVTlMb2h0Mjh6
+K1ovSgpjaG1UN2w4UEk0ZlhKWWVsZ25hNEhaRnJxNENacGtmYjljeFFMODVObkxlcEp6Mjc0TkhG
+RkNwU3locUsKSk5tT05rRWVNUXBaSzNsWVBlYjYzcTdVcDAxYmsyZmloL043TXNLQis1aFpYbVNS
+WENzRzl2ckJSMWplCk1GTE1sSm1TNlRqT1BSQU9pQXNRUmJGSTZYek5ieHExUTI5RUxDZ1lYZVFx
+c0dybXQydXBhSklvTUpEUQorZTMyOHgvRkROd0JwR2VGMEdWamtNMkxRZ0EyOGU0Ly9OSllFMzhW
+bGtuenRTQ3hqd2x4ZEd5K2Q0WGoKUUFxd1FzcVBCMmRIYUxFVlBoS0pZem9hMjF3ek14MjZlUHQw
+di96WVFERDZQWHE5Uit6amVFY0JsL1JSCnBQQk9yQTloYkNrTEJ0em5XeC9kbE9ZbStydVJnTUtU
+NDQ2dU8zRGNxbU13T3VRaHcxVGlLS3Q5NkFvVgp6c0ZOQkZuVGdOUUJFQURRQUtBUndMcmZRdWRT
+R25nb3RqaDR5TW1UbTBLbG9jUnBJL1lqT2dvMkkwR1IKd090K1krK0M4dHlzbUhxYytsS2c0M2ln
+OXhKSlFaM2ZGS1laM1YzZi9TQzZMbk1ROGFZbmZ0YU0ybWZzCm96Tm80MTA5dlhEY09YWXJDWXV2
+ZSt6d2xycXpYSHdsWWx3V0lqek5ucmtiUW9uTjUwTjFCc0s2ZUZyeQp2YUs1K203WUNCSGhvRXRB
+RWxCOWhBSExYRURHQmV1Q3ZoTnVlRXkzMHp0SUs1TGJMclp1MFcycnhTYmIKaytBTGJSRm16RzFE
+VDlJTXBKQTdBcXQ0OFV6bytLTnNSRkY0L2xOKzVGSU9KZUtJdlZvR1czODBlb1F0Cld4NVIrSjJ1
+bHM0RG5kUlBnWEpxSHdNQmxBbWszM1FLakFHaHZBWklUZjROdW5HNkVwYnhIVWJUMTdnNQpvdGFm
+ekdzZk45bHk4dEZpVmJmd0ZncldXV3ZVWStjSUFiNUhBVmkzdDlheHd0b0lMQ0hxcEFjYk43V0gK
+Wkl0dmZZM2x0dTJwTXlNWWEvdWQ3SzJpWEtZQlZGTXJZVkwxTVpMSzMyN0FSMUxUSEdNL1F2T1c5
+UnlBClkwL1hRSGgvQjJpM3JkTXhCTzFVOXRsbEJYN1EzSjNRb3RnRGVJTzJPVSt4TnpHamxsZWdM
+MDhOUmlzbwpibm51K0RVSGxtYWhYaFIwUFFBbXVVRXRYVjR0Zkh6YWpQdHF1bncxbGVpamZmQVhO
+TjhKalNZZUdNVDMKYTNvZ1lNVUJXZjFnUDIrdlN2WTlIR1RwblFzWm41SUl5YnpjR290TmUxbTc3
+aUl6Tm05ZEZTY2xCaGRmCks3cmE4a3RUdm9rQ0xWcm5DRUcvWFZkSnRiZEpwOFNURkRab2JRQVJB
+UUFCd3NGZkJCZ0JDQUFUQlFKYgorSUVXQ1JCeVhCeE5nZjQ1aEFJYkRBQUExTXdQL2p0eWRid3lE
+VU5mbjRNTmg2NU5sY1pVVXJRc0orSUgKOUNLNzViTzUzbEZmQTVXWXdKeWdHOTQreDl1S010dkI4
+ZnBBRW55OFQ4V3lxN1ZjOEVNdGhmY2dteVRyCnd0MURxeDJTdS9IVDlOUVBueVI4LzIzZDJIaWtr
+ZmZwcFlEN0JzSGVqc05tMndFMTNmemRPUjYrYVdrdwpaQ1dwQlpUQmRNdEdrS2R1R0xqTDZLOHY3
+Ly9sa3dXcFoyVTBNam10d1E4QXlyMjdEUXgvaVBXMTB6dm4KQjZoSVJqNVp6ZnVIWmdKVFdrdGpZ
+VS8ySXFPVGg0dFRoblp3S3NwcmgyemtyWFBveDZwQmxkWmpwTW9sCjZWbGcvMk9ib2ROZjJoWmNy
+UjdRMno4cHh5Vjl3b1BBRDYzNVpJYk82NnJrMWxIb2wxa2NGZVpXdGdWMwowdHBnQ3ozRUs2SW4x
+Q3dIb0pCQWtsSlFJRWN3MXFsWVVhbHc3ZFhNK1R6ci90bXBjUEY2RGg0V0k1OUMKcyt0VzlUWG1N
+YitEaU9vYkxPLzRMQ25uczhrd3VBdGF2eWJWUXY2Z1YwaDBTUUJEYjlPeVhNYkJoSGtOCkh6QWN2
+MHZFUXhySVhSS2pMRnJxTUVkcU9kaEhyUDRjdGpaWkxrbHRYZmgyeDZoSVVtbWFxWWM0WTlrdQoz
+RVJicHg2bmFudTR5MmtSTnd2NU9ueWRMM1ViWGRmV3RJSlR2bElpVVdab3hQYThVTVZ2Q3VEMmpU
+V0EKbHB0Y3JBNkYrSHhJR1BOeDhQbENqaWRBRkpIK2J5NGlNdjZmaFJjZm82Q2FSTnZ0NWU4eG84
+ek1YcFhUCndpTjJwM0Q0RGpzeS9oRDRhNGhaWWt2OGNoMnFkWWVwOFl0VC85Tlc2SWZ2TnNpM1hx
+ZUENCj0yS2N0DQotLS0tLUVORCBQR1AgUFVCTElDIEtFWSBCTE9DSy0tLS0tDQoNCg==
+-----------------------7c3f886f7fbac0ebc8be9cdea4e0a299--
+
+-----------------------e5d63b021b8d3ea7c8a73cba9469f257
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+Version: ProtonMail
+Comment: https://protonmail.com
+
+wsFcBAEBCAAQBQJb/Wa5CRByXBxNgf45hAAANaYP/2U6VwbZCS6oMZyXhNIS
+mREixzTdhWAleek0R/SZzansnIgurPD1Ar/8x2bETMwehsSssFF8sj8pDt3G
+guCVPcZBsLR3W4D+ofVU8Dcyo6ARe9XrKLPUWdxSU2pl3fYghxPbVI9b8I3h
+nIYkPt+yZSZietQ9+MdICE02tRIem+RdZvF78TiijUoHR7/RXsb5Bxcu/9gT
+aycn4ul8Gx5iMh1fXUKHgdB9/AcaiM8l3nG5I0H3LXeYSorgavKt5jRaeo3n
+CEVf1goAjk+6PeYiX9WQBXtEDjdv4+RJTJ2vqTGgaF/2tp2iewBLuMhAlLd/
+kM0OtMPeDRBN6ob/JOZcjeo83fGc87MliRBG7BC8ZJlUzzQeekaOewIC4r9C
+9JpRaPXdc5O17Gw7DXObAimqm6WY4uuGzrYtRDs5VeQ7xqHGlpwUSruhqi4C
+kAWNKcwQYBDO9cCddH4gG/E3WvJ2/A7obxPWBj4HZwgHz7uis2ldPLxSTqt+
+76xWJndPeoLVD+vB5R8sB1Y5P/CRhfG2N+hMGDkw4PvGXEvpC6n4P4EnGzJo
+r03vGUVyd/c1vmQh5eAjepsIKnu/dKaIVNGp9K3mBT9gd+N7sI/YINJHgrmu
+fk2GBkrEPUGyfMqj2PI3keRmQYLhwFY0PQ9TCRXM9ye0v3VVbNHijZSOvbau
+9hmf
+=6IWu
+-----END PGP SIGNATURE-----
+
+
+-----------------------e5d63b021b8d3ea7c8a73cba9469f257--
+
