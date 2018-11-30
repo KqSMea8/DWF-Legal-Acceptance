@@ -115,6 +115,7 @@ cve-dwf-request@leo.gaspard.io
 cve.reporting@gmail.com
 cve.tigusoft@gmail.com
 cve@max-weller.de
+cve@sektioneins.de
 cve@unsecure.blog
 cve@whitehats.nl
 cvereports@movermeyer.com
@@ -184,6 +185,8 @@ forkira_cxy@foxmail.com
 forpayloads@aliyun.com
 fortanjingli@shuziguanxing.com
 fortaoge@5ecurity.cn
+foryzeng@hdu.edu.cn
+fpletz@fnordicwalking.de
 franco@opnsense.org
 frankmorgner@gmail.com
 fwaggle@fwaggle.org
@@ -201,6 +204,7 @@ gsingh2011@gmail.com
 gtanmaynashte@gmail.com
 guillebrgs@gmail.com
 gunnstein.lye@ez.no
+gx.niu@sohu.com
 gy741.kim@gmail.com
 hakobyan@cmu.edu
 hallodog@hotmail.com
