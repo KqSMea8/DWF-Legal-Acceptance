@@ -1,0 +1,173 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a9d:3a09:0:0:0:0:0 with SMTP id j9csp4745972otc;
+        Sat, 1 Dec 2018 01:26:30 -0800 (PST)
+X-Google-Smtp-Source: AFSGD/Vum/9/EY6cWc9phRMG6q89vwpgbzWE+eZyIk5C+bazkHppL4suM1osVC2etqLJrzT2d151
+X-Received: by 2002:a1c:b47:: with SMTP id 68mr1661103wml.148.1543656390037;
+        Sat, 01 Dec 2018 01:26:30 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1543656390; cv=none;
+        d=google.com; s=arc-20160816;
+        b=XUttk53Vl3kvacrlJxV3R5O9s06y/HA2LLxRvj8qWHc1mjFCse1qkONnSs+h0hupWM
+         o6/X1ZbhapAD5Z0Wbu72Qv0s+OrxSwK36rpvMnHX6zXNNw6R1UT5kZ2FnzTMDIQwKC0w
+         EGkEZjaQLmDLdfOMxKgj5o7wnTBSMU3crioC0fj41mnMTUWLYPdTMqZSm3bZKyarH3Rh
+         L+NJ3M+r9v/D8mAabcTmYo4nrca9p8PuRvbgWRQqXb4Beb8SgkXmJCAE9y96COJFN+Sd
+         Z+ZvN2cPHsBb5nSLn/vVnApwcHz2uGlQa2L7SXP9BaWqpHpvRx9yQIQgaLVd1UAzXuw9
+         4J5Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:date:content-transfer-encoding:mime-version:comments
+         :references:in-reply-to:subject:to:from;
+        bh=RYcoT71Vsw5GHopqHtD7VEibGsK5xjBmpx2+s6q+zeI=;
+        b=mCAt4gU7iKX2iclAZnAI4DFCITImFreh0B7lJu2t4RayBjdbYYYJ0LOwr6UhBdW/ff
+         Oqxr/Sdp1KP0sdBeuaiARL+C4Ce2vGIPeMyw6VftlSLZNzCVfgbXoApt7KjgJAJnTsNH
+         tROGL4FrALcARUIs/MkXRVFw5hcNctlLuq+a8qkrE+jEkv+FcypStJWJ7o355qQJeY7z
+         Mh5B4tm10Z0wxAPXJS4/H8WpgOrPWgz+Mm/xwDGW+VPZ0njHouJ99T3R/IlRiDTh10GS
+         lTCbJJWl4D3ZvRuGwHZYL/LLibLQkjSrdKfX6dwZZPsu4EnikE6umVbImWY1WsDkHBb2
+         r0Tg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of me@halfdog.net designates 37.186.9.82 as permitted sender) smtp.mailfrom=me@halfdog.net
+Return-Path: <me@halfdog.net>
+Received: from mail.halfdog.net (mail.halfdog.net. [37.186.9.82])
+        by mx.google.com with ESMTPS id x20si1437877wme.127.2018.12.01.01.26.29
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=AES128-SHA bits=128/128);
+        Sat, 01 Dec 2018 01:26:29 -0800 (PST)
+Received-SPF: pass (google.com: domain of me@halfdog.net designates 37.186.9.82 as permitted sender) client-ip=37.186.9.82;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of me@halfdog.net designates 37.186.9.82 as permitted sender) smtp.mailfrom=me@halfdog.net
+Received: from [169.254.0.1] (helo=localhost)
+	by mail.halfdog.net with esmtpsa (TLS1.2:DHE_RSA_AES_256_CBC_SHA256:256)
+	(Exim 4.82)
+	(envelope-from <me@halfdog.net>)
+	id 1gT1Xe-0002wH-OG
+	for kurt@seifried.org; Sat, 01 Dec 2018 09:26:26 +0000
+From: halfdog <me@halfdog.net>
+To: kurt@seifried.org
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for me@halfdog.net
+In-reply-to: <20181127154123.36526.58945@bigbox.local>
+References: <20181127154123.36526.58945@bigbox.local>
+Comments: In-reply-to kurt@seifried.org
+   message dated "Tue, 27 Nov 2018 08:41:23 -0700."
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Date: Sat, 01 Dec 2018 09:26:02 +0000
+Message-ID: <1784-1543656362.602771@tUqX.V5OD.hiLf>
+
+I accept
+
+kurt@seifried.org writes:
+> This is a confirmation email sent from CVE request form at https://iwant=
+acve.
+> org/ asking you to accept the MITRE CVE Terms of Use (assuming you fille=
+d out
+>  the CVE form and want one, we can't use the data until you accept the M=
+ITRE =
+
+> CVE Terms of Use). =
+
+> =
+
+> Simply quote the email and reply with "I accept" at the top if you agree=
+ to t
+> he MITRE CVE Terms of Use and we will add a copy of the email to the DWF=
+ MITR
+> E CVE Terms of Use acceptance data at https://github.com/distributedweak=
+nessf
+> iling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+> =
+
+> The reason we use a complete copy of the email is that it provides an ar=
+tifac
+> t showing that the email address accepted the Terms of Use, when they we=
+re ac
+> cepted and so on. =
+
+> =
+
+> If you did not submit a CVE request to the DWF you can safely ignore thi=
+s mes
+> sage, however we may resend it at some point in the future, if you don't=
+ want
+>  any future emails simply reply with "unsubscribe" or "DON'T SEND ME THI=
+S EMA
+> IL EVER AGAIN" and I'll add your email address to the block list so we d=
+on't =
+
+> spam you with these, please note that this will prevent you from being a=
+ble t
+> o accept the MITRE CVE Terms of Use via the DWF automatically in future =
+(you'
+> ll have to manually ask). But again, if you have no idea what a CVE is t=
+hen y
+> ou can ignore this/ask to be added to the block list with no problems. =
+
+> =
+
+> MITRE CVE Terms of Use
+> =
+
+> LICENSE
+> =
+
+> Submissions: For all materials you submit to the Common Vulnerabilities =
+and E
+> xposures (CVE=C2=AE), you hereby grant to The MITRE Corporation (MITRE) =
+and all CVE
+>  Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-=
+charg
+> e, royalty-free, irrevocable copyright license to reproduce, prepare der=
+ivati
+> ve works of, publicly display, publicly perform, sublicense, and distrib=
+ute s
+> uch materials and derivative works. Unless required by applicable law or=
+ agre
+> ed to in writing, you provide such materials on an "AS IS" BASIS, WITHOU=
+T WAR
+> RANTIES OR CONDITIONS OF ANY KIND, either express or implied, including,=
+ with
+> out limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT,=
+ MERC
+> HANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+> =
+
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive=
+, no-
+> charge, royalty-free, irrevocable copyright license to reproduce, prepar=
+e der
+> ivative works of, publicly display, publicly perform, sublicense, and di=
+strib
+> ute Common Vulnerabilities and Exposures (CVE=C2=AE). Any copy you make =
+for such pu
+> rposes is authorized provided that you reproduce MITRE's copyright desig=
+natio
+> n and this license in any such copy.
+> =
+
+> DISCLAIMERS
+> =
+
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE AR=
+E PRO
+> VIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE R=
+EPRES
+> ENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TR=
+USTEE
+> S, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR =
+IMPLI
+> ED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORM=
+ATION
+>  THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCH=
+ANTAB
+> ILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+> =
+
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-=
+Legal
+> -Acceptance/blob/master/Terms-Of-Use.md
+> =
+
+> To contact the DWF either hit reply, or email kurt@seifried.org manually=
+ with
+>  your question/concerns/etc. =
+
+
+

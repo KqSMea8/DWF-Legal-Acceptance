@@ -6,6 +6,7 @@
 CYoung@tripwire.com
 David.Turner@twosigma.com
 Deepak.vksharma09@gmail.com
+Disgruntled3lf@gmail.com
 Esdevelo@Gmail.com
 Evan.Ward@nrl.navy.mil
 Grega.Preseren@snt-svetovanje.si
@@ -66,6 +67,7 @@ aymeric.augustin@fractalideas.com
 bartdewater@gmail.com
 bascule@gmail.com
 bazy@safecomp.com
+beched@deteact.com
 becholey@gmail.com
 ben.hutchings@codethink.co.uk
 ben.kurtovic@gmail.com
@@ -352,6 +354,7 @@ mbrooks@snap.com
 mcatanzaro@gnome.org
 mcatanzaro@igalia.com
 me@cydrobolt.com
+me@halfdog.net
 me@justinbull.ca
 me@lucapezzolla.com
 me@spoock.com
@@ -384,6 +387,7 @@ nenolod@dereferenced.org
 nenolod@gmail.com
 ngregory@nyu.edu
 nhoyadx@gmail.com
+nicolas.richeton@gmail.com
 niteshvai67@gmail.com
 nitin.arya@owasp.org
 nullsec.anon@gmail.com
@@ -520,6 +524,7 @@ thomas@orgis.org
 thomasv@electrum.org
 tmilos@gmail.com
 toan.nguyen@techlabcorp.com
+tod_beardsley@rapid7.com
 tom@dxw.com
 tom@powell.io
 tonix0114@gmail.com
