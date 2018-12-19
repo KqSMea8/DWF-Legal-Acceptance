@@ -390,7 +390,9 @@ nenolod@dereferenced.org
 nenolod@gmail.com
 ngregory@nyu.edu
 nhoyadx@gmail.com
+nickb@appcheck-ng.com
 nicolas.richeton@gmail.com
+nils.stuenkel@t-systems.com
 niteshvai67@gmail.com
 nitin.arya@owasp.org
 nullsec.anon@gmail.com
@@ -399,6 +401,7 @@ officialyogeshmodi@gmail.com
 olangomark@gmail.com
 olt@omniscale.de
 ondrej@sury.org
+oscar@arnflo.se
 oscar@sakerhetskontoret.com
 panos122008@gmail.com
 parichay1012@gmail.com
@@ -501,6 +504,7 @@ songkun2008@gmail.com
 spotturu@andrew.cmu.edu
 squid3@treenet.co.nz
 stanis.shkel@gmail.com
+stayysalty@protonmail.com
 stefan.kanthak@nexgo.de
 stephan.zeisberg@splone.com
 stephan@srlabs.de
