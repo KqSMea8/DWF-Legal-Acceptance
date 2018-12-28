@@ -1,0 +1,165 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.103.27.130 with SMTP id b124csp1103355vsb;
+        Fri, 18 Aug 2017 12:35:03 -0700 (PDT)
+X-Received: by 10.84.215.130 with SMTP id l2mr10662832pli.116.1503084903133;
+        Fri, 18 Aug 2017 12:35:03 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1503084903; cv=none;
+        d=google.com; s=arc-20160816;
+        b=U58RfFxzWSGZRLirnO7oOUmalUgkyPk3j4G+PgxCKutDaV8qrHDb5JF/g07GltmDGS
+         +h2kZbAWwWOKlHBA7MGhYZTT0BKW4gnGdrMiBFzghgk4PofuuGfCcw+c3M7kZJBl9is2
+         Zo5Pq462G71HYipnMxB3VSs1ox8E2Uycmbn1u4X3Mcm+WqBCctgBOg1CYJDHtc9Q2GnL
+         ULYM6NgtXoyq05IZPQ92DZtwKOrLChm9QBphwJHF27eJ9kMSxwuG2Sts1KxGcyaSxpu8
+         FwLCQeceE7x8izSj4kyiqshDjcplqD4djPb7x0Qh2+woEm1rjzZQHJezG9NH18Dhk+a7
+         YGqQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-transfer-encoding:content-id
+         :spamdiagnosticmetadata:spamdiagnosticoutput:content-language
+         :accept-language:in-reply-to:references:message-id:date:thread-index
+         :thread-topic:subject:to:from:dkim-signature
+         :arc-authentication-results;
+        bh=LZUyfJdq9tafmTjGWWmMsUl56550D+G/Zlo8nr7zHUU=;
+        b=yB4+RRWCibQb34NuKLuvG6m3D2RakfSJ8eVX3GxoPGVQ4AV9fWyPpfVUrTz05+WZW6
+         c9b//jPy4VYh9jdWO/k2zEBrp6pzS3/aQ9wffEe8n9IAFLIEDH/4ZZjJMzjf2wtQsVnS
+         P9eujM1QExi9w97S8s/zxTtJREm9QFIg6aDiIRN44a4vckg2s/9Z9UFsx7Zbi+P0bbaI
+         cgcwmhy96RVt8Q8BzsSxP7FfBc85X57SXDikwu2b5niG3J7Jw+x2O8FKZxFnH0lw43xs
+         wWszeikzjcWRT+TF9XgnNWVKp7d7k6w5IxwO38dpciP584FErt1d5CrUEzMJm+yYagkS
+         lLZg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@kastelo.onmicrosoft.com header.s=selector1-kastelo-net header.b=VqGf+z7+;
+       spf=pass (google.com: domain of jakob@kastelo.net designates 104.47.1.118 as permitted sender) smtp.mailfrom=jakob@kastelo.net
+Return-Path: <jakob@kastelo.net>
+Received: from EUR01-VE1-obe.outbound.protection.outlook.com (mail-ve1eur01on0118.outbound.protection.outlook.com. [104.47.1.118])
+        by mx.google.com with ESMTPS id y80si4050642pfd.295.2017.08.18.12.35.02
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Fri, 18 Aug 2017 12:35:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of jakob@kastelo.net designates 104.47.1.118 as permitted sender) client-ip=104.47.1.118;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@kastelo.onmicrosoft.com header.s=selector1-kastelo-net header.b=VqGf+z7+;
+       spf=pass (google.com: domain of jakob@kastelo.net designates 104.47.1.118 as permitted sender) smtp.mailfrom=jakob@kastelo.net
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=kastelo.onmicrosoft.com; s=selector1-kastelo-net;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=LZUyfJdq9tafmTjGWWmMsUl56550D+G/Zlo8nr7zHUU=;
+ b=VqGf+z7+c6yiHf7G1bzPUWp92w8bzD6aMDFAoy199o08I0sITyUC6kV3VuseddxtMvZgrOx2k1TUVDesW+q+J6HYFEFfgJNzgodDx9USAmYsOOypk+WNlGC6aNCACqvHQ9w738dGBbPyOr6oBUJcRWDy77XLbzKFxDlZMXNactU=
+Received: from HE1PR0701MB2108.eurprd07.prod.outlook.com (10.168.35.155) by
+ HE1PR0701MB1915.eurprd07.prod.outlook.com (10.167.189.19) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id
+ 15.1.1385.4; Fri, 18 Aug 2017 19:34:59 +0000
+Received: from HE1PR0701MB2108.eurprd07.prod.outlook.com
+ ([fe80::1fe:65b9:a0a4:ea3a]) by HE1PR0701MB2108.eurprd07.prod.outlook.com
+ ([fe80::1fe:65b9:a0a4:ea3a%18]) with mapi id 15.01.1385.005; Fri, 18 Aug 2017
+ 19:34:59 +0000
+From: Jakob Borg <jakob@kastelo.net>
+To: "kurt@seifried.org" <kurt@seifried.org>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ jakob@kastelo.net
+Thread-Topic: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ jakob@kastelo.net
+Thread-Index: AQHTGFiXRoPzv98bsEWdzfuAYh3v56KKgXUA
+Date: Fri, 18 Aug 2017 19:34:58 +0000
+Message-ID: <339E3B1C-C8AC-4F6E-A828-7C17945F69CB@kastelo.net>
+References: <20170818193120.55281.46327@shiny-2.local>
+In-Reply-To: <20170818193120.55281.46327@shiny-2.local>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [2001:7a0:8003:33:c075:909b:6a3:3e71]
+x-ms-publictraffictype: Email
+x-microsoft-exchange-diagnostics: 1;HE1PR0701MB1915;6:xuKBHjG6tku+KJED9zLWtMp/d5Q2tbljGil/6IffPVwdtDToX6wwpIk+A7p+Jyt/a/3jTfBfvfE+6Gy6S0sJru1c5QFtXMmEKdSxPJh3hgPCj6Kn1bKBxARl6gdPd1ph79b8pvwco4G/UIGK4Qxf7Hlg2LnjA+4uSpkuAaMfFxdWrYjv7qpA9uFw8YVt4lE6rxwfVA8vOuviWZ9tWmzq71lAH6oBSNYt7RO/AYLbBqL+O1LpRWCg1xlhKdejpblE1NnQwJt3RBU7Koy2P4vHhMX1CCFolz3f9shtOEevyagu3iBJCF53s9bPdRwh70eNH5VZTT0vGIjzwww0GRKq/Q==;5:GSUep8hrQAE1ufT3mPTbFnuBFwu26cqgWL7Lue1PjM3yAA2cPJC7TpTuEl5f0t0h+Sgzd4ZQCgYeXCliFgzpHkLWAcxykx1NU91lIm4JVEyYwgV5gsmlUjGc/MuFRDb/jfvRTMTcULED6x/N5QW4bQ==;24:Fd6Tm4INpFchrGJX5jUxSeDVWW70KydgXhNgKDER7v6R2WvkeeKMsaLTZIbuQbC6i5mhP610yNxsqQ4eHpP1Nsfyg6iEqHsgOhPgzei/b1k=;7:AJpcxmnV968rPGwYy45/y+NrQwPNJvIWu3f7yJnX/wOW5EdJftnLK65q+hCeGYicAJn+eX3ddlbu7vdcrnTV4OW2KVbv15dLkHj9bL8+e136Fnh87u1a+07Zi7QykOUJxNpZAqR/C3h/KK3q2QNBPJdFA/G+7qj/tni8ViLZV0iZMO80wBsnLFTWTCvBSwpEQbcz9ScTVTYxo8SlI3MW0DiljO7b1uSbjm43YU7aD58=
+x-ms-exchange-antispam-srfa-diagnostics: SSOS;
+x-ms-office365-filtering-correlation-id: 1d13be3c-d083-4561-2c1d-08d4e6703687
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(300000500095)(300135000095)(300000501095)(300135300095)(22001)(300000502095)(300135100095)(2017030254152)(2017082002075)(300000503095)(300135400095)(2017052603157)(201703131423075)(201702281549075)(300000504095)(300135200095)(300000505095)(300135600095)(300000506095)(300135500095);SRVR:HE1PR0701MB1915;
+x-ms-traffictypediagnostic: HE1PR0701MB1915:
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=jakob@kastelo.net; 
+x-exchange-antispam-report-test: UriScan:(166708455590820);
+x-microsoft-antispam-prvs: <HE1PR0701MB191511021E3FFD1049180128AD800@HE1PR0701MB1915.eurprd07.prod.outlook.com>
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(100000700101)(100105000095)(100000701101)(100105300095)(100000702101)(100105100095)(6040450)(601004)(2401047)(5005006)(8121501046)(93006095)(93001095)(10201501046)(3002001)(100000703101)(100105400095)(6041248)(201703131423075)(201703061421075)(20161123564025)(20161123555025)(2016111802025)(20161123562025)(20161123558100)(20161123560025)(6072148)(6043046)(201708071742011)(100000704101)(100105200095)(100000705101)(100105500095);SRVR:HE1PR0701MB1915;BCL:0;PCL:0;RULEID:(100000800101)(100110000095)(100000801101)(100110300095)(100000802101)(100110100095)(100000803101)(100110400095)(100000804101)(100110200095)(100000805101)(100110500095);SRVR:HE1PR0701MB1915;
+x-forefront-prvs: 040359335D
+x-forefront-antispam-report: SFV:NSPM;SFS:(10019020)(6009001)(13624006)(189002)(24454002)(199003)(28244002)(38564003)(6486002)(53546010)(6306002)(82746002)(6116002)(102836003)(6916009)(6506006)(99286003)(68736007)(106356001)(6512007)(5660300001)(53936002)(2950100002)(36756003)(5250100002)(7736002)(2900100001)(86362001)(76176999)(50986999)(2501003)(8676002)(8936002)(54356999)(25786009)(2351001)(2906002)(14454004)(229853002)(966005)(3280700002)(189998001)(33656002)(508600001)(3660700001)(6246003)(101416001)(1730700003)(83716003)(305945005)(5640700003)(6436002)(97736004)(105586002)(110136004)(81166006)(81156014)(5180700001)(221513004)(222073002);DIR:OUT;SFP:1102;SCL:1;SRVR:HE1PR0701MB1915;H:HE1PR0701MB2108.eurprd07.prod.outlook.com;FPR:;SPF:None;PTR:InfoNoRecords;MX:1;A:1;LANG:en;
+received-spf: None (protection.outlook.com: kastelo.net does not designate
+ permitted sender hosts)
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: text/plain; charset="us-ascii"
+Content-ID: <F13D9E40B7FE8A418E4B79EE8BA87073@eurprd07.prod.outlook.com>
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-OriginatorOrg: kastelo.net
+X-MS-Exchange-CrossTenant-originalarrivaltime: 18 Aug 2017 19:34:59.0230
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: a6336372-98f4-447c-8ebe-8d053bf0d364
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: HE1PR0701MB1915
+
+I accept.
+
+//jb
+
+> On 18 Aug 2017, at 21:31, kurt@seifried.org wrote:
+>=20
+> This is a confirmation email sent from CVE request form at https://iwanta=
+cve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you fill=
+ed out the CVE form and want one, we can't use the data until you accept th=
+e MITRE CVE Terms of Use).=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you agree =
+to the MITRE CVE Terms of Use and we will add a copy of the email to the DW=
+F MITRE CVE Terms of Use acceptance data at https://github.com/distributedw=
+eaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>=20
+> The reason we use a complete copy of the email is that it provides an art=
+ifact showing that the email address accepted the Terms of Use, when they w=
+ere accepted and so on.=20
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore this=
+ message, however we may resend it at some point in the future, if you don'=
+t want any future emails simply reply with "unsubscribe" or "DON'T SEND ME =
+THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so=
+ we don't spam you with these, please note that this will prevent you from =
+being able to accept the MITRE CVE Terms of Use via the DWF automatically i=
+n future (you'll have to manually ask). But again, if you have no idea what=
+ a CVE is then you can ignore this/ask to be added to the block list with n=
+o problems.=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common Vulnerabilities a=
+nd Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and=
+ all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive=
+, no-charge, royalty-free, irrevocable copyright license to reproduce, prep=
+are derivative works of, publicly display, publicly perform, sublicense, an=
+d distribute such materials and derivative works. Unless required by applic=
+able law or agreed to in writing, you provide such materials on an "AS IS" =
+BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or impl=
+ied, including, without limitation, any warranties or conditions of TITLE, =
+NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,=
+ no-charge, royalty-free, irrevocable copyright license to reproduce, prepa=
+re derivative works of, publicly display, publicly perform, sublicense, and=
+ distribute Common Vulnerabilities and Exposures (CVE??). Any copy you make=
+ for such purposes is authorized provided that you reproduce MITRE's copyri=
+ght designation and this license in any such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE=
+ PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE =
+REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF=
+ TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRES=
+S OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE=
+ INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES=
+ OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-D=
+atabase/blob/master/TermsOfUse.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org manually =
+with your question/concerns/etc.=20
+>=20
+

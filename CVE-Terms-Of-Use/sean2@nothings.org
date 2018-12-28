@@ -1,0 +1,138 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.153.144 with SMTP id a16csp8394079ivh;
+        Thu, 1 Feb 2018 10:06:31 -0800 (PST)
+X-Google-Smtp-Source: AH8x224eEHDhiMPLUCtAi+vfTHrwGhXz0VwHVBfYlc6M0ZV0/9US5XjTjhRqMhfrm8rc58rlMA8U
+X-Received: by 10.99.56.18 with SMTP id f18mr29059676pga.438.1517508391169;
+        Thu, 01 Feb 2018 10:06:31 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1517508391; cv=none;
+        d=google.com; s=arc-20160816;
+        b=q3etSZCirKzXC8Z20dxqCcNyyUNW8CHQFFCwqxCw0/A4dcgC8ChOHMETqn7JMtXJcP
+         4Vwk2b5/lRWsdhxOyZwaT8rpY2fM8xawCjj6BTX3ZL9tE0Ld/Ct6/sFRmoo8q2Vu7I1e
+         P0X4pvehjITlufjCSF6Oc4io1lRc1JNGDCq1UAKhR1nBT0Z7D2icwVvwF6XhOsRO+ZVt
+         CgukZvWc/XDtYjPsMNRRnLxmeDUXKNfsNOLNpc9DOlRaz8x9Pa/YdUMguC33tVF46hEK
+         3ZkPEeYEFGW+H73xpLnDEg+PjokEiO/A/q50a0oZELiEKoqX1oW+1O9ou5um/zx7gbjH
+         1BMQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:references:in-reply-to
+         :subject:from:to:date:dkim-signature:message-id
+         :arc-authentication-results;
+        bh=bmR+GubPoTT4R/l6bpByMDTIBWXDsnJaX+l1h6nqf5Q=;
+        b=FVjgs+rAu2DqN43LtGGmPYlCpUuQ7U1xl2bXTL94OpRunKzKFWrPMigqae58D0dnit
+         GW6z9Vv6ka7iR6NryYZDW57qLHdz02zBrvuI10qvSLNCTgfaQJQgeB7XL4USBgidnb4h
+         iIZYMZa8Niznvg9ygd+QONUHrjW4dFGQOLI6KerjTCdZGuY3OwEx/vZfqzMr9wqmvP/S
+         3/oCxrnJZG32mndDQF51ak/co9SmASIE6QRQ5LWiKO3wseSLc6p813hij2ZlLiokOhMF
+         B3IGx3V6YZVP7qibbXwJX7ScNQMBpM40oo6ll5QjV7kb21fwgiPAAgGKO9j8znF4vs1m
+         9Xmw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@nothings.org header.s=nothings.org header.b=yUhG4GF6;
+       spf=neutral (google.com: 208.113.200.129 is neither permitted nor denied by best guess record for domain of sean@nothings.org) smtp.mailfrom=sean@nothings.org
+Return-Path: <sean@nothings.org>
+Received: from homiemail-a82.g.dreamhost.com (sub5.mail.dreamhost.com. [208.113.200.129])
+        by mx.google.com with ESMTPS id b184si110092pfg.179.2018.02.01.10.06.30
+        for <kurt@seifried.org>
+        (version=TLS1_1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Thu, 01 Feb 2018 10:06:31 -0800 (PST)
+Received-SPF: neutral (google.com: 208.113.200.129 is neither permitted nor denied by best guess record for domain of sean@nothings.org) client-ip=208.113.200.129;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@nothings.org header.s=nothings.org header.b=yUhG4GF6;
+       spf=neutral (google.com: 208.113.200.129 is neither permitted nor denied by best guess record for domain of sean@nothings.org) smtp.mailfrom=sean@nothings.org
+Message-Id: <5a735727.c1cf620a.5769c.2ea8SMTPIN_ADDED_MISSING@mx.google.com>
+Received: from homiemail-a82.g.dreamhost.com (localhost [127.0.0.1])
+	by homiemail-a82.g.dreamhost.com (Postfix) with ESMTP id 6FD156008438
+	for <kurt@seifried.org>; Thu,  1 Feb 2018 10:06:30 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=nothings.org; h=date:to
+	:from:subject:in-reply-to:references:mime-version:content-type
+	:content-transfer-encoding; s=nothings.org; bh=Xzlkr7nIwg5aAlBtV
+	7ixFzUimzk=; b=yUhG4GF6hUvZPRGjbOj5vvGeJ2NdJq0dt9mZa2hQdYJyBfCzB
+	0byWou9PefrA4Fus4/fQ0vWwaiyEPQH7NeCKDu0Hf2eRXnyq+JK2FE4NWNHSf6kv
+	53lQafpL3vrgAsNHeGefT+ep9kwVvxOQHqMnmf39WVlFVn2CAh5YXm1tQo=
+Received: from Soulcatcher.nothings.org (c-67-171-50-128.hsd1.wa.comcast.net [67.171.50.128])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	(Authenticated sender: sean@nothings.org)
+	by homiemail-a82.g.dreamhost.com (Postfix) with ESMTPSA id 43BCF6008437
+	for <kurt@seifried.org>; Thu,  1 Feb 2018 10:06:30 -0800 (PST)
+X-Mailer: QUALCOMM Windows Eudora Version 7.1.0.9
+Date: Thu, 01 Feb 2018 10:06:30 -0800
+To: kurt@seifried.org
+From: Sean Barrett <sean@nothings.org>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+  sean2@nothings.org
+In-Reply-To: <20180201162647.23529.47103@slab.local>
+References: <20180201162647.23529.47103@slab.local>
+Mime-Version: 1.0
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<body>
+<font size=3D3>I accept<br><br>
+At 08:26 AM 2/1/2018, you wrote:<br>
+<blockquote type=3Dcite class=3Dcite cite=3D"">This is a confirmation ema=
+il
+sent from CVE request form at
+<a href=3D"https://iwantacve.org/" eudora=3D"autourl">
+https://iwantacve.org/</a> asking you to accept the MITRE CVE Terms of
+Use (assuming you filled out the CVE form and want one, we can't use the
+data until you accept the MITRE CVE Terms of Use). <br><br>
+Simply quote the email and reply with &quot;I accept&quot; at the top if
+you agree to the MITRE CVE Terms of Use and we will add a copy of the
+email to the DWF MITRE CVE Terms of Use acceptance data at
+<a href=3D"https://github.com/distributedweaknessfiling/DWF-Legal-Accepta=
+nce/tree/master/Terms-Of-Use" eudora=3D"autourl">
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/ma=
+ster/Terms-Of-Use</a>
+<br><br>
+The reason we use a complete copy of the email is that it provides an
+artifact showing that the email address accepted the Terms of Use, when
+they were accepted and so on. <br><br>
+If you did not submit a CVE request to the DWF you can safely ignore this
+message, however we may resend it at some point in the future, if you
+don't want any future emails simply reply with &quot;unsubscribe&quot; or
+&quot;DON'T SEND ME THIS EMAIL EVER AGAIN&quot; and I'll add your email
+address to the block list so we don't spam you with these, please note
+that this will prevent you from being able to accept the MITRE CVE Terms
+of Use via the DWF automatically in future (you'll have to manually ask).
+But again, if you have no idea what a CVE is then you can ignore this/ask
+to be added to the block list with no problems. <br><br>
+MITRE CVE Terms of Use<br><br>
+LICENSE<br><br>
+Submissions: For all materials you submit to the Common Vulnerabilities
+and Exposures (CVE=C2=AE), you hereby grant to The MITRE Corporation (MIT=
+RE)
+and all CVE Numbering Authorities (CNAs) a perpetual, worldwide,
+non-exclusive, no-charge, royalty-free, irrevocable copyright license to
+reproduce, prepare derivative works of, publicly display, publicly
+perform, sublicense, and distribute such materials and derivative works.
+Unless required by applicable law or agreed to in writing, you provide
+such materials on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied, including, without
+limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT,
+MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.<br><br>
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,
+no-charge, royalty-free, irrevocable copyright license to reproduce,
+prepare derivative works of, publicly display, publicly perform,
+sublicense, and distribute Common Vulnerabilities and Exposures (CVE=C2=AE=
+).
+Any copy you make for such purposes is authorized provided that you
+reproduce MITRE's copyright designation and this license in any such
+copy.<br><br>
+DISCLAIMERS<br><br>
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE
+PROVIDED ON AN &quot;AS IS&quot; BASIS AND THE CONTRIBUTOR, THE
+ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE
+CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES,
+DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE
+ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A
+PARTICULAR PURPOSE.<br><br>
+A copy is available at
+<a href=3D"https://github.com/distributedweaknessfiling/DWF-Legal-Accepta=
+nce/blob/master/Terms-Of-Use.md" eudora=3D"autourl">
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/ma=
+ster/Terms-Of-Use.md</a>
+<br><br>
+To contact the DWF either hit reply, or email kurt@seifried.org manually
+with your question/concerns/etc. </font></blockquote></body>
+</html>
+

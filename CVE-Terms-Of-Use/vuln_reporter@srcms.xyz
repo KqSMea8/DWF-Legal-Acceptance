@@ -1,0 +1,85 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.6.230 with SMTP id g93csp372009uag;
+        Thu, 22 Jun 2017 06:07:59 -0700 (PDT)
+X-Received: by 10.28.59.212 with SMTP id i203mr1697971wma.18.1498136879905;
+        Thu, 22 Jun 2017 06:07:59 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1498136879; cv=none;
+        d=google.com; s=arc-20160816;
+        b=kmCHLSlieZBOvwWuz5T7cMnis+jxb9UpaqGX0hii22REz/CMut2TETPCiHotD1rdQe
+         T+YFKAAkhffREB/5yk3Qo6MKIfhgCW5o/PSZsmv6NZjG9UlGPlQvxM3sLXeGsvyQP25r
+         qgVeYyxl78CRHnC5gMgOhN/Ojx90o30qiOggAdjpMlG6Ajpv5sec31ltykAOI8pKY6TV
+         yAf6jO+faICNNx79tFF8y8hHnwyW5EiiqtbVp/qh++mNWg9cJOSV8HZYDG7ueS5B5SWL
+         rJbHV1HOv3VKxsM0P6B/AXOeVkeEdFzGwfZMI1Nstk4F462SwvLRAnv8gyuawfH85tx3
+         tEBw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:date:content-transfer-encoding:mime-version:subject
+         :sender:to:from:references:in-reply-to:arc-authentication-results;
+        bh=sIfpcU7Yuz2BbPU8tFkFNbPbZ/C5da322NfE3R/ntmQ=;
+        b=p8lE4Qkw21Rl78U6bsrUs5Z9ti64nFlVhKu8YCBDA7hZgvrYdEmGOGO4kKMC6hyX6K
+         Jw4ulbCDQORH32CSzyYgTzcugDK21FzlXYwFLlDB8EXi6l6l0d+3PHe+eZHjzsFtWODo
+         lXQQCB1ThMjjnlJT4JDYOs2d5Qac0z9hnGPC/Nby8TWDX5cBDlQ3xPvTbaN0jlNqzc4N
+         d5IfjpedZWin8v9eSNZe2OcXR2ZVHMSlWXMzZqlsUAVELkXfncPV9ksq0Mo8No3BTDoj
+         ENzzLKyjBd0UeRf985rwNdqjkJWE4RaonoihaVUNKHz0sAgkZEecCYJNeRe/mhy1nDxT
+         c2JQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of doxc@qq.com designates 184.105.206.26 as permitted sender) smtp.mailfrom=doxc@qq.com
+Return-Path: <doxc@qq.com>
+Received: from smtpbg303.qq.com (smtpbg303.qq.com. [184.105.206.26])
+        by mx.google.com with ESMTPS id z3si1250282wmd.162.2017.06.22.06.07.56
+        for <kurt@seifried.org>
+        (version=TLS1 cipher=AES128-SHA bits=128/128);
+        Thu, 22 Jun 2017 06:07:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of doxc@qq.com designates 184.105.206.26 as permitted sender) client-ip=184.105.206.26;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of doxc@qq.com designates 184.105.206.26 as permitted sender) smtp.mailfrom=doxc@qq.com
+X-QQ-FEAT: 3GtnPQ8BMmYD0gHrmqFOb/m6RVHzfYao0GIdBy7SnR2k/lRjSQWzj6JtSLIgT
+	fDVTKbLMFz44pKfZuf/t440xzMuuS70BuNkUGbp3xxiag6OMGjCEvXqalFIRtjG4xFln6UJ
+	cLX7gk2issoDy2Fc0S/1JSLz4aUY94iM1oskQLTVXZFy/I0ZkWa90fMJokwUzCLM+OVIZP2
+	Ny8ud2emy7zeZ8gQdTG3Alszqld4xmvp/VkqsHXwx9F3yrKlgE3Y2
+X-QQ-SSF: 000000000000005000000000000000Z
+X-HAS-ATTACH: no
+X-QQ-BUSINESS-ORIGIN: 2
+X-Originating-IP: 125.31.84.191
+In-Reply-To: <20170620014727.46686.64617@bigbox.local>
+References: <20170620014727.46686.64617@bigbox.local>
+X-QQ-STYLE: 
+X-QQ-mid: webmail714t1498136872t832354
+From: "=?ISO-8859-1?B?TENhdHJv?=" <vuln_reporter@srcms.xyz>
+To: "=?ISO-8859-1?B?a3VydA==?=" <kurt@seifried.org>
+Sender: doxc@qq.com
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for vuln_reporter@srcms.xyz
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_594BC127_0A255020_171E5661"
+Content-Transfer-Encoding: 8Bit
+Date: Thu, 22 Jun 2017 21:07:51 +0800
+X-Priority: 3
+Message-ID: <tencent_3CA5CB2E7F9AE8140FF799CA@qq.com>
+X-QQ-MIME: TCMime 1.0 by Tencent
+X-Mailer: QQMail 2.x
+X-QQ-Mailer: QQMail 2.x
+X-QQ-ReplyHash: 1032150780
+X-QQ-SENDSIZE: 520
+X-QQ-FName: C8AF227385B7451A8FCBB2A4B48B4BCF
+X-QQ-LocalIP: 10.130.87.152
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_594BC127_0A255020_171E5661
+Content-Type: text/plain;
+	charset="ISO-8859-1"
+Content-Transfer-Encoding: base64
+
+SSBhY2NlcHQ=
+
+------=_NextPart_594BC127_0A255020_171E5661
+Content-Type: text/html;
+	charset="ISO-8859-1"
+Content-Transfer-Encoding: base64
+
+PGRpdj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6ICdsdWNpZGEgR3JhbmRlJywgVmVyZGFu
+YSwgJ01pY3Jvc29mdCBZYUhlaSc7IGxpbmUtaGVpZ2h0OiAyMy44cHg7Ij5JIGFjY2VwdDwv
+c3Bhbj48L2Rpdj4=
+
+------=_NextPart_594BC127_0A255020_171E5661--
+

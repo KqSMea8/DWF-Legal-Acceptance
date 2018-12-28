@@ -1,0 +1,142 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a9d:2363:0:0:0:0:0 with SMTP id k32-v6csp2447670otd;
+        Sat, 28 Jul 2018 17:30:45 -0700 (PDT)
+X-Received: by 2002:adf:f5c3:: with SMTP id k3-v6mr10747708wrp.219.1532824245263;
+        Sat, 28 Jul 2018 17:30:45 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1532824245; cv=none;
+        d=google.com; s=arc-20160816;
+        b=BK+nkQ9XkrSipfL+rcNlEc7HOJ6tqHgvUsTMLL1PHXyKLWNUcNTgFMVTvlrsSMdAZb
+         3RAV1BKgZKDjF9pL82lRz7tLiNqUhEnboPKpg5XrqD+xzEzCmQ8FdNY6ihdJAX36KwFf
+         xNiclT+vsi3brPaLldEfxpdsQ1G6BwW0kYCkB2KIQvnawlb3/aKHmtvh7pl9HsfPAvAI
+         4VtR8tgNd4WBDqjsiDHzNRXOQA+xTccsdMPWdi/So6wdKkK1sjQVYNmQ6w33n4gR7CRi
+         KyCMGCZGFzgXgI8XLuSs0wcLnaWDTEKIniJ82rx7Wqh7tbh65QUbAIxDLAd98g9nAewG
+         Li2A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:to:subject:message-id:date:from
+         :references:in-reply-to:mime-version:dkim-signature
+         :arc-authentication-results;
+        bh=Q+pDFeWFiqAraNZF/PYngZv+FDJt1qNrA/SGnduliKQ=;
+        b=OUsQ8TOefwCN7gbN4LevT2FaPFDnc/bzlkVmHtJR61gdrklAT+YMuwAEhomjr0xU6f
+         zVedKckL1qzAS0h6QgM2WjwpPatohJwyYhJfwqcwNoLfJBLi+b8+ooxD22PGgrTJrF1B
+         sWaN2UWhKIlpy1xERuze2PVGKN2lrDHWyBdXCIAdOjGyXgq4fTARDF9KG8oAn7ng/hm9
+         UCFQCQt6c8TgtmwKjY+Vp/meSEFvxV0OTVz3gBKXVNvhluqjuhoBJGMwzmyVmdJtAMWx
+         A6pC12vKscW2cwusIrcfi7HaquGYk5etYebUMw7/Xwjdq8FcoAIak3oxx8xkLcFUmhFR
+         LJRw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@dereferenced-org.20150623.gappssmtp.com header.s=20150623 header.b=AiCIuaaM;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of nenolod@dereferenced.org) smtp.mailfrom=nenolod@dereferenced.org
+Return-Path: <nenolod@dereferenced.org>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id d7-v6sor3235389wrm.29.2018.07.28.17.30.43
+        for <kurt@seifried.org>
+        (Google Transport Security);
+        Sat, 28 Jul 2018 17:30:43 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of nenolod@dereferenced.org) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@dereferenced-org.20150623.gappssmtp.com header.s=20150623 header.b=AiCIuaaM;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of nenolod@dereferenced.org) smtp.mailfrom=nenolod@dereferenced.org
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=dereferenced-org.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-transfer-encoding;
+        bh=Q+pDFeWFiqAraNZF/PYngZv+FDJt1qNrA/SGnduliKQ=;
+        b=AiCIuaaMwb8a+d5J4s/a/dBb6dDEmIaCStN48hLOu3f4wY/jgpX1rVEwzcu8OBLjC1
+         Y4Br6UNmF1b/rGJkfopKxx/jbDKlC9Byqe9yX1sQUjpYhaP2Nu//kJukFw0NxlQu7ndq
+         AFmefbUaa8gLCAGAHeucE+WaWd8rbuWfjAg5nY4TQp7/5z+DkqVcFmXBhFb7QP9mH4aJ
+         hnCE8eVFQkDwHlH6P5F9Xh7T3PAr17Ig3Bxu9diRBfm8lLPB+etZfdjfRLmqyEhbB1HF
+         axf7ahSm4TZ4vnJN/PD8jaY8FVEmFjqAJYhdjJ0PkVF/Vj1euy1yvYM6VZ+286jW7Ros
+         iFLg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:content-transfer-encoding;
+        bh=Q+pDFeWFiqAraNZF/PYngZv+FDJt1qNrA/SGnduliKQ=;
+        b=m30JDWID8JW4cL9R6/t/QGCxEcWmzsQ/XBRhBpqtYg3BjZTOphXJBZKHW79FDOIKbd
+         sbVprRau/snjWcZraOF0SgNRq1+0Rkg8snwj4T5q4W44fKr9nPALX9yGs4Jfuf3ihnOY
+         rDEN9d6zYHdd+WNmufJaX5hKe7NP+7KRar6dU/jZ8Y21ppqFebVUYb7SI/OfIxXeFHcA
+         C+Qo9bVm3lpaaLJYf5lQPKCqILxw5/oliLHpeOknzXr1LozK8SnEj5GMoXV/bWK6WACV
+         7m5+tRwA6CbmBxChz7ioc24I5PUFavImpl8V6oQI9IVeorExhC5nBo9HwjX06UgSCuqz
+         G95g==
+X-Gm-Message-State: AOUpUlFaHXi1HgvPpO5eV4sRmjKUslKHStG+5JwFGdXKho6BiAlX/CHT
+	Is+20PQ5Xm7b5iMl19FZAH0r8dU1iIGhtMEm1Ds4+Fw4
+X-Google-Smtp-Source: AAOMgpeEry0ILPmb+n+yP74PQ//hyQxTLnyBDV+cQrIjMv7owiGweLRMi52OfG0n0GHHEdl8CBvG0hs2Kd/mkZ1606w=
+X-Received: by 2002:adf:8276:: with SMTP id 109-v6mr11361491wrb.127.1532824243059;
+ Sat, 28 Jul 2018 17:30:43 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 2002:a5d:4250:0:0:0:0:0 with HTTP; Sat, 28 Jul 2018 17:30:42
+ -0700 (PDT)
+In-Reply-To: <20171002202318.11491.59963@slab.local>
+References: <20171002202318.11491.59963@slab.local>
+From: William Pitcock <nenolod@dereferenced.org>
+Date: Sat, 28 Jul 2018 19:30:42 -0500
+Message-ID: <CA+T2pCEWY-D_AvKQm+71yvLnZCbP4RAttTSkNpsopiztcfcvag@mail.gmail.com>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for nenolod@dereferenced.org
+To: kurt@seifried.org
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+On Mon, Oct 2, 2017 at 3:23 PM,  <kurt@seifried.org> wrote:
+> This is a confirmation email sent from CVE request form at https://iwanta=
+cve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you fill=
+ed out the CVE form and want one, we can't use the data until you accept th=
+e MITRE CVE Terms of Use).
+>
+> Simply quote the email and reply with "I accept" at the top if you agree =
+to the MITRE CVE Terms of Use and we will add a copy of the email to the DW=
+F MITRE CVE Terms of Use acceptance data at https://github.com/distributedw=
+eaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>
+> The reason we use a complete copy of the email is that it provides an art=
+ifact showing that the email address accepted the Terms of Use, when they w=
+ere accepted and so on.
+>
+> If you did not submit a CVE request to the DWF you can safely ignore this=
+ message, however we may resend it at some point in the future, if you don'=
+t want any future emails simply reply with "unsubscribe" or "DON'T SEND ME =
+THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so=
+ we don't spam you with these, please note that this will prevent you from =
+being able to accept the MITRE CVE Terms of Use via the DWF automatically i=
+n future (you'll have to manually ask). But again, if you have no idea what=
+ a CVE is then you can ignore this/ask to be added to the block list with n=
+o problems.
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities a=
+nd Exposures (CVE=C2=AE), you hereby grant to The MITRE Corporation (MITRE)=
+ and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclu=
+sive, no-charge, royalty-free, irrevocable copyright license to reproduce, =
+prepare derivative works of, publicly display, publicly perform, sublicense=
+, and distribute such materials and derivative works. Unless required by ap=
+plicable law or agreed to in writing, you provide such materials on an "AS =
+IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or =
+implied, including, without limitation, any warranties or conditions of TIT=
+LE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,=
+ no-charge, royalty-free, irrevocable copyright license to reproduce, prepa=
+re derivative works of, publicly display, publicly perform, sublicense, and=
+ distribute Common Vulnerabilities and Exposures (CVE=C2=AE). Any copy you =
+make for such purposes is authorized provided that you reproduce MITRE's co=
+pyright designation and this license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE=
+ PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE =
+REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF=
+ TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRES=
+S OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE=
+ INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES=
+ OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-L=
+egal-Acceptance/blob/master/Terms-Of-Use.md
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manually =
+with your question/concerns/etc.
+>

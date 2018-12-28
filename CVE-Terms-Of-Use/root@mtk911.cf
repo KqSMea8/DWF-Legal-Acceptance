@@ -1,0 +1,289 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a9d:2363:0:0:0:0:0 with SMTP id k32-v6csp183191otd;
+        Thu, 13 Sep 2018 19:19:46 -0700 (PDT)
+X-Google-Smtp-Source: ANB0Vdaiy1EjC6RVONAQGoRif13HLqtm2DYTmPJgq8R8RhUDl0dn0qYF+8faZlQQkENDW1PGVeei
+X-Received: by 2002:a50:e718:: with SMTP id a24-v6mr16140562edn.278.1536891586888;
+        Thu, 13 Sep 2018 19:19:46 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1536891586; cv=none;
+        d=google.com; s=arc-20160816;
+        b=dm0esM5tvPHktHp19tAk+QW+x8ZvtCbom+VhT0v1flSXl22DCospGwhkYvfl79YZMJ
+         +P/rqkExGSmo4lAn1cX1eH7MiKEeoBngAvlA3RWpvhBSSbfZMqlcY9ebz1wHQt09XOtY
+         VlREB3AQLNeOr/0MiDGQtDaomZ/SXkfoEm+OEv0x8h9FcioZOIMgGjB0o4VqvxpwcPUK
+         sKYx1i6sxkKk3Z9SxMq5yS+q1aqrKje8yQOdr8QdUKHYjqI0GTZI7eiJ0iOjS93407li
+         3PXZLPLqJIQmkHHjU4RONGil7gMdcesaPWjV9d1ATAQmQisntnQFboRKiRhedcjRU2by
+         pxtw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:references:in-reply-to:message-id:to:from
+         :reply-to:date:dkim-signature;
+        bh=v3V9UJTLqzXxLlB0S65bVpt2Qwx01VbPJPq06w4wckQ=;
+        b=P3ReeP7YVYAJBD6F6/pwyer+6BOYcrxsGS06Nd02cAxAZvF1KHkOL/SmO6SPndCYCk
+         2/jMnXMWTULFXx5gTdUCk1g/NQDwLfhoCe7YIdz3J64VVwZ35Lhob6CJEqVTLyq7Tytf
+         2N+RQlE0tV2BXGvJ90sOfp51V+fDk9IG7Y4BKLuQbVS/+ybKvg2fnEL9mg49N9Buq90y
+         tQfseRwR0bvLhukAzZJcoxOLSxSma5qmZKs2meYil8mHV94GVl5zLL4y0E8HvC5wIwCO
+         dPzqipGzPs1MmLfchIOcvmbUbdpYFhZgljvGjFduLphFXhIDeri3YgyyTxampAi/A7vJ
+         rvqw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@cloudmails.net header.s=mf101 header.b=DTj8B6R5;
+       spf=pass (google.com: domain of srs0=qqtj=l4=yahoo.com=mtk_911@cloudmails.net designates 2a00:1768:1001:9::101 as permitted sender) smtp.mailfrom="srs0=qqtj=l4=yahoo.com=mtk_911@cloudmails.net"
+Return-Path: <srs0=qqtj=l4=yahoo.com=mtk_911@cloudmails.net>
+Received: from mailforward101.cloudns.net (mailforward101.cloudns.net. [2a00:1768:1001:9::101])
+        by mx.google.com with ESMTPS id 92-v6si4385793edb.101.2018.09.13.19.19.46
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+        Thu, 13 Sep 2018 19:19:46 -0700 (PDT)
+Received-SPF: pass (google.com: domain of srs0=qqtj=l4=yahoo.com=mtk_911@cloudmails.net designates 2a00:1768:1001:9::101 as permitted sender) client-ip=2a00:1768:1001:9::101;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@cloudmails.net header.s=mf101 header.b=DTj8B6R5;
+       spf=pass (google.com: domain of srs0=qqtj=l4=yahoo.com=mtk_911@cloudmails.net designates 2a00:1768:1001:9::101 as permitted sender) smtp.mailfrom="srs0=qqtj=l4=yahoo.com=mtk_911@cloudmails.net"
+Received: by mailforward101.cloudns.net (Postfix, from userid 110)
+	id 68AED1097507; Fri, 14 Sep 2018 05:19:46 +0300 (EEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=cloudmails.net;
+	s=mf101; t=1536891586;
+	bh=Vhoh6jgcp+8m5DGKiOT/PlxpJoltlf57isGqs4JpB7k=;
+	h=Date:Reply-To:From:To:In-Reply-To:References:Subject;
+	b=DTj8B6R5xqL6G7d2jF4wFHoHSknGIIU6oOnIo41NzqOXIJr/d6MScFBrDsbhoXwtt
+	 uODW4Lr332IxPsZIfTOLGH3jmdVbini92oZalfQ86PuGPi0NQgQqCvri5VDeG+Gv1b
+	 5088KBRt1JOaFulEZ6nxh/cdoOLxLC5TWPS2SV2nG0dOCWqeo6c7UH0G9fdLSj8k6h
+	 E13PE2wzLc5qv+GKWzKhnJXa6pX2SwYqoOMwURTBgFOOB9ulhBcd6kL1CbwQC3LuFz
+	 hmuHPEtfEYzgbFUWJ5H/0n65L5EGLfMs9i1nxSDM0froFoXiyUFOeNX6onKQEph6uu
+	 mOz1cKkdfvGcWB0QEG5Ng+e7GM7cGNPZ9a+ChRiP9rYsJFbJqAVLe8G07sQewWLFNF
+	 oosVnoybmXKpMtWxZLdZ4THRCnL6HXpA0HDXB3TWnrlgRQNHhRpRe9aShXrY8zPlUk
+	 QgLL4EfzTUyOuT90UgSTjswwWKYgSZiuHMuqx3ja4IwmrSRzQv+OXLdeBD0TvpS2un
+	 rA0MtfFcs1J3iMI22rYIIBVavFrRap36PL80REFA6e23LmebjWjwJDmxJf5EF06U5P
+	 XEgbDTLTKLnLsjCRxYwvJmLT3S3bSQ4J8R2rHy0BTV3ZKDiSOstscR3Yvi02qEg9vy
+	 HlLZ4wDHxDSjuGGPjPvWR764=
+Received: from sonic301-2.consmr.mail.bf2.yahoo.com (sonic301-2.consmr.mail.bf2.yahoo.com [74.6.129.41])
+	by mailforward101.cloudns.net (Postfix) with ESMTP id 0EC1010247A9
+	for <mailforwadforkurtatseifried@mtk911.cf>; Fri, 14 Sep 2018 05:19:43 +0300 (EEST)
+X-YMail-OSG: Fb6yZ1oVM1lhfewIhDIzKW6n13M33JILJ.6zceLnCaX41HAUu6HE9LwReo4O3Ck
+ YignhRPvVGDJIJkei.DLEFv6EBk51XvNXH2Y9xH5rP2gIu42BpKYKw2i5oi.16IPTbgCI04D479F
+ U0rwIVOrS6HKYq_aC1RQKQbcZwhDMoYnxqyxpVyg4E5lBnzCFAbAi1XGRxJvLIvW96gSjyzVJmn9
+ ZDyrn82I9qxhii9BRsbGD_L8MjOw8rIdLHYWEQC355LOiyhP0HQr_cfA_lTWuR50TZ3xI1Su8mua
+ PdNbgL1Wza2bHkYGvaNLXOQMno_yhYsaGXFRTHIQ0256x90M8lKRjRs.PYrx2vFRBvOCoS_nWosM
+ dK1Sp2omWlFCiDyEZu1ek0tKPRYAUzHscDmh6ok1BsjWbUBFvMdzicPvelLQ9pzaOodwryVdwOrp
+ 1XATcWFzjF79xRdQd1YlvIlYTQqey7s7xz13_9Y6dl92fJbNBsb9CdBv50xzwaGeAveVTVIcRb4A
+ LvgYZDA.gAD43oGWKXhajXtMn3Eb9sk9I_FvBH6CAfOADP.G4ir341fkfZD77ZoDg_GOnQzeGE_5
+ mw8pUs2MwqSyrCDM26dPzZMju9j3NRHCSFb9FbXdppG959yITpWtzyZ3_9cZTQnLu06bn.uIwEns
+ YDrDmfoJFvcMxcbmAaRiQ.H5PytGxmcqTC_yH5BP_2kGE7icZ8vh959u3GVVUKjq4S4Pk58qyPzs
+ a90oC2w6taS7Ml4Op7ktge1sVEbk4T1DobMQwNdFHTtf8ldKw3Q5wbH9mtC9hxcM3_luyyMD8_IS
+ hlCvXA4aUIPoGh24maXW39D6zY0HXJOsufbq_THSAlyWronkWJi_gXXJAmyjJzhvXMxd_QaZEC6d
+ xBtEF1MPgCssayIc9CfqEqgaYAY4yK624HQ4m3r4M24UDTJzmoR4Wt5I9gc4VNt0tGkvVVeRuGIY
+ FceG_wPOq._ddlc6W_NGSyFLaxoyD173vyNE0FyExiRaYZX3Rr1P8YNE-
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic301.consmr.mail.bf2.yahoo.com with HTTP; Fri, 14 Sep 2018 02:19:42 +0000
+Date: Fri, 14 Sep 2018 02:19:41 +0000 (UTC)
+Reply-To: mtk_911@yahoo.com <mtk_911@yahoo.com>
+From: " mtk_911@yahoo.com  - mtk_911 at yahoo.com" <mailforwards@cloudmails.net>
+To: 
+	"mailforwadforkurtatseifried@mtk911.cf" <mailforwadforkurtatseifried@mtk911.cf>, 
+	"root@mtk911.cf" <root@mtk911.cf>
+Message-ID: <1628468289.3260232.1536891581507@mail.yahoo.com>
+In-Reply-To: <20180914001853.1024.10998@shiny-2.local>
+References: <20180914001853.1024.10998@shiny-2.local>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ root@mtk911.cf
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_3260231_585184355.1536891581504"
+X-Mailer: WebService/1.1.12406 YMailNorrin Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36
+
+------=_Part_3260231_585184355.1536891581504
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+"I accept"
+Regards,
+MTK
+--Muhammad Talha Khan=20
+
+Facebook=C2=A0=C2=A0TwitterLinkedIn=C2=A0 =C2=A0Website
+
+=20
+
+    On Friday, September 14, 2018, 5:19:00 AM GMT+5, kurt at seifried.org <=
+mailforwards@cloudmails.net> wrote: =20
+=20
+ This is a confirmation email sent from CVE request form at https://iwantac=
+ve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you fille=
+d out the CVE form and want one, we can't use the data until you accept the=
+ MITRE CVE Terms of Use).=20
+
+Simply quote the email and reply with "I accept" at the top if you agree to=
+ the MITRE CVE Terms of Use and we will add a copy of the email to the DWF =
+MITRE CVE Terms of Use acceptance data at https://github.com/distributedwea=
+knessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+
+The reason we use a complete copy of the email is that it provides an artif=
+act showing that the email address accepted the Terms of Use, when they wer=
+e accepted and so on.=20
+
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don't =
+want any future emails simply reply with "unsubscribe" or "DON'T SEND ME TH=
+IS EMAIL EVER AGAIN" and I'll add your email address to the block list so w=
+e don't spam you with these, please note that this will prevent you from be=
+ing able to accept the MITRE CVE Terms of Use via the DWF automatically in =
+future (you'll have to manually ask). But again, if you have no idea what a=
+ CVE is then you can ignore this/ask to be added to the block list with no =
+problems.=20
+
+MITRE CVE Terms of Use
+
+LICENSE
+
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+ Exposures (CVE=C3=82=C2=AE), you hereby grant to The MITRE Corporation (MI=
+TRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-e=
+xclusive, no-charge, royalty-free, irrevocable copyright license to reprodu=
+ce, prepare derivative works of, publicly display, publicly perform, sublic=
+ense, and distribute such materials and derivative works. Unless required b=
+y applicable law or agreed to in writing, you provide such materials on an =
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express=
+ or implied, including, without limitation, any warranties or conditions of=
+ TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURP=
+OSE.
+
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare=
+ derivative works of, publicly display, publicly perform, sublicense, and d=
+istribute Common Vulnerabilities and Exposures (CVE=C3=82=C2=AE). Any copy =
+you make for such purposes is authorized provided that you reproduce MITRE'=
+s copyright designation and this license in any such copy.
+
+DISCLAIMERS
+
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE RE=
+PRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF T=
+RUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS =
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE I=
+NFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES O=
+F MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+A copy is available at https://github.com/distributedweaknessfiling/DWF-Leg=
+al-Acceptance/blob/master/Terms-Of-Use.md
+
+To contact the DWF either hit reply, or email kurt@seifried.org manually wi=
+th your question/concerns/etc.=20
+
+ =20
+------=_Part_3260231_585184355.1536891581504
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body><div style=3D"font-family:Helvetica Neue, Helvetic=
+a, Arial, sans-serif;font-size:16px;"><div style=3D"font-family:Helvetica N=
+eue, Helvetica, Arial, sans-serif;font-size:16px;"><div><div>"I accept"</di=
+v><div><br></div><div class=3D"ydpc9656ab5signature"><div align=3D"center" =
+style=3D"font-size:16px;"><div id=3D"ydp36ee8436yui_3_13_0_ym1_1_1390503654=
+167_2643" align=3D"left">Regards,</div><div id=3D"ydp36ee8436yui_3_13_0_ym1=
+_1_1390503654167_2688" align=3D"left"><br clear=3D"none"></div><div align=
+=3D"left">MTK<br clear=3D"none"></div><div id=3D"ydp36ee8436yui_3_13_0_ym1_=
+1_1390503654167_2646" align=3D"left"><div id=3D"ydp36ee8436yui_3_13_0_ym1_1=
+_1390503654167_2645">--</div><div id=3D"ydp36ee8436yui_3_13_0_ym1_1_1390503=
+654167_2648"><div id=3D"ydp36ee8436yui_3_13_0_ym1_1_1390503654167_2647" sty=
+le=3D"font-size:10px;margin:0px;font-family:Helvetica;"><span style=3D"lett=
+er-spacing:0px;"><font class=3D"ydp36ee8436yiv1074941560Apple-style-span" c=
+olor=3D"#7E7E7E"><font class=3D"ydp36ee8436yiv1074941560Apple-style-span" f=
+ace=3D"'Lucida Grande'" size=3D"3"><span class=3D"ydp36ee8436yiv1074941560A=
+pple-style-span" style=3D"font-size:11px;"><b>Muhammad Talha Khan</b> <br><=
+/span></font></font></span></div><div id=3D"ydp36ee8436yui_3_13_0_ym1_1_139=
+0503654167_2650" style=3D"font-size:10px;margin:0px;font-family:Helvetica;"=
+><span style=3D"letter-spacing:0px;"><font class=3D"ydp36ee8436yiv107494156=
+0Apple-style-span" color=3D"#7E7E7E"><font class=3D"ydp36ee8436yiv107494156=
+0Apple-style-span" face=3D"'Lucida Grande'" size=3D"3"><span class=3D"ydp36=
+ee8436yiv1074941560Apple-style-span" style=3D"font-size:11px;"><br clear=3D=
+"none"></span></font></font></span></div><span style=3D"letter-spacing:0px;=
+"><font class=3D"ydp36ee8436yiv1074941560Apple-style-span" color=3D"#7C7F7F=
+"><font class=3D"ydp36ee8436yiv1074941560Apple-style-span" face=3D"'Lucida =
+Grande'" size=3D"3"><span class=3D"ydp36ee8436yiv1074941560Apple-style-span=
+" style=3D"font-size:11px;"><a href=3D"http://fb.com/mtk911" rel=3D"nofollo=
+w" target=3D"_blank">Facebook</a>&nbsp;&nbsp;<a href=3D"http://twitter.com/=
+M7K911" style=3D"color:rgb(25, 106, 212);text-decoration-line:underline;fon=
+t-size:11px;" rel=3D"nofollow" target=3D"_blank">Twitter</a></span></font><=
+/font></span><div id=3D"ydp36ee8436yui_3_13_0_ym1_1_1390503654167_2666" sty=
+le=3D"margin:0px;font-family:Helvetica;"><span style=3D"letter-spacing:0px;=
+"><font class=3D"ydp36ee8436yiv1074941560Apple-style-span" color=3D"#7C7F7F=
+"><font class=3D"ydp36ee8436yiv1074941560Apple-style-span" face=3D"'Lucida =
+Grande'" size=3D"1"><a href=3D"http://Linkedin.com/in/mtk911/" rel=3D"nofol=
+low" target=3D"_blank">LinkedIn</a>&nbsp; &nbsp;<a href=3D"http://mtk911.cf=
+/" rel=3D"nofollow" target=3D"_blank">Website</a><br></font></font></span><=
+/div><div id=3D"ydp36ee8436yui_3_13_0_ym1_1_1390503654167_2666" style=3D"ma=
+rgin:0px;font-family:Helvetica;"><span style=3D"letter-spacing:0px;"><font =
+class=3D"ydp36ee8436yiv1074941560Apple-style-span" color=3D"#7C7F7F"><font =
+class=3D"ydp36ee8436yiv1074941560Apple-style-span" face=3D"'Lucida Grande'"=
+><br></font></font></span></div></div></div></div></div></div>
+        <div><br></div><div><br></div>
+       =20
+        </div><div id=3D"ydp6772eff1yahoo_quoted_7671248878" class=3D"ydp67=
+72eff1yahoo_quoted">
+            <div style=3D"font-family:'Helvetica Neue', Helvetica, Arial, s=
+ans-serif;font-size:13px;color:#26282a;">
+               =20
+                <div>
+                    On Friday, September 14, 2018, 5:19:00 AM GMT+5, kurt a=
+t seifried.org &lt;mailforwards@cloudmails.net&gt; wrote:
+                </div>
+                <div><br></div>
+                <div><br></div>
+                <div><div dir=3D"ltr">This is a confirmation email sent fro=
+m CVE request form at <a href=3D"https://iwantacve.org/ " rel=3D"nofollow" =
+target=3D"_blank">https://iwantacve.org/ </a>asking you to accept the MITRE=
+ CVE Terms of Use (assuming you filled out the CVE form and want one, we ca=
+n't use the data until you accept the MITRE CVE Terms of Use). <br></div><d=
+iv dir=3D"ltr"><br></div><div dir=3D"ltr">Simply quote the email and reply =
+with "I accept" at the top if you agree to the MITRE CVE Terms of Use and w=
+e will add a copy of the email to the DWF MITRE CVE Terms of Use acceptance=
+ data at <a href=3D"https://github.com/distributedweaknessfiling/DWF-Legal-=
+Acceptance/tree/master/Terms-Of-Use" rel=3D"nofollow" target=3D"_blank">htt=
+ps://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/=
+Terms-Of-Use</a><br></div><div dir=3D"ltr"><br></div><div dir=3D"ltr">The r=
+eason we use a complete copy of the email is that it provides an artifact s=
+howing that the email address accepted the Terms of Use, when they were acc=
+epted and so on. <br></div><div dir=3D"ltr"><br></div><div dir=3D"ltr">If y=
+ou did not submit a CVE request to the DWF you can safely ignore this messa=
+ge, however we may resend it at some point in the future, if you don't want=
+ any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS E=
+MAIL EVER AGAIN" and I'll add your email address to the block list so we do=
+n't spam you with these, please note that this will prevent you from being =
+able to accept the MITRE CVE Terms of Use via the DWF automatically in futu=
+re (you'll have to manually ask). But again, if you have no idea what a CVE=
+ is then you can ignore this/ask to be added to the block list with no prob=
+lems. <br></div><div dir=3D"ltr"><br></div><div dir=3D"ltr">MITRE CVE Terms=
+ of Use<br></div><div dir=3D"ltr"><br></div><div dir=3D"ltr">LICENSE<br></d=
+iv><div dir=3D"ltr"><br></div><div dir=3D"ltr">Submissions: For all materia=
+ls you submit to the Common Vulnerabilities and Exposures (CVE=C3=82=C2=AE)=
+, you hereby grant to The MITRE Corporation (MITRE) and all CVE Numbering A=
+uthorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge, royalty=
+-free, irrevocable copyright license to reproduce, prepare derivative works=
+ of, publicly display, publicly perform, sublicense, and distribute such ma=
+terials and derivative works. Unless required by applicable law or agreed t=
+o in writing, you provide such materials on an "AS IS" BASIS, WITHOUT WARRA=
+NTIES OR CONDITIONS OF ANY KIND, either express or implied, including, with=
+out limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, ME=
+RCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.<br></div><div dir=3D"lt=
+r"><br></div><div dir=3D"ltr">CVE Usage: MITRE hereby grants you a perpetua=
+l, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright=
+ license to reproduce, prepare derivative works of, publicly display, publi=
+cly perform, sublicense, and distribute Common Vulnerabilities and Exposure=
+s (CVE=C3=82=C2=AE). Any copy you make for such purposes is authorized prov=
+ided that you reproduce MITRE's copyright designation and this license in a=
+ny such copy.<br></div><div dir=3D"ltr"><br></div><div dir=3D"ltr">DISCLAIM=
+ERS<br></div><div dir=3D"ltr"><br></div><div dir=3D"ltr">ALL DOCUMENTS AND =
+THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "AS =
+IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPO=
+NSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS,=
+ AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUD=
+ING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN=
+ WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY =
+OR FITNESS FOR A PARTICULAR PURPOSE.<br></div><div dir=3D"ltr"><br></div><d=
+iv dir=3D"ltr">A copy is available at <a href=3D"https://github.com/distrib=
+utedweaknessfiling/DWF-Legal-Acceptance/blob/master/Terms-Of-Use.md" rel=3D=
+"nofollow" target=3D"_blank">https://github.com/distributedweaknessfiling/D=
+WF-Legal-Acceptance/blob/master/Terms-Of-Use.md</a><br></div><div dir=3D"lt=
+r"><br></div><div dir=3D"ltr">To contact the DWF either hit reply, or email=
+ <a href=3D"mailto:kurt@seifried.org" rel=3D"nofollow" target=3D"_blank">ku=
+rt@seifried.org</a> manually with your question/concerns/etc. <br></div><di=
+v dir=3D"ltr"><br></div></div>
+            </div>
+        </div></div></body></html>
+------=_Part_3260231_585184355.1536891581504--

@@ -1,0 +1,166 @@
+MIME-Version: 1.0
+Received: by 10.31.50.17 with HTTP; Thu, 29 Sep 2016 17:34:44 -0700 (PDT)
+In-Reply-To: <CABqVa38mR=6ojMYijdDCJdZLFW3185KbJycq2D+=i17T1=dExg@mail.gmail.com>
+References: <CABqVa38mR=6ojMYijdDCJdZLFW3185KbJycq2D+=i17T1=dExg@mail.gmail.com>
+Date: Thu, 29 Sep 2016 18:34:44 -0600
+Delivered-To: kurt@seifried.org
+Message-ID: <CABqVa38yRfto4h7MZ1n03JX7XqY8d9SfmYb-=ZPQPGCdmnqa3w@mail.gmail.com>
+Subject: Re: CVE - Acceptance of MITRE Terms of Use for CVE
+From: Kurt Seifried <kurt@seifried.org>
+To: Kurt Seifried <kurt@seifried.org>
+Content-Type: multipart/alternative; boundary=001a11433d6ac62b28053daec283
+
+--001a11433d6ac62b28053daec283
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+On Thu, Sep 29, 2016 at 6:34 PM, Kurt Seifried <kurt@seifried.org> wrote:
+
+> Hi, I need to confirm that you have accepted the MITRE Terms of Use for
+> CVE, available at:
+>
+> https://github.com/distributedweaknessfiling/DWF-Database/
+> blob/master/TermsOfUse.md
+>
+> and quoted below, please reply with "I accept" and I'll be able to proces=
+s
+> your CVE request. Thanks!
+>
+> Terms of Use
+> <https://github.com/distributedweaknessfiling/DWF-Database/blob/master/Te=
+rmsOfUse.md#license>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities
+> and Exposures (CVE=C2=AE), you hereby grant to The MITRE Corporation (MIT=
+RE) and
+> all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusiv=
+e,
+> no-charge, royalty-free, irrevocable copyright license to reproduce,
+> prepare derivative works of, publicly display, publicly perform,
+> sublicense, and distribute such materials and derivative works. Unless
+> required by applicable law or agreed to in writing, you provide such
+> materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+> KIND, either express or implied, including, without limitation, any
+> warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or
+> FITNESS FOR A PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,
+> no-charge, royalty-free, irrevocable copyright license to reproduce,
+> prepare derivative works of, publicly display, publicly perform,
+> sublicense, and distribute Common Vulnerabilities and Exposures (CVE=C2=
+=AE). Any
+> copy you make for such purposes is authorized provided that you reproduce
+> MITRE's copyright designation and this license in any such copy.
+>
+> <https://github.com/distributedweaknessfiling/DWF-Database/blob/master/Te=
+rmsOfUse.md#disclaimers>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE
+> PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE
+> REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD =
+OF
+> TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRE=
+SS
+> OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE
+> INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIE=
+S
+> OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> --
+> Kurt Seifried
+> kurt@seifried.org
+>
+
+
+
+--=20
+Kurt Seifried
+kurt@seifried.org
+
+--001a11433d6ac62b28053daec283
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">I accept</div><div class=3D"gmail_extra"><br><div class=3D=
+"gmail_quote">On Thu, Sep 29, 2016 at 6:34 PM, Kurt Seifried <span dir=3D"l=
+tr">&lt;<a href=3D"mailto:kurt@seifried.org" target=3D"_blank">kurt@seifrie=
+d.org</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"m=
+argin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"l=
+tr"><span style=3D"font-size:12.8px">Hi, I need to confirm that you have ac=
+cepted the MITRE Terms of Use for CVE, available at:</span><div style=3D"fo=
+nt-size:12.8px"><br></div><div style=3D"font-size:12.8px"><a href=3D"https:=
+//github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.=
+md" target=3D"_blank">https://github.com/distributed<wbr>weaknessfiling/DWF=
+-Database/<wbr>blob/master/TermsOfUse.md</a></div><div style=3D"font-size:1=
+2.8px"><br></div><div style=3D"font-size:12.8px">and quoted below, please r=
+eply with &quot;I accept&quot; and I&#39;ll be able to process your CVE req=
+uest. Thanks!</div><div style=3D"font-size:12.8px"><br></div><div style=3D"=
+font-size:12.8px"><h1 style=3D"margin:0px 0px 16px;line-height:1.25;padding=
+-bottom:0.3em;border-bottom:1px solid rgb(238,238,238);color:rgb(51,51,51);=
+font-family:-apple-system,blinkmacsystemfont,&quot;segoe ui&quot;,roboto,he=
+lvetica,arial,sans-serif,&quot;apple color emoji&quot;,&quot;segoe ui emoji=
+&quot;,&quot;segoe ui symbol&quot;">Terms of Use</h1><h2 style=3D"margin-to=
+p:24px;margin-bottom:16px;line-height:1.25;padding-bottom:0.3em;border-bott=
+om:1px solid rgb(238,238,238);color:rgb(51,51,51);font-family:-apple-system=
+,blinkmacsystemfont,&quot;segoe ui&quot;,roboto,helvetica,arial,sans-serif,=
+&quot;apple color emoji&quot;,&quot;segoe ui emoji&quot;,&quot;segoe ui sym=
+bol&quot;"><a href=3D"https://github.com/distributedweaknessfiling/DWF-Data=
+base/blob/master/TermsOfUse.md#license" style=3D"color:rgb(64,120,192);back=
+ground-color:transparent;text-decoration:none;float:left;padding-right:4px;=
+line-height:1" target=3D"_blank"></a>LICENSE</h2><p style=3D"margin-top:0px=
+;margin-bottom:16px;color:rgb(51,51,51);font-family:-apple-system,blinkmacs=
+ystemfont,&quot;segoe ui&quot;,roboto,helvetica,arial,sans-serif,&quot;appl=
+e color emoji&quot;,&quot;segoe ui emoji&quot;,&quot;segoe ui symbol&quot;;=
+font-size:16px">Submissions: For all materials you submit to the Common Vul=
+nerabilities and Exposures (CVE=C2=AE), you hereby grant to The MITRE Corpo=
+ration (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldw=
+ide, non-exclusive, no-charge, royalty-free, irrevocable copyright license =
+to reproduce, prepare derivative works of, publicly display, publicly perfo=
+rm, sublicense, and distribute such materials and derivative works. Unless =
+required by applicable law or agreed to in writing, you provide such materi=
+als on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY =
+KIND, either express or implied, including, without limitation, any warrant=
+ies or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS F=
+OR A PARTICULAR PURPOSE.</p><p style=3D"margin-top:0px;margin-bottom:16px;c=
+olor:rgb(51,51,51);font-family:-apple-system,blinkmacsystemfont,&quot;segoe=
+ ui&quot;,roboto,helvetica,arial,sans-serif,&quot;apple color emoji&quot;,&=
+quot;segoe ui emoji&quot;,&quot;segoe ui symbol&quot;;font-size:16px">CVE U=
+sage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, no-cha=
+rge, royalty-free, irrevocable copyright license to reproduce, prepare deri=
+vative works of, publicly display, publicly perform, sublicense, and distri=
+bute Common Vulnerabilities and Exposures (CVE=C2=AE). Any copy you make fo=
+r such purposes is authorized provided that you reproduce MITRE&#39;s copyr=
+ight designation and this license in any such copy.</p><h2 style=3D"margin-=
+top:24px;margin-bottom:16px;line-height:1.25;padding-bottom:0.3em;border-bo=
+ttom:1px solid rgb(238,238,238);color:rgb(51,51,51);font-family:-apple-syst=
+em,blinkmacsystemfont,&quot;segoe ui&quot;,roboto,helvetica,arial,sans-seri=
+f,&quot;apple color emoji&quot;,&quot;segoe ui emoji&quot;,&quot;segoe ui s=
+ymbol&quot;"><a href=3D"https://github.com/distributedweaknessfiling/DWF-Da=
+tabase/blob/master/TermsOfUse.md#disclaimers" style=3D"color:rgb(64,120,192=
+);background-color:transparent;text-decoration:none;float:left;padding-righ=
+t:4px;line-height:1" target=3D"_blank"></a>DISCLAIMERS</h2><p style=3D"marg=
+in-top:0px;color:rgb(51,51,51);font-family:-apple-system,blinkmacsystemfont=
+,&quot;segoe ui&quot;,roboto,helvetica,arial,sans-serif,&quot;apple color e=
+moji&quot;,&quot;segoe ui emoji&quot;,&quot;segoe ui symbol&quot;;font-size=
+:16px;margin-bottom:0px">ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREI=
+N PROVIDED BY MITRE ARE PROVIDED ON AN &quot;AS IS&quot; BASIS AND THE CONT=
+RIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), TH=
+E MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES=
+, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO=
+ ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY=
+ RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTI=
+CULAR PURPOSE.</p></div><span class=3D"HOEnZb"><font color=3D"#888888"><div=
+><br></div>-- <br><div>Kurt Seifried<br><a href=3D"mailto:kurt@seifried.org=
+" target=3D"_blank">kurt@seifried.org</a></div>
+</font></span></div>
+</blockquote></div><br><br clear=3D"all"><div><br></div>-- <br><div class=
+=3D"gmail_signature" data-smartmail=3D"gmail_signature">Kurt Seifried<br><a=
+ href=3D"mailto:kurt@seifried.org" target=3D"_blank">kurt@seifried.org</a><=
+/div>
+</div>
+
+--001a11433d6ac62b28053daec283--

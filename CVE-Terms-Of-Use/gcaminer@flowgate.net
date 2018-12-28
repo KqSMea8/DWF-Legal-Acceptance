@@ -1,0 +1,220 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.65.42 with SMTP id j39csp393028uad;
+        Fri, 21 Apr 2017 09:56:55 -0700 (PDT)
+X-Received: by 10.36.65.227 with SMTP id b96mr11840634itd.118.1492793815343;
+        Fri, 21 Apr 2017 09:56:55 -0700 (PDT)
+Return-Path: <gcaminer@flowgate.net>
+Received: from gproxy6-pub.mail.unifiedlayer.com (gproxy6-pub.mail.unifiedlayer.com. [67.222.39.168])
+        by mx.google.com with SMTP id d2si2705569ita.17.2017.04.21.09.56.54
+        for <kurt@seifried.org>;
+        Fri, 21 Apr 2017 09:56:54 -0700 (PDT)
+Received-SPF: pass (google.com: domain of gcaminer@flowgate.net designates 67.222.39.168 as permitted sender) client-ip=67.222.39.168;
+Authentication-Results: mx.google.com;
+       dkim=policy (weak key) header.i=@flowgate.net;
+       spf=pass (google.com: domain of gcaminer@flowgate.net designates 67.222.39.168 as permitted sender) smtp.mailfrom=gcaminer@flowgate.net
+Received: (qmail 906 invoked by uid 0); 21 Apr 2017 16:56:53 -0000
+Received: from unknown (HELO cmgw4) (10.0.90.85)
+  by gproxy6.mail.unifiedlayer.com with SMTP; 21 Apr 2017 16:56:53 -0000
+Received: from box493.bluehost.com ([66.147.242.93])
+	by cmgw4 with 
+	id B4wq1v00921d7Me014wtoJ; Fri, 21 Apr 2017 10:56:53 -0600
+X-Authority-Analysis: v=2.2 cv=QdwWhoTv c=1 sm=1 tr=0
+ a=+pEp6GYEWoRxMEzzQ9qDXw==:117 a=+pEp6GYEWoRxMEzzQ9qDXw==:17 a=6hxDv48EAAAA:8
+ a=lxXTMSr7w0EA:10 a=AzvcPWV-tVgA:10 a=r77TgQKjGQsHNAKrUKIA:9 a=gW4V4vo1AAAA:8
+ a=sHNhvHo_AAAA:8 a=NEAV23lmAAAA:8 a=3B3IwCQUh-NuTZzxEIMA:9
+ a=rroXqAsdvjFYGyA-:21 a=Xu3lVrOsu14Hbcrf:21 a=PUjeQqilurYA:10
+ a=Yrzjz8yChkAA:10 a=vwZlR9QZm21mqRDH:21 a=oEFfcBB42XT-621M:21
+ a=MAkPrOT40Fj2FwdP:21 a=_W_S_7VecoQA:10 a=RZtTr82Mr0GdY5DCtAIA:9
+ a=BjPnx1ON-bCyvyVV:18 a=HXjIzolwW10A:10 a=KwgpVZE-ergA:10
+ a=_TxYR_eksL2iPzehzJQJ:22 a=PKCZb-7aU9vUrpRll_fa:22 a=G6Yi8rkAph2bg1hfhGF6:22
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=flowgate.net; s=default; h=Content-Type:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Sender:Reply-To:Cc:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
+	List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+	 bh=kCbj9azxTKqOFGTUA81aOsr4IyF+bYzLWd2VHdmoa5M=; b=xXeCgYJkDFx25YxcZrHSPM4vb
+	XAZivWl1MWjjMhZOZiGorNRkSxwqQTVmDN7kB25V/WfrcWEtS8yB//8LtsDPr5kxjcFhsPNVPV0UX
+	uppp+YjWYNeryNbS3nDZF6X49r;
+Received: from [181.91.74.179] (port=54044 helo=[192.168.1.3])
+	by box493.bluehost.com with esmtpsa (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128)
+	(Exim 4.87)
+	(envelope-from <gcaminer@flowgate.net>)
+	id 1d1brV-000Dw4-QX
+	for kurt@seifried.org; Fri, 21 Apr 2017 10:56:50 -0600
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ gcaminer@flowgate.net
+To: kurt@seifried.org
+References: <20170420154404.58112.95012@bigbox.local>
+From: Guillermo Caminer <gcaminer@flowgate.net>
+Message-ID: <4f4404a7-4eca-0dd4-dcfb-3666a4ef1c61@flowgate.net>
+Date: Fri, 21 Apr 2017 13:56:46 -0300
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101
+ Thunderbird/45.5.1
+MIME-Version: 1.0
+In-Reply-To: <20170420154404.58112.95012@bigbox.local>
+Content-Type: multipart/alternative;
+ boundary="------------FACC36A76C4ACEF2B618AC6C"
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - box493.bluehost.com
+X-AntiAbuse: Original Domain - seifried.org
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - flowgate.net
+X-BWhitelist: no
+X-Source-IP: 181.91.74.179
+X-Exim-ID: 1d1brV-000Dw4-QX
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-Source-Sender: ([192.168.1.3]) [181.91.74.179]:54044
+X-Source-Auth: gcaminer@flowgate.net
+X-Email-Count: 1
+X-Source-Cap: Zmxvd2dhdGU7Zmxvd2dhdGU7Ym94NDkzLmJsdWVob3N0LmNvbQ==
+
+This is a multi-part message in MIME format.
+--------------FACC36A76C4ACEF2B618AC6C
+Content-Type: text/plain; charset=iso-8859-15
+Content-Transfer-Encoding: 8bit
+
+I accept
+
+
+On 20/04/17 12:44, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled out the CVE form and want one, we can't use the data until you accept the MITRE CVE Terms of Use). 
+>
+> Simply quote the email and reply with "I accept" at the top if you agree to the MITRE CVE Terms of Use and we will add it to the DWF MITRE CVE Terms of Use acceptance data at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>
+> If you did not submit a CVE request to the DWF you can safely ignore this message, however we may resend it at some point in the future, if you don't want any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so we don't spam you with these, please note that this will prevent you from being able to accept the MITRE CVE Terms of Use via the DWF automatically in future (you'll have to manually ask). But again, if you have no idea what a CVE is then you can ignore this/ask to be added to the block list with no problems. 
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities and Exposures (CVE®), you hereby grant to The MITRE Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute such materials and derivative works. Unless required by applicable law or agreed to in writing, you provide such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute Common Vulnerabilities and Exposures (CVE®). Any copy you make for such purposes is authorized provided that you reproduce MITRE's copyright designation and this license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manually with your question/concerns/etc. 
+>
+>
+
+-- 
+*Guillermo Caminer**
+**F L O W G A T E Consulting*
++54 341 5272557
+PGP: www.flowgate.net/PKI/GCaminer@FG.asc
+https://www.flowgate.net/QR/GCaminer@FG.png
+
+--------------FACC36A76C4ACEF2B618AC6C
+Content-Type: multipart/related;
+ boundary="------------492C280B1B096D82E7222D46"
+
+
+--------------492C280B1B096D82E7222D46
+Content-Type: text/html; charset=iso-8859-15
+Content-Transfer-Encoding: 8bit
+
+<html>
+  <head>
+    <meta content="text/html; charset=iso-8859-15"
+      http-equiv="Content-Type">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+    <p><font face="Droid Sans">I ac<font face="Droid Sans">cept</font></font><br>
+    </p>
+    <br>
+    <div class="moz-cite-prefix">On 20/04/17 12:44, <a class="moz-txt-link-abbreviated" href="mailto:kurt@seifried.org">kurt@seifried.org</a>
+      wrote:<br>
+    </div>
+    <blockquote cite="mid:20170420154404.58112.95012@bigbox.local"
+      type="cite">
+      <pre wrap="">This is a confirmation email sent from CVE request form at <a class="moz-txt-link-freetext" href="https://iwantacve.org/">https://iwantacve.org/</a> asking you to accept the MITRE CVE Terms of Use (assuming you filled out the CVE form and want one, we can't use the data until you accept the MITRE CVE Terms of Use). 
+
+Simply quote the email and reply with "I accept" at the top if you agree to the MITRE CVE Terms of Use and we will add it to the DWF MITRE CVE Terms of Use acceptance data at <a class="moz-txt-link-freetext" href="https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use">https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use</a>
+
+If you did not submit a CVE request to the DWF you can safely ignore this message, however we may resend it at some point in the future, if you don't want any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so we don't spam you with these, please note that this will prevent you from being able to accept the MITRE CVE Terms of Use via the DWF automatically in future (you'll have to manually ask). But again, if you have no idea what a CVE is then you can ignore this/ask to be added to the block list with no problems. 
+
+MITRE CVE Terms of Use
+
+LICENSE
+
+Submissions: For all materials you submit to the Common Vulnerabilities and Exposures (CVE®), you hereby grant to The MITRE Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute such materials and derivative works. Unless required by applicable law or agreed to in writing, you provide such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute Common Vulnerabilities and Exposures (CVE®). Any copy you make for such purposes is authorized provided that you reproduce MITRE's copyright designation and this license in any such copy.
+
+DISCLAIMERS
+
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+A copy is available at <a class="moz-txt-link-freetext" href="https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md">https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md</a>
+
+To contact the DWF either hit reply, or email <a class="moz-txt-link-abbreviated" href="mailto:kurt@seifried.org">kurt@seifried.org</a> manually with your question/concerns/etc. 
+
+
+</pre>
+    </blockquote>
+    <br>
+    <div class="moz-signature">-- <br>
+      <meta http-equiv="content-type" content="text/html;
+        charset=iso-8859-15">
+      <title></title>
+      <b>Guillermo Caminer</b><b><br>
+      </b><b>F L O W G A T E Consulting</b><br>
+      +54 341 5272557<br>
+      PGP: <a class="moz-txt-link-abbreviated" href="http://www.flowgate.net/PKI/GCaminer@FG.asc">www.flowgate.net/PKI/GCaminer@FG.asc</a><br>
+      <img alt="https://www.flowgate.net/QR/GCaminer@FG.png"
+        title="GCaminer Public Key"
+        src="cid:part1.B38B681D.02041789@flowgate.net" height="171"
+        width="171"><br>
+    </div>
+  </body>
+</html>
+
+--------------492C280B1B096D82E7222D46
+Content-Type: image/png;
+ name="GCaminer@FG.png"
+Content-Transfer-Encoding: base64
+Content-ID: <part1.B38B681D.02041789@flowgate.net>
+Content-Disposition: inline;
+ filename="GCaminer@FG.png"
+
+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
+--------------492C280B1B096D82E7222D46--
+
+--------------FACC36A76C4ACEF2B618AC6C--

@@ -1,0 +1,149 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.79.71 with SMTP id d68csp2023930ivb;
+        Sat, 18 Nov 2017 12:07:29 -0800 (PST)
+X-Received: by 10.107.180.130 with SMTP id d124mr7430951iof.225.1511035649007;
+        Sat, 18 Nov 2017 12:07:29 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1511035648; cv=none;
+        d=google.com; s=arc-20160816;
+        b=F36/TIsH12K/qDuuv8SQhenz/icMWSVkL6e9nVv2X2kH3sIcyN3UP1irY/Ed5w3qth
+         5MSPD0MRfn2+50AvD2Tc5m+2qMEceNmyfrdhy+qH2/QNmU+HqFt9KYdNKGGcYsjrdZew
+         q/PKjyY+gh0EQ8StpqIj8/ITMPbChplRUYDJM6pIhEkXhBbD2A8Uc+qO+3NZhkMDbDjm
+         rjLRZXgCtSVCF20OkVUdITA+j6KQJ5mdW84u2OlOPeRAlWQ2mR8PWgzkxww/Sbwse4rB
+         52ktOhKYqT3lKCwozqmRZkURWFvDD7ib4qxeckIBUq/wnZOSXcRcubeFKUsjsIuKkkD/
+         la3g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:in-reply-to:references:message-id:subject:date:mime-version
+         :content-transfer-encoding:from:dkim-signature
+         :arc-authentication-results;
+        bh=2675g5XLYjYOzI0Mrl0LEJY4eyjwMWFWNHzI46J0QcI=;
+        b=jAjqoTwgh1Tucm+EAptkVRbobLntBuCOCXzvmzU2PoW5zEm7nAzoUhbuttEhkg2nGi
+         xtZMzB2ZxNDuBukJUqBtKqLy4eKhDg0QClIZM7qWWHHGspluBmf51cyaOFv9QSNk1p9A
+         Rjr/z23JlOE/jX1GGZJV2cL8HZbWr6EJjDjeRUgku4Y/xE2Atb75MTewMMzqGDwliFPT
+         WMbSemxaIT5svURDLItGd8+VrA95Oobw/bghaw3kE0rU1cbfCRt6bi7cr/lkLqRkPU9L
+         8SxrJ+9UfSdXKkDV3Mg6+jeh4wJKcBFuYwuVS6CR2smdNin9oEiRm8O4vdXms7Dsa53z
+         0aqw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@uic-edu.20150623.gappssmtp.com header.s=20150623 header.b=svnAABeF;
+       spf=pass (google.com: domain of psnyde2@uic.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=psnyde2@uic.edu
+Return-Path: <psnyde2@uic.edu>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id o33sor3096819ioi.210.2017.11.18.12.07.28
+        for <kurt@seifried.org>
+        (Google Transport Security);
+        Sat, 18 Nov 2017 12:07:28 -0800 (PST)
+Received-SPF: pass (google.com: domain of psnyde2@uic.edu designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@uic-edu.20150623.gappssmtp.com header.s=20150623 header.b=svnAABeF;
+       spf=pass (google.com: domain of psnyde2@uic.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=psnyde2@uic.edu
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=uic-edu.20150623.gappssmtp.com; s=20150623;
+        h=from:content-transfer-encoding:mime-version:date:subject:message-id
+         :references:in-reply-to:to;
+        bh=2675g5XLYjYOzI0Mrl0LEJY4eyjwMWFWNHzI46J0QcI=;
+        b=svnAABeFn7vveFp+j/Dti+rYeWnVYZ0FUQLjO0v8Fmh3ma3Foup1tZ6XgIH7IhIjDb
+         nfKJO6HhN/TCuYlx3aQwAONeICk/zWuZ6lncTBIGD3CYsnPYGAXDcs1IJYSARYjzVpCQ
+         /Db8U4dExG7HmO1R/dBMXZtFswIdfKbCk7wV/eV3Aguj31zUlOl6tzISN1R8Jy90VqHO
+         HFzaT/QFYkQTCEFHrMr0x/3PZkqXYJgAbFjL2VrOvegT1GNWqKRIqlKD4SxFw2KAsD5A
+         kh9mhIaqDKbO3+bNZEWkz+9vsyfzYsFkrO4XqS12kd381V4O/MfjcExSw+/vW24QZMtP
+         VB5A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:content-transfer-encoding:mime-version:date
+         :subject:message-id:references:in-reply-to:to;
+        bh=2675g5XLYjYOzI0Mrl0LEJY4eyjwMWFWNHzI46J0QcI=;
+        b=Q7q0OU4it4O2DH4alwLsloeiYJohBWm6y2QKzPlTU0c+sObbPGYy2Ptihg47LecEO5
+         /2xkonmXS4qHAZmK9isBqf4LrWCzlc2xImng+XDC/fZX/nRe3I3b3n0Dz20CTGh5HlkS
+         QM/sRz9M4G7hxgevPxAOhPtpxlXYyFEDQgMFkXY858rndQ2I0ds5r+hdyDkDBjK8NMMy
+         Gi42n73EuYKoSqwAoYm2Hwku0yok1Ag7sC4Ilx99WV/lD9UJSsIllNHTzUVMCwiSgrB0
+         alm2/0wRlwzfLXywawALyBzJfnGvoOHMlnJdPyxU3ZtA8sOo7znFC0rwVI9uQHcdHFh1
+         kupQ==
+X-Gm-Message-State: AJaThX5PjwrXpveY0wOoEozuQ5GhmST4B7MFAoQbJk9XfEQwLOl59TWs
+	I49gylclamixjTVBr+SPWU8LLkFb5gM=
+X-Google-Smtp-Source: AGs4zMYubBalMdegFWVb/MGkL+Ewb9tTVxgSbSc+5F5EwBjAYZTUqgR6eh2SHF0rBF4k+yz80sEl6w==
+X-Received: by 10.107.38.79 with SMTP id m76mr8129626iom.187.1511035648319;
+        Sat, 18 Nov 2017 12:07:28 -0800 (PST)
+Return-Path: <psnyde2@uic.edu>
+Received: from [192.168.1.151] (207-181-242-90.s856.c3-0.lem-ubr1.chi-lem.il.cable.rcncustomer.com. [207.181.242.90])
+        by smtp.gmail.com with ESMTPSA id g187sm2473887itb.29.2017.11.18.12.07.27
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 18 Nov 2017 12:07:27 -0800 (PST)
+From: Peter Snyder <psnyde2@uic.edu>
+Content-Type: text/plain;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Mime-Version: 1.0 (1.0)
+Date: Sat, 18 Nov 2017 14:07:26 -0600
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for psnyde2@uic.edu
+Message-Id: <41B4512A-E5B8-4C6D-9C7D-CB2C42C644A7@uic.edu>
+References: <20171118164030.64559.98822@slab.local>
+In-Reply-To: <20171118164030.64559.98822@slab.local>
+To: kurt@seifried.org
+X-Mailer: iPhone Mail (15B202)
+
+I accept
+
+> On Nov 18, 2017, at 10:40, kurt@seifried.org wrote:
+>=20
+> This is a confirmation email sent from CVE request form at https://iwantac=
+ve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled=
+ out the CVE form and want one, we can't use the data until you accept the M=
+ITRE CVE Terms of Use).=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you agree t=
+o the MITRE CVE Terms of Use and we will add a copy of the email to the DWF M=
+ITRE CVE Terms of Use acceptance data at https://github.com/distributedweakn=
+essfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>=20
+> The reason we use a complete copy of the email is that it provides an arti=
+fact showing that the email address accepted the Terms of Use, when they wer=
+e accepted and so on.=20
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don't w=
+ant any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS=
+ EMAIL EVER AGAIN" and I'll add your email address to the block list so we d=
+on't spam you with these, please note that this will prevent you from being a=
+ble to accept the MITRE CVE Terms of Use via the DWF automatically in future=
+ (you'll have to manually ask). But again, if you have no idea what a CVE is=
+ then you can ignore this/ask to be added to the block list with no problems=
+.=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common Vulnerabilities an=
+d Exposures (CVE=C2=AE), you hereby grant to The MITRE Corporation (MITRE) a=
+nd all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusiv=
+e, no-charge, royalty-free, irrevocable copyright license to reproduce, prep=
+are derivative works of, publicly display, publicly perform, sublicense, and=
+ distribute such materials and derivative works. Unless required by applicab=
+le law or agreed to in writing, you provide such materials on an "AS IS" BAS=
+IS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied,=
+ including, without limitation, any warranties or conditions of TITLE, NON-I=
+NFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare d=
+erivative works of, publicly display, publicly perform, sublicense, and dist=
+ribute Common Vulnerabilities and Exposures (CVE=C2=AE). Any copy you make f=
+or such purposes is authorized provided that you reproduce MITRE's copyright=
+ designation and this license in any such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REP=
+RESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRU=
+STEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR I=
+MPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORM=
+ATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERC=
+HANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-Le=
+gal-Acceptance/blob/master/Terms-Of-Use.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org manually w=
+ith your question/concerns/etc.=20
+>=20

@@ -1,0 +1,167 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.79.71 with SMTP id d68csp8073117ivb;
+        Wed, 27 Dec 2017 11:37:04 -0800 (PST)
+X-Google-Smtp-Source: ACJfBovUL8rI01i9ch8xmbDHirYtCyr1iMLzzfC3MySbucgwB6HemL1VYa2f1cWgGDglc1AbX10x
+X-Received: by 10.99.139.66 with SMTP id j63mr26368398pge.247.1514403424467;
+        Wed, 27 Dec 2017 11:37:04 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1514403424; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Ya82yf7iDB+R1KafwmSPHuk1DBFx1x5CEqY/c6iGYDTcMObwikpHab7AMXBWLX4pts
+         ZEzJRFHEwt4qbMKU56S5Q74W6pDEZvu3rprgAKcjWoajNf28bgYxlKzMrULgfZ+HOPqy
+         3X2RURPtKRZPgbjKJ9RwSwYLSwsAyX3OLh5/2Q/WFCaRJWAt9Ll7Nhe9x+OzrHnWVMbr
+         6+gosV7H8Fhr360shBQ5D/zl1TzZUScf2KRrcx0e/3FVJZCGlBdMeBkN5MKccPQch3km
+         uRAx8XMUZohFvCqV1ovAus9eJUPADgA1Dh4mW0l5gjlnglP+HK42JuoWOn3wRoi1WUy3
+         oluQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=spamdiagnosticmetadata:spamdiagnosticoutput:content-language
+         :content-transfer-encoding:in-reply-to:mime-version:user-agent:date
+         :message-id:from:references:to:subject:dkim-signature
+         :arc-authentication-results;
+        bh=KTTZlcIOIexatlWCxkYAF6B8lcnfVqBlL/n1SkkE9fo=;
+        b=LZn7X4PCpdlTJBHhgy3oTgqTIhjyo2/DouxWyj3CI5gjVqz9a1GRXH0bJMs6Y8bN3/
+         IUPFbExjaHCBwv3j6g6343ig5h9A36IfsrZfXK4h/UEo8ydeuA7h5oBfZHxynDdq0AF2
+         LHNKPoOpi9Q6xtMroTJcD83s2Dp6JBY2f4VH5nZjzvCwGsaucI9amuFUgxM+PHQBOxIj
+         +FafYC/YRNY/QOofGGTKQs3ps6l016aoHwBWm6reT9cPGjKZqJ7nIT4eej/ZDNZFXPay
+         YaQDTRpKy/zQA3Pzzz4oyZt1VGWEvajFdbZ78X6ssRZMUUtoFtgHfpOLHX31JJdfHnX9
+         0URg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@srlabs.de header.s=selector1 header.b=V0wGsio5;
+       spf=pass (google.com: domain of stephan@srlabs.de designates 104.47.2.110 as permitted sender) smtp.mailfrom=stephan@srlabs.de
+Return-Path: <stephan@srlabs.de>
+Received: from EUR01-DB5-obe.outbound.protection.outlook.com (mail-db5eur01on0110.outbound.protection.outlook.com. [104.47.2.110])
+        by mx.google.com with ESMTPS id s14si6224273pgr.464.2017.12.27.11.37.03
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Wed, 27 Dec 2017 11:37:03 -0800 (PST)
+Received-SPF: pass (google.com: domain of stephan@srlabs.de designates 104.47.2.110 as permitted sender) client-ip=104.47.2.110;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@srlabs.de header.s=selector1 header.b=V0wGsio5;
+       spf=pass (google.com: domain of stephan@srlabs.de designates 104.47.2.110 as permitted sender) smtp.mailfrom=stephan@srlabs.de
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=srlabs.de;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=KTTZlcIOIexatlWCxkYAF6B8lcnfVqBlL/n1SkkE9fo=;
+ b=V0wGsio5W2aY1Ogqpq7eUaNWnvuoPx1gPtQ6G9mOQJsGaHgN/xMUOjU3GZEsKYpGOWnkMhmIqjzE72T2nw0MBOEo5l1zuMBpNrURUzw9QiZC8z8NE+orzepTHHIm0wGBNX/4A0f5ibXWTKVWgXi0keIaR+RxCY2AbZ25gDLKlEM=
+Authentication-Results: spf=none (sender IP is )
+ smtp.mailfrom=stephan@srlabs.de; 
+Received: from [192.168.178.30] (91.40.247.55) by
+ HE1PR06MB1179.eurprd06.prod.outlook.com (2a01:111:e400:5884::17) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id 15.20.345.14; Wed, 27
+ Dec 2017 19:37:01 +0000
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ stephan@srlabs.de
+To: kurt@seifried.org
+References: <20171227193448.3645.28690@slab.local>
+From: Stephan Zeisberg <stephan@srlabs.de>
+Message-ID: <d05048bb-8baf-cd8f-5788-d5ecae590e2b@srlabs.de>
+Date: Wed, 27 Dec 2017 20:36:58 +0100
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101
+ Thunderbird/52.5.0
+MIME-Version: 1.0
+In-Reply-To: <20171227193448.3645.28690@slab.local>
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+Content-Language: en-MW
+X-Originating-IP: [91.40.247.55]
+X-ClientProxiedBy: DB6PR07CA0013.eurprd07.prod.outlook.com
+ (2603:10a6:6:2d::23) To HE1PR06MB1179.eurprd06.prod.outlook.com
+ (2a01:111:e400:5884::17)
+Return-Path: stephan@srlabs.de
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 928baa63-5a71-4744-ed1c-08d54d61338d
+X-Microsoft-Antispam:
+	UriScan:;BCL:0;PCL:0;RULEID:(4534020)(4602075)(4603075)(4627115)(201702281549075)(5600026)(4604075)(2017052603307)(7153060);SRVR:HE1PR06MB1179;
+X-Microsoft-Exchange-Diagnostics:
+	1;HE1PR06MB1179;3:m0xyRnJVjrac74kzd654b7ae0DcS0blpUh71DcitY5L4+41JfnkPKrzNW1TymRyICE6NjgqCbidWQvFFENfCSAzpg5ey9/xLcPM6QrkaQYA9tmY9QETVqlbkbd+fgM1gzsJmhpkLxpVryqLedh3/u2v1CbWlk1SWB1PfqyTk56TnOAt9sv7JI2NSiYIYGDdPk9zdSu+99PNv+qaRkIOHeQOjSUtCsAOmj0oZC5yb9zoq0QSxz8758A95b2Cd60ld;25:QnE+renlvBvENr3zZFSEqvH8pK5teo5vINqqMMoJlfQZEHK6clDc1m5q1rbUD9WgBT+Dwzm4OPh0gkzXI5qMa74stcxBEFDr2ZX8ao0t8r1Jm0Y6wQQYqIJvqnRuPgxkKSfxec2USMQGaKDoqDbeUYwvr9amHfCjFCLsyhA0cS1YKZDttsrPDdQh8RRa8wLZuilt/Zp9jk3k2vID3RO69NFeBvCIWOLZCGAs1Ex75EqoYo0z1U2vWKy1ueyeHxSz0moPXk1OvQR6s7Uubnw1YFIaxAC/jpCIetR9QIUVvlgKUdP64zBDEJjTBxXaGHL3m5dYwdOpqk6owO5tto847g==;31:veWJ784Z4mfxZHOKTcgSwRL7m2sTOkRD3PmV2I9TOiA/wi0S1Dm/9A1j08kdXZfDVKNnUdSDcqOkSzGK7QY/u+WQGi4faer35IzyStKUxHUTjNX5z6thznj+FinyQgc4MAK2kSdCNhHR7SaPqKjCyG+JeN4Nq1k+UWsPW8TriaL/iltRtGx+SWkDmheOtKs6eb7P8J7hqxCx+LJQbu9qkM43wAhdto97vn0oaiLnqfw=
+X-MS-TrafficTypeDiagnostic: HE1PR06MB1179:
+X-Microsoft-Antispam-PRVS:
+	<HE1PR06MB1179EDD13B762ECA78D2C976BD070@HE1PR06MB1179.eurprd06.prod.outlook.com>
+X-Exchange-Antispam-Report-Test: UriScan:(166708455590820);
+X-Exchange-Antispam-Report-CFA-Test:
+	BCL:0;PCL:0;RULEID:(6040470)(2401047)(8121501046)(5005006)(93006095)(93001095)(3231023)(944510075)(944921075)(946801075)(946901075)(10201501046)(3002001)(6041268)(201703131423095)(201702281528075)(20161123555045)(201703061421075)(201703061406153)(2016111802025)(20161123558120)(20161123562045)(20161123564045)(20161123560045)(6043046)(6072148)(201708071742011);SRVR:HE1PR06MB1179;BCL:0;PCL:0;RULEID:(100000803101)(100110400095);SRVR:HE1PR06MB1179;
+X-Microsoft-Exchange-Diagnostics:
+	1;HE1PR06MB1179;4:995bMfzndrkpH8mrayNRWv+uS9HUJTc6VrJATFV+4j/pAddlbgMdPdiz2opv+GYb7vFd9IdKCkn+61WUM/syi9Ubx+cQkQAvrvJClaps9oHzvTdPqqNUMjzKLdzA7LtZEkMZUcIHWSvY3FSWOuzOmPXBUTsZofwZXLY2EuS7xxkb7c4IsF0fB7MMYioFKtPs06GT1mp5ydGMspoWVNJu2+5AKGDbvuLsh8d4kjGIMeSKGp7X86XMtBiZfo8wY1eapJAE3h74+NaJoI10CVaSgVoiCEUEUTQcvNJyy5V7HfQLsaH/LowZj3Lsfs4ZiHBR
+X-Forefront-PRVS: 0534947130
+X-Forefront-Antispam-Report:
+	SFV:NSPM;SFS:(10019020)(6049001)(366004)(39830400003)(376002)(396003)(39380400002)(346002)(13624006)(38564003)(24454002)(199004)(28244002)(189003)(966005)(7736002)(2351001)(31686004)(2361001)(106356001)(105586002)(6246003)(64126003)(58126008)(117156002)(81156014)(25786009)(81166006)(478600001)(8676002)(305945005)(76176011)(50466002)(5180700001)(8936002)(52116002)(316002)(386003)(53546011)(2906002)(59450400001)(83506002)(230700001)(23676004)(3846002)(6116002)(52146003)(74482002)(16576012)(2486003)(5660300001)(36756003)(68736007)(53936002)(65826007)(75402003)(2950100002)(6666003)(6916009)(31696002)(6486002)(6306002)(97736004)(77096006)(47776003)(16526018)(229853002)(86362001)(65956001)(66066001)(65806001)(221513004)(222073002);DIR:OUT;SFP:1102;SCL:1;SRVR:HE1PR06MB1179;H:[192.168.178.30];FPR:;SPF:None;PTR:InfoNoRecords;A:1;MX:1;LANG:en;
+Received-SPF: None (protection.outlook.com: srlabs.de does not designate
+ permitted sender hosts)
+X-Microsoft-Exchange-Diagnostics:
+	=?utf-8?B?MTtIRTFQUjA2TUIxMTc5OzIzOjR2L0NWanphMERoS3JyV0poYlk0ZFBRd053?=
+ =?utf-8?B?Q3pJWXVRaEFUVlMybmxpMWdTUG1OWkVURDNJM09RVUZma2wyYTBwKzZJN3hU?=
+ =?utf-8?B?L2ZTb1I0R0NUdG10ZTFzUmc1c3lGcFNYeEhJL1gyNDFUWmVpZ2tuL1BYMy9w?=
+ =?utf-8?B?Q2VDdjZVTjNxNjJiK0tQakJUcHJTTEhiTlFwZktIeGdGWHZnb3lYRnVzSXhv?=
+ =?utf-8?B?WlpYMDZwK05mQlE5UE5FS2tDVkg3Z3ducXE0Qm5ncnlIekIreXlVMHFvbnFj?=
+ =?utf-8?B?TjRZOCt3aVdvT2RkRElGQ2ZZdmVyMTRtRTdpWWpEV3J6ZVBsN0N6ZzFXZzky?=
+ =?utf-8?B?azBnTThFeHVITjYvQTJrYkp5cGtEKzNaR3BsaHYxLzlxbkYyOStOWVdhT2kw?=
+ =?utf-8?B?ZC9OVys3R1R0UXdhMUJVVHVwaXdrZjlSWkd0azEwODN1UVltT0sveVYvUmFu?=
+ =?utf-8?B?R0hBNGcvYngxVTlCTm5laTNoa3dHcWRvaFovbU1WMW0rejMxYzVrSUpXaDR1?=
+ =?utf-8?B?ZVN2eExiaXdEdWVpRUd3UVFNRHVnU0JKTm9WbGdqb1laUnVzb2tiWThvU21N?=
+ =?utf-8?B?cklpMnNKa3lXTmdLZHVrenF0a0RvMnFpaWcwMUs3RS9BQ2dJSU1OMmdoQVdl?=
+ =?utf-8?B?Q1ZnMWhzbVFOSmFRZHJOTExEc1pPSm1ScWUxNy82T0dzYWNHZ3ZRWWwwdFA5?=
+ =?utf-8?B?OEI4K3Y0ZnVaL3hoYlcyQTgyV3JjTmFLdjRrZjdhVVRoclFlaFZDYTY1dGEr?=
+ =?utf-8?B?V2l6d2N6c2pDZzlLY2lvV0ZTTFFBQlVGVDE1TDc2ejFUYUZLSTVNYjcxaDVM?=
+ =?utf-8?B?Q1h4WUNEb3l6bmRGR2hyci9GMldURXZxcmQyNVR2VG5kcG1WZ1QydFY5cWY3?=
+ =?utf-8?B?M1ZNamNDZ1kvNmdmUENGcFNTR1FtMFAzaS8zOGowK2dKbEVySm9vMUUwcC8x?=
+ =?utf-8?B?KzNwUWZod1VqdmkzSjdxOFFhcGdhZGdtUkdQRE9lRlZkQytKaGJQR21VWGph?=
+ =?utf-8?B?WitqWVVtWUUvR3BIYWEvdERkRFRjVDY1MEM1T3N0N1E2M3dVMWlmZE9FOEFa?=
+ =?utf-8?B?a0VLT3FIdkViNXFJL2xXVDZnYkRTM3dDMmJvUlVSNXJ4QVJDQUgrNlpZU1lY?=
+ =?utf-8?B?MkpMWEMzemxCbzJFZ09MMlJlOE1TTGVkQ3hTQU5pQ1g2bDh6Tkg3czNxRHFu?=
+ =?utf-8?B?UGUyR2dxbTYwYmxIM2FPWUdOdTV5dE0vNnRxaCsrL1BKTGxPelFoSHMxdldP?=
+ =?utf-8?B?Q1JPSThNblpwQ3d1VWh4b2lDSmtBeFF4bGtPOVBWclA1a0JrVVU0bkpXc2Zh?=
+ =?utf-8?B?NDJEaGFXUmthNm5hMHNCdjdFczNyOXFkbHlyZEtpaktzYzF1T1RGbVlYN3Z5?=
+ =?utf-8?B?UDZvZ0lQem1PcFZOZTAva2ZZbWpSam4yeENQbStndlA5Um9NWFMwRVNZSzBL?=
+ =?utf-8?B?Ujh2VU1DdXNtQjF4Y2N5SlEwd1Nwb0hzd0Rla0RPdGYvNFY4eEdkQW9ML1FV?=
+ =?utf-8?B?bFF5Z2Y1UE1Ld2JISFJ0emlhblBkaFZtVWpNekNkVDJhdE9XRVFzclJWY2ZP?=
+ =?utf-8?B?STR5ZVp6bG51Mm16Wk9lVEZYVkY1R1BYenZDSnBnRWZjdlNUOGJHclEzeFRt?=
+ =?utf-8?B?L1cybzJmeVlsN0N4RFM4QTVESmZPSTVDdjVocGozaWxYMnBCV080cXQ2MW8y?=
+ =?utf-8?B?NjJxTzRLZGc2VS93UG9sYjZEYmJhRVZjSzMvRTd0L1pKQWtLYSs2czRhcE5i?=
+ =?utf-8?B?NnI1a1k3djdLUm9kYzgwM1psYmd1OWhBdjVkcDBLUzlSTU03Zk14eHl5S3hS?=
+ =?utf-8?B?aTdkR3k5T29qMEhTOFkvamdNUnhOdUhiUjFvNFBOY05yWlJhc2YrRloyZlpU?=
+ =?utf-8?B?M2pFUHlnQWM0ckJ0Nm9pWG9BQTEyRExpcGx2Z01rWENLOHJwMGtLcEkvNUdK?=
+ =?utf-8?B?YVhsVkhSVzZrUG1ka2ptS0hOMDJxeDY2MTgyT0l4VWRuZ2U1V28yZExJK0tD?=
+ =?utf-8?B?cEFNWHgxVW5IM1NpSXpyU212c3F6MnRnbkkyNEFpMHpqREpxcjh2ampreHpE?=
+ =?utf-8?B?RnI3em1FaFQ5ZUhtYVkxeHlNanI0aHNrRGE0TDdzQWtxT216YzJlUkRNVVMw?=
+ =?utf-8?B?NDlacGFvTFFYVnBES1ByaXdaZWNTRDZ4QW1YYXNaVVlDUGZ0OGc0ZnFGdGpx?=
+ =?utf-8?Q?MG0GITyJiKK58oWFSwX1V1XEU1JMh7kKQKd58Ua2sw=3D?=
+X-Microsoft-Exchange-Diagnostics:
+	1;HE1PR06MB1179;6:r7Ji1bUWdBYESCcGIa6BrFUUH65YBQ4gLnfKuEGpqUnFVMnn0xXVEWGKQJCa76dSsnPhtwkM1tRNv2bW2B7s3+kKfihY7muPTZ7VpglfCKoccFMthspkRIBhh9HATIx42ScrsJ8tP6fpz7uZozpa+2S61eHvG+8Tfn4f1rbSYn4fW4Zham3mr8aTjztlvdGfOUKCYK/e0Sl+OWHdV0dsSfVrJxiZAc516OGnrzrzs/oWco01Cf/vgCTtfYRqqkYHhgVTATillMh8AdTgbQWQhgxcY0zbbryOxhVdR9vxHiz3/ObcIL0bQivQxuRk0C6YRRmq3Q+ieeLL6ZtudQwQ23JgfZT/wNa/N8kAXiYq5Hs=;5:m8uujfzGoteKX+I+SljqSB4H5o50c/po8h0Qf/mZsKvAA9sZ6evL3b7J/VCG/YcoGdWYI/2HWl6L9WaKkczR35Cy7L04MRDZpSylMfq0Gm7GBrcnvzFiUrktecGxA3gaL7F9xS7Hu1OP8Ocjp+Ne8+4a6rnLn5GB6u0IVCjIT3s=;24:7v7wuDN9fVGuTtP4+ZZNc/r9DD4h9fVSji1iZDrdFQPQCy4OUaQbZ8YjFO/eElZ0QJUlC+H50Puei/vqiNZiCvrXKUZTA+0/T30+zXsUSJI=;7:1QrI1HNk+a1bASH6ONZyFQ25aos0anIbYrrSO8lje8pYByApJTR0BHXvQJ1EtLNqXC09VpxRu2kfP2uPfv7W/i+BT/mziQpq7c/iDP+QO7tpmQXeGVmDDf8CPnRv4RlVFI4aTkPs3hstLx0QkQcyDZnfEmTZcB4g33M10p1yT/BM/LJKKkI6VXLu8OxcoXTHhVXZ5jKs8XqX/+RLVcEhwA2NwkFcan3biTXcSKMVke9/X/kCHrbseHsv1QqWeuXU
+SpamDiagnosticOutput: 1:99
+SpamDiagnosticMetadata: NSPM
+X-OriginatorOrg: srlabs.de
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 27 Dec 2017 19:37:01.0680 (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id:
+	928baa63-5a71-4744-ed1c-08d54d61338d
+X-MS-Exchange-CrossTenant-FromEntityHeader: Hosted
+X-MS-Exchange-CrossTenant-Id: 7b8a14a6-1928-4fc2-924a-a90ff9e9b244
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: HE1PR06MB1179
+
+I accept
+
+
+On 12/27/2017 08:34 PM, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled out the CVE form and want one, we can't use the data until you accept the MITRE CVE Terms of Use). 
+>
+> Simply quote the email and reply with "I accept" at the top if you agree to the MITRE CVE Terms of Use and we will add a copy of the email to the DWF MITRE CVE Terms of Use acceptance data at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>
+> The reason we use a complete copy of the email is that it provides an artifact showing that the email address accepted the Terms of Use, when they were accepted and so on. 
+>
+> If you did not submit a CVE request to the DWF you can safely ignore this message, however we may resend it at some point in the future, if you don't want any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so we don't spam you with these, please note that this will prevent you from being able to accept the MITRE CVE Terms of Use via the DWF automatically in future (you'll have to manually ask). But again, if you have no idea what a CVE is then you can ignore this/ask to be added to the block list with no problems. 
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities and Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute such materials and derivative works. Unless required by applicable law or agreed to in writing, you provide such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute Common Vulnerabilities and Exposures (CVE??). Any copy you make for such purposes is authorized provided that you reproduce MITRE's copyright designation and this license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/master/Terms-Of-Use.md
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manually with your question/concerns/etc. 
+>
+

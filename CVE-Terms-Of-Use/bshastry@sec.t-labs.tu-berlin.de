@@ -1,0 +1,95 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.31.230.197 with SMTP id d188csp242809vkh;
+        Sat, 8 Oct 2016 04:20:10 -0700 (PDT)
+X-Received: by 10.28.143.74 with SMTP id r71mr2759987wmd.132.1475925610431;
+        Sat, 08 Oct 2016 04:20:10 -0700 (PDT)
+Return-Path: <bshastry@sec.t-labs.tu-berlin.de>
+Received: from mail.tu-berlin.de (mail.tu-berlin.de. [130.149.7.33])
+        by mx.google.com with ESMTPS id c2si26484652wjd.229.2016.10.08.04.20.10
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 08 Oct 2016 04:20:10 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of bshastry@sec.t-labs.tu-berlin.de designates 130.149.7.33 as permitted sender) client-ip=130.149.7.33;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: best guess record for domain of bshastry@sec.t-labs.tu-berlin.de designates 130.149.7.33 as permitted sender) smtp.mailfrom=bshastry@sec.t-labs.tu-berlin.de
+X-tubIT-Incoming-IP: 130.149.230.43
+Received: from mail.sec.t-labs.tu-berlin.de ([130.149.230.43])
+	by mail.tu-berlin.de (exim-4.84_2/mailfrontend-7) with esmtp 
+	for <kurt@seifried.org>
+	id 1bspfk-000156-2S; Sat, 08 Oct 2016 13:20:09 +0200
+From: Bhargava Shastry <bshastry@sec.t-labs.tu-berlin.de>
+Subject: Re: CVE - Acceptance of MITRE Terms of Use for CVE
+To: Kurt Seifried <kurt@seifried.org>
+References: <CABqVa39=UVZWoPf_NkmDE-H0uZBuVvPVOMdVmktNJdOWhGZOqQ@mail.gmail.com>
+Message-ID: <7cacd119-b551-bb9e-b51a-d82535f89716@sec.t-labs.tu-berlin.de>
+Date: Sat, 8 Oct 2016 13:20:07 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101
+ Thunderbird/45.3.0
+MIME-Version: 1.0
+In-Reply-To: <CABqVa39=UVZWoPf_NkmDE-H0uZBuVvPVOMdVmktNJdOWhGZOqQ@mail.gmail.com>
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Hi,
+
+I accept.
+
+Regards,
+Bhargava
+
+On 10/05/2016 06:41 PM, Kurt Seifried wrote:
+> Hi, I need to confirm that you have accepted the
+> MITRE Terms of Use for CVE, available at:
+> 
+> https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md
+> <https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md>
+> 
+> and quoted below, please reply with "I accept" and I'll be able to
+> process your CVE request. Thanks!
+> 
+> Terms of Use
+> 
+> LICENSE
+> 
+> Submissions: For all materials you submit to the Common Vulnerabilities
+> and Exposures (CVE®), you hereby grant to The MITRE Corporation (MITRE)
+> and all CVE Numbering Authorities (CNAs) a perpetual, worldwide,
+> non-exclusive, no-charge, royalty-free, irrevocable copyright license to
+> reproduce, prepare derivative works of, publicly display, publicly
+> perform, sublicense, and distribute such materials and derivative works.
+> Unless required by applicable law or agreed to in writing, you provide
+> such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+> ANY KIND, either express or implied, including, without limitation, any
+> warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or
+> FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide,
+> non-exclusive, no-charge, royalty-free, irrevocable copyright license to
+> reproduce, prepare derivative works of, publicly display, publicly
+> perform, sublicense, and distribute Common Vulnerabilities and Exposures
+> (CVE®). Any copy you make for such purposes is authorized provided that
+> you reproduce MITRE's copyright designation and this license in any such
+> copy.
+> 
+> DISCLAIMERS
+> 
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE
+> ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION
+> HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION,
+> ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL
+> WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY
+> WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY
+> RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A
+> PARTICULAR PURPOSE.
+> 
+> 
+> -- 
+> Kurt Seifried
+> kurt@seifried.org <mailto:kurt@seifried.org>
+
+-- 
+Bhargava Shastry <bshastry@sec.t-labs.tu-berlin.de>
+Security in Telecommunications
+TU Berlin / Telekom Innovation Laboratories
+Ernst-Reuter-Platz 7, Sekr TEL 17 / D - 10587 Berlin, Germany
+phone: +49 30 8353 58235

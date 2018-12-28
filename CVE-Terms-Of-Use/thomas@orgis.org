@@ -1,0 +1,97 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.31.230.197 with SMTP id d188csp705682vkh;
+        Thu, 29 Sep 2016 23:36:49 -0700 (PDT)
+X-Received: by 10.28.62.20 with SMTP id l20mr1986271wma.45.1475217409899;
+        Thu, 29 Sep 2016 23:36:49 -0700 (PDT)
+Return-Path: <thomas@orgis.org>
+Received: from nemato.nesselzelle.de (nemato.nesselzelle.de. [176.9.85.107])
+        by mx.google.com with ESMTP id q9si19171649wjs.89.2016.09.29.23.36.49
+        for <kurt@seifried.org>;
+        Thu, 29 Sep 2016 23:36:49 -0700 (PDT)
+Received-SPF: pass (google.com: domain of thomas@orgis.org designates 176.9.85.107 as permitted sender) client-ip=176.9.85.107;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of thomas@orgis.org designates 176.9.85.107 as permitted sender) smtp.mailfrom=thomas@orgis.org
+Received: from dunkelstern ([127.0.0.1]:60829)
+	by localhost.localdomain with [XMail 1.27 ESMTP Server]
+	id <S29F4B> for <kurt@seifried.org> from <thomas@orgis.org>;
+	Fri, 30 Sep 2016 08:01:18 +0200
+Date: Fri, 30 Sep 2016 08:02:50 +0200
+From: Thomas Orgis <thomas@orgis.org>
+To: Kurt Seifried <kurt@seifried.org>
+Subject: Re: CVE - Acceptance of MITRE Terms of Use for CVE
+Message-ID: <20160930080250.18ffe6f7@dunkelstern>
+In-Reply-To: <CABqVa3_CGQE4XE3g23zaFb9xUedVbkQCcO7mh6Mnv+--QsfVng@mail.gmail.com>
+References: <CABqVa3_CGQE4XE3g23zaFb9xUedVbkQCcO7mh6Mnv+--QsfVng@mail.gmail.com>
+X-Mailer: Claws Mail 3.14.0 (GTK+ 2.24.28; x86_64-pc-linux-gnu)
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+ boundary="Sig_/reov1S24kSJVMcmSePD0b2j"; protocol="application/pgp-signature"
+
+--Sig_/reov1S24kSJVMcmSePD0b2j
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: quoted-printable
+
+Note: maintainer@mpg123.org is a receive-only redirect to the current
+maintainer.=20
+
+Am Thu, 29 Sep 2016 18:31:59 -0600
+schrieb Kurt Seifried <kurt@seifried.org>:=20
+
+> Hi, I need to confirm that you have accepted the MITRE Terms of Use for
+> CVE, available at:
+>=20
+> https://github.com/distributedweaknessfiling/DWF-Database/blob/master/Ter=
+msOfUse.md
+>=20
+> and quoted below, please reply with "I accept" and I'll be able to process
+> your CVE request. Thanks!
+
+Oh, I actually did suspect that that Google Docs form I sent for
+reporting a vulnerability (doing some cloudly office app thing with
+JavaScript in a browser does not feel right) was not serious after all.
+
+Fine, then: I accept.
+
+It could be that the Debian project started assinging a CVE in the
+meantime, based on
+
+	http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=3D838960
+
+(the original bug report is http://mpg123.org/bugs/240, not sure if I
+included it in the request). I will drop a note there that I got word
+from the distributed CVE project.
+
+
+Alrighty then,
+
+Thomas
+
+--=20
+Thomas Orgis - Source Mage GNU/Linux Developer (http://www.sourcemage.org)
+OrgisNetzOrganisation ---)=3D- http://orgis.org
+GPG public key 60D5CAFE: http://thomas.orgis.org/public_key
+Fingerprint: D021 FF8E CF4B E097 19D6  1A27 231C 4CBC 60D5 CAFE
+
+--Sig_/reov1S24kSJVMcmSePD0b2j
+Content-Type: application/pgp-signature
+Content-Description: Digitale Signatur von OpenPGP
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIcBAEBAgAGBQJX7gAKAAoJECMcTLxg1cr+g+MQAJddQYeiv8y8Gylsfqygasfb
+9v5Xt3UFu816Tqdf1/QmFLobH3GMTiaGvXpyNyudy/xZMbZ1cNfnJBEBqxfGDHp9
+2v0EJUVoI8EXMTT87jLhg44sxGU5DA6+tnHKZyN138Dl7yW18k6UZILEoduCsibi
+oEMBpa4XxsEDM1mSCccJGuyvqKpYnkH2a2dR4zrrSyexzQFQXppWGi0ZbnDq9Op0
+OBXbG2fSU3Gel9lzQFMTkiqGNqeJDLQBo5E1C4GkYoxIOdeseErbqFHb9b8vYD3v
+Tb7xoDCkcOLyJ/1XGfrMT0cZoSfScf5NwK5qm5ATIZYV+8sBELHoUDBIO6pqk/Yq
+R8f/C68StUhj3u8Y6FAHBmauhhyx8XBoV+qjKsgZDgl9OjIlljhZRHRCndgZHOA3
+ipEgEQfIUm9AYSTf0mLI1MffkZghBNawu2w1WRXdkDUrYPnuOmvDtvxX090fvP+O
+SfGbi4tdNsy31ggoX02iFtd86ZPvVa6PdWIjWEkwP4F49LKvUj+CP/4cLpm26Ckd
+nPDTOIBrxuhyRa9df8Ob2lSWz7L5lGqYEyU4NFVkRYCw5sfeicg1fgvl/nRRN+jc
+4VogILFZ7Md1iKinysvDP7buIX6vaQrzZANWqOY+NTorzryRWpjwvT+f7IwAA3wz
+F0Js4E9Wk+EApEo+i+3H
+=s4Er
+-----END PGP SIGNATURE-----
+
+--Sig_/reov1S24kSJVMcmSePD0b2j--

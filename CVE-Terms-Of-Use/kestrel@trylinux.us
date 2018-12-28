@@ -1,0 +1,166 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.31.230.197 with SMTP id d188csp1174210vkh;
+        Mon, 3 Oct 2016 10:20:13 -0700 (PDT)
+X-Received: by 10.98.198.144 with SMTP id x16mr4291507pfk.42.1475515213564;
+        Mon, 03 Oct 2016 10:20:13 -0700 (PDT)
+Return-Path: <kestrel@trylinux.us>
+Received: from mail.trylinux.us (mail.trylinux.us. [209.126.191.40])
+        by mx.google.com with ESMTPS id vq2si37707121pab.111.2016.10.03.10.20.13
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 03 Oct 2016 10:20:13 -0700 (PDT)
+Received-SPF: pass (google.com: domain of kestrel@trylinux.us designates 209.126.191.40 as permitted sender) client-ip=209.126.191.40;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of kestrel@trylinux.us designates 209.126.191.40 as permitted sender) smtp.mailfrom=kestrel@trylinux.us
+Subject: Re: CVE - Acceptance of MITRE Terms of Use for CVE
+To: Kurt Seifried <kurt@seifried.org>
+References: <CABqVa3_=8EMh5rQ-0SgfGX70YtmPKMt_WnADkp4yhkbx0fUTFg@mail.gmail.com>
+From: Zach W <kestrel@trylinux.us>
+Message-ID: <0ba0aec8-c262-a32c-68f5-ea52a173391c@trylinux.us>
+Date: Mon, 3 Oct 2016 10:20:10 -0700
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:45.0)
+ Gecko/20100101 Thunderbird/45.3.0
+MIME-Version: 1.0
+In-Reply-To: <CABqVa3_=8EMh5rQ-0SgfGX70YtmPKMt_WnADkp4yhkbx0fUTFg@mail.gmail.com>
+Content-Type: multipart/alternative;
+ boundary="------------6EDDF9068F04850045088BC5"
+
+This is a multi-part message in MIME format.
+--------------6EDDF9068F04850045088BC5
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+I accept
+
+
+On 10/3/16 10:14 AM, Kurt Seifried wrote:
+> Hi, I need to confirm that you have accepted the MITRE Terms of Use
+> for CVE, available at:
+>
+> https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md
+>
+> and quoted below, please reply with "I accept" and I'll be able to
+> process your CVE request. Thanks!
+>
+> Terms of Use
+>
+> LICENSE
+> Submissions: For all materials you submit to the Common
+> Vulnerabilities and Exposures (CVE®), you hereby grant to The MITRE
+> Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a
+> perpetual, worldwide, non-exclusive, no-charge, royalty-free,
+> irrevocable copyright license to reproduce, prepare derivative works
+> of, publicly display, publicly perform, sublicense, and distribute
+> such materials and derivative works. Unless required by applicable law
+> or agreed to in writing, you provide such materials on an "AS IS"
+> BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+> implied, including, without limitation, any warranties or conditions
+> of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+> PARTICULAR PURPOSE.
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide,
+> non-exclusive, no-charge, royalty-free, irrevocable copyright license
+> to reproduce, prepare derivative works of, publicly display, publicly
+> perform, sublicense, and distribute Common Vulnerabilities and
+> Exposures (CVE®). Any copy you make for such purposes is authorized
+> provided that you reproduce MITRE's copyright designation and this
+> license in any such copy.
+>
+> DISCLAIMERS
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE
+> ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION
+> HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION,
+> ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL
+> WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY
+> WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY
+> RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A
+> PARTICULAR PURPOSE.
+>
+>
+> -- 
+> Kurt Seifried
+> kurt@seifried.org <mailto:kurt@seifried.org>
+
+
+--------------6EDDF9068F04850045088BC5
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+    <p>I accept<br>
+    </p>
+    <br>
+    <div class="moz-cite-prefix">On 10/3/16 10:14 AM, Kurt Seifried
+      wrote:<br>
+    </div>
+    <blockquote
+cite="mid:CABqVa3_=8EMh5rQ-0SgfGX70YtmPKMt_WnADkp4yhkbx0fUTFg@mail.gmail.com"
+      type="cite">
+      <div dir="ltr">
+        <div>Hi, I need to confirm that you have accepted the MITRE
+          Terms of Use for CVE, available at:</div>
+        <div><br>
+        </div>
+        <div><a moz-do-not-send="true"
+href="https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md">https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md</a></div>
+        <div><br>
+        </div>
+        <div>and quoted below, please reply with "I accept" and I'll be
+          able to process your CVE request. Thanks!</div>
+        <div><br>
+        </div>
+        <div>Terms of Use</div>
+        <div><br>
+        </div>
+        <div>LICENSE</div>
+        <div>Submissions: For all materials you submit to the Common
+          Vulnerabilities and Exposures (CVE®), you hereby grant to The
+          MITRE Corporation (MITRE) and all CVE Numbering Authorities
+          (CNAs) a perpetual, worldwide, non-exclusive, no-charge,
+          royalty-free, irrevocable copyright license to reproduce,
+          prepare derivative works of, publicly display, publicly
+          perform, sublicense, and distribute such materials and
+          derivative works. Unless required by applicable law or agreed
+          to in writing, you provide such materials on an "AS IS" BASIS,
+          WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+          or implied, including, without limitation, any warranties or
+          conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or
+          FITNESS FOR A PARTICULAR PURPOSE.</div>
+        <div>CVE Usage: MITRE hereby grants you a perpetual, worldwide,
+          non-exclusive, no-charge, royalty-free, irrevocable copyright
+          license to reproduce, prepare derivative works of, publicly
+          display, publicly perform, sublicense, and distribute Common
+          Vulnerabilities and Exposures (CVE®). Any copy you make for
+          such purposes is authorized provided that you reproduce
+          MITRE's copyright designation and this license in any such
+          copy.</div>
+        <div><br>
+        </div>
+        <div>DISCLAIMERS</div>
+        <div>ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN
+          PROVIDED BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND THE
+          CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS
+          SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF
+          TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL
+          WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+          ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT
+          INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF
+          MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</div>
+        <div><br>
+        </div>
+        <div><br>
+        </div>
+        -- <br>
+        <div class="gmail_signature">Kurt Seifried<br>
+          <a moz-do-not-send="true" href="mailto:kurt@seifried.org"
+            target="_blank">kurt@seifried.org</a></div>
+      </div>
+    </blockquote>
+    <br>
+  </body>
+</html>
+
+--------------6EDDF9068F04850045088BC5--

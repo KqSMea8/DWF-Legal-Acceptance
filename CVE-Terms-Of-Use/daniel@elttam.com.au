@@ -1,0 +1,254 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.82.15 with SMTP id i15csp57356uaa;
+        Thu, 6 Apr 2017 18:32:34 -0700 (PDT)
+X-Received: by 10.223.165.85 with SMTP id j21mr30765493wrb.56.1491528754742;
+        Thu, 06 Apr 2017 18:32:34 -0700 (PDT)
+Return-Path: <daniel@elttam.com.au>
+Received: from AUS01-SY3-obe.outbound.protection.outlook.com (mail-sy3aus01on0050.outbound.protection.outlook.com. [104.47.117.50])
+        by mx.google.com with ESMTPS id b48si5057219wra.295.2017.04.06.18.32.33
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Thu, 06 Apr 2017 18:32:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of daniel@elttam.com.au designates 104.47.117.50 as permitted sender) client-ip=104.47.117.50;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@elttam.onmicrosoft.com;
+       spf=pass (google.com: domain of daniel@elttam.com.au designates 104.47.117.50 as permitted sender) smtp.mailfrom=daniel@elttam.com.au
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=elttam.onmicrosoft.com; s=selector1-elttam-com-au;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=+SSPB8By84qmb3KvxwQsTjBN+dvxWHmXldijlDEEkfE=;
+ b=eVOxdY6+7zPcl7fv6kH+3O8t2hBNN8jy6knYjsoL5qz3TzpL8GQ5XEI/0T4FW/zk/8TaIvomHYju4cIsGbadwTFGIq5ROTnqNI5Uj/7IrKVBesk54nU2la2oJ6dw/yawGMjPPK3kfSnAHIyHBrcN2a0J83XVwOl3uLoFb2BkXwk=
+Received: from SYXPR01MB1086.ausprd01.prod.outlook.com (10.169.175.15) by
+ SYXPR01MB1088.ausprd01.prod.outlook.com (10.169.175.17) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id
+ 15.1.1005.10; Fri, 7 Apr 2017 01:32:30 +0000
+Received: from SYXPR01MB1086.ausprd01.prod.outlook.com ([10.169.175.15]) by
+ SYXPR01MB1086.ausprd01.prod.outlook.com ([10.169.175.15]) with mapi id
+ 15.01.1005.022; Fri, 7 Apr 2017 01:32:30 +0000
+From: Daniel Hodson <daniel@elttam.com.au>
+To: "kurt@seifried.org" <kurt@seifried.org>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ daniel@elttam.com.au
+Thread-Topic: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ daniel@elttam.com.au
+Thread-Index: AQHSrxMPjVll40qg/kihPNOBbN2NzaG5H3c+
+Date: Fri, 7 Apr 2017 01:32:30 +0000
+Message-ID: <SYXPR01MB1086CEF2A96A1C30D495B411810C0@SYXPR01MB1086.ausprd01.prod.outlook.com>
+References: <20170406201901.4090.26969@shiny-2.local>
+In-Reply-To: <20170406201901.4090.26969@shiny-2.local>
+Accept-Language: en-AU, en-US
+Content-Language: en-AU
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: seifried.org; dkim=none (message not signed)
+ header.d=none;seifried.org; dmarc=none action=none header.from=elttam.com.au;
+x-originating-ip: [132.245.164.245]
+x-microsoft-exchange-diagnostics: 1;SYXPR01MB1088;7:XbzaYGxOrXqbXzZP6Vg4NBhyP8R5HYH5o3+ZakFQXyJfIIV/xxK1wNK1rLZwoNLwrX5o9sBX6If6PBfXSfOHgfAvw8RrQjNmcI0pR7F+lIkAZJmrWhlrb/dZHTJ0me/1YNBNOsZvqfPDs8VLNkPg2Vzien55+FhnzK9Mwc+pKJAbS7l7J2XS238oSNr4j/LTxE//BXrYkDa3Ezs0zXpC/AaSjgm31YPGs5dx5KTGmnN2KjUDGJvzy9QdwzOiQmn0og/5TYQfZAjkRRCzZ0l8vrkSczJRWd7+sqomJ4/BXU2GSo3DuPmLbMzl7m72KwXKQl18ck2YGIqqrBeQWxzVRw==
+x-ms-office365-filtering-correlation-id: d0a92311-fbea-4ed2-5ba5-08d47d55f557
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(2017030254075)(201703131423075);SRVR:SYXPR01MB1088;
+x-microsoft-antispam-prvs: <SYXPR01MB1088AB066327508CBA815956810C0@SYXPR01MB1088.ausprd01.prod.outlook.com>
+x-exchange-antispam-report-test: UriScan:(158342451672863)(166708455590820)(46150409022019);
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(6040450)(2401047)(5005006)(8121501046)(3002001)(10201501046)(93006095)(93001095)(6041248)(20161123564025)(201703131423075)(201702281528075)(201703061421075)(2016111802025)(20161123562025)(20161123560025)(20161123555025)(6043046)(6072148);SRVR:SYXPR01MB1088;BCL:0;PCL:0;RULEID:;SRVR:SYXPR01MB1088;
+x-forefront-prvs: 0270ED2845
+x-forefront-antispam-report: SFV:NSPM;SFS:(10009020)(39450400003)(39410400002)(39400400002)(39830400002)(38564003)(13624006)(377454003)(28244002)(66066001)(2351001)(189998001)(54356999)(50986999)(76176999)(102836003)(3846002)(6116002)(5180700001)(86362001)(110136004)(38730400002)(8936002)(6246003)(236005)(5660300001)(3660700001)(6306002)(54896002)(53936002)(3280700002)(33656002)(122556002)(2906002)(229853002)(2501003)(6506006)(74316002)(6436002)(606005)(7696004)(25786009)(53546009)(77096006)(74482002)(7906003)(99286003)(2900100001)(8676002)(6916009)(55016002)(2950100002)(7736002)(42882006)(5640700003)(1730700003)(81166006)(9686003)(221513004)(222073002);DIR:OUT;SFP:1101;SCL:1;SRVR:SYXPR01MB1088;H:SYXPR01MB1086.ausprd01.prod.outlook.com;FPR:;SPF:None;MLV:sfv;LANG:en;
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_SYXPR01MB1086CEF2A96A1C30D495B411810C0SYXPR01MB1086ausp_"
+MIME-Version: 1.0
+X-OriginatorOrg: elttam.com.au
+X-MS-Exchange-CrossTenant-originalarrivaltime: 07 Apr 2017 01:32:30.5655
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 35265cab-88fd-466b-aea5-ace32e608528
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SYXPR01MB1088
+
+--_000_SYXPR01MB1086CEF2A96A1C30D495B411810C0SYXPR01MB1086ausp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+________________________________
+From: kurt@seifried.org <kurt@seifried.org>
+Sent: Friday, 7 April 2017 6:19:01 AM
+To: Daniel Hodson
+Subject: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for daniel@eltt=
+am.com.au
+
+This is a confirmation email sent from CVE request form at https://iwantacv=
+e.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled=
+ out the CVE form and want one, we can't use the data until you accept the =
+MITRE CVE Terms of Use).
+
+Simply quote the email and reply with "I accept" at the top if you agree to=
+ the MITRE CVE Terms of Use and we will add it to the DWF MITRE CVE Terms o=
+f Use acceptance data at https://github.com/distributedweaknessfiling/DWF-L=
+egal-Acceptance/tree/master/Terms-Of-Use
+
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don't =
+want any future emails simply reply with "unsubscribe" or "DON'T SEND ME TH=
+IS EMAIL EVER AGAIN" and I'll add your email address to the block list so w=
+e don't spam you with these, please note that this will prevent you from be=
+ing able to accept the MITRE CVE Terms of Use via the DWF automatically in =
+future (you'll have to manually ask). But again, if you have no idea what a=
+ CVE is then you can ignore this/ask to be added to the block list with no =
+problems.
+
+MITRE CVE Terms of Use
+
+LICENSE
+
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+ Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and a=
+ll CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable copyright license to reproduce, prepar=
+e derivative works of, publicly display, publicly perform, sublicense, and =
+distribute such materials and derivative works. Unless required by applicab=
+le law or agreed to in writing, you provide such materials on an "AS IS" BA=
+SIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implie=
+d, including, without limitation, any warranties or conditions of TITLE, NO=
+N-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare=
+ derivative works of, publicly display, publicly perform, sublicense, and d=
+istribute Common Vulnerabilities and Exposures (CVE??). Any copy you make f=
+or such purposes is authorized provided that you reproduce MITRE's copyrigh=
+t designation and this license in any such copy.
+
+DISCLAIMERS
+
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE RE=
+PRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF T=
+RUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS =
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE I=
+NFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES O=
+F MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+A copy is available at https://github.com/distributedweaknessfiling/DWF-Dat=
+abase/blob/master/TermsOfUse.md
+
+To contact the DWF either hit reply, or email kurt@seifried.org manually wi=
+th your question/concerns/etc.
+
+
+--_000_SYXPR01MB1086CEF2A96A1C30D495B411810C0SYXPR01MB1086ausp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Exchange Server">
+<!-- converted from text --><style><!-- .EmailQuote { margin-left: 1pt; pad=
+ding-left: 4pt; border-left: #800000 2px solid; } --></style>
+</head>
+<body>
+<meta content=3D"text/html; charset=3DUTF-8">
+<style type=3D"text/css" style=3D"">
+<!--
+p
+	{margin-top:0;
+	margin-bottom:0}
+-->
+</style>
+<div dir=3D"ltr">
+<div id=3D"x_divtagdefaultwrapper" dir=3D"ltr" style=3D"font-size:12pt; col=
+or:#000000; font-family:Calibri,Arial,Helvetica,sans-serif">
+<p>I accept</p>
+</div>
+<hr tabindex=3D"-1" style=3D"display:inline-block; width:98%">
+<div id=3D"x_divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" =
+color=3D"#000000" style=3D"font-size:11pt"><b>From:</b> kurt@seifried.org &=
+lt;kurt@seifried.org&gt;<br>
+<b>Sent:</b> Friday, 7 April 2017 6:19:01 AM<br>
+<b>To:</b> Daniel Hodson<br>
+<b>Subject:</b> DWF/CVE - Acceptance of MITRE Terms of Use for CVE for dani=
+el@elttam.com.au</font>
+<div>&nbsp;</div>
+</div>
+</div>
+<font size=3D"2"><span style=3D"font-size:10pt;">
+<div class=3D"PlainText">This is a confirmation email sent from CVE request=
+ form at
+<a href=3D"https://iwantacve.org/">https://iwantacve.org/</a> asking you to=
+ accept the MITRE CVE Terms of Use (assuming you filled out the CVE form an=
+d want one, we can't use the data until you accept the MITRE CVE Terms of U=
+se).
+<br>
+<br>
+Simply quote the email and reply with &quot;I accept&quot; at the top if yo=
+u agree to the MITRE CVE Terms of Use and we will add it to the DWF MITRE C=
+VE Terms of Use acceptance data at
+<a href=3D"https://github.com/distributedweaknessfiling/DWF-Legal-Acceptanc=
+e/tree/master/Terms-Of-Use">
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/mast=
+er/Terms-Of-Use</a><br>
+<br>
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don't =
+want any future emails simply reply with &quot;unsubscribe&quot; or &quot;D=
+ON'T SEND ME THIS EMAIL EVER AGAIN&quot; and I'll add
+ your email address to the block list so we don't spam you with these, plea=
+se note that this will prevent you from being able to accept the MITRE CVE =
+Terms of Use via the DWF automatically in future (you'll have to manually a=
+sk). But again, if you have no idea
+ what a CVE is then you can ignore this/ask to be added to the block list w=
+ith no problems.
+<br>
+<br>
+MITRE CVE Terms of Use<br>
+<br>
+LICENSE<br>
+<br>
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+ Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and a=
+ll CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable
+ copyright license to reproduce, prepare derivative works of, publicly disp=
+lay, publicly perform, sublicense, and distribute such materials and deriva=
+tive works. Unless required by applicable law or agreed to in writing, you =
+provide such materials on an &quot;AS
+ IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expre=
+ss or implied, including, without limitation, any warranties or conditions =
+of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PU=
+RPOSE.<br>
+<br>
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare=
+ derivative works of, publicly display, publicly perform, sublicense, and d=
+istribute Common Vulnerabilities
+ and Exposures (CVE??). Any copy you make for such purposes is authorized p=
+rovided that you reproduce MITRE's copyright designation and this license i=
+n any such copy.<br>
+<br>
+DISCLAIMERS<br>
+<br>
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN &quot;AS IS&quot; BASIS AND THE CONTRIBUTOR, THE ORGANIZATION=
+ HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS =
+BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES,
+ DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO =
+ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY =
+RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTIC=
+ULAR PURPOSE.<br>
+<br>
+A copy is available at <a href=3D"https://github.com/distributedweaknessfil=
+ing/DWF-Database/blob/master/TermsOfUse.md">
+https://github.com/distributedweaknessfiling/DWF-Database/blob/master/Terms=
+OfUse.md</a><br>
+<br>
+To contact the DWF either hit reply, or email kurt@seifried.org manually wi=
+th your question/concerns/etc.
+<br>
+<br>
+</div>
+</span></font>
+</body>
+</html>
+
+--_000_SYXPR01MB1086CEF2A96A1C30D495B411810C0SYXPR01MB1086ausp_--

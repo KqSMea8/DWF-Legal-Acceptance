@@ -1,0 +1,151 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.153.144 with SMTP id a16csp2511494ivh;
+        Thu, 8 Feb 2018 07:48:31 -0800 (PST)
+X-Google-Smtp-Source: AH8x224IgJbkv7CL2CqS8Om/RhAs5CT6uujG4+DxGVdQTAp/j7Hw2sCZA7L//TglXMHIJuKruTBm
+X-Received: by 10.223.152.193 with SMTP id w59mr1134732wrb.74.1518104911279;
+        Thu, 08 Feb 2018 07:48:31 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1518104911; cv=none;
+        d=google.com; s=arc-20160816;
+        b=DpQb+w/KBaBRUeXGcSXWXQmJImcVJ2SXnATwFKx4c1NZF6mZKyBOoTnblxx71AcxKl
+         WAPFBp4QBbHXQtWouRsYfKiKcVEYGqjF2GVOOSjwIJdKF/7Vjof5tZozI9HerXTa5wWV
+         0B6omdjk65IfmVDyzIJPnRhegvc4Ak6hWYJLVrA4GJi5Ma90Pr4Jgrmk49AefuUOMiGW
+         x1Mm2vyQvJShsnruE4AMc1dwz3wXYtvqahVifST89Oo2KU6BblBWngy5kAdvANXDWq4M
+         lfCHZYaBS8l+AL1dGTtP8U3yZH9YqCGrz+l3pao4r+tALA8cmA1Pmnj/bjP3Zpme2ojO
+         euyg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=user-agent:in-reply-to:content-disposition:mime-version:references
+         :message-id:subject:to:from:date:arc-authentication-results;
+        bh=GVDlU8ZiC9tPTtm2o5gPAGHnHrxjpcGQisSlzemdxtQ=;
+        b=wZ4N7uJfhkKeW0zLtzA2+QPFMW6oSfvptnhiDV0dd/mzoepXJXVrBmjk3v9JhWmnP0
+         OY7tzD4c6zDa07rL8zbSq7p0E6nOajjSUqarR5d8Hqr1PlFMAHoF1VvHd8F5rOOeYFar
+         nKBHpByqMKm7oEPpmiMIkqV5+2l/cBgM83S70bsDwFVr+nBM9dhcOJLivewZ6IClat4+
+         5P1OO0yS3wHNehk0vPFgAHwok7Ndnbi1RcNjgJZOmMdxYnsD3MgOS7gehpwFWfEzV1EZ
+         98lVfPvKQWLRtUlncA5GwPQCTHGic0iWZvKHuojeVFtBPshMLVNhi53skt6z+N2bRb4B
+         3Zfw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=neutral (google.com: 146.185.132.9 is neither permitted nor denied by best guess record for domain of ehashman@debian.org) smtp.mailfrom=ehashman@debian.org
+Return-Path: <ehashman@debian.org>
+Received: from hashman.ca (tirisfal-glades.hashman.ca. [146.185.132.9])
+        by mx.google.com with ESMTPS id s3si145409wme.24.2018.02.08.07.48.30
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 08 Feb 2018 07:48:31 -0800 (PST)
+Received-SPF: neutral (google.com: 146.185.132.9 is neither permitted nor denied by best guess record for domain of ehashman@debian.org) client-ip=146.185.132.9;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 146.185.132.9 is neither permitted nor denied by best guess record for domain of ehashman@debian.org) smtp.mailfrom=ehashman@debian.org
+Received: from feralas (pool-71-125-29-70.nycmny.fios.verizon.net [71.125.29.70])
+	by hashman.ca (Postfix) with ESMTPSA id 3E640400C2
+	for <kurt@seifried.org>; Thu,  8 Feb 2018 10:48:00 -0500 (EST)
+Date: Thu, 8 Feb 2018 10:47:47 -0500
+From: Elana Hashman <ehashman@debian.org>
+To: kurt@seifried.org
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ ehashman@debian.org
+Message-ID: <20180208154747.GA3125@feralas>
+References: <20180208153932.12562.42666@slab.local>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha512;
+	protocol="application/pgp-signature"; boundary="J2SCkAp4GZ/dPZZf"
+Content-Disposition: inline
+In-Reply-To: <20180208153932.12562.42666@slab.local>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+
+
+--J2SCkAp4GZ/dPZZf
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+Thanks, Kurt!
+
+On Thu, Feb 08, 2018 at 08:39:32AM -0700, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwanta=
+cve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you fill=
+ed out the CVE form and want one, we can't use the data until you accept th=
+e MITRE CVE Terms of Use).=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you agree =
+to the MITRE CVE Terms of Use and we will add a copy of the email to the DW=
+F MITRE CVE Terms of Use acceptance data at https://github.com/distributedw=
+eaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>=20
+> The reason we use a complete copy of the email is that it provides an art=
+ifact showing that the email address accepted the Terms of Use, when they w=
+ere accepted and so on.=20
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore this=
+ message, however we may resend it at some point in the future, if you don'=
+t want any future emails simply reply with "unsubscribe" or "DON'T SEND ME =
+THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so=
+ we don't spam you with these, please note that this will prevent you from =
+being able to accept the MITRE CVE Terms of Use via the DWF automatically i=
+n future (you'll have to manually ask). But again, if you have no idea what=
+ a CVE is then you can ignore this/ask to be added to the block list with n=
+o problems.=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common Vulnerabilities a=
+nd Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and=
+ all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive=
+, no-charge, royalty-free, irrevocable copyright license to reproduce, prep=
+are derivative works of, publicly display, publicly perform, sublicense, an=
+d distribute such materials and derivative works. Unless required by applic=
+able law or agreed to in writing, you provide such materials on an "AS IS" =
+BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or impl=
+ied, including, without limitation, any warranties or conditions of TITLE, =
+NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,=
+ no-charge, royalty-free, irrevocable copyright license to reproduce, prepa=
+re derivative works of, publicly display, publicly perform, sublicense, and=
+ distribute Common Vulnerabilities and Exposures (CVE??). Any copy you make=
+ for such purposes is authorized provided that you reproduce MITRE's copyri=
+ght designation and this license in any such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE=
+ PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE =
+REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF=
+ TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRES=
+S OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE=
+ INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES=
+ OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-L=
+egal-Acceptance/blob/master/Terms-Of-Use.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org manually =
+with your question/concerns/etc.=20
+>=20
+
+--J2SCkAp4GZ/dPZZf
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQJ8BAEBCgBmBQJafHD2XxSAAAAAAC4AKGlzc3Vlci1mcHJAbm90YXRpb25zLm9w
+ZW5wZ3AuZmlmdGhob3JzZW1hbi5uZXQ3RDBCMTc3NUUyNjI2REQ4OTlEMjBCRURE
+RUNBMEM5RDMwRUQ5RkUzAAoJEN7KDJ0w7Z/jSEkQAJamIVduMCFAY/9azf+iEAIs
+MYz2NPiFK4Jn+YzaieUI9m5HfRPuPEYkjzROjftHQ/kbhTOKu/vX8lzLFLbeh5HF
+ymuvaWyF0MoMUKUtFxIDVvSHjy3kqSKEMFUmgPfcMMwoRY6OAFSqxXDS6HHRLrip
+NSHh8u54zfDqFnxk/opbN92QarqwwCySZlD7Fo9bsgxEsa/Z3C4hzEAYPzHW8Wvz
+XQhApZnp4n5ebgis8Zuc2CWoiUCHBLZgJvS4j9JO6x9NqWTgFmuGPLAHLSZdhd/h
+zSjADhzwFkraOQ2+SyU4Z82jfg5waBfa6JmkMJF+Zyn2sMLVkl3RpxGRMH5xcOur
+3PZ4p9tvsTGl1GYRs8xbKWb/pzWal93+44VrEBiOQBQRPMT2cgGEplZrJguGn2Io
+PeT8WcRb9EFQcSOCrDVca6J/jPhZKOjwWxyKiSDD5+UzkOdSn7jFJBMG6vT8sUIW
+3RE0DhVtXrOfPpD85LxZv6Ynq+NgD8SJ09grlSXL+UIAWKaYtJ/JLCWUW7YWFtZx
+heF0U58K+jgfB5O0sLDXk3WhRM0ILMBCRNmmX1Eh8spZ26cEiNNQByvTQ+Dofzkx
+8R3Tmi73oahshzodT4QDcEydo7qySJoEjZpSHlnh4kubV90qwTtEFnquGcu4GgqC
+rUdgMvw0FdgVrSBLPhH7
+=N3ZU
+-----END PGP SIGNATURE-----
+
+--J2SCkAp4GZ/dPZZf--

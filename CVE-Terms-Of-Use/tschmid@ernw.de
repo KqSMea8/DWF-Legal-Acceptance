@@ -1,0 +1,216 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.31.230.197 with SMTP id d188csp265641vkh;
+        Fri, 7 Oct 2016 00:16:31 -0700 (PDT)
+X-Received: by 10.194.242.36 with SMTP id wn4mr15697490wjc.85.1475824590988;
+        Fri, 07 Oct 2016 00:16:30 -0700 (PDT)
+Return-Path: <tschmid@ernw.de>
+Received: from mx1.ernw.net (mx1.ernw.net. [62.159.96.78])
+        by mx.google.com with ESMTPS id bt7si21078155wjb.104.2016.10.07.00.16.29
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 07 Oct 2016 00:16:30 -0700 (PDT)
+Received-SPF: pass (google.com: domain of tschmid@ernw.de designates 62.159.96.78 as permitted sender) client-ip=62.159.96.78;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of tschmid@ernw.de designates 62.159.96.78 as permitted sender) smtp.mailfrom=tschmid@ernw.de
+Received: from mail1.ernw.net (unknown [172.31.1.30])
+	(using TLSv1.2 with cipher DHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(Client CN "mail1.ernw.net", Issuer "ernw ca1" (verified OK))
+	by mx1.ernw.net (Postfix) with ESMTPS id 614962738E
+	for <kurt@seifried.org>; Fri,  7 Oct 2016 09:16:29 +0200 (CEST)
+Received: from [IPv6:fd00:2001:0:cf20::101f] (unknown [IPv6:fd00:2001:0:cf20::101f])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(Client CN "tschmid@ernw.de", Issuer "StartCom Class 1 Client CA" (not verified))
+	by mail1.ernw.net (Postfix) with ESMTPSA id 33D9C157EEC
+	for <kurt@seifried.org>; Fri,  7 Oct 2016 09:16:29 +0200 (CEST)
+Subject: Re: CVE - Acceptance of MITRE Terms of Use for CVE
+To: Kurt Seifried <kurt@seifried.org>
+References: <CABqVa3_DLxBGpK_9ha_HYnW8EQUqU6X6L3RY3P-R9CeViHML1w@mail.gmail.com>
+From: Timo Schmid <tschmid@ernw.de>
+Organization: ERNW GmbH
+Message-ID: <082c4cb5-c5ed-80b3-fc7f-9e64f3db2346@ernw.de>
+Date: Fri, 7 Oct 2016 09:16:22 +0200
+User-Agent: PyMail (Python SMTP class)
+MIME-Version: 1.0
+In-Reply-To: <CABqVa3_DLxBGpK_9ha_HYnW8EQUqU6X6L3RY3P-R9CeViHML1w@mail.gmail.com>
+Content-Type: multipart/signed; protocol="application/pkcs7-signature"; micalg=sha-512; boundary="------------ms090506050602070904030404"
+
+This is a cryptographically signed message in MIME format.
+
+--------------ms090506050602070904030404
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+On 10/07/2016 05:51 AM, Kurt Seifried wrote:
+> Hi, I need to confirm that you have accepted the
+> MITRE Terms of Use for CVE, available at:
+>=20
+> https://github.com/distributedweaknessfiling/DWF-Database/blob/master/T=
+ermsOfUse.md
+> <https://github.com/distributedweaknessfiling/DWF-Database/blob/master/=
+TermsOfUse.md>
+>=20
+> and quoted below, please reply with "I accept" and I'll be able to
+> process your CVE request. Thanks!
+>=20
+> Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common Vulnerabilities=
+
+> and Exposures (CVE=C2=AE), you hereby grant to The MITRE Corporation (M=
+ITRE)
+> and all CVE Numbering Authorities (CNAs) a perpetual, worldwide,
+> non-exclusive, no-charge, royalty-free, irrevocable copyright license t=
+o
+> reproduce, prepare derivative works of, publicly display, publicly
+> perform, sublicense, and distribute such materials and derivative works=
+=2E
+> Unless required by applicable law or agreed to in writing, you provide
+> such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF=
+
+> ANY KIND, either express or implied, including, without limitation, any=
+
+> warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, o=
+r
+> FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide,
+> non-exclusive, no-charge, royalty-free, irrevocable copyright license t=
+o
+> reproduce, prepare derivative works of, publicly display, publicly
+> perform, sublicense, and distribute Common Vulnerabilities and Exposure=
+s
+> (CVE=C2=AE). Any copy you make for such purposes is authorized provided=
+ that
+> you reproduce MITRE's copyright designation and this license in any suc=
+h
+> copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE
+> ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION
+> HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION,
+> ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL
+> WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY
+> WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY
+> RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A
+> PARTICULAR PURPOSE.
+>=20
+> UUID('a5bf2f9d-86b2-4df7-9fc9-c114e527b392')
+>=20
+>=20
+> --=20
+> Kurt Seifried
+> kurt@seifried.org <mailto:kurt@seifried.org>
+
+--=20
+Timo Schmid
+
+ERNW GmbH, Carl-Bosch-Str. 4, 69115 Heidelberg  -  www.ernw.de
+Tel. +49 6221 48039-0 (HQ) - Fax +49 6221 419008 - Cell +49 151 16227192
+PGP-FP F436 A5DE D817 E5A6 AFA0 A0A5 E04E 7BA1 EBDF B848
+
+Handelsregister Mannheim: HRB 337135
+Geschaeftsfuehrer: Enno Rey
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+|| Blog: www.insinuator.net | | Conference: www.troopers.de ||
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+
+--------------ms090506050602070904030404
+Content-Type: application/pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+Content-Description: S/MIME Cryptographic Signature
+
+MIAGCSqGSIb3DQEHAqCAMIACAQExDzANBglghkgBZQMEAgMFADCABgkqhkiG9w0BBwEAAKCC
+C9cwggXiMIIDyqADAgECAhBrp4p9CteI1lEK+Vnk57ThMA0GCSqGSIb3DQEBCwUAMH0xCzAJ
+BgNVBAYTAklMMRYwFAYDVQQKEw1TdGFydENvbSBMdGQuMSswKQYDVQQLEyJTZWN1cmUgRGln
+aXRhbCBDZXJ0aWZpY2F0ZSBTaWduaW5nMSkwJwYDVQQDEyBTdGFydENvbSBDZXJ0aWZpY2F0
+aW9uIEF1dGhvcml0eTAeFw0xNTEyMTYwMTAwMDVaFw0zMDEyMTYwMTAwMDVaMHUxCzAJBgNV
+BAYTAklMMRYwFAYDVQQKEw1TdGFydENvbSBMdGQuMSkwJwYDVQQLEyBTdGFydENvbSBDZXJ0
+aWZpY2F0aW9uIEF1dGhvcml0eTEjMCEGA1UEAxMaU3RhcnRDb20gQ2xhc3MgMSBDbGllbnQg
+Q0EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC9fdr3w6J9g/Zbgv3bW1+uHht1
+wLUZr5gkrLtXedg17AkefMyUGwrQdvwObhajcVmnKVxhrUwkZPXRAwZZosRHfEIi5FH7x6SV
+/8Sp5lZEuiMnvMFG2MzLA84J6Ws5T4NfXZ0qn4TPgnr3X2vPVS51M7Ua9nIJgn8jvTra4eyy
+QzxvuA/GZwKg7VQfDCmCS+kICslYYWgXOMt2xlsSslxLce0CGWRsT8EpMyt1iDflSjXZIsE7
+m1uTyHaKZspMLyIyz6mySu8j8BWWHpChNNeTrFuhVfrOAyDPFJVUvKZCLKBhibTLloyy+Lat
+oWELrjdI4a8StZY8+dIR9t4APXGzAgMBAAGjggFkMIIBYDAOBgNVHQ8BAf8EBAMCAQYwHQYD
+VR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMEMBIGA1UdEwEB/wQIMAYBAf8CAQAwMgYDVR0f
+BCswKTAnoCWgI4YhaHR0cDovL2NybC5zdGFydHNzbC5jb20vc2ZzY2EuY3JsMGYGCCsGAQUF
+BwEBBFowWDAkBggrBgEFBQcwAYYYaHR0cDovL29jc3Auc3RhcnRzc2wuY29tMDAGCCsGAQUF
+BzAChiRodHRwOi8vYWlhLnN0YXJ0c3NsLmNvbS9jZXJ0cy9jYS5jcnQwHQYDVR0OBBYEFCSB
+bDlhvkkPj7cbRivJKLUnSG1oMB8GA1UdIwQYMBaAFE4L7xqkQFulF2mHMMo0aEPQQa7yMD8G
+A1UdIAQ4MDYwNAYEVR0gADAsMCoGCCsGAQUFBwIBFh5odHRwOi8vd3d3LnN0YXJ0c3NsLmNv
+bS9wb2xpY3kwDQYJKoZIhvcNAQELBQADggIBAIvj94fsAYuErQ8BAluc4SMnIwS9NPBwAm5S
+H9uh2NCXTq7im61g7F1LIiNI/+wq37fUuaMbz4g7VarKQTgf8ubs0p7NZWcIe7Bvem2AWaXB
+sxsaRTYw5kG3DN8pd1hSEUuFoTa7DmNeFe8tiK1BrL3rbA/m48jp4AiFXgvxprJrW7izsyet
+OrRHPbkW4Y07v29MdhaPv3u1JELyszXqOzjIYo4sWlC8iDQXwgSW/ntvWy2n4LuiaozlCfXl
+149tKeqvwlvrla2Yklue/quWp9j9ou4T/OY0CXMuY+B8wNK0ohd2D4ShgFlMSjzAFRoHGKF8
+1snTr2d1A7Ew02oF6UQyCkC2aNNsK5cWOojBar5c7HplX9aHYUCZouxIeU28SONJAxnATgR4
+cJ2jrpmYSz/kliUJ46S6UpVDo/ebn9c6PaM/XtDYCCaM/7XX6wc3s++sbQ7CtCn1Ax7df6uf
+QbwyO0V+oFa9H0KAsjHMzcwk3EV2B2NLatidKE/m7G+rB9m+FlVgIiSp0mGlg43QO9Kh1+Jq
+vTCIzv2bJJkmPMLQJNuKKwHNL8F4GGp6jbAV+WL+LDeGfVcq8DHS3LrD+xyYEXQBiqZEdiPV
+OMxLDSUCXsDO0uCWpaNQ8j6y6S9p0xE/Ga0peVLadVHhqf9nXqKaxnr358VgfrxzUIrvOaOj
+MIIF7TCCBNWgAwIBAgIQXMlLVcWj43ABFQD0ovy2MjANBgkqhkiG9w0BAQsFADB1MQswCQYD
+VQQGEwJJTDEWMBQGA1UEChMNU3RhcnRDb20gTHRkLjEpMCcGA1UECxMgU3RhcnRDb20gQ2Vy
+dGlmaWNhdGlvbiBBdXRob3JpdHkxIzAhBgNVBAMTGlN0YXJ0Q29tIENsYXNzIDEgQ2xpZW50
+IENBMB4XDTE2MDIxODA3NTUwNVoXDTE3MDIxODA3NTUwNVowOjEYMBYGA1UEAwwPdHNjaG1p
+ZEBlcm53LmRlMR4wHAYJKoZIhvcNAQkBFg90c2NobWlkQGVybncuZGUwggIiMA0GCSqGSIb3
+DQEBAQUAA4ICDwAwggIKAoICAQDIGwA3P1Tw90B6lyyUTKWeJQ5pEBEBtXiCHax4RWBOtF1A
+lAdd+V8Rayx6wncDV9Q6QtBt4GCjH7Ym7xTA05nET7qgoVyosJhG10EgkwaFYmPBH2sL+q9M
+M2hxMq1ykp9A8932+NAFznSs9gaFbOKcCDVTmhA2DEjK6E3vEgAT8cgl0JF4xlEdK/demQYI
+FT4/RDjDFUeWfRkmGn2QA7o3ejsmjNRApGIi+6+AisxfilrT0eZFvrhyjjp4kPHt0sU4/Joo
+VP3daiPjOyA0FssmEJg+4v/h8PNPfVgTYQ8OPYN+8NVmuaaBRu0uVqeO5CQlEqhn3wy71Ns+
+gO4zkuVrLoeRX3229lF2E3vC7myJwjCvwEh9WX5ZjW8FrZHWBGwHK6IrgSzAjb52IDzZg+bR
+9xYKstFrMER8lhO3xILF6Mfg/NABwj3W7bkYtwmy0Or0MEcotHO3Gi9iu+DZlYf05Rtf4lTi
+VTQy+Pot63tP/HjHpXNlC/dhm17O3fAdW95stIqov7dBRr32LsUKDztZJ8/6EVAODMRhjIxq
+UNOg+EBQ+nQengEn/ov5AkMJzhSOpT3SWrQgiVTDNFoxc3hXPYibIXdhu/cpxetsMDKWHiyN
+W0ua7CWC44TKRI4DoJd/cn6IOOPqJCR+zAXvoOX2ra9OPq++Wu1qnhQK4mVuQQIDAQABo4IB
+sjCCAa4wDgYDVR0PAQH/BAQDAgSwMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDAJ
+BgNVHRMEAjAAMB0GA1UdDgQWBBTpXDTv9PpkTbtgV3eiRWb19wpNCzAfBgNVHSMEGDAWgBQk
+gWw5Yb5JD4+3G0YrySi1J0htaDBvBggrBgEFBQcBAQRjMGEwJAYIKwYBBQUHMAGGGGh0dHA6
+Ly9vY3NwLnN0YXJ0c3NsLmNvbTA5BggrBgEFBQcwAoYtaHR0cDovL2FpYS5zdGFydHNzbC5j
+b20vY2VydHMvc2NhLmNsaWVudDEuY3J0MDgGA1UdHwQxMC8wLaAroCmGJ2h0dHA6Ly9jcmwu
+c3RhcnRzc2wuY29tL3NjYS1jbGllbnQxLmNybDAaBgNVHREEEzARgQ90c2NobWlkQGVybncu
+ZGUwIwYDVR0SBBwwGoYYaHR0cDovL3d3dy5zdGFydHNzbC5jb20vMEYGA1UdIAQ/MD0wOwYL
+KwYBBAGBtTcBAgQwLDAqBggrBgEFBQcCARYeaHR0cDovL3d3dy5zdGFydHNzbC5jb20vcG9s
+aWN5MA0GCSqGSIb3DQEBCwUAA4IBAQCdj/sJ/f1IgNJiGkGDWuYwRLUuxG9SeMBEuQkAIjZ/
+zGvbMZHvOZPQeV46wlPoS5hh2IWlTZ0+1M2KD2Fv6fFSYl9ByoiP58KqgvL1a0ZV9MZNG6WH
+hWHqKWw6JKsf7CSrCmt/M5t6R+qXdoJXyp6RE3mLey6YUe/mp3bvPx9XmNauTahGmP5jUMnS
+cDIM5dEcb2dLUtiMfWFdmjIJd4AYJRwNWjn+WA0c+zF7jyP7jM81WuwX7uQ7QnMaFFWnWaL5
+0IGJhiSCrkW+h5ZnZjzmTdbEJpo0NnQkG0H/2v8pINQPvw703v82m9A+xcun2LrM0BfhURD8
+0tV4Ch/HHnTcMYIE7DCCBOgCAQEwgYkwdTELMAkGA1UEBhMCSUwxFjAUBgNVBAoTDVN0YXJ0
+Q29tIEx0ZC4xKTAnBgNVBAsTIFN0YXJ0Q29tIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MSMw
+IQYDVQQDExpTdGFydENvbSBDbGFzcyAxIENsaWVudCBDQQIQXMlLVcWj43ABFQD0ovy2MjAN
+BglghkgBZQMEAgMFAKCCAjMwGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0B
+CQUxDxcNMTYxMDA3MDcxNjIyWjBPBgkqhkiG9w0BCQQxQgRAaNC97lTqnRL6cE/9fcTdTNXm
+K8hYlkSOoEWMYBJijFtFHzxdxTqyjt6f8vi7acl+M0ADO7rwkRndup6TFWisMDBsBgkqhkiG
+9w0BCQ8xXzBdMAsGCWCGSAFlAwQBKjALBglghkgBZQMEAQIwCgYIKoZIhvcNAwcwDgYIKoZI
+hvcNAwICAgCAMA0GCCqGSIb3DQMCAgFAMAcGBSsOAwIHMA0GCCqGSIb3DQMCAgEoMIGaBgkr
+BgEEAYI3EAQxgYwwgYkwdTELMAkGA1UEBhMCSUwxFjAUBgNVBAoTDVN0YXJ0Q29tIEx0ZC4x
+KTAnBgNVBAsTIFN0YXJ0Q29tIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MSMwIQYDVQQDExpT
+dGFydENvbSBDbGFzcyAxIENsaWVudCBDQQIQXMlLVcWj43ABFQD0ovy2MjCBnAYLKoZIhvcN
+AQkQAgsxgYyggYkwdTELMAkGA1UEBhMCSUwxFjAUBgNVBAoTDVN0YXJ0Q29tIEx0ZC4xKTAn
+BgNVBAsTIFN0YXJ0Q29tIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MSMwIQYDVQQDExpTdGFy
+dENvbSBDbGFzcyAxIENsaWVudCBDQQIQXMlLVcWj43ABFQD0ovy2MjANBgkqhkiG9w0BAQEF
+AASCAgBi9dSasAyDXk2ule+ab+lQl2Z0g9WJLtNnTlnxl+9X0juZTjOJUXpbB5N88sjQ2hXf
+0uSGcxAqHU5PMmCKBpIV0j+VFW4/7bQIxhjd9mCSJg9W/C142xaa6IOZD11EVrhcEGvnGXNd
+mZVnluImix8I+JoRhCATepIRk0mHJacnMUXy3JyNsy1i2FSwCVZKcSElmbGACiu8PegXma5e
+9unH0LcwpSJ8eoumpoiW9GtAcDTOyWR8AgOXkLvChoG5nLqop08L7MNLUQA8lAR3q8SVggOH
+CFdzOGf/chp4XrdvgEqvBlNeD631pAIQ+nV0HgNKZYwO++YFQtQX7+d1Q8L1eKnfTKVXCQW4
+BoHkpffjQtyMcVa5FnSvTmxARfeRfp0mfVEAxXiLrRQ7xEYBHVDBjQZ9xj9p2i/dajbfcLgD
+xYe+Gmwyoo4osEd2YLZ87Ja+r2f1XFnf+Bh+V7/mNClJhqVyw+axb3Dqcmp2UELtkdOOKOHa
+2swEOl5lBGVN64J0qEW+8sVYoFsxk7bHU52jW8BYziGtOhaENlW0T5z6ir0ZvG3z4+0OI4tF
+xHW6Zg7camc/mVZwe+9WEcUC0LdldfIw/8tDWMkd+H8qYdHPT1iaRZTtImc1MtoSj/Tkv+/1
+AlMJUfRTpRb5EVqznshjBR7KHdpF7VO2+yy8LCbbtgAAAAAAAA==
+--------------ms090506050602070904030404--

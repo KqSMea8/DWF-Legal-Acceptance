@@ -1,0 +1,205 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.3.232 with SMTP id 95csp2137572uau;
+        Sun, 9 Jul 2017 01:17:54 -0700 (PDT)
+X-Received: by 10.223.182.170 with SMTP id j42mr4984780wre.87.1499588273939;
+        Sun, 09 Jul 2017 01:17:53 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1499588273; cv=none;
+        d=google.com; s=arc-20160816;
+        b=DWvX6lvsLPDSoZ/bvfQ0IRFD1HGxLY8d6c2P9ys3oi6CdTSF5WLrGaLNQfCk5cpJOA
+         0gjtR+mkQ2ISz4OYs8FdYDqZE1hIgCZ8Ruakt5BfJWQoZGOIrUT13DsainXz9VufkSj0
+         jPo/xT3gfqraMR/aiy2PCj1Rap/LhBARJ+C1UTJGqqe8irt7LIWUIKPX95Gy3VNP+hPA
+         400w8Xd8aRbym8g926MyA/LhgWzw4vFhQCLwq6/zcCAbmy7/GWHU6m0LfBqEoQ4AULrf
+         4T+go/R58MNX3w1ThKC71ZOdxLI1f1rgNBH3pqLMuwwYCitTNLHJNOwmo0e9ihXZLbkm
+         3+oA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:references:message-id:date:in-reply-to:from:subject:mime-version
+         :dkim-signature:arc-authentication-results;
+        bh=USZVi09ylPvpivtocuyrWJvnnyhZRvEWL/HgyWNXVUk=;
+        b=pN2ejXyuNl6XuxdElUP0tLlCt9qaIZSk0KnWigBkdky06z41o485yCYqY3NXtFfZ82
+         R1f8zmHyCqZSXTS/vA5lG9P2upK9zFYsjYd4yOiHRAlRUKh99LF2SsPTxJXbMK8dseZW
+         szT+kSRLJ1AiEVY3JAHzZPxCfHKLNMYYyJrbTLUidUcOiRExIayjY3i3CtuLuqmNa3mQ
+         u2ruO5QQddLXYzvyLOoaP/H+l3aSwbZQb0eK7jYuNBTJjmDEOR/e9l0U+1qEeOD+JqPe
+         AOX16uJF9tPpkqhxecMmwoc9wwt0yMuKXL/n149Q7iCGhc8p6YSQwi0zr+ltu5DYj8Ed
+         YLhg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@openproject-com.20150623.gappssmtp.com header.b=0Zfpxlc7;
+       spf=softfail (google.com: domain of transitioning o.guenther@openproject.com does not designate 2a00:1450:400c:c0c::230 as permitted sender) smtp.mailfrom=o.guenther@openproject.com
+Return-Path: <o.guenther@openproject.com>
+Received: from mail-wr0-x230.google.com (mail-wr0-x230.google.com. [2a00:1450:400c:c0c::230])
+        by mx.google.com with ESMTPS id k10si5698161wrc.86.2017.07.09.01.17.53
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 09 Jul 2017 01:17:53 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning o.guenther@openproject.com does not designate 2a00:1450:400c:c0c::230 as permitted sender) client-ip=2a00:1450:400c:c0c::230;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@openproject-com.20150623.gappssmtp.com header.b=0Zfpxlc7;
+       spf=softfail (google.com: domain of transitioning o.guenther@openproject.com does not designate 2a00:1450:400c:c0c::230 as permitted sender) smtp.mailfrom=o.guenther@openproject.com
+Received: by mail-wr0-x230.google.com with SMTP id 77so98968233wrb.1
+        for <kurt@seifried.org>; Sun, 09 Jul 2017 01:17:53 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=openproject-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:subject:from:in-reply-to:date:message-id:references:to;
+        bh=USZVi09ylPvpivtocuyrWJvnnyhZRvEWL/HgyWNXVUk=;
+        b=0Zfpxlc7Pg9vnzpnBOF5pchTqHSVKmgfUpb3xDVNO3GOYL/Oxx2yhQGMQ6ci/LFgl6
+         5/GLTpERvaw2WRpc178Amptt4n9SpE6UZ7cs2H7o0qN21oNM8E+AwScXAG8RTzX8rgKZ
+         Sv2qwjnr/Zwy4uYfXjEvIMfr1gKdFVGa6fJanGYcg6dHjFlJ5D8XBaJFftFIna3jGN0R
+         EfLvqnN9uAZ+6cF5/YDY1qKIbnPSWI69jcwNcbSzYS+aiQ32xiif9KmFht7OcNcFIer6
+         pLahg4kI5H9/iGP2GwPEz2GJRn19TCQ0xGxZ84SylToqTjDhBcwSnsIF2f/OZAGAR2vr
+         be8A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:subject:from:in-reply-to:date
+         :message-id:references:to;
+        bh=USZVi09ylPvpivtocuyrWJvnnyhZRvEWL/HgyWNXVUk=;
+        b=Okv4uC51J6xIdpd/Qp9HqMb7waQEUtxZCuw6vvg7LW7kcjCzKTHPaT0T6GP2e4naKj
+         fxeuA2HnlfcrG7un6wK39UX3ja+kNOzA3GZWQ+TzIM33xjonlhUDQVVUztIChng7H3gX
+         5YpxXJ9dzx4rRDujhk70EWyhdU2VpNIeRqZIJg3qBe7LAU50TYU1JCw7BnpN/nMwlfNv
+         cMUKDimnEb5RkH/gOfKXBDstUN0IKxu10U6BnKYwBIjwgcYe6CUUXdAaioUmWXXD+dun
+         jkQgomtbDTddqBca/fh2/MSCUvQyuOwFwp9Ol+ZZDTYJ0N1n4PP5zSx/bBWJwczGP7+3
+         OeSQ==
+X-Gm-Message-State: AIVw113bCv/vXGgBv6bXFrKFzEoT5Zqrhm7Sz3vbCUe6Vt/s+X+bqaea
+	19j2kFTh4PWai6CFphix9Q==
+X-Received: by 10.223.176.164 with SMTP id i33mr4458055wra.165.1499588273154;
+        Sun, 09 Jul 2017 01:17:53 -0700 (PDT)
+Return-Path: <o.guenther@openproject.com>
+Received: from ?IPv6:2a02:908:2610:5ac0:210b:d3d0:ff05:acc8? ([2a02:908:2610:5ac0:210b:d3d0:ff05:acc8])
+        by smtp.gmail.com with ESMTPSA id u18sm5105575wrc.14.2017.07.09.01.17.51
+        for <kurt@seifried.org>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Sun, 09 Jul 2017 01:17:51 -0700 (PDT)
+Content-Type: multipart/signed; boundary="Apple-Mail=_FE5AAF9D-9AE8-4E10-B2B5-C29747630D06"; protocol="application/pgp-signature"; micalg=pgp-sha256
+Mime-Version: 1.0 (Mac OS X Mail 9.3 \(3124\))
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for security@openproject.org
+X-Pgp-Agent: GPGMail
+From: =?utf-8?Q?Oliver_G=C3=BCnther?= <o.guenther@openproject.com>
+In-Reply-To: <20170709032341.2470.3576@shiny-2.local>
+Date: Sun, 9 Jul 2017 10:17:49 +0200
+Message-Id: <C4F650EB-C3D9-4428-A679-6EF21F9106A0@openproject.com>
+References: <20170709032341.2470.3576@shiny-2.local>
+To: kurt@seifried.org
+X-Mailer: Apple Mail (2.3124)
+
+
+--Apple-Mail=_FE5AAF9D-9AE8-4E10-B2B5-C29747630D06
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+I accept
+
+
+Oliver G=C3=BCnther, M.Sc.
+Software Engineer
+
+OpenProject GmbH
+Karl-Liebknecht-Str. 5
+10178 Berlin
+
+E: o.guenther@openproject.com
+T: +49 30 34655673
+I: www.openproject.com
+
+
+Sitz OpenProject GmbH: Berlin, Amtsgericht Berlin-Charlottenburg, HRB =
+117935
+Gesch=C3=A4ftsf=C3=BChrer: Niels Lindenthal
+UStID DE 211309779
+
+> Am 09.07.2017 um 05:23 schrieb kurt@seifried.org:
+>=20
+> This is a confirmation email sent from CVE request form at =
+https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use =
+(assuming you filled out the CVE form and want one, we can't use the =
+data until you accept the MITRE CVE Terms of Use).
+>=20
+> Simply quote the email and reply with "I accept" at the top if you =
+agree to the MITRE CVE Terms of Use and we will add a copy of the email =
+to the DWF MITRE CVE Terms of Use acceptance data at =
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/mas=
+ter/Terms-Of-Use
+>=20
+> The reason we use a complete copy of the email is that it provides an =
+artifact showing that the email address accepted the Terms of Use, when =
+they were accepted and so on.
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore =
+this message, however we may resend it at some point in the future, if =
+you don't want any future emails simply reply with "unsubscribe" or =
+"DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to =
+the block list so we don't spam you with these, please note that this =
+will prevent you from being able to accept the MITRE CVE Terms of Use =
+via the DWF automatically in future (you'll have to manually ask). But =
+again, if you have no idea what a CVE is then you can ignore this/ask to =
+be added to the block list with no problems.
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common =
+Vulnerabilities and Exposures (CVE=C2=AE), you hereby grant to The MITRE =
+Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a =
+perpetual, worldwide, non-exclusive, no-charge, royalty-free, =
+irrevocable copyright license to reproduce, prepare derivative works of, =
+publicly display, publicly perform, sublicense, and distribute such =
+materials and derivative works. Unless required by applicable law or =
+agreed to in writing, you provide such materials on an "AS IS" BASIS, =
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, =
+including, without limitation, any warranties or conditions of TITLE, =
+NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, =
+non-exclusive, no-charge, royalty-free, irrevocable copyright license to =
+reproduce, prepare derivative works of, publicly display, publicly =
+perform, sublicense, and distribute Common Vulnerabilities and Exposures =
+(CVE=C2=AE). Any copy you make for such purposes is authorized provided =
+that you reproduce MITRE's copyright designation and this license in any =
+such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE =
+ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION =
+HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, =
+ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL =
+WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY =
+WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY =
+RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A =
+PARTICULAR PURPOSE.
+>=20
+> A copy is available at =
+https://github.com/distributedweaknessfiling/DWF-Database/blob/master/Term=
+sOfUse.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org =
+manually with your question/concerns/etc.
+>=20
+
+
+--Apple-Mail=_FE5AAF9D-9AE8-4E10-B2B5-C29747630D06
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+	filename=signature.asc
+Content-Type: application/pgp-signature;
+	name=signature.asc
+Content-Description: Message signed with OpenPGP using GPGMail
+
+-----BEGIN PGP SIGNATURE-----
+Comment: GPGTools - http://gpgtools.org
+
+iQIcBAEBCAAGBQJZYeatAAoJEA1QBFo2n8AO/uMP/3Ym4vb2366t+1jAOrVko/GG
+rIXa3itNjKIqq+BlvnLdEBRWK1lh6x6y4mW5MqCXHqWWh5eiM2ER4Tz9GbV9ElRm
+Gv5cSFMti/PyrzSGaiih/yZ4G/A5QnvxD47DKYt+yYRNXfP0SsmiZ/DHmgNbtArg
+Dl0SkxqRI6ozxgvWOqDdo7dIIyH+53WdszntizKbDSjadcAba+BxONIFjNHWlqo4
+FUGfN17Kh8T9A+sqatKT3G219gJy1LShMBeKKf82mx8MXSISxtBw6taeoaAzIHPi
+S9w+8H1ZHpNafRLf+RCLzpFYI5KSC3ZGgTYKD+V3NvTT9ygXc3hIMGLrD7hCTYTi
++KcgIculbes7xANKY5BTlaCe5IwnuwB0jnLGXymXj5viD1twluFUOKNH9LJ3Wd4l
+c2ezQZa4RlLgwa568wth7MfBpG9/wfD2tUUkF6pum7iRASJWZtFHWDA0T3D9Uwy1
+iygqVOIdFelS0q5k5Yf6lbTNkWsFB/d8Ov/qyCCBWZfiKpyV5bfMit+atBVJn/6j
+I1tkDNMPlT3TilKqKjSnX2eDzvNLNpM4+ByttIJxQKUlycTdTDY6UhVYCXQKOhyz
+HiU3EZpmluBMIHFWWF+ihm9WW3Cgd8VwFHfgkQyF1tu6YXON84qeEcJlwqkrJlM5
+kphV4jf0kOhcnm8+FItW
+=OQfC
+-----END PGP SIGNATURE-----
+
+--Apple-Mail=_FE5AAF9D-9AE8-4E10-B2B5-C29747630D06--

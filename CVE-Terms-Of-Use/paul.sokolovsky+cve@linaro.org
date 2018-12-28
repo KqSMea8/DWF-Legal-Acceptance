@@ -1,0 +1,175 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.153.144 with SMTP id a16csp2519290ivh;
+        Thu, 8 Feb 2018 07:56:30 -0800 (PST)
+X-Received: by 10.46.16.210 with SMTP id 79mr803252ljq.119.1518105390136;
+        Thu, 08 Feb 2018 07:56:30 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1518105390; cv=none;
+        d=google.com; s=arc-20160816;
+        b=c56FM53I1KEvTrsQh84CXM66yaMOSWR45qwmzk8vD3wfUlvKa07ggCjXfQbZs1AQou
+         NjqE6U5kIsy/KEIZ50JycCQWS6VEZ9zRzE3NHag/f/RdX87nhLMB/bKjti56+BeRufKR
+         Tgk0zHGukAOu1TaqAGWl3Z/5jicjqcLT4mC8Qw5PaADkYBQbyJ87V6QXFoPxMf/EFo2l
+         0JDE78iPSJsaHFGZbrZbfnj0NZCUr9oyMypQ+ngaajXYRU/B0/R1ZgmHnHw8qR9cupUn
+         e+MdGAQ/ztyMnUl2B251Zmj8R9jzj4h8Z5GuiuFhnUj5KVdzk75g/ixkPWiRhkaV0WP1
+         ZQ4Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:organization:references
+         :in-reply-to:message-id:subject:to:date:from:dkim-signature
+         :arc-authentication-results;
+        bh=LJi4RpqCJcw30nztE3KkdwHeC2tjcnFycUOXZlZ/BaY=;
+        b=Twn3vVASRlf6RHz7kuUyqgKaRM5yu/9yKgUwddP/Anz8TH/z+chpm3gm+6cFYeyf+m
+         gkMuyNf+tLqstym7/9kBzkHvhnFuhqtZvDL0CgRObzNZ7KCZSy6fMKdICDnc6acyDDPR
+         +6MDZwFmyVuAqtt9raE5zvF0rfMeLbliYlCJF5eeAqLQYDIVPVB1dQN4tCrbe8YZN+7A
+         rQ1Z58s2gtINMXResbgmhueDpdQRjnlK6gFq4hm+dPppL+PCl+v+eIqGOzrLcqfLVWzh
+         qlfsO8D69r87Dy5jT1jLJBlN6tzkAKZt9oX6jpwqy/INJwaOMZmzGFvlLoCQg9Y0PcIv
+         At0w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@linaro.org header.s=google header.b=FlSuN/cn;
+       spf=pass (google.com: domain of paul.sokolovsky@linaro.org designates 209.85.220.41 as permitted sender) smtp.mailfrom=paul.sokolovsky@linaro.org;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=linaro.org
+Return-Path: <paul.sokolovsky@linaro.org>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id p73sor77546ljp.52.2018.02.08.07.56.29
+        for <kurt@seifried.org>
+        (Google Transport Security);
+        Thu, 08 Feb 2018 07:56:29 -0800 (PST)
+Received-SPF: pass (google.com: domain of paul.sokolovsky@linaro.org designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@linaro.org header.s=google header.b=FlSuN/cn;
+       spf=pass (google.com: domain of paul.sokolovsky@linaro.org designates 209.85.220.41 as permitted sender) smtp.mailfrom=paul.sokolovsky@linaro.org;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=linaro.org
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=linaro.org; s=google;
+        h=from:date:to:subject:message-id:in-reply-to:references:organization
+         :mime-version:content-transfer-encoding;
+        bh=LJi4RpqCJcw30nztE3KkdwHeC2tjcnFycUOXZlZ/BaY=;
+        b=FlSuN/cnQTUzPHhPyywtTGOh4kOCQdAN+XXYhEiF8pIJR76cUjfhtbwhko0Sm34Pze
+         /l2Qf22MeBoOA9VFamKcKNWXUlLE9NIeNulgEBk2NZ8QGFbWQt6D6oQ1GiXP2Gu++0Xw
+         9Tr8LDOZY81XkMkZOWXgKoo8QBP8cHaTfT4L0=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:date:to:subject:message-id:in-reply-to
+         :references:organization:mime-version:content-transfer-encoding;
+        bh=LJi4RpqCJcw30nztE3KkdwHeC2tjcnFycUOXZlZ/BaY=;
+        b=pkLi6xfULBuIRjnBkgsxxzT7dl84dutg8VCGzwH4P9IidBW19P2Fwe+wsSIF3aJPLQ
+         3DTiipj4sgg2aJaZeUn4J/jR9vPe8dNw0dgMBV72DyrLvlG2LLUJMuTov0cktMnVSQs0
+         MhVB474DQbgCN/iTFd3vDA/TufX8KxvMw/aFNAweEGbNViifaZ8AAbCeOBpA2qpv1dJb
+         WZ3n3/KgCwB9B0eNDq2/2PXAt5WOOcrgU/LPP4Jhls0sk275x1RmTNHQhmlPCKYnV2Az
+         MCj3gu3Lj8LDTDUk1tnZnskd6fQSJ+DOw0V20mOGs2zR+TX7xCT7mG4ADrMIwz4JqOm3
+         dITg==
+X-Gm-Message-State: APf1xPBVo/UIjWIavBQwieflZMd4fEjOYtPLgcXtWtYe2JayZcrP0u6B
+	UchjtuZOWoYt6x5aZK0aFGVD1NhlpYs=
+X-Google-Smtp-Source: AH8x2246ihcEI3AZvYN7Q8pSnlyXa3dN4g9nVIBhuk9IDki0NN9OnCzyopTUfXO8RzILnVCUOzeWwA==
+X-Received: by 10.46.47.13 with SMTP id v13mr794504ljv.15.1518105389275;
+        Thu, 08 Feb 2018 07:56:29 -0800 (PST)
+Return-Path: <paul.sokolovsky@linaro.org>
+Received: from x230 ([91.225.122.14])
+        by smtp.gmail.com with ESMTPSA id n87sm48920ljb.3.2018.02.08.07.56.28
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 08 Feb 2018 07:56:29 -0800 (PST)
+From: Paul Sokolovsky <paul.sokolovsky@linaro.org>
+X-Google-Original-From: Paul Sokolovsky <Paul.Sokolovsky@linaro.org>
+Date: Thu, 8 Feb 2018 17:56:23 +0200
+To: kurt@seifried.org
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ paul.sokolovsky+cve@linaro.org
+Message-ID: <20180208175623.00525ba0@x230>
+In-Reply-To: <20180208153952.12562.14585@slab.local>
+References: <20180208153952.12562.14585@slab.local>
+Organization: Linaro
+X-Mailer: Claws Mail 3.14.1 (GTK+ 2.24.30; x86_64-pc-linux-gnu)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+
+P.S. I hope this mail goes to a human ;-). As CVE email gets public, I
+used plus form "+cve", in the hope to be able to control automated spam
+later. Thus, thus reply comes from pure "Paul.Sokolovsky@linaro.org"
+address. I still accept the terms with either email address. Thanks for
+understanding.
+
+
+On Thu, 08 Feb 2018 08:39:52 -0700
+kurt@seifried.org wrote:
+
+> This is a confirmation email sent from CVE request form at
+> https://iwantacve.org/ asking you to accept the MITRE CVE Terms of
+> Use (assuming you filled out the CVE form and want one, we can't use
+> the data until you accept the MITRE CVE Terms of Use).=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you
+> agree to the MITRE CVE Terms of Use and we will add a copy of the
+> email to the DWF MITRE CVE Terms of Use acceptance data at
+> https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/ma=
+ster/Terms-Of-Use
+>=20
+> The reason we use a complete copy of the email is that it provides an
+> artifact showing that the email address accepted the Terms of Use,
+> when they were accepted and so on.=20
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore
+> this message, however we may resend it at some point in the future,
+> if you don't want any future emails simply reply with "unsubscribe"
+> or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email
+> address to the block list so we don't spam you with these, please
+> note that this will prevent you from being able to accept the MITRE
+> CVE Terms of Use via the DWF automatically in future (you'll have to
+> manually ask). But again, if you have no idea what a CVE is then you
+> can ignore this/ask to be added to the block list with no problems.=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common
+> Vulnerabilities and Exposures (CVE=C2=AE), you hereby grant to The MITRE
+> Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a
+> perpetual, worldwide, non-exclusive, no-charge, royalty-free,
+> irrevocable copyright license to reproduce, prepare derivative works
+> of, publicly display, publicly perform, sublicense, and distribute
+> such materials and derivative works. Unless required by applicable
+> law or agreed to in writing, you provide such materials on an "AS IS"
+> BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+> or implied, including, without limitation, any warranties or
+> conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS
+> FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide,
+> non-exclusive, no-charge, royalty-free, irrevocable copyright license
+> to reproduce, prepare derivative works of, publicly display, publicly
+> perform, sublicense, and distribute Common Vulnerabilities and
+> Exposures (CVE=C2=AE). Any copy you make for such purposes is authorized
+> provided that you reproduce MITRE's copyright designation and this
+> license in any such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE
+> ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE
+> ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE
+> CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES,
+> DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+> LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL
+> NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY
+> OR FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> A copy is available at
+> https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/ma=
+ster/Terms-Of-Use.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org
+> manually with your question/concerns/etc.=20
+>=20
+
+
+
+--=20
+Best Regards,
+Paul
+
+Linaro.org | Open source software for ARM SoCs
+Follow Linaro: http://www.facebook.com/pages/Linaro
+http://twitter.com/#!/linaroorg - http://www.linaro.org/linaro-blog

@@ -1,0 +1,412 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.31.230.197 with SMTP id d188csp370277vkh;
+        Thu, 6 Oct 2016 05:53:46 -0700 (PDT)
+X-Received: by 10.28.170.73 with SMTP id t70mr23761128wme.32.1475758426054;
+        Thu, 06 Oct 2016 05:53:46 -0700 (PDT)
+Return-Path: <matthieu.chevrier@synhack.fr>
+Received: from mo64.mail-out.ovh.net (mo64.mail-out.ovh.net. [178.32.228.64])
+        by mx.google.com with ESMTP id w203si17383164wma.90.2016.10.06.05.53.45
+        for <kurt@seifried.org>;
+        Thu, 06 Oct 2016 05:53:45 -0700 (PDT)
+Received-SPF: pass (google.com: domain of matthieu.chevrier@synhack.fr designates 178.32.228.64 as permitted sender) client-ip=178.32.228.64;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of matthieu.chevrier@synhack.fr designates 178.32.228.64 as permitted sender) smtp.mailfrom=matthieu.chevrier@synhack.fr
+Received: from ex.mail.ovh.net (gw2.ex.mail.ovh.net [176.31.149.1])
+	by mo64.mail-out.ovh.net (Postfix) with SMTP id 66B25FF9D46
+	for <kurt@seifried.org>; Thu,  6 Oct 2016 14:53:42 +0200 (CEST)
+Subject: Re: CVE - Acceptance of MITRE Terms of Use for CVE
+To: Kurt Seifried <kurt@seifried.org>
+References: <CABqVa39=UVZWoPf_NkmDE-H0uZBuVvPVOMdVmktNJdOWhGZOqQ@mail.gmail.com>
+From: Matthieu CHEVRIER <matthieu.chevrier@synhack.fr>
+Message-ID: <7678ab8b-79aa-4fff-4dcb-bff1edb93cb3@synhack.fr>
+Date: Thu, 6 Oct 2016 14:53:39 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101
+ Thunderbird/45.3.0
+MIME-Version: 1.0
+In-Reply-To: <CABqVa39=UVZWoPf_NkmDE-H0uZBuVvPVOMdVmktNJdOWhGZOqQ@mail.gmail.com>
+Content-Type: multipart/alternative;
+	boundary="------------D64AFCB9A9C64D8E1177410F"
+X-Originating-IP: [90.22.118.37]
+X-ClientProxiedBy: CAS05.indiv.local (172.16.1.5) To EX24.indiv.local
+ (172.16.2.24)
+X-Ovh-Tracer-Id: 5285255638346555015
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: -100
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrfeelvddrfedvgdehhecutefuodetggdotefrodftvfcurfhrohhfihhlvgemucfqggfjnecuuegrihhlohhuthemuceftddtnecusecvtfgvtghiphhivghnthhsucdlqddutddtmd
+
+--------------D64AFCB9A9C64D8E1177410F
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Hi Kurt,
+
+I accept the ToU.
+
+
+On 05/10/2016 18:41, Kurt Seifried wrote:
+>
+> Hi, I need to confirm that you have accepted the
+> MITRE Terms of Use for CVE, available at:
+>
+> https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md
+> <https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md>
+>
+> and quoted below, please reply with "I accept" and I'll be able to
+> process your CVE request. Thanks!
+>
+> Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common
+> Vulnerabilities and Exposures (CVE®), you hereby grant to The MITRE
+> Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a
+> perpetual, worldwide, non-exclusive, no-charge, royalty-free,
+> irrevocable copyright license to reproduce, prepare derivative works
+> of, publicly display, publicly perform, sublicense, and distribute
+> such materials and derivative works. Unless required by applicable law
+> or agreed to in writing, you provide such materials on an "AS IS"
+> BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+> implied, including, without limitation, any warranties or conditions
+> of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+> PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide,
+> non-exclusive, no-charge, royalty-free, irrevocable copyright license
+> to reproduce, prepare derivative works of, publicly display, publicly
+> perform, sublicense, and distribute Common Vulnerabilities and
+> Exposures (CVE®). Any copy you make for such purposes is authorized
+> provided that you reproduce MITRE's copyright designation and this
+> license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE
+> ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION
+> HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION,
+> ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL
+> WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY
+> WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY
+> RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A
+> PARTICULAR PURPOSE.
+>
+>
+> -- 
+> Kurt Seifried
+> kurt@seifried.org <mailto:kurt@seifried.org>
+
+-- 
+
+*Matthieu CHEVRIER*
+CTIO & Co-Founder
+*SYNHACK*
+Et si on parlait de votre sécurité ?
+Mail : matthieu.chevrier@synhack.fr <mailto:matthieu.chevrier@synhack.fr>
+Tél : 09-67-53-63-76
+Port : 06-37-25-67-49
+www.synhack.fr <http://www.synhack.fr>
+
+
+shk-logo <http://www.synhack.fr>
+
+
+--------------D64AFCB9A9C64D8E1177410F
+Content-Type: multipart/related;
+	boundary="------------DAA2978A541BB3284279FE87"
+
+--------------DAA2978A541BB3284279FE87
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+    <p>Hi Kurt,</p>
+    <p>I accept the <span class="gmail-il">To</span><span
+        class="gmail-il">U.</span></p>
+    <br>
+    <div class="moz-cite-prefix">On 05/10/2016 18:41, Kurt Seifried
+      wrote:<br>
+    </div>
+    <blockquote
+cite="mid:CABqVa39=UVZWoPf_NkmDE-H0uZBuVvPVOMdVmktNJdOWhGZOqQ@mail.gmail.com"
+      type="cite">
+      <meta http-equiv="Context-Type" content="text/html; charset=UTF-8">
+      <div dir="ltr">
+        <p class="gmail-m_-323732369566349682gmail-p1"><span
+            class="gmail-m_-323732369566349682gmail-s1">Hi, I need to
+            confirm that you have accepted the MITRE <span
+              class="gmail-il">Terms</span> of <span class="gmail-il">Use</span> for <span
+              class="gmail-il">CVE</span>, available at:</span></p>
+        <p class="gmail-m_-323732369566349682gmail-p2"><a
+            moz-do-not-send="true"
+href="https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md"
+            target="_blank">https://github.com/<wbr>distributedweaknessfiling/DWF-<wbr>Database/blob/master/<wbr>TermsOfUse.md</a><br>
+          <span class="gmail-m_-323732369566349682gmail-s1"></span></p>
+        <p class="gmail-m_-323732369566349682gmail-p2">and quoted below,
+          please reply with "I accept" and I'll be able to process your <span
+            class="gmail-il">CVE</span> request. Thanks!<br>
+          <span class="gmail-m_-323732369566349682gmail-s1"></span></p>
+        <p class="gmail-m_-323732369566349682gmail-p2"><span
+            class="gmail-il">Terms</span> of <span class="gmail-il">Use</span><br>
+          <span class="gmail-m_-323732369566349682gmail-s1"></span></p>
+        <p class="gmail-m_-323732369566349682gmail-p2">LICENSE<br>
+          <span class="gmail-m_-323732369566349682gmail-s1"></span></p>
+        <p class="gmail-m_-323732369566349682gmail-p1"><span
+            class="gmail-m_-323732369566349682gmail-s1">Submissions: For
+            all materials you submit to the Common Vulnerabilities and
+            Exposures (<span class="gmail-il">CVE</span>®), you hereby
+            grant to The MITRE Corporation (MITRE) and all <span
+              class="gmail-il">CVE</span> Numbering Authorities (CNAs) a
+            perpetual, worldwide, non-exclusive, no-charge,
+            royalty-free, irrevocable copyright license to reproduce,
+            prepare derivative works of, publicly display, publicly
+            perform, sublicense, and distribute such materials and
+            derivative works. Unless required by applicable law or
+            agreed to in writing, you provide such materials on an "AS
+            IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+            either express or implied, including, without limitation,
+            any warranties or conditions of TITLE, NON-INFRINGEMENT,
+            MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.</span></p>
+        <p class="gmail-m_-323732369566349682gmail-p1"><span
+            class="gmail-m_-323732369566349682gmail-s1"><span
+              class="gmail-il">CVE</span> Usage: MITRE hereby grants you
+            a perpetual, worldwide, non-exclusive, no-charge,
+            royalty-free, irrevocable copyright license to reproduce,
+            prepare derivative works of, publicly display, publicly
+            perform, sublicense, and distribute Common Vulnerabilities
+            and Exposures (<span class="gmail-il">CVE</span>®). Any copy
+            you make for such purposes is authorized provided that you
+            reproduce MITRE's copyright designation and this license in
+            any such copy.</span></p>
+        <p class="gmail-m_-323732369566349682gmail-p2">DISCLAIMERS<br>
+          <span class="gmail-m_-323732369566349682gmail-s1"></span></p>
+        <p class="gmail-m_-323732369566349682gmail-p1"><span
+            class="gmail-m_-323732369566349682gmail-s1">ALL DOCUMENTS
+            AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE
+            PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE
+            ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY),
+            THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS,
+            AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR
+            IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE <span
+              class="gmail-il">USE</span> OF THE INFORMATION THEREIN
+            WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF
+            MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</span></p>
+        <div><br>
+        </div>
+        -- <br>
+        <div class="gmail_signature">Kurt Seifried<br>
+          <a moz-do-not-send="true" href="mailto:kurt@seifried.org"
+            target="_blank">kurt@seifried.org</a></div>
+      </div>
+    </blockquote>
+    <br>
+    <div class="moz-signature">-- <br>
+      <p> <span style="color:rgb(80,80,70)"> <strong>Matthieu CHEVRIER</strong><br>
+          CTIO &amp; Co-Founder<br>
+        </span> <span style="color:rgb(232,76,34)"> <strong>SYNHACK</strong><br>
+          Et si on parlait de votre sécurité ?<br>
+          Mail : <a href="mailto:matthieu.chevrier@synhack.fr">matthieu.chevrier@synhack.fr</a><br>
+          Tél : 09-67-53-63-76<br>
+          Port : 06-37-25-67-49<br>
+          <a href="http://www.synhack.fr">www.synhack.fr</a> </span>
+      </p>
+      <br>
+      <p><span style="color:rgb(232,76,34)"></span></p>
+      <p><a href="http://www.synhack.fr"><img style="-moz-user-select:
+            none;" alt="shk-logo"
+            src="cid:part5.FD1BEEA8.12FC0925@synhack.fr"></a></p>
+    </div>
+  </body>
+</html>
+
+--------------DAA2978A541BB3284279FE87
+Content-Type: image/png; name="shk-signature.png"
+Content-Transfer-Encoding: base64
+Content-ID: <part5.FD1BEEA8.12FC0925@synhack.fr>
+Content-Disposition: inline; filename="shk-signature.png"
+
+iVBORw0KGgoAAAANSUhEUgAAASwAAAA8CAYAAADc3IdaAAAAGXRFWHRTb2Z0d2FyZQBBZG9i
+ZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tl
+dCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1l
+dGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUu
+My1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpS
+REYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgt
+bnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8v
+bnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNv
+bS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEu
+MC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9w
+IENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkU3MUUwNDc5Q0JF
+MTFFNDhGOEZEOUI3RTc5MEUxOTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NkU3MUUw
+NDg5Q0JFMTFFNDhGOEZEOUI3RTc5MEUxOTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6
+aW5zdGFuY2VJRD0ieG1wLmlpZDo2RTcxRTA0NTlDQkUxMUU0OEY4RkQ5QjdFNzkwRTE5NyIg
+c3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2RTcxRTA0NjlDQkUxMUU0OEY4RkQ5QjdFNzkw
+RTE5NyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94
+cGFja2V0IGVuZD0iciI/Pg5F5xgAACIDSURBVHja7F0HnFTV1f+/92Zmd2dmK9tYWIpItQQ7
+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
+QmCC
+--------------DAA2978A541BB3284279FE87--
+
+--------------D64AFCB9A9C64D8E1177410F--

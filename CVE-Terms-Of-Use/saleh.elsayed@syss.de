@@ -1,0 +1,273 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:ac9:1c4b:0:0:0:0:0 with SMTP id x11-v6csp3468185ocg;
+        Mon, 15 Oct 2018 00:49:36 -0700 (PDT)
+X-Google-Smtp-Source: ACcGV61vCw5Vr70+wiCbb4d0KwkipMAdzL6HUhmrOW9+aF3W+wMXpIoZQxdFDU3Qh2zmFODElVUl
+X-Received: by 2002:adf:82e3:: with SMTP id 90-v6mr12813879wrc.131.1539589776270;
+        Mon, 15 Oct 2018 00:49:36 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1539589776; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ErKaWcdAeTjNJamylhqboTJ0XDQLWah3mpZeG9B1jHtXj7wo4739eXws17uatna1LT
+         DF1BaWJlFEmNGcCAgc3LHjnBf6vLk2e1KPAh5LDm13l8L+E+SIxGJJdgYVNJKGQw6eTi
+         1eOZojoHRS9raZvPiWC1eF66wVp5lHFkaQaDnqmQIB6ZX+Jifx0hLYPazst60Wa0SLHz
+         XRE+Dtg8m/cDb8C/bTEUUbLmLWmpUIl640vKXdKP3pvQSWjE/a6c3q2qAjJeS6vTfJfA
+         QC2XQCdkJ3vogX2wlRa6WRWhlc15WVSjEFgY9PgORIzBCxGFarU6+jS1BKDm9HdUCsMW
+         LZJA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=in-reply-to:mime-version:user-agent:date:message-id:autocrypt
+         :openpgp:from:references:to:subject;
+        bh=3ENTxvJREMWyiVFWovpj1bzsQ/WCI9mYZ7ELm9/JDrI=;
+        b=YDwMNid0e9Ax9UgpmJqhDU8101dX+95AG+ctAcT7nq1IdebRLw7SHurqoQyNFbzgdB
+         /fZXZ8Dnd4TMQBMf3CZ8a5y3fWccso53Ft+qVCgD0NBskwo0EW/kiH1GZUw490yz6IZt
+         FtBhi36R7iHqsQleQMwEuzcr2+WfB/04yep79LfPDCpNB0bCbBPPVodGwQykDGMVkDCQ
+         +RxfmPD3ZTglIUDFs5SohmFXhIh2AGJNUQSuRvp5T92TMSWjKJRTtX7Hrp7H3M4jK6Rm
+         A4NpdLIeq47MeSHAgmTvPUit1JSbeXKtHKkEO82vWXlPwMrCnCj5uA308hQPWgSvKWJq
+         2q5g==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of saleh.elsayed@syss.de designates 212.71.209.10 as permitted sender) smtp.mailfrom=saleh.elsayed@syss.de
+Return-Path: <saleh.elsayed@syss.de>
+Received: from comline1.syss.de (comline1.syss.de. [212.71.209.10])
+        by mx.google.com with ESMTPS id 188-v6si7178528wmk.174.2018.10.15.00.49.35
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 15 Oct 2018 00:49:36 -0700 (PDT)
+Received-SPF: pass (google.com: domain of saleh.elsayed@syss.de designates 212.71.209.10 as permitted sender) client-ip=212.71.209.10;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of saleh.elsayed@syss.de designates 212.71.209.10 as permitted sender) smtp.mailfrom=saleh.elsayed@syss.de
+Received: from lmail03-out.syss.admin ([10.101.1.207]:36405)
+	by comline1.syss.de with esmtp (Exim 4.82_1-5b7a7c0-XX)
+	(envelope-from <Saleh.Elsayed@syss.de>)
+	id 1gBxd7-0002CK-24
+	for kurt@seifried.org; Mon, 15 Oct 2018 09:49:33 +0200
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ saleh.elsayed@syss.de
+To: <kurt@seifried.org>
+References: <20181012153504.7847.13045@bigbox.local>
+From: Saleh Elsayed <saleh.elsayed@syss.de>
+Openpgp: preference=signencrypt
+Autocrypt: addr=saleh.elsayed@syss.de; prefer-encrypt=mutual; keydata=
+ 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 KA==
+Message-ID: <79d7bdef-78a7-f1d0-a898-56a85aef26a3@syss.de>
+Date: Mon, 15 Oct 2018 09:49:33 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101
+ Thunderbird/52.9.1
+MIME-Version: 1.0
+In-Reply-To: <20181012153504.7847.13045@bigbox.local>
+Content-Type: multipart/signed; protocol="application/pkcs7-signature";
+	micalg=sha-512; boundary="------------ms060201040907070504020505"
+
+--------------ms060201040907070504020505
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Content-Language: en-US
+
+I accept
+
+
+On 10/12/2018 05:35 PM, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwan=
+tacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you =
+filled out the CVE form and want one, we can't use the data until you acc=
+ept the MITRE CVE Terms of Use).=20
+>
+> Simply quote the email and reply with "I accept" at the top if you agre=
+e to the MITRE CVE Terms of Use and we will add a copy of the email to th=
+e DWF MITRE CVE Terms of Use acceptance data at https://github.com/distri=
+butedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>
+> The reason we use a complete copy of the email is that it provides an a=
+rtifact showing that the email address accepted the Terms of Use, when th=
+ey were accepted and so on.=20
+>
+> If you did not submit a CVE request to the DWF you can safely ignore th=
+is message, however we may resend it at some point in the future, if you =
+don't want any future emails simply reply with "unsubscribe" or "DON'T SE=
+ND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block=
+ list so we don't spam you with these, please note that this will prevent=
+ you from being able to accept the MITRE CVE Terms of Use via the DWF aut=
+omatically in future (you'll have to manually ask). But again, if you hav=
+e no idea what a CVE is then you can ignore this/ask to be added to the b=
+lock list with no problems.=20
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities=
+ and Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE)=
+ and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exc=
+lusive, no-charge, royalty-free, irrevocable copyright license to reprodu=
+ce, prepare derivative works of, publicly display, publicly perform, subl=
+icense, and distribute such materials and derivative works. Unless requir=
+ed by applicable law or agreed to in writing, you provide such materials =
+on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either=
+ express or implied, including, without limitation, any warranties or con=
+ditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PAR=
+TICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusiv=
+e, no-charge, royalty-free, irrevocable copyright license to reproduce, p=
+repare derivative works of, publicly display, publicly perform, sublicens=
+e, and distribute Common Vulnerabilities and Exposures (CVE??). Any copy =
+you make for such purposes is authorized provided that you reproduce MITR=
+E's copyright designation and this license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE A=
+RE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/=
+SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BO=
+ARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES=
+, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE =
+USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIE=
+D WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> A copy is available at https://github.com/distributedweaknessfiling/DWF=
+-Legal-Acceptance/blob/master/Terms-Of-Use.md
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manuall=
+y with your question/concerns/etc.=20
+>
+
+--=20
+Saleh Elsayed
+IT-Security Consultant
+
+
+--
+SySS GmbH
+Schaffhausenstr. 77
+72072 T=C3=BCbingen, Germany
+Voice: +49 7071 407856-6121
+Mobil: +49 151 4220-9316
+mailto: saleh.elsayed@syss.de
+PGP-Fingerprint: 657D BFB8 0A09 D59E DEAC 6893 8E01 1965 2ECD 9E2F
+
+Gesch=C3=A4ftsf=C3=BChrer:    Sebastian Schreiber
+Registergericht:    Amtsgericht Stuttgart / HRB 382420
+Steuernummer:       86118 / 55809
+--
+
+
+
+--------------ms060201040907070504020505
+Content-Type: application/pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+Content-Description: S/MIME Cryptographic Signature
+
+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
+U1fztnEe6uNqOeCj5ER8BtCZdxAYxY9Ot0XZuYtLvjP5iYbe/Aczq+adENOAYnlT0Bx2Didq
+CXjHalI4JdcNxZstbHU1Q9GFnA4efcbc6TnFtBV/ii1q9XIalrAT9PHFuL57E4hUw9I0nypM
+GY0tesRq9uAZeM69lWLSX0pHvbBwMz4BwATI9IzUyXk9erJM2vBkdej96x8I4rOy4CJuCCMm
+2akks06oEDHvl6w/TSgSPcNLdfEec2kCAwEAAaOCAdUwggHRMA4GA1UdDwEB/wQEAwIFoDCB
+ngYIKwYBBQUHAQEEgZEwgY4wTQYIKwYBBQUHMAKGQWh0dHA6Ly9zZWN1cmUuZ2xvYmFsc2ln
+bi5jb20vY2FjZXJ0L2dzcGVyc29uYWxzaWduMXNoYTJnM29jc3AuY3J0MD0GCCsGAQUFBzAB
+hjFodHRwOi8vb2NzcDIuZ2xvYmFsc2lnbi5jb20vZ3NwZXJzb25hbHNpZ24xc2hhMmczMEwG
+A1UdIARFMEMwQQYJKwYBBAGgMgEoMDQwMgYIKwYBBQUHAgEWJmh0dHBzOi8vd3d3Lmdsb2Jh
+bHNpZ24uY29tL3JlcG9zaXRvcnkvMAkGA1UdEwQCMAAwRAYDVR0fBD0wOzA5oDegNYYzaHR0
+cDovL2NybC5nbG9iYWxzaWduLmNvbS9nc3BlcnNvbmFsc2lnbjFzaGEyZzMuY3JsMCAGA1Ud
+EQQZMBeBFVNhbGVoLkVsc2F5ZWRAc3lzcy5kZTAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYB
+BQUHAwQwHQYDVR0OBBYEFNSxlkroSXc1yudSaSIMuNdcFGKWMB8GA1UdIwQYMBaAFJYnwsKl
+9xz4Anp6ZK9jbzLSmMKxMA0GCSqGSIb3DQEBCwUAA4IBAQAXf4IFJ219hjZFb0gvAn/XApy8
+VyWSREHC45i397BsjIEPiZn6P0uZCg4ohb2FQJV8GAiVbASHuytFgi1dyNEY4HjoapRrTjbR
+OWhrzSISbpBB7jR3mSeXdCW381idZAKmXWt7E/KrNmW8/Sg8GGzduEj8RteUkl3reyG5OuGt
+ZAWkypTyVQZTuWVibHHnBf+/ot5pKSNoGtLKmspMIf3y0TxnikHr3ibaVp1BYaRpixoA0uAM
+BhdSZt3bQu9mFWQXcTfuUeWs7qWJjKa05iJ4AhdS0BncQT65BIlkLqHSGP8kcBoa0oKjvJW0
+oBn4OdioMWXkH/smO++1JIFCG+7gMYIEkTCCBI0CAQEwbTBdMQswCQYDVQQGEwJCRTEZMBcG
+A1UEChMQR2xvYmFsU2lnbiBudi1zYTEzMDEGA1UEAxMqR2xvYmFsU2lnbiBQZXJzb25hbFNp
+Z24gMSBDQSAtIFNIQTI1NiAtIEczAgxb19Z4hdopBZFslHowDQYJYIZIAWUDBAIDBQCgggH1
+MBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTE4MTAxNTA3NDkz
+M1owTwYJKoZIhvcNAQkEMUIEQCEcZRkUTZGazumV5HYOvD7AtsR7H6dUA7D77x1qunMXRC8s
+WiErxxAlvCujGD71ij3xm3VMhrJvVAa3khvUo2UwbAYJKoZIhvcNAQkPMV8wXTALBglghkgB
+ZQMEASowCwYJYIZIAWUDBAECMAoGCCqGSIb3DQMHMA4GCCqGSIb3DQMCAgIAgDANBggqhkiG
+9w0DAgIBQDAHBgUrDgMCBzANBggqhkiG9w0DAgIBKDB8BgkrBgEEAYI3EAQxbzBtMF0xCzAJ
+BgNVBAYTAkJFMRkwFwYDVQQKExBHbG9iYWxTaWduIG52LXNhMTMwMQYDVQQDEypHbG9iYWxT
+aWduIFBlcnNvbmFsU2lnbiAxIENBIC0gU0hBMjU2IC0gRzMCDFvX1niF2ikFkWyUejB+Bgsq
+hkiG9w0BCRACCzFvoG0wXTELMAkGA1UEBhMCQkUxGTAXBgNVBAoTEEdsb2JhbFNpZ24gbnYt
+c2ExMzAxBgNVBAMTKkdsb2JhbFNpZ24gUGVyc29uYWxTaWduIDEgQ0EgLSBTSEEyNTYgLSBH
+MwIMW9fWeIXaKQWRbJR6MA0GCSqGSIb3DQEBAQUABIICAHpFdZgo24pAzUpX6k4Pzc6ijBd1
+SGLbYiP3FTRNCvIZy+eHqjhkmDTz2TT5TVSs3CdfqFX0Cjm99TKzmqGG8sZnYQWfRZvm4aWR
++W0EnT9mHFJRGr5esXyfVXor1rndMVzc4ZxbZvmsWaiVKw1dAvajtxrkongMYkjfglL9Ygzf
+HLJBfKWk9whAl/xlgCdLYqu4SFGIZ9qZM4xUHYx0utzSwB0P1iMBgl8yC6u9rH8UWXFNSqqD
+UzrDzDI4lW61yCPLn6syaGWEC+mVHNr/m7GOs1Jcavq84F9PurhBYkzxdrF2wH8WNkOfJLbY
+8/tdBGCbtK+xGCBUsyOMYDGmHPnvoXvrDPm060zegHVeNpbLfAZvBa3x55RlR70AbEEGMHw1
+snpSqFesOAj503cKjFa5mRc7Ep6XIOIhXFHkE7RzpcbK1ZZpZZ/2Y4KJnOaOj+D1oIlkPGxS
+YnX1hY/CpaFlzcbCMM4AQQwxwvs3m/GDyTnXhIslibwdJRntwM+B21fFOc6eEJUcpJFarWMj
+9gNbnOC2jDWw7EYPQQb1Qvd4/bppftV4iwOJwS7mf8Eh7qO+acSa5WY/e9etd9kuSAFF8ZhK
+p8NwWQxyxnBTV+CQil3ZswSvJ7wRncvTx0XY5WuQzbHfH5eesWNK7Bqx23W95BImQArrUI3y
+1z9DNpT3AAAAAAAA
+--------------ms060201040907070504020505--

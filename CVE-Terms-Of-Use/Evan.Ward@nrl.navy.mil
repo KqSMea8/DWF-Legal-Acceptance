@@ -1,0 +1,130 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.79.71 with SMTP id d68csp3923475ivb;
+        Mon, 20 Nov 2017 07:41:29 -0800 (PST)
+X-Google-Smtp-Source: AGs4zMb4eD4QXY7GySAQs1ep4U8VMBvks46hjNOqsKPG3/CUZkkSNg5V/OeM4jVYaC0sgmm/gdz9
+X-Received: by 10.55.60.12 with SMTP id j12mr11125019qka.232.1511192489269;
+        Mon, 20 Nov 2017 07:41:29 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1511192489; cv=none;
+        d=google.com; s=arc-20160816;
+        b=jP04PWYVKLzzwwqb99jUicTqv1klsUfI5kQyospd8bDqldgXEVwjLJNdBCrrjE3dp7
+         Kr/4UwD8YlPJlttJ888id7htac0qpTSfbqyOvIPTMVFR1fi8zqYLp19NdGWvVoRVVFyk
+         f5LJLdPVb2KJ23GkDxPLfr9f6PyjHclU3gGFdI9WF2kpAVMsdaNsa9MMdSsjgx+H4a7v
+         Y8tI24QZKfYArCwR4Tidq05CKHfJ6CDieuiduA+EDQywj8txRoHJ1t2fQPGm7S3zOO7w
+         3Gl0g3tyj/3grutrCHstwvNCe+/j3rl2c67Znt2WtlsD9kFP03/AYVYrPfuTEmXnJ2ZK
+         eIaQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-transfer-encoding:content-language
+         :accept-language:in-reply-to:references:message-id:date:thread-index
+         :thread-topic:subject:to:from:arc-authentication-results;
+        bh=JDn5KZ7MM+5ZTncLKk6of4/ugCvs9fUneOJ0QljV53A=;
+        b=onO4X6N2rfaeka7PGdZ64L2xjolPZJtg8GfzkDFC8QS49ygiIKQcI3l2B1rFZusnWo
+         5mrbvUEb0UZkCdKTZpkwDTKo/bqlLQGh5aFFOX+bWJHsQlWatvKdqXgjQeDbCmmcK5e3
+         wUW3b0Igc9TEU87FWHLZ3UOeUm65GEH+Q3on9ORtPZVCGfBGFlFsT1uXS1w1va3kRQjJ
+         pa7rxkhBe8twRbNexvwu27GOy6q4Ko6dqlCdMrQW57f2NyxZCCWOrkf/5WgWfJY6xCTA
+         geXoGDwk6jJqqowsZrJlQ/h/gAxbv5bunnX25ae8tlQRENMBVXHxk3gv0NGBD2WS/SK/
+         xKig==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of evan.ward@nrl.navy.mil designates 132.250.34.42 as permitted sender) smtp.mailfrom=Evan.Ward@nrl.navy.mil
+Return-Path: <Evan.Ward@nrl.navy.mil>
+Received: from SpaceCAS.spacenet.nrl.navy.mil (spacemail.nrl.navy.mil. [132.250.34.42])
+        by mx.google.com with ESMTPS id c2si6078641qkf.29.2017.11.20.07.41.28
+        for <kurt@seifried.org>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Mon, 20 Nov 2017 07:41:28 -0800 (PST)
+Received-SPF: pass (google.com: domain of evan.ward@nrl.navy.mil designates 132.250.34.42 as permitted sender) client-ip=132.250.34.42;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of evan.ward@nrl.navy.mil designates 132.250.34.42 as permitted sender) smtp.mailfrom=Evan.Ward@nrl.navy.mil
+Received: from SPACEMBOX.spacenet.nrl.navy.mil ([fe80::599e:eb4e:b8c:832c]) by
+ SpaceCAS.spacenet.nrl.navy.mil ([fe80::dc96:b487:4c59:c72d%14]) with mapi id
+ 14.03.0319.002; Mon, 20 Nov 2017 10:41:28 -0500
+From: "Ward, Evan" <Evan.Ward@nrl.navy.mil>
+To: "kurt@seifried.org" <kurt@seifried.org>
+Subject: RE: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ evan.ward@nrl.navy.mil
+Thread-Topic: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ evan.ward@nrl.navy.mil
+Thread-Index: AQHTYIvk9Oc9T81+eUKVwv3gZwe99aMdaueV
+Date: Mon, 20 Nov 2017 15:41:28 +0000
+Message-ID: <F2798A0C3302EC41A925E5861157D5D0012E4D022A@SpaceMBox.spacenet.nrl.navy.mil>
+References: <20171118164001.64559.26077@slab.local>
+In-Reply-To: <20171118164001.64559.26077@slab.local>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [132.250.201.45]
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+I accept=0A=
+=0A=
+________________________________________=0A=
+From: kurt@seifried.org [kurt@seifried.org]=0A=
+Sent: Saturday, November 18, 2017 11:40 AM=0A=
+To: Ward, Evan=0A=
+Subject: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for evan.ward@n=
+rl.navy.mil=0A=
+=0A=
+This is a confirmation email sent from CVE request form at https://iwantacv=
+e.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled=
+ out the CVE form and want one, we can't use the data until you accept the =
+MITRE CVE Terms of Use).=0A=
+=0A=
+Simply quote the email and reply with "I accept" at the top if you agree to=
+ the MITRE CVE Terms of Use and we will add a copy of the email to the DWF =
+MITRE CVE Terms of Use acceptance data at https://github.com/distributedwea=
+knessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use=0A=
+=0A=
+The reason we use a complete copy of the email is that it provides an artif=
+act showing that the email address accepted the Terms of Use, when they wer=
+e accepted and so on.=0A=
+=0A=
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don't =
+want any future emails simply reply with "unsubscribe" or "DON'T SEND ME TH=
+IS EMAIL EVER AGAIN" and I'll add your email address to the block list so w=
+e don't spam you with these, please note that this will prevent you from be=
+ing able to accept the MITRE CVE Terms of Use via the DWF automatically in =
+future (you'll have to manually ask). But again, if you have no idea what a=
+ CVE is then you can ignore this/ask to be added to the block list with no =
+problems.=0A=
+=0A=
+MITRE CVE Terms of Use=0A=
+=0A=
+LICENSE=0A=
+=0A=
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+ Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and a=
+ll CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable copyright license to reproduce, prepar=
+e derivative works of, publicly display, publicly perform, sublicense, and =
+distribute such materials and derivative works. Unless required by applicab=
+le law or agreed to in writing, you provide such materials on an "AS IS" BA=
+SIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implie=
+d, including, without limitation, any warranties or conditions of TITLE, NO=
+N-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.=0A=
+=0A=
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare=
+ derivative works of, publicly display, publicly perform, sublicense, and d=
+istribute Common Vulnerabilities and Exposures (CVE??). Any copy you make f=
+or such purposes is authorized provided that you reproduce MITRE's copyrigh=
+t designation and this license in any such copy.=0A=
+=0A=
+DISCLAIMERS=0A=
+=0A=
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE RE=
+PRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF T=
+RUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS =
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE I=
+NFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES O=
+F MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.=0A=
+=0A=
+A copy is available at https://github.com/distributedweaknessfiling/DWF-Leg=
+al-Acceptance/blob/master/Terms-Of-Use.md=0A=
+=0A=
+To contact the DWF either hit reply, or email kurt@seifried.org manually wi=
+th your question/concerns/etc.=0A=
+=0A=

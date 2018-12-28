@@ -1,0 +1,136 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.79.71 with SMTP id d68csp1124912ivb;
+        Thu, 23 Nov 2017 10:11:59 -0800 (PST)
+X-Google-Smtp-Source: AGs4zMYied+jSOy3LMNRK59Wk5n644lpv8VnTUbyQXaKe7a9P+cro8dBFCoXwvoiTozZ0yL7jtnY
+X-Received: by 10.80.216.202 with SMTP id y10mr22860139edj.221.1511460719602;
+        Thu, 23 Nov 2017 10:11:59 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1511460719; cv=none;
+        d=google.com; s=arc-20160816;
+        b=o/H3Ht0dQ3kDJDvTz/9NLQe86iFrm73bG4f93wdEa1qYplHQ/t6olybxYg5lz20aHy
+         J3qKoIDjaE3dZ7XQoFCfXDH+T0GhaF0zR7eg+fCozpCKbhjiD3lSPGYixSCWD2rMJ6uF
+         R9sZfG+hzbl9JXU8urOAYPiQUH3o5TuRf9qCaWuCmvlTx15WKFy+541ntg8+0lWRoLL3
+         LkmeYXTNGISEGwVuohzBvTD5i0Dy3CvMR4KD1uwgYQvEI77q7PKUoxpTDKBzziJvan3K
+         u4A7nlf53JwF91PVpdzi7kYPS3eutj8qT3+JesQZt1IxK7MI4gQkNVhL+dhxC5cnkV6B
+         dS0Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:in-reply-to:to:references:date:subject:mime-version
+         :content-transfer-encoding:dkim-signature:from
+         :arc-authentication-results;
+        bh=U+8Ib/Ml8BET71XGsQQlf/POk2OnIVzWw2unRqXKSh8=;
+        b=a7YMFEYh2NI7YlFfgcKnsO71wuRLnPNTI4td2FVdPjpBgJ4XNqn4C5oSE1ROqh0HLS
+         jsQnuCdItUcyA9iBYu0TCw4ZrNUkqWhBBPCm+MUaOIo7dB2OG9pmSss5GV4WwlhfrlW2
+         yQruc1UBhS2cDXK2ZTxl2CGVy0ZqzSS8BBKVctt3EQ0ol5E+rBwSXYeGcpe9Qdb2p35d
+         SOXZ4HspDPzB6d+lOS/3UIIfpby2tHZyvrn0sMDQLz/t42S7G/gKxCZbLiV4RdgvdhmK
+         f5z7f62y+lR6d/NCoJjTixK8anB//BOqnTVtkt5Sjho6NVkZuDMWILPgmnHaz2GC2855
+         nPyw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@opnsense.org header.s=dkim header.b=G3LoYh4R;
+       spf=pass (google.com: domain of franco@opnsense.org designates 81.171.24.236 as permitted sender) smtp.mailfrom=franco@opnsense.org
+Return-Path: <franco@opnsense.org>
+Received: from mail.opnsense.org (mail.opnsense.org. [81.171.24.236])
+        by mx.google.com with ESMTPS id 93si4621024edl.355.2017.11.23.10.11.59
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 23 Nov 2017 10:11:59 -0800 (PST)
+Received-SPF: pass (google.com: domain of franco@opnsense.org designates 81.171.24.236 as permitted sender) client-ip=81.171.24.236;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@opnsense.org header.s=dkim header.b=G3LoYh4R;
+       spf=pass (google.com: domain of franco@opnsense.org designates 81.171.24.236 as permitted sender) smtp.mailfrom=franco@opnsense.org
+Received: from localhost (mail.opnsense.org [127.0.0.1])
+	by mail.opnsense.org (Postfix) with ESMTP id F26C5149AC5
+	for <kurt@seifried.org>; Thu, 23 Nov 2017 19:11:58 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at mail.opnsense.org
+Received: from mail.opnsense.org ([127.0.0.1])
+	by localhost (mail.opnsense.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id a9xrD6SfsoDk for <kurt@seifried.org>;
+	Thu, 23 Nov 2017 19:11:58 +0100 (CET)
+From: Franco Fichtner <franco@opnsense.org>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=opnsense.org; s=dkim;
+	t=1511460718; bh=U+8Ib/Ml8BET71XGsQQlf/POk2OnIVzWw2unRqXKSh8=;
+	h=From:Subject:Date:References:To:In-Reply-To:From;
+	b=G3LoYh4RZ/sGI35xxT3QG7rFkkFey7JY/en4fVanRGfmBrCD1bZmk6AkM1SKbqDXE
+	 Nf/K2UB5pxxYISrQBuxsy0/Nn0CNQsF97M0Rs+6IyBLb0NcPNdSSckAhZc7ViGeB5F
+	 DGAZ+cxvlb+o80+pIfrmPJkwVBSo8U+I/pK1eF4E=
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Mime-Version: 1.0 (Mac OS X Mail 10.3 \(3273\))
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ franco@opnsense.org
+Date: Thu, 23 Nov 2017 19:11:57 +0100
+References: <20171123152724.7013.78393@slab.local>
+To: kurt@seifried.org
+In-Reply-To: <20171123152724.7013.78393@slab.local>
+Message-Id: <D85E8500-51FC-4B9D-88A1-16EA16ED43A1@opnsense.org>
+
+I accept
+
+> On 23. Nov 2017, at 4:27 PM, kurt@seifried.org wrote:
+>=20
+> This is a confirmation email sent from CVE request form at =
+https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use =
+(assuming you filled out the CVE form and want one, we can't use the =
+data until you accept the MITRE CVE Terms of Use).=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you =
+agree to the MITRE CVE Terms of Use and we will add a copy of the email =
+to the DWF MITRE CVE Terms of Use acceptance data at =
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/mas=
+ter/Terms-Of-Use
+>=20
+> The reason we use a complete copy of the email is that it provides an =
+artifact showing that the email address accepted the Terms of Use, when =
+they were accepted and so on.=20
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore =
+this message, however we may resend it at some point in the future, if =
+you don't want any future emails simply reply with "unsubscribe" or =
+"DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to =
+the block list so we don't spam you with these, please note that this =
+will prevent you from being able to accept the MITRE CVE Terms of Use =
+via the DWF automatically in future (you'll have to manually ask). But =
+again, if you have no idea what a CVE is then you can ignore this/ask to =
+be added to the block list with no problems.=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common =
+Vulnerabilities and Exposures (CVE=C2=AE), you hereby grant to The MITRE =
+Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a =
+perpetual, worldwide, non-exclusive, no-charge, royalty-free, =
+irrevocable copyright license to reproduce, prepare derivative works of, =
+publicly display, publicly perform, sublicense, and distribute such =
+materials and derivative works. Unless required by applicable law or =
+agreed to in writing, you provide such materials on an "AS IS" BASIS, =
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, =
+including, without limitation, any warranties or conditions of TITLE, =
+NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, =
+non-exclusive, no-charge, royalty-free, irrevocable copyright license to =
+reproduce, prepare derivative works of, publicly display, publicly =
+perform, sublicense, and distribute Common Vulnerabilities and Exposures =
+(CVE=C2=AE). Any copy you make for such purposes is authorized provided =
+that you reproduce MITRE's copyright designation and this license in any =
+such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE =
+ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION =
+HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, =
+ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL =
+WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY =
+WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY =
+RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A =
+PARTICULAR PURPOSE.
+>=20
+> A copy is available at =
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/mas=
+ter/Terms-Of-Use.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org =
+manually with your question/concerns/etc.=20
+>=20
+

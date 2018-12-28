@@ -1,0 +1,177 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.0.43 with SMTP id 40csp311126uai;
+        Sun, 30 Apr 2017 05:14:08 -0700 (PDT)
+X-Received: by 10.55.33.70 with SMTP id h67mr18599157qkh.163.1493554448594;
+        Sun, 30 Apr 2017 05:14:08 -0700 (PDT)
+Return-Path: <bennetch@gmail.com>
+Received: from mail-qk0-x242.google.com (mail-qk0-x242.google.com. [2607:f8b0:400d:c09::242])
+        by mx.google.com with ESMTPS id t1si11088952qkl.333.2017.04.30.05.14.08
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 30 Apr 2017 05:14:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bennetch@gmail.com designates 2607:f8b0:400d:c09::242 as permitted sender) client-ip=2607:f8b0:400d:c09::242;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com;
+       spf=pass (google.com: domain of bennetch@gmail.com designates 2607:f8b0:400d:c09::242 as permitted sender) smtp.mailfrom=bennetch@gmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmail.com
+Received: by mail-qk0-x242.google.com with SMTP id h123so1267047qke.2
+        for <kurt@seifried.org>; Sun, 30 Apr 2017 05:14:08 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=subject:to:references:from:message-id:date:user-agent:mime-version
+         :in-reply-to;
+        bh=1IW/hm9lY+c1jjcHfuk7ScLYVlu0UFABedloDcfk36o=;
+        b=jKyqkF4EtNGx35X958/cBIUP75CJ4OXtmUXaPpIoGlUHxoM6qiz8bXbxrnaNzU/UDU
+         jgjtkdTkBQNdZeN/P0z8Z9nes+KvN20aZRmYYF+2nZ3JDZQ5gLPFm5zSxsGPWkhU/gaG
+         ncohNoKvyHYzyg+pppseztG6UVwzNI+U5ncA2ChJJrVjzznvurtv3SlS//ZPM3B5ozEx
+         vXL+9Or0f9f12s5Fa8c41Ym/oSZFDp7l1Ea37/T62P0uCmDYPNI0jm2LlcwID/0siGDn
+         aw4GgOeiwNE4xZWSSEHCmLEh2wpreLHpctgElb+gbNiCiFH56w9GZzv8bCGr5qVISo1B
+         fKNA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:subject:to:references:from:message-id:date
+         :user-agent:mime-version:in-reply-to;
+        bh=1IW/hm9lY+c1jjcHfuk7ScLYVlu0UFABedloDcfk36o=;
+        b=oP1fIJGbqRV6725cDVutf8I5S5RZf1xdjS88BThBZSIrzTB1ZTybgziKMxuMrNc63Z
+         /p2QdnmPJZZmkNvKreVfYkeG+n5GaMJfGr4n28qXmIUq5wqmok6+/28F+Ga3VW4To5iA
+         WU75xCCUKi7MThUCriYwSgEmoCFWR35G0xnd/ZuLH7CtdNfZyhyoNwWa5MRyF/uzFHxG
+         FFwMNTWUtmT/TzsRBkEEvO/qKpf+duG1fcXXxbtvhLl78tyC9U1V6SfFIN+51qV7eIrN
+         ppVJhJjcx4+mT7P3OXAK3IOwrxkHm+Nn+QsHVIF/HbPtHvTYaCn1PTpvfAkWh4bftFem
+         eM2A==
+X-Gm-Message-State: AN3rC/404Kg2RsbguykdBgkdlKY1uD445U0fIfVReHS5tv39OfIH7aK9
+	PY2p6ZpGZP26Xvj/7Zo=
+X-Received: by 10.55.73.151 with SMTP id w145mr16726619qka.60.1493554448040;
+        Sun, 30 Apr 2017 05:14:08 -0700 (PDT)
+Return-Path: <bennetch@gmail.com>
+Received: from [192.168.1.31] (70.15.107.86.res-cmts.eph2.ptd.net. [70.15.107.86])
+        by smtp.gmail.com with ESMTPSA id a76sm6624992qkj.42.2017.04.30.05.14.05
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 30 Apr 2017 05:14:06 -0700 (PDT)
+Subject: Re: [Security] DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ security@phpmyadmin.net
+To: kurt@seifried.org, Private security team list <security@phpmyadmin.net>
+References: <20170420033055.2144.86235@shiny-2.local>
+From: Isaac Bennetch <bennetch@gmail.com>
+Message-ID: <802f7602-13fd-1996-5e17-52d46af4525e@gmail.com>
+Date: Sun, 30 Apr 2017 08:14:12 -0400
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:45.0)
+ Gecko/20100101 Thunderbird/45.8.0
+MIME-Version: 1.0
+In-Reply-To: <20170420033055.2144.86235@shiny-2.local>
+Content-Type: multipart/signed; micalg=pgp-sha512;
+ protocol="application/pgp-signature";
+ boundary="gC3MDuW1AfJOrTwKKMFAvKp5vejo1Blck"
+
+This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
+--gC3MDuW1AfJOrTwKKMFAvKp5vejo1Blck
+Content-Type: multipart/mixed; boundary="uLI1ePvdJ1JostBDKJCjG0usDaRwG0gU8";
+ protected-headers="v1"
+From: Isaac Bennetch <bennetch@gmail.com>
+To: kurt@seifried.org, Private security team list <security@phpmyadmin.net>
+Message-ID: <802f7602-13fd-1996-5e17-52d46af4525e@gmail.com>
+Subject: Re: [Security] DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ security@phpmyadmin.net
+References: <20170420033055.2144.86235@shiny-2.local>
+In-Reply-To: <20170420033055.2144.86235@shiny-2.local>
+
+--uLI1ePvdJ1JostBDKJCjG0usDaRwG0gU8
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+On 4/19/17 11:30 PM, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwan=
+tacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you =
+filled out the CVE form and want one, we can't use the data until you acc=
+ept the MITRE CVE Terms of Use).=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you agre=
+e to the MITRE CVE Terms of Use and we will add it to the DWF MITRE CVE T=
+erms of Use acceptance data at https://github.com/distributedweaknessfili=
+ng/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore th=
+is message, however we may resend it at some point in the future, if you =
+don't want any future emails simply reply with "unsubscribe" or "DON'T SE=
+ND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block=
+ list so we don't spam you with these, please note that this will prevent=
+ you from being able to accept the MITRE CVE Terms of Use via the DWF aut=
+omatically in future (you'll have to manually ask). But again, if you hav=
+e no idea what a CVE is then you can ignore this/ask to be added to the b=
+lock list with no problems.=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common Vulnerabilities=
+ and Exposures (CVE=C3=82=C2=AE), you hereby grant to The MITRE Corporati=
+on (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwid=
+e, non-exclusive, no-charge, royalty-free, irrevocable copyright license =
+to reproduce, prepare derivative works of, publicly display, publicly per=
+form, sublicense, and distribute such materials and derivative works. Unl=
+ess required by applicable law or agreed to in writing, you provide such =
+materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KI=
+ND, either express or implied, including, without limitation, any warrant=
+ies or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS=
+ FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusiv=
+e, no-charge, royalty-free, irrevocable copyright license to reproduce, p=
+repare derivative works of, publicly display, publicly perform, sublicens=
+e, and distribute Common Vulnerabilities and Exposures (CVE=C3=82=C2=AE).=
+ Any copy you make for such purposes is authorized provided that you repr=
+oduce MITRE's copyright designation and this license in any such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE A=
+RE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/=
+SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BO=
+ARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES=
+, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE =
+USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIE=
+D WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> A copy is available at https://github.com/distributedweaknessfiling/DWF=
+-Database/blob/master/TermsOfUse.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org manuall=
+y with your question/concerns/etc.=20
+>=20
+>=20
+>=20
+>=20
+> _______________________________________________
+> Security mailing list
+> Security@phpmyadmin.net
+> https://lists.phpmyadmin.net/mailman/listinfo/security
+>=20
+
+
+--uLI1ePvdJ1JostBDKJCjG0usDaRwG0gU8--
+
+--gC3MDuW1AfJOrTwKKMFAvKp5vejo1Blck
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIcBAEBCgAGBQJZBdUYAAoJEM51LxeCWb2SSBAP/0nfFM6/5e2r4UpYTRmx9HPs
+spoF2GNurV5eOepSAn4gXMf2M8XdmAZhPIr2j5rm6f6iu4J17TaMZKaRkN9tI0iA
+Ngs4tqb4lyLOYMzIZn3DMac4DiwM0G9sHy8cG48/RvHwbgNB75PG1BjCCeNYaBez
+ITToCCItK8R65bbDP26ineW9bCoj99dhovWvwNxQD2XoQQfL+GTEhboQEqWZIVIN
+HXPUzl36BmQTqKkWXvTaAANy1fN60Jx1kaoeB/vb9wWFyxbki85+DjNtxsTYzSou
+BBLXnERgMbjebCK1SZZvMNHAoWKWr7U6HIB/RHu/ds4Vt2OwFZh1uVbDGT9qpvci
+nfZ8dz1ywfTeZBH6dyiXQCYtbRRRDmV2HHXPU+y52FJ8a6JmuZ8mRv7ganWPUOFh
+/r2sM7GDvISpKNIGXuqqRWG01YR7Aw4BpXyIq9+hIjBarKc9knwo3eggWIMHa+58
+OFbYQgOo/rntccaRbeHb2w6Uwlz+ZBM1B8sONn3jU8qVMppOAiIfr2xhQDmDxeTg
+Zccb188lFM4l/mGuREWq4y3lamrkt8YBW+xfzCCcB/nLxuD7ilvIkApoWsUJ0GrF
+V4vMbUbb8coWgwEiO6372G7yGscSLFkupmGMsfF+VTrCNguPNB0Fn4uKutHl3wNO
+eRnNK1GENWkqXrXu4XlZ
+=+xLj
+-----END PGP SIGNATURE-----
+
+--gC3MDuW1AfJOrTwKKMFAvKp5vejo1Blck--

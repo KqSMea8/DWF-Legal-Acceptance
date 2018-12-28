@@ -1,0 +1,299 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.205.134 with SMTP id g6csp189148ivm;
+        Thu, 8 Mar 2018 13:57:10 -0800 (PST)
+X-Received: by 2002:a17:902:367:: with SMTP id 94-v6mr25611951pld.140.1520546230888;
+        Thu, 08 Mar 2018 13:57:10 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1520546230; cv=none;
+        d=google.com; s=arc-20160816;
+        b=vaL0vZ1NnDv6VHm/8Q/DDHoO30X5TlIbY0Bi5GtHnDeXHwD28r6Lg2jFb/eccQhnS4
+         M4csO7Y4x+DlYLzy8cveGHmBtR6oGbcF70E60v5aq+jli3tG8vhAvfkLmmqEx7X9dbtM
+         /cF/WPj8FLfjrvPP35XrcuI+xA38RiEEzEJxFW9UFttFE79vcufI+roV3wovUB3xvLnL
+         kXXb5FZk5olnMBL+CI02W/VJWPgx9rNLTSykEAt21DP/Tu+W+DruPiXdEy6aIlO4DGOZ
+         gidCOc6duLHoDINE+Gjv6dWOmsk6h93ArYBaOND7wusqPloxbyHkqWu+IWVy6nqyFGMh
+         ypGQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=in-reply-to:mime-version:user-agent:date:message-id:organization
+         :from:references:to:subject:dkim-signature
+         :arc-authentication-results;
+        bh=NJwWIae1fltH+NEHDho2iTDTyBa9FOPmukBuu9dtcYQ=;
+        b=a/lYWGudYUa4l0PJ+PWUP57IQPQk8LqEVRsJJggIf2/sSwJaJ3PXaySIphgWYI1PoQ
+         +UAk8p+umofAhukyeie4AG6cWT/jeiyiOS4kcQbfofwRqbDrNkwAzDJL9d1OcfrP9enE
+         0HTmcYG5MURr/R8sLCNRZUyMklkJQZp+csWwYIoOqjg8EqbD3qxw+e3GVPbLKf3VtW01
+         NGKyhjDk+vHdyHwEdD/puhUeZMyogXpid/QKh6j7+oo/X69TMdMRxd80/8FH3p8IPxP3
+         i+a7VgqTXIgt9LNNgZTkVY9fN5BV09xIsmSJhcaky1HcDE6rMIehdPakC7Mp3prGkwP9
+         pWQw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@owasp-org.20150623.gappssmtp.com header.s=20150623 header.b=cfP8NGF4;
+       spf=pass (google.com: domain of thomas.ward@owasp.org designates 209.85.220.41 as permitted sender) smtp.mailfrom=thomas.ward@owasp.org
+Return-Path: <thomas.ward@owasp.org>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id m26-v6sor6727112pli.33.2018.03.08.13.57.10
+        for <kurt@seifried.org>
+        (Google Transport Security);
+        Thu, 08 Mar 2018 13:57:10 -0800 (PST)
+Received-SPF: pass (google.com: domain of thomas.ward@owasp.org designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@owasp-org.20150623.gappssmtp.com header.s=20150623 header.b=cfP8NGF4;
+       spf=pass (google.com: domain of thomas.ward@owasp.org designates 209.85.220.41 as permitted sender) smtp.mailfrom=thomas.ward@owasp.org
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=owasp-org.20150623.gappssmtp.com; s=20150623;
+        h=subject:to:references:from:organization:message-id:date:user-agent
+         :mime-version:in-reply-to;
+        bh=NJwWIae1fltH+NEHDho2iTDTyBa9FOPmukBuu9dtcYQ=;
+        b=cfP8NGF4ClAn6I9tVohXcCvs521oteCy70nrHj5mcGwn7MMiBK97/nlIOMQb3VsNMg
+         s2Oyp5xluk3MIk82FNOpCCzbfdYH0d7kWzFZpKssXCJIRrQZUFy5PvGOswu7+rIoBVxm
+         GE6loKYprFqAbl7hagyxpUNbW8ZPXx4ue26FnXh66ZLT5z86zB9g6+Z/NmYVdiEObgce
+         uArSmr5nhzrQVDroeCNTdOooXgWPmJ5zPjolTIq8Ey7UVZ01PnWUk2ucWTeFnVrtypR7
+         q4y4h+Yj3WEqeFMzl0Vp9mJq+6a1awc0Ep3sOOfW9t+2PsBjg2crKYaOyAvhOBV4iwiF
+         r0kg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:subject:to:references:from:organization
+         :message-id:date:user-agent:mime-version:in-reply-to;
+        bh=NJwWIae1fltH+NEHDho2iTDTyBa9FOPmukBuu9dtcYQ=;
+        b=O0kx+KzQnCfsfvnDBDDD0xvoO3wiLlwVoHOSYBedEfW4x2uGkuKZMJAfc3OZ900pJj
+         knkvcbxUaQ3kBkvT1K7LJlXAPonBGQVVNj9Llu8ADFQFooKBJU9KV40XMH9+ZY3BKH8x
+         0BPKC2KxRpWKXmTkwFIdO4s6bhOle8pOKhkxy3k223EO7lsN23POJHEuucaIYAHjc/yN
+         ozeFy5gP2lu/RdekxMCsIbkS8IRT1zh3d3cGk/epbNdu/5A0TUHaMIKz0MS1hphNI52B
+         qYfPA/MttJdeitMBXUy/yb17S25z6AJubjSdGhfEDiIYD9ZTIaClKeZWATSOODIH957A
+         8nuw==
+X-Gm-Message-State: APf1xPCvonn6bzlKc/uiGBrYnqgUH4sio2n0hlqHBiVF8yFR4j5dx/84
+	rsTbL+Ygs7fJGyXYzD/++Mknkj4BG4c=
+X-Google-Smtp-Source: AG47ELvWocFTdfVgOCEMQ4XWIAGV8yZBtxeFv/Fs27M4syDqv2gTrz3NCWihl28aJ7WN3xx9IvNrKw==
+X-Received: by 2002:a17:902:ab84:: with SMTP id f4-v6mr25708823plr.239.1520546229911;
+        Thu, 08 Mar 2018 13:57:09 -0800 (PST)
+Return-Path: <thomas.ward@owasp.org>
+Received: from [192.168.0.154] (66.212.156.170.penntele.com. [66.212.156.170])
+        by smtp.gmail.com with ESMTPSA id s78sm43007648pfa.161.2018.03.08.13.57.08
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 08 Mar 2018 13:57:08 -0800 (PST)
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ thomas.ward@owasp.org
+To: kurt@seifried.org
+References: <20180308212432.3165.29035@slab.local>
+From: Thomas Ward <thomas.ward@owasp.org>
+Organization: OWASP
+Message-ID: <a7bc37bb-37d1-7c45-6ce3-7ffa697d75d3@owasp.org>
+Date: Thu, 8 Mar 2018 16:56:57 -0500
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101
+ Thunderbird/52.6.0
+MIME-Version: 1.0
+In-Reply-To: <20180308212432.3165.29035@slab.local>
+Content-Type: multipart/signed; micalg=pgp-sha512;
+ protocol="application/pgp-signature";
+ boundary="N6ffq01cEPHQQsoUepxolWa0XPZGrIv6d"
+
+This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
+--N6ffq01cEPHQQsoUepxolWa0XPZGrIv6d
+Content-Type: multipart/mixed; boundary="tccPD6XeLPoSSB0cJAhLBWGN16HgUGaYg";
+ protected-headers="v1"
+From: Thomas Ward <thomas.ward@owasp.org>
+To: kurt@seifried.org
+Message-ID: <a7bc37bb-37d1-7c45-6ce3-7ffa697d75d3@owasp.org>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ thomas.ward@owasp.org
+References: <20180308212432.3165.29035@slab.local>
+In-Reply-To: <20180308212432.3165.29035@slab.local>
+
+--tccPD6XeLPoSSB0cJAhLBWGN16HgUGaYg
+Content-Type: multipart/alternative;
+ boundary="------------7CAE1CFA1DF97489BF2A6719"
+Content-Language: en-US
+
+This is a multi-part message in MIME format.
+--------------7CAE1CFA1DF97489BF2A6719
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+I Accept.
+
+
+On 03/08/2018 04:24 PM, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwan=
+tacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you =
+filled out the CVE form and want one, we can't use the data until you acc=
+ept the MITRE CVE Terms of Use).=20
+>
+> Simply quote the email and reply with "I accept" at the top if you agre=
+e to the MITRE CVE Terms of Use and we will add a copy of the email to th=
+e DWF MITRE CVE Terms of Use acceptance data at https://github.com/distri=
+butedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>
+> The reason we use a complete copy of the email is that it provides an a=
+rtifact showing that the email address accepted the Terms of Use, when th=
+ey were accepted and so on.=20
+>
+> If you did not submit a CVE request to the DWF you can safely ignore th=
+is message, however we may resend it at some point in the future, if you =
+don't want any future emails simply reply with "unsubscribe" or "DON'T SE=
+ND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block=
+ list so we don't spam you with these, please note that this will prevent=
+ you from being able to accept the MITRE CVE Terms of Use via the DWF aut=
+omatically in future (you'll have to manually ask). But again, if you hav=
+e no idea what a CVE is then you can ignore this/ask to be added to the b=
+lock list with no problems.=20
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities=
+ and Exposures (CVE=C3=82=C2=AE), you hereby grant to The MITRE Corporati=
+on (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwid=
+e, non-exclusive, no-charge, royalty-free, irrevocable copyright license =
+to reproduce, prepare derivative works of, publicly display, publicly per=
+form, sublicense, and distribute such materials and derivative works. Unl=
+ess required by applicable law or agreed to in writing, you provide such =
+materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KI=
+ND, either express or implied, including, without limitation, any warrant=
+ies or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS=
+ FOR A PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusiv=
+e, no-charge, royalty-free, irrevocable copyright license to reproduce, p=
+repare derivative works of, publicly display, publicly perform, sublicens=
+e, and distribute Common Vulnerabilities and Exposures (CVE=C3=82=C2=AE).=
+ Any copy you make for such purposes is authorized provided that you repr=
+oduce MITRE's copyright designation and this license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE A=
+RE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/=
+SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BO=
+ARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES=
+, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE =
+USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIE=
+D WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> A copy is available at https://github.com/distributedweaknessfiling/DWF=
+-Legal-Acceptance/blob/master/Terms-Of-Use.md
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manuall=
+y with your question/concerns/etc.=20
+>
+
+
+--------------7CAE1CFA1DF97489BF2A6719
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+  </head>
+  <body text=3D"#000000" bgcolor=3D"#FFFFFF">
+    <p>I Accept.</p>
+    <p><br>
+    </p>
+    <div class=3D"moz-cite-prefix">On 03/08/2018 04:24 PM,
+      <a class=3D"moz-txt-link-abbreviated" href=3D"mailto:kurt@seifried.=
+org">kurt@seifried.org</a> wrote:<br>
+    </div>
+    <blockquote type=3D"cite"
+      cite=3D"mid:20180308212432.3165.29035@slab.local">
+      <pre wrap=3D"">This is a confirmation email sent from CVE request f=
+orm at <a class=3D"moz-txt-link-freetext" href=3D"https://iwantacve.org/"=
+>https://iwantacve.org/</a> asking you to accept the MITRE CVE Terms of U=
+se (assuming you filled out the CVE form and want one, we can't use the d=
+ata until you accept the MITRE CVE Terms of Use).=20
+
+Simply quote the email and reply with "I accept" at the top if you agree =
+to the MITRE CVE Terms of Use and we will add a copy of the email to the =
+DWF MITRE CVE Terms of Use acceptance data at <a class=3D"moz-txt-link-fr=
+eetext" href=3D"https://github.com/distributedweaknessfiling/DWF-Legal-Ac=
+ceptance/tree/master/Terms-Of-Use">https://github.com/distributedweakness=
+filing/DWF-Legal-Acceptance/tree/master/Terms-Of-Use</a>
+
+The reason we use a complete copy of the email is that it provides an art=
+ifact showing that the email address accepted the Terms of Use, when they=
+ were accepted and so on.=20
+
+If you did not submit a CVE request to the DWF you can safely ignore this=
+ message, however we may resend it at some point in the future, if you do=
+n't want any future emails simply reply with "unsubscribe" or "DON'T SEND=
+ ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block l=
+ist so we don't spam you with these, please note that this will prevent y=
+ou from being able to accept the MITRE CVE Terms of Use via the DWF autom=
+atically in future (you'll have to manually ask). But again, if you have =
+no idea what a CVE is then you can ignore this/ask to be added to the blo=
+ck list with no problems.=20
+
+MITRE CVE Terms of Use
+
+LICENSE
+
+Submissions: For all materials you submit to the Common Vulnerabilities a=
+nd Exposures (CVE=C3=82=C2=AE), you hereby grant to The MITRE Corporation=
+ (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide,=
+ non-exclusive, no-charge, royalty-free, irrevocable copyright license to=
+ reproduce, prepare derivative works of, publicly display, publicly perfo=
+rm, sublicense, and distribute such materials and derivative works. Unles=
+s required by applicable law or agreed to in writing, you provide such ma=
+terials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND=
+, either express or implied, including, without limitation, any warrantie=
+s or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS F=
+OR A PARTICULAR PURPOSE.
+
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,=
+ no-charge, royalty-free, irrevocable copyright license to reproduce, pre=
+pare derivative works of, publicly display, publicly perform, sublicense,=
+ and distribute Common Vulnerabilities and Exposures (CVE=C3=82=C2=AE). A=
+ny copy you make for such purposes is authorized provided that you reprod=
+uce MITRE's copyright designation and this license in any such copy.
+
+DISCLAIMERS
+
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE=
+ PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SH=
+E REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOAR=
+D OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, =
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE US=
+E OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED =
+WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+A copy is available at <a class=3D"moz-txt-link-freetext" href=3D"https:/=
+/github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/master/Te=
+rms-Of-Use.md">https://github.com/distributedweaknessfiling/DWF-Legal-Acc=
+eptance/blob/master/Terms-Of-Use.md</a>
+
+To contact the DWF either hit reply, or email <a class=3D"moz-txt-link-ab=
+breviated" href=3D"mailto:kurt@seifried.org">kurt@seifried.org</a> manual=
+ly with your question/concerns/etc.=20
+
+</pre>
+    </blockquote>
+    <br>
+  </body>
+</html>
+
+--------------7CAE1CFA1DF97489BF2A6719--
+
+--tccPD6XeLPoSSB0cJAhLBWGN16HgUGaYg--
+
+--N6ffq01cEPHQQsoUepxolWa0XPZGrIv6d
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2
+
+iQIcBAEBCgAGBQJaobGyAAoJECLGUmhPAnsqOL0P/3gqUkAlJ0yy5skwSN8H34Wi
+VcTKxirniMy6CHgndPnKVgsUDzS13K+NcZFvS0ZoiFZ9OIsesi34GaLrpCeSVTyM
+IxdL8k+vqsYDqiDViCuUtRABjoO+OeuGw+7wfvlIS8tO4espStGGu/j+vCrlSdP1
+WWLBXNPJU524fvbTvJ9caKkKoxyYTaGMU5khw6gRxgUSt1sreRP4oFafSh2V1JB2
+sRVreffkPRp+HIo9Fam84WQUyUEeLks4TXJzJLidSMrrmbv9hJMCONFSEoOH1jpL
+ID/fpDLOWJ4Op5ZJQ/4YrIuUJufWh0PW5vAsWsvoJHjlLHITIYxYhQO4jJ/ta4ir
+b220UYPSHEhSznpE+dNR90JDbje3TvsycSrdWwsZjC/8RkgHVg0HQXr+VdALuHpS
+jGjccLqwTVbhOgPFENuuxuIcfmAYV2+3qE1QlJh1pQdEB1adWtg8TcEtyCoqmG/+
+hHjGiZs7GA3+CtSwiLSn1U+DHao1vXPNT9xyN5nqWKJXu94QdVinsZ4lwVrwIjCL
+tq2fPVPW28SC15rPRk8524l3y735wnfn8+AV36YZ7HCC7tGFM0pJnrzDw5UKJJ5o
+ykIwXLWGVMOZsyZI4tEwvTJ3EIkxFreIPjXvx/TUBuOlqMQMkPsk1RHo8cPD3ZI9
+c2vsI4NAk0hoIhrt1Zls
+=HOjE
+-----END PGP SIGNATURE-----
+
+--N6ffq01cEPHQQsoUepxolWa0XPZGrIv6d--

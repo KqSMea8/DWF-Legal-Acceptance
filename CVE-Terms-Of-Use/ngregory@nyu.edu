@@ -1,0 +1,129 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.82.15 with SMTP id i15csp848425uaa;
+        Thu, 6 Apr 2017 13:18:01 -0700 (PDT)
+X-Received: by 10.55.189.130 with SMTP id n124mr36532617qkf.235.1491509881390;
+        Thu, 06 Apr 2017 13:18:01 -0700 (PDT)
+Return-Path: <nmg355@nyu.edu>
+Received: from mail-qk0-x22d.google.com (mail-qk0-x22d.google.com. [2607:f8b0:400d:c09::22d])
+        by mx.google.com with ESMTPS id a12si2346635qka.152.2017.04.06.13.18.01
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 06 Apr 2017 13:18:01 -0700 (PDT)
+Received-SPF: pass (google.com: domain of nmg355@nyu.edu designates 2607:f8b0:400d:c09::22d as permitted sender) client-ip=2607:f8b0:400d:c09::22d;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@nyu-edu.20150623.gappssmtp.com;
+       spf=pass (google.com: domain of nmg355@nyu.edu designates 2607:f8b0:400d:c09::22d as permitted sender) smtp.mailfrom=nmg355@nyu.edu
+Received: by mail-qk0-x22d.google.com with SMTP id h67so47551843qke.0
+        for <kurt@seifried.org>; Thu, 06 Apr 2017 13:18:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=nyu-edu.20150623.gappssmtp.com; s=20150623;
+        h=from:content-transfer-encoding:mime-version:subject:date:references
+         :to:in-reply-to:message-id;
+        bh=lScXcGDpPQJ8iezPH8PnybXTzrY2zKbOzU/twt7f51Q=;
+        b=hNRleNF3Zdz5hrAv/4x448dVheW/ZcUnpcU2VDAZdYJVVZlqILFLsEXngxIf8jLdXB
+         feAqcK4+4LQfs6C+XBrAH/wCZVwnUuf59Nndz/M38YbqWA97LqPLkBggIT7xB3rHUdRt
+         ssvAhCY3AF/wlxo1PF18Wr2G1A7b8M8n6LY6PRDattp/csjvto8kZ9ybByHYRQ9U5oh8
+         kT22eUfbYHUwPr4xV+2XxZ/UXVRt7NXJJH1t18sxmJlsHTFs2ai0qL77c4BRppPOkC6c
+         dOmFW2z7ITuWFkSMaKuYI2HoeXGszVw7QJQrxtVUGTid01DpNtraW7tvXuXCrX3hgFvw
+         9MSg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:content-transfer-encoding:mime-version
+         :subject:date:references:to:in-reply-to:message-id;
+        bh=lScXcGDpPQJ8iezPH8PnybXTzrY2zKbOzU/twt7f51Q=;
+        b=KhlvwDvZtHI7iS+nWMKndbg36FYkrFxvid3624P46TjNR8GZMCVjoWJqqUSUhdxv6j
+         H3S+X5fjvkjBChNB5oxBIVy9CDRveO4DG+HNXYRCq3Osvyl9AWCndSgfDvpjnK3v3Tq9
+         IzY+iz99UHHFEAxSCAwKyNaz+Kcy4ay8D2lnMOZ3tHO7iIyrvEjyyG9GVTWjeACgAIiP
+         DioAUAYh4tg3W2Im88dyNDbCR9y5lQXd0WtmcHVsiF5lmf9GVssKcvXFtmMP/VNa/tih
+         Y6KOw8p7wGcA2Dy2XX6SPdtZiWUSE/SQhqPAuiVS+oUhxeG1e+6ihLF31r/GIEOn+76Y
+         Ma7w==
+X-Gm-Message-State: AN3rC/6ip0Zeltb6gZ9zQ1emQFrsruO2akSQunQk2zRBlGvtwZrv7x0Cf0MdlXzehPZ+Iktr
+X-Received: by 10.233.235.4 with SMTP id b4mr4687420qkg.75.1491509880875;
+        Thu, 06 Apr 2017 13:18:00 -0700 (PDT)
+Return-Path: <nmg355@nyu.edu>
+Received: from [192.168.0.21] (219-nat.isis.poly.edu. [128.238.66.6])
+        by smtp.gmail.com with ESMTPSA id o23sm1655403qko.12.2017.04.06.13.18.00
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 06 Apr 2017 13:18:00 -0700 (PDT)
+From: Nick Gregory <nmg355@nyu.edu>
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Mime-Version: 1.0 (Mac OS X Mail 10.3 \(3273\))
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ ngregory@nyu.edu
+Date: Thu, 6 Apr 2017 16:17:59 -0400
+References: <20170406201606.4090.81567@shiny-2.local>
+To: kurt@seifried.org
+In-Reply-To: <20170406201606.4090.81567@shiny-2.local>
+Message-Id: <B1778E05-5265-480F-8D26-F18BFB5AEA7A@nyu.edu>
+X-Mailer: Apple Mail (2.3273)
+
+I accept.
+
+> On Apr 6, 2017, at 4:16 PM, kurt@seifried.org wrote:
+>=20
+> This is a confirmation email sent from CVE request form at =
+https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use =
+(assuming you filled out the CVE form and want one, we can't use the =
+data until you accept the MITRE CVE Terms of Use).=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you =
+agree to the MITRE CVE Terms of Use and we will add it to the DWF MITRE =
+CVE Terms of Use acceptance data at =
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/mas=
+ter/Terms-Of-Use
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore =
+this message, however we may resend it at some point in the future, if =
+you don't want any future emails simply reply with "unsubscribe" or =
+"DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to =
+the block list so we don't spam you with these, please note that this =
+will prevent you from being able to accept the MITRE CVE Terms of Use =
+via the DWF automatically in future (you'll have to manually ask). But =
+again, if you have no idea what a CVE is then you can ignore this/ask to =
+be added to the block list with no problems.=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common =
+Vulnerabilities and Exposures (CVE=C2=AE), you hereby grant to The MITRE =
+Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a =
+perpetual, worldwide, non-exclusive, no-charge, royalty-free, =
+irrevocable copyright license to reproduce, prepare derivative works of, =
+publicly display, publicly perform, sublicense, and distribute such =
+materials and derivative works. Unless required by applicable law or =
+agreed to in writing, you provide such materials on an "AS IS" BASIS, =
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, =
+including, without limitation, any warranties or conditions of TITLE, =
+NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, =
+non-exclusive, no-charge, royalty-free, irrevocable copyright license to =
+reproduce, prepare derivative works of, publicly display, publicly =
+perform, sublicense, and distribute Common Vulnerabilities and Exposures =
+(CVE=C2=AE). Any copy you make for such purposes is authorized provided =
+that you reproduce MITRE's copyright designation and this license in any =
+such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE =
+ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION =
+HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, =
+ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL =
+WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY =
+WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY =
+RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A =
+PARTICULAR PURPOSE.
+>=20
+> A copy is available at =
+https://github.com/distributedweaknessfiling/DWF-Database/blob/master/Term=
+sOfUse.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org =
+manually with your question/concerns/etc.=20
+>=20
+

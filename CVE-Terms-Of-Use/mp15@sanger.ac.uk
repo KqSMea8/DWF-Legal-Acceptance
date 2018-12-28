@@ -1,0 +1,123 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.6.162 with SMTP id g31csp205702uag;
+        Wed, 10 May 2017 01:01:24 -0700 (PDT)
+X-Received: by 10.28.238.20 with SMTP id m20mr2606995wmh.121.1494403284086;
+        Wed, 10 May 2017 01:01:24 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1494403284; cv=none;
+        d=google.com; s=arc-20160816;
+        b=vIpQ9g5cXo5pkKAxEHGy8bnw+EQym93OpSgQzC18/IcdCYDhYsx/2H7/7EBSLjzgGY
+         96240+1m9Po9SZt9mN9TinMH8e6nbPkJyc8tAehaE8Aw41uYeKAfDPb9qJyh0wmld+qt
+         RM1EeeYOzKe7Dkj9HPxuDZPd+aVXyL5YhA4b1ZF8ElvupzDVA8rAjK6nLsIylfTIWb9x
+         7PBNkk07l9yp6Hc1jOlaNjwcb79Jf3+kooW2qVnsYh/oMfU9YGp5kNG6clHKL9L5H6+3
+         Uv+o9jvH5H+/p4ViNli9bHy/OUI7O9yBWsrhnclnWlvfcynkBtRfca18pUKsiWgQ0edc
+         kjiQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:in-reply-to:references:message-id:subject:date:mime-version
+         :content-transfer-encoding:from:arc-authentication-results;
+        bh=OKFyvpO+7tp3u71Xy7LhwTHHwmvT7zWjnqagslB8D2I=;
+        b=byDN7lcMS5ZmBgDOC8IiMQVduQxBM+6fQP8F5rHwdTk60IzrAs9t6/YwP/t0hO5LxQ
+         lyWQGEPg1Ny1+oLzRYo7qdExtygGX53mWS82qsdYp1R+iT47iQ+H/3FjbM+WvobRiQLE
+         YeroVpaZQa2242+0+lwNVNsOIUE292vXFPY8DSDw5Ug34a9n2U/wxK+JEUCdz8GLCzXQ
+         1iQbW6sMTfxrfKnONN/b8QQwNQjue2xsdVTovQxMtMqXNCvQEmsWl5t17kCw0PWzzFTA
+         DPrlhtgbT5j7ENcErUDE4OgY5/JEDqTKyIWlNgFZ5jJbjGe0WW5Crl0+bl3LvaX/fdoa
+         t5Fg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of mp15@sanger.ac.uk designates 193.62.202.243 as permitted sender) smtp.mailfrom=mp15@sanger.ac.uk
+Return-Path: <mp15@sanger.ac.uk>
+Received: from smtp.sanger.ac.uk (smtp.sanger.ac.uk. [193.62.202.243])
+        by mx.google.com with ESMTPS id g10si2447966wrb.118.2017.05.10.01.01.23
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 10 May 2017 01:01:24 -0700 (PDT)
+Received-SPF: pass (google.com: domain of mp15@sanger.ac.uk designates 193.62.202.243 as permitted sender) client-ip=193.62.202.243;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of mp15@sanger.ac.uk designates 193.62.202.243 as permitted sender) smtp.mailfrom=mp15@sanger.ac.uk
+Received: from sa4500.internal.sanger.ac.uk ([172.22.1.22] helo=mpdomain)
+	by intmail3b.internal.sanger.ac.uk with esmtp (Exim 4.80.1)
+	(envelope-from <mp15@sanger.ac.uk>)
+	id 1d8MYl-000AuR-09
+	for kurt@seifried.org; Wed, 10 May 2017 09:01:23 +0100
+From: Martin Pollard <mp15@sanger.ac.uk>
+Content-Type: text/plain;
+	charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+Mime-Version: 1.0 (1.0)
+Date: Wed, 10 May 2017 09:01:21 +0100
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for mp15@sanger.ac.uk
+Message-Id: <F1E5728A-C522-4CF3-80D3-E9F78B9A5924@sanger.ac.uk>
+References: <20170510023136.8102.95194@bigbox.local>
+In-Reply-To: <20170510023136.8102.95194@bigbox.local>
+To: kurt@seifried.org
+X-Mailer: iPhone Mail (14E304)
+X-Message-Source: sa4500.internal.sanger.ac.uk
+
+I accept
+
+> On 10 May 2017, at 03:31, <kurt@seifried.org> <kurt@seifried.org> wrote:
+>=20
+> This is a confirmation email sent from CVE request form at https://iwantac=
+ve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled=
+ out the CVE form and want one, we can't use the data until you accept the M=
+ITRE CVE Terms of Use).=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you agree t=
+o the MITRE CVE Terms of Use and we will add it to the DWF MITRE CVE Terms o=
+f Use acceptance data at https://github.com/distributedweaknessfiling/DWF-Le=
+gal-Acceptance/tree/master/Terms-Of-Use
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don't w=
+ant any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS=
+ EMAIL EVER AGAIN" and I'll add your email address to the block list so we d=
+on't spam you with these, please note that this will prevent you from being a=
+ble to accept the MITRE CVE Terms of Use via the DWF automatically in future=
+ (you'll have to manually ask). But again, if you have no idea what a CVE is=
+ then you can ignore this/ask to be added to the block list with no problems=
+.=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common Vulnerabilities an=
+d Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and a=
+ll CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare d=
+erivative works of, publicly display, publicly perform, sublicense, and dist=
+ribute such materials and derivative works. Unless required by applicable la=
+w or agreed to in writing, you provide such materials on an "AS IS" BASIS, W=
+ITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, incl=
+uding, without limitation, any warranties or conditions of TITLE, NON-INFRIN=
+GEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare d=
+erivative works of, publicly display, publicly perform, sublicense, and dist=
+ribute Common Vulnerabilities and Exposures (CVE??). Any copy you make for s=
+uch purposes is authorized provided that you reproduce MITRE's copyright des=
+ignation and this license in any such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REP=
+RESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRU=
+STEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR I=
+MPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORM=
+ATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERC=
+HANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-Da=
+tabase/blob/master/TermsOfUse.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org manually w=
+ith your question/concerns/etc.=20
+>=20
+
+
+
+-- 
+ The Wellcome Trust Sanger Institute is operated by Genome Research 
+ Limited, a charity registered in England with number 1021457 and a 
+ company registered in England with number 2742969, whose registered 
+ office is 215 Euston Road, London, NW1 2BE. 

@@ -1,0 +1,150 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.3.232 with SMTP id 95csp2258703uau;
+        Sun, 9 Jul 2017 04:22:15 -0700 (PDT)
+X-Received: by 10.80.179.137 with SMTP id s9mr8381271edd.57.1499599335046;
+        Sun, 09 Jul 2017 04:22:15 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1499599335; cv=none;
+        d=google.com; s=arc-20160816;
+        b=kD69cfBHwZz0Hx/ghKVyO/XiIQbXq4sw4b8OK95lHQROxAB74u1j2FY9rfKmkEedGQ
+         ooMMQr1ELhDiSQUxUT7KkSEkct+udTdSC1quFLAMF3AUEvD5+9H64/clpO46+ZYkws7A
+         mPNqBRO5hbg0dTwWVIj5JT9o/U7MR6sQ17Dq4NmlyYUueKXcKfLwuQom7/ay00R0uupp
+         83EetNCdoPiJjbdXxsBCOXGiZhWI6WAT66gdKPdKfFeW+BeP+SwkSZB1qkNmvvIsoXAE
+         k9gEP2QzoqQCzSLMJZirPisVz3LjQgdNJlxEzfy0bzgeMqafJT4eZwBqhd9mhnnOe4vE
+         X/+A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:references:in-reply-to
+         :user-agent:organization:message-id:date:subject:to:from
+         :arc-authentication-results;
+        bh=i8F/OZfRPuRSM8nZv+o7GxQBzmCypqojnwePJQRGrjY=;
+        b=no4t17yOz2IOUkfqal8ziC55Jdh//6MVmik4By3/TJ52C05Klaue64Sqs741emQiAI
+         RZWF+TB+8CxgTS/nuBnx9lRegJ+1Im4hDZh+7RS578oIXXFkqtjyZubhuFZFC5C7dF7k
+         H9yG9QD6Py4ygCUZNlJ6FLFhHosd7bgQ+hpjUnJGcHyOjouhGFlmuEvTK5AMOu85ATyd
+         yByOJR0bCgmFeWjfALCefm5WcpWpHWbuRfAdhAxN6lKTNE1b+rHNjbr7ZN41M3l1Ehj3
+         OgvbAaDnsW8zQad8JFpaqc7YYLpnKEXgBwGeWr3UzPiKdchgO/Z0rkHrE3IvGpFE+apH
+         RLMg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=neutral (google.com: 194.134.25.75 is neither permitted nor denied by domain of groot@kde.org) smtp.mailfrom=groot@kde.org
+Return-Path: <groot@kde.org>
+Received: from smtp05.mail.online.nl (smtp05.mail.online.nl. [194.134.25.75])
+        by mx.google.com with ESMTP id 30si6760092edz.45.2017.07.09.04.22.14
+        for <kurt@seifried.org>;
+        Sun, 09 Jul 2017 04:22:14 -0700 (PDT)
+Received-SPF: neutral (google.com: 194.134.25.75 is neither permitted nor denied by domain of groot@kde.org) client-ip=194.134.25.75;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 194.134.25.75 is neither permitted nor denied by domain of groot@kde.org) smtp.mailfrom=groot@kde.org
+Received: from beastie.bionicmutton.org (s55969a9e.adsl.online.nl [85.150.154.158])
+	by smtp05.mail.online.nl (Postfix) with ESMTP id 8FD68200043
+	for <kurt@seifried.org>; Sun,  9 Jul 2017 13:22:14 +0200 (CEST)
+From: Adriaan de Groot <groot@kde.org>
+To: kurt@seifried.org
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for groot@kde.org
+Date: Sun, 09 Jul 2017 13:22:14 +0200
+Message-ID: <1565519.iMpOCAIYC4@beastie.bionicmutton.org>
+Organization: KDE.org
+User-Agent: KMail/4.14.10 (FreeBSD/10.3-STABLE; KDE/4.14.30; amd64; ; )
+In-Reply-To: <20170709032203.2470.32562@shiny-2.local>
+References: <20170709032203.2470.32562@shiny-2.local>
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="iso-8859-1"
+
+I accept
+
+On Saturday 08 July 2017 21:22:03 you wrote:
+> This is a confirmation email sent from CVE request form at
+> https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Us=
+e
+> (assuming you filled out the CVE form and want one, we can't use the =
+data
+> until you accept the MITRE CVE Terms of Use).
+>=20
+> Simply quote the email and reply with "I accept" at the top if you ag=
+ree to
+> the MITRE CVE Terms of Use and we will add a copy of the email to the=
+ DWF
+> MITRE CVE Terms of Use acceptance data at
+> https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tre=
+e/mast
+> er/Terms-Of-Use
+>=20
+> The reason we use a complete copy of the email is that it provides an=
+
+> artifact showing that the email address accepted the Terms of Use, wh=
+en
+> they were accepted and so on.
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore =
+this
+> message, however we may resend it at some point in the future, if you=
+ don't
+> want any future emails simply reply with "unsubscribe" or "DON'T SEND=
+ ME
+> THIS EMAIL EVER AGAIN" and I'll add your email address to the block l=
+ist so
+> we don't spam you with these, please note that this will prevent you =
+from
+> being able to accept the MITRE CVE Terms of Use via the DWF automatic=
+ally
+> in future (you'll have to manually ask). But again, if you have no id=
+ea
+> what a CVE is then you can ignore this/ask to be added to the block l=
+ist
+> with no problems.
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common Vulnerabiliti=
+es and
+> Exposures (CVE=C2=AE), you hereby grant to The MITRE Corporation (MIT=
+RE) and
+> all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-excl=
+usive,
+> no-charge, royalty-free, irrevocable copyright license to reproduce,
+> prepare derivative works of, publicly display, publicly perform,
+> sublicense, and distribute such materials and derivative works. Unles=
+s
+> required by applicable law or agreed to in writing, you provide such
+> materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF AN=
+Y
+> KIND, either express or implied, including, without limitation, any
+> warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY,=
+ or
+> FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclus=
+ive,
+> no-charge, royalty-free, irrevocable copyright license to reproduce,
+> prepare derivative works of, publicly display, publicly perform,
+> sublicense, and distribute Common Vulnerabilities and Exposures (CVE=C2=
+=AE).
+> Any copy you make for such purposes is authorized provided that you
+> reproduce MITRE's copyright designation and this license in any such =
+copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE=
+ ARE
+> PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE=
+/SHE
+> REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BO=
+ARD OF
+> TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, E=
+XPRESS
+> OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF=
+ THE
+> INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRA=
+NTIES
+> OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> A copy is available at
+> https://github.com/distributedweaknessfiling/DWF-Database/blob/master=
+/Terms
+> OfUse.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org manua=
+lly
+> with your question/concerns/etc.
+

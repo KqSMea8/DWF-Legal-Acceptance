@@ -1,0 +1,334 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a4f:64c4:0:0:0:0:0 with SMTP id y187-v6csp1910118ivb;
+        Tue, 1 May 2018 10:22:23 -0700 (PDT)
+X-Google-Smtp-Source: AB8JxZoo9B4av/B/AdShrQJaue4k98jZ0uQeCNWxzCGlFO9iS2sUN1ZWhLn8uTZP8qFJFfW2ZLBa
+X-Received: by 2002:adf:9a54:: with SMTP id z78-v6mr11872848wrb.235.1525195343413;
+        Tue, 01 May 2018 10:22:23 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1525195343; cv=none;
+        d=google.com; s=arc-20160816;
+        b=OVOQBCx3I9h4k1AzHyrdC/WceQR3iHYUKC71JsmaXBcbbng9YjL8HGOc8i57ft6C1o
+         +Zq2RzhsuZlb26SeFuBvlMkVWTbh9jed7y67g+XRtFZSaCMFt69m+S/lHV5mXUQ1PDn8
+         vmy8TPJ0IAwtrT+lvDGe0GN6gS7KOqQso5HOkyp1SWnqn60DYlrqXbyTAB7yYnj/4C1O
+         VGfHSBJR0uvl/LbI7WNtK2z/ojTysCd9cElvfAcoEfOJST6Vj0y2IBCOnRZTT1S1WcAj
+         fq/yCMvxnbpr0/8YRoetiSoPxXXBne2DaW01Se1uR2KtxWLc8upiMrKGz3+tThMv/eGp
+         Y2cg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:spamdiagnosticmetadata:spamdiagnosticoutput
+         :content-language:accept-language:in-reply-to:references:message-id
+         :date:thread-index:thread-topic:subject:to:from:dkim-signature
+         :dkim-signature:arc-authentication-results;
+        bh=cIkTmYhfVIT1afUc9xU3CV7nb3ZP7K0HXTpQOFaTzo8=;
+        b=RU83Mxm6i4btCRXuOfrdQAqMy3FJ4xexNAbAAlyndtksTnlY2nlsUwdsYqf1wvLvPI
+         FVUb8osFoaZwQd8O5zV9dTW8dryi3ASui8dzCRhbvdljrDRhatyqIEhfR5oTaD5Fgaby
+         r6mdPGFPtoMeGnJkgZVI8epd8Xn25aPmU15/DlXl/5tr9PdDjjbFurfW5C3YMfV4Ym8A
+         s0aMWF1+3VnmkHJW4tDkUBAB8vA1VZVFmcW9GUTpWvllDGu2mNkqoo7niZ4IbEBHww69
+         RScKiW8/t1mfccQ9mKPysKukNeLlWUJs2iKxAoHxnzK4HKpG95KRuXu5p1L8G/ulVNU9
+         9nrA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@telekom.de header.s=dtag1 header.b=TJ4+0oTw;
+       dkim=pass header.i=@telekom.onmicrosoft.de header.s=selector1-telekom-onmicrosoft-de header.b=W7CvXHXa;
+       spf=pass (google.com: best guess record for domain of robin.verton@telekom.de designates 80.149.113.251 as permitted sender) smtp.mailfrom=Robin.Verton@telekom.de
+Return-Path: <Robin.Verton@telekom.de>
+Received: from MAILOUT21.telekom.de (MAILOUT21.telekom.de. [80.149.113.251])
+        by mx.google.com with ESMTPS id l187si1174264wma.69.2018.05.01.10.22.23
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 01 May 2018 10:22:23 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of robin.verton@telekom.de designates 80.149.113.251 as permitted sender) client-ip=80.149.113.251;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@telekom.de header.s=dtag1 header.b=TJ4+0oTw;
+       dkim=pass header.i=@telekom.onmicrosoft.de header.s=selector1-telekom-onmicrosoft-de header.b=W7CvXHXa;
+       spf=pass (google.com: best guess record for domain of robin.verton@telekom.de designates 80.149.113.251 as permitted sender) smtp.mailfrom=Robin.Verton@telekom.de
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+  d=telekom.de; i=@telekom.de; q=dns/txt; s=dtag1;
+  t=1525195343; x=1556731343;
+  h=from:to:subject:date:message-id:references:in-reply-to:
+   mime-version;
+  bh=cIkTmYhfVIT1afUc9xU3CV7nb3ZP7K0HXTpQOFaTzo8=;
+  b=TJ4+0oTwgf9KY+4tmrcGVmF1h9SVZVNrcXiI5EItS9r6XH4MNrBEN6TU
+   4VePBhYaKJyTI5RuW9UKTEn2dAQXx2JgoppBPaxuXsxTGR5/oTKNouBt1
+   tYtlxQK5V2HDeSwsneLpbugiRxUm/L7fsUZUkM6v46ucOAGWiUGhQZxM5
+   E00utcrNiJQjp4UrncyO8ic/+vZI63SwpERfBQ6xT6D0S5F92U5sRBfXO
+   JKnCsb2ehni27IZJi+eHMIq2ORGfrUVfMNF4cqeoQZsGVFknNGZTF4+5a
+   LRmiqZuySjoRtILm7bMIQYk62/mOEKiyGsseqTaNVWkagNFBCBPeHa6jl
+   w==;
+Received: from qdezc2.de.t-internal.com ([10.171.255.37])
+  by MAILOUT21.telekom.de with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384; 01 May 2018 19:22:22 +0200
+X-IronPort-AV: E=Sophos;i="5.48,405,1517871600"; 
+   d="scan'208,217";a="798041114"
+Received: from he105871.emea1.cds.t-internal.com ([10.169.118.68])
+  by qde0ps.de.t-internal.com with ESMTP/TLS/AES256-SHA; 01 May 2018 19:22:22 +0200
+Received: from HE105850.EMEA1.cds.t-internal.com (10.169.118.24) by
+ HE105871.emea1.cds.t-internal.com (10.169.118.68) with Microsoft SMTP Server
+ (TLS) id 15.0.1365.1; Tue, 1 May 2018 19:22:22 +0200
+Received: from HE106564.emea1.cds.t-internal.com (10.171.40.16) by
+ HE105850.EMEA1.cds.t-internal.com (10.169.118.24) with Microsoft SMTP Server
+ (TLS) id 15.0.1365.1 via Frontend Transport; Tue, 1 May 2018 19:22:22 +0200
+Received: from GER01-LEJ-obe.outbound.protection.outlook.de (51.5.80.22) by
+ O365mail01.telekom.de (172.30.0.234) with Microsoft SMTP Server (TLS) id
+ 15.0.1365.1; Tue, 1 May 2018 19:22:02 +0200
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=telekom.onmicrosoft.de; s=selector1-telekom-onmicrosoft-de;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=cIkTmYhfVIT1afUc9xU3CV7nb3ZP7K0HXTpQOFaTzo8=;
+ b=W7CvXHXa50+rrJnmsHXSUUeZYmIIVZ/E5f3yavhoCBU0g5ZRMrmbrPvQtV7ZCOORymoxcBgdaUUHdjcQ4qfsnwiDPBRe41zZo4ZPxYwLnQGy8RyvIU4HkQwp1f84M2ypD19MVOju/RjR4eAT+abm8BD4ddbq64s7eCl9SO0TlpA=
+Received: from LEJPR01MB1258.DEUPRD01.PROD.OUTLOOK.DE (10.158.147.148) by
+ LEJPR01MB1258.DEUPRD01.PROD.OUTLOOK.DE (10.158.147.148) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id
+ 15.20.715.15; Tue, 1 May 2018 17:22:21 +0000
+Received: from LEJPR01MB1258.DEUPRD01.PROD.OUTLOOK.DE
+ ([fe80::3d3d:9d33:ae21:848f]) by LEJPR01MB1258.DEUPRD01.PROD.OUTLOOK.DE
+ ([fe80::3d3d:9d33:ae21:848f%14]) with mapi id 15.20.0715.023; Tue, 1 May 2018
+ 17:22:21 +0000
+From: <Robin.Verton@telekom.de>
+To: <kurt@seifried.org>
+Subject: AW: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ robin.verton@telekom.de
+Thread-Topic: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ robin.verton@telekom.de
+Thread-Index: AQHT4L/cVR+gBNouGUus8xmikMj8t6QbIGl3
+Date: Tue, 1 May 2018 17:22:21 +0000
+Message-ID: <LEJPR01MB1258CE1F1BC22612826EF638E6810@LEJPR01MB1258.DEUPRD01.PROD.OUTLOOK.DE>
+References: <20180430201307.1276.51102@slab.local>
+In-Reply-To: <20180430201307.1276.51102@slab.local>
+Accept-Language: de-DE, en-US
+Content-Language: de-DE
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=Robin.Verton@telekom.de; 
+x-originating-ip: [93.244.43.24]
+x-ms-publictraffictype: Email
+x-microsoft-exchange-diagnostics: 1;LEJPR01MB1258;7:fhLZ4DlucDVEbqnPwn78r1EffKY/+fsbyxZ1UwPGXjtreCEyPq/oQ3QXqoCWj4o06Z53ohUI99JYprX3nVogJ6rZ4idhdFZCkRw1RVdvyCbhsxBam/V3krOKRUffLBowj87apJwmP3+RD9v3dAdTFn0+YMvXyDw9c92EmdY4RvQDc8bo2Z/WaipeZ3BlYZGjgZwL9Ivp3kfmNr07kYMy8rkSiA5ErU6t24aZ+Dmjz1tCPqmYQN7MFABWLq/U6CUC
+x-ms-exchange-antispam-srfa-diagnostics: SOS;
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(7020095)(4652020)(4534165)(4627221)(201703031133081)(201702281549075)(5600026)(2017052603328)(7153060)(7193020);SRVR:LEJPR01MB1258;
+x-ms-traffictypediagnostic: LEJPR01MB1258:
+x-microsoft-antispam-prvs: <LEJPR01MB12589951B668B41AD1417E30E6810@LEJPR01MB1258.DEUPRD01.PROD.OUTLOOK.DE>
+x-exchange-antispam-report-test: UriScan:(166708455590820)(260130700054247);
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(6040522)(2401047)(8121501046)(5005006)(3231254)(944501410)(52105095)(10201501046)(3002001)(93006095)(93001095)(6041310)(201703131423095)(201702281528075)(20161123555045)(201703061421075)(201703061406153)(20161123560045)(20161123564045)(20161123562045)(20161123558120)(6072148)(201708071742011);SRVR:LEJPR01MB1258;BCL:0;PCL:0;RULEID:;SRVR:LEJPR01MB1258;
+x-forefront-prvs: 06592CCE58
+x-forefront-antispam-report: SFV:NSPM;SFS:(10009020)(376002)(346002)(39860400002)(39380400002)(366004)(396003)(13624006)(189003)(199004)(38564003)(28244002)(5660300001)(446003)(86362001)(8676002)(236005)(9686003)(6306002)(54896002)(2900100001)(5640700003)(6116002)(66066001)(476003)(5890100001)(2501003)(5250100002)(68736007)(106356001)(3846002)(53936002)(8936002)(5180700001)(6606003)(486006)(3660700001)(2351001)(3280700002)(316002)(11346002)(19627405001)(55016002)(478600001)(81166006)(7736002)(97736004)(26005)(6916009)(2906002)(81156014)(76176011)(1730700003)(606006)(14454004)(7696005)(52396003)(72206003)(105586002)(102836004)(186003)(966005)(75402003)(59450400001)(33656002)(74482002)(221513004)(222073002);DIR:OUT;SFP:1101;SCL:1;SRVR:LEJPR01MB1258;H:LEJPR01MB1258.DEUPRD01.PROD.OUTLOOK.DE;FPR:;SPF:None;LANG:en;PTR:InfoNoRecords;MX:1;A:1;
+received-spf: None (protection.outlook.com: telekom.de does not designate
+ permitted sender hosts)
+x-microsoft-antispam-message-info: RphnPXhZk5UZLY/Jv49LM3H9pW3X+imtIBrZKAQTAMQny2I37U43VqcA98CAj6+296T1826EIgQ99p3+piL6AZmQ4u67s7et+hCAo9nSMi3v6Efw60o8j5UKhkGBDgb808w+h5vNr88Js3iGMtij6Wqn4Qq+sS07FNojmWZJ/5IOoO7ce3/1cJO95+2CWK0W
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_LEJPR01MB1258CE1F1BC22612826EF638E6810LEJPR01MB1258DEUP_"
+MIME-Version: 1.0
+X-MS-Office365-Filtering-Correlation-Id: c8fe9256-8013-4b0c-7fe4-08d5af881925
+X-MS-Exchange-CrossTenant-Network-Message-Id: c8fe9256-8013-4b0c-7fe4-08d5af881925
+X-MS-Exchange-CrossTenant-originalarrivaltime: 01 May 2018 17:22:21.4312
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: bde4dffc-4b60-4cf6-8b04-a5eeb25f5c4f
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: LEJPR01MB1258
+Return-Path: Robin.Verton@telekom.de
+X-OriginatorOrg: telekom.de
+
+--_000_LEJPR01MB1258CE1F1BC22612826EF638E6810LEJPR01MB1258DEUP_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+I accept.
+
+________________________________
+Von: kurt@seifried.org <kurt@seifried.org>
+Gesendet: Montag, 30. April 2018 22:13:07
+An: Verton, Robin
+Betreff: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for robin.verto=
+n@telekom.de
+
+This is a confirmation email sent from CVE request form at https://iwantacv=
+e.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled=
+ out the CVE form and want one, we can't use the data until you accept the =
+MITRE CVE Terms of Use).
+
+Simply quote the email and reply with "I accept" at the top if you agree to=
+ the MITRE CVE Terms of Use and we will add a copy of the email to the DWF =
+MITRE CVE Terms of Use acceptance data at https://github.com/distributedwea=
+knessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+
+The reason we use a complete copy of the email is that it provides an artif=
+act showing that the email address accepted the Terms of Use, when they wer=
+e accepted and so on.
+
+This data cannot be removed from the Internet, or from our git repo. If you=
+ are concerned about your personal information (in the form of your email a=
+ddress and any attached information you include like your name) please do n=
+ot submit it, setup an email address and use that. I cannot comply with GDP=
+R requests to remove your information due to the nature of git, and my inab=
+ility to confirm if you are a european or not, so if you don't want it in t=
+here, don't reply with "I accept".
+
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don't =
+want any future emails simply reply with "unsubscribe" or "DON'T SEND ME TH=
+IS EMAIL EVER AGAIN" and I'll add your email address to the block list so w=
+e don't spam you with these, please note that this will prevent you from be=
+ing able to accept the MITRE CVE Terms of Use via the DWF automatically in =
+future (you'll have to manually ask). But again, if you have no idea what a=
+ CVE is then you can ignore this/ask to be added to the block list with no =
+problems.
+
+MITRE CVE Terms of Use
+
+LICENSE
+
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+ Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and a=
+ll CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable copyright license to reproduce, prepar=
+e derivative works of, publicly display, publicly perform, sublicense, and =
+distribute such materials and derivative works. Unless required by applicab=
+le law or agreed to in writing, you provide such materials on an "AS IS" BA=
+SIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implie=
+d, including, without limitation, any warranties or conditions of TITLE, NO=
+N-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare=
+ derivative works of, publicly display, publicly perform, sublicense, and d=
+istribute Common Vulnerabilities and Exposures (CVE??). Any copy you make f=
+or such purposes is authorized provided that you reproduce MITRE's copyrigh=
+t designation and this license in any such copy.
+
+DISCLAIMERS
+
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE RE=
+PRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF T=
+RUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS =
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE I=
+NFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES O=
+F MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+A copy is available at https://github.com/distributedweaknessfiling/DWF-Leg=
+al-Acceptance/blob/master/Terms-Of-Use.md
+
+To contact the DWF either hit reply, or email kurt@seifried.org manually wi=
+th your question/concerns/etc.
+
+
+--_000_LEJPR01MB1258CE1F1BC22612826EF638E6810LEJPR01MB1258DEUP_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Helvetica,sans-serif;" dir=3D"ltr">
+<p style=3D"margin-top:0;margin-bottom:0">I accept.</p>
+</div>
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>Von:</b> kurt@seifried.org &lt;=
+kurt@seifried.org&gt;<br>
+<b>Gesendet:</b> Montag, 30. April 2018 22:13:07<br>
+<b>An:</b> Verton, Robin<br>
+<b>Betreff:</b> DWF/CVE - Acceptance of MITRE Terms of Use for CVE for robi=
+n.verton@telekom.de</font>
+<div>&nbsp;</div>
+</div>
+<div class=3D"BodyFragment"><font size=3D"2"><span style=3D"font-size:11pt;=
+">
+<div class=3D"PlainText">This is a confirmation email sent from CVE request=
+ form at
+<a href=3D"https://iwantacve.org/">https://iwantacve.org/</a> asking you to=
+ accept the MITRE CVE Terms of Use (assuming you filled out the CVE form an=
+d want one, we can't use the data until you accept the MITRE CVE Terms of U=
+se).
+<br>
+<br>
+Simply quote the email and reply with &quot;I accept&quot; at the top if yo=
+u agree to the MITRE CVE Terms of Use and we will add a copy of the email t=
+o the DWF MITRE CVE Terms of Use acceptance data at
+<a href=3D"https://github.com/distributedweaknessfiling/DWF-Legal-Acceptanc=
+e/tree/master/Terms-Of-Use">
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/mast=
+er/Terms-Of-Use</a><br>
+<br>
+The reason we use a complete copy of the email is that it provides an artif=
+act showing that the email address accepted the Terms of Use, when they wer=
+e accepted and so on.
+<br>
+<br>
+This data cannot be removed from the Internet, or from our git repo. If you=
+ are concerned about your personal information (in the form of your email a=
+ddress and any attached information you include like your name) please do n=
+ot submit it, setup an email address
+ and use that. I cannot comply with GDPR requests to remove your informatio=
+n due to the nature of git, and my inability to confirm if you are a europe=
+an or not, so if you don't want it in there, don't reply with &quot;I accep=
+t&quot;.
+<br>
+<br>
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don't =
+want any future emails simply reply with &quot;unsubscribe&quot; or &quot;D=
+ON'T SEND ME THIS EMAIL EVER AGAIN&quot; and I'll add
+ your email address to the block list so we don't spam you with these, plea=
+se note that this will prevent you from being able to accept the MITRE CVE =
+Terms of Use via the DWF automatically in future (you'll have to manually a=
+sk). But again, if you have no idea
+ what a CVE is then you can ignore this/ask to be added to the block list w=
+ith no problems.
+<br>
+<br>
+MITRE CVE Terms of Use<br>
+<br>
+LICENSE<br>
+<br>
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+ Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and a=
+ll CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable
+ copyright license to reproduce, prepare derivative works of, publicly disp=
+lay, publicly perform, sublicense, and distribute such materials and deriva=
+tive works. Unless required by applicable law or agreed to in writing, you =
+provide such materials on an &quot;AS
+ IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expre=
+ss or implied, including, without limitation, any warranties or conditions =
+of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PU=
+RPOSE.<br>
+<br>
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare=
+ derivative works of, publicly display, publicly perform, sublicense, and d=
+istribute Common Vulnerabilities
+ and Exposures (CVE??). Any copy you make for such purposes is authorized p=
+rovided that you reproduce MITRE's copyright designation and this license i=
+n any such copy.<br>
+<br>
+DISCLAIMERS<br>
+<br>
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN &quot;AS IS&quot; BASIS AND THE CONTRIBUTOR, THE ORGANIZATION=
+ HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS =
+BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES,
+ DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO =
+ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY =
+RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTIC=
+ULAR PURPOSE.<br>
+<br>
+A copy is available at <a href=3D"https://github.com/distributedweaknessfil=
+ing/DWF-Legal-Acceptance/blob/master/Terms-Of-Use.md">
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/mast=
+er/Terms-Of-Use.md</a><br>
+<br>
+To contact the DWF either hit reply, or email kurt@seifried.org manually wi=
+th your question/concerns/etc.
+<br>
+<br>
+</div>
+</span></font></div>
+</body>
+</html>
+
+--_000_LEJPR01MB1258CE1F1BC22612826EF638E6810LEJPR01MB1258DEUP_--

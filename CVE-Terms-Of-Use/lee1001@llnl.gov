@@ -1,0 +1,390 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a4f:ca81:0:0:0:0:0 with SMTP id n1-v6csp1038520ivl;
+        Fri, 27 Apr 2018 09:57:57 -0700 (PDT)
+X-Google-Smtp-Source: AB8JxZp4wCwccgKwif17pKqcwC1jMkhYCOjPlws6oJd8O69M33m/OAy/Ph7JOTvPa0ZgGMqFWWEV
+X-Received: by 2002:a65:600a:: with SMTP id m10-v6mr2728967pgu.281.1524848277931;
+        Fri, 27 Apr 2018 09:57:57 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1524848277; cv=none;
+        d=google.com; s=arc-20160816;
+        b=zG2bQYIedpl3Yh6WldzVCvruNP7i2E1+LoS7Orp61nTKjciDNpTXb21+iVhgMZMzXp
+         6NB0QqnQSeAOueV/IFdhvYKAKVWv5irzQNi8p2EihRDNWnnQiIl/U0iBikw+stpE08GF
+         LyxsUqlwkFAtBio7DG+GggjJDIzF0t5lXA+2mEKR/IAPXOMmJRMG15fY+WL6p+4sk7GF
+         V+moi+lA/q/hgwlklPs9gDkxVINIUI62sclnxqAFdUwkaEkBJwnAnnMtlAr8tLoDkDuA
+         WBJgeBtUKwxvI9gYXP2ET9nbYkAgMXiCZ6GF5zIeLLsIX7ToUDh/z+BrADyunXwCX4Jn
+         4R1g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:spamdiagnosticmetadata:spamdiagnosticoutput
+         :content-language:accept-language:in-reply-to:references:message-id
+         :date:thread-index:thread-topic:subject:to:from:dkim-signature
+         :dkim-signature:arc-authentication-results;
+        bh=h5+4TIbjKM4Zv1zIQynkBoFpWZeQiD9zGpvGmnEtD54=;
+        b=aZix5GeTdgH9Rza0Jxqf/EVPAfV4gxf7wtsOXeeiIzl18zysYbSidhl3k3nAWPv/TL
+         fCQ7iGKroo5xxn/ujsGsOUIIDOsXpRlbSSvQE/C+wgqRw91ln5OGecRb+s7ebGZ5WKpb
+         EoHIs1abjS2hrP02gCr2FajyqWNAMSq8IyuYs/F9FudyB3DOR/LPT4KGw4YFGhdAnzfz
+         J2TXBGb9mKn4KPUr6Mgy44p9sUm4QY7yKzeQny8cF7thZBKjFGtBdIb8udPcB+JU1bdy
+         hpGAskI8b3QN1/lGADg1Irr18evgIkObJVknTW6FkDA/SmOpVoeXNKjU+j8psUpJ2cTf
+         XHoQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@llnl.gov header.s=08082017 header.b=kor6dHvt;
+       dkim=pass header.i=@doellnl.onmicrosoft.com header.s=selector1-llnl-gov header.b=ANxwcmTf;
+       spf=pass (google.com: domain of lee1001@llnl.gov designates 128.15.143.181 as permitted sender) smtp.mailfrom=lee1001@llnl.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=llnl.gov
+Return-Path: <lee1001@llnl.gov>
+Received: from prdesa-1.llnl.gov (prdesa-1.llnl.gov. [128.15.143.181])
+        by mx.google.com with ESMTPS id k15si1585723pfi.54.2018.04.27.09.57.57
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 27 Apr 2018 09:57:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of lee1001@llnl.gov designates 128.15.143.181 as permitted sender) client-ip=128.15.143.181;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@llnl.gov header.s=08082017 header.b=kor6dHvt;
+       dkim=pass header.i=@doellnl.onmicrosoft.com header.s=selector1-llnl-gov header.b=ANxwcmTf;
+       spf=pass (google.com: domain of lee1001@llnl.gov designates 128.15.143.181 as permitted sender) smtp.mailfrom=lee1001@llnl.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=llnl.gov
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=llnl.gov; i=@llnl.gov; q=dns/txt; s=08082017;
+  t=1524848277; x=1556384277;
+  h=from:to:subject:date:message-id:references:in-reply-to:
+   mime-version;
+  bh=mM92huqb8pyK22AsO6VVAhQtezpKsP3KoBwwTY47yAE=;
+  b=kor6dHvtVNUDRhicvbLw040sc4fv839CIhOKpZXKJbiFN9LRxYoVIsZJ
+   en5WfqHhxKbfGyP8LB8nXN+MQqoAuTNVQZbMkSdQMfBKKN6UsqB0jHa3Y
+   Jacq3lznrNvCds30mmplE1xI+iofnG0VPspoF1b0DpdlP/2Ht83RCGmES
+   c=;
+X-Attachments: smime.p7s
+Received: from prdexhub-04-snat.llnl.gov (HELO PRDEXHUB-04.the-lab.llnl.gov) ([128.15.143.216])
+  by prdesa-1.llnl.gov with ESMTP; 27 Apr 2018 09:57:57 -0700
+Received: from GCC01-CY1-obe.outbound.protection.outlook.com (23.103.198.17)
+ by webmail.llnl.gov (128.15.143.143) with Microsoft SMTP Server (TLS) id
+ 14.3.361.1; Fri, 27 Apr 2018 09:57:56 -0700
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=doellnl.onmicrosoft.com; s=selector1-llnl-gov;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=h5+4TIbjKM4Zv1zIQynkBoFpWZeQiD9zGpvGmnEtD54=;
+ b=ANxwcmTfIp0vSDO+tZpqSiaP5AtdnBfBa3pvHuuysbOUBHXhoaa3VdodtkRXwQUL30MvA1UpnruCDoIh6uo30704Oe3mfC75pBLFWdlMWk126pBNgJJmr8oV0MLoxcuprPczEaPkcU08TkbmyxIbn284rbFh6aN35zcpWsi/T/I=
+Received: from CY1PR09MB0937.namprd09.prod.outlook.com (10.163.89.143) by
+ CY1PR09MB0940.namprd09.prod.outlook.com (10.163.89.146) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id
+ 15.20.715.18; Fri, 27 Apr 2018 16:57:55 +0000
+Received: from CY1PR09MB0937.namprd09.prod.outlook.com
+ ([fe80::edad:66a5:4eed:8c9c]) by CY1PR09MB0937.namprd09.prod.outlook.com
+ ([fe80::edad:66a5:4eed:8c9c%14]) with mapi id 15.20.0715.018; Fri, 27 Apr
+ 2018 16:57:55 +0000
+From: "Lee, Ian" <lee1001@llnl.gov>
+To: "kurt@seifried.org" <kurt@seifried.org>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ lee1001@llnl.gov
+Thread-Topic: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ lee1001@llnl.gov
+Thread-Index: AQHT1FhaeacITkwbSU+iJ/l2GmeAMqQU6MoA
+Date: Fri, 27 Apr 2018 16:57:55 +0000
+Message-ID: <C363641B-C3D0-447E-952E-AADC5A1029EA@llnl.gov>
+References: <20180415012300.5070.32281@slab.local>
+In-Reply-To: <20180415012300.5070.32281@slab.local>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=lee1001@llnl.gov; 
+x-originating-ip: [128.115.190.43]
+x-ms-publictraffictype: Email
+x-microsoft-exchange-diagnostics: 1;CY1PR09MB0940;7:24EJgb6aHhk2y1t3q3Z19JmSkMPWD2b8fF4cV1xR7CmFGlq4RokHdGRSGX/RlMWaloG2IQaAlZXXDVFzekUbRR2FsS37QLZPqndEU3Y2B/mMiuD9XA5cAKhtW0UFqBm5lJzIA+WyBQGTEX1+gIKidaNvGwZsqly8MMFL1VnTon282FiXT1hjzUZGTPQt/Xap+sPnXZs81bzoWJqOASUWmpLGHV42f3TJT/o37sOzB603sA9hst+UHu3tZxysCwXZ
+x-ms-exchange-antispam-srfa-diagnostics: SOS;
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(7020095)(4652020)(5600026)(4534165)(4627221)(201703031133081)(201702281549075)(2017052603328)(7153060)(49563074)(7193020);SRVR:CY1PR09MB0940;
+x-ms-traffictypediagnostic: CY1PR09MB0940:
+x-microsoft-antispam-prvs: <CY1PR09MB0940C95E6770069EEF0CC433C48D0@CY1PR09MB0940.namprd09.prod.outlook.com>
+x-exchange-antispam-report-test: UriScan:(166708455590820);
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(102415395)(6040522)(2401047)(8121501046)(5005006)(3002001)(93006095)(93001095)(3231232)(944501410)(52105095)(10201501046)(6041310)(201703131423095)(201702281528075)(20161123555045)(201703061421075)(201703061406153)(20161123564045)(20161123560045)(20161123558120)(20161123562045)(6072148)(201708071742011);SRVR:CY1PR09MB0940;BCL:0;PCL:0;RULEID:;SRVR:CY1PR09MB0940;
+x-forefront-prvs: 0655F9F006
+x-forefront-antispam-report: SFV:NSPM;SFS:(10019020)(346002)(366004)(39860400002)(39380400002)(396003)(376002)(13624006)(28244002)(199004)(38564003)(189003)(5640700003)(6486002)(54896002)(25786009)(6306002)(6512007)(53546011)(53936002)(82746002)(6916009)(83716003)(102836004)(316002)(86362001)(26005)(2906002)(2616005)(2351001)(97736004)(476003)(5180700001)(11346002)(6436002)(446003)(236005)(2900100001)(486006)(7736002)(229853002)(1730700003)(8676002)(81156014)(81166006)(8936002)(5660300001)(99286004)(606006)(66066001)(966005)(5250100002)(3280700002)(5890100001)(6506007)(2501003)(106356001)(3660700001)(478600001)(105586002)(6246003)(14454004)(186003)(59450400001)(36756003)(76176011)(99936001)(33656002)(3846002)(6116002)(68736007)(221513004)(222073002);DIR:OUT;SFP:1102;SCL:1;SRVR:CY1PR09MB0940;H:CY1PR09MB0937.namprd09.prod.outlook.com;FPR:;SPF:None;LANG:en;PTR:InfoNoRecords;A:1;MX:1;
+received-spf: None (protection.outlook.com: llnl.gov does not designate
+ permitted sender hosts)
+x-microsoft-antispam-message-info: OM3P4FwuTsgq4mmh/TdUDhsgfmjTbUZ1uuuJRETuZ0uhIIWiHOCEVTNnCXq6SE8ItLkkVlFkEDpxvxN5R34AQP4akN/NPeY6BQP69MBmZHPvQjCG0c+wKCpdksXtEI53FfpzjPpRuWRPRrM4O9UAQgUM+ENNFtKNMgcQmsH7k7vpg09AEVk7Nie0CW2XK7qQ
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/signed;
+	boundary="Apple-Mail=_AAA94A45-BD56-4C13-ACC5-DD597B4B377D";
+	protocol="application/pkcs7-signature"; micalg=sha1
+MIME-Version: 1.0
+X-MS-Office365-Filtering-Correlation-Id: 47436599-b1c1-41ac-287d-08d5ac6005a6
+X-MS-Exchange-CrossTenant-Network-Message-Id: 47436599-b1c1-41ac-287d-08d5ac6005a6
+X-MS-Exchange-CrossTenant-originalarrivaltime: 27 Apr 2018 16:57:55.3468
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: a722dec9-ae4e-4ae3-9d75-fd66e2680a63
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CY1PR09MB0940
+Return-Path: lee1001@llnl.gov
+X-OriginatorOrg: llnl.gov
+
+--Apple-Mail=_AAA94A45-BD56-4C13-ACC5-DD597B4B377D
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_5ECE0F54-614F-4D38-B374-52E137CB16BE"
+
+
+--Apple-Mail=_5ECE0F54-614F-4D38-B374-52E137CB16BE
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+Hi Kurt =E2=80=94=20
+
+I accept the terms below.
+
+Please let me know if you need any additional information.
+
+~ Ian Lee
+Lawrence Livermore National Laboratory
+(W) 925-423-4941
+
+> On Apr 14, 2018, at 18:23, kurt@seifried.org wrote:
+>=20
+> This is a confirmation email sent from CVE request form at =
+https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use =
+(assuming you filled out the CVE form and want one, we can't use the =
+data until you accept the MITRE CVE Terms of Use).=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you =
+agree to the MITRE CVE Terms of Use and we will add a copy of the email =
+to the DWF MITRE CVE Terms of Use acceptance data at =
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/mas=
+ter/Terms-Of-Use
+>=20
+> The reason we use a complete copy of the email is that it provides an =
+artifact showing that the email address accepted the Terms of Use, when =
+they were accepted and so on.=20
+>=20
+> This data cannot be removed from the Internet, or from our git repo. =
+If you are concerned about your personal information (in the form of =
+your email address and any attached information you include like your =
+name) please do not submit it, setup an email address and use that. I =
+cannot comply with GDPR requests to remove your information due to the =
+nature of git, and my inability to confirm if you are a european or not, =
+so if you don't want it in there, don't reply with "I accept".=20
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore =
+this message, however we may resend it at some point in the future, if =
+you don't want any future emails simply reply with "unsubscribe" or =
+"DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to =
+the block list so we don't spam you with these, please note that this =
+will prevent you from being able to accept the MITRE CVE Terms of Use =
+via the DWF automatically in future (you'll have to manually ask). But =
+again, if you have no idea what a CVE is then you can ignore this/ask to =
+be added to the block list with no problems.=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common =
+Vulnerabilities and Exposures (CVE??), you hereby grant to The MITRE =
+Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a =
+perpetual, worldwide, non-exclusive, no-charge, royalty-free, =
+irrevocable copyright license to reproduce, prepare derivative works of, =
+publicly display, publicly perform, sublicense, and distribute such =
+materials and derivative works. Unless required by applicable law or =
+agreed to in writing, you provide such materials on an "AS IS" BASIS, =
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, =
+including, without limitation, any warranties or conditions of TITLE, =
+NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, =
+non-exclusive, no-charge, royalty-free, irrevocable copyright license to =
+reproduce, prepare derivative works of, publicly display, publicly =
+perform, sublicense, and distribute Common Vulnerabilities and Exposures =
+(CVE??). Any copy you make for such purposes is authorized provided that =
+you reproduce MITRE's copyright designation and this license in any such =
+copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE =
+ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION =
+HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, =
+ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL =
+WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY =
+WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY =
+RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A =
+PARTICULAR PURPOSE.
+>=20
+> A copy is available at =
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/mas=
+ter/Terms-Of-Use.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org =
+manually with your question/concerns/etc.=20
+>=20
+
+
+--Apple-Mail=_5ECE0F54-614F-4D38-B374-52E137CB16BE
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=utf-8
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Dutf-8"></head><body style=3D"word-wrap: break-word; =
+-webkit-nbsp-mode: space; line-break: after-white-space;" class=3D"">Hi =
+Kurt =E2=80=94&nbsp;<div class=3D""><br class=3D""></div><div class=3D"">I=
+ accept the terms below.</div><div class=3D""><br class=3D""></div><div =
+class=3D"">Please let me know if you need any additional information.<br =
+class=3D""><div class=3D"">
+<div style=3D"color: rgb(0, 0, 0); font-family: Helvetica; font-size: =
+14px; font-style: normal; font-variant-caps: normal; font-weight: =
+normal; letter-spacing: normal; orphans: auto; text-align: start; =
+text-indent: 0px; text-transform: none; white-space: normal; widows: =
+auto; word-spacing: 0px; -webkit-text-size-adjust: auto; =
+-webkit-text-stroke-width: 0px;"><br class=3D"">~ Ian Lee<br =
+class=3D"">Lawrence Livermore National&nbsp;Laboratory<br class=3D"">(W) =
+925-423-4941</div>
+
+</div>
+<div><br class=3D""><blockquote type=3D"cite" class=3D""><div =
+class=3D"">On Apr 14, 2018, at 18:23, <a href=3D"mailto:kurt@seifried.org"=
+ class=3D"">kurt@seifried.org</a> wrote:</div><br =
+class=3D"Apple-interchange-newline"><div class=3D""><div class=3D"">This =
+is a confirmation email sent from CVE request form at <a =
+href=3D"https://iwantacve.org/" class=3D"">https://iwantacve.org/</a> =
+asking you to accept the MITRE CVE Terms of Use (assuming you filled out =
+the CVE form and want one, we can't use the data until you accept the =
+MITRE CVE Terms of Use). <br class=3D""><br class=3D"">Simply quote the =
+email and reply with "I accept" at the top if you agree to the MITRE CVE =
+Terms of Use and we will add a copy of the email to the DWF MITRE CVE =
+Terms of Use acceptance data at <a =
+href=3D"https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/=
+tree/master/Terms-Of-Use" =
+class=3D"">https://github.com/distributedweaknessfiling/DWF-Legal-Acceptan=
+ce/tree/master/Terms-Of-Use</a><br class=3D""><br class=3D"">The reason =
+we use a complete copy of the email is that it provides an artifact =
+showing that the email address accepted the Terms of Use, when they were =
+accepted and so on. <br class=3D""><br class=3D"">This data cannot be =
+removed from the Internet, or from our git repo. If you are concerned =
+about your personal information (in the form of your email address and =
+any attached information you include like your name) please do not =
+submit it, setup an email address and use that. I cannot comply with =
+GDPR requests to remove your information due to the nature of git, and =
+my inability to confirm if you are a european or not, so if you don't =
+want it in there, don't reply with "I accept". <br class=3D""><br =
+class=3D"">If you did not submit a CVE request to the DWF you can safely =
+ignore this message, however we may resend it at some point in the =
+future, if you don't want any future emails simply reply with =
+"unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your =
+email address to the block list so we don't spam you with these, please =
+note that this will prevent you from being able to accept the MITRE CVE =
+Terms of Use via the DWF automatically in future (you'll have to =
+manually ask). But again, if you have no idea what a CVE is then you can =
+ignore this/ask to be added to the block list with no problems. <br =
+class=3D""><br class=3D"">MITRE CVE Terms of Use<br class=3D""><br =
+class=3D"">LICENSE<br class=3D""><br class=3D"">Submissions: For all =
+materials you submit to the Common Vulnerabilities and Exposures =
+(CVE??), you hereby grant to The MITRE Corporation (MITRE) and all CVE =
+Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable copyright license to reproduce, =
+prepare derivative works of, publicly display, publicly perform, =
+sublicense, and distribute such materials and derivative works. Unless =
+required by applicable law or agreed to in writing, you provide such =
+materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY =
+KIND, either express or implied, including, without limitation, any =
+warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or =
+FITNESS FOR A PARTICULAR PURPOSE.<br class=3D""><br class=3D"">CVE =
+Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable copyright license to reproduce, =
+prepare derivative works of, publicly display, publicly perform, =
+sublicense, and distribute Common Vulnerabilities and Exposures (CVE??). =
+Any copy you make for such purposes is authorized provided that you =
+reproduce MITRE's copyright designation and this license in any such =
+copy.<br class=3D""><br class=3D"">DISCLAIMERS<br class=3D""><br =
+class=3D"">ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED =
+BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE =
+ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE =
+CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, =
+DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED =
+TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT =
+INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR =
+FITNESS FOR A PARTICULAR PURPOSE.<br class=3D""><br class=3D"">A copy is =
+available at <a =
+href=3D"https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/=
+blob/master/Terms-Of-Use.md" =
+class=3D"">https://github.com/distributedweaknessfiling/DWF-Legal-Acceptan=
+ce/blob/master/Terms-Of-Use.md</a><br class=3D""><br class=3D"">To =
+contact the DWF either hit reply, or <a href=3D"mailto:kurt@seifried.org" =
+class=3D"">email kurt@seifried.org</a> manually with your =
+question/concerns/etc. <br class=3D""><br =
+class=3D""></div></div></blockquote></div><br =
+class=3D""></div></body></html>=
+
+--Apple-Mail=_5ECE0F54-614F-4D38-B374-52E137CB16BE--
+
+--Apple-Mail=_AAA94A45-BD56-4C13-ACC5-DD597B4B377D
+Content-Disposition: attachment; filename="smime.p7s"
+Content-Type: application/pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+
+MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIILazCCBYIw
+ggRqoAMCAQICBEZR8vIwDQYJKoZIhvcNAQEFBQAwdzELMAkGA1UEBhMCdXMxGDAWBgNVBAoTD3Uu
+cy4gZ292ZXJubWVudDEdMBsGA1UECxMUZGVwYXJ0bWVudCBvZiBlbmVyZ3kxLzAtBgNVBAsTJmxh
+d3JlbmNlIGxpdmVybW9yZSBuYXRpb25hbCBsYWJvcmF0b3J5MB4XDTE1MDgyNDE2MzI0OFoXDTE4
+MDgyNDE3MDI0OFowgaoxCzAJBgNVBAYTAnVzMRgwFgYDVQQKEw91LnMuIGdvdmVybm1lbnQxHTAb
+BgNVBAsTFGRlcGFydG1lbnQgb2YgZW5lcmd5MS8wLQYDVQQLEyZsYXdyZW5jZSBsaXZlcm1vcmUg
+bmF0aW9uYWwgbGFib3JhdG9yeTEPMA0GA1UECxMGUGVvcGxlMSAwDgYDVQQDEwdJYW4gTGVlMA4G
+A1UEBRMHbGVlMTAwMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKSnz9KXprODI9W4
+cb/RSMUdVq+p3KiX1WvIWWjtgkjHdVuOBLlPLj3A/YtB1wEpqYdat1ui7TWr0PYoLWOieW0RIErs
+pjzFtjJ9os8psu+HQyOCr0q0rwISlf19lQyYKqdSpLS4bgt0aPNqrwb9ko7gOJhtMbSMdZey41zT
+rAzwQC3IBS+2c76lvySS1jbNK5saG/t25zIGb0o6bi4cKVblXlJdNr9p5wEHsWKAIvyS96tV0kdx
+PuyQgxHv5eSjopHWynGX7vYlM0tN8ygkJzNO3UB1BmyMtlvLOWjxrSMnvawHtD7FfsFUxm0Fd0HF
+4/AXehq0ukX2GpsSU5Q11xcCAwEAAaOCAeAwggHcMAsGA1UdDwQEAwIFIDAbBgNVHREEFDASgRBs
+ZWUxMDAxQGxsbmwuZ292MIIBSAYDVR0fBIIBPzCCATswggE3oIIBM6CCAS+kgYswgYgxCzAJBgNV
+BAYTAnVzMRgwFgYDVQQKEw91LnMuIGdvdmVybm1lbnQxHTAbBgNVBAsTFGRlcGFydG1lbnQgb2Yg
+ZW5lcmd5MS8wLQYDVQQLEyZsYXdyZW5jZSBsaXZlcm1vcmUgbmF0aW9uYWwgbGFib3JhdG9yeTEP
+MA0GA1UEAxMGQ1JMMTAzhoGebGRhcDovL2VsZGFwLmxsbmwuZ292L2NuPUNSTDEwMyxvdT1sYXdy
+ZW5jZSUyMGxpdmVybW9yZSUyMG5hdGlvbmFsJTIwbGFib3JhdG9yeSxvdT1kZXBhcnRtZW50JTIw
+b2YlMjBlbmVyZ3ksbz11LnMuJTIwZ292ZXJubWVudCxjPXVzP2NlcnRpZmljYXRlUmV2b2NhdGlv
+bkxpc3QwHwYDVR0jBBgwFoAUovO4fSpuNZvZ24KzBp68vOR7DR0wHQYDVR0OBBYEFA6YReEy1YQb
+0u+b8d7BCLxVUQJWMAkGA1UdEwQCMAAwGQYJKoZIhvZ9B0EABAwwChsEVjguMQMCBLAwDQYJKoZI
+hvcNAQEFBQADggEBADEVtM5i0Sx6GyWuwzb3wJRA2E3hF9D3VvY9KspSkZHxx8htUTUHHqjJCKES
+6DG8fN18pp392a6OMdLA7pWglLswqyBsrz+qjdQnMq80Abo+NTgSj0QCx0b4f+v8EXaL0M0yvKtL
+uX6fZbs5vepcIpZO6hDN8z9JwAUWpX2mpox7IJeJWaC4vv6H+ufPcF2fy2IyLlZ5DykigGMF9NW/
+Wvw3xXZ2GhkevXb/HjsaYdCYxpbiseD2H67TbUKtwWtror/i8J/JJ9EP41++mu1oJKsxSRmP/NZI
+AO6tHFTFGHcVUK6IKgqDt/igk3lizKNEjAnkSSeeREGFbd7q6rDIaa8wggXhMIIEyaADAgECAgRG
+UvOrMA0GCSqGSIb3DQEBCwUAMHcxCzAJBgNVBAYTAnVzMRgwFgYDVQQKEw91LnMuIGdvdmVybm1l
+bnQxHTAbBgNVBAsTFGRlcGFydG1lbnQgb2YgZW5lcmd5MS8wLQYDVQQLEyZsYXdyZW5jZSBsaXZl
+cm1vcmUgbmF0aW9uYWwgbGFib3JhdG9yeTAeFw0xODA0MTcxOTU0MzhaFw0yMTA0MTcyMDI0Mzha
+MIGqMQswCQYDVQQGEwJ1czEYMBYGA1UEChMPdS5zLiBnb3Zlcm5tZW50MR0wGwYDVQQLExRkZXBh
+cnRtZW50IG9mIGVuZXJneTEvMC0GA1UECxMmbGF3cmVuY2UgbGl2ZXJtb3JlIG5hdGlvbmFsIGxh
+Ym9yYXRvcnkxDzANBgNVBAsTBlBlb3BsZTEgMA4GA1UEAxMHSWFuIExlZTAOBgNVBAUTB2xlZTEw
+MDEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCR+1qRDZbu0FE4dYlsWteQHHTU+VFG
+a9FVSyF+3otnu4mRiHl28LqILFPS1lIxNT1H2L3koyrHhl2rXsJ6mU98lpxX1x1O/5/Gvkzrx24H
+JlAXeh0W5/mn80WANDc5kK+JLVbd+lNisMITgNhe/BAdPpc9gA20IbVdGaBdOxr5Vwj1FlOFDxAM
+/LZ0Wg/USU3nRO3ZcOckehiJ+VfnP4kKC0Bob+N3QzOk0dKhfIbai9jrLTglPCvi30Fg73vdlcO4
+btLBsY0yaOnPsrfHc0PWJMqNruPLWe560diqAToFs1wKX/q7uVMI1GPEFiESkmBi6IapdSciE19y
+YnbzHhF7AgMBAAGjggI/MIICOzALBgNVHQ8EBAMCB4AwMAYIKwYBBQUHAQEEJDAiMCAGCCsGAQUF
+BzABhhRodHRwOi8vb2NzcC5sbG5sLmdvdjAbBgNVHREEFDASgRBsZWUxMDAxQGxsbmwuZ292MIIB
+SAYDVR0fBIIBPzCCATswggE3oIIBM6CCAS+kgYswgYgxCzAJBgNVBAYTAnVzMRgwFgYDVQQKEw91
+LnMuIGdvdmVybm1lbnQxHTAbBgNVBAsTFGRlcGFydG1lbnQgb2YgZW5lcmd5MS8wLQYDVQQLEyZs
+YXdyZW5jZSBsaXZlcm1vcmUgbmF0aW9uYWwgbGFib3JhdG9yeTEPMA0GA1UEAxMGQ1JMMTMwhoGe
+bGRhcDovL2VsZGFwLmxsbmwuZ292L2NuPUNSTDEzMCxvdT1sYXdyZW5jZSUyMGxpdmVybW9yZSUy
+MG5hdGlvbmFsJTIwbGFib3JhdG9yeSxvdT1kZXBhcnRtZW50JTIwb2YlMjBlbmVyZ3ksbz11LnMu
+JTIwZ292ZXJubWVudCxjPXVzP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QwKwYDVR0QBCQwIoAP
+MjAxODA0MTcxOTU0MzhagQ8yMDIwMDUyNDAwMjQzOFowHwYDVR0jBBgwFoAUovO4fSpuNZvZ24Kz
+Bp68vOR7DR0wHQYDVR0OBBYEFEoJzzI/dbXDZcUTrrU/Ka/CUP8JMAkGA1UdEwQCMAAwGQYJKoZI
+hvZ9B0EABAwwChsEVjguMQMCBLAwDQYJKoZIhvcNAQELBQADggEBANQUDn7Gci8dsl4R8gb3uS+7
+08QsP9huBJjRABuqaOIOuJEyOiHyDQZ6VASUN9vn7q21FsnO+FLo0j/RZ8XemWpNhngMzxw1+0Fd
+QhONz/zszhxrWwNJ6m1fn3kIRpR932Frxjhynm/hopMYuBN5zsOYCyZ25bjx1vdfPA/fazGA2Bhh
+0RvBUzjLodv0l9xsZ3cO9sQj9C2RhTEnvxgIE9WdagTUpxuwhCDIrPBabkfHSk0mFTOUN5vMBXak
+YlElkBfr6S2tCeQdevv6MqvnQ0+d65p3hP5e1QPSu4hcrF5yWbfQ2xwYupooQGUQEvvqb+43qSIf
+r8kgH9sUJbI4LhYxggMtMIIDKQIBATB/MHcxCzAJBgNVBAYTAnVzMRgwFgYDVQQKEw91LnMuIGdv
+dmVybm1lbnQxHTAbBgNVBAsTFGRlcGFydG1lbnQgb2YgZW5lcmd5MS8wLQYDVQQLEyZsYXdyZW5j
+ZSBsaXZlcm1vcmUgbmF0aW9uYWwgbGFib3JhdG9yeQIERlLzqzAJBgUrDgMCGgUAoIIBgzAYBgkq
+hkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xODA0MjcxNjU2NTNaMCMGCSqG
+SIb3DQEJBDEWBBTrnCExd1x+FeEmJLm1U6AI+UFaozCBjwYJKwYBBAGCNxAEMYGBMH8wdzELMAkG
+A1UEBhMCdXMxGDAWBgNVBAoTD3Uucy4gZ292ZXJubWVudDEdMBsGA1UECxMUZGVwYXJ0bWVudCBv
+ZiBlbmVyZ3kxLzAtBgNVBAsTJmxhd3JlbmNlIGxpdmVybW9yZSBuYXRpb25hbCBsYWJvcmF0b3J5
+AgRGUfLyMIGRBgsqhkiG9w0BCRACCzGBgaB/MHcxCzAJBgNVBAYTAnVzMRgwFgYDVQQKEw91LnMu
+IGdvdmVybm1lbnQxHTAbBgNVBAsTFGRlcGFydG1lbnQgb2YgZW5lcmd5MS8wLQYDVQQLEyZsYXdy
+ZW5jZSBsaXZlcm1vcmUgbmF0aW9uYWwgbGFib3JhdG9yeQIERlHy8jANBgkqhkiG9w0BAQEFAASC
+AQAozar7hkKX+WDh0SOh5jCyftuVc2u5d+3Qpc9gvJcpum0pUpZHQ6QxdYpF+avqLS3tsFmm8RWK
+0lik+agufjwrbcG7BrubW2SfTtnLEd1Nehk+vzsMaLVaQjV5kLft2A5O9/eQ23ppwu/9ue/l3GnT
++70M3z4tiDICF7mszlEtWy0YYaO+HscGrkcV9ATf70BVGBEjoLnaQvnTt4NHW3OqtVHbcRKbSnWJ
+JkRjgKZJStYMLhzhd8oTsAQ+jUvT+z8bRuu6mk/YosuSkXokzL3ncyJ229J5muwviyuTzkeS51lw
+m02//pmLquGDW7ChDs0C38ka3tXf+b7qI+gq/c1XAAAAAAAA
+
+--Apple-Mail=_AAA94A45-BD56-4C13-ACC5-DD597B4B377D--

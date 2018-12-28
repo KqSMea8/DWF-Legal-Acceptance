@@ -1,0 +1,105 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.31.230.197 with SMTP id d188csp271533vkh;
+        Wed, 5 Oct 2016 11:21:41 -0700 (PDT)
+X-Received: by 10.194.157.9 with SMTP id wi9mr8612559wjb.143.1475691701231;
+        Wed, 05 Oct 2016 11:21:41 -0700 (PDT)
+Return-Path: <stefan.kanthak@nexgo.de>
+Received: from mail-in-14.arcor-online.net (mail-in-14.arcor-online.net. [151.189.21.54])
+        by mx.google.com with ESMTPS id 14si13330049wmn.119.2016.10.05.11.21.41
+        for <kurt@seifried.org>
+        (version=TLS1 cipher=AES128-SHA bits=128/128);
+        Wed, 05 Oct 2016 11:21:41 -0700 (PDT)
+Received-SPF: pass (google.com: domain of stefan.kanthak@nexgo.de designates 151.189.21.54 as permitted sender) client-ip=151.189.21.54;
+Authentication-Results: mx.google.com;
+       dkim=pass (test mode) header.i=@nexgo.de;
+       spf=pass (google.com: domain of stefan.kanthak@nexgo.de designates 151.189.21.54 as permitted sender) smtp.mailfrom=stefan.kanthak@nexgo.de
+Received: from mail-in-05-z2.arcor-online.net (mail-in-05-z2.arcor-online.net [151.189.8.17])
+	by mx.arcor.de (Postfix) with ESMTP id 3sq3yX4fVcz8FLr
+	for <kurt@seifried.org>; Wed,  5 Oct 2016 20:21:40 +0200 (CEST)
+Received: from mail-in-05.arcor-online.net (mail-in-05.arcor-online.net [151.189.21.45])
+	by mail-in-05-z2.arcor-online.net (Postfix) with ESMTP id 9DAA31169B3
+	for <kurt@seifried.org>; Wed,  5 Oct 2016 20:21:40 +0200 (CEST)
+X-Greylist: Passed host: 84.153.140.149
+X-DKIM: Sendmail DKIM Filter v2.8.2 mail-in-05.arcor-online.net 3sq3yX04wdzmqY
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=nexgo.de; s=mail-in;
+	t=1475691700; bh=sL6DBfFZg11eJ7mXvn/vry+yGvHmrp6OnZj07pXFVG4=;
+	h=Message-ID:From:To:References:Subject:Date:MIME-Version:
+	 Content-Type:Content-Transfer-Encoding;
+	b=JByMX5o0wGtijOwSdkJ0ctUwRv6zba5uq+HOhLTMMywfwvwwb+a7BXRR9ANdyEVSF
+	 41ScXcxBfDMSPMC24OC/pwXuEHBcZmKd/Xi9Rp8EIXyf/J0i3Y9JWcKZByvR0WAomz
+	 m2OWNV+NuLBoazAf3I9MlWZ9tP+XYR/Z4rCJYs6U=
+Received: from W340 (p54998C95.dip0.t-ipconnect.de [84.153.140.149])
+	(Authenticated sender: skanthak@arcor.de)
+	by mail-in-05.arcor-online.net (Postfix) with ESMTPSA id 3sq3yX04wdzmqY
+	for <kurt@seifried.org>; Wed,  5 Oct 2016 20:21:39 +0200 (CEST)
+Message-ID: <73B69689F16B400CB946BA896D005F80@W340>
+From: "Stefan Kanthak" <stefan.kanthak@nexgo.de>
+To: "Kurt Seifried" <kurt@seifried.org>
+References: <CABqVa39=UVZWoPf_NkmDE-H0uZBuVvPVOMdVmktNJdOWhGZOqQ@mail.gmail.com>
+Subject: Re: CVE - Acceptance of MITRE Terms of Use for CVE
+Date: Wed, 5 Oct 2016 20:10:04 +0200
+Organization: Me, myself & IT
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 8bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.5931
+X-Mimeole: Produced By Microsoft MimeOLE V6.00.2900.6157
+
+I accept
+
+----- Original Message ----- 
+From: "Kurt Seifried" <kurt@seifried.org>
+To: "Kurt Seifried" <kurt@seifried.org>
+Sent: Wednesday, October 05, 2016 6:41 PM
+Subject: CVE - Acceptance of MITRE Terms of Use for CVE
+
+
+Hi, I need to confirm that you have accepted the MITRE Terms of Use for CVE,
+available at:
+
+https://github.com/distributedweaknessfiling/DWF-Database/blob/master/
+TermsOfUse.md
+
+and quoted below, please reply with "I accept" and I'll be able to process
+your CVE request. Thanks!
+
+Terms of Use
+
+LICENSE
+
+Submissions: For all materials you submit to the Common Vulnerabilities and
+Exposures (CVE®), you hereby grant to The MITRE Corporation (MITRE) and all
+CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive,
+no-charge, royalty-free, irrevocable copyright license to reproduce,
+prepare derivative works of, publicly display, publicly perform,
+sublicense, and distribute such materials and derivative works. Unless
+required by applicable law or agreed to in writing, you provide such
+materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied, including, without limitation, any
+warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or
+FITNESS FOR A PARTICULAR PURPOSE.
+
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,
+no-charge, royalty-free, irrevocable copyright license to reproduce,
+prepare derivative works of, publicly display, publicly perform,
+sublicense, and distribute Common Vulnerabilities and Exposures (CVE®). Any
+copy you make for such purposes is authorized provided that you reproduce
+MITRE's copyright designation and this license in any such copy.
+
+DISCLAIMERS
+
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE
+PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE
+REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF
+TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE
+INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES
+OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+-- 
+Kurt Seifried
+kurt@seifried.org
+

@@ -1,0 +1,152 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.6.162 with SMTP id g31csp164705uag;
+        Tue, 9 May 2017 22:18:18 -0700 (PDT)
+X-Received: by 10.223.154.240 with SMTP id a103mr2309218wrc.5.1494393498417;
+        Tue, 09 May 2017 22:18:18 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1494393498; cv=none;
+        d=google.com; s=arc-20160816;
+        b=LvqXGH0z9QADTUItqemt/G3aUtlYhT4O6WBsCWBKMRjon9BzYg3IUfuQN8pfDtyPrh
+         vcqfVaj08qk9K1OY5iuejZbR/rxf24/arx7zxvDKHHQa1BwALK+NK0OSLosnPU7/sPAA
+         aA1PZo5UNRRmym15tqiDB81o2oFcfBs4RB3nVPE3a6WBiypJ0da7eTKMpvUOoFybOdxG
+         SeiygLvh6jRIrOtcdjS+W6mz26PLUb9l+aD14koTj2pGhvOuaRCrZTfwTYceg1oeh5jg
+         W711/MEbOUXSvfuTFrVg3a621MmqoBMLmtSBfOfY1qq/xmJG1D+KALhvoDkQYhvOkazI
+         xzvA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-length:content-transfer-encoding:mime-version:subject
+         :references:in-reply-to:message-id:to:reply-to:from:date
+         :dkim-signature:arc-authentication-results;
+        bh=AicN1CoARG6oieOH+Upn0vl52O93tKEcJ3v4sqCU5dw=;
+        b=KQRJiNrwltmgTZybZUv2+5wXpOjdqE9qgos46rPOvHB3mIsWHpHGwyxIEkz2VOx0Aq
+         FNFHJfxmCnWFMrjCZ/VoT2lxcNBXfX8WoDCrnmMVfY2BWtDAh/WUK45n6Avsmz8dib70
+         evoOEPP0VnDocKKYDiKS0luIuBwYGO/0F8jCMcMneMqWlops0I1sD1Jiu9OXHyEbuPap
+         L9UJlJeV/gRLQQYWbfexxdlz45sWhjalCLkTcR5i8fotJtKCiqPsoVgD/Msy4FCtqcwM
+         BF4xkysqmRJz6k47xurqW/M7V1itMUoA6ywBI67Zy3Cm3oI1M+5dScepF+IPZBogF4ap
+         gCbA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yahoo.fr;
+       spf=pass (google.com: domain of lionel_debroux@yahoo.fr designates 212.82.97.96 as permitted sender) smtp.mailfrom=lionel_debroux@yahoo.fr;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.fr
+Return-Path: <lionel_debroux@yahoo.fr>
+Received: from nm31-vm9.bullet.mail.ir2.yahoo.com (nm31-vm9.bullet.mail.ir2.yahoo.com. [212.82.97.96])
+        by mx.google.com with ESMTPS id e3si2358859wrc.144.2017.05.09.22.18.18
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 09 May 2017 22:18:18 -0700 (PDT)
+Received-SPF: pass (google.com: domain of lionel_debroux@yahoo.fr designates 212.82.97.96 as permitted sender) client-ip=212.82.97.96;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yahoo.fr;
+       spf=pass (google.com: domain of lionel_debroux@yahoo.fr designates 212.82.97.96 as permitted sender) smtp.mailfrom=lionel_debroux@yahoo.fr;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.fr
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.fr; s=s2048; t=1494393498; bh=AicN1CoARG6oieOH+Upn0vl52O93tKEcJ3v4sqCU5dw=; h=Date:From:Reply-To:To:In-Reply-To:References:Subject:From:Subject; b=PL/GwvOLsVMGtoZnzQ4SH15Xs1dWb2CZPvTCfZXROYoUG/ltkMT44htJubUQf3ytIOcfBXfpTuy9OCi5mTS67RpKw0mb983GmpzBCyKctKweacsTpytUZOE0gUzcfrilBW8MAPXzaNR276C5MlIE+tb9sPG2Rg7fhd5Y/Z/IXgCxMFZz3DmsYEL/XtyESimoT6KY3X6RnLjo+xOsWcLvUzggeNYj7yHcAJE0qJUFJDtvgeHQ7t5lMAj2aU1YNj2mDSvrgKozeXbBAa1kzK35E+RRrjkLsPEOWrxZ03FBgOLyJcBliFONpNGu1zHZNtY430XBy2Z3JOxoVqZpKH6JpA==
+Received: from [212.82.98.125] by nm31.bullet.mail.ir2.yahoo.com with NNFMP; 10 May 2017 05:18:18 -0000
+Received: from [212.82.98.104] by tm18.bullet.mail.ir2.yahoo.com with NNFMP; 10 May 2017 05:18:18 -0000
+Received: from [127.0.0.1] by omp1041.mail.ir2.yahoo.com with NNFMP; 10 May 2017 05:18:18 -0000
+X-Yahoo-Newman-Property: ymail-3
+X-Yahoo-Newman-Id: 27246.19733.bm@omp1041.mail.ir2.yahoo.com
+X-YMail-OSG: qIADj_wVM1kgFngl4q8l7exFfIBF1uorrOptqmRYXqvglUtBmKcBLEByD3ctCNI
+ 9uhi.xUpkG73jBjvu6wJv9hJF6VeNc8cGzOML8uWh9eNAVgLsDX2Ku3aBHNnU6uSrVpPcSrWxY_1
+ .SgexfNqPnIn_tXxRjjnTh9SD92rq7zgPuVddvCWJuRaeLbiAlqDo1bsr4DKUEDw0Px_0DQePdjt
+ FCLgwwyYxsALc0HaaA8D_xaR2h63UQqlYSWGqFx_F.3vNoDswFBxXbC8LWa57RNjDa9HkrRKpGzD
+ lVIi1sWkLgkeWZO5XRKz2om_Umbjo7XsNXQRaFlhYmYUYXnxCI5rES0q6NANgP15Rbz5QJse18Pb
+ IJyjmeS955zUYkC5R1uX53ida8wJ0JkRNqoRO.Ybo3uZJaMJMIvCkN2POl45v6gL2MBA0RyQyHBx
+ AF2ORkxh1LCIX3dcXLNclTraT0C9GKDYz3q07b0LDs7d7mMkdIUQkljKq6ma5MkJS3fLi.Q6v0oP
+ zbHimB8rbDQlN7nJ1f4AQdUZu4ilE8PIPBHUJaewcSp4Au1qh6kBuHIiwBVvFSTTsKljgFvoFzS_
+ x0Eg0
+Received: from jws700002.mail.ir2.yahoo.com by sendmailws103.mail.ir2.yahoo.com; Wed, 10 May 2017 05:18:17 +0000; 1494393497.674
+Date: Wed, 10 May 2017 05:18:16 +0000 (UTC)
+From: Lionel Debroux <lionel_debroux@yahoo.fr>
+Reply-To: Lionel Debroux <lionel_debroux@yahoo.fr>
+To: "kurt@seifried.org" <kurt@seifried.org>
+Message-ID: <1676725855.3255252.1494393496382@mail.yahoo.com>
+In-Reply-To: <20170510022942.8102.28164@bigbox.local>
+References: <20170510022942.8102.28164@bigbox.local>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ lionel_debroux@yahoo.fr
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Mailer: WebService/1.1.9539 YahooMailNeo Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3080.5 Safari/537.36
+Content-Length: 3567
+
+I accept
+
+>=20
+>=20
+>=20
+> ________________________________
+> De : "kurt@seifried.org" <kurt@seifried.org>
+> =C3=80 : lionel_debroux@yahoo.fr=20
+> Envoy=C3=A9 le : Mercredi 10 mai 2017 4h29
+> Objet : DWF/CVE - Acceptance of MITRE Terms of Use for CVE for lionel_deb=
+roux@yahoo.fr
+>=20
+>=20
+>=20
+> This is a confirmation email sent from CVE request form at https://iwanta=
+cve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you fill=
+ed out the CVE form and want one, we can't use the data until you accept th=
+e MITRE CVE Terms of Use).=20
+>=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you agree =
+to the MITRE CVE Terms of Use and we will add it to the DWF MITRE CVE Terms=
+ of Use acceptance data at https://github.com/distributedweaknessfiling/DWF=
+-Legal-Acceptance/tree/master/Terms-Of-Use
+>=20
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore this=
+ message, however we may resend it at some point in the future, if you don'=
+t want any future emails simply reply with "unsubscribe" or "DON'T SEND ME =
+THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so=
+ we don't spam you with these, please note that this will prevent you from =
+being able to accept the MITRE CVE Terms of Use via the DWF automatically i=
+n future (you'll have to manually ask). But again, if you have no idea what=
+ a CVE is then you can ignore this/ask to be added to the block list with n=
+o problems.=20
+>=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+>=20
+> LICENSE
+>=20
+>=20
+> Submissions: For all materials you submit to the Common Vulnerabilities a=
+nd Exposures (CVE=C3=82=C2=AE), you hereby grant to The MITRE Corporation (=
+MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non=
+-exclusive, no-charge, royalty-free, irrevocable copyright license to repro=
+duce, prepare derivative works of, publicly display, publicly perform, subl=
+icense, and distribute such materials and derivative works. Unless required=
+ by applicable law or agreed to in writing, you provide such materials on a=
+n "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expre=
+ss or implied, including, without limitation, any warranties or conditions =
+of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PU=
+RPOSE.
+>=20
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,=
+ no-charge, royalty-free, irrevocable copyright license to reproduce, prepa=
+re derivative works of, publicly display, publicly perform, sublicense, and=
+ distribute Common Vulnerabilities and Exposures (CVE=C3=82=C2=AE). Any cop=
+y you make for such purposes is authorized provided that you reproduce MITR=
+E's copyright designation and this license in any such copy.
+>=20
+>=20
+> DISCLAIMERS
+>=20
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE=
+ PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE =
+REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF=
+ TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRES=
+S OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE=
+ INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES=
+ OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+>=20
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-D=
+atabase/blob/master/TermsOfUse.md
+>
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manually =
+with your question/concerns/etc.

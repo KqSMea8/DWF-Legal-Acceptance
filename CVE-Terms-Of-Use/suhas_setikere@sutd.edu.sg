@@ -1,0 +1,171 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.37.10 with SMTP id l10csp1388198ivl;
+        Fri, 29 Sep 2017 19:45:04 -0700 (PDT)
+X-Google-Smtp-Source: AOwi7QAhCkxSR3DfnEJy9B7sDv5PvuGN362yEmU9+uzfUvA0H2Oz25DR2AjMxaz+cBsuW/EaRbaS
+X-Received: by 10.84.133.165 with SMTP id f34mr4470500plf.387.1506739504080;
+        Fri, 29 Sep 2017 19:45:04 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1506739504; cv=none;
+        d=google.com; s=arc-20160816;
+        b=IC/b6zs4aWAX+F0XXIuPNeGG9lM6x4XfDX/OrPo3x6hav14+WBz3qFVzEMUIdHNals
+         bfRMQEgRYmTEMTTkCE5C0EA9OHFwvFFGf8nGEIFHtfDkrW3hgAMHx007P4c/m5AWLQxF
+         CUGaoKUa5IM5Pj+JfCbdfTEVIUT/pzhIiaKT4FaVkvuHli3QEy/AvNQkbzjqhNbPBIjy
+         R+uGdkY1onlcuAfCMBK74ZDwrlVvZ8SWImTMaOddUamyFSkh/f8JHFsNbGitQWny9kjH
+         PvA/sCxGWOkI0UwaX6lD5rzFl1JFZh4z4ZdosVhO7uYE6XaGKsd9tqZ8z9Zsn/8X2RZE
+         C51g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-transfer-encoding:spamdiagnosticmetadata
+         :spamdiagnosticoutput:content-language:accept-language:in-reply-to
+         :references:message-id:date:thread-index:thread-topic:subject:to
+         :from:dkim-signature:arc-authentication-results;
+        bh=4rvm1uioBtHs29SGSCGiAPn1R3Y/Ad44/VZ06jDRrrY=;
+        b=er5OTaxfmWpDZmJAel1Br/OOvQU7PpmXMzVJ11M0XomWg6F+8euEVcufX5uiMqkpW9
+         +HnSs9o+UcgYQ15GrvEwU2NE9GkHQUYxCECdRhwL4O/ke+Vp0Z6iHBjjEotYZebKmVU1
+         5KV+MjFgT2YfLdY4YREk2qOySVDzlqBlJFjEZEUc9G3Wv/wb8Q7IJ7A1D8uPrJpVyf6w
+         QRSW5zL4Wj32ZonzbgRq+0MtIebD0ULCO46+MiMIHt5QyjAI3eURrpfeiMztFdRnSh8J
+         5l1vF+J1/tKsGTB+qF0/jFoaWdzm0cY3YNwWhBF35cUXSahfxkNn5s6rXDmd5OFLddsN
+         xXQw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@SUTDAPAC.onmicrosoft.com header.s=selector1-sutd-edu-sg header.b=uMgGxxRY;
+       spf=pass (google.com: domain of suhas_setikere@sutd.edu.sg designates 104.47.125.127 as permitted sender) smtp.mailfrom=suhas_setikere@sutd.edu.sg
+Return-Path: <suhas_setikere@sutd.edu.sg>
+Received: from APC01-SG2-obe.outbound.protection.outlook.com (mail-sg2apc01on0127.outbound.protection.outlook.com. [104.47.125.127])
+        by mx.google.com with ESMTPS id x27si4274875pfe.215.2017.09.29.19.45.03
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Fri, 29 Sep 2017 19:45:04 -0700 (PDT)
+Received-SPF: pass (google.com: domain of suhas_setikere@sutd.edu.sg designates 104.47.125.127 as permitted sender) client-ip=104.47.125.127;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@SUTDAPAC.onmicrosoft.com header.s=selector1-sutd-edu-sg header.b=uMgGxxRY;
+       spf=pass (google.com: domain of suhas_setikere@sutd.edu.sg designates 104.47.125.127 as permitted sender) smtp.mailfrom=suhas_setikere@sutd.edu.sg
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=SUTDAPAC.onmicrosoft.com; s=selector1-sutd-edu-sg;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=4rvm1uioBtHs29SGSCGiAPn1R3Y/Ad44/VZ06jDRrrY=;
+ b=uMgGxxRYMEfzGV4Gm7RVNV9IW88sL9rtd4t0Gv0Nr8UTBjFEORHNE24eXh9AvFgOKqjz9TLDUR2t27kO8YKq4UbBypNYdbGVvHsrmjB9J+h9NpEFFn5Ow4y6Bp1S36TeMdQg5Rf7xfhqxr/6R5NsEs3et2oRFJv/O/RFdpzQDl4=
+Received: from HK2PR03MB1763.apcprd03.prod.outlook.com (10.165.179.13) by
+ HK2PR03MB1764.apcprd03.prod.outlook.com (10.165.179.14) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id
+ 15.20.77.5; Sat, 30 Sep 2017 02:45:00 +0000
+Received: from HK2PR03MB1763.apcprd03.prod.outlook.com
+ ([fe80::f97e:e71f:da24:7cfa]) by HK2PR03MB1763.apcprd03.prod.outlook.com
+ ([fe80::f97e:e71f:da24:7cfa%14]) with mapi id 15.20.0077.011; Sat, 30 Sep
+ 2017 02:45:00 +0000
+From: Suhas Kala Bhairav Setikere Sreedhara Murthy
+	<suhas_setikere@sutd.edu.sg>
+To: "kurt@seifried.org" <kurt@seifried.org>
+Subject: RE: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ suhas_setikere@sutd.edu.sg
+Thread-Topic: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ suhas_setikere@sutd.edu.sg
+Thread-Index: AQHTOY0OurgEEn1wW0OivmDSPByj96LMuQng
+Date: Sat, 30 Sep 2017 02:45:00 +0000
+Message-ID: <HK2PR03MB1763020849A161E0434D972FBD7F0@HK2PR03MB1763.apcprd03.prod.outlook.com>
+References: <20170930014005.3437.28892@222.2.168.192.in-addr.arpa>
+In-Reply-To: <20170930014005.3437.28892@222.2.168.192.in-addr.arpa>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [138.75.6.244]
+x-ms-publictraffictype: Email
+x-microsoft-exchange-diagnostics: 1;HK2PR03MB1764;6:FdurO9oEpRaCQtplYdKRBRjHi0Nt+LnxSL9zuX5hgOQ7YnagOcDgwGUvBVpI+uHTXwpTuYPc9go4BawAoUIzRC3VwO4NaqcrvFNl2diaZBqApNZO114WCcPbN08QEPQXDjxo6H4QFL3imjC3Id72oXzbtsbLTg9jbpU4/Mife2rNJaLKCnt+U5LlpsprDttHFIcwrg/YICHWmuPONryyk0YfmYWHM2OPxT2x//NulCgs3yWzcRAvOYiUEsW8Ip+jWsi8yqJWbYZjFFgw0e6TDoDyVFwM489P/cBossO/OQbdkdRx3kf7aJFh6CB0XlseQ9bqvYWVGfgFcVUZg9flxQ==;5:FKL19/UQS66clIua1shNESgAVWYCrQ+2Z2k5/l2CouPtTwebAWodcJ08Ai9Pi3E0V9do+ycyX9UYMaAB0Fa4cgjlKf8nLAGmJ77lseCHbqy4TUhQp8W75hKTbzN52mQT2ZsDuobJKSvs6kssw+p+erPEiaoEhkpShfx2JcXCwU4=;24:Qg9K1FLfS/p9831AlFbAMtE0x8aj/mixBTkzDtZoG9Qpynkq0WrUGn4Fe6kovtVXixo/duPfWvYi8sHXJ9xrRvg+i0rnpSUoXKhZkeofB6s=;7:pmfqH0o8enVDmCsLqMIkmvG2hYGNQYOcaGu8v1HfP8xE4tp559T6yGmkS4t30k9Z9OuBaTASptalmSxJZKoEWnrwLrwcUT+unWm/wvLzEGZEcf7JBuBkq87KWB9irLKvKsXPKoHOVgJaTyTVZ5FerZeA5faNqKT0xfpPIA6znHQiGiO7iE3f7MjitWuljt0HcQ35ec/vXKiTTpkqx/KuYgl0qZVf06LoeuuLmeIDErQ=
+x-ms-exchange-antispam-srfa-diagnostics: SSOS;
+x-ms-office365-filtering-correlation-id: 8fbf17b4-6b2d-43e0-7014-08d507ad3ec3
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(2017030254152)(2017052603199)(201703131423075)(201703031133081)(201702281549075);SRVR:HK2PR03MB1764;
+x-ms-traffictypediagnostic: HK2PR03MB1764:
+x-exchange-antispam-report-test: UriScan:(166708455590820);
+x-microsoft-antispam-prvs: <HK2PR03MB17640261EA2AA255F6B3FE0EBD7F0@HK2PR03MB1764.apcprd03.prod.outlook.com>
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(100000700101)(100105000095)(100000701101)(100105300095)(100000702101)(100105100095)(6040450)(2401047)(5005006)(8121501046)(10201501046)(3002001)(93006095)(93001095)(100000703101)(100105400095)(6041248)(201703131423075)(201702281529075)(201702281528075)(201703061421075)(201703061406153)(20161123562025)(20161123558100)(20161123560025)(20161123555025)(20161123564025)(6072148)(201708071742011)(100000704101)(100105200095)(100000705101)(100105500095);SRVR:HK2PR03MB1764;BCL:0;PCL:0;RULEID:(100000800101)(100110000095)(100000801101)(100110300095)(100000802101)(100110100095)(100000803101)(100110400095)(100000804101)(100110200095)(100000805101)(100110500095);SRVR:HK2PR03MB1764;
+x-forefront-prvs: 0446F0FCE1
+x-forefront-antispam-report: SFV:NSPM;SFS:(10019020)(6009001)(376002)(346002)(199003)(38564003)(13464003)(13624006)(189002)(377454003)(28244002)(5250100002)(966005)(53546010)(74316002)(66066001)(6506006)(3846002)(2950100002)(5660300001)(42882006)(6916009)(97736004)(7696004)(81166006)(5180700001)(81156014)(1730700003)(189998001)(8676002)(229853002)(25786009)(86362001)(68736007)(6306002)(50986999)(106356001)(9686003)(99286003)(55016002)(76176999)(5640700003)(54356999)(2351001)(8936002)(88552002)(2900100001)(6246003)(2906002)(316002)(786003)(3660700001)(6436002)(14454004)(7736002)(102836003)(305945005)(478600001)(2501003)(33656002)(101416001)(53936002)(3280700002)(6116002)(105586002)(74482002)(221513004)(222073002);DIR:OUT;SFP:1102;SCL:1;SRVR:HK2PR03MB1764;H:HK2PR03MB1763.apcprd03.prod.outlook.com;FPR:;SPF:None;PTR:InfoNoRecords;A:1;MX:1;LANG:en;
+received-spf: None (protection.outlook.com: sutd.edu.sg does not designate
+ permitted sender hosts)
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=suhas_setikere@sutd.edu.sg; 
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-OriginatorOrg: sutd.edu.sg
+X-MS-Exchange-CrossTenant-originalarrivaltime: 30 Sep 2017 02:45:00.4337
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 3476b776-e990-4f72-b950-62489831623d
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: HK2PR03MB1764
+
+I accept!
+
+Best Regards,
+Suhas
+
+-----Original Message-----
+From: kurt@seifried.org [mailto:kurt@seifried.org]=20
+Sent: Saturday, 30 September 2017 9:40 AM
+To: Suhas Kala Bhairav Setikere Sreedhara Murthy <suhas_setikere@sutd.edu.s=
+g>
+Subject: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for suhas_setik=
+ere@sutd.edu.sg
+
+This is a confirmation email sent from CVE request form at https://iwantacv=
+e.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled=
+ out the CVE form and want one, we can't use the data until you accept the =
+MITRE CVE Terms of Use).=20
+
+Simply quote the email and reply with "I accept" at the top if you agree to=
+ the MITRE CVE Terms of Use and we will add a copy of the email to the DWF =
+MITRE CVE Terms of Use acceptance data at https://github.com/distributedwea=
+knessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+
+The reason we use a complete copy of the email is that it provides an artif=
+act showing that the email address accepted the Terms of Use, when they wer=
+e accepted and so on.=20
+
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don't =
+want any future emails simply reply with "unsubscribe" or "DON'T SEND ME TH=
+IS EMAIL EVER AGAIN" and I'll add your email address to the block list so w=
+e don't spam you with these, please note that this will prevent you from be=
+ing able to accept the MITRE CVE Terms of Use via the DWF automatically in =
+future (you'll have to manually ask). But again, if you have no idea what a=
+ CVE is then you can ignore this/ask to be added to the block list with no =
+problems.=20
+
+MITRE CVE Terms of Use
+
+LICENSE
+
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+ Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and a=
+ll CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable copyright license to reproduce, prepar=
+e derivative works of, publicly display, publicly perform, sublicense, and =
+distribute such materials and derivative works. Unless required by applicab=
+le law or agreed to in writing, you provide such materials on an "AS IS" BA=
+SIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implie=
+d, including, without limitation, any warranties or conditions of TITLE, NO=
+N-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare=
+ derivative works of, publicly display, publicly perform, sublicense, and d=
+istribute Common Vulnerabilities and Exposures (CVE??). Any copy you make f=
+or such purposes is authorized provided that you reproduce MITRE's copyrigh=
+t designation and this license in any such copy.
+
+DISCLAIMERS
+
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE RE=
+PRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF T=
+RUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS =
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE I=
+NFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES O=
+F MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+A copy is available at https://github.com/distributedweaknessfiling/DWF-Leg=
+al-Acceptance/blob/master/Terms-Of-Use.md
+
+To contact the DWF either hit reply, or email kurt@seifried.org manually wi=
+th your question/concerns/etc.=20
+

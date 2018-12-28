@@ -1,0 +1,157 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a4f:b47:0:0:0:0:0 with SMTP id 68-v6csp8700193ivl;
+        Thu, 17 May 2018 10:51:09 -0700 (PDT)
+X-Google-Smtp-Source: AB8JxZpGfqIR/aJmTVpMOEE2zIV66t/lMOPHYx9Szylk6/OZPYQZqq967+HEfP9JmJS9KduXHc97
+X-Received: by 2002:a17:902:70c4:: with SMTP id l4-v6mr6142935plt.174.1526579469397;
+        Thu, 17 May 2018 10:51:09 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1526579469; cv=none;
+        d=google.com; s=arc-20160816;
+        b=FO1zn9dn+jckBhAYrcd8UCJl822zbcFDKz+Atp4V87CldIrWgMEdBuzdmHBKfMdJjj
+         r1sOEc8qExgONUnsCRKZK5ZdGd+6NDhzr7HFG6Xnn8DNGTZyAOXeN8/nHT07o1d4ImY/
+         xv2pTib2TjUbdRjQ+Wwq1UYSf2c1ryNWyXTKQ+gC+0CdeBp3hR5SJa+gfiHLniJfeKUN
+         KJ7QLMLilRKtuweYWxNBaI6/GYhmI1VrYnsGfd5TPbydMRl82X6tCmsSU4OLJF/mxeh7
+         C2PDHPCkSy2yVsD+2w+zCeouNQJwmRX3NiAFZq3NXFuA7U6TKYGRj3ecInrRa0tsqjvZ
+         NXHA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:content-language:in-reply-to:mime-version
+         :user-agent:date:message-id:from:references:to:subject
+         :arc-authentication-results;
+        bh=zr9eCzhHIZxoM/0b5EIabodRgm3exOmvkWnL9QbBM2Q=;
+        b=fhezLiyQF1xi/EMPqj7GFmL6tWiJkZwXci8DjRvw4B7qVt5Jzw8ZVWAmByYfvsT5ai
+         QyECowCUjlGcnqHNuALhmmze1PAooNQuFUDAtSV0cAE9OP44tSbq/6DekPc9vg0Cd/lo
+         l/LleSXGrccUBZHb8BnMcvPPpFqTZ5rHI7q6jROTMKO4E2+YCWuGCzagUQu5g5PeDMTV
+         Cemybf2v6cJAmhnhpYDTpR6vVexEZH+ywOwheAOvHpCRhj+OVFS6M2UgKgWRQFLdURbG
+         6l2nAL80bHWETeemqDq495/ecdFyXUb3OWDi2ZfE129hzmnRMyTUuRCI2IoXkKgHqTHa
+         ihwA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of bgonzalez@unicon.net designates 54.71.156.226 as permitted sender) smtp.mailfrom=bgonzalez@unicon.net
+Return-Path: <bgonzalez@unicon.net>
+Received: from zimbra.unicon.net (zimbra.unicon.net. [54.71.156.226])
+        by mx.google.com with ESMTPS id p27-v6si5788489pfd.76.2018.05.17.10.51.09
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 17 May 2018 10:51:09 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bgonzalez@unicon.net designates 54.71.156.226 as permitted sender) client-ip=54.71.156.226;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bgonzalez@unicon.net designates 54.71.156.226 as permitted sender) smtp.mailfrom=bgonzalez@unicon.net
+Received: from localhost (localhost [127.0.0.1])
+	by zimbra.unicon.net (Postfix) with ESMTP id 0B4C41807B3
+	for <kurt@seifried.org>; Thu, 17 May 2018 17:51:09 +0000 (UTC)
+X-Virus-Scanned: amavisd-new at zimbra.unicon.net
+Received: from zimbra.unicon.net ([127.0.0.1])
+	by localhost (zimbra.unicon.net [127.0.0.1]) (amavisd-new, port 10026)
+	with ESMTP id v-CFH1K8gr5j for <kurt@seifried.org>;
+	Thu, 17 May 2018 17:51:08 +0000 (UTC)
+Received: from [192.168.2.22] (c-76-20-80-231.hsd1.ca.comcast.net [76.20.80.231])
+	by zimbra.unicon.net (Postfix) with ESMTPSA id DB02C1805A0
+	for <kurt@seifried.org>; Thu, 17 May 2018 17:51:08 +0000 (UTC)
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ bgonzalez@unicon.net
+To: kurt@seifried.org
+References: <20180517165519.91066.39117@slab.local>
+From: "Benito J. Gonzalez" <bgonzalez@unicon.net>
+Message-ID: <030661af-8348-f442-4241-20b8b516d74c@unicon.net>
+Date: Thu, 17 May 2018 10:51:08 -0700
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101
+ Thunderbird/52.7.0
+MIME-Version: 1.0
+In-Reply-To: <20180517165519.91066.39117@slab.local>
+Content-Type: text/plain; charset=utf-8
+Content-Language: en-US
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+On 05/17/2018 09:55 AM, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwan=
+tacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you =
+filled out the CVE form and want one, we can't use the data until you acc=
+ept the MITRE CVE Terms of Use).=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you agre=
+e to the MITRE CVE Terms of Use and we will add a copy of the email to th=
+e DWF MITRE CVE Terms of Use acceptance data at https://github.com/distri=
+butedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>=20
+> The reason we use a complete copy of the email is that it provides an a=
+rtifact showing that the email address accepted the Terms of Use, when th=
+ey were accepted and so on.=20
+>=20
+> This data cannot be removed from the Internet, or from our git repo. If=
+ you are concerned about your personal information (in the form of your e=
+mail address and any attached information you include like your name) ple=
+ase do not submit it, setup an email address and use that. I cannot compl=
+y with GDPR requests to remove your information due to the nature of git,=
+ and my inability to confirm if you are a european or not, so if you don'=
+t want it in there, don't reply with "I accept".=20
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore th=
+is message, however we may resend it at some point in the future, if you =
+don't want any future emails simply reply with "unsubscribe" or "DON'T SE=
+ND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block=
+ list so we don't spam you with these, please note that this will prevent=
+ you from being able to accept the MITRE CVE Terms of Use via the DWF aut=
+omatically in future (you'll have to manually ask). But again, if you hav=
+e no idea what a CVE is then you can ignore this/ask to be added to the b=
+lock list with no problems.=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common Vulnerabilities=
+ and Exposures (CVE=C2=AE), you hereby grant to The MITRE Corporation (MI=
+TRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non=
+-exclusive, no-charge, royalty-free, irrevocable copyright license to rep=
+roduce, prepare derivative works of, publicly display, publicly perform, =
+sublicense, and distribute such materials and derivative works. Unless re=
+quired by applicable law or agreed to in writing, you provide such materi=
+als on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, ei=
+ther express or implied, including, without limitation, any warranties or=
+ conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A=
+ PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusiv=
+e, no-charge, royalty-free, irrevocable copyright license to reproduce, p=
+repare derivative works of, publicly display, publicly perform, sublicens=
+e, and distribute Common Vulnerabilities and Exposures (CVE=C2=AE). Any c=
+opy you make for such purposes is authorized provided that you reproduce =
+MITRE's copyright designation and this license in any such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE A=
+RE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/=
+SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BO=
+ARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES=
+, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE =
+USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIE=
+D WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> A copy is available at https://github.com/distributedweaknessfiling/DWF=
+-Legal-Acceptance/blob/master/Terms-Of-Use.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org manuall=
+y with your question/concerns/etc.=20
+>=20
+>=20
+> ----------
+>=20
+> This email has been scanned for spam and viruses by Proofpoint Essentia=
+ls. Visit the following link to report this email as spam:
+> https://us2.proofpointessentials.com/index01.php?mod_id=3D11&mod_option=
+=3Dlogitem&mail_id=3D1526576121-X0r%2BRgMquoP3&r_address=3Dbgonzalez%40un=
+icon.net&report=3D1
+>=20
+
+--=20
+Benito J. Gonzalez
+Senior Software Developer
+Unicon, Inc.
+Voice:  480.558.2360
+ Text:  209.777.2754
+Email:  bgonzalez@unicon.net
+GitHub:  bjagg
+GitLab:  bjagg
+BitBucket:  bjagg
+

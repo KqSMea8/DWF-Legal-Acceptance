@@ -1,0 +1,165 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.153.144 with SMTP id a16csp80376ivh;
+        Thu, 25 Jan 2018 16:23:33 -0800 (PST)
+X-Google-Smtp-Source: AH8x226tssHkGLuAE+pDFzMGbSB2V7IDQkDOX/AvtSS/h5nX+Ew3ouRnuAv0zDtNiaBUSK2sWhmL
+X-Received: by 10.101.96.6 with SMTP id m6mr5472773pgu.131.1516926213181;
+        Thu, 25 Jan 2018 16:23:33 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1516926213; cv=none;
+        d=google.com; s=arc-20160816;
+        b=wS1xR0nLjhAMqCmq2R8KU5cw9OBOCMdR7tUTdQd23X0efLeOKvlzpnNVXn5xGdM7Kr
+         mLSOgYtxdmkuW72oSr0HVg3QU9iNlCwMmO5xp2gHAlLdAP1CAalIwKIYrRQKc+1dXRdp
+         Z5xHdjY3eHpphj7LMG/VL2X4FkRQ6B2JaoB1aK525jFGTH5GhgLQ0rReUYS1tCLBU0Ke
+         DUU31pzeMW76fq4S4Pycb0OS8NveEtsMbWU4HRJ+ejefP5LOcJuLcqL3w8sLcvmxpCmF
+         ly4NlC33GPsU2KItjtUe/Gy6I8PTGPi/aPPDAduNk3ASnXOCV8Y5EL+0zoBctikXNVSJ
+         Qr/g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=in-reply-to:mime-version:user-agent:date:message-id:from:references
+         :to:subject:arc-authentication-results;
+        bh=b+ZOKPyvMueYQOvkWGnNkkRB2zc+1Rt4Kyo1L5mQDuY=;
+        b=rC6sLCPl0pOwUMSv1+mktif/MRrLfZ10Q9t5gayr4QAc+/1TZhS4FMYSxzqqGOtj4t
+         Qb3Kmzcwf5tPZO2+9sznNWK/FDmNYJqW8KSf9xmKJBZu/z+0UMPq4P/CTf9HZTcI6Vdn
+         6JiwDwAsCEEo7Z7IHJdEpmwySB10TIJf46bXkDdQRV5NzZBuEMD7P4adYGuDWU9zC1F+
+         xSyuPA93tNWiCQDTjO2vMIBnL9CfLvWy59ubOY4yUF2ohj8k8XHvfXhwIiwek7y2V4tE
+         cLzZJVL9cHTmw08E/1sfkzGpkOlkxC3uuMBs88uIBAefVPFdhwiStyrLJ2YaG6zXxIud
+         390Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of squid3@treenet.co.nz designates 121.99.228.82 as permitted sender) smtp.mailfrom=squid3@treenet.co.nz
+Return-Path: <squid3@treenet.co.nz>
+Received: from treenet.co.nz ([121.99.228.82])
+        by mx.google.com with ESMTP id h130si2216991pgc.787.2018.01.25.16.23.28
+        for <kurt@seifried.org>;
+        Thu, 25 Jan 2018 16:23:32 -0800 (PST)
+Received-SPF: pass (google.com: domain of squid3@treenet.co.nz designates 121.99.228.82 as permitted sender) client-ip=121.99.228.82;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of squid3@treenet.co.nz designates 121.99.228.82 as permitted sender) smtp.mailfrom=squid3@treenet.co.nz
+Received: from [192.168.137.92] (unknown [121.98.40.32])
+	by treenet.co.nz (Postfix) with ESMTPA id 8AA4F66012B
+	for <kurt@seifried.org>; Fri, 26 Jan 2018 13:23:26 +1300 (NZDT)
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ squid3@treenet.co.nz
+To: kurt@seifried.org
+References: <20180125170424.4519.90219@slab.local>
+From: Amos Jeffries <squid3@treenet.co.nz>
+Message-ID: <e71a8cd9-cbea-ed9c-40d2-fb6d8473a4c7@treenet.co.nz>
+Date: Fri, 26 Jan 2018 13:23:26 +1300
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101
+ Thunderbird/52.5.2
+MIME-Version: 1.0
+In-Reply-To: <20180125170424.4519.90219@slab.local>
+Content-Type: multipart/signed; micalg=pgp-sha512;
+ protocol="application/pgp-signature";
+ boundary="rcZx1vxJ2Nmt8naQRZz97ChQ05OK1iaZg"
+
+This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
+--rcZx1vxJ2Nmt8naQRZz97ChQ05OK1iaZg
+Content-Type: multipart/mixed; boundary="MNA3XUnkDIXZB125pGGf3wwlLxMf7dqaH";
+ protected-headers="v1"
+From: Amos Jeffries <squid3@treenet.co.nz>
+To: kurt@seifried.org
+Message-ID: <e71a8cd9-cbea-ed9c-40d2-fb6d8473a4c7@treenet.co.nz>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ squid3@treenet.co.nz
+References: <20180125170424.4519.90219@slab.local>
+In-Reply-To: <20180125170424.4519.90219@slab.local>
+
+--MNA3XUnkDIXZB125pGGf3wwlLxMf7dqaH
+Content-Type: text/plain; charset=utf-8
+Content-Language: en-US
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+Amos Jeffries
+The Squid Software Foundation
+
+On 26/01/18 06:04, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwan=
+tacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you =
+filled out the CVE form and want one, we can't use the data until you acc=
+ept the MITRE CVE Terms of Use).=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you agre=
+e to the MITRE CVE Terms of Use and we will add a copy of the email to th=
+e DWF MITRE CVE Terms of Use acceptance data at https://github.com/distri=
+butedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>=20
+> The reason we use a complete copy of the email is that it provides an a=
+rtifact showing that the email address accepted the Terms of Use, when th=
+ey were accepted and so on.=20
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore th=
+is message, however we may resend it at some point in the future, if you =
+don't want any future emails simply reply with "unsubscribe" or "DON'T SE=
+ND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block=
+ list so we don't spam you with these, please note that this will prevent=
+ you from being able to accept the MITRE CVE Terms of Use via the DWF aut=
+omatically in future (you'll have to manually ask). But again, if you hav=
+e no idea what a CVE is then you can ignore this/ask to be added to the b=
+lock list with no problems.=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common Vulnerabilities=
+ and Exposures (CVE=C3=82=C2=AE), you hereby grant to The MITRE Corporati=
+on (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwid=
+e, non-exclusive, no-charge, royalty-free, irrevocable copyright license =
+to reproduce, prepare derivative works of, publicly display, publicly per=
+form, sublicense, and distribute such materials and derivative works. Unl=
+ess required by applicable law or agreed to in writing, you provide such =
+materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KI=
+ND, either express or implied, including, without limitation, any warrant=
+ies or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS=
+ FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusiv=
+e, no-charge, royalty-free, irrevocable copyright license to reproduce, p=
+repare derivative works of, publicly display, publicly perform, sublicens=
+e, and distribute Common Vulnerabilities and Exposures (CVE=C3=82=C2=AE).=
+ Any copy you make for such purposes is authorized provided that you repr=
+oduce MITRE's copyright designation and this license in any such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE A=
+RE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/=
+SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BO=
+ARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES=
+, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE =
+USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIE=
+D WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> A copy is available at https://github.com/distributedweaknessfiling/DWF=
+-Legal-Acceptance/blob/master/Terms-Of-Use.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org manuall=
+y with your question/concerns/etc.=20
+>=20
+
+
+--MNA3XUnkDIXZB125pGGf3wwlLxMf7dqaH--
+
+--rcZx1vxJ2Nmt8naQRZz97ChQ05OK1iaZg
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEAimzwkzOwlQSfJUyANhjZ5QgvdMFAlpqdP4ACgkQANhjZ5Qg
+vdMGfg//XSCYQ3S+odgWSYUYkBW83tQcdEJVNmsSs45/V0bhLLzuD9mP7zkVhvhc
+PGa+T95DOtMNwaV5e2kNkVDxcQqFao5ZAItuxkzUcKnRKVodV1Hf6LASvVP/fgfN
+G3cybMVLXm7jvhseypul57EsAUrR5l9YJnpHfaQkJaBshJUodpKZdjkhsiu/raJd
+byy5+xaEmpmi7M2vaVPB9FtlBqkGCnraEk9RvVlXs+shb2kSgexgO7KKFUNt1zPq
+pMbj/9xfZwrc/HGBYGQMcu655Sl+v7DpRyVvFK0ZcHgY1YGNwE+YO2kpnB4RbwzR
+uMK0oXYeOhez0sQ5+E+H4MbOmJAfEKToUzcp4tP9E/fLBx8GZHKeQ4T0SKwrMUcO
+2ABZnac+TElkU4KzwkpKo2ibxB0a0zsyQE1baC1oBgQHY4z+q7YTMHbYmxBl32VD
+PWt3fBAxIWMShO4/qp6mwFTXaG3IJ/IK5LTlRF+DFCjQ77EmQwvCgBJb2NuCv6ul
+LzQE/YZAI3w94OehFySES8fDsw6nl7heU79jRpjBsenCobgBe0ZRqNKWXOJuJ5/3
+2EwRcAUA1loCAGGrZFzey4wf74AOf1mRwqJDJbVUalB/odGcoPWW9mXMgqoFcMrd
+Nsh2ZSIzEbOFrffj8IuMSxYNok+2NvXTzxvxRLYyE7nuHOb2Hmw=
+=PwWl
+-----END PGP SIGNATURE-----
+
+--rcZx1vxJ2Nmt8naQRZz97ChQ05OK1iaZg--

@@ -1,0 +1,86 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a4f:b47:0:0:0:0:0 with SMTP id 68-v6csp1823653ivl;
+        Tue, 22 May 2018 10:36:36 -0700 (PDT)
+X-Google-Smtp-Source: AB8JxZoiv5R3eCVaJQMrxFHYgXCqSsGsD1usZQsmDjwVRu3Sh0MjJmKvgheF11WbXSrJJMkliZDA
+X-Received: by 2002:a9d:43a7:: with SMTP id t39-v6mr15709070ote.366.1527010596372;
+        Tue, 22 May 2018 10:36:36 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1527010596; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Jup5RmbZkwKLZaFwRaMBDktceDoxVLiw81PkfMgziBpPLUt6+WJC076mJumIjaJa2X
+         RiKymYXPUai9NKgqoO+cOgufCBEyJ4oaLCbvpzsqtDPmSdamuKy4NBpCHcQe+cXZl/lZ
+         VPPZslkpKxQZbJ3Jhivo0jbkbGQzBH3XvwwYbWq1/6L9FyuaPP1MFCmnjWV3lB7Iwe+G
+         MdCdxI//DBRL8pvTx8BFHBBXB1pVFKBvDFFQjAsKz8lL56fx14TUe+MH8qS1SZwZVKBL
+         mq6b9BIFhKvNnqb9yp0G1/Yen+YvbneLvUiGfF7Q2CfSGrhfPTENipSS1kqBSZkNClBg
+         RHHA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:in-reply-to:mime-version:user-agent:date
+         :message-id:from:references:to:subject:arc-authentication-results;
+        bh=o8zDt5tqcIR6mvp1SONH9kezo2ZbfvVLvjY9WBA6c3g=;
+        b=nMLdrlvLUl48rXD1P7tQgEj6N4zikTkaF8zISBaqk659X9jOwAJqKUdpdPWAT80Wgu
+         bOo0zre9n/56tTKdoCifiY1/is1TjYqqLVyli+vUSSy+fbX2uOH0Lo79YPLdiJjV9cBY
+         h7uCVfu4oIMj/RuexUbIxvlO5runjTTovYsZK1nKQuN0oNSXKP4q2q5ulaW87eBQOBAK
+         7F+HJ56EA0zhf7vGSIsK3qnzBv8sZAERSZ26b0pgx/As0Dv56fiP2bKm7J2YrRd82tnu
+         lUyOZeLbNh5TjvQspjeewkqTEen6/1LbDXED6hLGMHG/ffEDD3ghEyenElJvWFx24/i6
+         wAnw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=neutral (google.com: 135.84.80.216 is neither permitted nor denied by best guess record for domain of mateusz.stahl@codeblanc.it) smtp.mailfrom=mateusz.stahl@codeblanc.it
+Return-Path: <mateusz.stahl@codeblanc.it>
+Received: from sender-of-o51.zoho.com (sender-of-o51.zoho.com. [135.84.80.216])
+        by mx.google.com with ESMTPS id 102-v6si6345142otc.197.2018.05.22.10.36.36
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 22 May 2018 10:36:36 -0700 (PDT)
+Received-SPF: neutral (google.com: 135.84.80.216 is neither permitted nor denied by best guess record for domain of mateusz.stahl@codeblanc.it) client-ip=135.84.80.216;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 135.84.80.216 is neither permitted nor denied by best guess record for domain of mateusz.stahl@codeblanc.it) smtp.mailfrom=mateusz.stahl@codeblanc.it
+Received: from [192.168.1.124] (194.181.243.48 [194.181.243.48]) by mx.zohomail.com
+	with SMTPS id 1527010594016528.294394444633; Tue, 22 May 2018 10:36:34 -0700 (PDT)
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ mateusz.stahl@codeblanc.it
+To: kurt@seifried.org
+References: <20180517165336.91066.68922@slab.local>
+From: Matthew Stahl <mateusz.stahl@codeblanc.it>
+Message-ID: <4a3639f2-4e7f-7608-5739-3f1e76d9ea00@codeblanc.it>
+Date: Tue, 22 May 2018 19:36:31 +0200
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:45.0)
+ Gecko/20100101 Thunderbird/45.1.1
+MIME-Version: 1.0
+In-Reply-To: <20180517165336.91066.68922@slab.local>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: 8bit
+X-ZohoMailClient: External
+
+I accept.
+
+Regards,
+Mateusz Stahl
+
+W dniu 17.05.2018 o 18:53, kurt@seifried.org pisze:
+> This is a confirmation email sent from CVE request form at https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled out the CVE form and want one, we can't use the data until you accept the MITRE CVE Terms of Use). 
+>
+> Simply quote the email and reply with "I accept" at the top if you agree to the MITRE CVE Terms of Use and we will add a copy of the email to the DWF MITRE CVE Terms of Use acceptance data at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>
+> The reason we use a complete copy of the email is that it provides an artifact showing that the email address accepted the Terms of Use, when they were accepted and so on. 
+>
+> This data cannot be removed from the Internet, or from our git repo. If you are concerned about your personal information (in the form of your email address and any attached information you include like your name) please do not submit it, setup an email address and use that. I cannot comply with GDPR requests to remove your information due to the nature of git, and my inability to confirm if you are a european or not, so if you don't want it in there, don't reply with "I accept". 
+>
+> If you did not submit a CVE request to the DWF you can safely ignore this message, however we may resend it at some point in the future, if you don't want any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so we don't spam you with these, please note that this will prevent you from being able to accept the MITRE CVE Terms of Use via the DWF automatically in future (you'll have to manually ask). But again, if you have no idea what a CVE is then you can ignore this/ask to be added to the block list with no problems. 
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities and Exposures (CVE®), you hereby grant to The MITRE Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute such materials and derivative works. Unless required by applicable law or agreed to in writing, you provide such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute Common Vulnerabilities and Exposures (CVE®). Any copy you make for such purposes is authorized provided that you reproduce MITRE's copyright designation and this license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/master/Terms-Of-Use.md
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manually with your question/concerns/etc. 
+>
+
+

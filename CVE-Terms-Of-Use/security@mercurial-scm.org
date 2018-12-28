@@ -1,0 +1,171 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.3.133 with SMTP id 5csp1190215uau;
+        Thu, 3 Aug 2017 11:39:38 -0700 (PDT)
+X-Received: by 10.99.119.12 with SMTP id s12mr2383826pgc.370.1501785578480;
+        Thu, 03 Aug 2017 11:39:38 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1501785578; cv=none;
+        d=google.com; s=arc-20160816;
+        b=zGuDBavRanwhqZPgeJQ2WSJrRrxqYnAfM39UMaP1ql4qTPGKnM2g8NQOyxyxQqEJiE
+         8SkEXc3SDVLK1F6qgcg95ZkVIW6H0s6hsKimCjJXaRCURAev6VWRQtgZ3yhOa/iHDRHc
+         rVrbTt2rkgOyTILVz3hCZUQcos+4xW0HYTFiJ/FlSZDA+nRUa6k5ljldLsoq+UHk31Ja
+         sB0fdNZ0TiUZ9iQhH03FaQ25Fk+5aaZjU2VO+kdGd3e5GKQNuxzV8dQPsFY/ul1nmk2H
+         nIjci2CWHGcLSJ4THCj9iymHupD+iNNS/J45ySeclynfkHaNxICDdd01dz42/3scktL+
+         khEg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=references:to:cc:in-reply-to:date:subject:mime-version:message-id
+         :from:dkim-signature:arc-authentication-results;
+        bh=Ije+YsRwVGQanzyU5FR9TbNdxIRu3GYvmoXbwFghvbY=;
+        b=IVNBS0kTy+WQj7G5rccDg+nSVlam41guiNKUiM+eUYiDLCT9HypFou1J1yc66bTwrT
+         kqdzg4hBt1GnzRdsw0k9u0q56gYh8hl/6Ivm8SeHAqyWyv/YO5sHHm5oWxeHy6jXUKj3
+         XLe0/KE7eYwZd/B/zFtCnTVO2L6QmTWsCc+J2m1UhumMAv3xngjUNK5/4wl+SqERvyFh
+         fXvNVDbzul6U8XMSjaS84bsdb/80Fs8rST9SBuFwP7y2qpkjcHli6k6ad8exaOxxvZa7
+         f7bUaeSbdCJLPs9qMaxLXkoIVEJtc6c/89yVd18d3SbYcx9kmV8i3r5nUGIJ3O+J+TIO
+         g3Mg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@durin42.com header.b=uZvMEsJq;
+       spf=neutral (google.com: 69.163.253.135 is neither permitted nor denied by best guess record for domain of raf@durin42.com) smtp.mailfrom=raf@durin42.com
+Return-Path: <raf@durin42.com>
+Received: from homiemail-a26.g.dreamhost.com (sub4.mail.dreamhost.com. [69.163.253.135])
+        by mx.google.com with ESMTPS id r69si10443978pfk.368.2017.08.03.11.39.38
+        for <kurt@seifried.org>
+        (version=TLS1_1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Thu, 03 Aug 2017 11:39:38 -0700 (PDT)
+Received-SPF: neutral (google.com: 69.163.253.135 is neither permitted nor denied by best guess record for domain of raf@durin42.com) client-ip=69.163.253.135;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@durin42.com header.b=uZvMEsJq;
+       spf=neutral (google.com: 69.163.253.135 is neither permitted nor denied by best guess record for domain of raf@durin42.com) smtp.mailfrom=raf@durin42.com
+Received: from homiemail-a26.g.dreamhost.com (localhost [127.0.0.1])
+	by homiemail-a26.g.dreamhost.com (Postfix) with ESMTP id 7BE12A007630;
+	Thu,  3 Aug 2017 11:39:37 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=durin42.com; h=from
+	:message-id:content-type:mime-version:subject:date:in-reply-to
+	:cc:to:references; s=durin42.com; bh=2t5A2kgyEaXkx5D6ALzIl/V7dzo
+	=; b=uZvMEsJqTeZsM+jy6S8WlivBGjk5ouHAy1HDtL7Iqk2iJ1MH9RJRKU4oqe4
+	8Hk0m4pBsUsS4fn8Xq+06hM0RVBHR5EvFGvbi/3/wjNJ78DgMaJ3wc/vZwp7pgjf
+	89Vw63vmqcswPhYVuSR7iGODFTR4k11ivl+tQ0Fbekd3McmE=
+Received: from dhcp-100-67-19-131.pit.corp.google.com (unknown [104.132.224.67])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	(Authenticated sender: augie@durin42.com)
+	by homiemail-a26.g.dreamhost.com (Postfix) with ESMTPSA id C4A2CA00763C;
+	Thu,  3 Aug 2017 11:39:36 -0700 (PDT)
+From: Augie Fackler <raf@durin42.com>
+Message-Id: <B56BA4A9-8B1D-4C47-99E5-479BFBAF9197@durin42.com>
+Content-Type: multipart/signed;
+ boundary="Apple-Mail=_D263DC7F-42FC-4BF3-BE17-510F2E769A76";
+ protocol="application/pgp-signature"; micalg=pgp-sha256
+Mime-Version: 1.0 (Mac OS X Mail 10.3 \(3273\))
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ security@mercurial-scm.org
+Date: Thu, 3 Aug 2017 14:39:33 -0400
+In-Reply-To: <20170803181836.4892.68119@shiny-2.local>
+Cc: security@mercurial-scm.org
+To: kurt@seifried.org
+References: <20170803181836.4892.68119@shiny-2.local>
+X-Mailer: Apple Mail (2.3273)
+
+
+--Apple-Mail=_D263DC7F-42FC-4BF3-BE17-510F2E769A76
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+I accept
+
+> On Aug 3, 2017, at 14:18, kurt@seifried.org wrote:
+>=20
+> This is a confirmation email sent from CVE request form at =
+https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use =
+(assuming you filled out the CVE form and want one, we can't use the =
+data until you accept the MITRE CVE Terms of Use).
+>=20
+> Simply quote the email and reply with "I accept" at the top if you =
+agree to the MITRE CVE Terms of Use and we will add a copy of the email =
+to the DWF MITRE CVE Terms of Use acceptance data at =
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/mas=
+ter/Terms-Of-Use
+>=20
+> The reason we use a complete copy of the email is that it provides an =
+artifact showing that the email address accepted the Terms of Use, when =
+they were accepted and so on.
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore =
+this message, however we may resend it at some point in the future, if =
+you don't want any future emails simply reply with "unsubscribe" or =
+"DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to =
+the block list so we don't spam you with these, please note that this =
+will prevent you from being able to accept the MITRE CVE Terms of Use =
+via the DWF automatically in future (you'll have to manually ask). But =
+again, if you have no idea what a CVE is then you can ignore this/ask to =
+be added to the block list with no problems.
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common =
+Vulnerabilities and Exposures (CVE=C2=AE), you hereby grant to The MITRE =
+Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a =
+perpetual, worldwide, non-exclusive, no-charge, royalty-free, =
+irrevocable copyright license to reproduce, prepare derivative works of, =
+publicly display, publicly perform, sublicense, and distribute such =
+materials and derivative works. Unless required by applicable law or =
+agreed to in writing, you provide such materials on an "AS IS" BASIS, =
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, =
+including, without limitation, any warranties or conditions of TITLE, =
+NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, =
+non-exclusive, no-charge, royalty-free, irrevocable copyright license to =
+reproduce, prepare derivative works of, publicly display, publicly =
+perform, sublicense, and distribute Common Vulnerabilities and Exposures =
+(CVE=C2=AE). Any copy you make for such purposes is authorized provided =
+that you reproduce MITRE's copyright designation and this license in any =
+such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE =
+ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION =
+HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, =
+ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL =
+WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY =
+WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY =
+RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A =
+PARTICULAR PURPOSE.
+>=20
+> A copy is available at =
+https://github.com/distributedweaknessfiling/DWF-Database/blob/master/Term=
+sOfUse.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org =
+manually with your question/concerns/etc.
+>=20
+
+
+--Apple-Mail=_D263DC7F-42FC-4BF3-BE17-510F2E769A76
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+	filename=signature.asc
+Content-Type: application/pgp-signature;
+	name=signature.asc
+Content-Description: Message signed with OpenPGP
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIcBAEBCAAGBQJZg23mAAoJELnJ3IJKpb3VpYgQANLXmHr3vNMDqCpfaA83Thy6
+km7x/1YtssPc2fgd9YlCPczAV3MvGXfP1M3wD0HJPeGejv4SLhHIbtivCvq7h+tB
+D6ysNkd+xYjAU9ms1/lIG/SSh7/h0ObVia+/B+9o7+TcjZjWTfUPdw88qYQD4526
+vvxw0E+QVQLKivlS6qoCyTtIGhwIi0i0Kl5s9IJQF4qldg2fQBChZUtEy2WLv9f4
+1lKANyA+PEmmoPCyclZ7BOb9+V6XUrZtHvzNK074o0CrUmYeVp8WWelxLCsH/r+e
+osyzWgYmff0oQgOCUO6BpvwQjBhBqmUSQ76P0STvU4u04uX3DHh9A1M/6ftI/Rjd
+FMTGCv38N4xVF/iojIp8Kjc/0tRQaTMit6QWvppJhnxy2MqAi+Ra8Tpfu2AVB2lW
+1PZUmwimBCJkGuu4LfSqH5I2FhrHrS/P/4lqMyKRTXpY4Q6o6dV6E+WbFwL4BfaN
+jEfJeu/5oj71QTrEFq3gKhSbJH+NPB2Qba/Ad3sEUzZPZcCVwT6g8gXtmGO3jhTJ
+MPIkEQUgpouBFmG8PVTFxpOfyVHeutJJwKunSjq79zk32NwCbwKlqcBGT01m6cV5
+0I7O4wwM86djwodP2Yv5m+q7PhnmsdUGZ1qtunE3NLmfoTouS6YnKerqOTT2D1ns
+LqNL8HRW9qDImNFh3Ji6
+=Ux+1
+-----END PGP SIGNATURE-----
+
+--Apple-Mail=_D263DC7F-42FC-4BF3-BE17-510F2E769A76--

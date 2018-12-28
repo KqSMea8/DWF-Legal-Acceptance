@@ -1,0 +1,152 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.82.15 with SMTP id i15csp227303uaa;
+        Fri, 7 Apr 2017 05:15:43 -0700 (PDT)
+X-Received: by 10.28.46.198 with SMTP id u189mr27288813wmu.54.1491567343647;
+        Fri, 07 Apr 2017 05:15:43 -0700 (PDT)
+Return-Path: <us3r777@n0b0.so>
+Received: from relay9-d.mail.gandi.net (relay9-d.mail.gandi.net. [2001:4b98:c:538::199])
+        by mx.google.com with ESMTPS id y2si7954072wmh.37.2017.04.07.05.15.43
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 07 Apr 2017 05:15:43 -0700 (PDT)
+Received-SPF: neutral (google.com: 2001:4b98:c:538::199 is neither permitted nor denied by best guess record for domain of us3r777@n0b0.so) client-ip=2001:4b98:c:538::199;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 2001:4b98:c:538::199 is neither permitted nor denied by best guess record for domain of us3r777@n0b0.so) smtp.mailfrom=us3r777@n0b0.so
+Received: from relay6-d.mail.gandi.net (relay6-d.mail.gandi.net [217.70.183.198])
+	by relay9-d.mail.gandi.net (Postfix) with ESMTPS id 5801F406F2
+	for <kurt@seifried.org>; Fri,  7 Apr 2017 14:15:42 +0200 (CEST)
+Received: from mfilter5-d.gandi.net (mfilter5-d.gandi.net [217.70.178.132])
+	by relay6-d.mail.gandi.net (Postfix) with ESMTP id C9A58FB87E
+	for <kurt@seifried.org>; Fri,  7 Apr 2017 14:15:42 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at mfilter5-d.gandi.net
+Received: from relay6-d.mail.gandi.net ([IPv6:::ffff:217.70.183.198])
+	by mfilter5-d.gandi.net (mfilter5-d.gandi.net [::ffff:10.0.15.180]) (amavisd-new, port 10024)
+	with ESMTP id bSvjtqT0iToB for <kurt@seifried.org>;
+	Fri,  7 Apr 2017 14:15:40 +0200 (CEST)
+X-Originating-IP: 192.70.106.83
+Received: from [10.70.106.83] (unknown [192.70.106.83])
+	(Authenticated sender: us3r777@n0b0.so)
+	by relay6-d.mail.gandi.net (Postfix) with ESMTPSA id B4BEEFB88B
+	for <kurt@seifried.org>; Fri,  7 Apr 2017 14:15:40 +0200 (CEST)
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ us3r777@n0b0.so
+To: kurt@seifried.org
+References: <20170406201822.4090.17753@shiny-2.local>
+From: us3r777 <us3r777@n0b0.so>
+Message-ID: <8c8475f2-0a8c-bd35-9cd6-5bd31d93b92b@n0b0.so>
+Date: Fri, 7 Apr 2017 14:15:21 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101
+ Thunderbird/45.8.0
+MIME-Version: 1.0
+In-Reply-To: <20170406201822.4090.17753@shiny-2.local>
+Content-Type: multipart/signed; micalg=pgp-sha256;
+ protocol="application/pgp-signature";
+ boundary="uEpuGV2FBwmRMONg3rWraW8wqVAli32JB"
+
+This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
+--uEpuGV2FBwmRMONg3rWraW8wqVAli32JB
+Content-Type: multipart/mixed; boundary="DxXB2Gq8QQkB7foRJ8okEFOHbUkIafpDk";
+ protected-headers="v1"
+From: us3r777 <us3r777@n0b0.so>
+To: kurt@seifried.org
+Message-ID: <8c8475f2-0a8c-bd35-9cd6-5bd31d93b92b@n0b0.so>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ us3r777@n0b0.so
+References: <20170406201822.4090.17753@shiny-2.local>
+In-Reply-To: <20170406201822.4090.17753@shiny-2.local>
+
+--DxXB2Gq8QQkB7foRJ8okEFOHbUkIafpDk
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+
+On 06/04/2017 22:18, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwan=
+tacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you =
+filled out the CVE form and want one, we can't use the data until you acc=
+ept the MITRE CVE Terms of Use).=20
+>
+> Simply quote the email and reply with "I accept" at the top if you agre=
+e to the MITRE CVE Terms of Use and we will add it to the DWF MITRE CVE T=
+erms of Use acceptance data at https://github.com/distributedweaknessfili=
+ng/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>
+> If you did not submit a CVE request to the DWF you can safely ignore th=
+is message, however we may resend it at some point in the future, if you =
+don't want any future emails simply reply with "unsubscribe" or "DON'T SE=
+ND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block=
+ list so we don't spam you with these, please note that this will prevent=
+ you from being able to accept the MITRE CVE Terms of Use via the DWF aut=
+omatically in future (you'll have to manually ask). But again, if you hav=
+e no idea what a CVE is then you can ignore this/ask to be added to the b=
+lock list with no problems.=20
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities=
+ and Exposures (CVE=C2=AE), you hereby grant to The MITRE Corporation (MI=
+TRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non=
+-exclusive, no-charge, royalty-free, irrevocable copyright license to rep=
+roduce, prepare derivative works of, publicly display, publicly perform, =
+sublicense, and distribute such materials and derivative works. Unless re=
+quired by applicable law or agreed to in writing, you provide such materi=
+als on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, ei=
+ther express or implied, including, without limitation, any warranties or=
+ conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A=
+ PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusiv=
+e, no-charge, royalty-free, irrevocable copyright license to reproduce, p=
+repare derivative works of, publicly display, publicly perform, sublicens=
+e, and distribute Common Vulnerabilities and Exposures (CVE=C2=AE). Any c=
+opy you make for such purposes is authorized provided that you reproduce =
+MITRE's copyright designation and this license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE A=
+RE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/=
+SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BO=
+ARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES=
+, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE =
+USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIE=
+D WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> A copy is available at https://github.com/distributedweaknessfiling/DWF=
+-Database/blob/master/TermsOfUse.md
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manuall=
+y with your question/concerns/etc.=20
+>
+
+
+
+--DxXB2Gq8QQkB7foRJ8okEFOHbUkIafpDk--
+
+--uEpuGV2FBwmRMONg3rWraW8wqVAli32JB
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEE9syY/k9pPzSESiOSrwoRLI2Qp6IFAljnguoACgkQrwoRLI2Q
+p6JM+g//Tyq34w98N+b2HiTogmRNXYkZgt1FUJ4rHAO5Fvn9156IPLY1GV/Zl2/f
+qV2A0i/yEy2cljV/p7GGtW846j8xrCpq049KD+0KmTN3j0na5tUN/dtkAtVP8yrh
+2hOgVqQ3tPxkkCrAiWtgYHh+e7TiLP11lu6npb71S81ozA3sG9TGnZjjqzWwLNKi
+Wu9CAQZFWOrr9Twqi94fJ01M5+7vcKEIO/2RCjvsr+WpM1vAhZ1klSrmgh7aDjPL
+iA6lB7mat3aY9Q4AAnHxGVWLkN6L9OGDWdEklCxh0lup837WMyg2JrfvLwIk0IN6
+gZnoiup73b9MmUEx2Lik9Fru9RAZnZj0eoE+S1Adc5DVKvKTEz0gcEUYQ5f6RbRT
+4jCvm4ojx+asYGiyeOWDExGRc9sLswF8PRt+FVBQth7R7gXut1xyFOmz2u8RUyf3
+I0GrM/5/nP6tAGbmRRGejBE/F+/c7xnOXpOA2k1xwf26d0+tOHtEHRyrIR/g72X2
+H8Xp26uO8NhCyeQDKTmvkmAMQ3djszVvU0sWZ51hFLxTZYP2bW7+EYemlgOCqu+v
+DAdh86fG9e0syNOt97PHT5KTHuciID/D7mmipfaNZFC3ajkrzaiF+oh1ViHVpeH/
+R+Eum9pSULm5N+Icjp5P9AHQ54LUevdqGe5aDx3CxwAnQ71tlI0=
+=eY51
+-----END PGP SIGNATURE-----
+
+--uEpuGV2FBwmRMONg3rWraW8wqVAli32JB--

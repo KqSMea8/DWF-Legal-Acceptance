@@ -1,0 +1,98 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.65.42 with SMTP id j39csp576654uad;
+        Thu, 20 Apr 2017 00:38:46 -0700 (PDT)
+X-Received: by 10.223.136.165 with SMTP id f34mr6145027wrf.145.1492673926532;
+        Thu, 20 Apr 2017 00:38:46 -0700 (PDT)
+Return-Path: <ml@beckweb.net>
+Received: from wp095.webpack.hosteurope.de (wp095.webpack.hosteurope.de. [2a01:488:42:1000:50ed:8466::])
+        by mx.google.com with ESMTPS id z18si24998075wmc.7.2017.04.20.00.38.46
+        for <kurt@seifried.org>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Thu, 20 Apr 2017 00:38:46 -0700 (PDT)
+Received-SPF: neutral (google.com: 2a01:488:42:1000:50ed:8466:: is neither permitted nor denied by best guess record for domain of ml@beckweb.net) client-ip=2a01:488:42:1000:50ed:8466::;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 2a01:488:42:1000:50ed:8466:: is neither permitted nor denied by best guess record for domain of ml@beckweb.net) smtp.mailfrom=ml@beckweb.net
+Received: from hsi-kbw-109-192-074-214.hsi6.kabel-badenwuerttemberg.de ([109.192.74.214] helo=[192.168.2.87]); authenticated
+	by wp095.webpack.hosteurope.de running ExIM with esmtpsa (TLS1.0:ECDHE_RSA_AES_256_CBC_SHA384:256)
+	id 1d16ft-0003yg-WD; Thu, 20 Apr 2017 09:38:46 +0200
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0 (Mac OS X Mail 9.3 \(3124\))
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for ml@beckweb.net
+From: Daniel Beck <ml@beckweb.net>
+In-Reply-To: <20170420041021.2414.18068@shiny-2.local>
+Date: Thu, 20 Apr 2017 09:38:45 +0200
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <C3004BB7-01A8-49F2-88E2-D24C639C75A8@beckweb.net>
+References: <20170420041021.2414.18068@shiny-2.local>
+To: kurt@seifried.org
+X-Mailer: Apple Mail (2.3124)
+X-bounce-key: webpack.hosteurope.de;ml@beckweb.net;1492673926;3b524545;
+X-HE-SMSGID: 1d16ft-0003yg-WD
+
+I accept
+
+> On 20.04.2017, at 06:10, kurt@seifried.org wrote:
+>=20
+> This is a confirmation email sent from CVE request form at =
+https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use =
+(assuming you filled out the CVE form and want one, we can't use the =
+data until you accept the MITRE CVE Terms of Use).=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you =
+agree to the MITRE CVE Terms of Use and we will add it to the DWF MITRE =
+CVE Terms of Use acceptance data at =
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/mas=
+ter/Terms-Of-Use
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore =
+this message, however we may resend it at some point in the future, if =
+you don't want any future emails simply reply with "unsubscribe" or =
+"DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to =
+the block list so we don't spam you with these, please note that this =
+will prevent you from being able to accept the MITRE CVE Terms of Use =
+via the DWF automatically in future (you'll have to manually ask). But =
+again, if you have no idea what a CVE is then you can ignore this/ask to =
+be added to the block list with no problems.=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common =
+Vulnerabilities and Exposures (CVE=C2=AE), you hereby grant to The MITRE =
+Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a =
+perpetual, worldwide, non-exclusive, no-charge, royalty-free, =
+irrevocable copyright license to reproduce, prepare derivative works of, =
+publicly display, publicly perform, sublicense, and distribute such =
+materials and derivative works. Unless required by applicable law or =
+agreed to in writing, you provide such materials on an "AS IS" BASIS, =
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, =
+including, without limitation, any warranties or conditions of TITLE, =
+NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, =
+non-exclusive, no-charge, royalty-free, irrevocable copyright license to =
+reproduce, prepare derivative works of, publicly display, publicly =
+perform, sublicense, and distribute Common Vulnerabilities and Exposures =
+(CVE=C2=AE). Any copy you make for such purposes is authorized provided =
+that you reproduce MITRE's copyright designation and this license in any =
+such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE =
+ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION =
+HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, =
+ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL =
+WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY =
+WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY =
+RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A =
+PARTICULAR PURPOSE.
+>=20
+> A copy is available at =
+https://github.com/distributedweaknessfiling/DWF-Database/blob/master/Term=
+sOfUse.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org =
+manually with your question/concerns/etc.=20
+

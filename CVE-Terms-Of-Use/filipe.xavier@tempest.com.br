@@ -1,0 +1,189 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.31.230.197 with SMTP id d188csp268881vkh;
+        Wed, 5 Oct 2016 11:15:30 -0700 (PDT)
+X-Received: by 10.194.113.35 with SMTP id iv3mr8599158wjb.169.1475691330729;
+        Wed, 05 Oct 2016 11:15:30 -0700 (PDT)
+Return-Path: <filipe.xavier@tempest.com.br>
+Received: from mail.tempest.com.br ([198.251.89.53])
+        by mx.google.com with SMTP id wf5si12665608wjb.49.2016.10.05.11.15.30
+        for <kurt@seifried.org>;
+        Wed, 05 Oct 2016 11:15:30 -0700 (PDT)
+Received-SPF: temperror (google.com: error in processing during lookup of filipe.xavier@tempest.com.br: DNS error) client-ip=198.251.89.53;
+Authentication-Results: mx.google.com;
+       spf=temperror (google.com: error in processing during lookup of filipe.xavier@tempest.com.br: DNS error) smtp.mailfrom=filipe.xavier@tempest.com.br
+Received: (qmail 56422 invoked by uid 0); 5 Oct 2016 18:15:07 -0000
+Received: from unknown (HELO ?172.21.20.80?) (fxo@191.248.225.234)
+  by puck.tempest.com.br with SMTP; 5 Oct 2016 18:15:07 -0000
+Subject: Re: CVE - Acceptance of MITRE Terms of Use for CVE
+To: Kurt Seifried <kurt@seifried.org>
+References: <CABqVa39=UVZWoPf_NkmDE-H0uZBuVvPVOMdVmktNJdOWhGZOqQ@mail.gmail.com>
+From: filipe <filipe.xavier@tempest.com.br>
+Message-ID: <7e8634f4-6bd8-be60-7740-cc77757104b2@tempest.com.br>
+Date: Wed, 5 Oct 2016 15:15:24 -0300
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101
+ Thunderbird/45.3.0
+MIME-Version: 1.0
+In-Reply-To: <CABqVa39=UVZWoPf_NkmDE-H0uZBuVvPVOMdVmktNJdOWhGZOqQ@mail.gmail.com>
+Content-Type: multipart/alternative;
+ boundary="------------C60ECD6B8B88E8AB6F716316"
+
+This is a multi-part message in MIME format.
+--------------C60ECD6B8B88E8AB6F716316
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+I accept.
+
+
+Em 05/10/2016 13:41, Kurt Seifried escreveu:
+>
+> Hi, I need to confirm that you have accepted the
+> MITRE Terms of Use for CVE, available at:
+>
+> https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md
+> <https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md>
+>
+> and quoted below, please reply with "I accept" and I'll be able to
+> process your CVE request. Thanks!
+>
+> Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common
+> Vulnerabilities and Exposures (CVE®), you hereby grant to The MITRE
+> Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a
+> perpetual, worldwide, non-exclusive, no-charge, royalty-free,
+> irrevocable copyright license to reproduce, prepare derivative works
+> of, publicly display, publicly perform, sublicense, and distribute
+> such materials and derivative works. Unless required by applicable law
+> or agreed to in writing, you provide such materials on an "AS IS"
+> BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+> implied, including, without limitation, any warranties or conditions
+> of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+> PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide,
+> non-exclusive, no-charge, royalty-free, irrevocable copyright license
+> to reproduce, prepare derivative works of, publicly display, publicly
+> perform, sublicense, and distribute Common Vulnerabilities and
+> Exposures (CVE®). Any copy you make for such purposes is authorized
+> provided that you reproduce MITRE's copyright designation and this
+> license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE
+> ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION
+> HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION,
+> ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL
+> WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY
+> WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY
+> RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A
+> PARTICULAR PURPOSE.
+>
+>
+> -- 
+> Kurt Seifried
+> kurt@seifried.org <mailto:kurt@seifried.org>
+
+
+--------------C60ECD6B8B88E8AB6F716316
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+    <p>I accept.<br>
+    </p>
+    <br>
+    <div class="moz-cite-prefix">Em 05/10/2016 13:41, Kurt Seifried
+      escreveu:<br>
+    </div>
+    <blockquote
+cite="mid:CABqVa39=UVZWoPf_NkmDE-H0uZBuVvPVOMdVmktNJdOWhGZOqQ@mail.gmail.com"
+      type="cite">
+      <div dir="ltr">
+        <p class="gmail-m_-323732369566349682gmail-p1"
+          style="font-size:12.8px"><span
+            class="gmail-m_-323732369566349682gmail-s1">Hi, I need to
+            confirm that you have accepted the MITRE <span
+              class="gmail-il">Terms</span> of <span class="gmail-il">Use</span> for <span
+              class="gmail-il">CVE</span>, available at:</span></p>
+        <p class="gmail-m_-323732369566349682gmail-p2"
+          style="font-size:12.8px"><a moz-do-not-send="true"
+href="https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md"
+            target="_blank">https://github.com/<wbr>distributedweaknessfiling/DWF-<wbr>Database/blob/master/<wbr>TermsOfUse.md</a><br>
+          <span class="gmail-m_-323732369566349682gmail-s1"></span></p>
+        <p class="gmail-m_-323732369566349682gmail-p2"
+          style="font-size:12.8px">and quoted below, please reply with
+          "I accept" and I'll be able to process your <span
+            class="gmail-il">CVE</span> request. Thanks!<br>
+          <span class="gmail-m_-323732369566349682gmail-s1"></span></p>
+        <p class="gmail-m_-323732369566349682gmail-p2"
+          style="font-size:12.8px"><span class="gmail-il">Terms</span> of <span
+            class="gmail-il">Use</span><br>
+          <span class="gmail-m_-323732369566349682gmail-s1"></span></p>
+        <p class="gmail-m_-323732369566349682gmail-p2"
+          style="font-size:12.8px">LICENSE<br>
+          <span class="gmail-m_-323732369566349682gmail-s1"></span></p>
+        <p class="gmail-m_-323732369566349682gmail-p1"
+          style="font-size:12.8px"><span
+            class="gmail-m_-323732369566349682gmail-s1">Submissions: For
+            all materials you submit to the Common Vulnerabilities and
+            Exposures (<span class="gmail-il">CVE</span>®), you hereby
+            grant to The MITRE Corporation (MITRE) and all <span
+              class="gmail-il">CVE</span> Numbering Authorities (CNAs) a
+            perpetual, worldwide, non-exclusive, no-charge,
+            royalty-free, irrevocable copyright license to reproduce,
+            prepare derivative works of, publicly display, publicly
+            perform, sublicense, and distribute such materials and
+            derivative works. Unless required by applicable law or
+            agreed to in writing, you provide such materials on an "AS
+            IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+            either express or implied, including, without limitation,
+            any warranties or conditions of TITLE, NON-INFRINGEMENT,
+            MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.</span></p>
+        <p class="gmail-m_-323732369566349682gmail-p1"
+          style="font-size:12.8px"><span
+            class="gmail-m_-323732369566349682gmail-s1"><span
+              class="gmail-il">CVE</span> Usage: MITRE hereby grants you
+            a perpetual, worldwide, non-exclusive, no-charge,
+            royalty-free, irrevocable copyright license to reproduce,
+            prepare derivative works of, publicly display, publicly
+            perform, sublicense, and distribute Common Vulnerabilities
+            and Exposures (<span class="gmail-il">CVE</span>®). Any copy
+            you make for such purposes is authorized provided that you
+            reproduce MITRE's copyright designation and this license in
+            any such copy.</span></p>
+        <p class="gmail-m_-323732369566349682gmail-p2"
+          style="font-size:12.8px">DISCLAIMERS<br>
+          <span class="gmail-m_-323732369566349682gmail-s1"></span></p>
+        <p class="gmail-m_-323732369566349682gmail-p1"
+          style="font-size:12.8px"><span
+            class="gmail-m_-323732369566349682gmail-s1">ALL DOCUMENTS
+            AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE
+            PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE
+            ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY),
+            THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS,
+            AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR
+            IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE <span
+              class="gmail-il">USE</span> OF THE INFORMATION THEREIN
+            WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF
+            MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</span></p>
+        <div><br>
+        </div>
+        -- <br>
+        <div class="gmail_signature">Kurt Seifried<br>
+          <a moz-do-not-send="true" href="mailto:kurt@seifried.org"
+            target="_blank">kurt@seifried.org</a></div>
+      </div>
+    </blockquote>
+    <br>
+  </body>
+</html>
+
+--------------C60ECD6B8B88E8AB6F716316--

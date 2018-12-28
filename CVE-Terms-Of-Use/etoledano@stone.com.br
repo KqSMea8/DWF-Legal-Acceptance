@@ -1,0 +1,567 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.201.12 with SMTP id n12csp2637950ivk;
+        Thu, 15 Feb 2018 13:34:53 -0800 (PST)
+X-Google-Smtp-Source: AH8x226F0/9ugCtgkr1PxXJfov912elUi3WRehE2JqWhiwDlkJMbLM1Lu/JaDgt/faJAPWJXr1mP
+X-Received: by 10.200.37.216 with SMTP id f24mr6488539qtf.165.1518730493213;
+        Thu, 15 Feb 2018 13:34:53 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1518730493; cv=none;
+        d=google.com; s=arc-20160816;
+        b=AZxCs/2RSvleWT7Y70xDLcEc8FMC1Fr8HsWLE4PMpgpJJjM/XEUcWD+fUV44lGbllC
+         LAqCrQyRwgoWBd3HC0qYPpep2izM5l9+0t441RIMFW/CKnyTxLMpS3vaZZ1Gax6OFNAi
+         A9IX6PRImE0RxB9AzQW+e5aP7+9l4IMqDKypiani9YZ+AaDPwcFkTy/gXwvEhWZ4oNG/
+         /kUJeDHHa8cSkD9Aujtw9jc2V0YGNOBAOksINOQIXgKhyf5ktwPBf3QCDqDaJa4eR9Qw
+         Zoq/o89yJmh1tNi68bw4jv1Rgp3IfAHpa5/iEqsxm0ZpVXmBo7o9WSYWrlKWleLeNm/g
+         hl1g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:spamdiagnosticmetadata:spamdiagnosticoutput
+         :content-language:accept-language:in-reply-to:references:message-id
+         :date:thread-index:thread-topic:subject:to:from:dkim-signature
+         :arc-authentication-results;
+        bh=wru/fjbQY0OfbYoUsAvMVNVMq+E3h0L8uaHERWY//Lo=;
+        b=k4Nrr+KgwSv+efyoZtpSX9yhTeGytNWewQCMxErWcDD+wwKcZ2DflQY7Lx5QMbmMF0
+         lRnZoG7aL5qyNtFB20XWLSbzrMS90xUvOLdz/BK+sikhkOzDEY7pIRjtEA/EwhGbT5e0
+         /S/FJg1UtEYMLHG2rEfu4qPQxnQ1+jgpP1LOCfgI6i8dqPtFiyLYsKU9H9KF0/iL/aK1
+         fvc7/DiO+XDXXNW/duuwWUGcHSrFZvR+YdadjN1W0bjs1u9h2+9NbflWtLvJcysunmdh
+         mGlXQSKexpGoPWF5KRc0ngEgIW4RcGVbbWQ1M68ROp1yY+Svyt3lXsUD8weTR4UNWDkY
+         HOYw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@STONEPAGAMENTOSSA.onmicrosoft.com header.s=selector1-stone-com-br header.b=fJ3CYGW7;
+       spf=permerror (google.com: permanent error in processing during lookup of etoledano@stone.com.br: o1.noreplymail.stone.com.br not found) smtp.mailfrom=etoledano@stone.com.br
+Return-Path: <etoledano@stone.com.br>
+Received: from mail1.bemta8.messagelabs.com (mail1.bemta8.messagelabs.com. [216.82.243.202])
+        by mx.google.com with ESMTPS id e24si2838497qkm.330.2018.02.15.13.34.52
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 15 Feb 2018 13:34:53 -0800 (PST)
+Received-SPF: permerror (google.com: permanent error in processing during lookup of etoledano@stone.com.br: o1.noreplymail.stone.com.br not found) client-ip=216.82.243.202;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@STONEPAGAMENTOSSA.onmicrosoft.com header.s=selector1-stone-com-br header.b=fJ3CYGW7;
+       spf=permerror (google.com: permanent error in processing during lookup of etoledano@stone.com.br: o1.noreplymail.stone.com.br not found) smtp.mailfrom=etoledano@stone.com.br
+Return-Path: <etoledano@stone.com.br>
+Received: from [216.82.241.131] (using TLSv1.2 with cipher DHE-RSA-AES256-GCM-SHA384 (256 bits))
+	by server-10.bemta-8.messagelabs.com id 67/04-03103-CFCF58A5; Thu, 15 Feb 2018 21:34:52 +0000
+X-Brightmail-Tracker: H4sIAAAAAAAAA1WTbUxTVxjH+/TetlfHnYcLjodOktlooiCN2gX
+  5sGR+WYZZlpnti8IWvJVr29kWvLcom4k6DSxA5ssiFmGEgpsOt05FTEgYSykvTpbB1i2KECNF
+  NrH4tik6J8ju7SlOv5z8zvP/P//znJtzOUbYbzJzUplPkr2i22Kczy57M2s8e3q6PH/lTHNq7
+  r4zQXYt5I1OrlgP+QaX115ctsngHGi0lYS+h7IH9THDHjj1LVTBfI4lnzP4Rfhfg7YRSI0e/Z
+  c7gG56AB+0/cBUwTzOSHLw75ajRo1TSRb6J8/HOYUUYEvPAaD19/FAf4ue8mqVI6zGLFmKtXW
+  tap3jeNXTObFLQ0G1/DK0WHPMIzb8pv6kQWMgGdgw3WnSmCFpeKyNJiJJxeivPxkpL8Qb154Y
+  tBggGzBckaMhklfwx5iPOjIw0lgdvwiSc3rsbuozUcGK5w7dAspv4ydHPk2YIoBHgrcSZ2Xi4
+  5mpRMNWHO59aKDsxY7evYkZjjHoH7BTXoRjA50sDdpnwqn+8rhJIEXY1nkwEboTuw5VmuhnM+
+  OV3yvhIGTWPXPPOrWfIZWAD0eqTJrAk2S8cHScpSYvjty8bqRsxaGawwnOwuNNkwzlbKx9Ema
+  fr3Mqr8HR6Oa58ncX7yfOCgIGyhuACqvxgv+EnvJiPFwdNQWAPwnLFEneLsnZr9qsdtnlcPo8
+  osudvWplrtUjKYrokNyiXbFuLva0gvoSd+t00A73jheEIZ3TWxbyHw6W5wsv2ouLPnKKirNQL
+  nVLShgWcZwF+dLHqpYsSw6pbIvLrT7nORm5JEsqb9ZkXikRPYrLQaV+eJ2LRcYrGK5t7Ia6hu
+  Lr0MRkBSOw3mKvZE7jRa2NaG3OUu/T0LnfJAIZ5hQedDqdkFQiyR6X73k9BmkcWFL4qJaS5PL
+  6np4dU8fSq2PxlvhYPvF/ybwHkvqa/T8HznS98FLBaN66yu2vOdZXL8g9vWb4nuvrJYG06Ox7
+  tX+NBMbb220X+zIjNVNvCTMTrY+W6++Gvgxd6f7s9oITTel3Gm7uaO7ZcGlj+weza4cH/5GTt
+  +W/e3bWBjlfCV3JLz/aGwq+UXvtD11heuM7Hwt/BseuNtTfjizZ/1vhYJ6FVZziqkxGVsT/AG
+  oIT9IhBAAA
+X-Env-Sender: etoledano@stone.com.br
+X-Msg-Ref: server-10.tower-54.messagelabs.com!1518730490!171536207!1
+X-Originating-IP: [40.71.43.228]
+X-StarScan-Version: 9.4.45; banners=-,-,-
+Received: (qmail 50152 invoked from network); 15 Feb 2018 21:34:51 -0000
+Received: from unknown (HELO NAM03-BY2-obe.outbound.protection.outlook.com) (40.71.43.228)
+  by server-10.tower-54.messagelabs.com with AES256-SHA256 encrypted SMTP; 15 Feb 2018 21:34:51 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=STONEPAGAMENTOSSA.onmicrosoft.com; s=selector1-stone-com-br;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=wru/fjbQY0OfbYoUsAvMVNVMq+E3h0L8uaHERWY//Lo=;
+ b=fJ3CYGW7SLAkMJrJkjiCnhagxhDmLm15aaTAKj3H+Q3XTPUjIejQ+IB8q9zMr7LuO61BCouNsS7MgsO1iQUdoYtQ9h8zBCjhwb/CY3BK+HFPdwjpEWhhvTgSVp5E7FNAiDDhji6Cnqdml+CPjGWFDx76BUoWgh5rFESp51Lm91U=
+Received: from FR1PR80MB1879.lamprd80.prod.outlook.com (10.175.143.17) by
+ FR1PR80MB0486.lamprd80.prod.outlook.com (10.170.195.140) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id
+ 15.20.485.10; Thu, 15 Feb 2018 21:34:46 +0000
+Received: from FR1PR80MB1879.lamprd80.prod.outlook.com ([10.175.143.17]) by
+ FR1PR80MB1879.lamprd80.prod.outlook.com ([10.175.143.17]) with mapi id
+ 15.20.0506.016; Thu, 15 Feb 2018 21:34:45 +0000
+From: Edward Toledano | Stone <etoledano@stone.com.br>
+To: "kurt@seifried.org" <kurt@seifried.org>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ etoledano@stone.com.br
+Thread-Topic: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ etoledano@stone.com.br
+Thread-Index: AQHTppxdHsMa25G3xUqNi6f+XUQS76Ol/BfV
+Date: Thu, 15 Feb 2018 21:34:45 +0000
+Message-ID: <FR1PR80MB1879FD30D1E07765ACBD61F89BF40@FR1PR80MB1879.lamprd80.prod.outlook.com>
+References: <20180215203414.80517.7219@slab.local>
+In-Reply-To: <20180215203414.80517.7219@slab.local>
+Accept-Language: pt-BR, en-US
+Content-Language: pt-BR
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+x-originating-ip: [201.73.223.2]
+x-ms-publictraffictype: Email
+x-microsoft-exchange-diagnostics: 1;FR1PR80MB0486;20:0Bc1XYHL13t2LJo/R6u8ZOXABaAmAIhW9vAfiWZXvS0UQlqoutuz+8X1nX/91bfa/8c6WXtbEfDj2gxzEjqh+zXrwbupXyeR57hpj9c/knSOr7M6+NYFWufG+agCaY6ktspB004WNZrFc7pliVPVIsh6XwMc6pAnFhaxNDEFWMyYuBmtg/iOOchLOct2kWc3QNYTE2x11qKSsJu/SIL/d4meGdXnnaAFiOO/VPM0govb0jol/d2H3eXMMsiV3Mix
+x-ms-exchange-antispam-srfa-diagnostics: SSOS;
+x-ms-office365-filtering-correlation-id: 38926af6-cf28-442a-9831-08d574bbeef4
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(7020095)(4652020)(4534165)(4627221)(201703031133081)(201702281549075)(5600026)(4604075)(3008032)(2017052603307)(7153060)(49563074)(7193020);SRVR:FR1PR80MB0486;
+x-ms-traffictypediagnostic: FR1PR80MB0486:
+x-microsoft-antispam-prvs: <FR1PR80MB04861A98F4FD1581CB2360EA9BF40@FR1PR80MB0486.lamprd80.prod.outlook.com>
+x-exchange-antispam-report-test: UriScan:(166708455590820)(192374486261705)(166494164430575)(153587507350300);
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(102415395)(6040501)(2401047)(8121501046)(5005006)(93006095)(93001095)(3231101)(2400082)(944501161)(3002001)(10201501046)(6041288)(20161123564045)(20161123560045)(20161123562045)(20161123558120)(201703131423095)(201702281528075)(20161123555045)(201703061421075)(201703061406153)(6072148)(201708071742011);SRVR:FR1PR80MB0486;BCL:0;PCL:0;RULEID:;SRVR:FR1PR80MB0486;
+x-forefront-prvs: 058441C12A
+x-forefront-antispam-report: SFV:NSPM;SFS:(10019020)(39380400002)(366004)(396003)(376002)(346002)(39860400002)(13624006)(199004)(189003)(252514010)(38564003)(28244002)(99936001)(53936002)(5640700003)(8936002)(25786009)(81166006)(1730700003)(6506007)(8676002)(74482002)(74316002)(2906002)(81156014)(7736002)(97736004)(5660300001)(2900100001)(6916009)(2950100002)(6606003)(5180700001)(86362001)(3280700002)(66066001)(186003)(3660700001)(102836004)(26005)(6246003)(54556002)(9686003)(3846002)(106356001)(33656002)(316002)(59450400001)(606006)(478600001)(966005)(42882006)(105586002)(14454004)(6116002)(236005)(6306002)(55016002)(54896002)(2501003)(733005)(68736007)(99286004)(7696005)(19627405001)(77096007)(6436002)(229853002)(76176011)(2351001)(221513004)(222073002);DIR:OUT;SFP:1102;SCL:1;SRVR:FR1PR80MB0486;H:FR1PR80MB1879.lamprd80.prod.outlook.com;FPR:;SPF:None;PTR:InfoNoRecords;A:1;MX:1;LANG:en;
+received-spf: None (protection.outlook.com: stone.com.br does not designate
+ permitted sender hosts)
+x-microsoft-antispam-message-info: HhQvJ8rM/Z30MXTv6qNPgzw9vuauVR4MVSPulNmIPBSRnOUBen7pjV1RynKNpRpW3xCU7bWeQfoE0wG0LUo6ag==
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/related;
+	boundary="_004_FR1PR80MB1879FD30D1E07765ACBD61F89BF40FR1PR80MB1879lamp_";
+	type="multipart/alternative"
+MIME-Version: 1.0
+X-OriginatorOrg: stone.com.br
+X-MS-Exchange-CrossTenant-Network-Message-Id: 38926af6-cf28-442a-9831-08d574bbeef4
+X-MS-Exchange-CrossTenant-originalarrivaltime: 15 Feb 2018 21:34:45.7787
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 1236ea7e-8bbc-43a5-a5ee-189a1954e314
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: FR1PR80MB0486
+X-CFilter-Loop: Reflected
+
+--_004_FR1PR80MB1879FD30D1E07765ACBD61F89BF40FR1PR80MB1879lamp_
+Content-Type: multipart/alternative;
+	boundary="_000_FR1PR80MB1879FD30D1E07765ACBD61F89BF40FR1PR80MB1879lamp_"
+
+--_000_FR1PR80MB1879FD30D1E07765ACBD61F89BF40FR1PR80MB1879lamp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+I Accept
+
+
+Atenciosamente,
+
+[1501524261317_image001.jpg]
+
+Edward Toledano | Offensive Security
+STOLabs
+
+Email: etoledano@stone.com.br
+Skype: etoledano | Phone: +55 21 99955-9804
+www.stone.com.br<http://www.stone.com.br/>
+Avenida General Justo, 375 | Rio de Janeiro - RJ
+
+
+
+O conte=FAdo desta mensagem =E9 confidencial e destinado exclusivamente aos=
+ destinat=E1rios. Caso a receba por engano, favor destru=ED-la e notificar =
+o remetente de imediato. O correio eletr=F4nico n=E3o configura meio seguro=
+ para transmiss=E3o de dados e o remetente N=C3O se responsabiliza por even=
+tual erro, atraso, extravio, intercepta=E7=E3o ou infec=E7=E3o por v=EDrus.=
+ Cabe ao destinat=E1rio solicitar vers=E3o f=EDsica sempre que necess=E1rio=
+.
+
+The content of this message is confidential and was intended solely to its =
+recipient. In case this message is received by mistake, please destroy it a=
+nd notify the sender immediately. Electronic mails are not a safe channel f=
+or data transmission and the sender accepts NO liability for eventual error=
+s, delays, loss, interception or virus infection. When necessary, the recei=
+ver must request a hard-copy version.
+
+
+
+________________________________
+De: kurt@seifried.org <kurt@seifried.org>
+Enviado: quinta-feira, 15 de fevereiro de 2018 18:34
+Para: Edward Toledano | Stone
+Assunto: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for etoledano@s=
+tone.com.br
+
+This is a confirmation email sent from CVE request form at https://iwantacv=
+e.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled=
+ out the CVE form and want one, we can't use the data until you accept the =
+MITRE CVE Terms of Use).
+
+Simply quote the email and reply with "I accept" at the top if you agree to=
+ the MITRE CVE Terms of Use and we will add a copy of the email to the DWF =
+MITRE CVE Terms of Use acceptance data at https://github.com/distributedwea=
+knessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+
+The reason we use a complete copy of the email is that it provides an artif=
+act showing that the email address accepted the Terms of Use, when they wer=
+e accepted and so on.
+
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don't =
+want any future emails simply reply with "unsubscribe" or "DON'T SEND ME TH=
+IS EMAIL EVER AGAIN" and I'll add your email address to the block list so w=
+e don't spam you with these, please note that this will prevent you from be=
+ing able to accept the MITRE CVE Terms of Use via the DWF automatically in =
+future (you'll have to manually ask). But again, if you have no idea what a=
+ CVE is then you can ignore this/ask to be added to the block list with no =
+problems.
+
+MITRE CVE Terms of Use
+
+LICENSE
+
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+ Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and a=
+ll CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable copyright license to reproduce, prepar=
+e derivative works of, publicly display, publicly perform, sublicense, and =
+distribute such materials and derivative works. Unless required by applicab=
+le law or agreed to in writing, you provide such materials on an "AS IS" BA=
+SIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implie=
+d, including, without limitation, any warranties or conditions of TITLE, NO=
+N-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare=
+ derivative works of, publicly display, publicly perform, sublicense, and d=
+istribute Common Vulnerabilities and Exposures (CVE??). Any copy you make f=
+or such purposes is authorized provided that you reproduce MITRE's copyrigh=
+t designation and this license in any such copy.
+
+DISCLAIMERS
+
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE RE=
+PRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF T=
+RUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS =
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE I=
+NFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES O=
+F MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+A copy is available at https://github.com/distributedweaknessfiling/DWF-Leg=
+al-Acceptance/blob/master/Terms-Of-Use.md
+
+To contact the DWF either hit reply, or email kurt@seifried.org manually wi=
+th your question/concerns/etc.
+
+
+--_000_FR1PR80MB1879FD30D1E07765ACBD61F89BF40FR1PR80MB1879lamp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Helvetica,sans-serif;" dir=3D"ltr">
+<p style=3D"margin-top:0;margin-bottom:0">I Accept</p>
+<p style=3D"margin-top:0;margin-bottom:0"><br>
+</p>
+<div id=3D"Signature">
+<div id=3D"divtagdefaultwrapper" dir=3D"ltr" style=3D"font-size:12pt; color=
+:rgb(0,0,0); font-family:Calibri,Helvetica,sans-serif,EmojiFont,&quot;Apple=
+ Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmoji,&quot;Segoe UI=
+ Symbol&quot;,&quot;Android Emoji&quot;,EmojiSymbols,EmojiFont,&quot;Apple =
+Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmoji,&quot;Segoe UI =
+Symbol&quot;,&quot;Android Emoji&quot;,EmojiSymbols,EmojiFont,&quot;Apple C=
+olor Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmoji,&quot;Segoe UI S=
+ymbol&quot;,&quot;Android Emoji&quot;,EmojiSymbols,EmojiFont,&quot;Apple Co=
+lor Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmoji,&quot;Segoe UI Sy=
+mbol&quot;,&quot;Android Emoji&quot;,EmojiSymbols,EmojiFont,&quot;Apple Col=
+or Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmoji,&quot;Segoe UI Sym=
+bol&quot;,&quot;Android Emoji&quot;,EmojiSymbols,EmojiFont,&quot;Apple Colo=
+r Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmoji,&quot;Segoe UI Symb=
+ol&quot;,&quot;Android Emoji&quot;,EmojiSymbols">
+<p></p>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px; margin:0px">
+<font size=3D"2" style=3D"font-family:Calibri,sans-serif,serif,EmojiFont"><=
+span style=3D"font-size:11pt"><span lang=3D"en-US">Atenciosamente,</span></=
+span></font></div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px; margin:0px">
+<font size=3D"2" style=3D"font-family:Calibri,sans-serif,serif,EmojiFont"><=
+span style=3D"font-size:11pt"><span lang=3D"en-US">&nbsp;</span></span></fo=
+nt></div>
+<table width=3D"814" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Segoe UI&quot=
+;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; font-size:1=
+5px; border-collapse:collapse; width:488.8pt">
+<tbody>
+<tr>
+<td width=3D"259" style=3D"width:155.95pt; padding:0px 5.4pt">
+<div style=3D"margin:0px"><img class=3D"EmojiInsert" alt=3D"1501524261317_i=
+mage001.jpg" style=3D"" src=3D"cid:72acdfd5-d6d7-407e-bbb7-5dcf39e2877c"><b=
+r>
+</div>
+</td>
+<td width=3D"554" style=3D"width:332.85pt; padding:0px 5.4pt">
+<div style=3D"margin:0px"><font size=3D"2" style=3D"font-family:Calibri,san=
+s-serif,serif,EmojiFont"><span style=3D"font-size:11pt"><font size=3D"3" co=
+lor=3D"#33AF01" style=3D"font-family:&quot;Segoe UI&quot;,sans-serif,serif,=
+EmojiFont"><span lang=3D"en-US" style=3D"font-size:12pt"><b>Edward
+ Toledano&nbsp;| Offensive Security</b></span></font><font size=3D"4" color=
+=3D"#33AF01" style=3D"font-family:&quot;Segoe UI&quot;,sans-serif,serif,Emo=
+jiFont"><span lang=3D"en-US" style=3D"font-size:14pt"><br>
+</span></font><font size=3D"1" color=3D"#70AD47" style=3D"font-family:&quot=
+;Segoe UI&quot;,sans-serif,serif,EmojiFont"><span lang=3D"en-US" style=3D"f=
+ont-size:8pt">STOLabs</span></font><font size=3D"1" color=3D"#70AD47" style=
+=3D"font-family:&quot;Segoe UI&quot;,sans-serif,serif,EmojiFont"><span lang=
+=3D"en-US" style=3D"font-size:8pt"><br>
+</span></font><font size=3D"1" color=3D"#500050" style=3D"font-family:&quot=
+;Segoe UI&quot;,sans-serif,serif,EmojiFont"><span lang=3D"en-US" style=3D"f=
+ont-size:8pt"><br>
+</span></font><font size=3D"1" color=3D"#999999" style=3D"font-family:&quot=
+;Segoe UI&quot;,sans-serif,serif,EmojiFont"><span lang=3D"en-US" style=3D"f=
+ont-size:8pt">Email: etoledano@stone.com.br</span></font></span></font></di=
+v>
+<div style=3D"margin:0px"><font size=3D"2" style=3D"font-family:Calibri,san=
+s-serif,serif,EmojiFont"><span style=3D"font-size:11pt"><font size=3D"1" co=
+lor=3D"#999999" style=3D"font-family:&quot;Segoe UI&quot;,sans-serif,serif,=
+EmojiFont"><span style=3D"font-size:8pt">Skype: etoledano
+ | Phone: &#43;55 21 99955-9804</span></font></span></font></div>
+<div style=3D"margin:0px"><font size=3D"2" style=3D"font-family:Calibri,san=
+s-serif,serif,EmojiFont"><span style=3D"font-size:11pt"><a href=3D"http://w=
+ww.stone.com.br/" target=3D"_blank" rel=3D"noopener noreferrer" id=3D"LPNoL=
+P"><font size=3D"2" style=3D"font-family:&quot;Segoe UI&quot;,sans-serif,se=
+rif,EmojiFont"><span style=3D"font-size:9pt"><font size=3D"1"><span style=
+=3D"font-size:8pt">www.stone.com.br</span></font></span></font></a><font si=
+ze=3D"2" color=3D"#1F497D" style=3D"font-family:&quot;Segoe UI&quot;,sans-s=
+erif,serif,EmojiFont"><span style=3D"font-size:9pt"><br>
+</span></font><font size=3D"1" color=3D"#999999" style=3D"font-family:&quot=
+;Segoe UI&quot;,sans-serif,serif,EmojiFont"><span style=3D"font-size:8pt">A=
+venida General Justo, 375 | Rio de Janeiro - RJ</span></font></span></font>=
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div align=3D"justify" style=3D"color:rgb(33,33,33); font-family:wf_segoe-u=
+i_normal,&quot;Segoe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,=
+serif,EmojiFont; font-size:15px; margin:0px">
+<font size=3D"2" style=3D"font-family:Calibri,sans-serif,serif,EmojiFont"><=
+span style=3D"font-size:11pt"><font size=3D"1" color=3D"#999999" style=3D"f=
+ont-family:Arial,sans-serif,serif,EmojiFont"><span style=3D"font-size:8pt">=
+&nbsp;</span></font></span></font></div>
+<div align=3D"justify" style=3D"color:rgb(33,33,33); font-family:wf_segoe-u=
+i_normal,&quot;Segoe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,=
+serif,EmojiFont; font-size:15px; margin:0px">
+<font size=3D"2" style=3D"font-family:Calibri,sans-serif,serif,EmojiFont"><=
+span style=3D"font-size:11pt"><font size=3D"1" color=3D"#999999" style=3D"f=
+ont-family:Arial,sans-serif,serif,EmojiFont"><span style=3D"font-size:8pt">=
+&nbsp;</span></font></span></font></div>
+<div align=3D"justify" style=3D"color:rgb(33,33,33); font-family:wf_segoe-u=
+i_normal,&quot;Segoe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,=
+serif,EmojiFont; font-size:15px; margin:0px">
+<font size=3D"2" style=3D"font-family:Calibri,sans-serif,serif,EmojiFont"><=
+span style=3D"font-size:11pt"><font size=3D"1" color=3D"#999999" style=3D"f=
+ont-family:Arial,sans-serif,serif,EmojiFont"><span style=3D"font-size:8pt">=
+O conte=FAdo desta mensagem =E9 confidencial e destinado
+ exclusivamente aos destinat=E1rios. Caso a receba por engano, favor destru=
+=ED-la e notificar o remetente de imediato. O correio eletr=F4nico n=E3o co=
+nfigura meio seguro para transmiss=E3o de dados e o remetente N=C3O se resp=
+onsabiliza por eventual erro, atraso, extravio,
+ intercepta=E7=E3o ou infec=E7=E3o por v=EDrus. Cabe ao destinat=E1rio soli=
+citar vers=E3o f=EDsica sempre que necess=E1rio.</span></font></span></font=
+></div>
+<div align=3D"justify" style=3D"color:rgb(33,33,33); font-family:wf_segoe-u=
+i_normal,&quot;Segoe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,=
+serif,EmojiFont; font-size:15px; margin:0px">
+<font size=3D"2" style=3D"font-family:Calibri,sans-serif,serif,EmojiFont"><=
+span style=3D"font-size:11pt"><font size=3D"1" color=3D"#1F497D" style=3D"f=
+ont-family:Arial,sans-serif,serif,EmojiFont"><span style=3D"font-size:8pt">=
+&nbsp;</span></font></span></font></div>
+<div align=3D"justify" style=3D"color:rgb(33,33,33); font-family:wf_segoe-u=
+i_normal,&quot;Segoe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,=
+serif,EmojiFont; font-size:15px; margin:0px">
+<font size=3D"2" style=3D"font-family:Calibri,sans-serif,serif,EmojiFont"><=
+span style=3D"font-size:11pt"><font size=3D"1" color=3D"#999999" style=3D"f=
+ont-family:Arial,sans-serif,serif,EmojiFont"><span style=3D"font-size:7.5pt=
+">The content of this message is confidential
+ and was intended solely to its recipient.&nbsp;</span></font><font size=3D=
+"1" color=3D"#999999" style=3D"font-family:Arial,sans-serif,serif,EmojiFont=
+"><span lang=3D"en-US" style=3D"font-size:7.5pt">In case this message is re=
+ceived by mistake, please destroy it and notify
+ the sender immediately. Electronic mails are not a safe channel for data t=
+ransmission and the sender accepts NO liability for eventual errors, delays=
+, loss, interception or virus infection. When necessary, the receiver must =
+request a hard-copy version.</span></font></span></font></div>
+<span style=3D"font-family:wf_segoe-ui_normal,&quot;Segoe UI&quot;,&quot;Se=
+goe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; font-size:0.6em; colo=
+r:grey"></span><br>
+<p></p>
+</div>
+</div>
+<br>
+<br>
+<div style=3D"color: rgb(0, 0, 0);">
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>De:</b> kurt@seifried.org &lt;k=
+urt@seifried.org&gt;<br>
+<b>Enviado:</b> quinta-feira, 15 de fevereiro de 2018 18:34<br>
+<b>Para:</b> Edward Toledano | Stone<br>
+<b>Assunto:</b> DWF/CVE - Acceptance of MITRE Terms of Use for CVE for etol=
+edano@stone.com.br</font>
+<div>&nbsp;</div>
+</div>
+<div class=3D"BodyFragment"><font size=3D"2"><span style=3D"font-size:11pt;=
+">
+<div class=3D"PlainText">This is a confirmation email sent from CVE request=
+ form at
+<a href=3D"https://iwantacve.org/">https://iwantacve.org/</a> asking you to=
+ accept the MITRE CVE Terms of Use (assuming you filled out the CVE form an=
+d want one, we can't use the data until you accept the MITRE CVE Terms of U=
+se).
+<br>
+<br>
+Simply quote the email and reply with &quot;I accept&quot; at the top if yo=
+u agree to the MITRE CVE Terms of Use and we will add a copy of the email t=
+o the DWF MITRE CVE Terms of Use acceptance data at
+<a href=3D"https://github.com/distributedweaknessfiling/DWF-Legal-Acceptanc=
+e/tree/master/Terms-Of-Use">
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/mast=
+er/Terms-Of-Use</a><br>
+<br>
+The reason we use a complete copy of the email is that it provides an artif=
+act showing that the email address accepted the Terms of Use, when they wer=
+e accepted and so on.
+<br>
+<br>
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don't =
+want any future emails simply reply with &quot;unsubscribe&quot; or &quot;D=
+ON'T SEND ME THIS EMAIL EVER AGAIN&quot; and I'll add
+ your email address to the block list so we don't spam you with these, plea=
+se note that this will prevent you from being able to accept the MITRE CVE =
+Terms of Use via the DWF automatically in future (you'll have to manually a=
+sk). But again, if you have no idea
+ what a CVE is then you can ignore this/ask to be added to the block list w=
+ith no problems.
+<br>
+<br>
+MITRE CVE Terms of Use<br>
+<br>
+LICENSE<br>
+<br>
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+ Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and a=
+ll CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable
+ copyright license to reproduce, prepare derivative works of, publicly disp=
+lay, publicly perform, sublicense, and distribute such materials and deriva=
+tive works. Unless required by applicable law or agreed to in writing, you =
+provide such materials on an &quot;AS
+ IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expre=
+ss or implied, including, without limitation, any warranties or conditions =
+of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PU=
+RPOSE.<br>
+<br>
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare=
+ derivative works of, publicly display, publicly perform, sublicense, and d=
+istribute Common Vulnerabilities
+ and Exposures (CVE??). Any copy you make for such purposes is authorized p=
+rovided that you reproduce MITRE's copyright designation and this license i=
+n any such copy.<br>
+<br>
+DISCLAIMERS<br>
+<br>
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN &quot;AS IS&quot; BASIS AND THE CONTRIBUTOR, THE ORGANIZATION=
+ HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS =
+BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES,
+ DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO =
+ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY =
+RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTIC=
+ULAR PURPOSE.<br>
+<br>
+A copy is available at <a href=3D"https://github.com/distributedweaknessfil=
+ing/DWF-Legal-Acceptance/blob/master/Terms-Of-Use.md">
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/mast=
+er/Terms-Of-Use.md</a><br>
+<br>
+To contact the DWF either hit reply, or email kurt@seifried.org manually wi=
+th your question/concerns/etc.
+<br>
+<br>
+</div>
+</span></font></div>
+</div>
+</div>
+</body>
+</html>
+
+--_000_FR1PR80MB1879FD30D1E07765ACBD61F89BF40FR1PR80MB1879lamp_--
+
+--_004_FR1PR80MB1879FD30D1E07765ACBD61F89BF40FR1PR80MB1879lamp_
+Content-Type: image/jpeg; name="Outlook-1501524261.jpg"
+Content-Description: Outlook-1501524261.jpg
+Content-Disposition: inline; filename="Outlook-1501524261.jpg"; size=3683;
+	creation-date="Thu, 15 Feb 2018 21:34:44 GMT";
+	modification-date="Thu, 15 Feb 2018 21:34:44 GMT"
+Content-ID: <72acdfd5-d6d7-407e-bbb7-5dcf39e2877c>
+Content-Transfer-Encoding: base64
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf
+IiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7
+Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCABvAMkDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2aiii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKpajq+naRGkmoXsNsrnC+Y2N30qG48SaJaxQ
+yz6paxpOu+JjIMOvqPUUCujTorMuvEWi2SwNdanbQi4UPFvkA3qehHt71a/tGyK3DfaottsMzHcP
+3fGefTjmgLos0VmT+I9FtZ0guNUtYpZFVkV5QCQeh/GpLvXNKsN/2vULeHy2VX3uBtLDIz9RQF0X
+6KzbPxDo2oTLDZ6nbTyOSFVJAScDJxVyC7t7oyi3mSUwuY5NhztYdQfegLokWRGZlVgWXqPSlqja
+f8hK8+q/yq/QMKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigDjvGi2UGpWN9Jfyafdxxu
+kU7WhnhKnGVYY4J7Vz019cPd6LfXZh0dmsJUJ/s9pY/9ZxhMfLuHzV13izUta0mKK60/7C1u0iRM
+lwjFtzNgEYOMc1map4n1fTNWi0u6vtGtZPsomeadHCOxYjCjPoKlmUrXIYtR0vTvEd7eaunm297Z
+W/2SY2jMsoUHcqjB28kfLVfUL2HT28UWc8M6zaqivZIsDHzg0e0AYHUHgg9K2tZ8VXGmavYWqQQz
+W6qj6hNz+5VyFUr/AMC9e1JJ4zWy8VajpupRRxWVtEHhuR3bZuZD745H0oB27nMavY6pFNqaRWkL
+wrp1pDd74DJIibSHaPsSoycVu6dZQ/bPEEaxtPALG3ELyJnfiEgHkcmtfwhrl34g0ua7vbVbWVbh
+4xEucqowRn3wea3sU7DUVucG+m7fhhY3ttEYNQ0+3S5gdYvmEijuMZORkEV1PhzTYtL0K1t48lin
+mSuw+Z3blmPuSa08UtFilGxQtP8AkJXn1X+VX6oWn/ISvPqv8qv0ygooooAKKQkDrxQGU9CD+NAC
+0UUUARXNzDaQtNO4RF71Ts9csr2byY2ZXP3Q64z9Ko+Kyfs9sM8Fz/KuetiRdwkHBEg/nXlYjGzp
+VuRLQylNqVj0CiiivVNQooooAKKTOKAc9KAFooooAx/E1ra3mmJHeX8VlGtxHJ5kjAAlWDY59cVm
+a3pwk1dNbttfsrFZrYQg3EaSI4BLZUkj17VF4oewg8X6RPrSx/2cLeZVadcxLLxjPbOM4zXNWtm9
+4NGisba2eCTUb57NLyImLyccHb6elJmcnqbl74a8P34vbvV9bt5bjUEHlTi4EaoqjC7QGwQGBNaF
+v4c0qQ3c+qXlvqCP9nmcuQFRo0wHPPfrWRd6PdzeLre0hsdHaWLSvnjngJgX95zsHaqeuQxx6nrA
+mh/0KK9sDdKqHYIgnOR/dBxSFt0Ov0ZtM0u1u7gavaywXV483m+aoVS2PlznHati3ube7iEttPHP
+GTgPG4YfmK8+8UXOgTWWnPor6asCamvnO0OYA2w8uBjPFdd4Xlgl0SNreWwlAZgzWEflxZz2FNFR
+etjYooopllC0/wCQlefVf5Vfqhaf8hK8+q/yq/QAVh6xr32RzbWuGlH3nPIX/wCvWzM/lwu/91Sa
+8/Z2kdpGOWYkk152PxEqUVGO7M6kmloSTXdzcMWmuJHJ9WqNZJEOUkdT7Ma6PQdJtZrJbqdBK7k4
+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
+
+--_004_FR1PR80MB1879FD30D1E07765ACBD61F89BF40FR1PR80MB1879lamp_--

@@ -1,0 +1,131 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.153.144 with SMTP id a16csp2266962ivh;
+        Thu, 25 Jan 2018 09:48:34 -0800 (PST)
+X-Google-Smtp-Source: AH8x2243B0gJFLgiBhtbvQJPXFm7Touddf7fJgdha04ruvrvPYpJBIiDWI+vTnXmbC8Jg9evO/ig
+X-Received: by 10.223.195.49 with SMTP id n46mr3390009wrf.191.1516902514007;
+        Thu, 25 Jan 2018 09:48:34 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1516902513; cv=none;
+        d=google.com; s=arc-20160816;
+        b=wIxKxsSoddYCKfMoIM2ex9AvGK7BQCjrVnNklOW9nBlTjCvnztvXGUI4J4EIlobysv
+         xqmfAE4QwwEN6ISUc8scfgQTETz45uUucuUEp9vNdavolR4rTmIimuU9e0a+f529fxQF
+         xgieFvklxwvJuSaVBvfynAEOWaZIR9aWWeWi8mY0NAJs4cbjkH7I189ySdIMvF1NhmS0
+         c7s8VCoKpdWJ0Ir/dN/tyTaMlzoi2XWlpLzinPOHMEHoHP8sqTYqZAO51e6jizSS4egu
+         OUORGEbVdbqu7XctraXwqYte7vJWnXjdX1CJ+Y+RLNvy2Zhvef20Jr2fcAJI9n7XyHnG
+         +WkQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:organization:references
+         :in-reply-to:date:to:from:subject:message-id
+         :arc-authentication-results;
+        bh=/PHdpVYuaI5uREPycfRZcdtE+hnRpPQ3Oyy40OpHDCs=;
+        b=IFMRxoY1ppA2jjP3+8gEhMfz5zRA/yptmu9cfFtErkl49da/lYXN1C9GW2GxpebLJV
+         bJGwf9HzB36zf7hWHpSy8EJeIGQTBq1cFjW5h5VA3H2yWGc+Hg84kiUzjZA6cHdtAakD
+         2quyTp8CD3vG8+mbOjdPKaWAmoAN2gvvzIvi/02B4hcOmL4zvURrDmcxHNJLL4xp0hB0
+         d1OAXTrfprt3Zac4QojTZplFY0y7YoEfXv2f806QD+NWZCGLvysaPsMEuEC7UyJDOBB3
+         FHL6lhvU2hvJ0Mh27z6AhE69oR/mBL6p8KPEPWDPfxWoMDvYnymEsEbc62YJ+clFHSse
+         by4w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of ben.hutchings@codethink.co.uk designates 176.9.8.82 as permitted sender) smtp.mailfrom=ben.hutchings@codethink.co.uk;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=codethink.co.uk
+Return-Path: <ben.hutchings@codethink.co.uk>
+Received: from imap1.codethink.co.uk (imap1.codethink.co.uk. [176.9.8.82])
+        by mx.google.com with ESMTPS id p69si1177728wmf.185.2018.01.25.09.48.33
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 25 Jan 2018 09:48:33 -0800 (PST)
+Received-SPF: pass (google.com: domain of ben.hutchings@codethink.co.uk designates 176.9.8.82 as permitted sender) client-ip=176.9.8.82;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of ben.hutchings@codethink.co.uk designates 176.9.8.82 as permitted sender) smtp.mailfrom=ben.hutchings@codethink.co.uk;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=codethink.co.uk
+Received: from shadbolt.e.decadent.org.uk ([88.96.1.126] helo=xylophone)
+	by imap1.codethink.co.uk with esmtpsa (Exim 4.84_2 #1 (Debian))
+	id 1eeldc-0005cJ-6R
+	for <kurt@seifried.org>; Thu, 25 Jan 2018 17:48:36 +0000
+Message-ID: <1516902511.3417.50.camel@codethink.co.uk>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ ben.hutchings@codethink.co.uk
+From: Ben Hutchings <ben.hutchings@codethink.co.uk>
+To: kurt@seifried.org
+Date: Thu, 25 Jan 2018 17:48:31 +0000
+In-Reply-To: <20180125170502.4519.87703@slab.local>
+References: <20180125170502.4519.87703@slab.local>
+Organization: Codethink Ltd.
+Content-Type: text/plain; charset="UTF-8"
+X-Mailer: Evolution 3.22.6-1+deb9u1 
+Mime-Version: 1.0
+Content-Transfer-Encoding: 8bit
+
+I accept
+
+On Thu, 2018-01-25 at 10:05 -0700, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iw
+> antacve.org/ asking you to accept the MITRE CVE Terms of Use
+> (assuming you filled out the CVE form and want one, we can't use the
+> data until you accept the MITRE CVE Terms of Use). 
+> 
+> Simply quote the email and reply with "I accept" at the top if you
+> agree to the MITRE CVE Terms of Use and we will add a copy of the
+> email to the DWF MITRE CVE Terms of Use acceptance data at https://gi
+> thub.com/distributedweaknessfiling/DWF-Legal-
+> Acceptance/tree/master/Terms-Of-Use
+> 
+> The reason we use a complete copy of the email is that it provides an
+> artifact showing that the email address accepted the Terms of Use,
+> when they were accepted and so on. 
+> 
+> If you did not submit a CVE request to the DWF you can safely ignore
+> this message, however we may resend it at some point in the future,
+> if you don't want any future emails simply reply with "unsubscribe"
+> or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email
+> address to the block list so we don't spam you with these, please
+> note that this will prevent you from being able to accept the MITRE
+> CVE Terms of Use via the DWF automatically in future (you'll have to
+> manually ask). But again, if you have no idea what a CVE is then you
+> can ignore this/ask to be added to the block list with no problems. 
+> 
+> MITRE CVE Terms of Use
+> 
+> LICENSE
+> 
+> Submissions: For all materials you submit to the Common
+> Vulnerabilities and Exposures (CVE), you hereby grant to The MITRE
+> Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a
+> perpetual, worldwide, non-exclusive, no-charge, royalty-free,
+> irrevocable copyright license to reproduce, prepare derivative works
+> of, publicly display, publicly perform, sublicense, and distribute
+> such materials and derivative works. Unless required by applicable
+> law or agreed to in writing, you provide such materials on an "AS IS"
+> BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+> or implied, including, without limitation, any warranties or
+> conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS
+> FOR A PARTICULAR PURPOSE.
+> 
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-
+> exclusive, no-charge, royalty-free, irrevocable copyright license to
+> reproduce, prepare derivative works of, publicly display, publicly
+> perform, sublicense, and distribute Common Vulnerabilities and
+> Exposures (CVE). Any copy you make for such purposes is authorized
+> provided that you reproduce MITRE's copyright designation and this
+> license in any such copy.
+> 
+> DISCLAIMERS
+> 
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE
+> ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE
+> ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE
+> CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES,
+> DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+> LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL
+> NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY
+> OR FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> A copy is available at https://github.com/distributedweaknessfiling/D
+> WF-Legal-Acceptance/blob/master/Terms-Of-Use.md
+> 
+> To contact the DWF either hit reply, or email kurt@seifried.org
+> manually with your question/concerns/etc. 
+> 
+> 
+-- 
+Ben Hutchings
+Software Developer, Codethink Ltd.
+

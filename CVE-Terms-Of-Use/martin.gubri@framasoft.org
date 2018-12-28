@@ -1,0 +1,68 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.82.15 with SMTP id i15csp865155uaa;
+        Thu, 6 Apr 2017 14:14:05 -0700 (PDT)
+X-Received: by 10.28.109.93 with SMTP id i90mr25614441wmc.44.1491513245033;
+        Thu, 06 Apr 2017 14:14:05 -0700 (PDT)
+Return-Path: <martin.gubri@framasoft.org>
+Received: from mail.framasoft.org (mail.framasoft.org. [138.201.210.146])
+        by mx.google.com with ESMTPS id i1si4210330wrb.99.2017.04.06.14.14.04
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 06 Apr 2017 14:14:04 -0700 (PDT)
+Received-SPF: pass (google.com: domain of martin.gubri@framasoft.org designates 138.201.210.146 as permitted sender) client-ip=138.201.210.146;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@framasoft.org;
+       spf=pass (google.com: domain of martin.gubri@framasoft.org designates 138.201.210.146 as permitted sender) smtp.mailfrom=martin.gubri@framasoft.org;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=framasoft.org
+Received: from [192.168.0.10] (alo33-1-82-228-77-229.fbx.proxad.net [82.228.77.229])
+	(Authenticated sender: martin.gubri@framasoft.org)
+	by mail.framasoft.org (Postfix) with ESMTPSA id A7E8D141538
+	for <kurt@seifried.org>; Thu,  6 Apr 2017 23:13:49 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=framasoft.org;
+	s=mail; t=1491513230;
+	bh=Aof28UXXApW8QXssworeTwS5i+aWcQlq2yY1z5g+p+0=;
+	h=Subject:To:References:From:Date:In-Reply-To:From;
+	b=dOAiTvJyXJg/Dzy6yTJGmDFvWtZ+PU0cisWklzo3g3S1LMfRWXNHxJDFBKhW1KCXh
+	 JpuVXtHBLdf9tGBMa1Ot8DrDdAU2MIY38EG/zFYqQe5pNJ1IXA85XsZ0sriTRZ3QG0
+	 33elpy41pGqmEa+QSWmtGf8C/GQAmLMmEpmj7BMU=
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ martin.gubri@framasoft.org
+To: kurt@seifried.org
+References: <20170406201724.4090.8845@shiny-2.local>
+From: Martin <martin.gubri@framasoft.org>
+Message-ID: <a6439f9d-7203-81db-1a52-0195c88d1e84@framasoft.org>
+Date: Thu, 6 Apr 2017 23:14:00 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101
+ Thunderbird/45.8.0
+MIME-Version: 1.0
+In-Reply-To: <20170406201724.4090.8845@shiny-2.local>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: 8bit
+
+I accept
+
+
+Le 06/04/2017 à 22:17, kurt@seifried.org a écrit :
+> This is a confirmation email sent from CVE request form at https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled out the CVE form and want one, we can't use the data until you accept the MITRE CVE Terms of Use). 
+>
+> Simply quote the email and reply with "I accept" at the top if you agree to the MITRE CVE Terms of Use and we will add it to the DWF MITRE CVE Terms of Use acceptance data at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>
+> If you did not submit a CVE request to the DWF you can safely ignore this message, however we may resend it at some point in the future, if you don't want any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so we don't spam you with these, please note that this will prevent you from being able to accept the MITRE CVE Terms of Use via the DWF automatically in future (you'll have to manually ask). But again, if you have no idea what a CVE is then you can ignore this/ask to be added to the block list with no problems. 
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities and Exposures (CVEÂ®), you hereby grant to The MITRE Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute such materials and derivative works. Unless required by applicable law or agreed to in writing, you provide such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute Common Vulnerabilities and Exposures (CVEÂ®). Any copy you make for such purposes is authorized provided that you reproduce MITRE's copyright designation and this license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manually with your question/concerns/etc. 
+>
+

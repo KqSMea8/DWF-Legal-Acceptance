@@ -1,0 +1,147 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.79.71 with SMTP id d68csp1005398ivb;
+        Thu, 23 Nov 2017 08:24:50 -0800 (PST)
+X-Google-Smtp-Source: AGs4zMY059ImM2LA7PMgOpPwlN2nl/B/D1E7+wgJdkKTZnE1MO58diA7UxloNMdKtKZev2uSGJDD
+X-Received: by 10.157.61.73 with SMTP id a67mr6683096otc.178.1511454290792;
+        Thu, 23 Nov 2017 08:24:50 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1511454290; cv=none;
+        d=google.com; s=arc-20160816;
+        b=N5Dnt0SzrbBf6ewyRgTV2W4odPb4hVI1Ru55E9v0q1e/5Bh5lgstOFLb/uZQ4ttiG3
+         mIqsBp7ZUSywmtakONsTIkKrSTkbBRMHaZew3SL7ik+BhwpXTz4gXXetlD0Q41Xph9ur
+         dUfkLSeseJXanfJtiV9+ZNT5na0tPkVqGbI2EQn0ZLyBVc6quLcBklqhZbv+Hu4tSgoi
+         90EziKEpDgKVT87ty+VE0QjJUbspaEwmqIbLwlrCubDhPfRO6g5SDQN7pEeCdgoZ9ywo
+         7JXXxs28ft67TkPWw26H/GNWcJj17TMKs4St3ekL3740paagCRGmClK8zJHpf+/B8hmT
+         2LXA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=references:in-reply-to:date:subject:content-transfer-encoding
+         :mime-version:to:from:message-id:dkim-signature
+         :arc-authentication-results;
+        bh=YYkB9aVd4AI47X5FxzZZx79A4+BdQiWwpsVhTvTQLWU=;
+        b=eCjjFybcDbnVGujc40d9rLDVOVPOYt1nJbn8A5PDB6tpRWwfpkktF2vMSNVB8puuMN
+         OyeALVoWpOdqs2Xn4EtqYh43R554fzWR9k71RgmjA2pKNuEV1/PFAVjSShJoLncf1OKx
+         CSfLMh76Kp0DZnW0ObgbM6RTnIYo1yiwTc5mwGjWmt+KKEYGgBAsoBF/pNsi/g6kRm6m
+         yYvk745n0vPe42dUBdzZz2jjRZV/X6s2Pyaq5qXFoA2hlmDX6XEkVb3eS5q9m+00H3VN
+         Z2+qre/V9VmdlNDNTJwwkbq/df1lKmTzWGGj8z9dZjkxzN7GXUfOAAowFnl9bOllOBSz
+         cMMQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@messagingengine.com header.s=fm1 header.b=gzeuDANa;
+       spf=pass (google.com: domain of jb@videolan.org designates 66.111.4.28 as permitted sender) smtp.mailfrom=jb@videolan.org
+Return-Path: <jb@videolan.org>
+Received: from out4-smtp.messagingengine.com (out4-smtp.messagingengine.com. [66.111.4.28])
+        by mx.google.com with ESMTPS id c12si5040969ote.369.2017.11.23.08.24.50
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 23 Nov 2017 08:24:50 -0800 (PST)
+Received-SPF: pass (google.com: domain of jb@videolan.org designates 66.111.4.28 as permitted sender) client-ip=66.111.4.28;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@messagingengine.com header.s=fm1 header.b=gzeuDANa;
+       spf=pass (google.com: domain of jb@videolan.org designates 66.111.4.28 as permitted sender) smtp.mailfrom=jb@videolan.org
+Received: from compute1.internal (compute1.nyi.internal [10.202.2.41])
+	by mailout.nyi.internal (Postfix) with ESMTP id 35BF920B16
+	for <kurt@seifried.org>; Thu, 23 Nov 2017 11:24:50 -0500 (EST)
+Received: from web2 ([10.202.2.212])
+  by compute1.internal (MEProxy); Thu, 23 Nov 2017 11:24:50 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=
+	messagingengine.com; h=content-transfer-encoding:content-type
+	:date:from:in-reply-to:message-id:mime-version:references
+	:subject:to:x-me-sender:x-me-sender:x-sasl-enc; s=fm1; bh=YYkB9a
+	Vd4AI47X5FxzZZx79A4+BdQiWwpsVhTvTQLWU=; b=gzeuDANaEkHTmrmGPGfLmI
+	jnbAI5UC2ner4sqdkZWkYkLRlC3U3njYhL3d5qEOKIq0aVyJqHHk3cba0sky+Fo8
+	8gPc7pKa81meiykAC7cuIQ3kR8Vup/7Viw9VRxMyX17BtBDxq9uI1PXTIhRk7sKd
+	yp7XI5joIuWyWNBaN4EeCZs9D3IT++OqrNPBC6jD6nkOiiTuL5Ij656yFAdI33Z9
+	vV/CA0fa/DzFvybHK16rMPkEA5I11GK4Moe1wnoPYjfsJ61TU32CFPhc5USpgvLy
+	Xe0+WTFOVBnzwQDLLAtvluVGToK2bjeZds1ccvBHmtMcu2qyJfxk3zKxHp3d+q0g
+	==
+X-ME-Sender: <xms:UvYWWkcs-bckcsAk2vJ2alMDdbssnp-_YH8lScjYHU-NJ2Mylz5CCQ>
+Received: by mailuser.nyi.internal (Postfix, from userid 99)
+	id 15BB6621E1; Thu, 23 Nov 2017 11:24:50 -0500 (EST)
+Message-Id: <1511454290.3839664.1182305712.63561E7F@webmail.messagingengine.com>
+From: "Jean-Baptiste Kempf" <jb@videolan.org>
+To: kurt@seifried.org
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+X-Mailer: MessagingEngine.com Webmail Interface - ajax-a169161c
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ jb@videolan.org
+Date: Thu, 23 Nov 2017 17:24:50 +0100
+In-Reply-To: <20171123152644.7013.40968@slab.local>
+References: <20171123152644.7013.40968@slab.local>
+
+I accept.
+
+On Thu, 23 Nov 2017, at 16:26, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at
+> https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use
+> (assuming you filled out the CVE form and want one, we can't use the data
+> until you accept the MITRE CVE Terms of Use).=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you agree
+> to the MITRE CVE Terms of Use and we will add a copy of the email to the
+> DWF MITRE CVE Terms of Use acceptance data at
+> https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/ma=
+ster/Terms-Of-Use
+>=20
+> The reason we use a complete copy of the email is that it provides an
+> artifact showing that the email address accepted the Terms of Use, when
+> they were accepted and so on.=20
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore this
+> message, however we may resend it at some point in the future, if you
+> don't want any future emails simply reply with "unsubscribe" or "DON'T
+> SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the
+> block list so we don't spam you with these, please note that this will
+> prevent you from being able to accept the MITRE CVE Terms of Use via the
+> DWF automatically in future (you'll have to manually ask). But again, if
+> you have no idea what a CVE is then you can ignore this/ask to be added
+> to the block list with no problems.=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common Vulnerabilities
+> and Exposures (CVE=C2=AE), you hereby grant to The MITRE Corporation (MIT=
+RE)
+> and all CVE Numbering Authorities (CNAs) a perpetual, worldwide,
+> non-exclusive, no-charge, royalty-free, irrevocable copyright license to
+> reproduce, prepare derivative works of, publicly display, publicly
+> perform, sublicense, and distribute such materials and derivative works.
+> Unless required by applicable law or agreed to in writing, you provide
+> such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+> ANY KIND, either express or implied, including, without limitation, any
+> warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or
+> FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,
+> no-charge, royalty-free, irrevocable copyright license to reproduce,
+> prepare derivative works of, publicly display, publicly perform,
+> sublicense, and distribute Common Vulnerabilities and Exposures (CVE=C2=
+=AE).
+> Any copy you make for such purposes is authorized provided that you
+> reproduce MITRE's copyright designation and this license in any such
+> copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE
+> PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE
+> REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD
+> OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES,
+> EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE
+> USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY
+> IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+> PURPOSE.
+>=20
+> A copy is available at
+> https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/ma=
+ster/Terms-Of-Use.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org manually
+> with your question/concerns/etc.=20
+>=20
+
+
+--=20
+Jean-Baptiste Kempf -  President
++33 672 704 734

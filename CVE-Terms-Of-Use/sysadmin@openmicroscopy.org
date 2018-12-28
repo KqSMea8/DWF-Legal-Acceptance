@@ -1,0 +1,298 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.157.1.148 with SMTP id e20csp681976ote;
+        Thu, 14 Sep 2017 05:56:07 -0700 (PDT)
+X-Google-Smtp-Source: ADKCNb6jri+exrUp3erUuF/WXY2yr6rfRJr0v/8c0M51h5qJ3xPWynJVUdXba5fZ/6aGSRjeuz6t
+X-Received: by 10.84.150.101 with SMTP id g92mr24439248plg.168.1505393767427;
+        Thu, 14 Sep 2017 05:56:07 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1505393767; cv=none;
+        d=google.com; s=arc-20160816;
+        b=KUXvE1jApOw56qZm52/1KzCHvdrLM1cVC/xjsqMlu7iuyMA3MaX+8tI7xgvwSemqEK
+         d82Pv/Vstki2LlaH1dYlkC65+IPv9mtacsxpQX8X1SHCebJmZZWSQapoh9V3dS/zERof
+         ZNuRSaI0fp4oBxy4ypYPubJF5pmUsUWdPqIzCkVbLGmj3DFcSBMUhjVKtQOfqxr9z9ZR
+         atZ1Lk6Gm86JI7hEtL9tNEMiEwAVLvbtZFE1ndmm8YsGmB6tiM1Q1bByBOLmrkA26S2n
+         3sa2WL19FUPI6wnjzAZYud9C/AxofC6noPxrDHwziljGb9ODgTBxiXNmvQrR/umclNLa
+         rsAg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:spamdiagnosticmetadata:spamdiagnosticoutput:user-agent
+         :content-language:accept-language:in-reply-to:references:message-id
+         :date:thread-index:thread-topic:subject:to:from:dkim-signature
+         :arc-authentication-results;
+        bh=K9s2TRdippS+GDgrrXkM2GmWwo5dWE5+nTKW2SZO9KQ=;
+        b=oKeQnuj6KHfDefZNUctZ/K6PE9BzaZy0AJKPM1c2Y42MUMOLN788/w/JmP7NThK37K
+         YRL+2tdfcslISKSss+hrF/4mOyPdFZJJwRiBoJlEyMvTLDZo+mLi+k+xaNaTQOVDSD0n
+         vwv6sldapeGDnFksMVGlcIzF1qKI/XKM+1EKGCUyw/TwOCTUDl/btrjQp8nOFT6y8XKJ
+         RI1uz2otKh/RZB6zPLMOJtoG+X8/MVPXzO7LdV9OsgK/WosPi7iilDzZHQnYM6CsPwkO
+         pIVbTqjj3Ou6Tj4IB5Oc9JaKZKY90nuhYYFJZVFwEehCeYlA1r0n4IcSTOjG9h8bNqOl
+         UL9w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@dmail.onmicrosoft.com header.s=selector1-dundee-ac-uk header.b=bNTa4MXr;
+       spf=pass (google.com: domain of k.h.gillen@dundee.ac.uk designates 40.107.5.135 as permitted sender) smtp.mailfrom=k.h.gillen@dundee.ac.uk
+Return-Path: <k.h.gillen@dundee.ac.uk>
+Received: from EUR03-VE1-obe.outbound.protection.outlook.com (mail-eopbgr50135.outbound.protection.outlook.com. [40.107.5.135])
+        by mx.google.com with ESMTPS id q73si10817427pfi.178.2017.09.14.05.56.06
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Thu, 14 Sep 2017 05:56:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of k.h.gillen@dundee.ac.uk designates 40.107.5.135 as permitted sender) client-ip=40.107.5.135;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@dmail.onmicrosoft.com header.s=selector1-dundee-ac-uk header.b=bNTa4MXr;
+       spf=pass (google.com: domain of k.h.gillen@dundee.ac.uk designates 40.107.5.135 as permitted sender) smtp.mailfrom=k.h.gillen@dundee.ac.uk
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=dmail.onmicrosoft.com;
+ s=selector1-dundee-ac-uk;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=K9s2TRdippS+GDgrrXkM2GmWwo5dWE5+nTKW2SZO9KQ=;
+ b=bNTa4MXrkKbnsh95Lp5M6MpnkGacwkhVlZ7o6F7LiEMuL1VugI5W6ulnzc2D/Z48uQX3XZyxtTtM5bfvN/dcxSnhaCEcvSBGONH94qVFoqyzzlpPQFwI1YTVk2R6KGRjRAUnT2B+52DteyyOC5yBCvHGiAMEczwLrtdcjZc1wD0=
+Received: from AMSPR04MB132.eurprd04.prod.outlook.com (10.242.83.151) by
+ AMSPR04MB374.eurprd04.prod.outlook.com (10.242.23.13) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id
+ 15.20.35.12; Thu, 14 Sep 2017 12:56:04 +0000
+Received: from AMSPR04MB132.eurprd04.prod.outlook.com
+ ([fe80::80f:8e4a:db1b:bafa]) by AMSPR04MB132.eurprd04.prod.outlook.com
+ ([fe80::80f:8e4a:db1b:bafa%13]) with mapi id 15.20.0035.021; Thu, 14 Sep 2017
+ 12:56:04 +0000
+From: "Kenneth Gillen (Staff)" <k.h.gillen@dundee.ac.uk>
+To: "kurt@seifried.org" <kurt@seifried.org>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ sysadmin@openmicroscopy.org
+Thread-Topic: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ sysadmin@openmicroscopy.org
+Thread-Index: AQHTLNAQ5PvwkxPSHkG76jmV6fMfDaK0aMCA
+Date: Thu, 14 Sep 2017 12:56:04 +0000
+Message-ID: <D5E03AD5.32966%k.h.gillen@dundee.ac.uk>
+References: <20170913203708.2669.90355@222.1.168.192.in-addr.arpa>
+In-Reply-To: <20170913203708.2669.90355@222.1.168.192.in-addr.arpa>
+Accept-Language: en-GB, en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+user-agent: Microsoft-MacOutlook/14.7.6.170621
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=k.h.gillen@dundee.ac.uk; 
+x-ms-publictraffictype: Email
+x-microsoft-exchange-diagnostics: 1;AMSPR04MB374;6:W8+SfplBS9hHHGTfASZtqwleB5Mch22frKZOirXffs5trUhnbNU3bC7KVCdfXJeJhFsY4/Ua0FYSpdtTAODZBtxxhDIBC3r/cTfOfOn0gf80xLeEhZb/W7C6nXlkBnLrJ2LXsZAzSQ/0XqPaZSCEEVYMqmOAYnWayAwyQP9tg8hmon+q4yyoMfui/Sge802v/ZUI/VmhC5tKuXmKGH0LR6k4C2lkGhiNrEK+EsUSYDrFYCEMCWsoGSYLCzoynsl40xzomVztj8TKGDBDDQ+2xPJ6nN62WC0l4Odr68H5pOxxFVG3nSNFjTOVJpO0Lo6CPWyhOEits8zU5p1RYr2JyA==;5:o3zXP6JSdz5AUD5dhs7LxmiYRVQ7hDw5/3bwCVnDd4Gs0WwgSJJ/kAC0R20EJe4vqnf3LeeX9YfSEMuB7w0n7WkzmRLDWFNis2rcOmSpMC+r8nFyXI17d/YV6cpSdHyHa09K2msksthYbBameG7gFw==;24:hRcAwbP6qVB/0wsTKJjsc8ejtqreXPuqQ8LGxuR0pSwJgwlXoy3S+w2ZorZlFuhXOOU1dkip/ohYNLbIzAET5GxSl7uBJ3BgYWCNYbSWXE8=;7:qlqAKSpKGFt15W3cTPSmQiWrXaxT+E7MnacslCuD96zlIYo68TSyRbyRZ/PcANMf+46r+2jQ7Q5K0hYRTsaFfTsx3nXBbeJr7vFS1hzGuCGrJAJvUp9EbvKWatTE+WYQWgBEfMGA9RXhXqwfy0+J9D7gGsX3Cf2aYUVfcJC/I3uKx+CL6o0wDzLPtrdRIYTL7EyhH3GpQormtP2dBIDGKgLKbjIDvndsHZCM8E/Izqc=
+x-ms-exchange-antispam-srfa-diagnostics: SSOS;
+x-ms-office365-filtering-correlation-id: 8b7d6813-8248-48bf-7b37-08d4fb6ff59f
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(300000500095)(300135000095)(300000501095)(300135300095)(300000502095)(300135100095)(22001)(2017030254152)(300000503095)(300135400095)(2017052603199)(201703131423075)(201703031133081)(201702281549075)(300000504095)(300135200095)(300000505095)(300135600095)(300000506095)(300135500095);SRVR:AMSPR04MB374;
+x-ms-traffictypediagnostic: AMSPR04MB374:
+x-exchange-antispam-report-test: UriScan:(166708455590820);
+x-microsoft-antispam-prvs: <AMSPR04MB374A5DDB3983F9C2B9D9B6FFB6F0@AMSPR04MB374.eurprd04.prod.outlook.com>
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(100000700101)(100105000095)(100000701101)(100105300095)(100000702101)(100105100095)(6040450)(2401047)(5005006)(8121501046)(10201501046)(100000703101)(100105400095)(93006095)(93001095)(3002001)(6041248)(20161123564025)(20161123555025)(20161123558100)(20161123562025)(201703131423075)(201702281529075)(201702281528075)(201703061421075)(201703061406153)(20161123560025)(6072148)(201708071742011)(100000704101)(100105200095)(100000705101)(100105500095);SRVR:AMSPR04MB374;BCL:0;PCL:0;RULEID:(100000800101)(100110000095)(100000801101)(100110300095)(100000802101)(100110100095)(100000803101)(100110400095)(100000804101)(100110200095)(100000805101)(100110500095);SRVR:AMSPR04MB374;
+x-forefront-prvs: 0430FA5CB7
+x-forefront-antispam-report: SFV:NSPM;SFS:(10019020)(346002)(376002)(199003)(38564003)(189002)(13624006)(28244002)(24454002)(68736007)(2906002)(83506001)(53936002)(189998001)(110136004)(8676002)(6246003)(6486002)(5640700003)(6506006)(81166006)(5180700001)(2900100001)(786003)(1730700003)(8936002)(86362001)(53546010)(36756003)(236005)(316002)(81156014)(99286003)(6306002)(54896002)(6916009)(3660700001)(2351001)(14454004)(606006)(6512007)(2950100002)(42882006)(25786009)(106356001)(6436002)(101416001)(102836003)(105586002)(478600001)(229853002)(3280700002)(50986999)(2501003)(76176999)(5250100002)(97736004)(74482002)(966005)(5660300001)(4001350100001)(54356999)(221513004)(222073002);DIR:OUT;SFP:1102;SCL:1;SRVR:AMSPR04MB374;H:AMSPR04MB132.eurprd04.prod.outlook.com;FPR:;SPF:None;PTR:InfoNoRecords;A:1;MX:1;LANG:en;
+received-spf: None (protection.outlook.com: dundee.ac.uk does not designate
+ permitted sender hosts)
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_D5E03AD532966khgillendundeeacuk_"
+MIME-Version: 1.0
+X-OriginatorOrg: dundee.ac.uk
+X-MS-Exchange-CrossTenant-originalarrivaltime: 14 Sep 2017 12:56:04.5487
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: ae323139-093a-4d2a-81a6-5d334bcd9019
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: AMSPR04MB374
+
+--_000_D5E03AD532966khgillendundeeacuk_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+On 13/09/2017 21:37, "kurt@seifried.org<mailto:kurt@seifried.org>" <kurt@se=
+ifried.org<mailto:kurt@seifried.org>> wrote:
+
+This is a confirmation email sent from CVE request form at https://iwantacv=
+e.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled=
+ out the CVE form and want one, we can't use the data until you accept the =
+MITRE CVE Terms of Use).
+
+Simply quote the email and reply with "I accept" at the top if you agree to=
+ the MITRE CVE Terms of Use and we will add a copy of the email to the DWF =
+MITRE CVE Terms of Use acceptance data at https://github.com/distributedwea=
+knessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+
+The reason we use a complete copy of the email is that it provides an artif=
+act showing that the email address accepted the Terms of Use, when they wer=
+e accepted and so on.
+
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don't =
+want any future emails simply reply with "unsubscribe" or "DON'T SEND ME TH=
+IS EMAIL EVER AGAIN" and I'll add your email address to the block list so w=
+e don't spam you with these, please note that this will prevent you from be=
+ing able to accept the MITRE CVE Terms of Use via the DWF automatically in =
+future (you'll have to manually ask). But again, if you have no idea what a=
+ CVE is then you can ignore this/ask to be added to the block list with no =
+problems.
+
+MITRE CVE Terms of Use
+
+LICENSE
+
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+ Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and a=
+ll CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable copyright license to reproduce, prepar=
+e derivative works of, publicly display, publicly perform, sublicense, and =
+distribute such materials and derivative works. Unless required by applicab=
+le law or agreed to in writing, you provide such materials on an "AS IS" BA=
+SIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implie=
+d, including, without limitation, any warranties or conditions of TITLE, NO=
+N-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare=
+ derivative works of, publicly display, publicly perform, sublicense, and d=
+istribute Common Vulnerabilities and Exposures (CVE??). Any copy you make f=
+or such purposes is authorized provided that you reproduce MITRE's copyrigh=
+t designation and this license in any such copy.
+
+DISCLAIMERS
+
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE RE=
+PRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF T=
+RUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS =
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE I=
+NFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES O=
+F MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+A copy is available at https://github.com/distributedweaknessfiling/DWF-Dat=
+abase/blob/master/TermsOfUse.md
+
+To contact the DWF either hit reply, or email kurt@seifried.org<mailto:kurt=
+@seifried.org> manually with your question/concerns/etc.
+
+
+
+The University of Dundee is a registered Scottish Charity, No: SC015096
+
+--_000_D5E03AD532966khgillendundeeacuk_
+Content-Type: text/html; charset="us-ascii"
+Content-ID: <1FCFBB3AA19A2243B48FB26B72FEF4E0@eurprd04.prod.outlook.com>
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+</head>
+<body style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-lin=
+e-break: after-white-space; color: rgb(0, 0, 0); font-size: 14px; font-fami=
+ly: Calibri, sans-serif;">
+<div>
+<div><span style=3D"font-family: Consolas; font-size: medium;">I accept</sp=
+an></div>
+</div>
+<div style=3D"font-family: Consolas, monospace; font-size: 12px;"><br>
+</div>
+<div style=3D"font-family: Consolas, monospace; font-size: 12px;">On 13/09/=
+2017 21:37, &quot;<a href=3D"mailto:kurt@seifried.org">kurt@seifried.org</a=
+>&quot; &lt;<a href=3D"mailto:kurt@seifried.org">kurt@seifried.org</a>&gt; =
+wrote:</div>
+<div style=3D"font-family: Consolas, monospace; font-size: 12px;"><br>
+</div>
+<blockquote id=3D"MAC_OUTLOOK_ATTRIBUTION_BLOCKQUOTE" style=3D"font-family:=
+ Consolas, monospace; font-size: 12px; border-left-color: rgb(181, 196, 223=
+); border-left-width: 5px; border-left-style: solid; padding: 0px 0px 0px 5=
+px; margin: 0px 0px 0px 5px;">
+<div>This is a confirmation email sent from CVE request form at <a href=3D"=
+https://iwantacve.org/">
+https://iwantacve.org/</a> asking you to accept the MITRE CVE Terms of Use =
+(assuming you filled out the CVE form and want one, we can't use the data u=
+ntil you accept the MITRE CVE Terms of Use).
+</div>
+<div><br>
+</div>
+<div>Simply quote the email and reply with &quot;I accept&quot; at the top =
+if you agree to the MITRE CVE Terms of Use and we will add a copy of the em=
+ail to the DWF MITRE CVE Terms of Use acceptance data at
+<a href=3D"https://github.com/distributedweaknessfiling/DWF-Legal-Acceptanc=
+e/tree/master/Terms-Of-Use">
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/mast=
+er/Terms-Of-Use</a></div>
+<div><br>
+</div>
+<div>The reason we use a complete copy of the email is that it provides an =
+artifact showing that the email address accepted the Terms of Use, when the=
+y were accepted and so on.
+</div>
+<div><br>
+</div>
+<div>If you did not submit a CVE request to the DWF you can safely ignore t=
+his message, however we may resend it at some point in the future, if you d=
+on't want any future emails simply reply with &quot;unsubscribe&quot; or &q=
+uot;DON'T SEND ME THIS EMAIL EVER AGAIN&quot; and I'll
+ add your email address to the block list so we don't spam you with these, =
+please note that this will prevent you from being able to accept the MITRE =
+CVE Terms of Use via the DWF automatically in future (you'll have to manual=
+ly ask). But again, if you have
+ no idea what a CVE is then you can ignore this/ask to be added to the bloc=
+k list with no problems.
+</div>
+<div><br>
+</div>
+<div>MITRE CVE Terms of Use</div>
+<div><br>
+</div>
+<div>LICENSE</div>
+<div><br>
+</div>
+<div>Submissions: For all materials you submit to the Common Vulnerabilitie=
+s and Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) =
+and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclus=
+ive, no-charge, royalty-free, irrevocable
+ copyright license to reproduce, prepare derivative works of, publicly disp=
+lay, publicly perform, sublicense, and distribute such materials and deriva=
+tive works. Unless required by applicable law or agreed to in writing, you =
+provide such materials on an &quot;AS
+ IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expre=
+ss or implied, including, without limitation, any warranties or conditions =
+of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PU=
+RPOSE.</div>
+<div><br>
+</div>
+<div>CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusi=
+ve, no-charge, royalty-free, irrevocable copyright license to reproduce, pr=
+epare derivative works of, publicly display, publicly perform, sublicense, =
+and distribute Common Vulnerabilities
+ and Exposures (CVE??). Any copy you make for such purposes is authorized p=
+rovided that you reproduce MITRE's copyright designation and this license i=
+n any such copy.</div>
+<div><br>
+</div>
+<div>DISCLAIMERS</div>
+<div><br>
+</div>
+<div>ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE =
+ARE PROVIDED ON AN &quot;AS IS&quot; BASIS AND THE CONTRIBUTOR, THE ORGANIZ=
+ATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION,=
+ ITS BOARD OF TRUSTEES, OFFICERS, AGENTS,
+ AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT =
+NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NO=
+T INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNE=
+SS FOR A PARTICULAR PURPOSE.</div>
+<div><br>
+</div>
+<div>A copy is available at <a href=3D"https://github.com/distributedweakne=
+ssfiling/DWF-Database/blob/master/TermsOfUse.md">
+https://github.com/distributedweaknessfiling/DWF-Database/blob/master/Terms=
+OfUse.md</a></div>
+<div><br>
+</div>
+<div>To contact the DWF either hit reply, or email <a href=3D"mailto:kurt@s=
+eifried.org">
+kurt@seifried.org</a> manually with your question/concerns/etc. </div>
+<div><br>
+</div>
+<div><br>
+</div>
+</blockquote>
+<br>
+<span style=3D"font-size:10pt;">The University of Dundee is a registered Sc=
+ottish Charity, No: SC015096</span>
+</body>
+</html>
+
+--_000_D5E03AD532966khgillendundeeacuk_--

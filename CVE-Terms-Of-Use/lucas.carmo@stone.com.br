@@ -1,0 +1,285 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.205.134 with SMTP id g6csp3335023ivm;
+        Wed, 7 Mar 2018 12:20:02 -0800 (PST)
+X-Google-Smtp-Source: AG47ELuIENL9JnIY2HjtbGCOqkbOACO+bVR0JxKWai7n/T2uY9YceFKDBRivxa3jpj6Ki5kfO/rh
+X-Received: by 2002:a17:902:5327:: with SMTP id b36-v6mr21356504pli.332.1520454002871;
+        Wed, 07 Mar 2018 12:20:02 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1520454002; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Y4/K1pHa2IA9jAAQ5s3KHrEapyEEXbJnxvbx4aGkqWJcscypTy9qqwvJa3+Ahjq1OY
+         wyFM12DHeD8qTsu8/saMUmQJ8Tc6pclQIfDK1EfREvERfdn7D7PBxK/2yL3rvwat5J9V
+         net/K2CDJbasDqu7hnHUims4UONXa4eCB6ka/bmBwWS14F/2wP8bFdghwLqjZOXdA6zM
+         rcYJ0DUnD3oRwvlx8eVPvQYdQirP2S8XxakRXGQ6I/+vW/yBeDwGwE8NWYEGmum95bSy
+         A1UknhcstXhG7sbru2gtIEp3QON2Jhu6JZSkA/xkTKP/xgZ+zYdQD+ZwwCC4jalP8m5J
+         D5Rg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:spamdiagnosticmetadata:spamdiagnosticoutput
+         :content-language:accept-language:in-reply-to:references:message-id
+         :date:thread-index:thread-topic:subject:to:from:dkim-signature
+         :arc-authentication-results;
+        bh=xsuiudE7shlHTAvR0E6fZTn1nMi5tqNoFUiA/wlg4r4=;
+        b=c+PCjd+Pe8snC5WypUHawjHFYjjVGnXS9mr0UxbUozQM9SpjTuaTH8fIYAxPK7cKb3
+         ZmFOyObnkGKn6NTdqjqD0ZYNTztCj1y+vJKp8RhmprmtwdJNShO4qYRqtaQvmzOvpcbq
+         QOgHJEwo3oMV9l8n9YP19mfNWo9spG5ZG4G30KsvjQR0yI7tPerPjeN65LgGNRweo+T3
+         g/d+enuNC/GGh9+4bOf4LSXU85jW9t1+T87eF8qRMbT7AN6cjBtkgOgRSugYMppF/xDf
+         qMTlLx96Rhq57cE0af8NwCldl/vBuzXUFoMi3jzHbe9Zsqj0SVOlfVr19KsMTi2Ygzh8
+         jaXg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@STONEPAGAMENTOSSA.onmicrosoft.com header.s=selector1-stone-com-br header.b=WYQ0gpEu;
+       spf=pass (google.com: domain of lucas.carmo@stone.com.br designates 104.47.32.98 as permitted sender) smtp.mailfrom=lucas.carmo@stone.com.br
+Return-Path: <lucas.carmo@stone.com.br>
+Received: from NAM01-SN1-obe.outbound.protection.outlook.com (mail-sn1nam01on0098.outbound.protection.outlook.com. [104.47.32.98])
+        by mx.google.com with ESMTPS id u6-v6si113636pls.424.2018.03.07.12.20.02
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Wed, 07 Mar 2018 12:20:02 -0800 (PST)
+Received-SPF: pass (google.com: domain of lucas.carmo@stone.com.br designates 104.47.32.98 as permitted sender) client-ip=104.47.32.98;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@STONEPAGAMENTOSSA.onmicrosoft.com header.s=selector1-stone-com-br header.b=WYQ0gpEu;
+       spf=pass (google.com: domain of lucas.carmo@stone.com.br designates 104.47.32.98 as permitted sender) smtp.mailfrom=lucas.carmo@stone.com.br
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=STONEPAGAMENTOSSA.onmicrosoft.com; s=selector1-stone-com-br;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=xsuiudE7shlHTAvR0E6fZTn1nMi5tqNoFUiA/wlg4r4=;
+ b=WYQ0gpEu0LZWf4f19ZJpvELT1BiPAAz+mRSyisEU6XH5fVdYA3c1mlPoI/Lj4/bz7WWhNjCIkwRMP1AK0JBTKwNzmH3Vq5gP0bcd60+AN8YJ8AhltYlEi323x6V0c+NJ7DMiUrIZH1VGYHFqOcj7M9vh2+IyJQJrG/eEqJS0ibk=
+Received: from SC1PR80MB2093.lamprd80.prod.outlook.com (10.175.202.139) by
+ SC1PR80MB0528.lamprd80.prod.outlook.com (10.165.97.150) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id
+ 15.20.548.13; Wed, 7 Mar 2018 20:19:56 +0000
+Received: from SC1PR80MB2093.lamprd80.prod.outlook.com ([10.175.202.139]) by
+ SC1PR80MB2093.lamprd80.prod.outlook.com ([10.175.202.139]) with mapi id
+ 15.20.0548.016; Wed, 7 Mar 2018 20:19:56 +0000
+From: Lucas Carmo | Stone <lucas.carmo@stone.com.br>
+To: "kurt@seifried.org" <kurt@seifried.org>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ lucas.carmo@stone.com.br
+Thread-Topic: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ lucas.carmo@stone.com.br
+Thread-Index: AQHTtc2RQY7tV0djqUKcp+Ie8VggsaPFN6yD
+Date: Wed, 7 Mar 2018 20:19:55 +0000
+Message-ID: <SC1PR80MB209372DB1FB39B75A6BBDF41DCD80@SC1PR80MB2093.lamprd80.prod.outlook.com>
+References: <20180307043409.25850.40074@slab.local>
+In-Reply-To: <20180307043409.25850.40074@slab.local>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=lucas.carmo@stone.com.br; 
+x-originating-ip: [187.32.60.1]
+x-ms-publictraffictype: Email
+x-microsoft-exchange-diagnostics: 1;SC1PR80MB0528;20:P3j7FrqvyP1LiCwb3fnE97Um29ysTRbsRdN0T03+R8aOc6UkAIlwGdfVlrt9Ern8BJ6INL/Gu81+vStZziFCfWDauwiVrfubN2J7WOXFbzDUyN5XZkf0YbUdR4hWR2toJ/wZpAbjvXjWdUt/i61LMwwRpGIcICpGWgfIjzCIR/6dybhud4MBHhbYkXMmGiAf9G+g5DEHLBs/TO1Twxp0WG1ZSN/6vGagGTNPKE4BIIa4NwekSJpUpOoOI7Z8Fxih
+x-ms-exchange-antispam-srfa-diagnostics: SSOS;
+x-ms-office365-filtering-correlation-id: 2d0081a8-53a3-4e7c-d492-08d58468cb3b
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(7020095)(4652020)(5600026)(4604075)(3008032)(4534165)(4627221)(201703031133081)(201702281549075)(2017052603328)(7153060)(7193020);SRVR:SC1PR80MB0528;
+x-ms-traffictypediagnostic: SC1PR80MB0528:
+x-microsoft-antispam-prvs: <SC1PR80MB052893F6ED5511785569AA17DCD80@SC1PR80MB0528.lamprd80.prod.outlook.com>
+x-exchange-antispam-report-test: UriScan:(166708455590820)(166494164430575);
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(8211001083)(6040501)(2401047)(5005006)(8121501046)(3002001)(93006095)(93001095)(10201501046)(3231220)(944501244)(52105095)(6041288)(20161123564045)(20161123558120)(201703131423095)(201702281528075)(20161123555045)(201703061421075)(201703061406153)(20161123560045)(20161123562045)(6072148)(201708071742011);SRVR:SC1PR80MB0528;BCL:0;PCL:0;RULEID:;SRVR:SC1PR80MB0528;
+x-forefront-prvs: 0604AFA86B
+x-forefront-antispam-report: SFV:NSPM;SFS:(10019020)(346002)(366004)(39380400002)(39860400002)(376002)(396003)(199004)(189003)(28244002)(13624006)(38564003)(606006)(2950100002)(2351001)(14454004)(3660700001)(7736002)(6916009)(229853002)(966005)(478600001)(33656002)(105586002)(5180700001)(2906002)(316002)(74316002)(6606003)(106356001)(2900100001)(1730700003)(2501003)(8676002)(74482002)(3280700002)(81166006)(5660300001)(81156014)(76176011)(99286004)(7696005)(8936002)(25786009)(6306002)(55016002)(54896002)(102836004)(53936002)(236005)(59450400001)(6506007)(26005)(77096007)(6246003)(53546011)(86362001)(6436002)(186003)(66066001)(3846002)(19627405001)(68736007)(6116002)(97736004)(5640700003)(9686003)(221513004)(222073002);DIR:OUT;SFP:1102;SCL:1;SRVR:SC1PR80MB0528;H:SC1PR80MB2093.lamprd80.prod.outlook.com;FPR:;SPF:None;PTR:InfoNoRecords;A:1;MX:1;LANG:en;
+received-spf: None (protection.outlook.com: stone.com.br does not designate
+ permitted sender hosts)
+x-microsoft-antispam-message-info: AX7I8o3S682U6F7Kn+pSrxH8K62lVUHQ/w7aCXMt3V77taevJikB1e+UGUdYcKIqaGRPRUvDnlENqgJM4+kyUdbVLECXivQnugiTBrnM+HuiWskeyIvNgWrjxODclzYCTy2Uii5fL+Hkb6ILzRahK/ikfle6VUnliIszM5inJWIQZ/qtseYU2n2DqkWdmOncMKaQQlgD/5ydE+j//lC9oen4v7TVok4B4Xp6LTod29dl6CrtUxmH2rq/uFdewsuAu+1jqxT8kjozPvFeFV5zyzCJFTm9a3Kx6aKWDyZpbB5rAOHZQ+L2TbLp+paTiCPAn4ShZKwr4Zaf1lscQs37VA==
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_SC1PR80MB209372DB1FB39B75A6BBDF41DCD80SC1PR80MB2093lamp_"
+MIME-Version: 1.0
+X-OriginatorOrg: stone.com.br
+X-MS-Exchange-CrossTenant-Network-Message-Id: 2d0081a8-53a3-4e7c-d492-08d58468cb3b
+X-MS-Exchange-CrossTenant-originalarrivaltime: 07 Mar 2018 20:19:56.0048
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 1236ea7e-8bbc-43a5-a5ee-189a1954e314
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SC1PR80MB0528
+
+--_000_SC1PR80MB209372DB1FB39B75A6BBDF41DCD80SC1PR80MB2093lamp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+I Accept
+
+________________________________
+From: kurt@seifried.org <kurt@seifried.org>
+Sent: Wednesday, March 7, 2018 1:34:09 AM
+To: Lucas Carmo | Stone
+Subject: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for lucas.carmo=
+@stone.com.br
+
+This is a confirmation email sent from CVE request form at https://iwantacv=
+e.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled=
+ out the CVE form and want one, we can't use the data until you accept the =
+MITRE CVE Terms of Use).
+
+Simply quote the email and reply with "I accept" at the top if you agree to=
+ the MITRE CVE Terms of Use and we will add a copy of the email to the DWF =
+MITRE CVE Terms of Use acceptance data at https://github.com/distributedwea=
+knessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+
+The reason we use a complete copy of the email is that it provides an artif=
+act showing that the email address accepted the Terms of Use, when they wer=
+e accepted and so on.
+
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don't =
+want any future emails simply reply with "unsubscribe" or "DON'T SEND ME TH=
+IS EMAIL EVER AGAIN" and I'll add your email address to the block list so w=
+e don't spam you with these, please note that this will prevent you from be=
+ing able to accept the MITRE CVE Terms of Use via the DWF automatically in =
+future (you'll have to manually ask). But again, if you have no idea what a=
+ CVE is then you can ignore this/ask to be added to the block list with no =
+problems.
+
+MITRE CVE Terms of Use
+
+LICENSE
+
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+ Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and a=
+ll CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable copyright license to reproduce, prepar=
+e derivative works of, publicly display, publicly perform, sublicense, and =
+distribute such materials and derivative works. Unless required by applicab=
+le law or agreed to in writing, you provide such materials on an "AS IS" BA=
+SIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implie=
+d, including, without limitation, any warranties or conditions of TITLE, NO=
+N-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare=
+ derivative works of, publicly display, publicly perform, sublicense, and d=
+istribute Common Vulnerabilities and Exposures (CVE??). Any copy you make f=
+or such purposes is authorized provided that you reproduce MITRE's copyrigh=
+t designation and this license in any such copy.
+
+DISCLAIMERS
+
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE RE=
+PRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF T=
+RUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS =
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE I=
+NFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES O=
+F MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+A copy is available at https://github.com/distributedweaknessfiling/DWF-Leg=
+al-Acceptance/blob/master/Terms-Of-Use.md
+
+To contact the DWF either hit reply, or email kurt@seifried.org manually wi=
+th your question/concerns/etc.
+
+
+--_000_SC1PR80MB209372DB1FB39B75A6BBDF41DCD80SC1PR80MB2093lamp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Helvetica,sans-serif;" dir=3D"ltr">
+<p style=3D"margin-top:0;margin-bottom:0">I Accept<br>
+</p>
+</div>
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>From:</b> kurt@seifried.org &lt=
+;kurt@seifried.org&gt;<br>
+<b>Sent:</b> Wednesday, March 7, 2018 1:34:09 AM<br>
+<b>To:</b> Lucas Carmo | Stone<br>
+<b>Subject:</b> DWF/CVE - Acceptance of MITRE Terms of Use for CVE for luca=
+s.carmo@stone.com.br</font>
+<div>&nbsp;</div>
+</div>
+<div class=3D"BodyFragment"><font size=3D"2"><span style=3D"font-size:11pt;=
+">
+<div class=3D"PlainText">This is a confirmation email sent from CVE request=
+ form at
+<a href=3D"https://iwantacve.org/">https://iwantacve.org/</a> asking you to=
+ accept the MITRE CVE Terms of Use (assuming you filled out the CVE form an=
+d want one, we can't use the data until you accept the MITRE CVE Terms of U=
+se).
+<br>
+<br>
+Simply quote the email and reply with &quot;I accept&quot; at the top if yo=
+u agree to the MITRE CVE Terms of Use and we will add a copy of the email t=
+o the DWF MITRE CVE Terms of Use acceptance data at
+<a href=3D"https://github.com/distributedweaknessfiling/DWF-Legal-Acceptanc=
+e/tree/master/Terms-Of-Use">
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/mast=
+er/Terms-Of-Use</a><br>
+<br>
+The reason we use a complete copy of the email is that it provides an artif=
+act showing that the email address accepted the Terms of Use, when they wer=
+e accepted and so on.
+<br>
+<br>
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don't =
+want any future emails simply reply with &quot;unsubscribe&quot; or &quot;D=
+ON'T SEND ME THIS EMAIL EVER AGAIN&quot; and I'll add
+ your email address to the block list so we don't spam you with these, plea=
+se note that this will prevent you from being able to accept the MITRE CVE =
+Terms of Use via the DWF automatically in future (you'll have to manually a=
+sk). But again, if you have no idea
+ what a CVE is then you can ignore this/ask to be added to the block list w=
+ith no problems.
+<br>
+<br>
+MITRE CVE Terms of Use<br>
+<br>
+LICENSE<br>
+<br>
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+ Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and a=
+ll CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable
+ copyright license to reproduce, prepare derivative works of, publicly disp=
+lay, publicly perform, sublicense, and distribute such materials and deriva=
+tive works. Unless required by applicable law or agreed to in writing, you =
+provide such materials on an &quot;AS
+ IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expre=
+ss or implied, including, without limitation, any warranties or conditions =
+of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PU=
+RPOSE.<br>
+<br>
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare=
+ derivative works of, publicly display, publicly perform, sublicense, and d=
+istribute Common Vulnerabilities
+ and Exposures (CVE??). Any copy you make for such purposes is authorized p=
+rovided that you reproduce MITRE's copyright designation and this license i=
+n any such copy.<br>
+<br>
+DISCLAIMERS<br>
+<br>
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN &quot;AS IS&quot; BASIS AND THE CONTRIBUTOR, THE ORGANIZATION=
+ HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS =
+BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES,
+ DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO =
+ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY =
+RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTIC=
+ULAR PURPOSE.<br>
+<br>
+A copy is available at <a href=3D"https://github.com/distributedweaknessfil=
+ing/DWF-Legal-Acceptance/blob/master/Terms-Of-Use.md">
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/mast=
+er/Terms-Of-Use.md</a><br>
+<br>
+To contact the DWF either hit reply, or email kurt@seifried.org manually wi=
+th your question/concerns/etc.
+<br>
+<br>
+</div>
+</span></font></div>
+</body>
+</html>
+
+--_000_SC1PR80MB209372DB1FB39B75A6BBDF41DCD80SC1PR80MB2093lamp_--

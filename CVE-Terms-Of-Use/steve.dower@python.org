@@ -1,0 +1,94 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.205.134 with SMTP id g6csp2069758ivm;
+        Tue, 6 Mar 2018 11:56:15 -0800 (PST)
+X-Google-Smtp-Source: AG47ELs7qvhhOZkAK6KBK3LBMXOf8CWJ7wxYMU01OjPh6MxVO1TJ+8d3w3XHFykKOzrpBJqn86za
+X-Received: by 10.80.158.235 with SMTP id a98mr24951662edf.188.1520366175519;
+        Tue, 06 Mar 2018 11:56:15 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1520366175; cv=none;
+        d=google.com; s=arc-20160816;
+        b=s0539/POYXHp6ol7BNZ3PKMfokVSpf/8OXdMQ+s9RMdQeWGBs4AhFo74PRVMQYWF7w
+         EUtwx/jBbt8dXiSLb4S5Qw5AiArSjReP/gngyfID3iPThyOmahm2yDchbDi/MgiMnkJJ
+         pcgjbYJOuy4XkhuDTPE3X1NgzU/cu2Fw60XW9GAaCkLis/NJQy6g/AAU/tY+lSl6ZcHA
+         2cm4buYr0uHPLG+SViGhhV+5VT9uflABcrfWGyg8QhAbUU2Evn2LZS3AeTmjT2OAYHLi
+         aHYIJqdfHVbsYlOUGtvoUU/UmsmZ7KUY+m521eU9MEmQIq8H5QP5IBb9iqOhJyHeYH+L
+         i5lQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:content-language:in-reply-to:mime-version
+         :user-agent:date:message-id:from:references:to:subject
+         :dkim-signature:arc-authentication-results;
+        bh=EGrnD5fQMhDa3mBBAqlPPvnFlYP0+e4qzC9XlSJWHA8=;
+        b=rS3tJdiBu3FpWAunLe6HcJX0PyzgiXS2/ehW/9hSHg/WzdsjQtSrR5CITlorEbtr4E
+         G2Ig15TfnsHOuN4m39iWou50A2SgdapXVmVRfTgvwwqcZGjUi0Pi2eFoEpwX/VDT+0DC
+         VeNcugXw7JF9aSdRgFxbjuhCS34O8jWAhtfJF9QCDfIWvi9pjN+aso3UjDygC7MwaUd1
+         q2VHI7J72VZUlZG/EJGKqdG9g62tFFaSWoK8qgdTzSWz8B3YB77DHvx3k9+s1YLWU20g
+         hAZ275rtUNNOAywQ2bn1W6LltTzXAHpTTrgZVCZzZYAi3NmXo8Y8L8bdJIsrkWMyVC+X
+         ffSw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@python.org header.s=200901 header.b=iqq86/Vy;
+       spf=pass (google.com: domain of steve.dower@python.org designates 2a03:b0c0:2:d0::71:1 as permitted sender) smtp.mailfrom=steve.dower@python.org;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=python.org
+Return-Path: <steve.dower@python.org>
+Received: from mail.python.org (mail.python.org. [2a03:b0c0:2:d0::71:1])
+        by mx.google.com with ESMTPS id 24si4242793edz.287.2018.03.06.11.56.15
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+        Tue, 06 Mar 2018 11:56:15 -0800 (PST)
+Received-SPF: pass (google.com: domain of steve.dower@python.org designates 2a03:b0c0:2:d0::71:1 as permitted sender) client-ip=2a03:b0c0:2:d0::71:1;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@python.org header.s=200901 header.b=iqq86/Vy;
+       spf=pass (google.com: domain of steve.dower@python.org designates 2a03:b0c0:2:d0::71:1 as permitted sender) smtp.mailfrom=steve.dower@python.org;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=python.org
+Received: from [IPv6:2001:4898:200:a:fc30:a986:bab6:a483] (unknown [IPv6:2001:4898:80e8:3::5e7])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mail.python.org (Postfix) with ESMTPSA id 3zwnb2644bzFqnt
+	for <kurt@seifried.org>; Tue,  6 Mar 2018 14:56:14 -0500 (EST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=python.org; s=200901;
+	t=1520366175; bh=ZdgqeqDWkZ+nPiyfUSOqfKQQ9mKPPfMAfcAetCjVhy4=;
+	h=Subject:To:References:From:Date:In-Reply-To:From;
+	b=iqq86/Vyb7t3e/jTphxwISOyxZ1BADuxZ1n4rR+hEfjQtz50fpEsYdMPr+g8ezMfi
+	 3v8sPZcXGWiX08UDXfucGkhY4nO9sYltNUN03PsAPkQa3NwU08SLQ2sb5uSy/cxj/X
+	 Hd0Z4Qof+4yoGbdPrQpSNZylW2gjRUyHtLObpGJg=
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ steve.dower@python.org
+To: kurt@seifried.org
+References: <20180306195359.24677.95764@slab.local>
+From: Steve Dower <steve.dower@python.org>
+Message-ID: <60d33564-2fc7-4500-12aa-cf1f2ef143dd@python.org>
+Date: Tue, 6 Mar 2018 11:56:12 -0800
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101
+ Thunderbird/52.6.0
+MIME-Version: 1.0
+In-Reply-To: <20180306195359.24677.95764@slab.local>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 8bit
+
+I accept
+
+On 06Mar2018 1153, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled out the CVE form and want one, we can't use the data until you accept the MITRE CVE Terms of Use).
+> 
+> Simply quote the email and reply with "I accept" at the top if you agree to the MITRE CVE Terms of Use and we will add a copy of the email to the DWF MITRE CVE Terms of Use acceptance data at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+> 
+> The reason we use a complete copy of the email is that it provides an artifact showing that the email address accepted the Terms of Use, when they were accepted and so on.
+> 
+> If you did not submit a CVE request to the DWF you can safely ignore this message, however we may resend it at some point in the future, if you don't want any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so we don't spam you with these, please note that this will prevent you from being able to accept the MITRE CVE Terms of Use via the DWF automatically in future (you'll have to manually ask). But again, if you have no idea what a CVE is then you can ignore this/ask to be added to the block list with no problems.
+> 
+> MITRE CVE Terms of Use
+> 
+> LICENSE
+> 
+> Submissions: For all materials you submit to the Common Vulnerabilities and Exposures (CVEÂ®), you hereby grant to The MITRE Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute such materials and derivative works. Unless required by applicable law or agreed to in writing, you provide such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute Common Vulnerabilities and Exposures (CVEÂ®). Any copy you make for such purposes is authorized provided that you reproduce MITRE's copyright designation and this license in any such copy.
+> 
+> DISCLAIMERS
+> 
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/master/Terms-Of-Use.md
+> 
+> To contact the DWF either hit reply, or email kurt@seifried.org manually with your question/concerns/etc.
+> 
+

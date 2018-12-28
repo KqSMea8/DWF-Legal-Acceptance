@@ -1,0 +1,111 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.65.42 with SMTP id j39csp755046uad;
+        Thu, 27 Apr 2017 07:15:42 -0700 (PDT)
+X-Received: by 10.28.95.85 with SMTP id t82mr2514541wmb.3.1493302542576;
+        Thu, 27 Apr 2017 07:15:42 -0700 (PDT)
+Return-Path: <lkiesow@uos.de>
+Received: from mta-out-2-1.rz.uni-osnabrueck.de (mta-out-2-1.rz.uni-osnabrueck.de. [131.173.18.152])
+        by mx.google.com with ESMTPS id m192si3306453wmd.130.2017.04.27.07.15.42
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 27 Apr 2017 07:15:42 -0700 (PDT)
+Received-SPF: neutral (google.com: 131.173.18.152 is neither permitted nor denied by best guess record for domain of lkiesow@uos.de) client-ip=131.173.18.152;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 131.173.18.152 is neither permitted nor denied by best guess record for domain of lkiesow@uos.de) smtp.mailfrom=lkiesow@uos.de
+Received: from smtp-auth.serv.Uni-Osnabrueck.DE (vm136.rz.uni-osnabrueck.de [131.173.16.11])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by mta-out-2-1.rz.uni-osnabrueck.de (Postfix) with ESMTPS id 8F9EF325D1F9
+	for <kurt@seifried.org>; Thu, 27 Apr 2017 16:15:41 +0200 (CEST)
+Received: (authenticated bits=0)
+	by smtp-auth.serv.Uni-Osnabrueck.DE (8.13.8/8.13.8) with ESMTP id v3REFeua004319
+	(version=TLSv1/SSLv3 cipher=AES256-SHA bits=256 verify=NO)
+	for <kurt@seifried.org>; Thu, 27 Apr 2017 16:15:41 +0200
+Date: Thu, 27 Apr 2017 16:15:39 +0200
+From: Lars Kiesow <lkiesow@uos.de>
+To: kurt@seifried.org
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ lkiesow@uos.de
+Message-ID: <20170427161539.4e26a381@lkiesow.de>
+In-Reply-To: <20170406201331.4090.11478@shiny-2.local>
+References: <20170406201331.4090.11478@shiny-2.local>
+Organization: University of =?UTF-8?B?T3NuYWJyw7xjaw==?=
+X-Mailer: Claws Mail 3.14.1 (GTK+ 2.24.31; x86_64-redhat-linux-gnu)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-PMX-Version: vm136.rz.Uni-Osnabrueck.DE (Univ. Osnabrueck) with PMX 6.3.2.2635362, Antispam-Engine: 2.7.2.2107409, Antispam-Data: 2017.4.27.140616, AntiVirus-Engine: 5.36.0, AntiVirus-Data: 2017.4.26.5360004  
+X-PMX-Spam: Gauge=IIIIIIII, Probability=8%, Report=
+ HTML_00_01 0.05, HTML_00_10 0.05, LINES_OF_YELLING_3 0.05, BODY_SIZE_3000_3999 0, BODY_SIZE_5000_LESS 0, BODY_SIZE_7000_LESS 0, CT_TEXT_PLAIN_UTF8_CAPS 0, IN_REP_TO 0, MSG_THREAD 0, REFERENCES 0, __ANY_URI 0, __BOUNCE_CHALLENGE_SUBJ 0, __BOUNCE_NDR_SUBJ_EXEMPT 0, __CP_URI_IN_BODY 0, __CT 0, __CTE 0, __CT_TEXT_PLAIN 0, __FORWARDED_MSG 0, __HAS_FROM 0, __HAS_MSGID 0, __HAS_X_MAILER 0, __HTTPS_URI 0, __IN_REP_TO 0, __LINES_OF_YELLING 0, __MIME_TEXT_ONLY 0, __MIME_TEXT_P 0, __MIME_TEXT_P1 0, __MIME_VERSION 0, __MULTIPLE_URI_TEXT 0, __NO_HTML_TAG_RAW 0, __PHISH_PHRASE1_A 0, __REFERENCES 0, __SANE_MSGID 0, __SUBJ_ALPHA_NEGATE 0, __TO_MALFORMED_2 0, __TO_NO_NAME 0, __URI_IN_BODY 0, __URI_NOT_IMG 0, __URI_NO_WWW 0, __URI_WITHOUT_PATH 0, __URI_WITH_PATH 0
+X-PMX-Spam-Level: IIIIIIII
+
+I accept
+
+On Thu, 06 Apr 2017 14:13:31 -0600
+kurt@seifried.org wrote:
+
+> This is a confirmation email sent from CVE request form at
+> https://iwantacve.org/ asking you to accept the MITRE CVE Terms of
+> Use (assuming you filled out the CVE form and want one, we can't use
+> the data until you accept the MITRE CVE Terms of Use).=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you
+> agree to the MITRE CVE Terms of Use and we will add it to the DWF
+> MITRE CVE Terms of Use acceptance data at
+> https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/ma=
+ster/Terms-Of-Use
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore
+> this message, however we may resend it at some point in the future,
+> if you don't want any future emails simply reply with "unsubscribe"
+> or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email
+> address to the block list so we don't spam you with these, please
+> note that this will prevent you from being able to accept the MITRE
+> CVE Terms of Use via the DWF automatically in future (you'll have to
+> manually ask). But again, if you have no idea what a CVE is then you
+> can ignore this/ask to be added to the block list with no problems.=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common
+> Vulnerabilities and Exposures (CVE=C2=AE), you hereby grant to The MITRE
+> Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a
+> perpetual, worldwide, non-exclusive, no-charge, royalty-free,
+> irrevocable copyright license to reproduce, prepare derivative works
+> of, publicly display, publicly perform, sublicense, and distribute
+> such materials and derivative works. Unless required by applicable
+> law or agreed to in writing, you provide such materials on an "AS IS"
+> BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+> or implied, including, without limitation, any warranties or
+> conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS
+> FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide,
+> non-exclusive, no-charge, royalty-free, irrevocable copyright license
+> to reproduce, prepare derivative works of, publicly display, publicly
+> perform, sublicense, and distribute Common Vulnerabilities and
+> Exposures (CVE=C2=AE). Any copy you make for such purposes is authorized
+> provided that you reproduce MITRE's copyright designation and this
+> license in any such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE
+> ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE
+> ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE
+> CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES,
+> DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+> LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL
+> NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY
+> OR FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> A copy is available at
+> https://github.com/distributedweaknessfiling/DWF-Database/blob/master/Ter=
+msOfUse.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org
+> manually with your question/concerns/etc.=20
+>=20
+

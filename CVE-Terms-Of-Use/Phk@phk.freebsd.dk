@@ -1,0 +1,139 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.3.133 with SMTP id 5csp1190256uau;
+        Thu, 3 Aug 2017 11:39:40 -0700 (PDT)
+X-Received: by 10.46.64.131 with SMTP id r3mr959906lje.20.1501785580822;
+        Thu, 03 Aug 2017 11:39:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1501785580; cv=none;
+        d=google.com; s=arc-20160816;
+        b=OZaluIjrZt8C7LQkjnjeu9PF+05R2qh3a4HOvcVVElABWx8O5hfFTCdiA8f1dceSad
+         nVySgPYbb+bhqijVVfQ17dngfuJd26h69YUeVKcHdNpjPiZScBSai9LTedvpUYWVPUJ+
+         cloUMd/EikOYfybTQeIXWr+ed0i2c5JEtQwpijVf+NwX6L8GsT80twa3SIWrOanyN+7a
+         pv1dhvA8pt1MeGzn/Vs0XynSkpFco2BZv3hVat6SMUY8qZdEw20/YrW9ssFI+3j0acN0
+         vj7rOTJeLb01h22tf2+MHlFSl/9iLh/AMLg8xAx7p1JyF9ss2QsBRLgDNUEUNE/0RZ+9
+         W/tA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:date:content-transfer-encoding:content-id:mime-version
+         :references:from:in-reply-to:subject:to:arc-authentication-results;
+        bh=5z5HF9URVFzxMNWLQNe2eRS4TDziNjkVqMZwU09KSfk=;
+        b=BCe8WMH+DdtyH2uckdqAB5AeMe+SXCeXfSTMl32Vrit+o0kJ2RYw4Ta2TkDO79J+SI
+         gwlflfid233rrHaHQ8UEp6APHhw7n/Bwh1/gkHDj4GOoKDQy8VlEybDswkbKeOprqvW3
+         XOhZZr8RUPwUgYqRAni0tY+JmTzgCybt6+YAiVvHtHQnFOL15ZPoOIP55Uo8KJVpqpqo
+         gHGv/3g8+iYOGiEUiSkmBzF0rO6ULpmX1iU75Ri1er8a4s1hoVE2yw87u2QXspolxutG
+         lE4K/c0RDIxpJkX42bVVap0qKqMn/hFVVCa8QisrX3kQiXxq9Kl3/YfSiSCP5Fc9GdEZ
+         +YyA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: best guess record for domain of phk@phk.freebsd.dk designates 130.225.244.222 as permitted sender) smtp.mailfrom=phk@phk.freebsd.dk
+Return-Path: <phk@phk.freebsd.dk>
+Received: from phk.freebsd.dk (phk.freebsd.dk. [130.225.244.222])
+        by mx.google.com with ESMTP id p78si1149485lje.429.2017.08.03.11.39.40
+        for <kurt@seifried.org>;
+        Thu, 03 Aug 2017 11:39:40 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of phk@phk.freebsd.dk designates 130.225.244.222 as permitted sender) client-ip=130.225.244.222;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: best guess record for domain of phk@phk.freebsd.dk designates 130.225.244.222 as permitted sender) smtp.mailfrom=phk@phk.freebsd.dk
+Received: from critter.freebsd.dk (unknown [192.168.55.3])
+	by phk.freebsd.dk (Postfix) with ESMTP id BBD2D273AE
+	for <kurt@seifried.org>; Thu,  3 Aug 2017 18:39:39 +0000 (UTC)
+Received: from critter.freebsd.dk (localhost [127.0.0.1])
+	by critter.freebsd.dk (8.15.2/8.15.2) with ESMTP id v73IdO8o092714
+	for <kurt@seifried.org>; Thu, 3 Aug 2017 18:39:24 GMT
+	(envelope-from phk@phk.freebsd.dk)
+To: kurt@seifried.org
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for Phk@phk.freebsd.dk
+In-reply-to: <20170803181816.4892.4659@shiny-2.local>
+From: "Poul-Henning Kamp" <phk@phk.freebsd.dk>
+References: <20170803181816.4892.4659@shiny-2.local>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Content-ID: <92712.1501785564.1@critter.freebsd.dk>
+Content-Transfer-Encoding: quoted-printable
+Date: Thu, 03 Aug 2017 18:39:24 +0000
+Message-ID: <92713.1501785564@critter.freebsd.dk>
+
+--------
+
+I accept
+
+In message <20170803181816.4892.4659@shiny-2.local>, kurt@seifried.org wri=
+tes:
+>This is a confirmation email sent from CVE request form at https://iwanta=
+cve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you fil=
+led out the CVE form and want one, we can't use the data until you accept =
+the MITRE CVE Terms of Use). =
+
+>
+>Simply quote the email and reply with "I accept" at the top if you agree =
+to the MITRE CVE Terms of Use and we will add a copy of the email to the D=
+WF MITRE CVE Terms of Use acceptance data at https://github.com/distribute=
+dweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>
+>The reason we use a complete copy of the email is that it provides an art=
+ifact showing that the email address accepted the Terms of Use, when they =
+were accepted and so on. =
+
+>
+>If you did not submit a CVE request to the DWF you can safely ignore this=
+ message, however we may resend it at some point in the future, if you don=
+'t want any future emails simply reply with "unsubscribe" or "DON'T SEND M=
+E THIS EMAIL EVER AGAIN" and I'll add your email address to the block list=
+ so
+> we don't spam you with these, please note that this will prevent you fro=
+m being able to accept the MITRE CVE Terms of Use via the DWF automaticall=
+y in future (you'll have to manually ask). But again, if you have no idea =
+what a CVE is then you can ignore this/ask to be added to the block list w=
+ith
+> no problems. =
+
+>
+>MITRE CVE Terms of Use
+>
+>LICENSE
+>
+>Submissions: For all materials you submit to the Common Vulnerabilities a=
+nd Exposures (CVE=C2=AE), you hereby grant to The MITRE Corporation (MITRE=
+) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exc=
+lusive, no-charge, royalty-free, irrevocable copyright license to reproduc=
+e, prepar
+>e derivative works of, publicly display, publicly perform, sublicense, an=
+d distribute such materials and derivative works. Unless required by appli=
+cable law or agreed to in writing, you provide such materials on an "AS IS=
+" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or i=
+mpl
+>ied, including, without limitation, any warranties or conditions of TITLE=
+, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>
+>CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,=
+ no-charge, royalty-free, irrevocable copyright license to reproduce, prep=
+are derivative works of, publicly display, publicly perform, sublicense, a=
+nd distribute Common Vulnerabilities and Exposures (CVE=C2=AE). Any copy y=
+ou make f
+>or such purposes is authorized provided that you reproduce MITRE's copyri=
+ght designation and this license in any such copy.
+>
+>DISCLAIMERS
+>
+>ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE=
+ PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE=
+ REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD =
+OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXP=
+RES
+>S OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF T=
+HE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANT=
+IES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+>A copy is available at https://github.com/distributedweaknessfiling/DWF-D=
+atabase/blob/master/TermsOfUse.md
+>
+>To contact the DWF either hit reply, or email kurt@seifried.org manually =
+with your question/concerns/etc. =
+
+>
+
+-- =
+
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    =
+
+Never attribute to malice what can adequately be explained by incompetence=
+.

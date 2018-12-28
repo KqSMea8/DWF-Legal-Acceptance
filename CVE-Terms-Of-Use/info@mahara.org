@@ -1,0 +1,102 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.6.162 with SMTP id g31csp2127881uag;
+        Tue, 23 May 2017 14:27:50 -0700 (PDT)
+X-Received: by 10.99.165.70 with SMTP id r6mr13195064pgu.121.1495574870479;
+        Tue, 23 May 2017 14:27:50 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1495574870; cv=none;
+        d=google.com; s=arc-20160816;
+        b=cGbiOrZq+bqdwJF0w/JMGtctwYQz3ewnq1lCRSoC7iD1aLG65B7EkffmZGUnaH84UP
+         0IUmc5Q6sA4Eb7qUhzvKSf5R2qTVVJW9fGvoAqIN/BGEKZ5TtKF9w8pfev2JCAt0W61U
+         MD6yOHqUvfJoc3bUYqz2w57qFZ4qLwiSvcE5HY0gQ2xRXuUl14fJ9COe3r1cJJLBc//P
+         XS5epKNN16NDXtANC3Lm0lMSCfjr0oqrnKbuC/Cz8pRLai/XOzdPYg2sxn3fBBWKRrw7
+         XI4lGFSVA9oBAv6DaLo4xQT2Urnh9EsCzrrzQZrY3r4guqmnTy8qTG8ei4aBhIfTu2Ia
+         nr+g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:date:precedence:to
+         :message-id:references:in-reply-to:reply-to:from:subject
+         :arc-authentication-results;
+        bh=oxBqjc5ojVscVs98wV0Gu0JGsdalN1d6T2MlQdntm9w=;
+        b=DpljMuBkdaSSUExHQsk2Skqeu+0lXfzUx8MtcfTxJYM/lR8gOLtcws6VizWJ3IvN9G
+         M7M7h7zo/NgqjeNTISGOFWtYdPRKfarqi+2vU6OI/QCFOyBBVryYNe/Wv62viXSnHFPb
+         3pOtoWVm/hmIfS7To+pD2PxGoLiwK9jExPXAWD5m5kf9BzoU5VrqGyNNDvzAkb5VhO6G
+         5KAKTHHSraQA5NWd3UA28FM6qCvD/mZR7CeUqmcZArw+O9zaMMZw8UJOffXkoQtQzhkj
+         9Tx2ZLQiDQKA5Lus9AvBcxkf7/JNsmb6gZXWW21BoKUr7CRVvUL/Z+8TQ94zg3WFpFQX
+         M7sw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: best guess record for domain of www-data@cat-prod-rt.catalyst.net.nz designates 202.78.240.226 as permitted sender) smtp.mailfrom=www-data@cat-prod-rt.catalyst.net.nz
+Return-Path: <www-data@cat-prod-rt.catalyst.net.nz>
+Received: from cat-porwal-prod-mail1.catalyst.net.nz (cat-porwal-prod-mail1.catalyst.net.nz. [202.78.240.226])
+        by mx.google.com with ESMTPS id h123si2215241pgc.251.2017.05.23.14.27.49
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 23 May 2017 14:27:50 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of www-data@cat-prod-rt.catalyst.net.nz designates 202.78.240.226 as permitted sender) client-ip=202.78.240.226;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: best guess record for domain of www-data@cat-prod-rt.catalyst.net.nz designates 202.78.240.226 as permitted sender) smtp.mailfrom=www-data@cat-prod-rt.catalyst.net.nz
+Received: from localhost (localhost [127.0.0.1])
+	by cat-porwal-prod-mail1.catalyst.net.nz (Postfix) with ESMTP id C790C80211
+	for <kurt@seifried.org>; Wed, 24 May 2017 09:27:45 +1200 (NZST)
+X-Virus-Scanned: Debian amavisd-new at
+	cat-porwal-prod-mail1.servers.catalyst.net.nz
+Received: from cat-porwal-prod-mail1.catalyst.net.nz ([127.0.0.1])
+	by localhost (cat-porwal-prod-mail1.servers.catalyst.net.nz [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id s_7dPObQA1Np for <kurt@seifried.org>;
+	Wed, 24 May 2017 09:27:44 +1200 (NZST)
+Received: from cat-prod-rt.catalyst.net.nz (h41-55.catalyst.net.nz [150.242.41.55])
+	by cat-porwal-prod-mail1.catalyst.net.nz (Postfix) with ESMTP id E03EB801D7
+	for <kurt@seifried.org>; Wed, 24 May 2017 09:27:43 +1200 (NZST)
+Received: by cat-prod-rt.catalyst.net.nz (Postfix, from userid 33)
+	id CFA9424228; Wed, 24 May 2017 09:27:43 +1200 (NZST)
+Subject: [Mahara Support #29511] DWF/CVE - Acceptance of MITRE Terms of Use for CVE for info@mahara.org
+From: "Kristina Hoeppner via RT" <info@mahara.org>
+Reply-To: info@mahara.org
+In-Reply-To: <20170523182518.18393.30837@bigbox.local>
+References: <RT-Ticket-29511@rt.catalyst.net.nz>
+ <20170523182518.18393.30837@bigbox.local>
+Message-ID: <rt-4.2.8-29626-1495574863-464.29511-6-0@rt.catalyst.net.nz>
+X-RT-Loop-Prevention: catalyst.net.nz
+X-RT-Ticket: catalyst.net.nz #29511
+X-Managed-BY: RT 4.2.8 (http://www.bestpractical.com/rt/)
+X-RT-Originator: kristina@catalyst.net.nz
+To: kurt@seifried.org
+Content-Type: text/plain; charset="utf-8"
+X-RT-Original-Encoding: utf-8
+Precedence: bulk
+Date: Wed, 24 May 2017 09:27:43 +1200
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+
+Hello Kurt,
+
+Thank you for your mail. I accept the MITRE CVE Terms of Use.
+
+Cheers
+Kristina
+
+
+On Wed May 24 06:25:24 2017, kurt@seifried.org wrote:
+
+  This is a confirmation email sent from CVE request form at https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled out the CVE form and want one, we can't use the data until you accept the MITRE CVE Terms of Use). 
+  
+  Simply quote the email and reply with "I accept" at the top if you agree to the MITRE CVE Terms of Use and we will add it to the DWF MITRE CVE Terms of Use acceptance data at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+  
+  If you did not submit a CVE request to the DWF you can safely ignore this message, however we may resend it at some point in the future, if you don't want any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so we don't spam you with these, please note that this will prevent you from being able to accept the MITRE CVE Terms of Use via the DWF automatically in future (you'll have to manually ask). But again, if you have no idea what a CVE is then you can ignore this/ask to be added to the block list with no problems. 
+  
+  MITRE CVE Terms of Use
+  
+  LICENSE
+  
+  Submissions: For all materials you submit to the Common Vulnerabilities and Exposures (CVE��), you hereby grant to The MITRE Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute such materials and derivative works. Unless required by applicable law or agreed to in writing, you provide such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+  
+  CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute Common Vulnerabilities and Exposures (CVE��). Any copy you make for such purposes is authorized provided that you reproduce MITRE's copyright designation and this license in any such copy.
+  
+  DISCLAIMERS
+  
+  ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+  
+  A copy is available at https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md
+  
+  To contact the DWF either hit reply, or email kurt@seifried.org manually with your question/concerns/etc. 
+
+
+

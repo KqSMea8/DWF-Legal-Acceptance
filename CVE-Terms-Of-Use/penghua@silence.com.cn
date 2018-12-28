@@ -1,0 +1,165 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.31.230.197 with SMTP id d188csp138774vkh;
+        Fri, 7 Oct 2016 19:12:48 -0700 (PDT)
+X-Received: by 10.98.16.81 with SMTP id y78mr32715337pfi.33.1475892768842;
+        Fri, 07 Oct 2016 19:12:48 -0700 (PDT)
+Return-Path: <penghua@silence.com.cn>
+Received: from mail.silence.com.cn ([182.150.63.40])
+        by mx.google.com with ESMTPS id a13si19433659pag.258.2016.10.07.19.12.46
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=AES128-GCM-SHA256 bits=128/128);
+        Fri, 07 Oct 2016 19:12:47 -0700 (PDT)
+Received-SPF: pass (google.com: domain of penghua@silence.com.cn designates 182.150.63.40 as permitted sender) client-ip=182.150.63.40;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of penghua@silence.com.cn designates 182.150.63.40 as permitted sender) smtp.mailfrom=penghua@silence.com.cn
+Received: from USER-20160217VF (unknown [182.150.63.40])
+	(using TLSv1.2 with cipher DHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	(Authenticated sender: penghua@silence.com.cn)
+	by mail.silence.com.cn (Postfix) with ESMTPSA id 4165627C0026
+	for <kurt@seifried.org>; Sat,  8 Oct 2016 10:12:07 +0800 (CST)
+Date: Sat, 8 Oct 2016 10:12:16 +0800
+From: "penghua@silence.com.cn" <penghua@silence.com.cn>
+To: "Kurt Seifried" <kurt@seifried.org>
+Subject: Re: CVE - Acceptance of MITRE Terms of Use for CVE
+References: <CABqVa39=UVZWoPf_NkmDE-H0uZBuVvPVOMdVmktNJdOWhGZOqQ@mail.gmail.com>
+X-Priority: 3
+X-Has-Attach: no
+X-Mailer: Foxmail 7, 2, 7, 174[cn]
+Mime-Version: 1.0
+Message-ID: <201610081012092788680@silence.com.cn>
+Content-Type: multipart/alternative;
+	boundary="----=_001_NextPart134170182303_=----"
+
+This is a multi-part message in MIME format.
+
+------=_001_NextPart134170182303_=----
+Content-Type: text/plain;
+	charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+SSBhY2NlcHQuDQoNCg0KDQpQS0FWIFRlYW0gKCBmZWxpeGszeSApICwgRS1NYWlsOiBwZW5naHVh
+QHNpbGVuY2UuY29tLmNuDQogDQpGcm9tOiBLdXJ0IFNlaWZyaWVkDQpEYXRlOiAyMDE2LTEwLTA2
+IDAwOjQxDQpUbzogS3VydCBTZWlmcmllZA0KU3ViamVjdDogQ1ZFIC0gQWNjZXB0YW5jZSBvZiBN
+SVRSRSBUZXJtcyBvZiBVc2UgZm9yIENWRQ0KSGksIEkgbmVlZCB0byBjb25maXJtIHRoYXQgeW91
+IGhhdmUgYWNjZXB0ZWQgdGhlIE1JVFJFIFRlcm1zIG9mIFVzZSBmb3IgQ1ZFLCBhdmFpbGFibGUg
+YXQ6DQpodHRwczovL2dpdGh1Yi5jb20vZGlzdHJpYnV0ZWR3ZWFrbmVzc2ZpbGluZy9EV0YtRGF0
+YWJhc2UvYmxvYi9tYXN0ZXIvVGVybXNPZlVzZS5tZA0KYW5kIHF1b3RlZCBiZWxvdywgcGxlYXNl
+IHJlcGx5IHdpdGggIkkgYWNjZXB0IiBhbmQgSSdsbCBiZSBhYmxlIHRvIHByb2Nlc3MgeW91ciBD
+VkUgcmVxdWVzdC4gVGhhbmtzIQ0KVGVybXMgb2YgVXNlDQpMSUNFTlNFDQpTdWJtaXNzaW9uczog
+Rm9yIGFsbCBtYXRlcmlhbHMgeW91IHN1Ym1pdCB0byB0aGUgQ29tbW9uIFZ1bG5lcmFiaWxpdGll
+cyBhbmQgRXhwb3N1cmVzIChDVkXCriksIHlvdSBoZXJlYnkgZ3JhbnQgdG8gVGhlIE1JVFJFIENv
+cnBvcmF0aW9uIChNSVRSRSkgYW5kIGFsbCBDVkUgTnVtYmVyaW5nIEF1dGhvcml0aWVzIChDTkFz
+KSBhIHBlcnBldHVhbCwgd29ybGR3aWRlLCBub24tZXhjbHVzaXZlLCBuby1jaGFyZ2UsIHJveWFs
+dHktZnJlZSwgaXJyZXZvY2FibGUgY29weXJpZ2h0IGxpY2Vuc2UgdG8gcmVwcm9kdWNlLCBwcmVw
+YXJlIGRlcml2YXRpdmUgd29ya3Mgb2YsIHB1YmxpY2x5IGRpc3BsYXksIHB1YmxpY2x5IHBlcmZv
+cm0sIHN1YmxpY2Vuc2UsIGFuZCBkaXN0cmlidXRlIHN1Y2ggbWF0ZXJpYWxzIGFuZCBkZXJpdmF0
+aXZlIHdvcmtzLiBVbmxlc3MgcmVxdWlyZWQgYnkgYXBwbGljYWJsZSBsYXcgb3IgYWdyZWVkIHRv
+IGluIHdyaXRpbmcsIHlvdSBwcm92aWRlIHN1Y2ggbWF0ZXJpYWxzIG9uIGFuICJBUyBJUyIgQkFT
+SVMsIFdJVEhPVVQgV0FSUkFOVElFUyBPUiBDT05ESVRJT05TIE9GIEFOWSBLSU5ELCBlaXRoZXIg
+ZXhwcmVzcyBvciBpbXBsaWVkLCBpbmNsdWRpbmcsIHdpdGhvdXQgbGltaXRhdGlvbiwgYW55IHdh
+cnJhbnRpZXMgb3IgY29uZGl0aW9ucyBvZiBUSVRMRSwgTk9OLUlORlJJTkdFTUVOVCwgTUVSQ0hB
+TlRBQklMSVRZLCBvciBGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRS4NCkNWRSBVc2Fn
+ZTogTUlUUkUgaGVyZWJ5IGdyYW50cyB5b3UgYSBwZXJwZXR1YWwsIHdvcmxkd2lkZSwgbm9uLWV4
+Y2x1c2l2ZSwgbm8tY2hhcmdlLCByb3lhbHR5LWZyZWUsIGlycmV2b2NhYmxlIGNvcHlyaWdodCBs
+aWNlbnNlIHRvIHJlcHJvZHVjZSwgcHJlcGFyZSBkZXJpdmF0aXZlIHdvcmtzIG9mLCBwdWJsaWNs
+eSBkaXNwbGF5LCBwdWJsaWNseSBwZXJmb3JtLCBzdWJsaWNlbnNlLCBhbmQgZGlzdHJpYnV0ZSBD
+b21tb24gVnVsbmVyYWJpbGl0aWVzIGFuZCBFeHBvc3VyZXMgKENWRcKuKS4gQW55IGNvcHkgeW91
+IG1ha2UgZm9yIHN1Y2ggcHVycG9zZXMgaXMgYXV0aG9yaXplZCBwcm92aWRlZCB0aGF0IHlvdSBy
+ZXByb2R1Y2UgTUlUUkUncyBjb3B5cmlnaHQgZGVzaWduYXRpb24gYW5kIHRoaXMgbGljZW5zZSBp
+biBhbnkgc3VjaCBjb3B5Lg0KRElTQ0xBSU1FUlMNCkFMTCBET0NVTUVOVFMgQU5EIFRIRSBJTkZP
+Uk1BVElPTiBDT05UQUlORUQgVEhFUkVJTiBQUk9WSURFRCBCWSBNSVRSRSBBUkUgUFJPVklERUQg
+T04gQU4gIkFTIElTIiBCQVNJUyBBTkQgVEhFIENPTlRSSUJVVE9SLCBUSEUgT1JHQU5JWkFUSU9O
+IEhFL1NIRSBSRVBSRVNFTlRTIE9SIElTIFNQT05TT1JFRCBCWSAoSUYgQU5ZKSwgVEhFIE1JVFJF
+IENPUlBPUkFUSU9OLCBJVFMgQk9BUkQgT0YgVFJVU1RFRVMsIE9GRklDRVJTLCBBR0VOVFMsIEFO
+RCBFTVBMT1lFRVMsIERJU0NMQUlNIEFMTCBXQVJSQU5USUVTLCBFWFBSRVNTIE9SIElNUExJRUQs
+IElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gQU5ZIFdBUlJBTlRZIFRIQVQgVEhFIFVTRSBP
+RiBUSEUgSU5GT1JNQVRJT04gVEhFUkVJTiBXSUxMIE5PVCBJTkZSSU5HRSBBTlkgUklHSFRTIE9S
+IEFOWSBJTVBMSUVEIFdBUlJBTlRJRVMgT0YgTUVSQ0hBTlRBQklMSVRZIE9SIEZJVE5FU1MgRk9S
+IEEgUEFSVElDVUxBUiBQVVJQT1NFLg0KDQotLSANCkt1cnQgU2VpZnJpZWQNCmt1cnRAc2VpZnJp
+ZWQub3JnDQo=
+
+------=_001_NextPart134170182303_=----
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"content-type" content=3D"text/html; charse=
+t=3DUTF-8"><style>body { line-height: 1.5; }blockquote { margin-top: 0px; =
+margin-bottom: 0px; margin-left: 0.5em; }p { margin-top: 0px; margin-botto=
+m: 0px; }div.foxdiv20161008101202148443 { }body { font-size: 10.5pt; font-=
+family: 'Microsoft YaHei UI'; color: rgb(0, 0, 0); line-height: 1.5; }</st=
+yle></head><body>=0A<div><span></span><span style=3D"font-family: 'Microso=
+ft YaHei UI', Tahoma; font-size: 13px; line-height: normal;">I accept.</sp=
+an></div>=0A<div><br></div><hr style=3D"width: 210px; height: 1px;" color=
+=3D"#b5c4df" size=3D"1" align=3D"left">=0A<div><span><div style=3D"MARGIN:=
+ 10px; FONT-FAMILY: verdana; FONT-SIZE: 10pt"><span style=3D"color: rgb(0,=
+ 0, 0); background-color: rgba(0, 0, 0, 0);">PKAV&nbsp;Team&nbsp;(&nbsp;fe=
+lixk3y&nbsp;)&nbsp;,&nbsp;E-Mail:&nbsp;penghua@silence.com.cn</span></div>=
+</span></div>=0A<blockquote style=3D"margin-top: 0px; margin-bottom: 0px; =
+margin-left: 0.5em;"><div>&nbsp;</div><div style=3D"border:none;border-top=
+:solid #B5C4DF 1.0pt;padding:3.0pt 0cm 0cm 0cm"><div style=3D"PADDING-RIGH=
+T: 8px; PADDING-LEFT: 8px; FONT-SIZE: 12px;FONT-FAMILY:tahoma;COLOR:#00000=
+0; BACKGROUND: #efefef; PADDING-BOTTOM: 8px; PADDING-TOP: 8px"><div><b>Fro=
+m:</b>&nbsp;<a href=3D"mailto:kurt@seifried.org">Kurt Seifried</a></div><d=
+iv><b>Date:</b>&nbsp;2016-10-06&nbsp;00:41</div><div><b>To:</b>&nbsp;<a hr=
+ef=3D"mailto:kurt@seifried.org">Kurt Seifried</a></div><div><b>Subject:</b=
+>&nbsp;CVE - Acceptance of MITRE Terms of Use for CVE</div></div></div><di=
+v><div class=3D"FoxDiv20161008101202148443"><div dir=3D"ltr"><p class=3D"g=
+mail-m_-323732369566349682gmail-p1" style=3D"font-size:12.8px"><span class=
+=3D"gmail-m_-323732369566349682gmail-s1">Hi, I need to confirm that you ha=
+ve accepted the MITRE&nbsp;<span class=3D"gmail-il">Terms</span>&nbsp;of&n=
+bsp;<span class=3D"gmail-il">Use</span>&nbsp;for&nbsp;<span class=3D"gmail=
+-il">CVE</span>, available at:</span></p><p class=3D"gmail-m_-323732369566=
+349682gmail-p2" style=3D"font-size:12.8px"><a href=3D"https://github.com/d=
+istributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md" target=3D=
+"_blank">https://github.com/<wbr>distributedweaknessfiling/DWF-<wbr>Databa=
+se/blob/master/<wbr>TermsOfUse.md</a><br><span class=3D"gmail-m_-323732369=
+566349682gmail-s1"></span></p><p class=3D"gmail-m_-323732369566349682gmail=
+-p2" style=3D"font-size:12.8px">and quoted below, please reply with "I acc=
+ept" and I'll be able to process your&nbsp;<span class=3D"gmail-il">CVE</s=
+pan>&nbsp;request. Thanks!<br><span class=3D"gmail-m_-323732369566349682gm=
+ail-s1"></span></p><p class=3D"gmail-m_-323732369566349682gmail-p2" style=
+=3D"font-size:12.8px"><span class=3D"gmail-il">Terms</span>&nbsp;of&nbsp;<=
+span class=3D"gmail-il">Use</span><br><span class=3D"gmail-m_-323732369566=
+349682gmail-s1"></span></p><p class=3D"gmail-m_-323732369566349682gmail-p2=
+" style=3D"font-size:12.8px">LICENSE<br><span class=3D"gmail-m_-3237323695=
+66349682gmail-s1"></span></p><p class=3D"gmail-m_-323732369566349682gmail-=
+p1" style=3D"font-size:12.8px"><span class=3D"gmail-m_-323732369566349682g=
+mail-s1">Submissions: For all materials you submit to the Common Vulnerabi=
+lities and Exposures (<span class=3D"gmail-il">CVE</span>=C2=AE), you here=
+by grant to The MITRE Corporation (MITRE) and all&nbsp;<span class=3D"gmai=
+l-il">CVE</span>&nbsp;Numbering Authorities (CNAs) a perpetual, worldwide,=
+ non-exclusive, no-charge, royalty-free, irrevocable copyright license to =
+reproduce, prepare derivative works of, publicly display, publicly perform=
+, sublicense, and distribute such materials and derivative works. Unless r=
+equired by applicable law or agreed to in writing, you provide such materi=
+als on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, eit=
+her express or implied, including, without limitation, any warranties or c=
+onditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PA=
+RTICULAR PURPOSE.</span></p><p class=3D"gmail-m_-323732369566349682gmail-p=
+1" style=3D"font-size:12.8px"><span class=3D"gmail-m_-323732369566349682gm=
+ail-s1"><span class=3D"gmail-il">CVE</span>&nbsp;Usage: MITRE hereby grant=
+s you a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irre=
+vocable copyright license to reproduce, prepare derivative works of, publi=
+cly display, publicly perform, sublicense, and distribute Common Vulnerabi=
+lities and Exposures (<span class=3D"gmail-il">CVE</span>=C2=AE). Any copy=
+ you make for such purposes is authorized provided that you reproduce MITR=
+E's copyright designation and this license in any such copy.</span></p><p =
+class=3D"gmail-m_-323732369566349682gmail-p2" style=3D"font-size:12.8px">D=
+ISCLAIMERS<br><span class=3D"gmail-m_-323732369566349682gmail-s1"></span><=
+/p><p class=3D"gmail-m_-323732369566349682gmail-p1" style=3D"font-size:12.=
+8px"><span class=3D"gmail-m_-323732369566349682gmail-s1">ALL DOCUMENTS AND=
+ THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "A=
+S IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS =
+SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFIC=
+ERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, I=
+NCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE&nbsp;<span class=3D"gmai=
+l-il">USE</span>&nbsp;OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIG=
+HTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICUL=
+AR PURPOSE.</span></p><div><br></div>-- <br><div class=3D"gmail_signature"=
+>Kurt Seifried<br><a href=3D"mailto:kurt@seifried.org" target=3D"_blank">k=
+urt@seifried.org</a></div>=0A</div>=0A</div></div></blockquote>=0A</body><=
+/html>
+------=_001_NextPart134170182303_=------
+

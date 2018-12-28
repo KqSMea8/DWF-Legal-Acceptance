@@ -1,0 +1,139 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a9d:2363:0:0:0:0:0 with SMTP id k32-v6csp2506990otd;
+        Mon, 9 Jul 2018 04:52:58 -0700 (PDT)
+X-Google-Smtp-Source: AAOMgpfcCTD7eNMrMcwtIj4ZSW7J+qfMkJVj7tqyVUYpDiAYvBgcuml/cv5SFwuSU65DnV+nsf4r
+X-Received: by 2002:a1c:8b81:: with SMTP id n123-v6mr11752169wmd.142.1531137178774;
+        Mon, 09 Jul 2018 04:52:58 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1531137178; cv=none;
+        d=google.com; s=arc-20160816;
+        b=JsnCmCg6QaqOS6DakjX6KW7atSCG0+LPiDbWDyxVG3SnrF5+ttrWruIUs7VqgJ10Qr
+         O482edzMBZtWkl5e2JPg5JlEBUUKLUCnpW1jSOcPluOJ56pcHY92h+EDdJs3Yf2W336y
+         LItnxlpreEurt6BsDrLscPFXv8Oeonpkan4BZG84VGiMW5idlf4si76FLyKwIeTvZK/9
+         tprrRnpZuBw2toGIOicsUtscxPf719txDNkRncYvmbpgat1LgPwI8+lS1RaFAmdRmVL7
+         g/UM77VDvtOm/j7TKe900eIx7vshc9Pdw7RpEq9uIGhKdT4fQS4OrhnTp+219V1QEg+O
+         uUlw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:content-language:in-reply-to:mime-version
+         :user-agent:date:message-id:organization:autocrypt:openpgp:from
+         :references:to:subject:dkim-signature:arc-authentication-results;
+        bh=Ej9mrX5wwQUAOQMVFaRYIjyUNoDyC8tHGnpfDXm0SJ0=;
+        b=OHaTPoGxmfNs/d6rM5dwE4nvtb+l8uxir48x31xWkHzJhwF4xPAlaa+dwrPtM+h3vk
+         MCxtO87r34OaGGN8/InkBnN3fK5Cn6jNGYKgfDFl6Sey09eDsKg7YyNRGgSsG9wtb9UT
+         ew0mQGV66h0z25wMHUwaxOJnQc9wOxLMw5nj2T7SLYyEzcPY6LXA2ruxgFePqx8f9xcB
+         5krZvtIxlxG4bawZbG76zCo9ib+fP3MYa5XoVuXmRsckccPhzrgJrFdHeZ0TSKTEKniC
+         d29oTTT+kbe6kQfrtNJlxqU1dcYq7hCdBWHC19RHbVvc7PT+XULdI+C9syb+dECaKDJe
+         m1eA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@nic.cz header.s=default header.b=rNBLL3Gj;
+       spf=pass (google.com: best guess record for domain of petr.spacek@nic.cz designates 2001:1488:800:400::400 as permitted sender) smtp.mailfrom=petr.spacek@nic.cz
+Return-Path: <petr.spacek@nic.cz>
+Received: from mail.nic.cz (mail.nic.cz. [2001:1488:800:400::400])
+        by mx.google.com with ESMTPS id l2-v6si13010157wrm.403.2018.07.09.04.52.58
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 09 Jul 2018 04:52:58 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of petr.spacek@nic.cz designates 2001:1488:800:400::400 as permitted sender) client-ip=2001:1488:800:400::400;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@nic.cz header.s=default header.b=rNBLL3Gj;
+       spf=pass (google.com: best guess record for domain of petr.spacek@nic.cz designates 2001:1488:800:400::400 as permitted sender) smtp.mailfrom=petr.spacek@nic.cz
+Received: from [IPv6:2001:67c:1220:80c:19b8:726f:16ca:2fc8] (unknown [IPv6:2001:67c:1220:80c:19b8:726f:16ca:2fc8])
+	by mail.nic.cz (Postfix) with ESMTPSA id 059F3608AF
+	for <kurt@seifried.org>; Mon,  9 Jul 2018 13:52:58 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=nic.cz; s=default;
+	t=1531137178; bh=4EGYyoQYqAaLMQPMrrTMC0WhflGMv4NdnjUfi45Y39o=;
+	h=To:From:Date;
+	b=rNBLL3Gj/WsFSA7jD47t+lrCeWbwLuO6Aj443LzEZS517K/07DxRrQzNXrizCAGH7
+	 x48qyrJAYAVy2rNj2OpVEoyBI7Q+fH/4fAQA6AAjObDUwmaawrK4rYekL/KWAvgTIr
+	 LERvhq10xR1GwL/91/X65+SlFYqSUT0a+xdHOE4k=
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ petr.spacek@nic.cz
+To: kurt@seifried.org
+References: <20180706024341.12777.37835@shiny-2.local>
+From: =?UTF-8?B?UGV0ciDFoHBhxI1law==?= <petr.spacek@nic.cz>
+Openpgp: preference=signencrypt
+Autocrypt: addr=petr.spacek@nic.cz; prefer-encrypt=mutual; keydata=
+ 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
+ GouQ9dVQ
+Organization: CZ.NIC
+Message-ID: <84d91405-faff-5a71-106b-30df637f6252@nic.cz>
+Date: Mon, 9 Jul 2018 13:52:57 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101
+ Thunderbird/52.8.0
+MIME-Version: 1.0
+In-Reply-To: <20180706024341.12777.37835@shiny-2.local>
+Content-Type: text/plain; charset=utf-8
+Content-Language: en-US
+Content-Transfer-Encoding: 8bit
+X-Virus-Scanned: clamav-milter 0.99.2 at mail
+X-Virus-Status: Clean
+
+I accept
+
+On 6.7.2018 04:43, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled out the CVE form and want one, we can't use the data until you accept the MITRE CVE Terms of Use). 
+> 
+> Simply quote the email and reply with "I accept" at the top if you agree to the MITRE CVE Terms of Use and we will add a copy of the email to the DWF MITRE CVE Terms of Use acceptance data at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+> 
+> The reason we use a complete copy of the email is that it provides an artifact showing that the email address accepted the Terms of Use, when they were accepted and so on. 
+> 
+> If you did not submit a CVE request to the DWF you can safely ignore this message, however we may resend it at some point in the future, if you don't want any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so we don't spam you with these, please note that this will prevent you from being able to accept the MITRE CVE Terms of Use via the DWF automatically in future (you'll have to manually ask). But again, if you have no idea what a CVE is then you can ignore this/ask to be added to the block list with no problems. 
+> 
+> MITRE CVE Terms of Use
+> 
+> LICENSE
+> 
+> Submissions: For all materials you submit to the Common Vulnerabilities and Exposures (CVEÂ®), you hereby grant to The MITRE Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute such materials and derivative works. Unless required by applicable law or agreed to in writing, you provide such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute Common Vulnerabilities and Exposures (CVEÂ®). Any copy you make for such purposes is authorized provided that you reproduce MITRE's copyright designation and this license in any such copy.
+> 
+> DISCLAIMERS
+> 
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/master/Terms-Of-Use.md
+> 
+> To contact the DWF either hit reply, or email kurt@seifried.org manually with your question/concerns/etc. 
+> 
+
+-- 
+Petr Špaček  @  CZ.NIC

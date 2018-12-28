@@ -1,0 +1,89 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.157.29.99 with SMTP id m90csp1423165otm;
+        Wed, 13 Sep 2017 14:21:37 -0700 (PDT)
+X-Google-Smtp-Source: ADKCNb6PPeevUZ+1t9Dx4kVVzMJqNG3wzTWMiad1EXNWAcFxnh54J+HLS8uJp8tOLTa1jKDVyQDF
+X-Received: by 10.223.139.212 with SMTP id w20mr16477343wra.275.1505337696787;
+        Wed, 13 Sep 2017 14:21:36 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1505337696; cv=none;
+        d=google.com; s=arc-20160816;
+        b=j34UdPQFzK+y6JVRPuK36cmwOrcLAmAMGQhq8Ln71ditlTjfAzarDzO4m2IT4Crty3
+         GHQWwnckgDvMlZ4x6fUQq0NhLwFq1GvYkolll3rwupb2ZvYBL5WmYKfqwUrR7JJWCTLt
+         Tj8uWImtE5kwk7Q+RZs/6n1qyuHX442wYqLSyVdWUDTwYJ+64A3iJzr+khodATFeVinG
+         WrGDr6UjLU8XP4GgRqnrFZxkzIDjVtm4i74zrOSQtvW9eNphAgltfEZi1qKSPrJQim9Z
+         nJtA9c4fDUXHG4FY/Xw3WLEq4Y94FueecYGRac3uFuMOWpdWx/F/iCZZ+6zOlOa0PUXA
+         C/iw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:content-language:in-reply-to:mime-version
+         :date:message-id:openpgp:from:references:to:subject:dkim-signature
+         :arc-authentication-results;
+        bh=YA6w2o4qMpdP8A7zklN2WjDmxtrY5x8Wzvwv6JLhnpc=;
+        b=MUFpKvMQR7u4k5ey4DLkk82wGKU9WfF5qW5gjLLzTiflFjtgu/Fqj51oAQtfsn5hw6
+         LmhJuDlf1GtONmNDrAQBR3qDUCybYxaMKtxgEB+Oylsj1sdoPf8+oUUoRmGXVjChW7jK
+         JQa5C3RNDY84Mg2/NfSc36ZJ+QToDSz9xr8aFQTvDXg4CBik3tGM1RnFjPavpGX9Z693
+         ZG2T14ylrVnbT9QUz8H/8M7OhZTyEtoH3CjQ3yhEjsKV5C0xYKab3qkxW+IG2vNNBZ3a
+         vav9T8hOL4bksylEcDYUw5w0zX3VTcMOIzLW0SUAp/66hgUP4p7DKTnP1QgHFwIYSKx7
+         0rXg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@donncha.is header.s=dkim header.b=twub5zoD;
+       spf=pass (google.com: domain of donncha@donncha.is designates 178.32.216.138 as permitted sender) smtp.mailfrom=donncha@donncha.is;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=donncha.is
+Return-Path: <donncha@donncha.is>
+Received: from windmill.donncha.is (windmill.donncha.is. [178.32.216.138])
+        by mx.google.com with ESMTP id x1si11345442wrc.99.2017.09.13.14.21.36
+        for <kurt@seifried.org>;
+        Wed, 13 Sep 2017 14:21:36 -0700 (PDT)
+Received-SPF: pass (google.com: domain of donncha@donncha.is designates 178.32.216.138 as permitted sender) client-ip=178.32.216.138;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@donncha.is header.s=dkim header.b=twub5zoD;
+       spf=pass (google.com: domain of donncha@donncha.is designates 178.32.216.138 as permitted sender) smtp.mailfrom=donncha@donncha.is;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=donncha.is
+Received: from [127.0.0.1] (unknown [199.249.223.79])
+	by windmill.donncha.is (Postfix) with ESMTPSA id 0FF41B3AA
+	for <kurt@seifried.org>; Wed, 13 Sep 2017 23:21:34 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=donncha.is; s=dkim;
+	t=1505337695; bh=PT5rT3xMm4ff9vVAdtcVWVY5skNj4/qh2m5OlKFVEY8=;
+	h=Subject:To:References:From:Date:In-Reply-To:From;
+	b=twub5zoDQ8n6XQHzzua+Jt6j8yVeePI/ymOmP19ZSPkLrGA4lj2V91kOMB+wcXuS7
+	 b/KTND2maHIsrowrxXMbfU/5vugtI34rTjPGIwApItSsJ6zoWjZgwJHVxlDcIJ9/V8
+	 Fqoye1RtK2SAGgeRBDpECSRSI5t7IHwpgOxypDKA=
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ donncha@donncha.is
+To: kurt@seifried.org
+References: <20170913203618.2669.42483@222.1.168.192.in-addr.arpa>
+From: Donncha O'Cearbhaill <donncha@donncha.is>
+Openpgp: url=http://donncha.is/donncha.asc
+Message-ID: <44fc6f5b-995c-be3d-0664-13e4831492b9@donncha.is>
+Date: Wed, 13 Sep 2017 21:21:00 +0000
+MIME-Version: 1.0
+In-Reply-To: <20170913203618.2669.42483@222.1.168.192.in-addr.arpa>
+Content-Type: text/plain; charset=utf-8
+Content-Language: en-GB
+Content-Transfer-Encoding: 8bit
+
+I accept
+
+kurt@seifried.org:
+> This is a confirmation email sent from CVE request form at https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled out the CVE form and want one, we can't use the data until you accept the MITRE CVE Terms of Use). 
+> 
+> Simply quote the email and reply with "I accept" at the top if you agree to the MITRE CVE Terms of Use and we will add a copy of the email to the DWF MITRE CVE Terms of Use acceptance data at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+> 
+> The reason we use a complete copy of the email is that it provides an artifact showing that the email address accepted the Terms of Use, when they were accepted and so on. 
+> 
+> If you did not submit a CVE request to the DWF you can safely ignore this message, however we may resend it at some point in the future, if you don't want any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so we don't spam you with these, please note that this will prevent you from being able to accept the MITRE CVE Terms of Use via the DWF automatically in future (you'll have to manually ask). But again, if you have no idea what a CVE is then you can ignore this/ask to be added to the block list with no problems. 
+> 
+> MITRE CVE Terms of Use
+> 
+> LICENSE
+> 
+> Submissions: For all materials you submit to the Common Vulnerabilities and Exposures (CVEÂ®), you hereby grant to The MITRE Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute such materials and derivative works. Unless required by applicable law or agreed to in writing, you provide such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute Common Vulnerabilities and Exposures (CVEÂ®). Any copy you make for such purposes is authorized provided that you reproduce MITRE's copyright designation and this license in any such copy.
+> 
+> DISCLAIMERS
+> 
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md
+> 
+> To contact the DWF either hit reply, or email kurt@seifried.org manually with your question/concerns/etc. 
+> 

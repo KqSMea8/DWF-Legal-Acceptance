@@ -1,0 +1,210 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.31.48.20 with SMTP id w20csp18575vkw;
+        Wed, 16 Nov 2016 12:04:51 -0800 (PST)
+X-Received: by 10.55.109.133 with SMTP id i127mr6089800qkc.295.1479326691239;
+        Wed, 16 Nov 2016 12:04:51 -0800 (PST)
+Return-Path: <saloh2@student.monash.edu>
+Received: from mail-qt0-x22a.google.com (mail-qt0-x22a.google.com. [2607:f8b0:400d:c0d::22a])
+        by mx.google.com with ESMTPS id n186si22722741qkd.140.2016.11.16.12.04.51
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 16 Nov 2016 12:04:51 -0800 (PST)
+Received-SPF: pass (google.com: domain of saloh2@student.monash.edu designates 2607:f8b0:400d:c0d::22a as permitted sender) client-ip=2607:f8b0:400d:c0d::22a;
+Authentication-Results: mx.google.com;
+       dkim=pass (test mode) header.i=@student.monash.edu;
+       spf=pass (google.com: domain of saloh2@student.monash.edu designates 2607:f8b0:400d:c0d::22a as permitted sender) smtp.mailfrom=saloh2@student.monash.edu;
+       dmarc=pass (p=NONE dis=NONE) header.from=student.monash.edu
+Received: by mail-qt0-x22a.google.com with SMTP id c47so115230739qtc.2
+        for <kurt@seifried.org>; Wed, 16 Nov 2016 12:04:51 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=student.monash.edu; s=google;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=RGBfZ/AzHZ2UivM0Y5xVJlxrZCbg8cBicKInhodNJdg=;
+        b=VCsUSWdbC/E18j0UqYZHRljzDKe3Bd3P4Pa5z0nC+5EjnfWqY3tHhv6MKmu8Txq3aY
+         u0cUH8R9rgNh8AIBy2dSoOCOCusRx7etLNYcp+DXuy5p9s2T7an0fD6K682hsozDiok1
+         lstOCbNnBH4ds+OtrozSjB0cXomOfMzSCHe7RC95AtcAaVjw+S1yA5Q+yrd4m5EIgnRL
+         0jmbkZIzHGq3eTzlHwjRZXgD7s29976aqfW3GHMrFrPq8PMtQF+H9EZ1nuzgEUotCEtU
+         glWQgaDySi5/225lIpLnIdPc8tSoYrnv6Q5RolASjHdCpBzES7W77VVA8gGcaXo7kOgR
+         1KyA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=RGBfZ/AzHZ2UivM0Y5xVJlxrZCbg8cBicKInhodNJdg=;
+        b=OqXU1mskuNOH1+ctEwGdmIFmWlUU/i/6c/ipywCYmocGZSY1Czd999ro71SBotcK1a
+         ucNMGXnGwLRw54T8jMsts8GBVAXR96qM9Gf0B7HkKjj40u+nJ5UxWUYrkVgfw4NXvXXu
+         dcD1/DdYWdhxvEd1iSgGOgDlNR+s3yBr1bEZGfTRzCGCF14twHGvJmMu2nj1u9A2s6ZL
+         EfuHJ/sl0FHOfqMV99/W3p5qAz08PYZMSYqJcVywq3OLDxC+RT+dk8aOlhs27407OgCi
+         +WannRXqpM0FLBAswHVGQf6rMYbocbHjccJyYiCCLSh0NnXCqi1FUr3EZp3O0XDa1XIZ
+         qn3g==
+X-Gm-Message-State: AKaTC028g18QmC+rcHfjQIgIDlCY8GlOxv0DqyzZ7OXKt/x0pNKzDzkUUmkX4KbGSN5JQJK9s49RGl6kizp46i8U
+X-Received: by 10.200.43.120 with SMTP id 53mr3003978qtv.253.1479326690670;
+ Wed, 16 Nov 2016 12:04:50 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.163.68 with HTTP; Wed, 16 Nov 2016 12:04:49 -0800 (PST)
+Received: by 10.12.163.68 with HTTP; Wed, 16 Nov 2016 12:04:49 -0800 (PST)
+In-Reply-To: <CABqVa39PSVN1Fn7YQyWz5Q6hPtAxFoDwiZbtm5Q1Tjj_=ZkBbQ@mail.gmail.com>
+References: <CABqVa39PSVN1Fn7YQyWz5Q6hPtAxFoDwiZbtm5Q1Tjj_=ZkBbQ@mail.gmail.com>
+From: Sajeeb Lohani <saloh2@student.monash.edu>
+Date: Thu, 17 Nov 2016 07:04:49 +1100
+Message-ID: <CAPj+J5oE6BShGkn1oY1Na8pq9BGAASrTvASzr6PQvF1H=1BPGw@mail.gmail.com>
+Subject: Re: CVE - Acceptance of MITRE Terms of Use for CVE for saloh2@student.monash.edu
+To: Kurt Seifried <kurt@seifried.org>
+Content-Type: multipart/alternative; boundary=001a113ac4b8e7e0fd0541709513
+
+--001a113ac4b8e7e0fd0541709513
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+On 17 Nov 2016 6:04 AM, "Kurt Seifried" <kurt@seifried.org> wrote:
+
+> Hi, I need to confirm that you have accepted the MITRE Terms of Use for
+> CVE, available at:
+>
+> https://github.com/distributedweaknessfiling/DWF-Database/bl
+> ob/master/TermsOfUse.md
+>
+> and quoted below, please reply with "I accept" and I'll be able to proces=
+s
+> your CVE request. Thanks!
+>
+> Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities
+> and Exposures (CVE=C2=AE), you hereby grant to The MITRE Corporation (MIT=
+RE)
+> and all CVE Numbering Authorities (CNAs) a perpetual, worldwide,
+> non-exclusive, no-charge, royalty-free, irrevocable copyright license to
+> reproduce, prepare derivative works of, publicly display, publicly perfor=
+m,
+> sublicense, and distribute such materials and derivative works. Unless
+> required by applicable law or agreed to in writing, you provide such
+> materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+> KIND, either express or implied, including, without limitation, any
+> warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or
+> FITNESS FOR A PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,
+> no-charge, royalty-free, irrevocable copyright license to reproduce,
+> prepare derivative works of, publicly display, publicly perform,
+> sublicense, and distribute Common Vulnerabilities and Exposures (CVE=C2=
+=AE).
+> Any copy you make for such purposes is authorized provided that you
+> reproduce MITRE's copyright designation and this license in any such copy=
+.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE
+> PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE
+> REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD
+> OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES,
+> EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE US=
+E OF
+> THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED
+> WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> --
+> Kurt Seifried
+> kurt@seifried.org
+>
+
+--001a113ac4b8e7e0fd0541709513
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p dir=3D"ltr">I accept</p>
+<div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On 17 Nov 2016 6:=
+04 AM, &quot;Kurt Seifried&quot; &lt;<a href=3D"mailto:kurt@seifried.org">k=
+urt@seifried.org</a>&gt; wrote:<br type=3D"attribution"><blockquote class=
+=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padd=
+ing-left:1ex"><div dir=3D"ltr"><p class=3D"m_-3626578654150604442gmail-m_-8=
+628789074958563613gmail-m_-323732369566349682gmail-p1" style=3D"font-size:1=
+2.8px"><span class=3D"m_-3626578654150604442gmail-m_-8628789074958563613gma=
+il-m_-323732369566349682gmail-s1">Hi, I need to confirm that you have accep=
+ted the=C2=A0<span class=3D"m_-3626578654150604442gmail-il">MITRE</span>=C2=
+=A0<span class=3D"m_-3626578654150604442gmail-m_-8628789074958563613gmail-i=
+l"><span class=3D"m_-3626578654150604442gmail-il">Terms</span></span>=C2=A0=
+of=C2=A0<span class=3D"m_-3626578654150604442gmail-m_-8628789074958563613gm=
+ail-il"><span class=3D"m_-3626578654150604442gmail-il">Use</span></span>=C2=
+=A0for=C2=A0<span class=3D"m_-3626578654150604442gmail-m_-86287890749585636=
+13gmail-il">CVE</span><wbr>, available at:</span></p><p class=3D"m_-3626578=
+654150604442gmail-m_-8628789074958563613gmail-m_-323732369566349682gmail-p2=
+" style=3D"font-size:12.8px"><a href=3D"https://github.com/distributedweakn=
+essfiling/DWF-Database/blob/master/TermsOfUse.md" target=3D"_blank">https:/=
+/github.com/distributed<wbr>weaknessfiling/DWF-Database/bl<wbr>ob/master/Te=
+rmsOfUse.md</a><br><span class=3D"m_-3626578654150604442gmail-m_-8628789074=
+958563613gmail-m_-323732369566349682gmail-s1"></span></p><p class=3D"m_-362=
+6578654150604442gmail-m_-8628789074958563613gmail-m_-323732369566349682gmai=
+l-p2" style=3D"font-size:12.8px">and quoted below, please reply with &quot;=
+I accept&quot; and I&#39;ll be able to process your=C2=A0<span class=3D"m_-=
+3626578654150604442gmail-m_-8628789074958563613gmail-il">CVE</span>=C2=A0re=
+quest. Thanks!<br><span class=3D"m_-3626578654150604442gmail-m_-86287890749=
+58563613gmail-m_-323732369566349682gmail-s1"></span></p><p class=3D"m_-3626=
+578654150604442gmail-m_-8628789074958563613gmail-m_-323732369566349682gmail=
+-p2" style=3D"font-size:12.8px"><span class=3D"m_-3626578654150604442gmail-=
+m_-8628789074958563613gmail-il">Terms</span>=C2=A0of=C2=A0<span class=3D"m_=
+-3626578654150604442gmail-m_-8628789074958563613gmail-il">Use</span><br><sp=
+an class=3D"m_-3626578654150604442gmail-m_-8628789074958563613gmail-m_-3237=
+32369566349682gmail-s1"></span></p><p class=3D"m_-3626578654150604442gmail-=
+m_-8628789074958563613gmail-m_-323732369566349682gmail-p2" style=3D"font-si=
+ze:12.8px">LICENSE<br><span class=3D"m_-3626578654150604442gmail-m_-8628789=
+074958563613gmail-m_-323732369566349682gmail-s1"></span></p><p class=3D"m_-=
+3626578654150604442gmail-m_-8628789074958563613gmail-m_-323732369566349682g=
+mail-p1" style=3D"font-size:12.8px"><span class=3D"m_-3626578654150604442gm=
+ail-m_-8628789074958563613gmail-m_-323732369566349682gmail-s1">Submissions:=
+ For all materials you submit to the Common Vulnerabilities and Exposures (=
+<span class=3D"m_-3626578654150604442gmail-m_-8628789074958563613gmail-il">=
+CVE</span>=C2=AE), you hereby grant to The=C2=A0<span class=3D"m_-362657865=
+4150604442gmail-il">MITRE</span>=C2=A0Corporation (<span class=3D"m_-362657=
+8654150604442gmail-il">MITRE</span>) and all=C2=A0<span class=3D"m_-3626578=
+654150604442gmail-m_-8628789074958563613gmail-il">CVE</span>=C2=A0Numbering=
+ Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge, royal=
+ty-free, irrevocable copyright license to reproduce, prepare derivative wor=
+ks of, publicly display, publicly perform, sublicense, and distribute such =
+materials and derivative works. Unless required by applicable law or agreed=
+ to in writing, you provide such materials on an &quot;AS IS&quot; BASIS, W=
+ITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, inc=
+luding, without limitation, any warranties or conditions of TITLE, NON-INFR=
+INGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.</span></p><=
+p class=3D"m_-3626578654150604442gmail-m_-8628789074958563613gmail-m_-32373=
+2369566349682gmail-p1" style=3D"font-size:12.8px"><span class=3D"m_-3626578=
+654150604442gmail-m_-8628789074958563613gmail-m_-323732369566349682gmail-s1=
+"><span class=3D"m_-3626578654150604442gmail-m_-8628789074958563613gmail-il=
+">CVE</span>=C2=A0Usage:=C2=A0<span class=3D"m_-3626578654150604442gmail-il=
+">MITRE</span>=C2=A0hereby grants you a perpetual, worldwide, non-exclusive=
+, no-charge, royalty-free, irrevocable copyright license to reproduce, prep=
+are derivative works of, publicly display, publicly perform, sublicense, an=
+d distribute Common Vulnerabilities and Exposures (<span class=3D"m_-362657=
+8654150604442gmail-m_-8628789074958563613gmail-il">CVE</span>=C2=AE). Any c=
+opy you make for such purposes is authorized provided that you reproduce=C2=
+=A0<span class=3D"m_-3626578654150604442gmail-il">MITRE</span>&#39;s copyri=
+ght designation and this license in any such copy.</span></p><p class=3D"m_=
+-3626578654150604442gmail-m_-8628789074958563613gmail-m_-323732369566349682=
+gmail-p2" style=3D"font-size:12.8px">DISCLAIMERS<br><span class=3D"m_-36265=
+78654150604442gmail-m_-8628789074958563613gmail-m_-323732369566349682gmail-=
+s1"></span></p><p class=3D"m_-3626578654150604442gmail-m_-86287890749585636=
+13gmail-m_-323732369566349682gmail-p1" style=3D"font-size:12.8px"><span cla=
+ss=3D"m_-3626578654150604442gmail-m_-8628789074958563613gmail-m_-3237323695=
+66349682gmail-s1">ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVI=
+DED BY=C2=A0<span class=3D"m_-3626578654150604442gmail-il">MITRE</span>=C2=
+=A0ARE PROVIDED ON AN &quot;AS IS&quot; BASIS AND THE CONTRIBUTOR, THE ORGA=
+NIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE=C2=A0<span clas=
+s=3D"m_-3626578654150604442gmail-il">MITRE</span>=C2=A0CORPORATION, ITS BOA=
+RD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, E=
+XPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE=C2=A0=
+<span class=3D"m_-3626578654150604442gmail-m_-8628789074958563613gmail-il">=
+<span class=3D"m_-3626578654150604442gmail-il">USE</span></span>=C2=A0OF TH=
+E INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIE=
+S OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</span></p><div><b=
+r></div>--=C2=A0<br><div class=3D"m_-3626578654150604442gmail_signature">Ku=
+rt Seifried<br><a href=3D"mailto:kurt@seifried.org" target=3D"_blank">kurt@=
+seifried.org</a></div>
+</div>
+</blockquote></div></div>
+
+--001a113ac4b8e7e0fd0541709513--

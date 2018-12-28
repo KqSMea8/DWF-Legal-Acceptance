@@ -1,0 +1,283 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a4f:65c4:0:0:0:0:0 with SMTP id z187-v6csp1083750ivb;
+        Sat, 9 Jun 2018 16:35:58 -0700 (PDT)
+X-Google-Smtp-Source: ADUXVKLtx9aG6Qw0+zGMy6hHemF0MkuIYtRR/iyUN3a3HEm1Ma4nzK6CXQ7ZiuVJkbX8jOB0LSVK
+X-Received: by 2002:a50:d659:: with SMTP id c25-v6mr12393703edj.16.1528587358101;
+        Sat, 09 Jun 2018 16:35:58 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1528587358; cv=none;
+        d=google.com; s=arc-20160816;
+        b=v0YYmU6wNl+mZRJftjMuk7yaDS7fnpvmPuVrRtLwqMNMglf3ZpVcsjPo9VaRxvw1Cb
+         r9Nulxc13MC6NyxZy2DMFTGxoJycrDfi4pEv6HioNic84kUl9Afc/G+MMzHXuhHFGFMJ
+         WgFHBlDrjHnveJMLkQ9LGzjdYjvETSrMzWOTbRg6h8N7oJNFbykNFZuuR4K3+95jZ4XQ
+         bjj2bFqmmuydEQL1P4PDHCB4Na3V2rsHZcepmyUtaBHb+MR+UDceGXZvjTEeJE7RRbdZ
+         Br2DB/jomoG5+tdvwdYsiQgB5jIL/G32RISDwBm82qMDvFL4iZXhOqWF/67pIcsyDy8A
+         zj3Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature:arc-authentication-results;
+        bh=jzgPNjYxtJqOZDSv1r/ZoV1lJW8M4F4/uXldX4hYqvQ=;
+        b=P0XcCd/vuOb4T8SDQdHjlyYQViAu+Sjox8mET9Ww1z3AtjXQN7dBlCzf3mWDBi5AT2
+         GmrAOBcvE3WwDnNq4R7QDRfkqjRWGVHeZZ82xrCkeQpiVKPhE0bdLlQ29Mh4kzMet5hI
+         GdvpS/mq3lLg5mzDezBXWR0kFCji4OdxIGzv/QiocuQAGl+NIkoIJg+aZNwt9JmTcntS
+         Q7IoOMC5InksKnTmDc640de6J2ynL5JboUirgGM+E1Z5bcdAYdht5D17YpXEjWNc7f7g
+         7lWhSdwIqAk9DusOeYRRP4tKIuoZ7jMhWV8NUZyM3qvd43xBkgf52Zc1OtIBS0/rhH9/
+         7UdQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@unomaha.edu header.s=google header.b=PaCeqw/m;
+       spf=pass (google.com: domain of prvs=56980a9fd2=rmgrandgenett@unomaha.edu designates 148.163.147.197 as permitted sender) smtp.mailfrom=prvs=56980a9fd2=rmgrandgenett@unomaha.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=unomaha.edu
+Return-Path: <prvs=56980a9fd2=rmgrandgenett@unomaha.edu>
+Received: from mx0a-00246402.pphosted.com (mx0a-00246402.pphosted.com. [148.163.147.197])
+        by mx.google.com with ESMTPS id a55-v6si188282edd.50.2018.06.09.16.35.56
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 09 Jun 2018 16:35:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of prvs=56980a9fd2=rmgrandgenett@unomaha.edu designates 148.163.147.197 as permitted sender) client-ip=148.163.147.197;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unomaha.edu header.s=google header.b=PaCeqw/m;
+       spf=pass (google.com: domain of prvs=56980a9fd2=rmgrandgenett@unomaha.edu designates 148.163.147.197 as permitted sender) smtp.mailfrom=prvs=56980a9fd2=rmgrandgenett@unomaha.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=unomaha.edu
+Received: from pps.filterd (m0136268.ppops.net [127.0.0.1])
+	by mx0a-00246402.pphosted.com (8.16.0.22/8.16.0.22) with SMTP id w59NVNBF024608
+	for <kurt@seifried.org>; Sat, 9 Jun 2018 18:35:55 -0500
+Received: from mail-lf0-f71.google.com (mail-lf0-f71.google.com [209.85.215.71])
+	by mx0a-00246402.pphosted.com with ESMTP id 2jgbvf1kr3-1
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128 verify=NOT)
+	for <kurt@seifried.org>; Sat, 09 Jun 2018 18:35:55 -0500
+Received: by mail-lf0-f71.google.com with SMTP id b26-v6so5166091lfa.6
+        for <kurt@seifried.org>; Sat, 09 Jun 2018 16:35:54 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unomaha.edu; s=google;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=jzgPNjYxtJqOZDSv1r/ZoV1lJW8M4F4/uXldX4hYqvQ=;
+        b=PaCeqw/maYs3VReFqfvZjydRe2VG28xsVLXzEI5UdM4hGrdFx4YXP1zkXfxyG0uXSW
+         r5dfGq93qjVLWP/KfQEtBp/LPn93tT1VosktPCAZGK88LOIKbid04lBoS3jJz5/MJBOc
+         89J0/kcikr5It0M72cPA2bU2TCzHbXu8sxZ3s=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=jzgPNjYxtJqOZDSv1r/ZoV1lJW8M4F4/uXldX4hYqvQ=;
+        b=JWYu92jOv7aPs/W8kbpqa915BcVwlAcqpOspvFfGppQgcHbA6h8S+OXAu8w+m9bVKT
+         tfuErEeCTFAVD+Qn98P/DxdIi+G3C3bY2z2vtHJGYWmVf+05JWGlxktPQmLFWeGBjLUC
+         pWNqWTH7KeRLl66xX/4tpureVsLeqyrOb2QgOHYQqAWtdEhmrDQE+0xOXl462mV1RZwm
+         cZDcp+6A+ort5Q9qrbF/OxXYYCFQnP+UM2KNE4eTDqW6lLldvJjosasAllFfelQYrv2a
+         /FSAC6ii0gb0fflQOQwEq13ZQ9Y+k2oCUewBNFNcEn32fd1k1z9NRNdu/CkYVD5ZmuRX
+         jFWw==
+X-Gm-Message-State: APt69E0IOdX+VXqqvugd/aryaVxvz8LopsXy8MbGjVYotdYK/Z7uhqOm
+	qI94uBUIh6DdtebB4oLSrqMio4wjylCS4WuKx2Ztajy5fo/F3V4R7JVPmWXgVISTC90NIN3QOMC
+	wRf/OyV74/BKWH6MQPwEtWf9/bFLIvxtC+VLEu2BeIE/3x7Jo1cs=
+X-Received: by 2002:a19:9c4b:: with SMTP id f72-v6mr7426789lfe.119.1528587352064;
+        Sat, 09 Jun 2018 16:35:52 -0700 (PDT)
+X-Received: by 2002:a19:9c4b:: with SMTP id f72-v6mr7426784lfe.119.1528587351753;
+ Sat, 09 Jun 2018 16:35:51 -0700 (PDT)
+MIME-Version: 1.0
+References: <20180604190458.3808.98258@shiny-2.local>
+In-Reply-To: <20180604190458.3808.98258@shiny-2.local>
+From: Ryan Grandgenett <rmgrandgenett@unomaha.edu>
+Date: Sat, 9 Jun 2018 18:35:39 -0500
+Message-ID: <CAOE3R9y+1-V2e1h01swFvk5xQQGe-n_fTR9PeiavyLG23rCtyA@mail.gmail.com>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for rmgrandgenett@unomaha.edu
+To: kurt@seifried.org
+Content-Type: multipart/alternative; boundary="0000000000001c22b9056e3dfae3"
+X-Proofpoint-Spam-Reason: safe
+
+--0000000000001c22b9056e3dfae3
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+On Mon, Jun 4, 2018, 2:05 PM <kurt@seifried.org> wrote:
+
+> This is a confirmation email sent from CVE request form at
+> https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__iwantacve.org_&d=
+=3DDwIDEQ&c=3DCu5g146wZdoqVuKpTNsYHeFX_rg6kWhlkLF8Eft-wwo&r=3DlATEUD2vgCumT=
+z2fGHO4Tszp2M5MtuL0HLcW1sVTD2Q&m=3DScRqPxEdXimHYOchFHNsA3hNULcVbMkSYqa5b6xa=
+W9M&s=3D3wHNsYTgoa_w6i-WPuvZV9W1wXpDEvi6CaOFd7h-864&e=3D
+> asking you to accept the MITRE CVE Terms of Use (assuming you filled out
+> the CVE form and want one, we can't use the data until you accept the MIT=
+RE
+> CVE Terms of Use).
+>
+> Simply quote the email and reply with "I accept" at the top if you agree
+> to the MITRE CVE Terms of Use and we will add a copy of the email to the
+> DWF MITRE CVE Terms of Use acceptance data at
+> https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__github.com_distrib=
+utedweaknessfiling_DWF-2DLegal-2DAcceptance_tree_master_Terms-2DOf-2DUse&d=
+=3DDwIDEQ&c=3DCu5g146wZdoqVuKpTNsYHeFX_rg6kWhlkLF8Eft-wwo&r=3DlATEUD2vgCumT=
+z2fGHO4Tszp2M5MtuL0HLcW1sVTD2Q&m=3DScRqPxEdXimHYOchFHNsA3hNULcVbMkSYqa5b6xa=
+W9M&s=3DluwKmbk5tQ6bWQlF6W21oXOIscWqTJ2IHh9cpIjMKVc&e=3D
+>
+> The reason we use a complete copy of the email is that it provides an
+> artifact showing that the email address accepted the Terms of Use, when
+> they were accepted and so on.
+>
+> If you did not submit a CVE request to the DWF you can safely ignore this
+> message, however we may resend it at some point in the future, if you don=
+'t
+> want any future emails simply reply with "unsubscribe" or "DON'T SEND ME
+> THIS EMAIL EVER AGAIN" and I'll add your email address to the block list =
+so
+> we don't spam you with these, please note that this will prevent you from
+> being able to accept the MITRE CVE Terms of Use via the DWF automatically
+> in future (you'll have to manually ask). But again, if you have no idea
+> what a CVE is then you can ignore this/ask to be added to the block list
+> with no problems.
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities
+> and Exposures (CVE=C3=82=C2=AE), you hereby grant to The MITRE Corporatio=
+n (MITRE)
+> and all CVE Numbering Authorities (CNAs) a perpetual, worldwide,
+> non-exclusive, no-charge, royalty-free, irrevocable copyright license to
+> reproduce, prepare derivative works of, publicly display, publicly perfor=
+m,
+> sublicense, and distribute such materials and derivative works. Unless
+> required by applicable law or agreed to in writing, you provide such
+> materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+> KIND, either express or implied, including, without limitation, any
+> warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or
+> FITNESS FOR A PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,
+> no-charge, royalty-free, irrevocable copyright license to reproduce,
+> prepare derivative works of, publicly display, publicly perform,
+> sublicense, and distribute Common Vulnerabilities and Exposures (CVE=C3=
+=82=C2=AE).
+> Any copy you make for such purposes is authorized provided that you
+> reproduce MITRE's copyright designation and this license in any such copy=
+.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE
+> PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE
+> REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD =
+OF
+> TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRE=
+SS
+> OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE
+> INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIE=
+S
+> OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> A copy is available at
+> https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__github.com_distrib=
+utedweaknessfiling_DWF-2DLegal-2DAcceptance_blob_master_Terms-2DOf-2DUse.md=
+&d=3DDwIDEQ&c=3DCu5g146wZdoqVuKpTNsYHeFX_rg6kWhlkLF8Eft-wwo&r=3DlATEUD2vgCu=
+mTz2fGHO4Tszp2M5MtuL0HLcW1sVTD2Q&m=3DScRqPxEdXimHYOchFHNsA3hNULcVbMkSYqa5b6=
+xaW9M&s=3Di6lWHz13-IyVJms_vsTT9l_e1DhuRXDO5o199_sslTI&e=3D
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manually
+> with your question/concerns/etc.
+>
+>
+
+--0000000000001c22b9056e3dfae3
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">I accept</div><br><div class=3D"gmail_quote"><div dir=3D"=
+ltr">On Mon, Jun 4, 2018, 2:05 PM  &lt;<a href=3D"mailto:kurt@seifried.org"=
+>kurt@seifried.org</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote=
+" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">T=
+his is a confirmation email sent from CVE request form at <a href=3D"https:=
+//urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__iwantacve.org_&amp;d=3DDwI=
+DEQ&amp;c=3DCu5g146wZdoqVuKpTNsYHeFX_rg6kWhlkLF8Eft-wwo&amp;r=3DlATEUD2vgCu=
+mTz2fGHO4Tszp2M5MtuL0HLcW1sVTD2Q&amp;m=3DScRqPxEdXimHYOchFHNsA3hNULcVbMkSYq=
+a5b6xaW9M&amp;s=3D3wHNsYTgoa_w6i-WPuvZV9W1wXpDEvi6CaOFd7h-864&amp;e=3D" rel=
+=3D"noreferrer noreferrer" target=3D"_blank">https://urldefense.proofpoint.=
+com/v2/url?u=3Dhttps-3A__iwantacve.org_&amp;d=3DDwIDEQ&amp;c=3DCu5g146wZdoq=
+VuKpTNsYHeFX_rg6kWhlkLF8Eft-wwo&amp;r=3DlATEUD2vgCumTz2fGHO4Tszp2M5MtuL0HLc=
+W1sVTD2Q&amp;m=3DScRqPxEdXimHYOchFHNsA3hNULcVbMkSYqa5b6xaW9M&amp;s=3D3wHNsY=
+Tgoa_w6i-WPuvZV9W1wXpDEvi6CaOFd7h-864&amp;e=3D</a> asking you to accept the=
+ MITRE CVE Terms of Use (assuming you filled out the CVE form and want one,=
+ we can&#39;t use the data until you accept the MITRE CVE Terms of Use). <b=
+r>
+<br>
+Simply quote the email and reply with &quot;I accept&quot; at the top if yo=
+u agree to the MITRE CVE Terms of Use and we will add a copy of the email t=
+o the DWF MITRE CVE Terms of Use acceptance data at <a href=3D"https://urld=
+efense.proofpoint.com/v2/url?u=3Dhttps-3A__github.com_distributedweaknessfi=
+ling_DWF-2DLegal-2DAcceptance_tree_master_Terms-2DOf-2DUse&amp;d=3DDwIDEQ&a=
+mp;c=3DCu5g146wZdoqVuKpTNsYHeFX_rg6kWhlkLF8Eft-wwo&amp;r=3DlATEUD2vgCumTz2f=
+GHO4Tszp2M5MtuL0HLcW1sVTD2Q&amp;m=3DScRqPxEdXimHYOchFHNsA3hNULcVbMkSYqa5b6x=
+aW9M&amp;s=3DluwKmbk5tQ6bWQlF6W21oXOIscWqTJ2IHh9cpIjMKVc&amp;e=3D" rel=3D"n=
+oreferrer noreferrer" target=3D"_blank">https://urldefense.proofpoint.com/v=
+2/url?u=3Dhttps-3A__github.com_distributedweaknessfiling_DWF-2DLegal-2DAcce=
+ptance_tree_master_Terms-2DOf-2DUse&amp;d=3DDwIDEQ&amp;c=3DCu5g146wZdoqVuKp=
+TNsYHeFX_rg6kWhlkLF8Eft-wwo&amp;r=3DlATEUD2vgCumTz2fGHO4Tszp2M5MtuL0HLcW1sV=
+TD2Q&amp;m=3DScRqPxEdXimHYOchFHNsA3hNULcVbMkSYqa5b6xaW9M&amp;s=3DluwKmbk5tQ=
+6bWQlF6W21oXOIscWqTJ2IHh9cpIjMKVc&amp;e=3D</a><br>
+<br>
+The reason we use a complete copy of the email is that it provides an artif=
+act showing that the email address accepted the Terms of Use, when they wer=
+e accepted and so on. <br>
+<br>
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don&#3=
+9;t want any future emails simply reply with &quot;unsubscribe&quot; or &qu=
+ot;DON&#39;T SEND ME THIS EMAIL EVER AGAIN&quot; and I&#39;ll add your emai=
+l address to the block list so we don&#39;t spam you with these, please not=
+e that this will prevent you from being able to accept the MITRE CVE Terms =
+of Use via the DWF automatically in future (you&#39;ll have to manually ask=
+). But again, if you have no idea what a CVE is then you can ignore this/as=
+k to be added to the block list with no problems. <br>
+<br>
+MITRE CVE Terms of Use<br>
+<br>
+LICENSE<br>
+<br>
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+ Exposures (CVE=C3=82=C2=AE), you hereby grant to The MITRE Corporation (MI=
+TRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-e=
+xclusive, no-charge, royalty-free, irrevocable copyright license to reprodu=
+ce, prepare derivative works of, publicly display, publicly perform, sublic=
+ense, and distribute such materials and derivative works. Unless required b=
+y applicable law or agreed to in writing, you provide such materials on an =
+&quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, eith=
+er express or implied, including, without limitation, any warranties or con=
+ditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTI=
+CULAR PURPOSE.<br>
+<br>
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare=
+ derivative works of, publicly display, publicly perform, sublicense, and d=
+istribute Common Vulnerabilities and Exposures (CVE=C3=82=C2=AE). Any copy =
+you make for such purposes is authorized provided that you reproduce MITRE&=
+#39;s copyright designation and this license in any such copy.<br>
+<br>
+DISCLAIMERS<br>
+<br>
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN &quot;AS IS&quot; BASIS AND THE CONTRIBUTOR, THE ORGANIZATION=
+ HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS =
+BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES=
+, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE US=
+E OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WA=
+RRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.<br>
+<br>
+A copy is available at <a href=3D"https://urldefense.proofpoint.com/v2/url?=
+u=3Dhttps-3A__github.com_distributedweaknessfiling_DWF-2DLegal-2DAcceptance=
+_blob_master_Terms-2DOf-2DUse.md&amp;d=3DDwIDEQ&amp;c=3DCu5g146wZdoqVuKpTNs=
+YHeFX_rg6kWhlkLF8Eft-wwo&amp;r=3DlATEUD2vgCumTz2fGHO4Tszp2M5MtuL0HLcW1sVTD2=
+Q&amp;m=3DScRqPxEdXimHYOchFHNsA3hNULcVbMkSYqa5b6xaW9M&amp;s=3Di6lWHz13-IyVJ=
+ms_vsTT9l_e1DhuRXDO5o199_sslTI&amp;e=3D" rel=3D"noreferrer noreferrer" targ=
+et=3D"_blank">https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__github=
+.com_distributedweaknessfiling_DWF-2DLegal-2DAcceptance_blob_master_Terms-2=
+DOf-2DUse.md&amp;d=3DDwIDEQ&amp;c=3DCu5g146wZdoqVuKpTNsYHeFX_rg6kWhlkLF8Eft=
+-wwo&amp;r=3DlATEUD2vgCumTz2fGHO4Tszp2M5MtuL0HLcW1sVTD2Q&amp;m=3DScRqPxEdXi=
+mHYOchFHNsA3hNULcVbMkSYqa5b6xaW9M&amp;s=3Di6lWHz13-IyVJms_vsTT9l_e1DhuRXDO5=
+o199_sslTI&amp;e=3D</a><br>
+<br>
+To contact the DWF either hit reply, or email <a href=3D"mailto:kurt@seifri=
+ed.org" target=3D"_blank" rel=3D"noreferrer">kurt@seifried.org</a> manually=
+ with your question/concerns/etc. <br>
+<br>
+</blockquote></div>
+
+--0000000000001c22b9056e3dfae3--

@@ -1,0 +1,141 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.31.230.197 with SMTP id d188csp229003vkh;
+        Wed, 5 Oct 2016 09:47:34 -0700 (PDT)
+X-Received: by 10.194.112.131 with SMTP id iq3mr8616020wjb.123.1475686054893;
+        Wed, 05 Oct 2016 09:47:34 -0700 (PDT)
+Return-Path: <dennis@dety.eu>
+Received: from smtprelay06.ispgateway.de (smtprelay06.ispgateway.de. [80.67.31.103])
+        by mx.google.com with ESMTPS id k187si12891836wma.118.2016.10.05.09.47.34
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 05 Oct 2016 09:47:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of dennis@dety.eu designates 80.67.31.103 as permitted sender) client-ip=80.67.31.103;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of dennis@dety.eu designates 80.67.31.103 as permitted sender) smtp.mailfrom=dennis@dety.eu;
+       dmarc=pass (p=NONE dis=NONE) header.from=dety.eu
+Received: from [78.35.181.33] (helo=iMac.local)
+	by smtprelay06.ispgateway.de with esmtpsa (TLSv1.2:DHE-RSA-AES128-SHA:128)
+	(Exim 4.84)
+	(envelope-from <dennis@dety.eu>)
+	id 1brpLy-0001aU-5Z
+	for kurt@seifried.org; Wed, 05 Oct 2016 18:47:34 +0200
+Subject: Re: CVE - Acceptance of MITRE Terms of Use for CVE
+To: Kurt Seifried <kurt@seifried.org>
+References: <CABqVa39=UVZWoPf_NkmDE-H0uZBuVvPVOMdVmktNJdOWhGZOqQ@mail.gmail.com>
+Reply-To: cve@dety.eu
+From: Dennis <dennis@dety.eu>
+Message-ID: <96b2a5e2-a1da-d811-7651-a969e21618fa@dety.eu>
+Date: Wed, 5 Oct 2016 18:47:31 +0200
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:45.0)
+ Gecko/20100101 Thunderbird/45.3.0
+MIME-Version: 1.0
+In-Reply-To: <CABqVa39=UVZWoPf_NkmDE-H0uZBuVvPVOMdVmktNJdOWhGZOqQ@mail.gmail.com>
+Content-Type: multipart/signed; micalg=pgp-sha512;
+ protocol="application/pgp-signature";
+ boundary="txac02u271Om3TnE11xB9n5h3u6CJFOfm"
+X-Df-Sender: ZGVubmlzQGRldHkuZXU=
+
+This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
+--txac02u271Om3TnE11xB9n5h3u6CJFOfm
+Content-Type: multipart/mixed; boundary="iVOtE0gPQEnA0pPfCM3X6dO7vVuwVa59p";
+ protected-headers="v1"
+From: Dennis <dennis@dety.eu>
+Reply-To: cve@dety.eu
+To: Kurt Seifried <kurt@seifried.org>
+Message-ID: <96b2a5e2-a1da-d811-7651-a969e21618fa@dety.eu>
+Subject: Re: CVE - Acceptance of MITRE Terms of Use for CVE
+References: <CABqVa39=UVZWoPf_NkmDE-H0uZBuVvPVOMdVmktNJdOWhGZOqQ@mail.gmail.com>
+In-Reply-To: <CABqVa39=UVZWoPf_NkmDE-H0uZBuVvPVOMdVmktNJdOWhGZOqQ@mail.gmail.com>
+
+--iVOtE0gPQEnA0pPfCM3X6dO7vVuwVa59p
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+Thanks!
+
+On 05.10.16 18:41, Kurt Seifried wrote:
+>
+> Hi, I need to confirm that you have accepted the
+> MITRE Terms of Use for CVE, available at:
+>
+> https://github.com/distributedweaknessfiling/DWF-Database/blob/master/T=
+ermsOfUse.md
+> <https://github.com/distributedweaknessfiling/DWF-Database/blob/master/=
+TermsOfUse.md>
+>
+> and quoted below, please reply with "I accept" and I'll be able to
+> process your CVE request. Thanks!
+>
+> Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common
+> Vulnerabilities and Exposures (CVE=C2=AE), you hereby grant to The MITR=
+E
+> Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a
+> perpetual, worldwide, non-exclusive, no-charge, royalty-free,
+> irrevocable copyright license to reproduce, prepare derivative works
+> of, publicly display, publicly perform, sublicense, and distribute
+> such materials and derivative works. Unless required by applicable law
+> or agreed to in writing, you provide such materials on an "AS IS"
+> BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+> implied, including, without limitation, any warranties or conditions
+> of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+> PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide,
+> non-exclusive, no-charge, royalty-free, irrevocable copyright license
+> to reproduce, prepare derivative works of, publicly display, publicly
+> perform, sublicense, and distribute Common Vulnerabilities and
+> Exposures (CVE=C2=AE). Any copy you make for such purposes is authorize=
+d
+> provided that you reproduce MITRE's copyright designation and this
+> license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE
+> ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION
+> HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION,
+> ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL
+> WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY
+> WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY
+> RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A
+> PARTICULAR PURPOSE.
+>
+>
+> --=20
+> Kurt Seifried
+> kurt@seifried.org <mailto:kurt@seifried.org>
+
+
+
+--iVOtE0gPQEnA0pPfCM3X6dO7vVuwVa59p--
+
+--txac02u271Om3TnE11xB9n5h3u6CJFOfm
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+Comment: GPGTools - https://gpgtools.org
+
+iQIcBAEBCgAGBQJX9S6lAAoJEEfq9D5eCfSqNG4P/jsFtTSHMum1PtRRwz2ynN0d
+bg1/Pc5+z3SHOqyLTdovOw2IVg0yxq/TEOUAbSQ1cUTkytAO/uYB3Y4ewHqMRkl3
+taMAfOZxrIE7HArQvd6A1Lkzy2aGmAfbY6J23cfVPI0ZegvAOa32nrVRtOViEA/5
+lb21ZkBQyeUTM62HORpmaUO4iiee/unvkX4BtnxIEbPp4vrohJjxiBggyyBxYEJr
+eXlML9OJKWfVYTzi/41j1rncsAD0TFQXkN8XK7BDouudQWtl6Ou9qQGDYSp4niyy
+CXenjidNwUHC/TTTM/igEbsbjLBUxKydJGnolQ4eq5ufyfLlH97Hsm0s5RVLXReK
+T+HIJUU5FfGMFUj870+P/i1fjpl9cVpiAER4NWk4bwPaXxo/odCSB4tuluSEYxmm
+bjmiHRhCantx7kuEA0sSn323/drQvaHNclnoAfWs/GEgzlvX667nZ3M4NC/AlNNr
+JELsf1XaWg0tBRPxL+ZULVtdpQcQx/z1e7X0HlBwUDSTI+yoU8qPoP7I9UKl5S4L
+SVp2q+T90AMSC84/GrT0rnHvBjnvt58bLwXCbS8JVJ/5kq8IIDE3bK1jeVL5blRn
+WL08m/TTJCPJA/DdX1/OVmc3fRMHo8dz1cqLaCnH7pJBUSq0sFvWBTB7KkSjgOQ8
+TzYrrwlbOV68rsaSG/Kt
+=QHck
+-----END PGP SIGNATURE-----
+
+--txac02u271Om3TnE11xB9n5h3u6CJFOfm--

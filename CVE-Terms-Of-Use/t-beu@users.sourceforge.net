@@ -1,0 +1,121 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.79.71 with SMTP id d68csp3974633ivb;
+        Mon, 1 Jan 2018 11:50:47 -0800 (PST)
+X-Google-Smtp-Source: ACJfBoujqMyaNK1DoeK0hr2SeH8ilgHrlunCcVXgBU+zlLDZAAQBRj4sS2/oW4stjzlzXcnrZWFm
+X-Received: by 10.202.92.193 with SMTP id q184mr32149109oib.272.1514836247404;
+        Mon, 01 Jan 2018 11:50:47 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1514836247; cv=none;
+        d=google.com; s=arc-20160816;
+        b=UOky83/O8qI6U/SMwGJTIh7Oj/01Z++iQ3MXXcaLSmo1+QTCy24eTbT99hQItVMqf/
+         x4+cmJpE8lWZOIqzEmARGyVGzf9WuPsDtcmpowcSIHdsUoC/yaOT/fcCNf+4GKoPSu2z
+         OKDZFjMfB8CSAdU3C623FuEQHOHXlhsZtFRVgBxl0tJF2a+YtEVU69x4gff+JFAgyi8Q
+         XFuZTm357lIz/Vmqvjq7Kt5xPX/mKafNFY4Dv98kcafwvG9VuFVsPgZ0WJit1f+60RMP
+         5cOTMV1UstVvzHan53q4WAGj41MdZCQCsvGWVSR+ebtyIshFdz7QlDKAjpOOMDEuMDgE
+         pyFw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:message-id:date:content-transfer-encoding:references
+         :in-reply-to:subject:from:to:dkim-signature
+         :arc-authentication-results;
+        bh=Xb8j3xZ2fnahp47d7TUSeEaEdFuH8SGHeIfH24QjNB4=;
+        b=cENBMu9dtE7VHqqZ9Yos2EMHSjoDuR3uLqRpaOK8sd9J7DqU0JUT9e0LIpcD+YbSeg
+         m6loXh5+OPXKRfogF5LJu3yOF6F8FUkg9XaU666VuuKR7+gBas9p0kCBmT5e8F82R7Ve
+         L+U9EtpD5YYnm/fMkkENk/zWcszJi2TzJ1RIFqUvebTkMISIaLwHoWGtlxhyITdBV55h
+         qhdfYDudnXq+1tzSkDO9IqD/KxfGF/fIjOyOn3X+71u4V3YhmbVOt0U/nL9Uxpjj4Kb6
+         2Aou4a5dAP8BJ8U62arkkg1X96gfaFlNG4zLxssqpmiNRNRqpXvuJ2LhsA+wtHwJ9DyK
+         XB6w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass (test mode) header.i=@tbeu.de header.s=k1 header.b=l9n1W5JJ;
+       spf=neutral (google.com: 194.117.254.46 is neither permitted nor denied by best guess record for domain of mail@tbeu.de) smtp.mailfrom=mail@tbeu.de
+Return-Path: <mail@tbeu.de>
+Received: from mail.ud06.udmedia.de (ud06.udmedia.de. [194.117.254.46])
+        by mx.google.com with ESMTPS id w14si4517857wmf.1.2018.01.01.11.50.47
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 01 Jan 2018 11:50:47 -0800 (PST)
+Received-SPF: neutral (google.com: 194.117.254.46 is neither permitted nor denied by best guess record for domain of mail@tbeu.de) client-ip=194.117.254.46;
+Authentication-Results: mx.google.com;
+       dkim=pass (test mode) header.i=@tbeu.de header.s=k1 header.b=l9n1W5JJ;
+       spf=neutral (google.com: 194.117.254.46 is neither permitted nor denied by best guess record for domain of mail@tbeu.de) smtp.mailfrom=mail@tbeu.de
+DKIM-Signature: v=1; a=rsa-sha256; c=simple; d=tbeu.de; h=to:from
+	:subject:in-reply-to:references:content-type
+	:content-transfer-encoding:date:message-id:mime-version; s=k1;
+	 bh=Xb8j3xZ2fnahp47d7TUSeEaEdFuH8SGHeIfH24QjNB4=; b=l9n1W5JJGRvj
+	2NZvpmHlzgiPUs+R9MDyp0XOVkd7QABtiq1++E7GKsRnu4zQA3tgNhX9K/u2/cua
+	4UCIE8oqx3YkpAZrEnlkI7vG81SIuuLvCO9kK/lySoeqzeT9in2c73j1g9o9EikR
+	8PmRq8RpvphLfgGydcOyBPckKluWllI=
+Received: (qmail 13117 invoked from network); 1 Jan 2018 20:50:46 +0100
+Received: from unknown (HELO ?127.0.0.1?) (ud06?50p4@2a02:810a:83c0:b870:f54e:ce28:bb40:ef8b)
+  by mail.ud06.udmedia.de with ESMTPSA (ECDHE-RSA-AES256-GCM-SHA384 encrypted, authenticated); 1 Jan 2018 20:50:46 +0100
+X-Priority: 3
+To: kurt@seifried.org
+From: Thomas Beutlich <mail@tbeu.de>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ t-beu@users.sourceforge.net
+In-Reply-To: <20171227193508.3645.43879@slab.local>
+References: <20171227193508.3645.43879@slab.local>
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+Date: Mon, 1 Jan 2018 19:50:45 +0000
+Message-ID: <uyb6km.p1w74m.0-qmf@mail.ud06.udmedia.de>
+MIME-Version: 1.0
+
+SSBhY2NlcHQuDQoNCkFtIE1pdHR3b2NoLCAyNy4gRGV6ZW1iZXIgMjAxNyBzY2hyaWViIGt1cnRA
+c2VpZnJpZWQub3JnOg0KPiBUaGlzIGlzIGEgY29uZmlybWF0aW9uIGVtYWlsIHNlbnQgZnJvbSBD
+VkUgcmVxdWVzdCBmb3JtIGF0IGh0dHBzOi8vaXdhbnRhY3ZlLm9yZy8gYXNraW5nIHlvdSB0byBh
+Y2NlcHQgdGhlIE1JVFJFIENWRSBUZXJtcyBvZiBVc2UgKGFzc3VtaW5nIHlvdSBmaWxsZWQgb3V0
+IHRoZSBDVkUgZm9ybSBhbmQgd2FudCBvbmUsIHdlIGNhbid0IHVzZSB0aGUgZGF0YSB1bnRpbCB5
+b3UgYWNjZXB0IHRoZSBNSVRSRSBDVkUgVGVybXMgb2YgVXNlKS4gDQo+IA0KPiBTaW1wbHkgcXVv
+dGUgdGhlIGVtYWlsIGFuZCByZXBseSB3aXRoICJJIGFjY2VwdCIgYXQgdGhlIHRvcCBpZiB5b3Ug
+YWdyZWUgdG8gdGhlIE1JVFJFIENWRSBUZXJtcyBvZiBVc2UgYW5kIHdlIHdpbGwgYWRkIGEgY29w
+eSBvZiB0aGUgZW1haWwgdG8gdGhlIERXRiBNSVRSRSBDVkUgVGVybXMgb2YgVXNlIGFjY2VwdGFu
+Y2UgZGF0YSBhdCBodHRwczovL2dpdGh1Yi5jb20vZGlzdHJpYnV0ZWR3ZWFrbmVzc2ZpbGluZy9E
+V0YtTGVnYWwtQWNjZXB0YW5jZS90cmVlL21hc3Rlci9UZXJtcy1PZi1Vc2UNCj4gDQo+IFRoZSBy
+ZWFzb24gd2UgdXNlIGEgY29tcGxldGUgY29weSBvZiB0aGUgZW1haWwgaXMgdGhhdCBpdCBwcm92
+aWRlcyBhbiBhcnRpZmFjdCBzaG93aW5nIHRoYXQgdGhlIGVtYWlsIGFkZHJlc3MgYWNjZXB0ZWQg
+dGhlIFRlcm1zIG9mIFVzZSwgd2hlbiB0aGV5IHdlcmUgYWNjZXB0ZWQgYW5kIHNvIG9uLiANCj4g
+DQo+IElmIHlvdSBkaWQgbm90IHN1Ym1pdCBhIENWRSByZXF1ZXN0IHRvIHRoZSBEV0YgeW91IGNh
+biBzYWZlbHkgaWdub3JlIHRoaXMgbWVzc2FnZSwgaG93ZXZlciB3ZSBtYXkgcmVzZW5kIGl0IGF0
+IHNvbWUgcG9pbnQgaW4gdGhlIGZ1dHVyZSwgaWYgeW91IGRvbid0IHdhbnQgYW55IGZ1dHVyZSBl
+bWFpbHMgc2ltcGx5IHJlcGx5IHdpdGggInVuc3Vic2NyaWJlIiBvciAiRE9OJ1QgU0VORCBNRSBU
+SElTIEVNQUlMIEVWRVIgQUdBSU4iIGFuZCBJJ2xsIGFkZCB5b3VyIGVtYWlsIGFkZHJlc3MgdG8g
+dGhlIGJsb2NrIGxpc3Qgc28gd2UgZG9uJ3Qgc3BhbSB5b3Ugd2l0aCB0aGVzZSwgcGxlYXNlIG5v
+dGUgdGhhdCB0aGlzIHdpbGwgcHJldmVudCB5b3UgZnJvbSBiZWluZyBhYmxlIHRvIGFjY2VwdCB0
+aGUgTUlUUkUgQ1ZFIFRlcm1zIG9mIFVzZSB2aWEgdGhlIERXRiBhdXRvbWF0aWNhbGx5IGluIGZ1
+dHVyZSAoeW91J2xsIGhhdmUgdG8gbWFudWFsbHkgYXNrKS4gQnV0IGFnYWluLCBpZiB5b3UgaGF2
+ZSBubyBpZGVhIHdoYXQgYSBDVkUgaXMgdGhlbiB5b3UgY2FuIGlnbm9yZSB0aGlzL2FzayB0byBi
+ZSBhZGRlZCB0byB0aGUgYmxvY2sgbGlzdCB3aXRoIG5vIHByb2JsZW1zLiANCj4gDQo+IE1JVFJF
+IENWRSBUZXJtcyBvZiBVc2UNCj4gDQo+IExJQ0VOU0UNCj4gDQo+IFN1Ym1pc3Npb25zOiBGb3Ig
+YWxsIG1hdGVyaWFscyB5b3Ugc3VibWl0IHRvIHRoZSBDb21tb24gVnVsbmVyYWJpbGl0aWVzIGFu
+ZCBFeHBvc3VyZXMgKENWRcKuKSwgeW91IGhlcmVieSBncmFudCB0byBUaGUgTUlUUkUgQ29ycG9y
+YXRpb24gKE1JVFJFKSBhbmQgYWxsIENWRSBOdW1iZXJpbmcgQXV0aG9yaXRpZXMgKENOQXMpIGEg
+cGVycGV0dWFsLCB3b3JsZHdpZGUsIG5vbi1leGNsdXNpdmUsIG5vLWNoYXJnZSwgcm95YWx0eS1m
+cmVlLCBpcnJldm9jYWJsZSBjb3B5cmlnaHQgbGljZW5zZSB0byByZXByb2R1Y2UsIHByZXBhcmUg
+ZGVyaXZhdGl2ZSB3b3JrcyBvZiwgcHVibGljbHkgZGlzcGxheSwgcHVibGljbHkgcGVyZm9ybSwg
+c3VibGljZW5zZSwgYW5kIGRpc3RyaWJ1dGUgc3VjaCBtYXRlcmlhbHMgYW5kIGRlcml2YXRpdmUg
+d29ya3MuIFVubGVzcyByZXF1aXJlZCBieSBhcHBsaWNhYmxlIGxhdyBvciBhZ3JlZWQgdG8gaW4g
+d3JpdGluZywgeW91IHByb3ZpZGUgc3VjaCBtYXRlcmlhbHMgb24gYW4gIkFTIElTIiBCQVNJUywg
+V0lUSE9VVCBXQVJSQU5USUVTIE9SIENPTkRJVElPTlMgT0YgQU5ZIEtJTkQsIGVpdGhlciBleHBy
+ZXNzIG9yIGltcGxpZWQsIGluY2x1ZGluZywgd2l0aG91dCBsaW1pdGF0aW9uLCBhbnkgd2FycmFu
+dGllcyBvciBjb25kaXRpb25zIG9mIFRJVExFLCBOT04tSU5GUklOR0VNRU5ULCBNRVJDSEFOVEFC
+SUxJVFksIG9yIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFLg0KPiANCj4gQ1ZFIFVz
+YWdlOiBNSVRSRSBoZXJlYnkgZ3JhbnRzIHlvdSBhIHBlcnBldHVhbCwgd29ybGR3aWRlLCBub24t
+ZXhjbHVzaXZlLCBuby1jaGFyZ2UsIHJveWFsdHktZnJlZSwgaXJyZXZvY2FibGUgY29weXJpZ2h0
+IGxpY2Vuc2UgdG8gcmVwcm9kdWNlLCBwcmVwYXJlIGRlcml2YXRpdmUgd29ya3Mgb2YsIHB1Ymxp
+Y2x5IGRpc3BsYXksIHB1YmxpY2x5IHBlcmZvcm0sIHN1YmxpY2Vuc2UsIGFuZCBkaXN0cmlidXRl
+IENvbW1vbiBWdWxuZXJhYmlsaXRpZXMgYW5kIEV4cG9zdXJlcyAoQ1ZFwq4pLiBBbnkgY29weSB5
+b3UgbWFrZSBmb3Igc3VjaCBwdXJwb3NlcyBpcyBhdXRob3JpemVkIHByb3ZpZGVkIHRoYXQgeW91
+IHJlcHJvZHVjZSBNSVRSRSdzIGNvcHlyaWdodCBkZXNpZ25hdGlvbiBhbmQgdGhpcyBsaWNlbnNl
+IGluIGFueSBzdWNoIGNvcHkuDQo+IA0KPiBESVNDTEFJTUVSUw0KPiANCj4gQUxMIERPQ1VNRU5U
+UyBBTkQgVEhFIElORk9STUFUSU9OIENPTlRBSU5FRCBUSEVSRUlOIFBST1ZJREVEIEJZIE1JVFJF
+IEFSRSBQUk9WSURFRCBPTiBBTiAiQVMgSVMiIEJBU0lTIEFORCBUSEUgQ09OVFJJQlVUT1IsIFRI
+RSBPUkdBTklaQVRJT04gSEUvU0hFIFJFUFJFU0VOVFMgT1IgSVMgU1BPTlNPUkVEIEJZIChJRiBB
+TlkpLCBUSEUgTUlUUkUgQ09SUE9SQVRJT04sIElUUyBCT0FSRCBPRiBUUlVTVEVFUywgT0ZGSUNF
+UlMsIEFHRU5UUywgQU5EIEVNUExPWUVFUywgRElTQ0xBSU0gQUxMIFdBUlJBTlRJRVMsIEVYUFJF
+U1MgT1IgSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBBTlkgV0FSUkFOVFkg
+VEhBVCBUSEUgVVNFIE9GIFRIRSBJTkZPUk1BVElPTiBUSEVSRUlOIFdJTEwgTk9UIElORlJJTkdF
+IEFOWSBSSUdIVFMgT1IgQU5ZIElNUExJRUQgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFkg
+T1IgRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UuDQo+IA0KPiBBIGNvcHkgaXMgYXZh
+aWxhYmxlIGF0IGh0dHBzOi8vZ2l0aHViLmNvbS9kaXN0cmlidXRlZHdlYWtuZXNzZmlsaW5nL0RX
+Ri1MZWdhbC1BY2NlcHRhbmNlL2Jsb2IvbWFzdGVyL1Rlcm1zLU9mLVVzZS5tZA0KPiANCj4gVG8g
+Y29udGFjdCB0aGUgRFdGIGVpdGhlciBoaXQgcmVwbHksIG9yIGVtYWlsIGt1cnRAc2VpZnJpZWQu
+b3JnIG1hbnVhbGx5IHdpdGggeW91ciBxdWVzdGlvbi9jb25jZXJucy9ldGMuIA0KPiANCj4=

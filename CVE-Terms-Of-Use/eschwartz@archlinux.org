@@ -1,0 +1,161 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a4f:b47:0:0:0:0:0 with SMTP id 68-v6csp14056ivl;
+        Mon, 4 Jun 2018 12:12:50 -0700 (PDT)
+X-Google-Smtp-Source: ADUXVKIFX6N6wPrTqpfG8QQC8nXZvRVHV/HNKMynAxacSzUCOyjmmG1UU9CX7hz3pJA9oK1NL05d
+X-Received: by 2002:adf:92c2:: with SMTP id 60-v6mr16652199wrn.70.1528139570467;
+        Mon, 04 Jun 2018 12:12:50 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1528139570; cv=none;
+        d=google.com; s=arc-20160816;
+        b=xtIQHquIIBnF/qd8hLB4Ir/Om1x8fRucGd6KKcYDc2bprvR0GMV9Xsk+/tur+MsUFI
+         JaAB84ts1n9JEuNwB/6Uk4IKNtbuBmiykN00BqVkM9JMFm1azijOlC8pUM5LtMTerUVd
+         yNOE2VKtSqXp4y7VWRAPGtwuHzRAgSbfEpcR/MJ4EUMFk6wV6ybYrwYN7eZKj6Dxrzyx
+         Wy8lTzZEd0ja1sSTGoLzkgRYagt7frMM8vMOlS4k80vQS2gGXfzK3Ma2PalsTouFJR6B
+         qvZTpkC1ZSRsp0/GWgg0g7QT0S03Hen9NQImB2fbNves4kHxXdw4D4baNkUWJVjc1+M2
+         SLeA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:content-language:in-reply-to:mime-version
+         :user-agent:date:message-id:autocrypt:openpgp:from:references:to
+         :subject:dkim-signature:arc-authentication-results;
+        bh=hXhnY+UwoVldPRc1IvzHnwY42PEEza12+4J/KWGwhqw=;
+        b=nU7qY1e767Zcxo9e+Ifk324C7qVJG9vyatJ80q6ta6/yTk0ryZBXiTv6prJ0kVeI0i
+         LTGaYzJmVkw8TGYN5oDn3O4fmtk5pR0TM5aHFPRV0pQUAt5gBMGHUCm6A7jvmLpnn5lM
+         9tpQdcT1+mVL4xx8PsTD/tM39HNCA6r3ZlhvE13LcT5AnHUCr0DYGqgElAk+J8/h/LnT
+         9hL7sYxVpcirFLrJ/DV7ce87gqyaiKlujFAdQ3EvFNbdfr3VLzGuqIaP/mlc36qYqx9b
+         7AOu04121bjqUEQ9V+JsGK8kvmDv0Ylh8SOuRgek2NRPgJKJQtCCsBwNueeg9zfCdHLx
+         tAZg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@archlinux.org header.s=orion header.b=b4tqijpT;
+       spf=pass (google.com: domain of eschwartz@archlinux.org designates 88.198.91.70 as permitted sender) smtp.mailfrom=eschwartz@archlinux.org;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=archlinux.org
+Return-Path: <eschwartz@archlinux.org>
+Received: from orion.archlinux.org (orion.archlinux.org. [88.198.91.70])
+        by mx.google.com with ESMTPS id m204-v6si609411wmf.227.2018.06.04.12.12.50
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+        Mon, 04 Jun 2018 12:12:50 -0700 (PDT)
+Received-SPF: pass (google.com: domain of eschwartz@archlinux.org designates 88.198.91.70 as permitted sender) client-ip=88.198.91.70;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@archlinux.org header.s=orion header.b=b4tqijpT;
+       spf=pass (google.com: domain of eschwartz@archlinux.org designates 88.198.91.70 as permitted sender) smtp.mailfrom=eschwartz@archlinux.org;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=archlinux.org
+Received: from orion.archlinux.org (localhost [127.0.0.1])
+	by orion.archlinux.org (Postfix) with ESMTP id 54CD3B05AC5D6
+	for <kurt@seifried.org>; Mon,  4 Jun 2018 19:12:48 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.1 (2015-04-28) on orion
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.1 required=5.0 tests=ALL_TRUSTED=-1,BAYES_00=-1,
+	DKIM_SIGNED=0.1,DKIM_VALID=-0.1,DKIM_VALID_AU=-0.1,T_DKIMWL_WL_HIGH=-0.01
+	autolearn=ham autolearn_force=no version=3.4.1
+X-Spam-BL-Results: 
+Received: from [192.168.1.107] (unknown [216.97.144.179])
+	(using TLSv1.2 with cipher ECDHE-RSA-CHACHA20-POLY1305 (256/256 bits))
+	(No client certificate requested)
+	(Authenticated sender: eschwartz)
+	by orion.archlinux.org (Postfix) with ESMTPSA id 0DB23B05AC5D5
+	for <kurt@seifried.org>; Mon,  4 Jun 2018 19:12:47 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=archlinux.org;
+	s=orion; t=1528139568;
+	bh=qNhzWIZgI8R/M5IsH+CNqg/159s7FDwT309b8vMvkO0=;
+	h=Subject:To:References:From:Date:In-Reply-To;
+	b=b4tqijpTIPw03vOl6xqBdGps9mcoSJjvuxVLsPQ4awu1vWidYdFSK1hm7dvaO4fwa
+	 IsR6OB6rROpgyxrzVCLmiELIdKKRBuwOVjbxnqVdqbeWbJzRklhY/tV1FrOpxAfSJ4
+	 K/nTqIqy2mamTw/Xb3jZ2SMzZfNd27gVNBsO2H2Ku9swmF73vPCTN8TLHp/Nl8LfWL
+	 MZBWa4liq009I2Son/08YmvpyPzjgkjHfjenIW7K0PC0mU6QZaqzTW9FJR6ouKnbtx
+	 OS+x8ylHygvK3KB8SoGoXRjYtnK9ORCyyXM7OmsSd7E84i4qmU3DqZvZ7r96r34qCm
+	 G8h3F0T3tV+T8Dgz1Ky5tbeU/ZaPHAaqHVEho6crgGnBD4r1Q0jdVj/sBzLPB4rHvx
+	 Ij1GA4H8Q6Vrz4NTW01Ou7qgGHMsepRlXt+vuM4wcR4DX8eDUGLN6uZV73hjxId6wN
+	 TgvKaiJAaQ/cGKBQlx8Ka5Izu5dFLzsg+YLOmy6NBCm1LPi4SDh0av4zdm69TmJaEp
+	 53gTD+copT49go3oqS1nc3wAQiUZETKyRGIJ9FA1JYZZ2oBMm6NQY94o7ah9TviIoF
+	 UUFpgzjj5XLysiYwSAifjaW8jKwdZgrWHWq8LnPAoANHm/j2f4oa+mrDIgDtyhaGJb
+	 AMIsjOxbmPV6cv+C/+gWyY/8=
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ eschwartz@archlinux.org
+To: kurt@seifried.org
+References: <20180604190520.3808.15971@shiny-2.local>
+From: Eli Schwartz <eschwartz@archlinux.org>
+Openpgp: preference=signencrypt
+Autocrypt: addr=eschwartz@archlinux.org; prefer-encrypt=mutual; keydata=
+ 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 ecY=
+Message-ID: <681ab4c9-a27d-0bef-b65d-5c86e841d00e@archlinux.org>
+Date: Mon, 4 Jun 2018 15:12:56 -0400
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101
+ Thunderbird/52.8.0
+MIME-Version: 1.0
+In-Reply-To: <20180604190520.3808.15971@shiny-2.local>
+Content-Type: text/plain; charset=utf-8
+Content-Language: en-US
+Content-Transfer-Encoding: 8bit
+
+I accept
+
+On 06/04/2018 03:05 PM, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled out the CVE form and want one, we can't use the data until you accept the MITRE CVE Terms of Use). 
+> 
+> Simply quote the email and reply with "I accept" at the top if you agree to the MITRE CVE Terms of Use and we will add a copy of the email to the DWF MITRE CVE Terms of Use acceptance data at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+> 
+> The reason we use a complete copy of the email is that it provides an artifact showing that the email address accepted the Terms of Use, when they were accepted and so on. 
+> 
+> If you did not submit a CVE request to the DWF you can safely ignore this message, however we may resend it at some point in the future, if you don't want any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so we don't spam you with these, please note that this will prevent you from being able to accept the MITRE CVE Terms of Use via the DWF automatically in future (you'll have to manually ask). But again, if you have no idea what a CVE is then you can ignore this/ask to be added to the block list with no problems. 
+> 
+> MITRE CVE Terms of Use
+> 
+> LICENSE
+> 
+> Submissions: For all materials you submit to the Common Vulnerabilities and Exposures (CVEÂ®), you hereby grant to The MITRE Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute such materials and derivative works. Unless required by applicable law or agreed to in writing, you provide such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute Common Vulnerabilities and Exposures (CVEÂ®). Any copy you make for such purposes is authorized provided that you reproduce MITRE's copyright designation and this license in any such copy.
+> 
+> DISCLAIMERS
+> 
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/master/Terms-Of-Use.md
+> 
+> To contact the DWF either hit reply, or email kurt@seifried.org manually with your question/concerns/etc. 
+> 
+
+
+-- 
+Eli Schwartz
+Bug Wrangler and Trusted User

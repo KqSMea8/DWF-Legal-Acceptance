@@ -1,0 +1,85 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.202.129 with SMTP id n1csp989100ivl;
+        Thu, 5 Apr 2018 02:34:11 -0700 (PDT)
+X-Google-Smtp-Source: AIpwx4+n57QI20/LtU/PDW5fRzgo/QAKiZeO9E3jdDUqRTePyghbw+j0KIka3qdAVIT7qVDRpXqC
+X-Received: by 10.80.148.167 with SMTP id s36mr2291296eda.144.1522920851785;
+        Thu, 05 Apr 2018 02:34:11 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1522920851; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ojLEQGtGHabdHr5gwMizZE9qH8agihEAA1sGzD2snF1m6lLaItaC5alMNqctYUt2o6
+         k+wu3dg520HFiMtKAA0Vu21KBUqiBmWOf1AM3xtBRLG+MmwmaCmQ4WLGK+TRPp09YmVX
+         oUcYcX95iyfQn6t6ct+LuATEqeKEX83OSG2I5DJ2JaMBE3ZvKxeZNJP23Cq8XgkU66sf
+         hbk/i8Yc/YCoXtdG3JzLxh17lbcdiPXKVXrlv4eVodXGVr65dd51Yt+YodsuZJN0Hi04
+         5uySCO5C7YdfJH5Q+qXNDuTs4adYZqSPJ3gJEBzvVE6UeLRvy5SHiZVVBX82rGK5secT
+         1DyQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:content-language:in-reply-to:mime-version
+         :user-agent:date:message-id:from:references:to:subject
+         :arc-authentication-results;
+        bh=y9zSHTsbZu5xrTDFhpOEVrK/g61xGBmZgGHNIyzZzR0=;
+        b=MAiTdMffUW7GVGjEIhuifVKmDqRn0L6I1f+vpziAN40oO/HOYzZoDYiyC7F7kQC6DQ
+         fxSvid4jYk6ZRNwX8i53FdoDLGd5tHi/JGgj2AsTMW+PlhzklUuokIk7DDYB3wYZCD29
+         kx9ynmzTeI9PQPFPFksLpQeklkW37/VoXHiy6krt+jc23g9fW4dJI5eJis71K1EwVzzw
+         7WrKdAzNjsPo+lLJf+B+312664c22DPvq467nK950AX2bCx6QZ1sl4ZqQ+KyBPtRDtz/
+         k5/x6s5KKbZQid1RRvwIC5cl15btq6kGP0RGlTsKLPMMzA/UGowrqGpy3C78H81XqdUR
+         ixVQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of eprom@toor.si designates 46.4.100.247 as permitted sender) smtp.mailfrom=eprom@toor.si;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=toor.si
+Return-Path: <eprom@toor.si>
+Received: from mx1.fwdx.net (nat-pool-247.vfw01.sio.ch.fwdx.net. [46.4.100.247])
+        by mx.google.com with ESMTPS id f13si966309edm.153.2018.04.05.02.34.11
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 05 Apr 2018 02:34:11 -0700 (PDT)
+Received-SPF: pass (google.com: domain of eprom@toor.si designates 46.4.100.247 as permitted sender) client-ip=46.4.100.247;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of eprom@toor.si designates 46.4.100.247 as permitted sender) smtp.mailfrom=eprom@toor.si;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=toor.si
+Received: from [10.1.2.123] (unknown [10.1.2.123])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by mx1.fwdx.net (Postfix) with ESMTPSA id 5EC3680086
+	for <kurt@seifried.org>; Thu,  5 Apr 2018 11:32:30 +0200 (CEST)
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ eprom@toor.si
+To: kurt@seifried.org
+References: <20180405090651.26722.34302@slab.local>
+From: Nicolas Chabbey <eprom@toor.si>
+Message-ID: <eabe8e93-fd6c-28d9-53c1-451b0c666ed2@toor.si>
+Date: Thu, 5 Apr 2018 11:33:57 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101
+ Thunderbird/52.7.0
+MIME-Version: 1.0
+In-Reply-To: <20180405090651.26722.34302@slab.local>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 8bit
+
+I accept
+
+On 05/04/18 11:06, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled out the CVE form and want one, we can't use the data until you accept the MITRE CVE Terms of Use).
+> 
+> Simply quote the email and reply with "I accept" at the top if you agree to the MITRE CVE Terms of Use and we will add a copy of the email to the DWF MITRE CVE Terms of Use acceptance data at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+> 
+> The reason we use a complete copy of the email is that it provides an artifact showing that the email address accepted the Terms of Use, when they were accepted and so on.
+> 
+> If you did not submit a CVE request to the DWF you can safely ignore this message, however we may resend it at some point in the future, if you don't want any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so we don't spam you with these, please note that this will prevent you from being able to accept the MITRE CVE Terms of Use via the DWF automatically in future (you'll have to manually ask). But again, if you have no idea what a CVE is then you can ignore this/ask to be added to the block list with no problems.
+> 
+> MITRE CVE Terms of Use
+> 
+> LICENSE
+> 
+> Submissions: For all materials you submit to the Common Vulnerabilities and Exposures (CVEÂ®), you hereby grant to The MITRE Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute such materials and derivative works. Unless required by applicable law or agreed to in writing, you provide such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute Common Vulnerabilities and Exposures (CVEÂ®). Any copy you make for such purposes is authorized provided that you reproduce MITRE's copyright designation and this license in any such copy.
+> 
+> DISCLAIMERS
+> 
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/master/Terms-Of-Use.md
+> 
+> To contact the DWF either hit reply, or email kurt@seifried.org manually with your question/concerns/etc.
+> 

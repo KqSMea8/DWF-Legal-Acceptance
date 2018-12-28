@@ -1,0 +1,204 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.79.71 with SMTP id d68csp8181951ivb;
+        Wed, 27 Dec 2017 13:48:17 -0800 (PST)
+X-Google-Smtp-Source: ACJfBoukGJTNUNopiWmuVZ23QRlBITp74Ztly6wutJ+p+A27asz9dYqUecvm7WQBF0vrSpP0IKsx
+X-Received: by 10.28.216.196 with SMTP id p187mr22407057wmg.158.1514411297416;
+        Wed, 27 Dec 2017 13:48:17 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1514411297; cv=none;
+        d=google.com; s=arc-20160816;
+        b=KlN1LDb6wHH3cbPXZYfuZRKe28zuAQnh38jHwZccFat8E7qr5UiA3XC+hImLXDtYoB
+         02VbPhMlMh9VwvlX7brq6j2tLp/6ICYY+RpVMQL9j3xPjMAAdI2EYlKDCLk/ksf3CfgS
+         E/QYKoI1G5NiZrgnzxHKzlF7zlaxTeAS2wAtrzdybXd3UX8y3ToXmn/NnefDofVrKqKZ
+         Jh0J8M+kJgEAgaPEN0bpcWg0G5kNVNoyfzJE+zuovIkNfZwLIIqkeVwW6nKp04GN3/FQ
+         AhMjts24vH+EC3BtlbDlhZzJ29k/eAy0fa3iZCg/ItWPDhIhF+qz+tRthjiOEZ+7I9TV
+         XFjA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:in-reply-to:to:references:date:subject:mime-version:from
+         :arc-authentication-results;
+        bh=zjAZI1tBWxjjJkFLfsL/kf89J1II1FkKkb6uq7BG0q8=;
+        b=SOxPr/2RXrrXpFcAnTwSidA+P281Sjwl4pSiguIrNIJuBcMOtvPNTaxu3cjs1PCpBL
+         yxuX68GVP2fpbKy2ylQlVckXkjwRivaE+Zs4ndKm++cMQhtGjPVHda6UNfr65bhewpnp
+         jZLR37pf8l1J8wnF1AfrjBD0FgxUVRZZ/0YEHfHW1nTfM3+B//fSQPoRuo0WGYJbs33l
+         uWjMjO8g+Axfha3+4akkaZDDzlAJb5bXkNQTcT6N2/L4c/lGSR4tB52myWZSPi2jBvSc
+         P+K+10j2/qlTgJkg2WhGdynRJrtYiBLnqyetRFHT0+isUwr9atIGZgh1VqUUihcPuuA/
+         VH9A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=neutral (google.com: 85.13.134.171 is neither permitted nor denied by best guess record for domain of bjoern@schuette.se) smtp.mailfrom=bjoern@schuette.se
+Return-Path: <bjoern@schuette.se>
+Received: from dd12404.kasserver.com (dd12404.kasserver.com. [85.13.134.171])
+        by mx.google.com with ESMTPS id o9si236599wrg.360.2017.12.27.13.48.16
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 27 Dec 2017 13:48:17 -0800 (PST)
+Received-SPF: neutral (google.com: 85.13.134.171 is neither permitted nor denied by best guess record for domain of bjoern@schuette.se) client-ip=85.13.134.171;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 85.13.134.171 is neither permitted nor denied by best guess record for domain of bjoern@schuette.se) smtp.mailfrom=bjoern@schuette.se
+Received: from [192.168.178.34] (ip4d16c55e.dynamic.kabel-deutschland.de [77.22.197.94])
+	by dd12404.kasserver.com (Postfix) with ESMTPSA id 10F0940B92
+	for <kurt@seifried.org>; Wed, 27 Dec 2017 22:48:15 +0100 (CET)
+From: =?utf-8?B?QmrDtnJuIFNjaMO8dHRl?= <bjoern@schuette.se>
+Content-Type: multipart/signed;
+	boundary="Apple-Mail=_2BD757F0-FDA0-47E6-A8E6-A95DAA3E4497";
+	protocol="application/pkcs7-signature";
+	micalg=sha1
+Mime-Version: 1.0 (Mac OS X Mail 11.1 \(3445.4.7\))
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ bjoern@schuette.se
+Date: Wed, 27 Dec 2017 22:48:36 +0100
+References: <20171227193616.3645.49779@slab.local>
+To: kurt@seifried.org
+In-Reply-To: <20171227193616.3645.49779@slab.local>
+Message-Id: <0DCF5D0B-2386-4834-9601-21250685790E@schuette.se>
+X-Mailer: Apple Mail (2.3445.4.7)
+
+
+--Apple-Mail=_2BD757F0-FDA0-47E6-A8E6-A95DAA3E4497
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+I accept
+
+> Am 27.12.2017 um 20:36 schrieb kurt@seifried.org:
+>=20
+> This is a confirmation email sent from CVE request form at =
+https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use =
+(assuming you filled out the CVE form and want one, we can't use the =
+data until you accept the MITRE CVE Terms of Use).=20
+>=20
+> Simply quote the email and reply with "I accept" at the top if you =
+agree to the MITRE CVE Terms of Use and we will add a copy of the email =
+to the DWF MITRE CVE Terms of Use acceptance data at =
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/mas=
+ter/Terms-Of-Use
+>=20
+> The reason we use a complete copy of the email is that it provides an =
+artifact showing that the email address accepted the Terms of Use, when =
+they were accepted and so on.=20
+>=20
+> If you did not submit a CVE request to the DWF you can safely ignore =
+this message, however we may resend it at some point in the future, if =
+you don't want any future emails simply reply with "unsubscribe" or =
+"DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to =
+the block list so we don't spam you with these, please note that this =
+will prevent you from being able to accept the MITRE CVE Terms of Use =
+via the DWF automatically in future (you'll have to manually ask). But =
+again, if you have no idea what a CVE is then you can ignore this/ask to =
+be added to the block list with no problems.=20
+>=20
+> MITRE CVE Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common =
+Vulnerabilities and Exposures (CVE=C2=AE), you hereby grant to The MITRE =
+Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a =
+perpetual, worldwide, non-exclusive, no-charge, royalty-free, =
+irrevocable copyright license to reproduce, prepare derivative works of, =
+publicly display, publicly perform, sublicense, and distribute such =
+materials and derivative works. Unless required by applicable law or =
+agreed to in writing, you provide such materials on an "AS IS" BASIS, =
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, =
+including, without limitation, any warranties or conditions of TITLE, =
+NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, =
+non-exclusive, no-charge, royalty-free, irrevocable copyright license to =
+reproduce, prepare derivative works of, publicly display, publicly =
+perform, sublicense, and distribute Common Vulnerabilities and Exposures =
+(CVE=C2=AE). Any copy you make for such purposes is authorized provided =
+that you reproduce MITRE's copyright designation and this license in any =
+such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE =
+ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION =
+HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, =
+ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL =
+WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY =
+WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY =
+RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A =
+PARTICULAR PURPOSE.
+>=20
+> A copy is available at =
+https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/mas=
+ter/Terms-Of-Use.md
+>=20
+> To contact the DWF either hit reply, or email kurt@seifried.org =
+manually with your question/concerns/etc.=20
+
+
+--Apple-Mail=_2BD757F0-FDA0-47E6-A8E6-A95DAA3E4497
+Content-Disposition: attachment;
+	filename=smime.p7s
+Content-Type: application/pkcs7-signature;
+	name=smime.p7s
+Content-Transfer-Encoding: base64
+
+MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIIK4TCCBPcw
+ggPfoAMCAQICECT3St4E7d4NBz/9CZLVPhkwDQYJKoZIhvcNAQELBQAwdTELMAkGA1UEBhMCSUwx
+FjAUBgNVBAoTDVN0YXJ0Q29tIEx0ZC4xKTAnBgNVBAsTIFN0YXJ0Q29tIENlcnRpZmljYXRpb24g
+QXV0aG9yaXR5MSMwIQYDVQQDExpTdGFydENvbSBDbGFzcyAxIENsaWVudCBDQTAeFw0xNzAyMjQw
+OTA5MjBaFw0yMDA1MjQwOTA5MjBaMEAxGzAZBgNVBAMMEmJqb2VybkBzY2h1ZXR0ZS5zZTEhMB8G
+CSqGSIb3DQEJARYSYmpvZXJuQHNjaHVldHRlLnNlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+CgKCAQEA0ymU8o9qbaxMz5/hv0aKNvG/+xN4o99cUBPkfl7pIUcFpVDWFBTQ+Kk2Vbu9S8LknIdi
+1gdyKqpUqwb2Bs2XtKxAYO7dZc1BqLc/yl8x93YBqejJfRxLm5CknmlmGeeTKN1yar0X5vcV23BD
+HFGu60XrQyWq2ifXMoJhKGXaUx+6RI0QE6akdND/GYG/fg19nbxQ3T1Vhf0+ifvsNb2PcoLHk1vH
+LMWTQh4oGQVcFhCv6uHut276DLYyrtskvlOkS/6EbfJzOovIEAD3LkmmOfjB28POsMC0bE8foDFv
+oNe2znF/cMr9gVkjXzU3LGkSao0IJE+Jju3imm9w2tBH/QIDAQABo4IBtjCCAbIwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDAJBgNVHRMEAjAAMB0GA1UdDgQW
+BBTppIYkH3xpTBboamsbsg5D7/rb8DAfBgNVHSMEGDAWgBQkgWw5Yb5JD4+3G0YrySi1J0htaDBv
+BggrBgEFBQcBAQRjMGEwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLnN0YXJ0c3NsLmNvbTA5Bggr
+BgEFBQcwAoYtaHR0cDovL2FpYS5zdGFydHNzbC5jb20vY2VydHMvc2NhLmNsaWVudDEuY3J0MDgG
+A1UdHwQxMC8wLaAroCmGJ2h0dHA6Ly9jcmwuc3RhcnRzc2wuY29tL3NjYS1jbGllbnQxLmNybDAd
+BgNVHREEFjAUgRJiam9lcm5Ac2NodWV0dGUuc2UwIwYDVR0SBBwwGoYYaHR0cDovL3d3dy5zdGFy
+dHNzbC5jb20vMEcGA1UdIARAMD4wPAYLKwYBBAGBtTcBAgUwLTArBggrBgEFBQcCARYfaHR0cHM6
+Ly93d3cuc3RhcnRzc2wuY29tL3BvbGljeTANBgkqhkiG9w0BAQsFAAOCAQEAtlMj4fTaSiH6+GVQ
+XWvwanDPDaVNrD5kbsJ6Gul0DQC9HCGAsLV9RYBtmGZV+a9w/EvcJnKDsQ7xvyjR/IvtEImM7OWJ
+lxVRXYZwcZkjXc21l02utzNIGWZeNRU4TJFYxXuKdvto6ObRUMr4Tu4JAxsFG/p/GTtpr4vvA6kY
+PnlhAbPC/ufA5IzEUK6Xm53NzLJG6+wtED2lD8HfpM0wwAA+f+/TKJ7Q9591+eph7IX15lid0vnm
+o9u2VWPzwr6dQHsakYAnt1Bvy6vIL0yCjwO0ZatCbwEMYhtO60S8DD8QO7N0T5X90I5CMUP5pq8F
+9Ki08tGv5aNJTWllD80DTDCCBeIwggPKoAMCAQICEGunin0K14jWUQr5WeTntOEwDQYJKoZIhvcN
+AQELBQAwfTELMAkGA1UEBhMCSUwxFjAUBgNVBAoTDVN0YXJ0Q29tIEx0ZC4xKzApBgNVBAsTIlNl
+Y3VyZSBEaWdpdGFsIENlcnRpZmljYXRlIFNpZ25pbmcxKTAnBgNVBAMTIFN0YXJ0Q29tIENlcnRp
+ZmljYXRpb24gQXV0aG9yaXR5MB4XDTE1MTIxNjAxMDAwNVoXDTMwMTIxNjAxMDAwNVowdTELMAkG
+A1UEBhMCSUwxFjAUBgNVBAoTDVN0YXJ0Q29tIEx0ZC4xKTAnBgNVBAsTIFN0YXJ0Q29tIENlcnRp
+ZmljYXRpb24gQXV0aG9yaXR5MSMwIQYDVQQDExpTdGFydENvbSBDbGFzcyAxIENsaWVudCBDQTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL192vfDon2D9luC/dtbX64eG3XAtRmvmCSs
+u1d52DXsCR58zJQbCtB2/A5uFqNxWacpXGGtTCRk9dEDBlmixEd8QiLkUfvHpJX/xKnmVkS6Iye8
+wUbYzMsDzgnpazlPg19dnSqfhM+Cevdfa89VLnUztRr2cgmCfyO9Otrh7LJDPG+4D8ZnAqDtVB8M
+KYJL6QgKyVhhaBc4y3bGWxKyXEtx7QIZZGxPwSkzK3WIN+VKNdkiwTubW5PIdopmykwvIjLPqbJK
+7yPwFZYekKE015OsW6FV+s4DIM8UlVS8pkIsoGGJtMuWjLL4tq2hYQuuN0jhrxK1ljz50hH23gA9
+cbMCAwEAAaOCAWQwggFgMA4GA1UdDwEB/wQEAwIBBjAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYB
+BQUHAwQwEgYDVR0TAQH/BAgwBgEB/wIBADAyBgNVHR8EKzApMCegJaAjhiFodHRwOi8vY3JsLnN0
+YXJ0c3NsLmNvbS9zZnNjYS5jcmwwZgYIKwYBBQUHAQEEWjBYMCQGCCsGAQUFBzABhhhodHRwOi8v
+b2NzcC5zdGFydHNzbC5jb20wMAYIKwYBBQUHMAKGJGh0dHA6Ly9haWEuc3RhcnRzc2wuY29tL2Nl
+cnRzL2NhLmNydDAdBgNVHQ4EFgQUJIFsOWG+SQ+PtxtGK8kotSdIbWgwHwYDVR0jBBgwFoAUTgvv
+GqRAW6UXaYcwyjRoQ9BBrvIwPwYDVR0gBDgwNjA0BgRVHSAAMCwwKgYIKwYBBQUHAgEWHmh0dHA6
+Ly93d3cuc3RhcnRzc2wuY29tL3BvbGljeTANBgkqhkiG9w0BAQsFAAOCAgEAi+P3h+wBi4StDwEC
+W5zhIycjBL008HACblIf26HY0JdOruKbrWDsXUsiI0j/7Crft9S5oxvPiDtVqspBOB/y5uzSns1l
+Zwh7sG96bYBZpcGzGxpFNjDmQbcM3yl3WFIRS4WhNrsOY14V7y2IrUGsvetsD+bjyOngCIVeC/Gm
+smtbuLOzJ606tEc9uRbhjTu/b0x2Fo+/e7UkQvKzNeo7OMhijixaULyINBfCBJb+e29bLafgu6Jq
+jOUJ9eXXj20p6q/CW+uVrZiSW57+q5an2P2i7hP85jQJcy5j4HzA0rSiF3YPhKGAWUxKPMAVGgcY
+oXzWydOvZ3UDsTDTagXpRDIKQLZo02wrlxY6iMFqvlzsemVf1odhQJmi7Eh5TbxI40kDGcBOBHhw
+naOumZhLP+SWJQnjpLpSlUOj95uf1zo9oz9e0NgIJoz/tdfrBzez76xtDsK0KfUDHt1/q59BvDI7
+RX6gVr0fQoCyMczNzCTcRXYHY0tq2J0oT+bsb6sH2b4WVWAiJKnSYaWDjdA70qHX4mq9MIjO/Zsk
+mSY8wtAk24orAc0vwXgYanqNsBX5Yv4sN4Z9VyrwMdLcusP7HJgRdAGKpkR2I9U4zEsNJQJewM7S
+4Jalo1DyPrLpL2nTET8ZrSl5Utp1UeGp/2deoprGevfnxWB+vHNQiu85o6MxggNOMIIDSgIBATCB
+iTB1MQswCQYDVQQGEwJJTDEWMBQGA1UEChMNU3RhcnRDb20gTHRkLjEpMCcGA1UECxMgU3RhcnRD
+b20gQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkxIzAhBgNVBAMTGlN0YXJ0Q29tIENsYXNzIDEgQ2xp
+ZW50IENBAhAk90reBO3eDQc//QmS1T4ZMAkGBSsOAwIaBQCgggGZMBgGCSqGSIb3DQEJAzELBgkq
+hkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTE3MTIyNzIxNDgzN1owIwYJKoZIhvcNAQkEMRYEFHNM
+zzlN8e2+MX9FgDr7JU7/L/6rMIGaBgkrBgEEAYI3EAQxgYwwgYkwdTELMAkGA1UEBhMCSUwxFjAU
+BgNVBAoTDVN0YXJ0Q29tIEx0ZC4xKTAnBgNVBAsTIFN0YXJ0Q29tIENlcnRpZmljYXRpb24gQXV0
+aG9yaXR5MSMwIQYDVQQDExpTdGFydENvbSBDbGFzcyAxIENsaWVudCBDQQIQJPdK3gTt3g0HP/0J
+ktU+GTCBnAYLKoZIhvcNAQkQAgsxgYyggYkwdTELMAkGA1UEBhMCSUwxFjAUBgNVBAoTDVN0YXJ0
+Q29tIEx0ZC4xKTAnBgNVBAsTIFN0YXJ0Q29tIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MSMwIQYD
+VQQDExpTdGFydENvbSBDbGFzcyAxIENsaWVudCBDQQIQJPdK3gTt3g0HP/0JktU+GTANBgkqhkiG
+9w0BAQEFAASCAQAhPK3GQIgPv1AE88sUAATCpH3x3FHWPJoV/Wuxq2lKUUrlCxKW+r4YRGQOMvWW
+9/t0hlwqWKLMNykzkB6+pHcdwEsUV8pn9VmJaqZfDEERnToGlh1eMrIVTWdjJEfQ6aYDT5guW92S
+B2tWm2GPcVTJHTdg9L2k2pTa+NAwvgivK3PRP2QemQy53tuKewTGn2ARPaCW30F3cIlVw44NXjBM
+eZ2jLdCLQWZ8p4iSN3VRL8qkUHJjxeknscQn3/BiDh0vZ/GGd2F9OMkFBM3WHTi5USPJTOmg+uc9
+Aztc5FmdctTCwhq4cNZ+tFyuu5A8Nq0zc0aKrC+t+C2y4Jte2V7vAAAAAAAA
+--Apple-Mail=_2BD757F0-FDA0-47E6-A8E6-A95DAA3E4497--

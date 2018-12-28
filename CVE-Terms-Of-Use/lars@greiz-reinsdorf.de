@@ -1,0 +1,266 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a4f:b47:0:0:0:0:0 with SMTP id 68-v6csp11276ivl;
+        Mon, 4 Jun 2018 12:09:51 -0700 (PDT)
+X-Received: by 2002:a1c:d11:: with SMTP id 17-v6mr9727329wmn.81.1528139391801;
+        Mon, 04 Jun 2018 12:09:51 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1528139391; cv=none;
+        d=google.com; s=arc-20160816;
+        b=FQQYDnzcU3hXktQLiXJuXoZolxJhFy5b+0b7w/iHQvr/xHOqLwhAp6i7aWOvTg2O8w
+         CQZUdlapcQveG3PodCMlqiQsLtYF/5D5zQhO31Mmksf9ZB0LqwwWEdI+XODH6Nnl38F3
+         kZk1iNRV5CHEYACvy53Krc7woVsj0hB5B/+tDNItVzssvoNQLHYG0rrUMdUHq5IKQc+u
+         bIPMAOw2pSHO5yBbv3xzDx9QTbbECrCJq0KFTtUqardDxWTxme0RX2TMVZrc0zYxMDC4
+         ZkjE1JBVtGXRCZqZpOUQQfbuyQf0luHCLYMji4qupk/L8HtD3a5fBABLO/oFeuJ+mPRF
+         Tzgg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:from:to:subject:autocrypt:content-transfer-encoding
+         :mime-version:references:in-reply-to:user-agent:date:sender
+         :dkim-signature:arc-authentication-results;
+        bh=W2+QuI4bVblFMo4yR37/imTonfJTqy155S61JIoFpgg=;
+        b=m6rMk7/ziPNno0l2Px5X5Dhur68j6bCw19FzQ8FyN9q4cQZe5U2dvUTK2MvxLRlH4C
+         Nwi0VqLzM4iIqOd9uFE1gCzpDi3sPxAkBMFQYDcW4poJbl2G3KxR9RPioLZ0OvDQPoTH
+         5MAda/HnZkftk8QwQvNEr9geSTDxLcpk5AE6tVSsqNDZ9TRejRG3BIqdpO/jJ2Nq0hNf
+         dwxMS/Abxm2Aj6hKvv5nw8Ehvdu/VQ7RM9ja4ksWDLkM/frUK1GBzyWAuPLTrsDkjA9t
+         lDsB9U4Ktlifr7tdCpENbQrEaW4HU/ca6ejqD8ubvscor5PNylwNYSV8jxo3DvPnzK/z
+         Ijmw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=AZsHSswW;
+       spf=pass (google.com: domain of larskanis@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=larskanis@gmail.com
+Return-Path: <larskanis@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id p18-v6sor3887594wrq.44.2018.06.04.12.09.51
+        for <kurt@seifried.org>
+        (Google Transport Security);
+        Mon, 04 Jun 2018 12:09:51 -0700 (PDT)
+Received-SPF: pass (google.com: domain of larskanis@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=AZsHSswW;
+       spf=pass (google.com: domain of larskanis@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=larskanis@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=sender:date:user-agent:in-reply-to:references:mime-version
+         :content-transfer-encoding:autocrypt:subject:to:from:message-id;
+        bh=W2+QuI4bVblFMo4yR37/imTonfJTqy155S61JIoFpgg=;
+        b=AZsHSswWwOXkv3y9ZPNjpwfgH31FwB4BCif6We3kf6cel9tPuhjEZJxxR6G5Zoy/Co
+         1sOQcq9f5zxybkQz1SomQCTtPEqMgKbGDdVVZdea2gUx0a9y19NMqn5CYbA25zpZNdb2
+         3sQcC89vXkEOpQbeIpZcoLn6qBp6LFLskblhrcotqPR+/cOXV9atl3BU+WljRR9hUoY8
+         v9YostzYwwPhccKWzYrxUln8eLdoCsnDMsoILlO4xspwieeDc63v2IS40BD4c2TpEVuv
+         Z69upCnT8emQ/4Nd7qQ+tyarc8pXMAhewD2Xjr9HEDndgMkujhmA7w2IKf7h4f3k9g5i
+         V2+g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:sender:date:user-agent:in-reply-to:references
+         :mime-version:content-transfer-encoding:autocrypt:subject:to:from
+         :message-id;
+        bh=W2+QuI4bVblFMo4yR37/imTonfJTqy155S61JIoFpgg=;
+        b=aSdcxGDB6Zr7vkwSevvouSMlx9zyRCavYwR1QSW+8bICIRR98h4PuCEJLplJRzGx2x
+         xu9Uzrg070pQgPqpsdgd7CLVs4QvlZ6Kyl2gqeT0FRO+/nQr/joFUgCL1gfLtoKqvnG3
+         XJsyRz8lJ6iWGgWdcmThB10LBtyJ1P5nhS054uKGHV+iWklF5c7BUKvd6+udJ8CUp5wT
+         53rEnwUniStUHeDW2RIn/iDB8om3zlKbaU+ZDBP+nTz+J0v41hyzTcEnJfelPiJ1AXFm
+         cVIv0uM1V4x2yicepycT90GKUcFLveJf9c5WY020USvzS6uUL4xHl0Acx50SvpasF54i
+         ZyEw==
+X-Gm-Message-State: ALKqPwcQPgNUlTjhNfvugrx0RXODgHAFGySjzrf46mIZ4mpY37hENV/S
+	dUEerTW0SBxg30b099zgcrfhKA==
+X-Google-Smtp-Source: ADUXVKJci6JeQNkBDk1IGF8I6o0AQqiSnOASTbr894d7PxYlLy69uQfHaBXwtoT4S6WKe19xRpJxUw==
+X-Received: by 2002:adf:e542:: with SMTP id z2-v6mr17694766wrm.111.1528139391107;
+        Mon, 04 Jun 2018 12:09:51 -0700 (PDT)
+Return-Path: <larskanis@gmail.com>
+Received: from HandyLars.fritz.box (dsl-178-19-228-180.net.encoline.de. [178.19.228.180])
+        by smtp.gmail.com with ESMTPSA id n7-v6sm9736369wrr.39.2018.06.04.12.09.49
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 04 Jun 2018 12:09:50 -0700 (PDT)
+Sender: Lars Kanis <larskanis@gmail.com>
+Date: Mon, 04 Jun 2018 21:09:43 +0200
+User-Agent: K-9 Mail for Android
+In-Reply-To: <20180604190430.3808.4162@shiny-2.local>
+References: <20180604190430.3808.4162@shiny-2.local>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="----RCCQWOR4RZM9XXG3JR14F6M0WU7OMW"
+Content-Transfer-Encoding: 7bit
+Autocrypt: addr=lars@greiz-reinsdorf.de; keydata=mQGNBFrzVfABDADpT2a8KyYxT21
+ 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
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for lars@greiz-reinsdorf.de
+To: kurt@seifried.org
+From: Lars Kanis <lars@greiz-reinsdorf.de>
+Message-ID: <BC7D58F0-A49A-48BE-A13F-DECD3FBC490E@greiz-reinsdorf.de>
+
+------RCCQWOR4RZM9XXG3JR14F6M0WU7OMW
+Content-Type: text/plain;
+ charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+On June 4, 2018 9:04:30 PM GMT+02:00, kurt@seifried=2Eorg wrote:
+>This is a confirmation email sent from CVE request form at
+>https://iwantacve=2Eorg/ asking you to accept the MITRE CVE Terms of Use
+>(assuming you filled out the CVE form and want one, we can't use the
+>data until you accept the MITRE CVE Terms of Use)=2E=20
+>
+>Simply quote the email and reply with "I accept" at the top if you
+>agree to the MITRE CVE Terms of Use and we will add a copy of the email
+>to the DWF MITRE CVE Terms of Use acceptance data at
+>https://github=2Ecom/distributedweaknessfiling/DWF-Legal-Acceptance/tree/=
+master/Terms-Of-Use
+>
+>The reason we use a complete copy of the email is that it provides an
+>artifact showing that the email address accepted the Terms of Use, when
+>they were accepted and so on=2E=20
+>
+>If you did not submit a CVE request to the DWF you can safely ignore
+>this message, however we may resend it at some point in the future, if
+>you don't want any future emails simply reply with "unsubscribe" or
+>"DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address
+>to the block list so we don't spam you with these, please note that
+>this will prevent you from being able to accept the MITRE CVE Terms of
+>Use via the DWF automatically in future (you'll have to manually ask)=2E
+>But again, if you have no idea what a CVE is then you can ignore
+>this/ask to be added to the block list with no problems=2E=20
+>
+>MITRE CVE Terms of Use
+>
+>LICENSE
+>
+>Submissions: For all materials you submit to the Common Vulnerabilities
+>and Exposures (CVE=EF=BF=BD=EF=BF=BD), you hereby grant to The MITRE Corp=
+oration
+>(MITRE) and all CVE Numbering Authorities (CNAs) a perpetual,
+>worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+>copyright license to reproduce, prepare derivative works of, publicly
+>display, publicly perform, sublicense, and distribute such materials
+>and derivative works=2E Unless required by applicable law or agreed to in
+>writing, you provide such materials on an "AS IS" BASIS, WITHOUT
+>WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied,
+>including, without limitation, any warranties or conditions of TITLE,
+>NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE=2E
+>
+>CVE Usage: MITRE hereby grants you a perpetual, worldwide,
+>non-exclusive, no-charge, royalty-free, irrevocable copyright license
+>to reproduce, prepare derivative works of, publicly display, publicly
+>perform, sublicense, and distribute Common Vulnerabilities and
+>Exposures (CVE=EF=BF=BD=EF=BF=BD)=2E Any copy you make for such purposes =
+is authorized
+>provided that you reproduce MITRE's copyright designation and this
+>license in any such copy=2E
+>
+>DISCLAIMERS
+>
+>ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE
+>ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION
+>HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION,
+>ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL
+>WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY
+>WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY
+>RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A
+>PARTICULAR PURPOSE=2E
+>
+>A copy is available at
+>https://github=2Ecom/distributedweaknessfiling/DWF-Legal-Acceptance/blob/=
+master/Terms-Of-Use=2Emd
+>
+>To contact the DWF either hit reply, or email kurt@seifried=2Eorg
+>manually with your question/concerns/etc=2E=20
+
+--=20
+Kind Regards,
+Lars
+------RCCQWOR4RZM9XXG3JR14F6M0WU7OMW
+Content-Type: text/html;
+ charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body>I accept<br><br><div class=3D"gmail_quote">On June=
+ 4, 2018 9:04:30 PM GMT+02:00, kurt@seifried=2Eorg wrote:<blockquote class=
+=3D"gmail_quote" style=3D"margin: 0pt 0pt 0pt 0=2E8ex; border-left: 1px sol=
+id rgb(204, 204, 204); padding-left: 1ex;">
+<pre class=3D"k9mail">This is a confirmation email sent from CVE request f=
+orm at <a href=3D"https://iwantacve=2Eorg/">https://iwantacve=2Eorg/</a> as=
+king you to accept the MITRE CVE Terms of Use (assuming you filled out the =
+CVE form and want one, we can't use the data until you accept the MITRE CVE=
+ Terms of Use)=2E <br><br>Simply quote the email and reply with "I accept" =
+at the top if you agree to the MITRE CVE Terms of Use and we will add a cop=
+y of the email to the DWF MITRE CVE Terms of Use acceptance data at <a href=
+=3D"https://github=2Ecom/distributedweaknessfiling/DWF-Legal-Acceptance/tre=
+e/master/Terms-Of-Use">https://github=2Ecom/distributedweaknessfiling/DWF-L=
+egal-Acceptance/tree/master/Terms-Of-Use</a><br><br>The reason we use a com=
+plete copy of the email is that it provides an artifact showing that the em=
+ail address accepted the Terms of Use, when they were accepted and so on=2E=
+ <br><br>If you did not submit a CVE request to the DWF you can safely igno=
+re this message, however we may resend it at some point in the future, if y=
+ou don't want any future emails simply reply with "unsubscribe" or "DON'T S=
+END ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block =
+list so we don't spam you with these, please note that this will prevent yo=
+u from being able to accept the MITRE CVE Terms of Use via the DWF automati=
+cally in future (you'll have to manually ask)=2E But again, if you have no =
+idea what a CVE is then you can ignore this/ask to be added to the block li=
+st with no problems=2E <br><br>MITRE CVE Terms of Use<br><br>LICENSE<br><br=
+>Submissions: For all materials you submit to the Common Vulnerabilities an=
+d Exposures (CVE=EF=BF=BD=EF=BF=BD), you hereby grant to The MITRE Corporat=
+ion (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide=
+, non-exclusive, no-charge, royalty-free, irrevocable copyright license to =
+reproduce, prepare derivative works of, publicly display, publicly perform,=
+ sublicense, and distribute such materials and derivative works=2E Unless r=
+equired by applicable law or agreed to in writing, you provide such materia=
+ls on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, eithe=
+r express or implied, including, without limitation, any warranties or cond=
+itions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTIC=
+ULAR PURPOSE=2E<br><br>CVE Usage: MITRE hereby grants you a perpetual, worl=
+dwide, non-exclusive, no-charge, royalty-free, irrevocable copyright licens=
+e to reproduce, prepare derivative works of, publicly display, publicly per=
+form, sublicense, and distribute Common Vulnerabilities and Exposures (CVE=
+=EF=BF=BD=EF=BF=BD)=2E Any copy you make for such purposes is authorized pr=
+ovided that you reproduce MITRE's copyright designation and this license in=
+ any such copy=2E<br><br>DISCLAIMERS<br><br>ALL DOCUMENTS AND THE INFORMATI=
+ON CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND=
+ THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF=
+ ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND =
+EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT L=
+IMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INF=
+RINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FO=
+R A PARTICULAR PURPOSE=2E<br><br>A copy is available at <a href=3D"https://=
+github=2Ecom/distributedweaknessfiling/DWF-Legal-Acceptance/blob/master/Ter=
+ms-Of-Use=2Emd">https://github=2Ecom/distributedweaknessfiling/DWF-Legal-Ac=
+ceptance/blob/master/Terms-Of-Use=2Emd</a><br><br>To contact the DWF either=
+ hit reply, or email kurt@seifried=2Eorg manually with your question/concer=
+ns/etc=2E <br><br></pre></blockquote></div><br>
+-- <br>
+Kind Regards,<br>
+Lars</body></html>
+------RCCQWOR4RZM9XXG3JR14F6M0WU7OMW--

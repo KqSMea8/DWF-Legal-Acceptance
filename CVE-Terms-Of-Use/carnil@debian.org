@@ -1,0 +1,147 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.31.230.197 with SMTP id d188csp220955vkh;
+        Thu, 6 Oct 2016 21:35:02 -0700 (PDT)
+X-Received: by 10.28.212.129 with SMTP id l123mr12315797wmg.22.1475814902193;
+        Thu, 06 Oct 2016 21:35:02 -0700 (PDT)
+Return-Path: <salvatore.bonaccorso@gmail.com>
+Received: from mail-wm0-x22c.google.com (mail-wm0-x22c.google.com. [2a00:1450:400c:c09::22c])
+        by mx.google.com with ESMTPS id r125si1313166wmr.17.2016.10.06.21.35.02
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 06 Oct 2016 21:35:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of salvatore.bonaccorso@gmail.com designates 2a00:1450:400c:c09::22c as permitted sender) client-ip=2a00:1450:400c:c09::22c;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com;
+       spf=pass (google.com: domain of salvatore.bonaccorso@gmail.com designates 2a00:1450:400c:c09::22c as permitted sender) smtp.mailfrom=salvatore.bonaccorso@gmail.com
+Received: by mail-wm0-x22c.google.com with SMTP id i130so11588247wmg.1
+        for <kurt@seifried.org>; Thu, 06 Oct 2016 21:35:02 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=sender:date:from:to:subject:message-id:references:mime-version
+         :content-disposition:in-reply-to:user-agent;
+        bh=SZd/yj95LeAcbFgRNfwFewyLj0aIjWft7Xwl9osxeRg=;
+        b=RMHTkdh/lLNgxr5RmBoaYn9norlZROZVeo6SkyeM8oyAZh/pkOGdKZFG07aO8yKkyF
+         hNxGjLDdCZBM8zrPOa+8itlchFQPyk8MNrLz1ELys3omn9Kuc6uXFXTcfWH/JSH+3Fer
+         vjv7Yx9W7ZAxWtXMk0DqXdOvjnMdmtp6ojsl4R0eAlrX37IiDewxLEe9UosfpRdUi2fU
+         6slxqGdZwJZP7K7+OTUlsTlpQ4Vpw6cOahekgyNMKEph2qCPHfvOZnMRMz9eTv1OiROI
+         BSVmTxcS2aoodX6Shg2RxwqwJhWa89i/PJ8lWZutGHv5+izX5TMTaijOW2hGRt+BUXhm
+         BgTA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:sender:date:from:to:subject:message-id
+         :references:mime-version:content-disposition:in-reply-to:user-agent;
+        bh=SZd/yj95LeAcbFgRNfwFewyLj0aIjWft7Xwl9osxeRg=;
+        b=GbkMcr6hTab0NEwd5DLcijo61uN7JfygPq6S0FZ+Ir8Ht9E8PEh0wH15i0+J41gsAi
+         xe2oH59EKQZQ4M7EBJrU/rrWuflsFb0PKgVuXh5bJtQKaWmrjB4NVOb0JshDmWK/Fv8S
+         JiGDHp7B6dGR2Vd0ht1sKXygookIZ4Yq6exDDVdwwkstI5HoAVyUZ1qgMwI/SwYEKxZl
+         2GfN9GwsSExTMQEUGFXBnPRPxYfTKDFCe0zWyv3UmEi/EvP4BUg2CCRVJ5LboG27afqV
+         zopocMhWztghwMkKEaHaOjVmmXJfJuuRy8pXcm9+rXvFuIqdvXvLxksoSDD9jIl12hzs
+         x8yg==
+X-Gm-Message-State: AA6/9RnWfRD0kKKR1q/8Jd0sRxCBaBpidHynAFKX7yMSiu/K9gHIJHRC8Rq8DbgN47uVDg==
+X-Received: by 10.194.201.227 with SMTP id kd3mr10824236wjc.74.1475814901638;
+        Thu, 06 Oct 2016 21:35:01 -0700 (PDT)
+Return-Path: <salvatore.bonaccorso@gmail.com>
+Received: from eldamar ([2001:67c:10ec:52c8:8000::1f16])
+        by smtp.gmail.com with ESMTPSA id a69sm48951wmi.12.2016.10.06.21.35.00
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 06 Oct 2016 21:35:00 -0700 (PDT)
+Sender: Salvatore Bonaccorso <salvatore.bonaccorso@gmail.com>
+Date: Fri, 7 Oct 2016 06:35:00 +0200
+From: Salvatore Bonaccorso <carnil@debian.org>
+To: Kurt Seifried <kurt@seifried.org>
+Subject: Re: CVE - Acceptance of MITRE Terms of Use for CVE Entry
+Message-ID: <20161007043500.o6inqdjhieafqtlb@eldamar.local>
+References: <CABqVa389M7sL+Eps-5arKhfwbJ=0kjhAFxzW50eQBGP9a_HsLw@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha512;
+	protocol="application/pgp-signature"; boundary="wggvvlj5eubyip2r"
+Content-Disposition: inline
+In-Reply-To: <CABqVa389M7sL+Eps-5arKhfwbJ=0kjhAFxzW50eQBGP9a_HsLw@mail.gmail.com>
+User-Agent: NeoMutt/20160916 (1.7.0)
+
+
+--wggvvlj5eubyip2r
+Content-Type: text/plain; charset=iso-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+Hi Kurt,
+
+On Thu, Oct 06, 2016 at 10:48:46AM -0600, Kurt Seifried wrote:
+> Hi, I need to confirm that you have accepted the MITRE Terms of Use for C=
+VE,
+> available at:
+>=20
+> https://github.com/distributedweaknessfiling/DWF-Database/
+> blob/master/TermsOfUse.md
+>=20
+> and quoted below, please reply with "I accept" and I'll be able to process
+> your CVE request. Thanks!
+>=20
+> Terms of Use
+>=20
+> LICENSE
+>=20
+> Submissions: For all materials you submit to the Common Vulnerabilities a=
+nd
+> Exposures (CVE=AE), you hereby grant to The MITRE Corporation (MITRE) and=
+ all
+> CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive,
+> no-charge, royalty-free, irrevocable copyright license to reproduce,
+> prepare derivative works of, publicly display, publicly perform,
+> sublicense, and distribute such materials and derivative works. Unless
+> required by applicable law or agreed to in writing, you provide such
+> materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+> KIND, either express or implied, including, without limitation, any
+> warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or
+> FITNESS FOR A PARTICULAR PURPOSE.
+>=20
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,
+> no-charge, royalty-free, irrevocable copyright license to reproduce,
+> prepare derivative works of, publicly display, publicly perform,
+> sublicense, and distribute Common Vulnerabilities and Exposures (CVE=AE).=
+ Any
+> copy you make for such purposes is authorized provided that you reproduce
+> MITRE's copyright designation and this license in any such copy.
+>=20
+> DISCLAIMERS
+>=20
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE
+> PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE
+> REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD =
+OF
+> TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRE=
+SS
+> OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE
+> INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES
+> OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+I accept.
+
+Regards,
+Salvatore
+
+--wggvvlj5eubyip2r
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQJ8BAABCgBmBQJX9yXuXxSAAAAAAC4AKGlzc3Vlci1mcHJAbm90YXRpb25zLm9w
+ZW5wZ3AuZmlmdGhob3JzZW1hbi5uZXQ0NjQ0NDA5ODA4QzE3MUUwNTUzMURERUUw
+NTRDQjhGMzEzNDNDRjQ0AAoJEAVMuPMTQ89E+YUP/3D1wG7GTZMBSPYqkzj8gsm5
+B/3YBGReRPLs5hlDiPYH12Rz0OkDmy/7fzMxIGdLcDSccnpZ7azBgKYr4w5D9HU4
+hCF/pCeyKD8kn98dwj1PiSLy3WZu0ay/nj7C1ZQFZv/y6G00a2uso9b0LmfBETVs
+PHldJkSSEytFXF1FQ02jaNTCX2x9+JObGs9uVIVTDKuVoAxx9UDW38jB52z8wzaS
+43Zqu+rm1ANORZTLWefa8cnABDeEp6F1PJGBncxk+BvwTFv+P/1kamaa5BU7b4RC
+o097Q8q+W3S/3nL7ONq9ZuaDpuN89QG4ATjcTAsr8lOKXA0oviNqXr6qbWVlE0EX
+XxHkE8HbY/VIjrtxaiOhPYG8jjFdstwpEsTtQGcgK+JKzyTRd0tC0093N1uFvjan
+KjoQPpOHWPzuwl05v5k4sC79EQggHfq02VNi7+TGGhjMcaQ+CtDQ9eOj5syEoSCn
+IU91haPqeACWIizvRoUDX0ZsgbjBeyOZXWPfH97ldjlWU+xDHBX5yXIuf3INwXfK
+T2qLV6NOScI1Fbux7kpbD6vnBEpovdmTLHUoEZsitB9lPEPqWfS11AVWIAtUrziy
+1OAp/56OhfqES1vOt8JcOuu84Ov7Sw8nPdWmcX7+la1wjHALtvNxKt/qpL6h4hf8
+CrMaiug/6AH3nhIbnMdW
+=LnBr
+-----END PGP SIGNATURE-----
+
+--wggvvlj5eubyip2r--

@@ -1,0 +1,99 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.157.8.51 with SMTP id 48csp734672oty;
+        Sun, 20 Aug 2017 03:06:24 -0700 (PDT)
+X-Received: by 10.28.193.10 with SMTP id r10mr5012666wmf.157.1503223584032;
+        Sun, 20 Aug 2017 03:06:24 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1503223584; cv=none;
+        d=google.com; s=arc-20160816;
+        b=g9RvJ96aZi17hMwCGDH+LR7e/4noZ8OcbRQHLH+KkQfZ7NehQWHjUEb99pItFNebYh
+         mEjjTC2Yyy1xHudwFRJkEMtH6ZsaN4qSXCgcY0JYQoN9LrsxJ1L66usoUbaTwxPr0Tz3
+         RJfGFT49SNhPCPXHu1ViDTdnHMRxvzLfO4NE+vLzv8LGwyMbXwn35fNgY3TACJ90XPPD
+         hE9OlUNv4r4yxgF9J0dEaw96vg0NcyHxliD+7AuS4ofefu3/3TgYsVJMcjsVMy2MBKyv
+         JFT5wapCYnAsH3v+tiKgnh0eQ/yVcVpkNe0fO0oesM8ayIvb1MVjse3QIWaNRPRQ88xB
+         1wSg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-language:content-transfer-encoding:in-reply-to:mime-version
+         :user-agent:date:message-id:from:references:to:subject
+         :arc-authentication-results;
+        bh=bM3r04NxkDq6LoVeOiEFr7iPvLmSK+KplS50vbVOVGM=;
+        b=HgXRDK8QZJ5FpdQOqMii2GIpsImb/8H2NHO0G468ideO5O4QUF/Kva/EjzeCSfk7jR
+         EWB+osafIoBVG3p0sx3/jLDOD25zrKPgiWsvo2cvsKnsbmOsijGkj9fNXbCAB2vggK2S
+         lH7xRr0ssOUFRQNBNYHb5kBBQCv/s6dlJwy2fqfFQ2anjxu+p9FF6U7VW2ewGR/o+RIe
+         +E1m6xLRrlS08KrIebWQeRMBIs1m23hnLvhBnzVXDojI2fru1xlL5LjTeSEoGwOitcbq
+         w6VUTBSBx+andbcqLrkwcF9uv4MyX+4ovtZZtaytYu5qdgq+M+10/6XX11XBJ+CdMQJe
+         vx0A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of sebastian.feldmann.hb@web.de designates 212.227.17.11 as permitted sender) smtp.mailfrom=sebastian.feldmann.hb@web.de
+Return-Path: <sebastian.feldmann.hb@web.de>
+Received: from mout.web.de (mout.web.de. [212.227.17.11])
+        by mx.google.com with ESMTPS id y65si5301434wrb.241.2017.08.20.03.06.23
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 20 Aug 2017 03:06:23 -0700 (PDT)
+Received-SPF: pass (google.com: domain of sebastian.feldmann.hb@web.de designates 212.227.17.11 as permitted sender) client-ip=212.227.17.11;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of sebastian.feldmann.hb@web.de designates 212.227.17.11 as permitted sender) smtp.mailfrom=sebastian.feldmann.hb@web.de
+Received: from [192.168.1.102] ([84.50.21.196]) by smtp.web.de (mrweb101
+ [213.165.67.124]) with ESMTPSA (Nemesis) id 0Mf0cv-1du0741Yef-00Oaja for
+ <kurt@seifried.org>; Sun, 20 Aug 2017 12:06:23 +0200
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ sebastian.feldmann.hb@web.de
+To: kurt@seifried.org
+References: <20170818193159.55281.42648@shiny-2.local>
+From: Sebastian Feldmann <sebastian.feldmann.hb@web.de>
+Message-ID: <6fc083f6-d32d-0457-e14d-b4eb8f189e64@web.de>
+Date: Sun, 20 Aug 2017 12:06:40 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101
+ Thunderbird/52.2.1
+MIME-Version: 1.0
+In-Reply-To: <20170818193159.55281.42648@shiny-2.local>
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+Content-Language: en-US
+X-Provags-ID: V03:K0:xypG33r32Whb9dr05pBRdDnMAFD9PnPqJppmP0FrGnmVp+8ZutD
+ 2fCG+Hpc2BckStrec62zgvO5doME6TSS8ybUMpxwn86D1RumpVSW85d8aZTuzAf7XuaPMcg
+ ryNojIoBjZZba3cj/AVePWqNrnZr6E8lRJAHofZKRxxHNF9TQtWB6WV+mmiUHGsJ1tThbW1
+ gTg9y4/eag9Hiy56+c4eQ==
+X-UI-Out-Filterresults: notjunk:1;V01:K0:UPOVr+NR9LY=:mBwCiFh19zIFXOjThhaIEw
+ 5eYbp7GJZlyGM6qnnrnA7l3LneuFL8p5fYoQOCgIHlMwQzL0EWoDXkKnR71sq2IPKeQR4ZTke
+ tgt4Rueu9tocVDh0kpJxH2hC75qSFy3wRg9CvVSkS1HgNM+l4gvW0i19WJQ2EbT+xfXjjoIAZ
+ k9A8gmuhHgAS/INwdbORrxAju7niKFIT5mRiVnxBlI0zxreXDUQyOF+JrsAEx8N53H+4LPgl8
+ ryy6W5c1Xw9xs2ViHROHmKLELM+I3Wkt8xfixJJdK75TVkgLkZ2fvAJCVkzHMWEWcv8dfGLHp
+ WWsFfDaJQ3sJ8CTFrKh8s2B1pOTL2Eh7N7MGR+cp4dAvNaUXDoROt/yAd6cOhaQlfBi2BPQXQ
+ FpW6+ZcHhaFdd+KKKon4TZefXI9M9cavExhO50nRxxd+0Qxx2hjf7uTPlafMvpOc8LcpKw0EE
+ SPifELluvxDKDnQW9/RS7hL0zF79vEuU3GkcLkzVZ7hG7hoazRvVj4haB4jZeIGgtLz5DZkgo
+ QziVYOTUbvYzbm3bP2wBZdB0j1g1nZt044qPs1ZujMb9ZKzxQGx2V9yZ9aDwXcknMXCbVlqrt
+ Q5zaIQabzvmSICDvRYsUiaGGrOcODPKFBCmy29bErYhZlgAhnc1cHo5DNnaFKy5IIHQ4TRtli
+ RguEyZuVwah5Dg3e2+LwZCdn4cJQrcczcZZhF95kXXfhuutf57yOTwDwsVN69Sxl6nU/rAErW
+ pFol2CMvh3zCG1LsaFlPpx9l/rfCmAi+e5gXDjO42naHoLWpxn6e6Yvj7w9y5f00m7ZQdw+V5
+ ps8U6wnSCgdsbu+IqC1B4W9hyogBvm/Tq3QtT0v/xQdaGvdlUU=
+
+I accept
+
+
+On 08/18/2017 09:31 PM, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled out the CVE form and want one, we can't use the data until you accept the MITRE CVE Terms of Use). 
+>
+> Simply quote the email and reply with "I accept" at the top if you agree to the MITRE CVE Terms of Use and we will add a copy of the email to the DWF MITRE CVE Terms of Use acceptance data at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>
+> The reason we use a complete copy of the email is that it provides an artifact showing that the email address accepted the Terms of Use, when they were accepted and so on. 
+>
+> If you did not submit a CVE request to the DWF you can safely ignore this message, however we may resend it at some point in the future, if you don't want any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so we don't spam you with these, please note that this will prevent you from being able to accept the MITRE CVE Terms of Use via the DWF automatically in future (you'll have to manually ask). But again, if you have no idea what a CVE is then you can ignore this/ask to be added to the block list with no problems. 
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities and Exposures (CVEÂ®), you hereby grant to The MITRE Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute such materials and derivative works. Unless required by applicable law or agreed to in writing, you provide such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute Common Vulnerabilities and Exposures (CVEÂ®). Any copy you make for such purposes is authorized provided that you reproduce MITRE's copyright designation and this license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manually with your question/concerns/etc. 
+>
+

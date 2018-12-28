@@ -1,0 +1,70 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a4f:b47:0:0:0:0:0 with SMTP id 68-v6csp1447897ivl;
+        Tue, 5 Jun 2018 13:28:38 -0700 (PDT)
+X-Google-Smtp-Source: ADUXVKIzYiHSwzJ6VlcuF1L5Pj82b0xkN2BX6H9bqlYOPYEFCTIstwp4kd5ZihDY/EYqDY36gt5+
+X-Received: by 2002:adf:a60c:: with SMTP id k12-v6mr94777wrc.200.1528230518537;
+        Tue, 05 Jun 2018 13:28:38 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1528230518; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ViZKJUgfiQqmSYtvLn/udIT/TaGbppG3ZKKCAQ5MTxN0I2uPtBTFHm1yFTJ09rmuwB
+         pxSMA/zvN/eDOeC3X7/G7717CYNXJMWA//NA87H10vPZ2YvPEtlReT/oc9NjDwhd4Erz
+         Ik3J36WrETem7SiVHNV4khhP3vCMdJ1gptVao9SRQb1De1QZwt4N994midgQRdu0hPM2
+         Scdajwt058nm7pLH7Kl3YVNdyBxNBW+qRnmpVAq1w+3nfXh2g+pK1MLUtoN/7zz5p+1S
+         fvVj8MUPksBbtFw6+COCFEFfH1748IL4YGQx7tvwCsm3pcDKKKuijyiMEeJIkcBlUr7c
+         J9dg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:importance:to:from
+         :in-reply-to:message-id:subject:date:dkim-signature
+         :arc-authentication-results;
+        bh=CkRnGi4XR2hWludE5675E1yNE9VHE5IGMMQPoTg/6qA=;
+        b=kVyGcFRpz2xfVgptgPeSSwHOyJ9VV9GFnPL6T+ZYFzKdTEmYlQ712fcllxmwnUfryT
+         293iVcEAiJoxEg98FLcrJa/TxhcnaCj5GhyOqKJSUi8/+d8iOmZC9Oh+g6GGgD9f2JyI
+         8ANK+OhdD2O3UdyEBDIzMwk7oXvRIhtK2kIEO93pU1fjBMGupiAq27SmdsyDzght/xU+
+         RTQfxEywRaoPtv6BWO1zoLejZZI0mQTjPWZNUjLd1dC+mHxydliaZCJczHk7yxp3yM18
+         Sn1v0e/D2cR2uD/NC0i6ZJKNj2qrwSoFxMAWVOZ/ddXWeMs7VTDFW9Fu2hLea+nc7OZ6
+         Q6Cg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@uni-bonn.de header.s=mail header.b=lfSXnv0Y;
+       spf=pass (google.com: domain of fhenneke@uni-bonn.de designates 131.220.15.112 as permitted sender) smtp.mailfrom=fhenneke@uni-bonn.de;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=uni-bonn.de
+Return-Path: <fhenneke@uni-bonn.de>
+Received: from mail.uni-bonn.de (mail.uni-bonn.de. [131.220.15.112])
+        by mx.google.com with ESMTPS id b81-v6si1814461wmh.17.2018.06.05.13.28.38
+        for <kurt@seifried.org>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Tue, 05 Jun 2018 13:28:38 -0700 (PDT)
+Received-SPF: pass (google.com: domain of fhenneke@uni-bonn.de designates 131.220.15.112 as permitted sender) client-ip=131.220.15.112;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@uni-bonn.de header.s=mail header.b=lfSXnv0Y;
+       spf=pass (google.com: domain of fhenneke@uni-bonn.de designates 131.220.15.112 as permitted sender) smtp.mailfrom=fhenneke@uni-bonn.de;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=uni-bonn.de
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=uni-bonn.de; s=mail;
+	bh=CkRnGi4XR2hWludE5675E1yNE9VHE5IGMMQPoTg/6qA=;
+	h=Content-Transfer-Encoding:Content-Type:MIME-Version:To:From:In-Reply-To:
+	Message-ID:Subject:Date; b=lfSXnv0YZ1cbKY29eLSW3EsHTbp3HY9Plf2PJ6RlAvcmrl6Z5K
+	yAAvznbpbXFlVEXj0vsFyxEeVRh/33pHeQ4bvQ6fNKiGDOYi+6dtxdfHI7FupXvV6Bvb9uU46wxi+
+	yU8NKkfp9UVOIG/gE6TBTj/E8dVqoRPddy437xc5RGLw=
+Received: from [93.232.211.9] (account fhenneke@uni-bonn.de HELO [192.168.178.28])
+  by uni-bonn.de (CommuniGate Pro SMTP 6.2.4)
+  with ESMTPSA id 97632842 for kurt@seifried.org; Tue, 05 Jun 2018 22:28:38 +0200
+Date: Tue, 05 Jun 2018 22:28:36 +0200
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ fhenneke@uni-bonn.de
+Message-ID: <d1e0b293-4e26-4dbd-bcc7-23c4e6566510@email.android.com>
+X-Android-Message-ID: <d1e0b293-4e26-4dbd-bcc7-23c4e6566510@email.android.com>
+In-Reply-To: <20180605201528.5952.72197@shiny-2.local>
+From: "Fabian Henneke (HRZ)" <fhenneke@uni-bonn.de>
+To: kurt@seifried.org
+Importance: Normal
+X-Priority: 3
+X-MSMail-Priority: Normal
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PGRpdiBkaXI9J2F1dG8nPkkgYWNjZXB0PGJyPjxicj48ZGl2IGRhdGEtc21hcnRtYWlsPSJnbWFp
+bF9zaWduYXR1cmUiPi0tPGJyPjxicj5GYWJpYW4gSGVubmVrZTxicj48YnI+SG9jaHNjaHVscmVj
+aGVuemVudHJ1bSBkZXIgVW5pdmVyc2l0w6R0IEJvbm48YnI+UmF1bSAzLjAwNzxicj5XZWdlbGVy
+c3RyLiA2PGJyPjUzMTE1IEJvbm48YnI+R2VybWFueTxicj48YnI+VGVsOiArNDkgMjI4IDczLTQ0
+NjY8L2Rpdj48L2Rpdj4=
+

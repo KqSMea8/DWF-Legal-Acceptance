@@ -1,0 +1,144 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.103.27.130 with SMTP id b124csp1404630vsb;
+        Fri, 18 Aug 2017 20:24:04 -0700 (PDT)
+X-Received: by 10.46.80.18 with SMTP id e18mr4442877ljb.23.1503113043933;
+        Fri, 18 Aug 2017 20:24:03 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1503113043; cv=none;
+        d=google.com; s=arc-20160816;
+        b=fVlb5YRRHI7l/e5+J8s71epUBNgUym3nGgpI3ZJcc8ltVMThOfOq2mI3ZdK+PgMgIQ
+         0y1CgY/e6A/2lQdTOptj7EW0xzLzVX5LIaCGJ0tTJbWmCXj/D107ktiMwacOHmRXGtPT
+         hw7mSLFSPtDoErqPfEhiV6UbuljJIh9kBx1E5IIEIvNmQd4LUv6WNGIkZKrpzoPkjrqj
+         EksyFLCAbagWTy5DJuLuewUA2ujKiOV8Z19eqwhgge4Ds4LYrAGnmohRohfXm4PjYK4b
+         OXsaJMYhit34GBYvswJghyN47bkdxACh9R1YaRmBEbnd61FfSG43bGi2daDr3G8rpkaP
+         VXXQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:to:subject:message-id:date:from
+         :references:in-reply-to:sender:mime-version:dkim-signature
+         :arc-authentication-results;
+        bh=Z0DijzEq5n0CAgX5ItZRusj74+mUGHckQiyfBQopqdw=;
+        b=GZ4sH5gjLpb8LyIekVMCt+rFCQvZ00L5ZtzwCcVW/6OD+bWrywBSkhRJsY9JYQHgMa
+         NtA3aWw9sZbJ8ekpSR7zl7ynNvNmvNVMDMpt2RhWnPrSwZxdj6Khk0P1aiP2gWOmrimI
+         mOGhROHDiiLeey1qWqcpW4wpM3a0fwAAigQAMY/vVFaEsgpZagoS8PGmZUsPhXFj5M7T
+         6RDzDaQvRJ5QOQa8Qp+o2v1GKQYnQaYuVTflO+HTPzahcTLmZEU9s8QIxMsokBERvOGN
+         ObWAsYW9PU1yNp0KUybIM5lE6vN5XPpwQDGsGloUTWSKgAY1CveKMNnxQBlQqURHvIUk
+         h4kA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=sEaTppdY;
+       spf=pass (google.com: domain of fwagglechop@gmail.com designates 2a00:1450:4010:c07::22b as permitted sender) smtp.mailfrom=fwagglechop@gmail.com
+Return-Path: <fwagglechop@gmail.com>
+Received: from mail-lf0-x22b.google.com (mail-lf0-x22b.google.com. [2a00:1450:4010:c07::22b])
+        by mx.google.com with ESMTPS id x14si956487lfd.638.2017.08.18.20.24.03
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 18 Aug 2017 20:24:03 -0700 (PDT)
+Received-SPF: pass (google.com: domain of fwagglechop@gmail.com designates 2a00:1450:4010:c07::22b as permitted sender) client-ip=2a00:1450:4010:c07::22b;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=sEaTppdY;
+       spf=pass (google.com: domain of fwagglechop@gmail.com designates 2a00:1450:4010:c07::22b as permitted sender) smtp.mailfrom=fwagglechop@gmail.com
+Received: by mail-lf0-x22b.google.com with SMTP id t128so49529676lff.2
+        for <kurt@seifried.org>; Fri, 18 Aug 2017 20:24:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-transfer-encoding;
+        bh=Z0DijzEq5n0CAgX5ItZRusj74+mUGHckQiyfBQopqdw=;
+        b=sEaTppdYHat2XDBifxLEnID9YCFx+uPvgQl7DlrkcSiE8wzqpF1BhEKjVfmPoV3g8f
+         1wzkHnMvg6F05QGoQWa9sno8iDbPFOBoSVAGUB8nbn0P0EjgvDaclQvVOAfKdjMJB3fJ
+         0SGtq1ZLdQPKcKITpmhrc+WlsLU/o3e/pAONcl2uYGdnBAjwXHY/bk4ftqNL2TlfwOGm
+         ayFUiJ6a2vR61Mfz5Q8TSFa5TI2E62uNmUlXnM0QY5TGs49kU2TOmTG0PywMdK7Bf4rI
+         Rhx2yb1ZwFeL9ql4ZprUuOfCFcy4AaY/sRu4/wMNXTv71yD4wuOcgshBDI/lyQTcC+8V
+         S1TA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:sender:in-reply-to:references:from
+         :date:message-id:subject:to:content-transfer-encoding;
+        bh=Z0DijzEq5n0CAgX5ItZRusj74+mUGHckQiyfBQopqdw=;
+        b=ZeAMpwjQjToVVSqooeN2huskpzYoAif4sZaAC2GGMea8T47E+8Mbc8CNmD+gZWMZmr
+         u2I2vyztK2ealeimhPa/y2InxWH9jt3KfcAxVVtkgzPnFMUPFKNdM4HTe/KpeWey+Fat
+         jKDtpZ8uHMK/WRimznFPaZOKOg/breAn0XCBFy19/j+cJMwWvaM1xEabuLwHThUsDI8L
+         uL939SouGok+/0R8kCycsFstyzqswZSeOH3DJeSQvqiBvTHwDn4+NQghrdWBVD3NpTSX
+         x6aTBI9Dt+tirmOOLYHs6spK0RIZbPwxNT+w/U3wGHb/sZPhEZk0VSc7S6+Vn33xTC0w
+         HUHQ==
+X-Gm-Message-State: AHYfb5i+jd0kF3opqQ5Iq+MvS/oXjCwTbw9VaSbeh6xFxi2WOjQ1QMgY
+	Ub/a0kwCxXycwS7HWw82tCoBk1dMCw0ZEVw=
+X-Received: by 10.25.229.22 with SMTP id c22mr3801601lfh.108.1503113043013;
+ Fri, 18 Aug 2017 20:24:03 -0700 (PDT)
+MIME-Version: 1.0
+Sender: fwagglechop@gmail.com
+Received: by 10.25.234.77 with HTTP; Fri, 18 Aug 2017 20:24:02 -0700 (PDT)
+In-Reply-To: <20170819025110.56150.43546@shiny-2.local>
+References: <20170819025110.56150.43546@shiny-2.local>
+From: fwagglechop <fwaggle@fwaggle.org>
+Date: Sat, 19 Aug 2017 13:24:02 +1000
+X-Google-Sender-Auth: 2j8vhGkoYNFckO9t47Cuyny-A0U
+Message-ID: <CAOTzMQ26E7k09Oqdh=iFxeQoGEyWP0wsqRV2gG_t1_1LiGFw8w@mail.gmail.com>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for fwaggle@fwaggle.org
+To: Kurt Seifried <kurt@seifried.org>
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+On Sat, Aug 19, 2017 at 12:51 PM,  <kurt@seifried.org> wrote:
+> This is a confirmation email sent from CVE request form at https://iwanta=
+cve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you fill=
+ed out the CVE form and want one, we can't use the data until you accept th=
+e MITRE CVE Terms of Use).
+>
+> Simply quote the email and reply with "I accept" at the top if you agree =
+to the MITRE CVE Terms of Use and we will add a copy of the email to the DW=
+F MITRE CVE Terms of Use acceptance data at https://github.com/distributedw=
+eaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>
+> The reason we use a complete copy of the email is that it provides an art=
+ifact showing that the email address accepted the Terms of Use, when they w=
+ere accepted and so on.
+>
+> If you did not submit a CVE request to the DWF you can safely ignore this=
+ message, however we may resend it at some point in the future, if you don'=
+t want any future emails simply reply with "unsubscribe" or "DON'T SEND ME =
+THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so=
+ we don't spam you with these, please note that this will prevent you from =
+being able to accept the MITRE CVE Terms of Use via the DWF automatically i=
+n future (you'll have to manually ask). But again, if you have no idea what=
+ a CVE is then you can ignore this/ask to be added to the block list with n=
+o problems.
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities a=
+nd Exposures (CVE=C2=AE), you hereby grant to The MITRE Corporation (MITRE)=
+ and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclu=
+sive, no-charge, royalty-free, irrevocable copyright license to reproduce, =
+prepare derivative works of, publicly display, publicly perform, sublicense=
+, and distribute such materials and derivative works. Unless required by ap=
+plicable law or agreed to in writing, you provide such materials on an "AS =
+IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or =
+implied, including, without limitation, any warranties or conditions of TIT=
+LE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,=
+ no-charge, royalty-free, irrevocable copyright license to reproduce, prepa=
+re derivative works of, publicly display, publicly perform, sublicense, and=
+ distribute Common Vulnerabilities and Exposures (CVE=C2=AE). Any copy you =
+make for such purposes is authorized provided that you reproduce MITRE's co=
+pyright designation and this license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE=
+ PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE =
+REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF=
+ TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRES=
+S OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE=
+ INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES=
+ OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-D=
+atabase/blob/master/TermsOfUse.md
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manually =
+with your question/concerns/etc.
+>

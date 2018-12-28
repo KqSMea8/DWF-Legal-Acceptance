@@ -1,0 +1,93 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.82.15 with SMTP id i15csp533828uaa;
+        Fri, 7 Apr 2017 23:16:53 -0700 (PDT)
+X-Received: by 10.237.48.66 with SMTP id 60mr49088697qte.25.1491632213545;
+        Fri, 07 Apr 2017 23:16:53 -0700 (PDT)
+Return-Path: <aatlasis@secfu.net>
+Received: from smtp77.iad3a.emailsrvr.com (smtp77.iad3a.emailsrvr.com. [173.203.187.77])
+        by mx.google.com with ESMTPS id o36si7465105qtb.332.2017.04.07.23.16.53
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 07 Apr 2017 23:16:53 -0700 (PDT)
+Received-SPF: pass (google.com: domain of aatlasis@secfu.net designates 173.203.187.77 as permitted sender) client-ip=173.203.187.77;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of aatlasis@secfu.net designates 173.203.187.77 as permitted sender) smtp.mailfrom=aatlasis@secfu.net
+Received: from smtp10.relay.iad3a.emailsrvr.com (localhost [127.0.0.1])
+	by smtp10.relay.iad3a.emailsrvr.com (SMTP Server) with ESMTP id 1B6905DE4
+	for <kurt@seifried.org>; Sat,  8 Apr 2017 02:16:53 -0400 (EDT)
+Received: from app21.wa-webapps.iad3a (relay-webapps.rsapps.net [172.27.255.140])
+	by smtp10.relay.iad3a.emailsrvr.com (SMTP Server) with ESMTP id 1080F5D48
+	for <kurt@seifried.org>; Sat,  8 Apr 2017 02:16:52 -0400 (EDT)
+X-Sender-Id: aatlasis@secfu.net
+Received: from app21.wa-webapps.iad3a (relay-webapps.rsapps.net [172.27.255.140])
+	by 0.0.0.0:25 (trex/5.7.12);
+	Sat, 08 Apr 2017 02:16:53 -0400
+Received: from secfu.net (localhost [127.0.0.1])
+	by app21.wa-webapps.iad3a (Postfix) with ESMTP id D8339A13D4
+	for <kurt@seifried.org>; Sat,  8 Apr 2017 02:16:52 -0400 (EDT)
+Received: by webmail.jimdo.com
+    (Authenticated sender: aatlasis@secfu.net, from: aatlasis@secfu.net) 
+    with HTTP; Sat, 8 Apr 2017 09:16:52 +0300 (EEST)
+X-Auth-ID: aatlasis@secfu.net
+Date: Sat, 8 Apr 2017 09:16:52 +0300 (EEST)
+Subject: RE: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for aatlasis@secfu.net
+From: aatlasis@secfu.net
+To: kurt@seifried.org
+MIME-Version: 1.0
+Content-Type: text/plain;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Importance: Normal
+X-Priority: 3 (Normal)
+X-Type: plain
+In-Reply-To: <20170406200207.4090.36904@shiny-2.local>
+References: <20170406200207.4090.36904@shiny-2.local>
+Message-ID: <1491632212.87412120@webmail.jimdo.com>
+X-Mailer: webmail/12.7.11-RC
+
+I accept=0A=0AOn Thursday, 6 April, 2017 23:02, kurt@seifried.org said:=0A=
+=0A> This is a confirmation email sent from CVE request form at https://iwa=
+ntacve.org/=0A> asking you to accept the MITRE CVE Terms of Use (assuming y=
+ou filled out the CVE=0A> form and want one, we can't use the data until yo=
+u accept the MITRE CVE Terms of=0A> Use).=0A> =0A> Simply quote the email a=
+nd reply with "I accept" at the top if you agree to the=0A> MITRE CVE Terms=
+ of Use and we will add it to the DWF MITRE CVE Terms of Use=0A> acceptance=
+ data at=0A> https://github.com/distributedweaknessfiling/DWF-Legal-Accepta=
+nce/tree/master/Terms-Of-Use=0A> =0A> If you did not submit a CVE request t=
+o the DWF you can safely ignore this message,=0A> however we may resend it =
+at some point in the future, if you don't want any future=0A> emails simply=
+ reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AGAIN"=0A> and =
+I'll add your email address to the block list so we don't spam you with the=
+se,=0A> please note that this will prevent you from being able to accept th=
+e MITRE CVE=0A> Terms of Use via the DWF automatically in future (you'll ha=
+ve to manually ask).=0A> But again, if you have no idea what a CVE is then =
+you can ignore this/ask to be=0A> added to the block list with no problems.=
+=0A> =0A> MITRE CVE Terms of Use=0A> =0A> LICENSE=0A> =0A> Submissions: For=
+ all materials you submit to the Common Vulnerabilities and=0A> Exposures (=
+CVE), you hereby grant to The MITRE Corporation (MITRE) and all CVE=0A> Num=
+bering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge,=
+=0A> royalty-free, irrevocable copyright license to reproduce, prepare deri=
+vative works=0A> of, publicly display, publicly perform, sublicense, and di=
+stribute such materials=0A> and derivative works. Unless required by applic=
+able law or agreed to in writing,=0A> you provide such materials on an "AS =
+IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS=0A> OF ANY KIND, either express=
+ or implied, including, without limitation, any=0A> warranties or condition=
+s of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS=0A> FOR A PARTICU=
+LAR PURPOSE.=0A> =0A> CVE Usage: MITRE hereby grants you a perpetual, world=
+wide, non-exclusive,=0A> no-charge, royalty-free, irrevocable copyright lic=
+ense to reproduce, prepare=0A> derivative works of, publicly display, publi=
+cly perform, sublicense, and=0A> distribute Common Vulnerabilities and Expo=
+sures (CVE). Any copy you make for such=0A> purposes is authorized provided=
+ that you reproduce MITRE's copyright designation=0A> and this license in a=
+ny such copy.=0A> =0A> DISCLAIMERS=0A> =0A> ALL DOCUMENTS AND THE INFORMATI=
+ON CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED=0A> ON AN "AS IS" BASIS=
+ AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS=0A> SPONSORE=
+D BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS,=0A> =
+AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDI=
+NG BUT=0A> NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THER=
+EIN WILL NOT=0A> INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTA=
+BILITY OR FITNESS FOR A=0A> PARTICULAR PURPOSE.=0A> =0A> A copy is availabl=
+e at=0A> https://github.com/distributedweaknessfiling/DWF-Database/blob/mas=
+ter/TermsOfUse.md=0A> =0A> To contact the DWF either hit reply, or email ku=
+rt@seifried.org manually with your=0A> question/concerns/etc.=0A> =0A> =0A=
+=0A=0A=0A
+

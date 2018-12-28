@@ -1,0 +1,361 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.157.8.51 with SMTP id 48csp1052464oty;
+        Mon, 21 Aug 2017 00:30:24 -0700 (PDT)
+X-Received: by 10.80.207.7 with SMTP id c7mr8924338edk.63.1503300624005;
+        Mon, 21 Aug 2017 00:30:24 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1503300623; cv=none;
+        d=google.com; s=arc-20160816;
+        b=TYDgRVra9XzfKb2kM8FM0sOx+JgKZ8ULJSbSzuq7bm/jZeYkYl90tv6PBjqtzjntYb
+         tLoTal7aAqHJA8RvEyC1Gx4vaWjaL/uSzOLcTx54Zf3NwSHkHi33zGoEpDFTQcnWv2Co
+         lNkDkSPTn1z5tBERIeE+IDr+I5uTG/adlAwnXQl54WI/uxM4cHhAk2B8MmROXHSLtUba
+         ikiPcFoF2T/u78F8psnZM248hYROea+iTrZeZMx8a6XUl5uWBcbjYDZ9xzUAaC1wUPcN
+         1uleuX7etI9H4BeuSREhsLg/lduz6f6cwszALu3gNx+/8JEdqltqep+l2ABUtovVibeI
+         TugQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=references:in-reply-to:organization:date:to:from:message-id:subject
+         :mime-version:arc-authentication-results;
+        bh=XA6xOK01gjAwkqjN1W6/zKjvh+cAz3d7WUs3IxJsmNw=;
+        b=C6ULdRXf0pVo4RRHB1JtcVbSXCghkeuPJBF77VFeBXWZxzOUJ1KzV0emH74NVAxarK
+         ClIArRAniZydg/i90NVu0I5swFCwELAa6HJ8kqHmxVOn+7DV03GQ+isNaJL03/PYHHoS
+         T/u4gK6ZWMDxd728blFAxsNz4q5bZt4r2fKeoQoWE9IbYldrm/Ong28Tf09aKbGv0Ngw
+         8PfvBD4OohOiRTUh0WXgWvq5+36HdRUUcg/TgO53dOCRV+FbjCqxZR4BdoQbRHYyQDn2
+         HyaiY972G5gk/fTylzcCNO15FNP2i3/7VtImOYPn4KOQW+8Ww8OY/zPx7GXSKJgMheOD
+         rNUQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=neutral (google.com: 217.69.70.67 is neither permitted nor denied by best guess record for domain of security@otrs.org) smtp.mailfrom=security@otrs.org
+Return-Path: <security@otrs.org>
+Received: from portal-nodef02.otrs.com (portal-nodef02.otrs.com. [217.69.70.67])
+        by mx.google.com with ESMTPS id f7si10990709edd.78.2017.08.21.00.30.23
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 21 Aug 2017 00:30:23 -0700 (PDT)
+Received-SPF: neutral (google.com: 217.69.70.67 is neither permitted nor denied by best guess record for domain of security@otrs.org) client-ip=217.69.70.67;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 217.69.70.67 is neither permitted nor denied by best guess record for domain of security@otrs.org) smtp.mailfrom=security@otrs.org
+Received: from localhost (localhost [127.0.0.1])
+	by portal-nodef02.otrs.com (Postfix) with ESMTP id 4FE3C163765
+	for <kurt@seifried.org>; Mon, 21 Aug 2017 07:30:23 +0000 (UTC)
+X-Virus-Scanned: amavisd-new at portal-nodef02.otrs.com
+Received: from portal-nodef02.otrs.com ([127.0.0.1])
+	by localhost (portal-nodef02.otrs.com [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id pAScbY2XesKw for <kurt@seifried.org>;
+	Mon, 21 Aug 2017 07:30:23 +0000 (UTC)
+Received: by portal-nodef02.otrs.com (Postfix, from userid 81)
+	id 302E0163766; Mon, 21 Aug 2017 07:30:23 +0000 (UTC)
+MIME-Version: 1.0
+Subject: Re: [Ticket#2017081934000034] DWF/CVE - Acceptance of MITRE Terms
+ of Use for CVE for security@otrs.org
+Message-ID: <1503300622.531881.933892302@portal.otrs.com>
+From: Jens Bothe via OTRS Security Team <security@otrs.org>
+To: kurt@seifried.org
+Date: Mon, 21 Aug 2017 07:30:23 +0000
+Organization: OTRS AG
+In-Reply-To: <20170819024950.56150.65982@shiny-2.local>
+References: <20170819024950.56150.65982@shiny-2.local>
+Content-Type: multipart/alternative; boundary="----------=_1503300623-7935-0"
+
+This is a multi-part message in MIME format...
+
+------------=_1503300623-7935-0
+Content-Type: text/plain; charset="utf-8"
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+2017-08-19 04:55 (+2) - kurt@seifried.org wrote: This is a confirmation
+email sent from CVE request form at [1]https://iwantacve.org/
+asking you to accept the MITRE CVE Terms of Use (assuming you filled out the
+CVE
+form and want one, we can't use the data until you accept the MITRE CVE
+Terms of
+Use).
+
+Simply quote the email and reply with "I accept" at the top if you agree to
+the
+MITRE CVE Terms of Use and we will add a copy of the email to the DWF MITRE
+CVE
+Terms of Use acceptance data at
+[2]https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/m=
+ast[..]
+
+The reason we use a complete copy of the email is that it provides an
+artifact
+showing that the email address accepted the Terms of Use, when they were
+accepted
+and so on.
+
+If you did not submit a CVE request to the DWF you can safely ignore this
+message,
+however we may resend it at some point in the future, if you don't want any
+future
+emails simply reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER
+AGAIN"
+and I'll add your email address to the block list so we don't spam you with
+these,
+please note that this will prevent you from being able to accept the MITRE
+CVE
+Terms of Use via the DWF automatically in future (you'll have to manually
+ask).
+But again, if you have no idea what a CVE is then you can ignore this/ask to
+be
+added to the block list with no problems.
+
+MITRE CVE Terms of Use
+
+LICENSE
+
+Submissions: For all materials you submit to the Common Vulnerabilities and
+Exposures (CVE=EF=BF=BD=EF=BF=BD), you hereby grant to The MITRE Corporatio=
+n (MITRE) and all
+CVE
+Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive,
+no-charge,
+royalty-free, irrevocable copyright license to reproduce, prepare derivative
+works
+of, publicly display, publicly perform, sublicense, and distribute such
+materials
+and derivative works. Unless required by applicable law or agreed to in
+writing,
+you provide such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+CONDITIONS
+OF ANY KIND, either express or implied, including, without limitation, any
+warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or
+FITNESS
+FOR A PARTICULAR PURPOSE.
+
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,
+no-charge, royalty-free, irrevocable copyright license to reproduce, prepare
+derivative works of, publicly display, publicly perform, sublicense, and
+distribute Common Vulnerabilities and Exposures (CVE=EF=BF=BD=EF=BF=BD). An=
+y copy you make
+for
+such purposes is authorized provided that you reproduce MITRE's copyright
+designation and this license in any such copy.
+
+DISCLAIMERS
+
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE
+PROVIDED
+ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS
+OR IS
+SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES,
+OFFICERS,
+AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED,
+INCLUDING BUT
+NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT
+INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS
+FOR A
+PARTICULAR PURPOSE.
+
+A copy is available at
+[3]https://github.com/distributedweaknessfiling/DWF-Database/blob/master/Te=
+rms[..]
+
+To contact the DWF either hit reply, or email kurt@seifried.org manually
+with your
+question/concerns/etc.
+
+Regards,
+
+Jens Bothe
+
+--=C2=A0
+OTRS AG
+Zimmersm=C3=BChlenweg 11
+61440 Oberursel=C2=A0
+Germany
+E: [4]sales@otrs.com
+I:=C2=A0[5]http://www.otrs.com/=20
+
+Business location: Oberursel, Country Court: Bad Homburg, HRB 10751, VAT ID:
+DE256610065
+Chairman: Burchard Steinbild, Managing Board: Andr=C3=A9 Mindermann (CEO),
+Christopher Kuhn, Sabine Riedel
+
+ OTRS Business Solution=E2=84=A2 5s=C2=A0=E2=80=93=C2=A0Organization.=C2=A0=
+Security.=C2=A0Communication.
+Structure.=C2=A0=E2=80=93=C2=A0[6]Flexible solutions for your company=E2=80=
+=99s success
+
+More information:
+[7]Solutions=C2=A0|=C2=A0[8]Success Stories=C2=A0|=C2=A0[9]Training=20
+
+
+
+[1] https://iwantacve.org/
+[2] https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/=
+master/Terms-Of-Use
+[3] https://github.com/distributedweaknessfiling/DWF-Database/blob/master/T=
+ermsOfUse.md
+[4] mailto:sales@otrs.com
+[5] http://www.otrs.com/
+[6] https://www.otrs.com/?utm_id=3D1036
+[7] https://www.otrs.com/products/?utm_id=3D1037
+[8] https://www.otrs.com/customers/success-stories/?utm_id=3D1038
+[9] https://www.otrs.com/public-otrs-trainings/?utm_id=3D1039
+
+------------=_1503300623-7935-0
+Content-Type: text/html; charset="utf-8"
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3Dutf-8"/></head><body style=3D"font-family:Arial,Geneva,He=
+lvetica,sans-serif; font-size: 12px;"><span style=3D"font-family:arial,helv=
+etica,sans-serif"><span style=3D"font-size:12px">I accept</span></span><br =
+/>
+<br />
+2017-08-19 04:55 (+2) - kurt@seifried.org wrote:
+<div style=3D"border:none;border-left:solid blue 1.5pt;padding:0cm 0cm 0cm =
+4.0pt" type=3D"cite">This is a confirmation email sent from CVE request for=
+m at <a href=3D"https://iwantacve.org/" target=3D"_blank" title=3D"https://=
+iwantacve.org/">https://iwantacve.org/</a><br />
+asking you to accept the MITRE CVE Terms of Use (assuming you filled out th=
+e CVE<br />
+form and want one, we can't use the data until you accept the MITRE CVE Ter=
+ms of<br />
+Use).<br />
+<br />
+Simply quote the email and reply with "I accept" at the top if you agree to=
+ the<br />
+MITRE CVE Terms of Use and we will add a copy of the email to the DWF MITRE=
+ CVE<br />
+Terms of Use acceptance data at<br />
+<a href=3D"https://github.com/distributedweaknessfiling/DWF-Legal-Acceptanc=
+e/tree/master/Terms-Of-Use" target=3D"_blank" title=3D"https://github.com/d=
+istributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use">htt=
+ps://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/mast[..=
+]</a><br />
+<br />
+The reason we use a complete copy of the email is that it provides an artif=
+act<br />
+showing that the email address accepted the Terms of Use, when they were ac=
+cepted<br />
+and so on.<br />
+<br />
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage,<br />
+however we may resend it at some point in the future, if you don't want any=
+ future<br />
+emails simply reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AG=
+AIN"<br />
+and I'll add your email address to the block list so we don't spam you with=
+ these,<br />
+please note that this will prevent you from being able to accept the MITRE =
+CVE<br />
+Terms of Use via the DWF automatically in future (you'll have to manually a=
+sk).<br />
+But again, if you have no idea what a CVE is then you can ignore this/ask t=
+o be<br />
+added to the block list with no problems.<br />
+<br />
+MITRE CVE Terms of Use<br />
+<br />
+LICENSE<br />
+<br />
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+<br />
+Exposures (CVE=EF=BF=BD=EF=BF=BD), you hereby grant to The MITRE Corporatio=
+n (MITRE) and all CVE<br />
+Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-char=
+ge,<br />
+royalty-free, irrevocable copyright license to reproduce, prepare derivativ=
+e works<br />
+of, publicly display, publicly perform, sublicense, and distribute such mat=
+erials<br />
+and derivative works. Unless required by applicable law or agreed to in wri=
+ting,<br />
+you provide such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDI=
+TIONS<br />
+OF ANY KIND, either express or implied, including, without limitation, any<=
+br />
+warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FI=
+TNESS<br />
+FOR A PARTICULAR PURPOSE.<br />
+<br />
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,<b=
+r />
+no-charge, royalty-free, irrevocable copyright license to reproduce, prepar=
+e<br />
+derivative works of, publicly display, publicly perform, sublicense, and<br=
+ />
+distribute Common Vulnerabilities and Exposures (CVE=EF=BF=BD=EF=BF=BD). An=
+y copy you make for<br />
+such purposes is authorized provided that you reproduce MITRE's copyright<b=
+r />
+designation and this license in any such copy.<br />
+<br />
+DISCLAIMERS<br />
+<br />
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED<br />
+ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS=
+ OR IS<br />
+SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICE=
+RS,<br />
+AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDI=
+NG BUT<br />
+NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NO=
+T<br />
+INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS=
+ FOR A<br />
+PARTICULAR PURPOSE.<br />
+<br />
+A copy is available at<br />
+<a href=3D"https://github.com/distributedweaknessfiling/DWF-Database/blob/m=
+aster/TermsOfUse.md" target=3D"_blank" title=3D"https://github.com/distribu=
+tedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md">https://github.co=
+m/distributedweaknessfiling/DWF-Database/blob/master/Terms[..]</a><br />
+<br />
+To contact the DWF either hit reply, or email kurt@seifried.org manually wi=
+th your<br />
+question/concerns/etc.<br />
+&nbsp;</div>
+<br />
+<br />
+<br />
+<span style=3D"font-size:12px"><span style=3D"font-family:arial,helvetica,s=
+ans-serif">Regards,<br />
+<br />
+Jens Bothe<br />
+<br />
+--&nbsp;<br />
+OTRS AG</span></span><br />
+Zimmersm=C3=BChlenweg 11<br />
+61440 Oberursel&nbsp;<br />
+Germany<br />
+<span style=3D"font-size:12px"><span style=3D"font-family:arial,helvetica,s=
+ans-serif">E: <a href=3D"mailto:sales@otrs.com" target=3D"_blank">sales@otr=
+s.com</a><br />
+I:&nbsp;<a href=3D"http://www.otrs.com/" target=3D"_blank">http://www.otrs.=
+com/</a></span></span>
+
+<p><span style=3D"font-family:arial,helvetica,sans-serif"><span style=3D"fo=
+nt-size:8px">Business location: Oberursel, Country Court: Bad Homburg, HRB =
+10751, VAT ID: DE256610065<br />
+Chairman: Burchard Steinbild, Managing Board: Andr=C3=A9 Mindermann (CEO), =
+Christopher Kuhn, Sabine Riedel</span></span><br />
+&nbsp;</p>
+<span style=3D"font-size:14px"><strong><span style=3D"color:#305769">OTRS B=
+usiness Solution=E2=84=A2 5s&nbsp;=E2=80=93</span>&nbsp;<span style=3D"colo=
+r:#69BECC">Organization.&nbsp;</span><span style=3D"color:#B7394F">Security=
+.</span>&nbsp;<span style=3D"color:#305769">Communication.</span>&nbsp;<spa=
+n style=3D"color:#4B2A3F">Structure</span></strong><span style=3D"color:#4B=
+2A3F">.</span></span>&nbsp;=E2=80=93&nbsp;<a href=3D"https://www.otrs.com/?=
+utm_id=3D1036" target=3D"_blank">Flexible solutions for your company=E2=80=
+=99s success</a><br />
+<br />
+<span style=3D"font-size:9px">More information:</span><br />
+<a href=3D"https://www.otrs.com/products/?utm_id=3D1037" target=3D"_blank">=
+Solutions</a>&nbsp;<span style=3D"color:#B7394F"><strong>|</strong>&nbsp;</=
+span><a href=3D"https://www.otrs.com/customers/success-stories/?utm_id=3D10=
+38" target=3D"_blank">Success Stories</a>&nbsp;<span style=3D"color:#B7394F=
+"><strong>|</strong></span>&nbsp;<a href=3D"https://www.otrs.com/public-otr=
+s-trainings/?utm_id=3D1039" target=3D"_blank">Training</a>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p></body></html>=
+
+------------=_1503300623-7935-0--

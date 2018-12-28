@@ -1,0 +1,154 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.37.80 with SMTP id l77csp6808705ivl;
+        Sat, 21 Oct 2017 14:08:02 -0700 (PDT)
+X-Google-Smtp-Source: ABhQp+QEsQE0dd75Xnsuu8t1h36R1TKUdXBDp1w1I4JRqxi2wbuLaD77tKRUqCVfS/YXK2xB6kOh
+X-Received: by 10.80.165.204 with SMTP id b12mr11383721edc.289.1508620082750;
+        Sat, 21 Oct 2017 14:08:02 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1508620082; cv=none;
+        d=google.com; s=arc-20160816;
+        b=CmO+e5jQUgnnTpF99GCEVyA/mOpVSKxlieXF9UdwIgFdfmBE/YbmLqy3KD3RIT9HjT
+         RJlS2c4gGxIQpE92oPnqqdoU7UBWXumsdqlhVvhaWrso1fwTJZcOcZFJ4SbeIpDFSn69
+         Fc9PDntP81pobRlukWlXG9Aq/wUSZli6AII22tFSjUxcQeEZrQGj3Nflj9le2Xw1MmHX
+         G4CCLcls9BZ6AFy6BzhXGgIvVE+ar1hOZt9RTZNU3QCC2hRpAy8y+yuvupl8soezK+ju
+         OB8XEvG4kkqcUg5LA0bUSQbjdw9pAXXWrau+aLo8kVoXp6psOUqHyzosQP5Y/dsnHPwf
+         03CA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:from:to:subject:content-transfer-encoding:mime-version
+         :references:in-reply-to:user-agent:date:dkim-signature
+         :dkim-signature:arc-authentication-results;
+        bh=xHJJQyUOIzECp0XT480aSW4rkb1j7uSpHuxfIIEbhB4=;
+        b=t2vbyQyJ5Ypj+6SQ8A3a2UAtm6bx+aBxwgQngx9twG8RR+AWvA0Il4pF0ABoB/sHBc
+         SpVrI0XzT3q5gcOP5X28kkuhLjsIzkOjR+KsgVizsQquPteoH6SVeJrwd8dPzcfxVelc
+         TV91ym2YhqVHfPAAHeRCUW5yWjX0QMHfFwmqOGkZydUBKtz0S6XBndjGUX+8+0at7NOn
+         /IFFXI46Si3vk+SQbAyRRV8VZ0T3oXuEhGPODjZ7KpGQ9mly4yHom2Q+4ds+uqEj7AZu
+         J/v+J1zFNS9pYaKcRvrnmnjztjpVW5tSRsiLa3QPHUEdzJt5xQzD37YYmcu5kULho9oi
+         EinA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@famulari.name header.s=mesmtp header.b=IaqzsDnW;
+       dkim=pass header.i=@messagingengine.com header.s=fm1 header.b=iglYDEEX;
+       spf=pass (google.com: domain of leo@famulari.name designates 66.111.4.28 as permitted sender) smtp.mailfrom=leo@famulari.name
+Return-Path: <leo@famulari.name>
+Received: from out4-smtp.messagingengine.com (out4-smtp.messagingengine.com. [66.111.4.28])
+        by mx.google.com with ESMTPS id j88si756507edd.495.2017.10.21.14.08.02
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 21 Oct 2017 14:08:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of leo@famulari.name designates 66.111.4.28 as permitted sender) client-ip=66.111.4.28;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@famulari.name header.s=mesmtp header.b=IaqzsDnW;
+       dkim=pass header.i=@messagingengine.com header.s=fm1 header.b=iglYDEEX;
+       spf=pass (google.com: domain of leo@famulari.name designates 66.111.4.28 as permitted sender) smtp.mailfrom=leo@famulari.name
+Received: from compute4.internal (compute4.nyi.internal [10.202.2.44])
+	by mailout.nyi.internal (Postfix) with ESMTP id 7870920E80;
+	Sat, 21 Oct 2017 17:08:01 -0400 (EDT)
+Received: from frontend2 ([10.202.2.161])
+  by compute4.internal (MEProxy); Sat, 21 Oct 2017 17:08:01 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=famulari.name;
+	 h=content-transfer-encoding:content-type:date:from:in-reply-to
+	:message-id:mime-version:references:subject:to:x-me-sender
+	:x-me-sender:x-sasl-enc; s=mesmtp; bh=xHJJQyUOIzECp0XT480aSW4rkb
+	1j7uSpHuxfIIEbhB4=; b=IaqzsDnWwLdHjU6XiBvLQZe4CzAltmb4nDoD8yjSs3
+	MJASkilR8yrpfsc95OCN95HZbJVrPCyBF+WJczkgcINSgOSA2b6KtWHLhW6XtPDS
+	aFCyF/48nqp+Dh4KaDMIRaxGkn8u3GjD3mNQQ5H8yQG38+3n40w01290GML0BZU1
+	c=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=
+	messagingengine.com; h=content-transfer-encoding:content-type
+	:date:from:in-reply-to:message-id:mime-version:references
+	:subject:to:x-me-sender:x-me-sender:x-sasl-enc; s=fm1; bh=xHJJQy
+	UOIzECp0XT480aSW4rkb1j7uSpHuxfIIEbhB4=; b=iglYDEEX/Vsc5k9sAKcFaR
+	c7VZi0vBDRYiW2YtJU4qoCvLpVm8DdscYz9fjtUYf0euA5HOZ/0eEquOKyAGBWCJ
+	bpUHn4AAUcVyKvrI9iBHs2lB26WBy0a79OaG9WK8/puL5zkDOO/6ljKsvNKrEqYC
+	Jq0z08WmU9aLF4bYvBaMTqTHoC1c/8wWw9QwPAAu8Gp7Vpz98VZmUjczK4WiZMQz
+	p8NPDmKGYGqrGQs3JzPRYiRNZGG5y4b6zbfio9RaC4fxkCvJHYC5aliV1a8zAJKR
+	rs9/PVbRByt2sCeAHkVGLIXlpc329XCLo8cO56IgM8QhoRj1EQn2Efu8i8b8bAuA
+	==
+X-ME-Sender: <xms:MbfrWWMPxcUxAESpbu0oDz64M-uBUd0ABrWYX19txSSyBZiKGRXvlg>
+Received: from [IPv6:2607:fb90:786:4a5f:5822:9e58:be3e:c278] (unknown [172.56.35.163])
+	by mail.messagingengine.com (Postfix) with ESMTPA id 2396E241D9
+	for <kurt@seifried.org>; Sat, 21 Oct 2017 17:08:01 -0400 (EDT)
+Date: Sat, 21 Oct 2017 17:07:59 -0400
+User-Agent: K-9 Mail for Android
+In-Reply-To: <20171021205926.19234.85962@shiny-2.local>
+References: <20171021205926.19234.85962@shiny-2.local>
+MIME-Version: 1.0
+Content-Type: text/plain;
+ charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for leo@famulari.name
+To: kurt@seifried.org
+From: Leo Famulari <leo@famulari.name>
+Message-ID: <C1832C5A-9F4F-4B39-9328-84EF975EB0E3@famulari.name>
+
+I accept
+
+
+-------- Original Message --------
+From: kurt@seifried=2Eorg
+Sent: October 21, 2017 4:59:26 PM EDT
+To: leo@famulari=2Ename
+Subject: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for leo@famula=
+ri=2Ename
+
+This is a confirmation email sent from CVE request form at https://iwantac=
+ve=2Eorg/ asking you to accept the MITRE CVE Terms of Use (assuming you fil=
+led out the CVE form and want one, we can't use the data until you accept t=
+he MITRE CVE Terms of Use)=2E=20
+
+Simply quote the email and reply with "I accept" at the top if you agree t=
+o the MITRE CVE Terms of Use and we will add a copy of the email to the DWF=
+ MITRE CVE Terms of Use acceptance data at https://github=2Ecom/distributed=
+weaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+
+The reason we use a complete copy of the email is that it provides an arti=
+fact showing that the email address accepted the Terms of Use, when they we=
+re accepted and so on=2E=20
+
+If you did not submit a CVE request to the DWF you can safely ignore this =
+message, however we may resend it at some point in the future, if you don't=
+ want any future emails simply reply with "unsubscribe" or "DON'T SEND ME T=
+HIS EMAIL EVER AGAIN" and I'll add your email address to the block list so =
+we don't spam you with these, please note that this will prevent you from b=
+eing able to accept the MITRE CVE Terms of Use via the DWF automatically in=
+ future (you'll have to manually ask)=2E But again, if you have no idea wha=
+t a CVE is then you can ignore this/ask to be added to the block list with =
+no problems=2E=20
+
+MITRE CVE Terms of Use
+
+LICENSE
+
+Submissions: For all materials you submit to the Common Vulnerabilities an=
+d Exposures (CVE=EF=BF=BD=EF=BF=BD), you hereby grant to The MITRE Corporat=
+ion (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide=
+, non-exclusive, no-charge, royalty-free, irrevocable copyright license to =
+reproduce, prepare derivative works of, publicly display, publicly perform,=
+ sublicense, and distribute such materials and derivative works=2E Unless r=
+equired by applicable law or agreed to in writing, you provide such materia=
+ls on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, eithe=
+r express or implied, including, without limitation, any warranties or cond=
+itions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTIC=
+ULAR PURPOSE=2E
+
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable copyright license to reproduce, prepar=
+e derivative works of, publicly display, publicly perform, sublicense, and =
+distribute Common Vulnerabilities and Exposures (CVE=EF=BF=BD=EF=BF=BD)=2E =
+Any copy you make for such purposes is authorized provided that you reprodu=
+ce MITRE's copyright designation and this license in any such copy=2E
+
+DISCLAIMERS
+
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE =
+PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE R=
+EPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF =
+TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS=
+ OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE =
+INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES =
+OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE=2E
+
+A copy is available at https://github=2Ecom/distributedweaknessfiling/DWF-=
+Legal-Acceptance/blob/master/Terms-Of-Use=2Emd
+
+To contact the DWF either hit reply, or email kurt@seifried=2Eorg manually=
+ with your question/concerns/etc=2E=20
+

@@ -1,0 +1,129 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.153.144 with SMTP id a16csp2257783ivh;
+        Thu, 25 Jan 2018 09:39:02 -0800 (PST)
+X-Google-Smtp-Source: AH8x226qnhJIpP7as55K2rJAgD4pU3Sgea22MYvTNC9UqI4JsGdnsMZi6+u7TpUdm2WSTt9MEksH
+X-Received: by 10.28.122.11 with SMTP id v11mr7583779wmc.38.1516901941924;
+        Thu, 25 Jan 2018 09:39:01 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1516901941; cv=none;
+        d=google.com; s=arc-20160816;
+        b=OAgSQNk+cAMKdYvGnwRvcpDwaHqpQkip6htOanG2n5ZAY2EtWzqYcF+Ej4DTYV0ZXN
+         fIxfs5vasXfRziWHm6S73d+WKdCWFZdbCqrugATCRjMf9dUmc3POCjTJmf3rWH6fQn/Z
+         ZRX3mA98CNuXG2cUhmMXQuvPtOBfeRlUfOYtE60ckyPdXGCYPYhlOcJv93Mk2nOPGVTP
+         MVMGGyiI57HXsly0Hbh2ohjxmjsJ9jamxvu40FM8zF6uSSSnGH+jOmf/LRY6EXbzqpSD
+         puE78uYSNTe2zq8oaXZWLgaQWZIu6Hg4KqgguC+GZbBJUHtTyJQTHvfv18IHHAJXNL7b
+         6+rg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:in-reply-to:mime-version:user-agent:date
+         :message-id:from:references:to:subject:arc-authentication-results;
+        bh=HJjQTP3VetRYpY8TS1rIvvP86hNWICefnPL5LyUyZck=;
+        b=NXEEzB9A5ozmj20im/JwYvftK7mwYJq2K40NTDiiKUtOpYZqnbPyj8yPdBpd667Cdm
+         l5MRk9v5u1IEakTVoIuxmYnyRrb3WU9bpUoFU9XoVPsDXjxNkw65K2nN6hVC+jUUQBdL
+         30dKggjl6MOJPeRCkg3NWXOeFoa48sCJ50WAypgd/4uc4RGPOIewTs2HW3nU97Q4a1s0
+         guk+TEgQsRz6J0YTenO7iWzzu+tkvfyol0f4XC4FzyG2KnkNTa8Fs2/2LH+rosRAL2pG
+         ORTP0/GOU1T7CUgbVGJzsdyKyofDcVCCajdlJh/dTKqvAJt8Vzb6lXApVPkQqWQMdrSa
+         wADw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=temperror (google.com: error in processing during lookup of xct@r3v3rse.de: DNS error) smtp.mailfrom=xct@r3v3rse.de
+Return-Path: <xct@r3v3rse.de>
+Received: from r3v3rse.de ([173.212.239.85])
+        by mx.google.com with ESMTPS id i2si1172166wmc.119.2018.01.25.09.39.01
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+        Thu, 25 Jan 2018 09:39:01 -0800 (PST)
+Received-SPF: temperror (google.com: error in processing during lookup of xct@r3v3rse.de: DNS error) client-ip=173.212.239.85;
+Authentication-Results: mx.google.com;
+       spf=temperror (google.com: error in processing during lookup of xct@r3v3rse.de: DNS error) smtp.mailfrom=xct@r3v3rse.de
+Received: from localhost (localhost [127.0.0.1])
+	by r3v3rse.de (Postfix) with ESMTP id 601A4582ECC
+	for <kurt@seifried.org>; Thu, 25 Jan 2018 18:38:59 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at r3v3rse.de
+Received: from r3v3rse.de ([127.0.0.1])
+	by localhost (r3v3rse.de [127.0.0.1]) (amavisd-new, port 10026)
+	with ESMTP id QhXLu46RjajU for <kurt@seifried.org>;
+	Thu, 25 Jan 2018 18:38:58 +0100 (CET)
+Received: from [192.168.0.14] (ip5f5bd7e0.dynamic.kabel-deutschland.de [95.91.215.224])
+	(Authenticated sender: xct@r3v3rse.de)
+	by r3v3rse.de (Postfix) with ESMTPSA id 34D365826B9
+	for <kurt@seifried.org>; Thu, 25 Jan 2018 18:38:58 +0100 (CET)
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ xct@r3v3rse.de
+To: kurt@seifried.org
+References: <20180125170443.4519.97854@slab.local>
+From: xct <xct@r3v3rse.de>
+Message-ID: <f23a9622-fbdc-9c02-968b-42c2f45c6229@r3v3rse.de>
+Date: Thu, 25 Jan 2018 18:38:58 +0100
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101
+ Thunderbird/52.5.2
+MIME-Version: 1.0
+In-Reply-To: <20180125170443.4519.97854@slab.local>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+
+Am 25/01/2018 um 18:04 schrieb kurt@seifried.org:
+> This is a confirmation email sent from CVE request form at https://iwan=
+tacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you =
+filled out the CVE form and want one, we can't use the data until you acc=
+ept the MITRE CVE Terms of Use).
+>
+> Simply quote the email and reply with "I accept" at the top if you agre=
+e to the MITRE CVE Terms of Use and we will add a copy of the email to th=
+e DWF MITRE CVE Terms of Use acceptance data at https://github.com/distri=
+butedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>
+> The reason we use a complete copy of the email is that it provides an a=
+rtifact showing that the email address accepted the Terms of Use, when th=
+ey were accepted and so on.
+>
+> If you did not submit a CVE request to the DWF you can safely ignore th=
+is message, however we may resend it at some point in the future, if you =
+don't want any future emails simply reply with "unsubscribe" or "DON'T SE=
+ND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block=
+ list so we don't spam you with these, please note that this will prevent=
+ you from being able to accept the MITRE CVE Terms of Use via the DWF aut=
+omatically in future (you'll have to manually ask). But again, if you hav=
+e no idea what a CVE is then you can ignore this/ask to be added to the b=
+lock list with no problems.
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities=
+ and Exposures (CVE=C3=82=C2=AE), you hereby grant to The MITRE Corporati=
+on (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwid=
+e, non-exclusive, no-charge, royalty-free, irrevocable copyright license =
+to reproduce, prepare derivative works of, publicly display, publicly per=
+form, sublicense, and distribute such materials and derivative works. Unl=
+ess required by applicable law or agreed to in writing, you provide such =
+materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KI=
+ND, either express or implied, including, without limitation, any warrant=
+ies or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS=
+ FOR A PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusiv=
+e, no-charge, royalty-free, irrevocable copyright license to reproduce, p=
+repare derivative works of, publicly display, publicly perform, sublicens=
+e, and distribute Common Vulnerabilities and Exposures (CVE=C3=82=C2=AE).=
+ Any copy you make for such purposes is authorized provided that you repr=
+oduce MITRE's copyright designation and this license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE A=
+RE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/=
+SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BO=
+ARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES=
+, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE =
+USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIE=
+D WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> A copy is available at https://github.com/distributedweaknessfiling/DWF=
+-Legal-Acceptance/blob/master/Terms-Of-Use.md
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manuall=
+y with your question/concerns/etc.
+>
+

@@ -1,0 +1,120 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.37.80 with SMTP id l77csp1621994ivl;
+        Wed, 25 Oct 2017 02:37:07 -0700 (PDT)
+X-Received: by 10.28.132.73 with SMTP id g70mr1095866wmd.33.1508924227797;
+        Wed, 25 Oct 2017 02:37:07 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1508924227; cv=none;
+        d=google.com; s=arc-20160816;
+        b=S2st2EOupeduaLc9iJK76voOmsvMPSOhJ/YXgqqj6yPX8jsF6cCUJ4iRF1VzS2tzt8
+         KwshXSu5LA8cs+AbgCqagikuFZ22GlG8aHqXMxiz7Wu7YpUEqXUaj+yZUrEZOsiKp1rj
+         G4wAVbzkUBdJmtIjnfmLCxGAK6Hbt44A6YZxXA11m5PSkO024d4vSYs29lA2U2ijvm/7
+         jGhdJE24/UjbVaLpPJ2OIE2E/FH/l4PJN0InhRPS8vl6nhZ/EZlV3O0MMMzoAnD+Xc+c
+         x7Uvvzi1tFynYoQQDZPFHWUmp21Bb8b16vKMcLTN2Bh3ZQhj/e6wl6E2GIsGib6l+DQu
+         Q46Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:content-language:in-reply-to:mime-version
+         :user-agent:date:message-id:from:references:to:subject
+         :dkim-signature:arc-authentication-results;
+        bh=KJxH9EBLrECwJ8La6WYE1l700ndWjVW5cCiIhT8SROY=;
+        b=BJFcUCOcs5weZa46i0s2tFq4fuCBnd5nVOz+Ng3igdBVA2Nd6TzKGCm/6OzXrW/8Vl
+         6u+kcFhR+pNLf16pOoivWif+BW6uqYqTykbiXXm+HkjPHl4kq8f0vs7u4Z68ccU8PGqc
+         gG4Kh4uQDZ0lUofEtNN0OzqHVzta4rwUY7AHXJjRe6TgIPdsvO+ZB02Ov9xYFnb2Jy5p
+         a5cdokaPCMM0kcIkIAzv6k7pYPmjU+r77Voah8D+Be7D7ivhWsjUQb6HhRrZG65ohgiZ
+         oV19OGwhS9ERRsR0zdzg5tTg2xqbgUboOoTtsztsVA/N5o0CnQG6QHFLxXiv6Z8ETYV6
+         7KlA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@northern.tech header.s=google header.b=XD/UZvS5;
+       spf=pass (google.com: domain of eystein.maloy.stenberg@northern.tech designates 209.85.220.41 as permitted sender) smtp.mailfrom=eystein.maloy.stenberg@northern.tech;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=northern.tech
+Return-Path: <eystein.maloy.stenberg@northern.tech>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id n129sor714576wmn.78.2017.10.25.02.37.07
+        for <kurt@seifried.org>
+        (Google Transport Security);
+        Wed, 25 Oct 2017 02:37:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of eystein.maloy.stenberg@northern.tech designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@northern.tech header.s=google header.b=XD/UZvS5;
+       spf=pass (google.com: domain of eystein.maloy.stenberg@northern.tech designates 209.85.220.41 as permitted sender) smtp.mailfrom=eystein.maloy.stenberg@northern.tech;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=northern.tech
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=northern.tech; s=google;
+        h=subject:to:references:from:message-id:date:user-agent:mime-version
+         :in-reply-to:content-language:content-transfer-encoding;
+        bh=KJxH9EBLrECwJ8La6WYE1l700ndWjVW5cCiIhT8SROY=;
+        b=XD/UZvS5JHdm+dK69ZZiZKZnXe76N2UcIApgzY3DMzs8ApZPazQdfUFhpMLdxtVVuw
+         8SP3VHTGE5TuGTwEF0tBw8RRyqFh+YpNnJTapmWCqhZkGjt3zrNnCBhKm+1M56zSfE29
+         DYt/r3q0h6SLYrqubQJFTuleNA55znIN0FrqYucjmd0jKx5U3ISqzjEZw4kRekwRDRiW
+         uww9J+xsVgmUMhldOz2vnVmHRG+miWVTOG//ktpkkPWkWt3w1jfdwjgEWFOFzpYGbVDT
+         hdEKTYKIy1ex1CEYsZu7DySSjiR1pYUx/9WsPDeL1D8SrGocCGDykNrYYprtC1l2A9Xz
+         rMbQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:subject:to:references:from:message-id:date
+         :user-agent:mime-version:in-reply-to:content-language
+         :content-transfer-encoding;
+        bh=KJxH9EBLrECwJ8La6WYE1l700ndWjVW5cCiIhT8SROY=;
+        b=MZBnUPwD3DaLqTOYDxJ8rYgzihA1g3kgz0goXnUDakyNL285rQ9FyB6+tV16vzOuxI
+         vJLlJqmemhJb1QJw21hZwQKNsWLbzEBJO68p/b5PNoO5/UrGjGv/uHfw7/WDWem9YkF0
+         ZihE70GcHMYl2G9uABmdDEuGB6FQ5iyBAA91cEQm6a3pdkEPdTeWRGLoCZSc5FO7gw7X
+         m8KBHzDYBaCOpEjw1ONzYwqZzkPeGOgiGURpisWQ/dtxwkqXJxW86Cttg5CbKNDMont7
+         ha/VSTwkSRGXYjr+heIi+Yoz0QcAtYapjYH9az6qGE29LSfFkUILsJk6V2n9CxpJNe4k
+         Cbrg==
+X-Gm-Message-State: AMCzsaW7i9mYNKUYdQ4OPMXcCkMZGLqM409GO29qU0axCC8G/C63wc8u
+	xdU8O00exy3rZ0MsVZ3hpkyAAZsjCC4=
+X-Google-Smtp-Source: ABhQp+TsEAmrCAW0WTaD/9fN0fQ3I1Dj8i1gw+PUlyANN167Le6zPvMI7cx76EUFekXF23OWqHyUKg==
+X-Received: by 10.28.100.212 with SMTP id y203mr1226519wmb.100.1508924226688;
+        Wed, 25 Oct 2017 02:37:06 -0700 (PDT)
+Return-Path: <eystein.maloy.stenberg@northern.tech>
+Received: from [10.253.1.178] ([62.168.35.105])
+        by smtp.googlemail.com with ESMTPSA id c142sm2927720wmh.39.2017.10.25.02.37.05
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 25 Oct 2017 02:37:06 -0700 (PDT)
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ eystein.maloy.stenberg@northern.tech
+To: kurt@seifried.org
+References: <20171021205845.19234.36403@shiny-2.local>
+From: =?UTF-8?Q?Eystein_M=c3=a5l=c3=b8y_Stenberg?=
+ <eystein.maloy.stenberg@northern.tech>
+Message-ID: <125149b1-4c91-fc89-0fa2-cc532c3813cd@northern.tech>
+Date: Wed, 25 Oct 2017 11:37:05 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101
+ Thunderbird/52.4.0
+MIME-Version: 1.0
+In-Reply-To: <20171021205845.19234.36403@shiny-2.local>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 8bit
+
+I agree.
+
+On 21/10/17 22:58, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled out the CVE form and want one, we can't use the data until you accept the MITRE CVE Terms of Use).
+> 
+> Simply quote the email and reply with "I accept" at the top if you agree to the MITRE CVE Terms of Use and we will add a copy of the email to the DWF MITRE CVE Terms of Use acceptance data at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+> 
+> The reason we use a complete copy of the email is that it provides an artifact showing that the email address accepted the Terms of Use, when they were accepted and so on.
+> 
+> If you did not submit a CVE request to the DWF you can safely ignore this message, however we may resend it at some point in the future, if you don't want any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so we don't spam you with these, please note that this will prevent you from being able to accept the MITRE CVE Terms of Use via the DWF automatically in future (you'll have to manually ask). But again, if you have no idea what a CVE is then you can ignore this/ask to be added to the block list with no problems.
+> 
+> MITRE CVE Terms of Use
+> 
+> LICENSE
+> 
+> Submissions: For all materials you submit to the Common Vulnerabilities and Exposures (CVEÂ®), you hereby grant to The MITRE Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute such materials and derivative works. Unless required by applicable law or agreed to in writing, you provide such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute Common Vulnerabilities and Exposures (CVEÂ®). Any copy you make for such purposes is authorized provided that you reproduce MITRE's copyright designation and this license in any such copy.
+> 
+> DISCLAIMERS
+> 
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/master/Terms-Of-Use.md
+> 
+> To contact the DWF either hit reply, or email kurt@seifried.org manually with your question/concerns/etc.
+> 
+
+-- 
+
+Eystein

@@ -1,0 +1,349 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a9d:3a09:0:0:0:0:0 with SMTP id j9csp187186otc;
+        Tue, 6 Nov 2018 15:45:28 -0800 (PST)
+X-Google-Smtp-Source: AJdET5cB621iumItDFcOaWWiJ4x5Wp0RNjTayk7DkkQF85KAbzJlCdBwk8ijHXPAvvBzHcd4mFg3
+X-Received: by 2002:a1c:568b:: with SMTP id k133-v6mr31624wmb.4.1541547928253;
+        Tue, 06 Nov 2018 15:45:28 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1541547928; cv=none;
+        d=google.com; s=arc-20160816;
+        b=0ud/dx40mM3itgQKNaTpIzV/jPtwCwrrBgAQHxIxnemzxw8BzQXBaMx236iz6YVNNx
+         tnS++PZ41DpdMaBkMesksuapuT3hzbEZhnEAa80DAimXJi9piyyhHtBwdqwYyiEh56Xy
+         laNp88fE+eGQ/qpbTOqRaxRcg+wk2KIYcC4SFTsdH0LInEV/O5P8iwKiOD/s0LgdMreQ
+         PRB1VetWWlrelD44+g5gWg1f8iM38yq1zCIvTEL6OV5RtuADictnZUT+QYCUdOJNyQp8
+         F4FRB2ljg7/BCCCMnnxuN58E+EsLu9LmwhFz3lkBZwDgubA+ffYKDg7eoRuABfp0yXZ8
+         pqvg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:spamdiagnosticmetadata:spamdiagnosticoutput
+         :content-language:accept-language:in-reply-to:references:message-id
+         :date:thread-index:thread-topic:subject:to:from:dkim-signature;
+        bh=/C3tkSMV84hcrw0Vhm/5I5RsbhjvVAPKmwUMVj8F4t0=;
+        b=Com+HHLWvOUiAWe9Ilg/5DmhiGty/a2VDNQrtfuKO3WGsjN+ieWoBaq8qhRCj3S4/r
+         oi9ES2ymtnMpsj8mGg4+axEKhBmBZ44+6uvbgThGHN+tzqM9d16r66sT4GCVljLz1hm1
+         cWYcdZojBQQw1pw4FQ0j2qySCsqUk0cvpcjtZuO38+P8INgZZ0/CYV6IOkkxjd4yqK8N
+         d/KXiT+16KJUoksGw+VR+HG5MNMQ1SnLjLN3Sg7z5JC0PqLKhwIBhlsEUWXOgPeJa6pD
+         XjqSTHqqhP+8C2F9Lk6CAUFuaMjhaHGAEfLAvvmzJNdjQoiH3+hed5MMhjyr48ZMrt5Y
+         zsWw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@exchangelabsgmu.onmicrosoft.com header.s=selector1-masonlive-gmu-edu header.b=Jcm+6g6Z;
+       spf=neutral (google.com: 40.107.82.91 is neither permitted nor denied by best guess record for domain of tharris9@masonlive.gmu.edu) smtp.mailfrom=tharris9@masonlive.gmu.edu
+Return-Path: <tharris9@masonlive.gmu.edu>
+Received: from NAM01-SN1-obe.outbound.protection.outlook.com (mail-eopbgr820091.outbound.protection.outlook.com. [40.107.82.91])
+        by mx.google.com with ESMTPS id o21-v6si18326225wra.390.2018.11.06.15.45.27
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Tue, 06 Nov 2018 15:45:28 -0800 (PST)
+Received-SPF: neutral (google.com: 40.107.82.91 is neither permitted nor denied by best guess record for domain of tharris9@masonlive.gmu.edu) client-ip=40.107.82.91;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@exchangelabsgmu.onmicrosoft.com header.s=selector1-masonlive-gmu-edu header.b=Jcm+6g6Z;
+       spf=neutral (google.com: 40.107.82.91 is neither permitted nor denied by best guess record for domain of tharris9@masonlive.gmu.edu) smtp.mailfrom=tharris9@masonlive.gmu.edu
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=exchangelabsgmu.onmicrosoft.com; s=selector1-masonlive-gmu-edu;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=/C3tkSMV84hcrw0Vhm/5I5RsbhjvVAPKmwUMVj8F4t0=;
+ b=Jcm+6g6ZnXLDwVkNBe2ZmXPUr7JHrYG/H/0ouWY160v+3jNs1KhRz4vmWFqcwvEoW4+Yeev8SlBhYN2nSvQfQWFGZBQR7WxRzrwDbGvlxgBz/4dHyfyUG79iFZJsEBQXMOmBUxi9nFj4Ved+uidVnirJdBlGUX+2WkoWwd7YVZg=
+Received: from DM5PR01MB2314.prod.exchangelabs.com (10.168.103.144) by
+ DM5PR01MB2732.prod.exchangelabs.com (10.172.186.10) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1294.26; Tue, 6 Nov 2018 23:45:26 +0000
+Received: from DM5PR01MB2314.prod.exchangelabs.com
+ ([fe80::9cfe:f32b:b619:838]) by DM5PR01MB2314.prod.exchangelabs.com
+ ([fe80::9cfe:f32b:b619:838%10]) with mapi id 15.20.1294.034; Tue, 6 Nov 2018
+ 23:45:26 +0000
+From: tharris9 <tharris9@masonlive.gmu.edu>
+To: "kurt@seifried.org" <kurt@seifried.org>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ tharris9@gmu.edu
+Thread-Topic: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ tharris9@gmu.edu
+Thread-Index: AQHUde+fPORk9JOzEEC7ilylPCIAOKVDaZ43
+Date: Tue, 6 Nov 2018 23:45:26 +0000
+Message-ID:
+ <DM5PR01MB23146AA6AD44EE1D681BACB2C7CB0@DM5PR01MB2314.prod.exchangelabs.com>
+References: <20181106164148.7670.84947@bigbox.local>
+In-Reply-To: <20181106164148.7670.84947@bigbox.local>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=tharris9@masonlive.gmu.edu; 
+x-originating-ip: [2601:154:c201:3b7c:6d6f:180:e3e4:456b]
+x-ms-publictraffictype: Email
+x-microsoft-exchange-diagnostics:
+ 1;DM5PR01MB2732;6:GX36q4J1BZnzRxLMkTPWBZz654hSr33ORWklboT+Q0754e1qhSyzULri9ykXBFDhJRrMhEi5eSlHiAspLCNnQazgkNDchrpeqp+ilObDoQPasJbSkOF0Fh5C6OW1rhtgQfJeWKnhu66BRzMFK66fgBXAYIvdp6cS2QAkM0+t+K7uexeQr+Wc7yB1e6OhcWl5lnn9/2UGURDhs7J7CbRbt8ni6EJ1WhAX2lbfA+waDl21166Bi9818YgHzu04hkF6LZ1wKQeN0af0zMy2FL6EyCxIGYW026WKyjTGNhqYmOL6/gNzxz1W20clde1pa7lc6mPbLzqXMPRHanWuCcZ+pQMjrvy/u3HHYSWB960HYsADR3ImxOg1d3cgNO8+TfZ1POWHbLrrmHpXc3aWCv3Ii8YYNPvEZ6Kni7KIsXTpaoCH0kcneYml1+xSt2hKN4SKOXyDczakCzqmW5gS01JTtw==;5:Fh50BF/mH3KxN47HSSr/HTFtWKmtP3ioIHSDruFT2Myf3B9oPa4IYhwaHlFZjU3G09ntTWU/ufgWyv/MCHZPr6gbVudZhCSliSkuiEgl/CXUWc+dTt5LftXUhF52/r/uz7r7njYIiKiA40KwZm5Tx4iMD/LZ41tm4XmV19xKZ1g=;7:xKk7mVcDI2l4FSC50J7omZy8i7EjL3NLDeX/VYOdHUeUIYC5vyhs4821khvCVUfaSF1URLP9OpRfiBO0p3gktm8ATF+oTjP/h5Ai0lBXSLgITtE2Q8MQy5FlC60gsUBcvpWAXVzSVAFZPmOl2b8RDg==
+x-ms-exchange-antispam-srfa-diagnostics: SOS;
+x-ms-office365-filtering-correlation-id: 22bb8ae9-534c-4ff3-21cb-08d64441ed28
+x-microsoft-antispam:
+ BCL:0;PCL:0;RULEID:(7020095)(4652040)(8989299)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(5600074)(711020)(2017052603328)(7153060)(7193020);SRVR:DM5PR01MB2732;
+x-ms-traffictypediagnostic: DM5PR01MB2732:
+x-microsoft-antispam-prvs:
+ <DM5PR01MB27325CC6C12B712D6B5268D4C7CB0@DM5PR01MB2732.prod.exchangelabs.com>
+x-exchange-antispam-report-test: UriScan:(13783010486086)(95692535739014);
+x-ms-exchange-senderadcheck: 1
+x-exchange-antispam-report-cfa-test:
+ BCL:0;PCL:0;RULEID:(6040522)(2401047)(8121501046)(5005006)(3231382)(944501410)(52105095)(3002001)(10201501046)(93006095)(93001095)(148016)(149066)(150057)(6041310)(201703131423095)(201702281529075)(201702281528075)(20161123555045)(201703061421075)(201703061406153)(20161123558120)(20161123560045)(20161123562045)(20161123564045)(201708071742011)(7699051)(76991095);SRVR:DM5PR01MB2732;BCL:0;PCL:0;RULEID:;SRVR:DM5PR01MB2732;
+x-forefront-prvs: 0848C1A6AA
+x-forefront-antispam-report:
+ SFV:NSPM;SFS:(10019020)(136003)(366004)(376002)(346002)(396003)(39860400002)(38564003)(189003)(199004)(13624006)(7696005)(2351001)(966005)(606006)(14454004)(106356001)(46003)(86362001)(575784001)(71200400001)(71190400001)(476003)(11346002)(446003)(8936002)(81156014)(1730700003)(81166006)(5660300001)(8676002)(186003)(786003)(88552002)(316002)(6916009)(75432002)(6606003)(478600001)(105586002)(2900100001)(6116002)(14444005)(256004)(53546011)(2501003)(6506007)(53936002)(33656002)(5640700003)(6436002)(54896002)(236005)(97736004)(102836004)(222073003)(19627405001)(6246003)(86152003)(55016002)(6306002)(9686003)(99286004)(68736007)(7736002)(74316002)(25786009)(486006)(76176011)(2906002)(229853002)(221513004);DIR:OUT;SFP:1102;SCL:1;SRVR:DM5PR01MB2732;H:DM5PR01MB2314.prod.exchangelabs.com;FPR:;SPF:None;LANG:en;PTR:InfoNoRecords;MX:1;A:1;
+received-spf: None (protection.outlook.com: masonlive.gmu.edu does not
+ designate permitted sender hosts)
+x-microsoft-antispam-message-info:
+ 8NOjdqhxuyRyv+ZzVzEftAUxtSS1bgzBHqUaqs6jPqLxC2QjUZekXeN26ndKsv9NOGI8hCjycGSfo1gdXcvtlDgdOLNFLKHIshYzfb7WcBcX+3cttwkcPzXrGStq3/9Rgz+C47RFUfzmREExi7d1z1pAo43X5COM4O9p9m87Pefr6BSnr1X4Amwp5P/60l0hItjkeEKSSJFbi2479sFT/slOxhAeEUFWpEg41rbk2OHpu3u0EcrpfpVXS9iNs+CUnrasWReRGOtYl5F7WmJiQFDs6HJ+ezBGxsVD1WlR/qByBKpdM+AMUjh3rgeJUJ/xWMMHERMtxxIb7kARDNZQaGvxTbDcYGTPXslAf4R/5hg=
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_DM5PR01MB23146AA6AD44EE1D681BACB2C7CB0DM5PR01MB2314prod_"
+MIME-Version: 1.0
+X-OriginatorOrg: masonlive.gmu.edu
+X-MS-Exchange-CrossTenant-Network-Message-Id: 22bb8ae9-534c-4ff3-21cb-08d64441ed28
+X-MS-Exchange-CrossTenant-originalarrivaltime: 06 Nov 2018 23:45:26.1566
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 12630675-1f0d-411c-ace5-a77cd5f48912
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM5PR01MB2732
+
+--_000_DM5PR01MB23146AA6AD44EE1D681BACB2C7CB0DM5PR01MB2314prod_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+I accept.
+
+________________________________
+From: kurt@seifried.org <kurt@seifried.org>
+Sent: Tuesday, November 6, 2018 11:41:48 AM
+To: tharris9@gmu.edu
+Subject: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for tharris9@gm=
+u.edu
+
+This is a confirmation email sent from CVE request form at https://secure-w=
+eb.cisco.com/1g5pwAIGP-Lwfi0QOIOrC9TJdT9suZ-7z6hKnUwh2CR-rfNeuE-FqIOn9N7IDo=
+BKB4_ety6uj67nGQZp9w60RKkLw8-6DIVEcxJycAucTKG4350RCwRnDD8FcRLuWjJ_cnG36h8xq=
+B742NxaFVQsuGs5nX6aqoChhf-upINSMx0HVKTfD4H9Pcg2TK3wbMjiOGi1bRMw0b0E35JStT3k=
+oknb6gQPKophReMt_fD-_9dq5nSeu3iROwN2R78B9yaQTp0dMNGLXBh4oFHASAQ2uCtFFvA8Pdn=
+6YYRcE4T5I7TWSmhU2rGu-KHUWhQizlZn6eEPQflOKaDYi7-VHnTadYRHyD0j7JK_u8yqnrYxhK=
+7BCy0p_TrqrrREml0ns1yrK9tXSpvQ-GSDaBbmCpZKPpg/https%3A%2F%2Fiwantacve.org%2=
+F asking you to accept the MITRE CVE Terms of Use (assuming you filled out =
+the CVE form and want one, we can't use the data until you accept the MITRE=
+ CVE Terms of Use).
+
+Simply quote the email and reply with "I accept" at the top if you agree to=
+ the MITRE CVE Terms of Use and we will add a copy of the email to the DWF =
+MITRE CVE Terms of Use acceptance data at https://secure-web.cisco.com/1RfR=
+yErU-DGB7Q51jRa32s6T9pA2HVqw5EV9NcjGHjNwJ_dsAeTOEezn-jUoxmjkvvMmzy_XZ6KQpe-=
+Ubhw5YyNuElnEqZC5ci3wFM5JWdRZsQPPXNBO6zUFqZYv7jjFV7TADvd17bWuvv9koF8Y4j3aw2=
+p99yrJ1i6HcRFTXfPDENlEGa8D0JMuLNiaw9r03yJo5bVUrNKGKB6vJL9qyyP4J1-Kvg2xB4wgf=
+_0gx-sCX1w1X8PlIvPdNuRYMsCVpcW9yjUGZjVSNJEok3chFNcr_xvmZo42ifJcFApmAbcgUiln=
+km4xh2uGTan2sK33oYziSubIhGDIlETsSio5LM7r32v--GNapdJg1hPODqm-RILDcIPTjP97d8I=
+QgJZLF1mZoOgWpcqohgK7bxU6q4w/https%3A%2F%2Fgithub.com%2Fdistributedweakness=
+filing%2FDWF-Legal-Acceptance%2Ftree%2Fmaster%2FTerms-Of-Use
+
+The reason we use a complete copy of the email is that it provides an artif=
+act showing that the email address accepted the Terms of Use, when they wer=
+e accepted and so on.
+
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don't =
+want any future emails simply reply with "unsubscribe" or "DON'T SEND ME TH=
+IS EMAIL EVER AGAIN" and I'll add your email address to the block list so w=
+e don't spam you with these, please note that this will prevent you from be=
+ing able to accept the MITRE CVE Terms of Use via the DWF automatically in =
+future (you'll have to manually ask). But again, if you have no idea what a=
+ CVE is then you can ignore this/ask to be added to the block list with no =
+problems.
+
+MITRE CVE Terms of Use
+
+LICENSE
+
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+ Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and a=
+ll CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable copyright license to reproduce, prepar=
+e derivative works of, publicly display, publicly perform, sublicense, and =
+distribute such materials and derivative works. Unless required by applicab=
+le law or agreed to in writing, you provide such materials on an "AS IS" BA=
+SIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implie=
+d, including, without limitation, any warranties or conditions of TITLE, NO=
+N-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare=
+ derivative works of, publicly display, publicly perform, sublicense, and d=
+istribute Common Vulnerabilities and Exposures (CVE??). Any copy you make f=
+or such purposes is authorized provided that you reproduce MITRE's copyrigh=
+t designation and this license in any such copy.
+
+DISCLAIMERS
+
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE RE=
+PRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF T=
+RUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS =
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE I=
+NFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES O=
+F MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+A copy is available at https://secure-web.cisco.com/1DSbAcwAhLtl7_bXGTItHiT=
+mFGoiNtjWlwFjaxADKx55-wjn9O9LBh0a3oBREgqqYuD3n-AWy_15AlptBnczo_r0XnTuD9taly=
+jOMK1-r8EWGCXnPTyw7sgyzg7iEGqKcyDxx59vCGgv17uA9-PbmbR-Zpx_vGcJFDmwV4wHVtBwi=
+o2DcD-9wz6vfC_Z4gHnXz5b_Wp45warDTVC8T2zhR1l2Hkkn_OKhIcTnzz9hlcL6v7KiCcIxs1T=
+9wUnEqfK6BaeqzexZtQmGajcUh4DBO7m_ehhoDbyDtTTGDPVVdH_6SFBWvL4tocgd4KCggnuV29=
+GbrIKjwQ0GAtec77hEn1HeLjjWG_TW1zJSdCe-30hI0XILuc3jzaevxFM2dVRu5pJRSU3NSVR1d=
+lsB9LiUcA/https%3A%2F%2Fgithub.com%2Fdistributedweaknessfiling%2FDWF-Legal-=
+Acceptance%2Fblob%2Fmaster%2FTerms-Of-Use.md
+
+To contact the DWF either hit reply, or email kurt@seifried.org manually wi=
+th your question/concerns/etc.
+
+
+
+--_000_DM5PR01MB23146AA6AD44EE1D681BACB2C7CB0DM5PR01MB2314prod_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Helvetica,sans-serif;" dir=3D"ltr">
+<p style=3D"margin-top:0;margin-bottom:0">I accept.</p>
+</div>
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>From:</b> kurt@seifried.org &lt=
+;kurt@seifried.org&gt;<br>
+<b>Sent:</b> Tuesday, November 6, 2018 11:41:48 AM<br>
+<b>To:</b> tharris9@gmu.edu<br>
+<b>Subject:</b> DWF/CVE - Acceptance of MITRE Terms of Use for CVE for thar=
+ris9@gmu.edu</font>
+<div>&nbsp;</div>
+</div>
+<div class=3D"BodyFragment"><font size=3D"2"><span style=3D"font-size:11pt;=
+">
+<div class=3D"PlainText">This is a confirmation email sent from CVE request=
+ form at
+<a href=3D"https://secure-web.cisco.com/1g5pwAIGP-Lwfi0QOIOrC9TJdT9suZ-7z6h=
+KnUwh2CR-rfNeuE-FqIOn9N7IDoBKB4_ety6uj67nGQZp9w60RKkLw8-6DIVEcxJycAucTKG435=
+0RCwRnDD8FcRLuWjJ_cnG36h8xqB742NxaFVQsuGs5nX6aqoChhf-upINSMx0HVKTfD4H9Pcg2T=
+K3wbMjiOGi1bRMw0b0E35JStT3koknb6gQPKophReMt_fD-_9dq5nSeu3iROwN2R78B9yaQTp0d=
+MNGLXBh4oFHASAQ2uCtFFvA8Pdn6YYRcE4T5I7TWSmhU2rGu-KHUWhQizlZn6eEPQflOKaDYi7-=
+VHnTadYRHyD0j7JK_u8yqnrYxhK7BCy0p_TrqrrREml0ns1yrK9tXSpvQ-GSDaBbmCpZKPpg/ht=
+tps%3A%2F%2Fiwantacve.org%2F">
+https://secure-web.cisco.com/1g5pwAIGP-Lwfi0QOIOrC9TJdT9suZ-7z6hKnUwh2CR-rf=
+NeuE-FqIOn9N7IDoBKB4_ety6uj67nGQZp9w60RKkLw8-6DIVEcxJycAucTKG4350RCwRnDD8Fc=
+RLuWjJ_cnG36h8xqB742NxaFVQsuGs5nX6aqoChhf-upINSMx0HVKTfD4H9Pcg2TK3wbMjiOGi1=
+bRMw0b0E35JStT3koknb6gQPKophReMt_fD-_9dq5nSeu3iROwN2R78B9yaQTp0dMNGLXBh4oFH=
+ASAQ2uCtFFvA8Pdn6YYRcE4T5I7TWSmhU2rGu-KHUWhQizlZn6eEPQflOKaDYi7-VHnTadYRHyD=
+0j7JK_u8yqnrYxhK7BCy0p_TrqrrREml0ns1yrK9tXSpvQ-GSDaBbmCpZKPpg/https%3A%2F%2=
+Fiwantacve.org%2F</a>
+ asking you to accept the MITRE CVE Terms of Use (assuming you filled out t=
+he CVE form and want one, we can't use the data until you accept the MITRE =
+CVE Terms of Use).
+<br>
+<br>
+Simply quote the email and reply with &quot;I accept&quot; at the top if yo=
+u agree to the MITRE CVE Terms of Use and we will add a copy of the email t=
+o the DWF MITRE CVE Terms of Use acceptance data at
+<a href=3D"https://secure-web.cisco.com/1RfRyErU-DGB7Q51jRa32s6T9pA2HVqw5EV=
+9NcjGHjNwJ_dsAeTOEezn-jUoxmjkvvMmzy_XZ6KQpe-Ubhw5YyNuElnEqZC5ci3wFM5JWdRZsQ=
+PPXNBO6zUFqZYv7jjFV7TADvd17bWuvv9koF8Y4j3aw2p99yrJ1i6HcRFTXfPDENlEGa8D0JMuL=
+Niaw9r03yJo5bVUrNKGKB6vJL9qyyP4J1-Kvg2xB4wgf_0gx-sCX1w1X8PlIvPdNuRYMsCVpcW9=
+yjUGZjVSNJEok3chFNcr_xvmZo42ifJcFApmAbcgUilnkm4xh2uGTan2sK33oYziSubIhGDIlET=
+sSio5LM7r32v--GNapdJg1hPODqm-RILDcIPTjP97d8IQgJZLF1mZoOgWpcqohgK7bxU6q4w/ht=
+tps%3A%2F%2Fgithub.com%2Fdistributedweaknessfiling%2FDWF-Legal-Acceptance%2=
+Ftree%2Fmaster%2FTerms-Of-Use">
+https://secure-web.cisco.com/1RfRyErU-DGB7Q51jRa32s6T9pA2HVqw5EV9NcjGHjNwJ_=
+dsAeTOEezn-jUoxmjkvvMmzy_XZ6KQpe-Ubhw5YyNuElnEqZC5ci3wFM5JWdRZsQPPXNBO6zUFq=
+ZYv7jjFV7TADvd17bWuvv9koF8Y4j3aw2p99yrJ1i6HcRFTXfPDENlEGa8D0JMuLNiaw9r03yJo=
+5bVUrNKGKB6vJL9qyyP4J1-Kvg2xB4wgf_0gx-sCX1w1X8PlIvPdNuRYMsCVpcW9yjUGZjVSNJE=
+ok3chFNcr_xvmZo42ifJcFApmAbcgUilnkm4xh2uGTan2sK33oYziSubIhGDIlETsSio5LM7r32=
+v--GNapdJg1hPODqm-RILDcIPTjP97d8IQgJZLF1mZoOgWpcqohgK7bxU6q4w/https%3A%2F%2=
+Fgithub.com%2Fdistributedweaknessfiling%2FDWF-Legal-Acceptance%2Ftree%2Fmas=
+ter%2FTerms-Of-Use</a><br>
+<br>
+The reason we use a complete copy of the email is that it provides an artif=
+act showing that the email address accepted the Terms of Use, when they wer=
+e accepted and so on.
+<br>
+<br>
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don't =
+want any future emails simply reply with &quot;unsubscribe&quot; or &quot;D=
+ON'T SEND ME THIS EMAIL EVER AGAIN&quot; and I'll add
+ your email address to the block list so we don't spam you with these, plea=
+se note that this will prevent you from being able to accept the MITRE CVE =
+Terms of Use via the DWF automatically in future (you'll have to manually a=
+sk). But again, if you have no idea
+ what a CVE is then you can ignore this/ask to be added to the block list w=
+ith no problems.
+<br>
+<br>
+MITRE CVE Terms of Use<br>
+<br>
+LICENSE<br>
+<br>
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+ Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and a=
+ll CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable
+ copyright license to reproduce, prepare derivative works of, publicly disp=
+lay, publicly perform, sublicense, and distribute such materials and deriva=
+tive works. Unless required by applicable law or agreed to in writing, you =
+provide such materials on an &quot;AS
+ IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expre=
+ss or implied, including, without limitation, any warranties or conditions =
+of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PU=
+RPOSE.<br>
+<br>
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare=
+ derivative works of, publicly display, publicly perform, sublicense, and d=
+istribute Common Vulnerabilities
+ and Exposures (CVE??). Any copy you make for such purposes is authorized p=
+rovided that you reproduce MITRE's copyright designation and this license i=
+n any such copy.<br>
+<br>
+DISCLAIMERS<br>
+<br>
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN &quot;AS IS&quot; BASIS AND THE CONTRIBUTOR, THE ORGANIZATION=
+ HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS =
+BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES,
+ DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO =
+ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY =
+RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTIC=
+ULAR PURPOSE.<br>
+<br>
+A copy is available at <a href=3D"https://secure-web.cisco.com/1DSbAcwAhLtl=
+7_bXGTItHiTmFGoiNtjWlwFjaxADKx55-wjn9O9LBh0a3oBREgqqYuD3n-AWy_15AlptBnczo_r=
+0XnTuD9talyjOMK1-r8EWGCXnPTyw7sgyzg7iEGqKcyDxx59vCGgv17uA9-PbmbR-Zpx_vGcJFD=
+mwV4wHVtBwio2DcD-9wz6vfC_Z4gHnXz5b_Wp45warDTVC8T2zhR1l2Hkkn_OKhIcTnzz9hlcL6=
+v7KiCcIxs1T9wUnEqfK6BaeqzexZtQmGajcUh4DBO7m_ehhoDbyDtTTGDPVVdH_6SFBWvL4tocg=
+d4KCggnuV29GbrIKjwQ0GAtec77hEn1HeLjjWG_TW1zJSdCe-30hI0XILuc3jzaevxFM2dVRu5p=
+JRSU3NSVR1dlsB9LiUcA/https%3A%2F%2Fgithub.com%2Fdistributedweaknessfiling%2=
+FDWF-Legal-Acceptance%2Fblob%2Fmaster%2FTerms-Of-Use.md">
+https://secure-web.cisco.com/1DSbAcwAhLtl7_bXGTItHiTmFGoiNtjWlwFjaxADKx55-w=
+jn9O9LBh0a3oBREgqqYuD3n-AWy_15AlptBnczo_r0XnTuD9talyjOMK1-r8EWGCXnPTyw7sgyz=
+g7iEGqKcyDxx59vCGgv17uA9-PbmbR-Zpx_vGcJFDmwV4wHVtBwio2DcD-9wz6vfC_Z4gHnXz5b=
+_Wp45warDTVC8T2zhR1l2Hkkn_OKhIcTnzz9hlcL6v7KiCcIxs1T9wUnEqfK6BaeqzexZtQmGaj=
+cUh4DBO7m_ehhoDbyDtTTGDPVVdH_6SFBWvL4tocgd4KCggnuV29GbrIKjwQ0GAtec77hEn1HeL=
+jjWG_TW1zJSdCe-30hI0XILuc3jzaevxFM2dVRu5pJRSU3NSVR1dlsB9LiUcA/https%3A%2F%2=
+Fgithub.com%2Fdistributedweaknessfiling%2FDWF-Legal-Acceptance%2Fblob%2Fmas=
+ter%2FTerms-Of-Use.md</a><br>
+<br>
+To contact the DWF either hit reply, or email kurt@seifried.org manually wi=
+th your question/concerns/etc.
+<br>
+<br>
+<br>
+</div>
+</span></font></div>
+</body>
+</html>
+
+--_000_DM5PR01MB23146AA6AD44EE1D681BACB2C7CB0DM5PR01MB2314prod_--

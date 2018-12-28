@@ -1,0 +1,75 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.31.230.197 with SMTP id d188csp12371vkh;
+        Thu, 6 Oct 2016 10:48:45 -0700 (PDT)
+X-Received: by 10.202.197.77 with SMTP id v74mr12954141oif.42.1475776125864;
+        Thu, 06 Oct 2016 10:48:45 -0700 (PDT)
+Return-Path: <mike.catanzaro@gmail.com>
+Received: from mail-oi0-x234.google.com (mail-oi0-x234.google.com. [2607:f8b0:4003:c06::234])
+        by mx.google.com with ESMTPS id a22si13696632ota.11.2016.10.06.10.48.45
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 06 Oct 2016 10:48:45 -0700 (PDT)
+Received-SPF: pass (google.com: domain of mike.catanzaro@gmail.com designates 2607:f8b0:4003:c06::234 as permitted sender) client-ip=2607:f8b0:4003:c06::234;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com;
+       spf=pass (google.com: domain of mike.catanzaro@gmail.com designates 2607:f8b0:4003:c06::234 as permitted sender) smtp.mailfrom=mike.catanzaro@gmail.com
+Received: by mail-oi0-x234.google.com with SMTP id m72so30043269oik.3
+        for <kurt@seifried.org>; Thu, 06 Oct 2016 10:48:45 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=sender:message-id:subject:from:to:date:in-reply-to:references
+         :mime-version:content-transfer-encoding;
+        bh=KLdnMGSsuwz8RT9sXVlmg9xdYQlc75Q/LHLs9oZktac=;
+        b=KCgM8MMAVbQzoxjpxctmuZqPoNpo40c7aOyYfXeIcx7MBlC4mMHVJUktJAPYe4yygq
+         t1tBxRBwhPpBz3yKKE9ROAampc6xCTDFWy1apkDDuAF+SwKQEETdqIXIB9iGlTr77oZM
+         O/BQUebOANuYYHUg+3PPryEzYgol2KxHoBkpDXBm17uaxNTJW38/avxABP1UgPkLW29d
+         jGhrl8+BnEJf5kDtnP9LpDyXQLs9TBCREOgHQpSXzUw6JpfKo5TXQ8kVZL3R8jNxJKNp
+         CZWdSia2Fj9dqy+d6/FVkY4K15WCIyzttlKxHhOzBhtcwXFAavabJIQGw4NK4DStQPH3
+         x7vg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:sender:message-id:subject:from:to:date
+         :in-reply-to:references:mime-version:content-transfer-encoding;
+        bh=KLdnMGSsuwz8RT9sXVlmg9xdYQlc75Q/LHLs9oZktac=;
+        b=cQsijZstGa10fdjW72e7F2EP+iKlmbcaOji881Zoufl3y5470JoDqOrGmtAGcDLdcs
+         hguPZFPEqTt5nzRssLqhzUz4JAUjuVKB1w5yyeay4turHOelE8n7Y/7bOZ8HwE58jfnZ
+         ZmomOwrbb5sKCtD9MuNOV7VTB7eJ7EZGKeWT84dKBlqi7wBd179TI9XtEnDnzHtjGbCK
+         HYUjerWNd1rN+Oz7x2YkEXTfdF0AMSFTrCvgXkLjaz4SOO6KkavhG0wzAFkghUSTNO3q
+         4cpJytFTdVm9/EVwSqmauDTRPruLnIG+Msiknkjt5k/6j7Y5csyOVX8VaWAK8goH/US4
+         5SZg==
+X-Gm-Message-State: AA6/9RmAHHcJnIoFOcQVmjvVS+SxsJx6peyXx8oVj7tkNvcMCcYVBEEeCZUSkgDA5L9VCA==
+X-Received: by 10.157.26.103 with SMTP id u36mr10337533otu.86.1475776125199;
+        Thu, 06 Oct 2016 10:48:45 -0700 (PDT)
+Return-Path: <mike.catanzaro@gmail.com>
+Received: from 67-43-243-118.fidnet.com (67-43-243-118.fidnet.com. [67.43.243.118])
+        by smtp.googlemail.com with ESMTPSA id a62sm974989oic.16.2016.10.06.10.48.43
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+        Thu, 06 Oct 2016 10:48:43 -0700 (PDT)
+Sender: Michael Catanzaro <mike.catanzaro@gmail.com>
+Message-ID: <1475776122.24479.2.camel@gnome.org>
+Subject: Re: CVE - Acceptance of MITRE Terms of Use for CVE Entry
+From: Michael Catanzaro <mcatanzaro@gnome.org>
+To: Kurt Seifried <kurt@seifried.org>
+Date: Thu, 06 Oct 2016 12:48:42 -0500
+In-Reply-To: <CABqVa389M7sL+Eps-5arKhfwbJ=0kjhAFxzW50eQBGP9a_HsLw@mail.gmail.com>
+References: 
+	<CABqVa389M7sL+Eps-5arKhfwbJ=0kjhAFxzW50eQBGP9a_HsLw@mail.gmail.com>
+Content-Type: text/plain; charset="UTF-8"
+X-Mailer: Evolution 3.20.5 (3.20.5-1.fc24) 
+Mime-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+On Thu, 2016-10-06 at 10:48 -0600, Kurt Seifried wrote:
+> Hi, I need to confirm that you have accepted the MITRE Terms of Use
+> for CVE,
+> available at:
+> 
+> https://github.com/distributedweaknessfiling/DWF-Database/
+> blob/master/TermsOfUse.md
+> 
+> and quoted below, please reply with "I accept" and I'll be able to
+> process
+> your CVE request. Thanks!
+
+I accept.

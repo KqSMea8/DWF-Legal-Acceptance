@@ -1,0 +1,245 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.6.162 with SMTP id g31csp125559uag;
+        Tue, 9 May 2017 19:30:34 -0700 (PDT)
+X-Received: by 10.200.44.130 with SMTP id 2mr3525923qtw.59.1494383434379;
+        Tue, 09 May 2017 19:30:34 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1494383434; cv=none;
+        d=google.com; s=arc-20160816;
+        b=wh6a77VcSokO+C/HdaOsfLa+vdH7Zv25LoYCiUa5JypRAgY/Kfj3+8JMgtQ3U3pows
+         Ld9uk02LZzAg/vnmem/vXBta9npT2HBR2AkGO7uvYh3XKd7Gsi82wWXXIGGK1HESt1GD
+         qDw/E5lQPje36wZAunPS/X2yWmoZdjd1ee7BoR8lSIgp8AH7tHRLmDXaQsbEmjedv4Fz
+         YzrnE0bt8XrAq+KsemDBfzBRcIKtZp3WZHOJQ8dYko1dKLgCLi+3QkO2od+nTuBGug5l
+         T7FU9xXPgnUXa/jlIJmBaYhBClNgEZvLfLDTqGNMdSiqZZx86CXKsVEoK4nYh3JpqtFg
+         saKQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:references:in-reply-to:message-id:to:from:date
+         :dkim-signature:arc-authentication-results;
+        bh=GhxzZfVy0diCPD/xsw0rdTUNj67hCSKw8GGGKU3oYcM=;
+        b=pr6MFyWKCOmocNPC1EOUl8lgkTNLtBSLXo4cG60SIzROiY81Oc3mFU/jZvdJDWaAi+
+         FB+AcPEaImgmEr7aDZefviEeKBlZeSft2V2eH/QW/kh7kAwbP0rHOdS6qrjfB5TTgCi/
+         f6ZE45C6jMO40S8WA67gp9Vj6w44VjbQIaeq2rb0ivVR5hsa3zJHehNIyFftSAHd8lih
+         qej4iirF40goraYXg0JkdC1TIEYrnQg+zf+m6xxsM3fRe+/cap81uWq2q7OdsccPs6/D
+         Ps2eRPkB0G2Rn6FcFGIiwVLjVooCAzTnTOehOVoQRHvVJI2R9pNIpeFi2pyIPJCP5WK6
+         uWtA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@cmu-edu.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c09::22a is neither permitted nor denied by best guess record for domain of ghakobya@andrew.cmu.edu) smtp.mailfrom=ghakobya@andrew.cmu.edu;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=cmu.edu
+Return-Path: <ghakobya@andrew.cmu.edu>
+Received: from mail-qk0-x22a.google.com (mail-qk0-x22a.google.com. [2607:f8b0:400d:c09::22a])
+        by mx.google.com with ESMTPS id u10si1731403qta.278.2017.05.09.19.30.34
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 09 May 2017 19:30:34 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::22a is neither permitted nor denied by best guess record for domain of ghakobya@andrew.cmu.edu) client-ip=2607:f8b0:400d:c09::22a;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@cmu-edu.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c09::22a is neither permitted nor denied by best guess record for domain of ghakobya@andrew.cmu.edu) smtp.mailfrom=ghakobya@andrew.cmu.edu;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=cmu.edu
+Received: by mail-qk0-x22a.google.com with SMTP id k74so17060556qke.1
+        for <kurt@seifried.org>; Tue, 09 May 2017 19:30:34 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=cmu-edu.20150623.gappssmtp.com; s=20150623;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version;
+        bh=GhxzZfVy0diCPD/xsw0rdTUNj67hCSKw8GGGKU3oYcM=;
+        b=tU0Gpp/b/3tT1OsvelOwx25swZWOjChzcsphEvtUvqXvbdd4PQ9dPjA/lhXwZnd8y1
+         SknXBDbE4DT20cpMBxU3sj2VliN9RYXDGc8yy0mX840hv0NREgSmoaSMd7RJmjgBkxb/
+         AxeBZmyfYd1DxKZQOVqDcur7jj2PJ86fJIQhlf3YExH7K0YMDa53ghByPMBnWuYMKJRj
+         ApStlpNPndRPLqo2G3y2/6lp7aRrIRWBwzDjKU6DLamsTxEBXNxuyTG0h7lWTCTCDuV4
+         VMwqLItVTw4QpTeTJ1Dlm8VkAkj1oySHE3XD+g9bIRPKSu3JVentrxK7Yf4zMo/pynAz
+         puJQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:date:from:to:message-id:in-reply-to:references
+         :subject:mime-version;
+        bh=GhxzZfVy0diCPD/xsw0rdTUNj67hCSKw8GGGKU3oYcM=;
+        b=ioHpXO7qcG1iOIYb4ZJ2357ozJ5e+H8RIgDBKXw39wEXCrXFlu7OcSrngR7p6Mo61M
+         fgGgxxH9zdHyPjJLBYwy2Dg6qHM7MWo97GIbhW1/FWYNINR3nVHuuBWfy+apSXm4rT2g
+         uhtW2390NLaxUEmrUIf7AbAMjCgjoSNNbqjGNNgsnzRQoHKF5WXaBOIRXl00FBylY7eu
+         YtUQp27J63NY3pUYKH+c9kilB/7G1292VQ6AAI/ghsm0FIFR5/D5gSbzcydoEjHMXd4y
+         uQzm/9xpxHQA+FIFgFYvOC40oV40WFnBPlvFMlehF5muVkohYDibSdWvMFFylQ99NTk6
+         yYCA==
+X-Gm-Message-State: AODbwcBNzR619GkvUlyJqt8Z2lKVAMScSDzN+8Qh/7OZbrAAFoaPcCLN
+	XJCj86i/oUwZQ1W1I/4B2Q==
+X-Received: by 10.55.110.70 with SMTP id j67mr3118546qkc.145.1494383433952;
+        Tue, 09 May 2017 19:30:33 -0700 (PDT)
+Return-Path: <ghakobya@andrew.cmu.edu>
+Received: from [2601:547:500:d594:7059:e389:70::] ([2601:547:500:d594:757e:6f9b:8630:9c0c])
+        by smtp.gmail.com with ESMTPSA id 94sm1313515qte.37.2017.05.09.19.30.33
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 09 May 2017 19:30:33 -0700 (PDT)
+Date: Tue, 9 May 2017 22:30:22 -0400
+From: Gurgen Hakobyan <hakobyan@cmu.edu>
+To: kurt@seifried.org
+Message-ID: <f51a482d-5e04-4350-8024-40b6bc2043c2@Spark>
+In-Reply-To: <20170510023001.8102.61209@bigbox.local>
+References: <20170510023001.8102.61209@bigbox.local>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ hakobyan@cmu.edu
+X-Readdle-Message-ID: f51a482d-5e04-4350-8024-40b6bc2043c2@Spark
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="59127b47_7545e146_1f92"
+
+--59127b47_7545e146_1f92
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+I accept
+
+---
+Regards,
+Gurgen Hakobyan
+
+On May 9, 2017, 22:30 -0400, kurt=40seifried.org, wrote:
+> This is a confirmation email sent from CVE request form at https://iwan=
+tacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you =
+filled out the CVE form and want one, we can't use the data until you acc=
+ept the MITRE CVE Terms of Use).
+>
+> Simply quote the email and reply with =22I accept=22 at the top if you =
+agree to the MITRE CVE Terms of Use and we will add it to the DW=46 MITRE=
+ CVE Terms of Use acceptance data at https://github.com/distributedweakne=
+ssfiling/DW=46-Legal-Acceptance/tree/master/Terms-Of-Use
+>
+> If you did not submit a CVE request to the DW=46 you can safely ignore =
+this message, however we may resend it at some point in the future, if yo=
+u don't want any future emails simply reply with =22unsubscribe=22 or =22=
+DON'T SEND ME THIS EMAIL EVER AGAIN=22 and I'll add your email address to=
+ the block list so we don't spam you with these, please note that this wi=
+ll prevent you from being able to accept the MITRE CVE Terms of Use via t=
+he DW=46 automatically in future (you'll have to manually ask). But again=
+, if you have no idea what a CVE is then you can ignore this/ask to be ad=
+ded to the block list with no problems.
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: =46or all materials you submit to the Common Vulnerabiliti=
+es and Exposures (CVE=C3=82=C2=AE), you hereby grant to The MITRE Corpora=
+tion (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldw=
+ide, non-exclusive, no-charge, royalty-free, irrevocable copyright licens=
+e to reproduce, prepare derivative works of, publicly display, publicly p=
+erform, sublicense, and distribute such materials and derivative works. U=
+nless required by applicable law or agreed to in writing, you provide suc=
+h materials on an =22AS IS=22 BASIS, WITHOUT WARRANTIES OR CONDITIONS O=46=
+ ANY KIND, either express or implied, including, without limitation, any =
+warranties or conditions of TITLE, NON-IN=46RINGEMENT, MERCHANTABILITY, o=
+r =46ITNESS =46OR A PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusiv=
+e, no-charge, royalty-free, irrevocable copyright license to reproduce, p=
+repare derivative works of, publicly display, publicly perform, sublicens=
+e, and distribute Common Vulnerabilities and Exposures (CVE=C3=82=C2=AE).=
+ Any copy you make for such purposes is authorized provided that you repr=
+oduce MITRE's copyright designation and this license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE IN=46ORMATION CONTAINED THEREIN PROVIDED BY MITRE=
+ ARE PROVIDED ON AN =22AS IS=22 BASIS AND THE CONTRIBUTOR, THE ORGANIZATI=
+ON HE/SHE REPRESENTS OR IS SPONSORED BY (I=46 ANY), THE MITRE CORPORATION=
+, ITS BOARD O=46 TRUSTEES, O=46=46ICERS, AGENTS, AND EMPLOYEES, DISCLAIM =
+ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARR=
+ANTY THAT THE USE O=46 THE IN=46ORMATION THEREIN WILL NOT IN=46RINGE ANY =
+RIGHTS OR ANY IMPLIED WARRANTIES O=46 MERCHANTABILITY OR =46ITNESS =46OR =
+A PARTICULAR PURPOSE.
+>
+> A copy is available at https://github.com/distributedweaknessfiling/DW=46=
+-Database/blob/master/TermsOfUse.md
+>
+> To contact the DW=46 either hit reply, or email kurt=40seifried.org man=
+ually with your question/concerns/etc.
+>
+
+--59127b47_7545e146_1f92
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+<html xmlns=3D=22http://www.w3.org/1999/xhtml=22>
+<head>
+<title></title>
+</head>
+<body>
+<div name=3D=22messageBodySection=22 style=3D=22font-size: 14px; font-fam=
+ily: -apple-system, BlinkMacSystem=46ont, sans-serif;=22>I accept</div>
+<div name=3D=22messageSignatureSection=22 style=3D=22font-size: 14px; fon=
+t-family: -apple-system, BlinkMacSystem=46ont, sans-serif;=22><br />
+---<br />
+Regards,<br />
+Gurgen Hakobyan</div>
+<div name=3D=22messageReplySection=22 style=3D=22font-size: 14px; font-fa=
+mily: -apple-system, BlinkMacSystem=46ont, sans-serif;=22><br />
+On May 9, 2017, 22:30 -0400, kurt=40seifried.org, wrote:<br />
+<blockquote type=3D=22cite=22 style=3D=22margin: 5px 5px; padding-left: 1=
+0px; border-left: thin solid =231abc9c;=22>This is a confirmation email s=
+ent from CVE request form at https://iwantacve.org/ asking you to accept =
+the MITRE CVE Terms of Use (assuming you filled out the CVE form and want=
+ one, we can't use the data until you accept the MITRE CVE Terms of Use).=
+<br />
+<br />
+Simply quote the email and reply with =22I accept=22 at the top if you ag=
+ree to the MITRE CVE Terms of Use and we will add it to the DW=46 MITRE C=
+VE Terms of Use acceptance data at https://github.com/distributedweakness=
+filing/DW=46-Legal-Acceptance/tree/master/Terms-Of-Use<br />
+<br />
+If you did not submit a CVE request to the DW=46 you can safely ignore th=
+is message, however we may resend it at some point in the future, if you =
+don't want any future emails simply reply with =22unsubscribe=22 or =22DO=
+N'T SEND ME THIS EMAIL EVER AGAIN=22 and I'll add your email address to t=
+he block list so we don't spam you with these, please note that this will=
+ prevent you from being able to accept the MITRE CVE Terms of Use via the=
+ DW=46 automatically in future (you'll have to manually ask). But again, =
+if you have no idea what a CVE is then you can ignore this/ask to be adde=
+d to the block list with no problems.<br />
+<br />
+MITRE CVE Terms of Use<br />
+<br />
+LICENSE<br />
+<br />
+Submissions: =46or all materials you submit to the Common Vulnerabilities=
+ and Exposures (CVE=C3=82=C2=AE), you hereby grant to The MITRE Corporati=
+on (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwid=
+e, non-exclusive, no-charge, royalty-free, irrevocable copyright license =
+to reproduce, prepare derivative works of, publicly display, publicly per=
+form, sublicense, and distribute such materials and derivative works. Unl=
+ess required by applicable law or agreed to in writing, you provide such =
+materials on an =22AS IS=22 BASIS, WITHOUT WARRANTIES OR CONDITIONS O=46 =
+ANY KIND, either express or implied, including, without limitation, any w=
+arranties or conditions of TITLE, NON-IN=46RINGEMENT, MERCHANTABILITY, or=
+ =46ITNESS =46OR A PARTICULAR PURPOSE.<br />
+<br />
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,=
+ no-charge, royalty-free, irrevocable copyright license to reproduce, pre=
+pare derivative works of, publicly display, publicly perform, sublicense,=
+ and distribute Common Vulnerabilities and Exposures (CVE=C3=82=C2=AE). A=
+ny copy you make for such purposes is authorized provided that you reprod=
+uce MITRE's copyright designation and this license in any such copy.<br /=
+>
+<br />
+DISCLAIMERS<br />
+<br />
+ALL DOCUMENTS AND THE IN=46ORMATION CONTAINED THEREIN PROVIDED BY MITRE A=
+RE PROVIDED ON AN =22AS IS=22 BASIS AND THE CONTRIBUTOR, THE ORGANIZATION=
+ HE/SHE REPRESENTS OR IS SPONSORED BY (I=46 ANY), THE MITRE CORPORATION, =
+ITS BOARD O=46 TRUSTEES, O=46=46ICERS, AGENTS, AND EMPLOYEES, DISCLAIM AL=
+L WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRAN=
+TY THAT THE USE O=46 THE IN=46ORMATION THEREIN WILL NOT IN=46RINGE ANY RI=
+GHTS OR ANY IMPLIED WARRANTIES O=46 MERCHANTABILITY OR =46ITNESS =46OR A =
+PARTICULAR PURPOSE.<br />
+<br />
+A copy is available at https://github.com/distributedweaknessfiling/DW=46=
+-Database/blob/master/TermsOfUse.md<br />
+<br />
+To contact the DW=46 either hit reply, or email kurt=40seifried.org manua=
+lly with your question/concerns/etc.<br />
+<br /></blockquote>
+</div>
+</body>
+</html>
+
+--59127b47_7545e146_1f92--
+

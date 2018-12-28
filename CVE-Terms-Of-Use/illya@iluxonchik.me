@@ -1,0 +1,142 @@
+Delivered-To: kurt@seifried.org
+Received: by 2002:a4f:b47:0:0:0:0:0 with SMTP id 68-v6csp8667039ivl;
+        Thu, 17 May 2018 10:16:52 -0700 (PDT)
+X-Google-Smtp-Source: AB8JxZph3VF+F5mfDGqKNTDhTfn+BTZsshgNhX7w4xdskmM+YPTlzFrrOmdi1EB9ZBot8LXgxyxH
+X-Received: by 2002:adf:85f4:: with SMTP id 49-v6mr4909806wru.33.1526577412539;
+        Thu, 17 May 2018 10:16:52 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1526577412; cv=none;
+        d=google.com; s=arc-20160816;
+        b=PqiRrYNaK+94jiM/2UF2a7J3ZJgcU9wxsnqg2r0a3obNgHyCegbaKL3Wuys2xx3QIo
+         OPwcpU/einfCTLAFnuCdmWbvBpWXvATB4FxeEdzXH/0QUbnYhNsOlUM8fUY9EkxSlSjR
+         xjPCciNwgHWhoa8aoWzeRput+y7ckKBFGZkKdq3jRV8yXasCO3sqbSyLvTM6ePkl55wc
+         CrGUPGTbohBSA7GIIea4zdtfkAhxGMBMucvAK9PgwqkV8HtMpV8c4G48yweJtSvnFpc4
+         HYTNKp0ksEz7LyqhiKbJd/jS2zgzm5UMIfCvLsOW5mIHJgYV2jBNWtAL8Gvxs+CcR7+t
+         uCSw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:to:from:references
+         :message-id:subject:date:dkim-signature:arc-authentication-results;
+        bh=rjk4FtkD81zSvZ8uTLmNcuOLTmM45/rDMKgXSj4yvY8=;
+        b=PCXmCg6C9IU2VrxJGrE7tCE2Ci3T0PjS8I06svW2jnzMkMX7eWWE2N/SIHKMtB+3k9
+         xMpZe5MRZ3azbhZ8GvLVey8yU1yaHwCcvc2HnVeYnovQl5DAsI/0R4AHsVlmAaFxZv/D
+         EF3xO2U0Tex2JFcpzeVt8mT1YiJFoSE6Hm6RWOczCnLOrNDXG8M3y4YEg//87KMzcDIN
+         ARw5pbNlIgHQu5xAqFMX8882aHYYxttHwx4fjCgZfTWvFvY9/08GlRHuP38iu2Zg0H/S
+         /2t2JHewnqVYWatVIuDVIaBEbFQwxuN4AOEX9lSC1Qojv4q858oyvzII+biV/12pJqzv
+         o+3A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@iluxonchik.me header.s=mail header.b=RO38U9il;
+       spf=pass (google.com: domain of illya@iluxonchik.me designates 80.211.139.19 as permitted sender) smtp.mailfrom=illya@iluxonchik.me;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=iluxonchik.me
+Return-Path: <illya@iluxonchik.me>
+Received: from mail.iluxonchik.me (mail.iluxonchik.me. [80.211.139.19])
+        by mx.google.com with ESMTPS id k18-v6si5189805wri.39.2018.05.17.10.16.52
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 17 May 2018 10:16:52 -0700 (PDT)
+Received-SPF: pass (google.com: domain of illya@iluxonchik.me designates 80.211.139.19 as permitted sender) client-ip=80.211.139.19;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@iluxonchik.me header.s=mail header.b=RO38U9il;
+       spf=pass (google.com: domain of illya@iluxonchik.me designates 80.211.139.19 as permitted sender) smtp.mailfrom=illya@iluxonchik.me;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=iluxonchik.me
+Received: from authenticated-user (mail.iluxonchik.me [80.211.139.19])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by mail.iluxonchik.me (Postfix) with ESMTPSA id CF8FF80BCD
+	for <kurt@seifried.org>; Thu, 17 May 2018 18:16:50 +0100 (WEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=iluxonchik.me; s=mail;
+	t=1526577411; bh=rjk4FtkD81zSvZ8uTLmNcuOLTmM45/rDMKgXSj4yvY8=;
+	h=Date:Subject:References:From:To:From;
+	b=RO38U9ilWswX9KHb8eC3x+71ilmpJbRY/yDzZqtRKWz0t2NFhGkkJwJ1PMAzToBpR
+	 LBBAcAHGsaD7ZHewHp4RDr3JQigdzIvG+lTkgBYBKoUSL4Q7VGvJeq3l8BC45fv1xn
+	 iW2Z6EyU+9naSsiVnrZyNSCfNh9UmTiRBQLovw0JMWeAMsGOvUcsJSxzuNuX67Wpj2
+	 xBg++ea8HEn7A/oCTNxwAsj9oxeL84DRDqkKLce9o4JCjU2t+I8XvelE+oZttJv1Pj
+	 8wrIQp93nK1fSTrICfruuZ5eTpyNza1qhV3mVa/xf49YxlYiEK9dFq/pvwG+LTioO7
+	 1ZP/tw8XzaeyA==
+Date: Thu, 17 May 2018 18:16:48 +0100
+Subject: Re:DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ illya@iluxonchik.me
+X-Priority: 3
+Message-ID: <-6j5ez6bmspics49owo-4ha5ksm8y9ny-m986f96bnh89e5gw2ozb6383kd95fz-cps1ltu2rt6r-7rxo5g-oi6j00-m2ada3-j349ny-grr6h7-jd4eujxeeza8b1xxfpd0f3edd0akr7ji322g-8izd3s.1526577410635@email.android.com>
+References: <20180517165346.91066.8784@slab.local>
+From: "illya@iluxonchik.me" <illya@iluxonchik.me>
+To: kurt@seifried.org
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+SSBhY2NlcHQuPGJyPjxicj5OYW1lOiBJbGx5YSBHZXJhc3ltY2h1azxicj48YnI+U2VudCBmcm9t
+IG15IEh1YXdlaSBNb2JpbGU8ZGl2IGNsYXNzPSJxdW90ZSIgc3R5bGU9ImxpbmUtaGVpZ2h0OiAx
+LjUiPjxicj48YnI+LS0tLS0tLS0gT3JpZ2luYWwgTWVzc2FnZSAtLS0tLS0tLTxicj5TdWJqZWN0
+OiBEV0YvQ1ZFIC0gQWNjZXB0YW5jZSBvZiBNSVRSRSBUZXJtcyBvZiBVc2UgZm9yIENWRSBmb3Ig
+aWxseWFAaWx1eG9uY2hpay5tZTxicj5Gcm9tOiBrdXJ0QHNlaWZyaWVkLm9yZzxicj5UbzogaWxs
+eWFAaWx1eG9uY2hpay5tZTxicj5DQzogPGJyPjxicj48YnIgdHlwZT0iYXR0cmlidXRpb24iPjxi
+bG9ja3F1b3RlIGNsYXNzPSJxdW90ZSIgc3R5bGU9Im1hcmdpbjowIDAgMCAuOGV4O2JvcmRlci1s
+ZWZ0OjFweCAjY2NjIHNvbGlkO3BhZGRpbmctbGVmdDoxZXgiPlRoaXMgaXMgYSBjb25maXJtYXRp
+b24gZW1haWwgc2VudCBmcm9tIENWRSByZXF1ZXN0IGZvcm0gYXQgaHR0cHM6Ly9pd2FudGFjdmUu
+b3JnLyBhc2tpbmcgeW91IHRvIGFjY2VwdCB0aGUgTUlUUkUgQ1ZFIFRlcm1zIG9mIFVzZSAoYXNz
+dW1pbmcgeW91IGZpbGxlZCBvdXQgdGhlIENWRSBmb3JtIGFuZCB3YW50IG9uZSwgd2UgY2FuJ3Qg
+dXNlIHRoZSBkYXRhIHVudGlsIHlvdSBhY2NlcHQgdGhlIE1JVFJFIENWRSBUZXJtcyBvZiBVc2Up
+LiA8YnI+PGJyPlNpbXBseSBxdW90ZSB0aGUgZW1haWwgYW5kIHJlcGx5IHdpdGggIkkgYWNjZXB0
+IiBhdCB0aGUgdG9wIGlmIHlvdSBhZ3JlZSB0byB0aGUgTUlUUkUgQ1ZFIFRlcm1zIG9mIFVzZSBh
+bmQgd2Ugd2lsbCBhZGQgYSBjb3B5IG9mIHRoZSBlbWFpbCB0byB0aGUgRFdGIE1JVFJFIENWRSBU
+ZXJtcyBvZiBVc2UgYWNjZXB0YW5jZSBkYXRhIGF0IGh0dHBzOi8vZ2l0aHViLmNvbS9kaXN0cmli
+dXRlZHdlYWtuZXNzZmlsaW5nL0RXRi1MZWdhbC1BY2NlcHRhbmNlL3RyZWUvbWFzdGVyL1Rlcm1z
+LU9mLVVzZTxicj48YnI+VGhlIHJlYXNvbiB3ZSB1c2UgYSBjb21wbGV0ZSBjb3B5IG9mIHRoZSBl
+bWFpbCBpcyB0aGF0IGl0IHByb3ZpZGVzIGFuIGFydGlmYWN0IHNob3dpbmcgdGhhdCB0aGUgZW1h
+aWwgYWRkcmVzcyBhY2NlcHRlZCB0aGUgVGVybXMgb2YgVXNlLCB3aGVuIHRoZXkgd2VyZSBhY2Nl
+cHRlZCBhbmQgc28gb24uIDxicj48YnI+VGhpcyBkYXRhIGNhbm5vdCBiZSByZW1vdmVkIGZyb20g
+dGhlIEludGVybmV0LCBvciBmcm9tIG91ciBnaXQgcmVwby4gSWYgeW91IGFyZSBjb25jZXJuZWQg
+YWJvdXQgeW91ciBwZXJzb25hbCBpbmZvcm1hdGlvbiAoaW4gdGhlIGZvcm0gb2YgeW91ciBlbWFp
+bCBhZGRyZXNzIGFuZCBhbnkgYXR0YWNoZWQgaW5mb3JtYXRpb24geW91IGluY2x1ZGUgbGlrZSB5
+b3VyIG5hbWUpIHBsZWFzZSBkbyBub3Qgc3VibWl0IGl0LCBzZXR1cCBhbiBlbWFpbCBhZGRyZXNz
+IGFuZCB1c2UgdGhhdC4gSSBjYW5ub3QgY29tcGx5IHdpdGggR0RQUiByZXF1ZXN0cyB0byByZW1v
+dmUgeW91ciBpbmZvcm1hdGlvbiBkdWUgdG8gdGhlIG5hdHVyZSBvZiBnaXQsIGFuZCBteSBpbmFi
+aWxpdHkgdG8gY29uZmlybSBpZiB5b3UgYXJlIGEgZXVyb3BlYW4gb3Igbm90LCBzbyBpZiB5b3Ug
+ZG9uJ3Qgd2FudCBpdCBpbiB0aGVyZSwgZG9uJ3QgcmVwbHkgd2l0aCAiSSBhY2NlcHQiLiA8YnI+
+PGJyPklmIHlvdSBkaWQgbm90IHN1Ym1pdCBhIENWRSByZXF1ZXN0IHRvIHRoZSBEV0YgeW91IGNh
+biBzYWZlbHkgaWdub3JlIHRoaXMgbWVzc2FnZSwgaG93ZXZlciB3ZSBtYXkgcmVzZW5kIGl0IGF0
+IHNvbWUgcG9pbnQgaW4gdGhlIGZ1dHVyZSwgaWYgeW91IGRvbid0IHdhbnQgYW55IGZ1dHVyZSBl
+bWFpbHMgc2ltcGx5IHJlcGx5IHdpdGggInVuc3Vic2NyaWJlIiBvciAiRE9OJ1QgU0VORCBNRSBU
+SElTIEVNQUlMIEVWRVIgQUdBSU4iIGFuZCBJJ2xsIGFkZCB5b3VyIGVtYWlsIGFkZHJlc3MgdG8g
+dGhlIGJsb2NrIGxpc3Qgc28gd2UgZG9uJ3Qgc3BhbSB5b3Ugd2l0aCB0aGVzZSwgcGxlYXNlIG5v
+dGUgdGhhdCB0aGlzIHdpbGwgcHJldmVudCB5b3UgZnJvbSBiZWluZyBhYmxlIHRvIGFjY2VwdCB0
+aGUgTUlUUkUgQ1ZFIFRlcm1zIG9mIFVzZSB2aWEgdGhlIERXRiBhdXRvbWF0aWNhbGx5IGluIGZ1
+dHVyZSAoeW91J2xsIGhhdmUgdG8gbWFudWFsbHkgYXNrKS4gQnV0IGFnYWluLCBpZiB5b3UgaGF2
+ZSBubyBpZGVhIHdoYXQgYSBDVkUgaXMgdGhlbiB5b3UgY2FuIGlnbm9yZSB0aGlzL2FzayB0byBi
+ZSBhZGRlZCB0byB0aGUgYmxvY2sgbGlzdCB3aXRoIG5vIHByb2JsZW1zLiA8YnI+PGJyPk1JVFJF
+IENWRSBUZXJtcyBvZiBVc2U8YnI+PGJyPkxJQ0VOU0U8YnI+PGJyPlN1Ym1pc3Npb25zOiBGb3Ig
+YWxsIG1hdGVyaWFscyB5b3Ugc3VibWl0IHRvIHRoZSBDb21tb24gVnVsbmVyYWJpbGl0aWVzIGFu
+ZCBFeHBvc3VyZXMgKENWRe+/ve+/vSksIHlvdSBoZXJlYnkgZ3JhbnQgdG8gVGhlIE1JVFJFIENv
+cnBvcmF0aW9uIChNSVRSRSkgYW5kIGFsbCBDVkUgTnVtYmVyaW5nIEF1dGhvcml0aWVzIChDTkFz
+KSBhIHBlcnBldHVhbCwgd29ybGR3aWRlLCBub24tZXhjbHVzaXZlLCBuby1jaGFyZ2UsIHJveWFs
+dHktZnJlZSwgaXJyZXZvY2FibGUgY29weXJpZ2h0IGxpY2Vuc2UgdG8gcmVwcm9kdWNlLCBwcmVw
+YXJlIGRlcml2YXRpdmUgd29ya3Mgb2YsIHB1YmxpY2x5IGRpc3BsYXksIHB1YmxpY2x5IHBlcmZv
+cm0sIHN1YmxpY2Vuc2UsIGFuZCBkaXN0cmlidXRlIHN1Y2ggbWF0ZXJpYWxzIGFuZCBkZXJpdmF0
+aXZlIHdvcmtzLiBVbmxlc3MgcmVxdWlyZWQgYnkgYXBwbGljYWJsZSBsYXcgb3IgYWdyZWVkIHRv
+IGluIHdyaXRpbmcsIHlvdSBwcm92aWRlIHN1Y2ggbWF0ZXJpYWxzIG9uIGFuICJBUyBJUyIgQkFT
+SVMsIFdJVEhPVVQgV0FSUkFOVElFUyBPUiBDT05ESVRJT05TIE9GIEFOWSBLSU5ELCBlaXRoZXIg
+ZXhwcmVzcyBvciBpbXBsaWVkLCBpbmNsdWRpbmcsIHdpdGhvdXQgbGltaXRhdGlvbiwgYW55IHdh
+cnJhbnRpZXMgb3IgY29uZGl0aW9ucyBvZiBUSVRMRSwgTk9OLUlORlJJTkdFTUVOVCwgTUVSQ0hB
+TlRBQklMSVRZLCBvciBGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRS48YnI+PGJyPkNW
+RSBVc2FnZTogTUlUUkUgaGVyZWJ5IGdyYW50cyB5b3UgYSBwZXJwZXR1YWwsIHdvcmxkd2lkZSwg
+bm9uLWV4Y2x1c2l2ZSwgbm8tY2hhcmdlLCByb3lhbHR5LWZyZWUsIGlycmV2b2NhYmxlIGNvcHly
+aWdodCBsaWNlbnNlIHRvIHJlcHJvZHVjZSwgcHJlcGFyZSBkZXJpdmF0aXZlIHdvcmtzIG9mLCBw
+dWJsaWNseSBkaXNwbGF5LCBwdWJsaWNseSBwZXJmb3JtLCBzdWJsaWNlbnNlLCBhbmQgZGlzdHJp
+YnV0ZSBDb21tb24gVnVsbmVyYWJpbGl0aWVzIGFuZCBFeHBvc3VyZXMgKENWRe+/ve+/vSkuIEFu
+eSBjb3B5IHlvdSBtYWtlIGZvciBzdWNoIHB1cnBvc2VzIGlzIGF1dGhvcml6ZWQgcHJvdmlkZWQg
+dGhhdCB5b3UgcmVwcm9kdWNlIE1JVFJFJ3MgY29weXJpZ2h0IGRlc2lnbmF0aW9uIGFuZCB0aGlz
+IGxpY2Vuc2UgaW4gYW55IHN1Y2ggY29weS48YnI+PGJyPkRJU0NMQUlNRVJTPGJyPjxicj5BTEwg
+RE9DVU1FTlRTIEFORCBUSEUgSU5GT1JNQVRJT04gQ09OVEFJTkVEIFRIRVJFSU4gUFJPVklERUQg
+QlkgTUlUUkUgQVJFIFBST1ZJREVEIE9OIEFOICJBUyBJUyIgQkFTSVMgQU5EIFRIRSBDT05UUklC
+VVRPUiwgVEhFIE9SR0FOSVpBVElPTiBIRS9TSEUgUkVQUkVTRU5UUyBPUiBJUyBTUE9OU09SRUQg
+QlkgKElGIEFOWSksIFRIRSBNSVRSRSBDT1JQT1JBVElPTiwgSVRTIEJPQVJEIE9GIFRSVVNURUVT
+LCBPRkZJQ0VSUywgQUdFTlRTLCBBTkQgRU1QTE9ZRUVTLCBESVNDTEFJTSBBTEwgV0FSUkFOVElF
+UywgRVhQUkVTUyBPUiBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIEFOWSBX
+QVJSQU5UWSBUSEFUIFRIRSBVU0UgT0YgVEhFIElORk9STUFUSU9OIFRIRVJFSU4gV0lMTCBOT1Qg
+SU5GUklOR0UgQU5ZIFJJR0hUUyBPUiBBTlkgSU1QTElFRCBXQVJSQU5USUVTIE9GIE1FUkNIQU5U
+QUJJTElUWSBPUiBGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRS48YnI+PGJyPkEgY29w
+eSBpcyBhdmFpbGFibGUgYXQgaHR0cHM6Ly9naXRodWIuY29tL2Rpc3RyaWJ1dGVkd2Vha25lc3Nm
+aWxpbmcvRFdGLUxlZ2FsLUFjY2VwdGFuY2UvYmxvYi9tYXN0ZXIvVGVybXMtT2YtVXNlLm1kPGJy
+Pjxicj5UbyBjb250YWN0IHRoZSBEV0YgZWl0aGVyIGhpdCByZXBseSwgb3IgZW1haWwga3VydEBz
+ZWlmcmllZC5vcmcgbWFudWFsbHkgd2l0aCB5b3VyIHF1ZXN0aW9uL2NvbmNlcm5zL2V0Yy4gPGJy
+PjwvYmxvY2txdW90ZT48L2Rpdj4=
+

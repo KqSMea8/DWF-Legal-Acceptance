@@ -1,0 +1,154 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.6.230 with SMTP id g93csp88731uag;
+        Tue, 20 Jun 2017 02:43:34 -0700 (PDT)
+X-Received: by 10.28.113.85 with SMTP id m82mr2125694wmc.21.1497951814087;
+        Tue, 20 Jun 2017 02:43:34 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1497951813; cv=none;
+        d=google.com; s=arc-20160816;
+        b=MetVO/Yo2O+bfIxSgxhEgegCo4lfv6ZN4ftka1L2XFNAKkYkItfA7zQ1JVQvuoQ0bC
+         ky0K1rQP7mcnmtjKBsqfUedVqNwT544pvC6q0Y6SqVdcf/NC5lLgPK2JwPJNAHoWO1F0
+         C95EAB8HFTmJC5kd5t+bgW311MyWG+hlnZV+ghvyNjpObpLUo7rjHnAlSREmgW/dtZCe
+         ftXikx4ueiSIC47Blbck/g6Rhf6ff1bJ2pmZhFwhr0tjxnMR/JUX3y26x8rDLmucqADl
+         dKpUAAJMuOZA0CJJ+CbHFMcxvHbW9wR5C93hcCqAPFsLXngf0n2PDs1iDhZYZ7/seacV
+         vZMA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:references:in-reply-to:message-id:date:subject:to:from
+         :arc-authentication-results;
+        bh=BbgicegwZFOyxpBAai2VSt9tJOYm5CYmNeyFKSNcJ/Q=;
+        b=eyInAFmk4QA5UtTQY607rV7MuQ0m43yII34z3zK+qOwaPCrKaqXFXC0FGnIgx4EW2o
+         Pr8D1h/pnffiAcHUZP3yBnbXPdZOCOuhT/Fzeil0BZkzFgtD6qbx0v1eq3YC5d/itsct
+         IY3L4fBvOhP0SCNa0dt3WwiflnsIuiiVHcfmAFkZVOw+QWeXFI9PASnywoES4nYF1fu4
+         1BZ/vLbgMk4EjTTiJjqaUGGmWYW2J/WL2OPGScLCcq5zbrSgRlYOeMW9NamoLUnPoOAk
+         kbZn+GBkanssLbA6uCOLwWZVaHnP+BTn7dzOvyW3k/UUNkbDY7o0Uc0wqETAAQ8mv5re
+         rdbA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: best guess record for domain of fabian.freyer@physik.tu-berlin.de designates 130.149.7.33 as permitted sender) smtp.mailfrom=fabian.freyer@physik.tu-berlin.de
+Return-Path: <fabian.freyer@physik.tu-berlin.de>
+Received: from mail.tu-berlin.de (mail.tu-berlin.de. [130.149.7.33])
+        by mx.google.com with ESMTPS id k189si13406487wmg.36.2017.06.20.02.43.33
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 20 Jun 2017 02:43:33 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of fabian.freyer@physik.tu-berlin.de designates 130.149.7.33 as permitted sender) client-ip=130.149.7.33;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: best guess record for domain of fabian.freyer@physik.tu-berlin.de designates 130.149.7.33 as permitted sender) smtp.mailfrom=fabian.freyer@physik.tu-berlin.de
+X-tubIT-Incoming-IP: 130.149.50.25
+Received: from mail.physik-pool.tu-berlin.de ([130.149.50.25] helo=mail.physik.tu-berlin.de)
+	by mail.tu-berlin.de (exim-4.89/mailfrontend-7) with esmtp 
+	for <kurt@seifried.org>
+	id 1dNFh6-0002nX-0k; Tue, 20 Jun 2017 11:43:33 +0200
+Received: from [192.168.0.11] (ip5f5bf516.dynamic.kabel-deutschland.de [95.91.245.22])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mail.physik.tu-berlin.de (Postfix) with ESMTPSA id 10F00152C
+	for <kurt@seifried.org>; Tue, 20 Jun 2017 09:43:31 +0000 (UTC)
+From: "Fabian Freyer" <fabian.freyer@physik.tu-berlin.de>
+To: kurt@seifried.org
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ fabian.freyer@physik.tu-berlin.de
+Date: Tue, 20 Jun 2017 11:42:55 +0200
+Message-ID: <4A09BE44-54EF-47BA-B1AE-EBA51CFB4B6F@physik.tu-berlin.de>
+In-Reply-To: <20170620014640.46686.88826@bigbox.local>
+References: <20170620014640.46686.88826@bigbox.local>
+MIME-Version: 1.0
+Content-Type: multipart/signed;
+ boundary="=_MailMate_E0851092-52DE-4ED1-86F1-24B1B1C8BC06_=";
+ micalg=pgp-sha512; protocol="application/pgp-signature"
+X-Mailer: MailMate (1.9.6r5347)
+
+This is an OpenPGP/MIME signed message (RFC 3156 and 4880).
+
+--=_MailMate_E0851092-52DE-4ED1-86F1-24B1B1C8BC06_=
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+I accept
+
+On 20 Jun 2017, at 3:46, kurt@seifried.org wrote:
+
+> This is a confirmation email sent from CVE request form at https://iwan=
+tacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you =
+filled out the CVE form and want one, we can't use the data until you acc=
+ept the MITRE CVE Terms of Use).
+>
+> Simply quote the email and reply with "I accept" at the top if you agre=
+e to the MITRE CVE Terms of Use and we will add a copy of the email to th=
+e DWF MITRE CVE Terms of Use acceptance data at https://github.com/distri=
+butedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>
+> The reason we use a complete copy of the email is that it provides an a=
+rtifact showing that the email address accepted the Terms of Use, when th=
+ey were accepted and so on.
+>
+> If you did not submit a CVE request to the DWF you can safely ignore th=
+is message, however we may resend it at some point in the future, if you =
+don't want any future emails simply reply with "unsubscribe" or "DON'T SE=
+ND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block=
+ list so we don't spam you with these, please note that this will prevent=
+ you from being able to accept the MITRE CVE Terms of Use via the DWF aut=
+omatically in future (you'll have to manually ask). But again, if you hav=
+e no idea what a CVE is then you can ignore this/ask to be added to the b=
+lock list with no problems.
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities=
+ and Exposures (CVE=C2=AE), you hereby grant to The MITRE Corporation (MI=
+TRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non=
+-exclusive, no-charge, royalty-free, irrevocable copyright license to rep=
+roduce, prepare derivative works of, publicly display, publicly perform, =
+sublicense, and distribute such materials and derivative works. Unless re=
+quired by applicable law or agreed to in writing, you provide such materi=
+als on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, ei=
+ther express or implied, including, without limitation, any warranties or=
+ conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A=
+ PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusiv=
+e, no-charge, royalty-free, irrevocable copyright license to reproduce, p=
+repare derivative works of, publicly display, publicly perform, sublicens=
+e, and distribute Common Vulnerabilities and Exposures (CVE=C2=AE). Any c=
+opy you make for such purposes is authorized provided that you reproduce =
+MITRE's copyright designation and this license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE A=
+RE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/=
+SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BO=
+ARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES=
+, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE =
+USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIE=
+D WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> A copy is available at https://github.com/distributedweaknessfiling/DWF=
+-Database/blob/master/TermsOfUse.md
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manuall=
+y with your question/concerns/etc.
+
+--=_MailMate_E0851092-52DE-4ED1-86F1-24B1B1C8BC06_=
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename=signature.asc
+Content-Type: application/pgp-signature; name=signature.asc
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIcBAEBCgAGBQJZSO4tAAoJEJnmpZHLPOfmWJcP/izWpVhFcw4kiqrxFRhNI7e5
+zW3yPB69G965IubdnaEbu8UCniDiOwFzT/PS44vVJr3w9vUDEuPFIAS31lkU0GN+
+iycGOCS5PP6uaXeAxo+f+Fmk3XTwcmcso3bBCU7DuWY5G6K8dml+a/A2FjOg/ylQ
+7W17ps+pw4B6UkwmYu/9JFtEDFnLhBs2kTGkZ5W9sQvyZNfHZo+EbawI7+0w6W8T
+ULr3P41UcwYwicASNOjKN997Yi89uVJifPMyVUdNq9NzukMT/lQ7vJMQ/oAc0wRL
+vjotv8aTXBXWpx0pCK+/GBNscwotu86hUEctyBbHWEQd6FC3hyop/mQSFZji4pr8
+ZRGsnpLtdxugoQKuBfLPmldryAnSVMQ8cVoxsd2gAiAmqD9w1Ps7kAfHEE5StLag
+EngkCjZ9VZNhdmpDaw8wJCOcIAroKYDf0n79998aMDupUOe7tnQfYsiMNQZKj5FJ
+qDsIF+esQvQAahsYlFzHeoa8N0cSIFr8rD5R08q5TBNJMaLKEGWI4Bit6r5O3yQ8
+2y19ID2sqSa9r0dQ+ds03FPAwIeg8t+G5sxFxbZNuK97He/sBj+CfxpEBZrz09ib
+Hka33dbjhzfLk76RnZFOXHo8frR7VrMRyxpyVRXU4AGY2ykwl44QKZgfZfv5lb32
+iaweLakp1iNFriKyrqs2
+=pskv
+-----END PGP SIGNATURE-----
+
+--=_MailMate_E0851092-52DE-4ED1-86F1-24B1B1C8BC06_=--

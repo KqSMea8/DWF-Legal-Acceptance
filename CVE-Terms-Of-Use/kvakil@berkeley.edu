@@ -1,0 +1,235 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.79.79.71 with SMTP id d68csp5591155ivb;
+        Tue, 21 Nov 2017 11:49:52 -0800 (PST)
+X-Received: by 10.36.122.81 with SMTP id a78mr3238458itc.61.1511293792418;
+        Tue, 21 Nov 2017 11:49:52 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1511293792; cv=none;
+        d=google.com; s=arc-20160816;
+        b=0fJrYMn5S1uuqxWKCr1qQSC99XBLP1BRSFze6aAH5iI3vIPI6AOLWIRuomZ7fpkCZ7
+         HpQ3vCLGAYRhe3Gm3DSRiJK7nBZBC3ajr0wJXt2CQ0V+lWJz1OgzqMAPIu7psq2M/olt
+         VhTm3mM6uMbZP1wXMz3Ec8pjF2x7hyuhaI8XZBIwKr3Q/ZFwcBmnr8mQAbeNhUj0t6k/
+         5Xl74xfcCYpZc93DjhW1IbmmM1Nj9G/Hj9sQVLe5A9J0n2NguF96Km8+Xd5KIZrs41Jn
+         CSjaKcXomrkFef6Hp7q2hNPHP5SCxd/zAh0+nw+wR98vbZYduRgqjrK14S/rQrqusODs
+         F/bQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature:arc-authentication-results;
+        bh=YX/tF0Ntjd99ZQvCJuslji6dCUtFLqcXuFv9KA9GTS8=;
+        b=E4EuOoGTzCpfC+ug7KuyVyaUN4N5tOOsKqOxPab2/cTXRcwlpZueJNMLVIL2o8fTTx
+         5zYhK9p344pmEcFl8LyuWuYSWAqd+OPaI7Mm8XSSohNNMXOM99JrUJRd5GkkwGNpy4si
+         25tmfrVm78Xqx62b6Y1IO2mRXoTTobvVSBBiGXvCwaAQDt8QCW0TRtR3RkAXYtFVDWc6
+         ssBRRBLyUPs7SsbdXYyjhpgamtWVnzIc83M3XwA5Q+xVeKaNDX0tVulKJ3vcpiV644f6
+         e0+OToI3lYStJ9s4ZGCA1v8K8UsFSVTJEGDYehVoUKxZtmR82aqGnhF1eiNfmIO/APPh
+         VPdw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@berkeley-edu.20150623.gappssmtp.com header.s=20150623 header.b=qT9AgR+K;
+       spf=pass (google.com: domain of kvakil@berkeley.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=kvakil@berkeley.edu
+Return-Path: <kvakil@berkeley.edu>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 123sor1131714itw.107.2017.11.21.11.49.52
+        for <kurt@seifried.org>
+        (Google Transport Security);
+        Tue, 21 Nov 2017 11:49:52 -0800 (PST)
+Received-SPF: pass (google.com: domain of kvakil@berkeley.edu designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@berkeley-edu.20150623.gappssmtp.com header.s=20150623 header.b=qT9AgR+K;
+       spf=pass (google.com: domain of kvakil@berkeley.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=kvakil@berkeley.edu
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=berkeley-edu.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=YX/tF0Ntjd99ZQvCJuslji6dCUtFLqcXuFv9KA9GTS8=;
+        b=qT9AgR+KE2W52s7hi04I1a1c+eFNmqRsk+fmvUoIls8RPcZXuwbUDfOfB56SPBgmTT
+         0UvhUt77yuYM/snzZdNvRKip58xCq+96TWIOrl0tzsA9s411W+/oIumEvM+HlxmNkJ9J
+         GTKqmYeYs3AbKZlkES3XfvAT9O9c3F1ERxor2Ye2gcwXaB0kuqrwvm39QXXD3ybuvZuP
+         aekrkzkww6UohnjHIAgxfbUJ09OYsTHGKAcBnCM/dL61LXjciWjrSm4Y3tABRz+4E/Fl
+         DV9kIfw/PSWY6/K6bZJnghaz6V2xKi0QeIAcEVimIv7WZSlzBCaSLZaFpZgcJ+koF15i
+         5eDA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=YX/tF0Ntjd99ZQvCJuslji6dCUtFLqcXuFv9KA9GTS8=;
+        b=ZtKX/eGK8m5lhjIg2dGw8jaK2LHKMXajpFg3dZniCU9LTVNphbFPtg8ojlGw6SDta0
+         gFnC1aFFRPbq8Lm5K36zUSCrRB+ESOSPO54Z0nOl2Vm2yXy9z84jQFIq/gWVH3C73HnL
+         c9N/PEdaBC+wXw8xgIxPg+FawU7m24NRLl3E89xP5JsBilGcl5s62iKcF+FRAxbJyso/
+         9FXeiX64RBSKdg7F+76g7nkUSQGQLCuzL7wMuF5fAonIuoy+p1dvyH0p2FjR59yhg8Tb
+         yYmjAkGFH0B8ioE/FItpozyuehaMlIHtWhaqJY8wI2jG2T+pGB+C2cAMV9Hevyh8SlLB
+         V+Ig==
+X-Gm-Message-State: AJaThX5IFl9PCKy6lwzY4KwI1bGskfFReM4GCE1g8YukiEcYap6c5W8l
+	VbXBdXSO9ri0THa061BEYiOmZVt3sHJeB7e76SFD4w==
+X-Google-Smtp-Source: AGs4zMZvAJEbClyMOclNDU+hN7I8SsuqQgmR2dDe2byB1xqgVdPbO+wB2yH0ablW0NM69qnKmIU55qH0Atf7qzeEJF0=
+X-Received: by 10.36.127.198 with SMTP id r189mr3429554itc.116.1511293791836;
+ Tue, 21 Nov 2017 11:49:51 -0800 (PST)
+MIME-Version: 1.0
+References: <20171118164208.64559.40209@slab.local>
+In-Reply-To: <20171118164208.64559.40209@slab.local>
+From: Keyhan Vakil <kvakil@berkeley.edu>
+Date: Tue, 21 Nov 2017 19:49:41 +0000
+Message-ID: <CABU-nVRL6zUvi1t95onci0ptX862RVHVU_BdjzHPf7vJVVAWUQ@mail.gmail.com>
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for kvakil@berkeley.edu
+To: kurt@seifried.org
+Content-Type: multipart/alternative; boundary="001a11459d9a9d2d1e055e838106"
+
+--001a11459d9a9d2d1e055e838106
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+I accept.
+
+On Sat, Nov 18, 2017 at 08:42 <kurt@seifried.org> wrote:
+
+> This is a confirmation email sent from CVE request form at
+> https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use
+> (assuming you filled out the CVE form and want one, we can't use the data
+> until you accept the MITRE CVE Terms of Use).
+>
+> Simply quote the email and reply with "I accept" at the top if you agree
+> to the MITRE CVE Terms of Use and we will add a copy of the email to the
+> DWF MITRE CVE Terms of Use acceptance data at
+> https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/ma=
+ster/Terms-Of-Use
+>
+> The reason we use a complete copy of the email is that it provides an
+> artifact showing that the email address accepted the Terms of Use, when
+> they were accepted and so on.
+>
+> If you did not submit a CVE request to the DWF you can safely ignore this
+> message, however we may resend it at some point in the future, if you don=
+'t
+> want any future emails simply reply with "unsubscribe" or "DON'T SEND ME
+> THIS EMAIL EVER AGAIN" and I'll add your email address to the block list =
+so
+> we don't spam you with these, please note that this will prevent you from
+> being able to accept the MITRE CVE Terms of Use via the DWF automatically
+> in future (you'll have to manually ask). But again, if you have no idea
+> what a CVE is then you can ignore this/ask to be added to the block list
+> with no problems.
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities
+> and Exposures (CVE=C2=AE), you hereby grant to The MITRE Corporation (MIT=
+RE) and
+> all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusiv=
+e,
+> no-charge, royalty-free, irrevocable copyright license to reproduce,
+> prepare derivative works of, publicly display, publicly perform,
+> sublicense, and distribute such materials and derivative works. Unless
+> required by applicable law or agreed to in writing, you provide such
+> materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+> KIND, either express or implied, including, without limitation, any
+> warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or
+> FITNESS FOR A PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,
+> no-charge, royalty-free, irrevocable copyright license to reproduce,
+> prepare derivative works of, publicly display, publicly perform,
+> sublicense, and distribute Common Vulnerabilities and Exposures (CVE=C2=
+=AE). Any
+> copy you make for such purposes is authorized provided that you reproduce
+> MITRE's copyright designation and this license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE
+> PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE
+> REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD =
+OF
+> TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRE=
+SS
+> OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE
+> INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIE=
+S
+> OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> A copy is available at
+> https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/blob/ma=
+ster/Terms-Of-Use.md
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manually
+> with your question/concerns/etc.
+>
+>
+
+--001a11459d9a9d2d1e055e838106
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div><div dir=3D"auto">I accept.</div><br><div class=3D"gmail_quote"><div>O=
+n Sat, Nov 18, 2017 at 08:42 &lt;<a href=3D"mailto:kurt@seifried.org">kurt@=
+seifried.org</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" styl=
+e=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">This is=
+ a confirmation email sent from CVE request form at <a href=3D"https://iwan=
+tacve.org/" rel=3D"noreferrer" target=3D"_blank">https://iwantacve.org/</a>=
+ asking you to accept the MITRE CVE Terms of Use (assuming you filled out t=
+he CVE form and want one, we can&#39;t use the data until you accept the MI=
+TRE CVE Terms of Use).<br>
+<br>
+Simply quote the email and reply with &quot;I accept&quot; at the top if yo=
+u agree to the MITRE CVE Terms of Use and we will add a copy of the email t=
+o the DWF MITRE CVE Terms of Use acceptance data at <a href=3D"https://gith=
+ub.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-=
+Use" rel=3D"noreferrer" target=3D"_blank">https://github.com/distributedwea=
+knessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use</a><br>
+<br>
+The reason we use a complete copy of the email is that it provides an artif=
+act showing that the email address accepted the Terms of Use, when they wer=
+e accepted and so on.<br>
+<br>
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don&#3=
+9;t want any future emails simply reply with &quot;unsubscribe&quot; or &qu=
+ot;DON&#39;T SEND ME THIS EMAIL EVER AGAIN&quot; and I&#39;ll add your emai=
+l address to the block list so we don&#39;t spam you with these, please not=
+e that this will prevent you from being able to accept the MITRE CVE Terms =
+of Use via the DWF automatically in future (you&#39;ll have to manually ask=
+). But again, if you have no idea what a CVE is then you can ignore this/as=
+k to be added to the block list with no problems.<br>
+<br>
+MITRE CVE Terms of Use<br>
+<br>
+LICENSE<br>
+<br>
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+ Exposures (CVE=C2=AE), you hereby grant to The MITRE Corporation (MITRE) a=
+nd all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusi=
+ve, no-charge, royalty-free, irrevocable copyright license to reproduce, pr=
+epare derivative works of, publicly display, publicly perform, sublicense, =
+and distribute such materials and derivative works. Unless required by appl=
+icable law or agreed to in writing, you provide such materials on an &quot;=
+AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either exp=
+ress or implied, including, without limitation, any warranties or condition=
+s of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR =
+PURPOSE.<br>
+<br>
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare=
+ derivative works of, publicly display, publicly perform, sublicense, and d=
+istribute Common Vulnerabilities and Exposures (CVE=C2=AE). Any copy you ma=
+ke for such purposes is authorized provided that you reproduce MITRE&#39;s =
+copyright designation and this license in any such copy.<br>
+<br>
+DISCLAIMERS<br>
+<br>
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN &quot;AS IS&quot; BASIS AND THE CONTRIBUTOR, THE ORGANIZATION=
+ HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS =
+BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES=
+, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE US=
+E OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WA=
+RRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.<br>
+<br>
+A copy is available at <a href=3D"https://github.com/distributedweaknessfil=
+ing/DWF-Legal-Acceptance/blob/master/Terms-Of-Use.md" rel=3D"noreferrer" ta=
+rget=3D"_blank">https://github.com/distributedweaknessfiling/DWF-Legal-Acce=
+ptance/blob/master/Terms-Of-Use.md</a><br>
+<br>
+To contact the DWF either hit reply, or email <a href=3D"mailto:kurt@seifri=
+ed.org" target=3D"_blank">kurt@seifried.org</a> manually with your question=
+/concerns/etc.<br>
+<br>
+</blockquote></div></div>
+
+--001a11459d9a9d2d1e055e838106--

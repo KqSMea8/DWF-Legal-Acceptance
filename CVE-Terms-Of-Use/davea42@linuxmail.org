@@ -1,0 +1,65 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.31.230.197 with SMTP id d188csp673974vkh;
+        Thu, 29 Sep 2016 21:50:23 -0700 (PDT)
+X-Received: by 10.55.106.2 with SMTP id f2mr4694488qkc.124.1475211023903;
+        Thu, 29 Sep 2016 21:50:23 -0700 (PDT)
+Return-Path: <davea42@linuxmail.org>
+Received: from mout.gmx.com (mout.gmx.com. [74.208.4.201])
+        by mx.google.com with ESMTPS id 58si10811730qtx.77.2016.09.29.21.50.23
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Sep 2016 21:50:23 -0700 (PDT)
+Received-SPF: neutral (google.com: 74.208.4.201 is neither permitted nor denied by best guess record for domain of davea42@linuxmail.org) client-ip=74.208.4.201;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 74.208.4.201 is neither permitted nor denied by best guess record for domain of davea42@linuxmail.org) smtp.mailfrom=davea42@linuxmail.org
+Received: from [192.168.88.9] ([73.70.123.243]) by mail.gmx.com (mrgmxus001)
+ with ESMTPSA (Nemesis) id 0M23nZ-1awtZV3loB-00u09E for <kurt@seifried.org>;
+ Fri, 30 Sep 2016 06:50:23 +0200
+Subject: Re: CVE - Acceptance of MITRE Terms of Use for CVE
+To: Kurt Seifried <kurt@seifried.org>
+References: <CABqVa3_CGQE4XE3g23zaFb9xUedVbkQCcO7mh6Mnv+--QsfVng@mail.gmail.com>
+From: David Anderson <davea42@linuxmail.org>
+Message-ID: <15d7d0b6-9a76-5abc-f670-beafb6e671a6@linuxmail.org>
+Date: Thu, 29 Sep 2016 21:50:21 -0700
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101
+ Thunderbird/45.3.0
+MIME-Version: 1.0
+In-Reply-To: <CABqVa3_CGQE4XE3g23zaFb9xUedVbkQCcO7mh6Mnv+--QsfVng@mail.gmail.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: 7bit
+X-Provags-ID: V03:K0:BLQb33XJcNsaWsVj/vJb8YQ8uEqLaPL2UPVsewRtKkuDenHe1Of
+ l3ECbI83id6UdC88d8ugoDXZOnamFKF7YzhrMK4QP/NsYxAiieFJEgYekypXw08CWWRx+dp
+ GUv88e7N9Zg+uhYun0jMyfbrQjbNYF/dTadIhrdHW/EuPMK9txBbWwoE8w+U03jGt5qyQDw
+ 5T89b/edlA2tSRAEAnOlA==
+X-UI-Out-Filterresults: notjunk:1;V01:K0:6VxoYjNfAOw=:gfehhXC//ytw4LjlraWCn1
+ cB2jq0UgCpG2g1i5itdJqqx44l5GZxY/mhZo5aS1hHdaLm3pFphnSs40Yn8xutfCoHXYj48xL
+ m7S5uOLp6ZQnt6IxYGvLCOBj15C0Ct6rNQmOmmhwrecfJpK2lILyH51GQSuLvHR32pQbqrYFV
+ dL2FOzK7g1keCnc+sFB7ENt5j+7J4obpnN74zvb0/Mri03u6S6XrIF11dLAUUh6+NjnZKqNuq
+ nQyWkEUFGgvPC2g/UOVV3s9lj5z9UrgSTkboUD3G7+XBlTVPmccGDcqBpFnUYoUi1GMJRfSV8
+ C9jJnxmvoTOSi1ompFfRwg1li3UFePz/OCZU9H2ugGbeMfB37x2RxElkSet41GPAQxWrzz3Q0
+ bEnvB/WbvlRh9onrgAeevYvHmkVr4uIdpeykSVIDztfSmIQfCtb5BJnlxRyNFQkgQRee+A12/
+ vMxS/rtchiAtZf2kOP3Rm1KVjaY3cVmg3SHAC5uaIJKiTvNplPJADhvpxZzDqQLiIkXj1lCLo
+ 2oKgjUCfWojUkLJHj5GhKNtneWhBhxrgmdh2d5eaoC5Q1LXrwaWwbifFqY7lxOUc4MOID2Q4W
+ 9cWBvNkN5TiYIwetHQ8tNStv5pb3CoeBqsUDmk+MGIUGX8K2O6wjGHvQbCYQY4JmmkUWTOndO
+ J7IWvhco+maV3BY+m0QVJ3tECeA/6yc9ebcCdco4+/NaSN5ZqdDb4QvRD7zTjpVtzGAZ6uxEX
+ DXH//1bY7TUbf3xVVBWRND0e3QNwHp99PbTYmThygrB2DAhZaxzM1i9N2V6PD6mcJQBeuC4z1
+ xsKEbiJ
+
+I accept.
+
+David Anderson
+
+On 09/29/2016 05:31 PM, Kurt Seifried wrote:
+> Hi, I need to confirm that you have accepted the MITRE Terms of Use
+> for CVE, available at:
+>
+> https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md
+>
+> and quoted below, please reply with "I accept" and I'll be able to
+> process your CVE request. Thanks!
+>
+
+
+-- 
+It's so much easier to suggest solutions when you don't know too much about the problem.  -- Malcolm Forbes
+

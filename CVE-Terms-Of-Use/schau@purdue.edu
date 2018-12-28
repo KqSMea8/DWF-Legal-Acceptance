@@ -1,0 +1,217 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.6.200 with SMTP id g66csp828012uag;
+        Mon, 19 Jun 2017 20:50:13 -0700 (PDT)
+X-Received: by 10.36.124.143 with SMTP id a137mr1765498itd.30.1497930613270;
+        Mon, 19 Jun 2017 20:50:13 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1497930613; cv=none;
+        d=google.com; s=arc-20160816;
+        b=loGPMJ2rDynCBBIWoquGESHDKT+6bOaguYMr33Clra97tcW+dTpQXSYWeN5yJPUh9g
+         VOL7qXdJLQBOC11lndMr1sXDTQomNqInXg3tzFDUq7Z0HShlv1wVwuqNTiFxxbOkcySf
+         kwxoGDWr7chPqXWFvUEIqKh1KaTn7F4MZkKWimevwFEDlr/JuP5NI4VtCjeJ6zXgLf9E
+         bJsKNcHO9V0TlQntGrUPChG/CdcfWMx0BYSZ/qTxw2/jqPlQ7WUo8uKKqYD+w4l5x1RW
+         tLe+VcYbnqwD5iYlsu6/hC4ttOHWxtgSbwLdHG7Bh9L8teAFXcOiE0TP0XuDfhNw6iqz
+         r7/Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=spamdiagnosticmetadata:spamdiagnosticoutput:content-language
+         :content-transfer-encoding:in-reply-to:mime-version:user-agent:date
+         :message-id:from:references:to:subject:dkim-signature
+         :arc-authentication-results;
+        bh=pfhPi919l4676Vz1tXh14V8epYqcKucUhVCMcnDSfGw=;
+        b=zHCVTui6fKlxqIf8mJeD+77TRf/KrNbx+LjCgt4X2Sq8pJIJ9VylRCLUshfTlKJW66
+         bS401hKUZAgs0oveuUu+0aJS1txQ+qAc63nnodm31KhgFjnZuIrzxUUVyZsb29ptHwCe
+         6WPxU7Cf5CJcSaqKQBb+KY53T9HVuRe1cL1L/lxM4SvfN1fwI2Jy9P580qZ69Qfb2DPD
+         xIZgIUhdbWnCbHP5l/zyMaYA8YZudjLtJTNykZm5eQSTS9aR9osbXb5uW7L7DNB1D75D
+         Z16f8xmKw2GPhcVvXFdQvPzbXkD9o3T9lDoJdZyUNbWMaNcW7Jn0ihBj4MR8Ks0tAJxd
+         QUHQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@purdue0.onmicrosoft.com header.b=B2hcmoOj;
+       spf=neutral (google.com: 104.47.32.97 is neither permitted nor denied by best guess record for domain of schau@purdue.edu) smtp.mailfrom=schau@purdue.edu
+Return-Path: <schau@purdue.edu>
+Received: from NAM01-SN1-obe.outbound.protection.outlook.com (mail-sn1nam01on0097.outbound.protection.outlook.com. [104.47.32.97])
+        by mx.google.com with ESMTPS id k187si8384742itk.88.2017.06.19.20.50.12
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Mon, 19 Jun 2017 20:50:13 -0700 (PDT)
+Received-SPF: neutral (google.com: 104.47.32.97 is neither permitted nor denied by best guess record for domain of schau@purdue.edu) client-ip=104.47.32.97;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@purdue0.onmicrosoft.com header.b=B2hcmoOj;
+       spf=neutral (google.com: 104.47.32.97 is neither permitted nor denied by best guess record for domain of schau@purdue.edu) smtp.mailfrom=schau@purdue.edu
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=purdue0.onmicrosoft.com; s=selector1-purdue-edu;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=pfhPi919l4676Vz1tXh14V8epYqcKucUhVCMcnDSfGw=;
+ b=B2hcmoOjemZdU5C0sqp51QpYAx065PfhrYE0nDDEfiqR3TYCKqUoWM+udODKDlvEg4p9hLAurkL4QOb5nvbhpt7HO1r/jeNkvGqBpUX7P9GlhUZEXMcz43+P9B0MYztmS9ilV4NPfGuF/qVfSoOWK+WKpF/5tAQ0r85DNryofBk=
+Authentication-Results: seifried.org; dkim=none (message not signed)
+ header.d=none;seifried.org; dmarc=none action=none header.from=purdue.edu;
+Received: from [192.168.1.3] (50.53.6.7) by
+ CY4PR08MB3429.namprd08.prod.outlook.com (10.171.253.146) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id
+ 15.1.1178.14; Tue, 20 Jun 2017 03:50:09 +0000
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ schau@purdue.edu
+To: kurt@seifried.org
+References: <20170620014457.46686.34418@bigbox.local>
+From: Sze Yiu Chau <schau@purdue.edu>
+Message-ID: <8841af05-3679-cd80-a761-b751d632e4c1@purdue.edu>
+Date: Mon, 19 Jun 2017 20:50:06 -0700
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101
+ Thunderbird/52.1.1
+MIME-Version: 1.0
+In-Reply-To: <20170620014457.46686.34418@bigbox.local>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Language: en-GB
+X-Originating-IP: [50.53.6.7]
+X-ClientProxiedBy: MWHPR10CA0068.namprd10.prod.outlook.com (10.169.238.30) To
+ CY4PR08MB3429.namprd08.prod.outlook.com (10.171.253.146)
+Return-Path: schau@purdue.edu
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: bc92a5d1-83e7-4fe5-92db-08d4b78f7250
+X-Microsoft-Antispam:
+	UriScan:;BCL:0;PCL:0;RULEID:(300000500050)(300135000095)(300000501050)(300135300095)(300000502050)(300135100095)(22001)(300000503050)(300135400095)(201703131423075)(201703031133081)(300000504050)(300135200095)(300000505050)(300135600095);SRVR:CY4PR08MB3429;
+X-Microsoft-Exchange-Diagnostics:
+	1;CY4PR08MB3429;3:rca56k1RujHL+/1Ehu0hs4Lv8LIO8NFNdx+GUa5bcaO/awgM9vZHt6PX2CltV3wXVqVnmX87hm53zxn3fiMG1tMAD2sULSJWaQ06i6Wb0AKgp0dqTf+ejaW1lPTenFyCK+8FYFn8PC5gDUx8HCf5sK8Ylc2OiV1oUo23X/LOLgpSP7guRulf7c1dFzrFUjVSiLTxIRX/z8TuYQai6PS6F9IM4azyjorHCeowWH0QyaywA4CIgrZkeUJU5VEHNHM5JimsSlXFB3HoCAnMxQX90helsXV5m1p7cQd9WRig0+j/NS1WSStDYk+ZrclYxzFmG2STsKaaRwu2psp3M7OsoEdJ4fM4WASwF717u19Ge1OUnOhBcdZj1ywvzo5mP6fzMN9PRr1ubsxR9myEjo3PXWivHmROC4IfyuuNeNMoUYgAX+tCifXZ7aIrQci1Qg0dg5x/gKLwv/OqW1+/y+n8TAt1UmHc9gs0AxnzFPwiHTzumghlval+XyJVNMIco4VyrndeUs9vG4hIH2UuS7U66vfGr68jN7ZD8zEmSCuB3+m1N6v81awWHl4vsTU499hiL6aw10mDC8VfFfKqO3ySJA/l/ySHqiYwSE34zTu83owmAbUBhAy8bx+qSdpVziByaemKy97sVD+m80R8fp4VlQb/n9Hpb+VRyAiHEpb2T1Ob3jzT4YbQivooNBPj0UWv
+X-MS-TrafficTypeDiagnostic: CY4PR08MB3429:
+X-Microsoft-Exchange-Diagnostics:
+	1;CY4PR08MB3429;25:j13n7caIu1yIfzd22HGYlw9tkoNkKT4WCIdErCw/JpVynkvm5YgWvIl38yRSxM4PyPcmcNSOUorZlvJseZguTGwbPtLkxWATszCTb/D/0b8eoWfhYTNN6fmUWGTxlgCebFmVVDZElEz/S5GGEhFEukZM8FjawtXnC5KKVHx6k9yCXNvoS4XekInb/u5soZD8uCB2qM/dx1rmqzg8ZzjJ59JI1ypP6BHqLLlAiIadYdALS+1qEUcoy5wZ7e9SzbJOjXuo6yS8IYw83O1H94Myl3hKr5x1f899JchAwuxeNRdaz2/CHNPiXL28zt5D0pai9PRt8XxJtQoDnWW0ximy1aolKsAk4M+e+NztyGyw+5n+9yaeYZCpLWmnu2LC3s/lSP59c+fqez5ElNZJPIjiTTn8qBXmQSLWkQs5xb5BOTML4gurfDWPf30fXnD2WWrXfIPRlo1AGMK3e7YMwkogAzP7iMnN6hShahwvBUY9/mW7UkzaD/YYtva5N8p+KTqOAurIJ504+kc4U3i2D//wNfuquvLFkDU+lkJfHziRklMGgxvfycDpl5BCESy3i3l9LUvecBlz+DoXu72SHZQ56zEFRbqKaS+pm/g8SVeelbPcmOuEQ+2/b/ho9FwIZ4W6dnoRO6gF+byZPI4s/JuU8vVgMlQSUvYEsGsMw84tX6VKXYYsTVztsBt5OCLaEvFFFXOSaUPOv26qiP0fR1JrnNF1xjhYeWc8Sf7Hx5Kz4UTIdAKe1CsujSkzV04dRS3s1Up13QaBNJf4K8GqQ3ds8uFz8Fh5l4yxOUBKjnUXYHokGmNOs12iJV60HTP5sJe16s/tYYY7vOXUlhXPRDu6mQohlNTN6e+vG55pmz3fqrnMAho7xik/98yLBPKFYHfIdZzyNU6XO8i8BhDLnknLWaqmD+o9wSHIuYjfD9iAPjw=
+X-Microsoft-Exchange-Diagnostics:
+	1;CY4PR08MB3429;31:BjooszcIBLHob7o3aAbVXXW+wp7nSyjP/E/b9DmtP/BbTIQGPMIv6TJJUFTw+DP4ARXwbY7bPSKNy8StUJmY8N2SAc8fAxs20P+XliUdZRnKdS4H1Fd3C/4uleIf1kdf6JQBpU49KUKudfttSGwD0khceynA8RY56vY2yFANAtc3FufTz6wznANwEHmv5XKJnZhVqJhP7mjOYi3Uvg1OI9hpno5iRNxBAWyf5LwAEgywy3/8XDrsdkBvLSy0XFIyek1GOVBiNsOCUbqzuwlkM+fwsr5fTmtIyO9NxkHL00zyjO1sDmxwXcSpML2dgKKTAF4RpakhNXbdMUxrpVfopgke3n+7Wc/nxVhc4e5gfokjVRIJ8jL4PEw72r/vO5NTu4fO1FlNipoYOhk19PjlFRy/RBscIRUD19KMKKHI2lV2OZZhjzLTfV1KaKS8n4YYeDUwqIXWM8xjmsoi6DJvYRjxYdgjmmp48fPpjOywTa2CbRqQ4B5GrUh/3kCO0XsoT2JHywDSs38R6eMHF22uMhfHtGeXoSNpGphCPJGYpokBskba2tPQy8rsLQcCLVmdhvd13CH5G5iYdpjim/Ki8Q/drRD0e/e0Ek6VO3ZwyBY3t6XOEsB1aUy7z4fNo30+40uvWmV0BB7MRsTyvTmG4akkWBLF0eD2lb8mnlgBlXmkoLbYrEK+XyjHG42TDo/y
+X-Microsoft-Exchange-Diagnostics:
+	1;CY4PR08MB3429;20:/O90zhHmILnmImZS4HzPmeEmHvFWe60Ca/BB0eIYN0UG7Li8tRaeDDbgc0tUY41VLxBQ03Eb5Gn/dKWjNr8avGecqxwVLUSn86ZkHppApY5Gp20Z2tQqr5sxRVGFeeWGn3Uv14mnAMmgaoTQ/Upd71kFaiz87IODQzTpbSQ4RDNj0Z67jzmfi/TYYcMuUngHkul0sv+0fjyefFV1CAt1ORZduniDgcynDQK4xQzQuNu77BF4Oke9Yciv7cTzUc+jhNYZsf8lgliLMgEBeYDDiBntulrCHVAWS2dzUMwGsb1nWZU1TPWFIsllrwJJXl1ihS7XUFAHvPHqlfrwJ4hx/8i0IB899k+dDcT7TqebG5t7eSPI7QpWCv5V9vARWlUf1U7ADBvESsEcj/SYMyx/a5HAITjG44OYtsnhv+Pk1Gw=
+X-Microsoft-Antispam-PRVS:
+	<CY4PR08MB34293302E280CB129CE21A34CFC50@CY4PR08MB3429.namprd08.prod.outlook.com>
+X-Exchange-Antispam-Report-Test: UriScan:(166841340047005)(166708455590820);
+X-Exchange-Antispam-Report-CFA-Test:
+	BCL:0;PCL:0;RULEID:(100000700101)(100105000095)(100000701101)(100105300095)(100000702101)(100105100095)(6040450)(601004)(2401047)(8121501046)(5005006)(100000703101)(100105400095)(10201501046)(3002001)(93006095)(93001095)(6041248)(20161123562025)(20161123560025)(20161123558100)(20161123555025)(201703131423075)(201702281529075)(201702281528075)(201703061421075)(201703061406153)(20161123564025)(6072148)(100000704101)(100105200095)(100000705101)(100105500095);SRVR:CY4PR08MB3429;BCL:0;PCL:0;RULEID:(100000800101)(100110000095)(100000801101)(100110300095)(100000802101)(100110100095)(100000803101)(100110400095)(100000804101)(100110200095)(100000805101)(100110500095);SRVR:CY4PR08MB3429;
+X-Microsoft-Exchange-Diagnostics:
+	=?utf-8?B?MTtDWTRQUjA4TUIzNDI5OzQ6akVPNnE3aTRoa083Zk51dGZTY3RoMXp5cUVG?=
+ =?utf-8?B?QXgxSkVtOGJONnNqOWFHdGJPOGlpMGtiT3NUUkwvdkNHMlJmeUd5ZlRveFkv?=
+ =?utf-8?B?NzZWeTZWVGk3SndzV2pUSjVHdWpGTlJhc3NDR2E0WUlUUE1lTDRQMmhOTzlK?=
+ =?utf-8?B?c3RtTjgyT2dVN3ZYQkQ3a0V4NnRIV0ZpdG1YOXIrR1JhckJrZ0pzWEJ3S2ho?=
+ =?utf-8?B?VThTckhhNDVUVVA1SjFlZDNMYWp0dmt3eG01Q29Ia0lGa2NkcTNOanRiNmlN?=
+ =?utf-8?B?RjVMZ1lnY1B3SEJXQ1lVY1F3TExRVUg5UFVUQkVJSFFrOGx3TVRlOThhQjQz?=
+ =?utf-8?B?MWxPdHFKK1g2VDY3aWFyZkIzYnBnOElTTWx0WTZXOEpRWFFraDFLbGxnQTNj?=
+ =?utf-8?B?RHRpNEpNa0Z2SDJFYnBZdXB4aEZsVjJCTDk3Unl6UlhiRTVDa0VONDFFOWl1?=
+ =?utf-8?B?cHJqR1AxUnIyTVZaWjA5R1FVWjRPQlJsTEQxV1cvZnNQSHdQQU9oREh0UGRV?=
+ =?utf-8?B?Q1FFc3hrTndoTi93T2ZTSGdZVGlyU0dEL0JzVldYQStRUWgwSzlodCtrNTdu?=
+ =?utf-8?B?RHA2ZlZaY0ZhaW0wWDdUUnNISjZxYzIvdEpONFJ6b1JVTTl1ZEZMb3hYV0pK?=
+ =?utf-8?B?WHdDekFiOGFPR1c3SUlXdVoxT1F2cExEVkEyUTdOT0FkZTdBS0JUKzZMN2Vi?=
+ =?utf-8?B?bUtGOHVHZmhOT04vNktCK1ZaaFk0K3YvZUlaKzVIajgreEpRdDVYb2NJV0Zt?=
+ =?utf-8?B?ZjFKSExTMHpCSTVRaVhIclo1bnhVMmlXbzFYYVNRQ2hSRTUzN1I3d00xMmFO?=
+ =?utf-8?B?NVMwUkladDBLM1k5MEcxNkpZaExGUzhJZ3c0SUdQRFh5bis2Z1NRY0c5Smlp?=
+ =?utf-8?B?RzNBNnVCUUNFL2drcmIwbWJlc3pYcWxZM0k2Rm15aFBzSEp4TldnVnhFbldX?=
+ =?utf-8?B?czVVaHlhY1ZPQnJ0VDI5VjcrRHRGNGNleWFrR3N6YkVRR0FjaW0yQ2xQWkRs?=
+ =?utf-8?B?VXpRTVFCaHBaZ0s4eDA2RllqMEE2SWtzWGFlakRZWUlvbjE5WVhFY05rTE5H?=
+ =?utf-8?B?RUNMQ0U0eHBFalhYbTh4ekZ2Q2pKUm85M2tuTGtnKy9qWGRTbk5yMXhnRGRT?=
+ =?utf-8?B?cFR3elZDblI1OVk2MXVNMnE0Ylh1QmZQaXpib0FwemZOME1YdlViTFRjVGtL?=
+ =?utf-8?B?OW1sZHNoTUI4dlJOMmNJVTRCVDF3NGk5WEhUL2dRbENqckRIQzFwbS90ZzRN?=
+ =?utf-8?B?bWJFZGg1Z1JHM0JzbENJaXc1YXBFS2JSWnR1S3B0bWxoaDI1c092VVh5a054?=
+ =?utf-8?B?SGo5RmxqbFYwcHQyb1BoOWp4ajYveFNtSXV4L3JlekxRRmIvYndNVFQ3anlw?=
+ =?utf-8?B?L0NxVTlkV0VFVFJJY2pwVEp4UXJTYmhKTjVzM2FmQWtpb2w0SUREY1JJMVly?=
+ =?utf-8?B?dHdSL0xyR2dXdHVLSzNzMkJyTUI0TGtFajRrcUpyZHh0akYyQXM1Sm5pdm92?=
+ =?utf-8?B?Ukg2Mk9hRUxoQ2oyUXpDOTBzSHZPbEdxbFNIbEZaZFc0Ui9EbHBodTNiTnJz?=
+ =?utf-8?B?M0ZDb0E2WXRhOHp4WTlZMmNCMHkwTW1ZRERqV0NyZGlKZjIvUFlSbEVkeFl0?=
+ =?utf-8?B?R3AzWklvMnVsS2l6VURlQWdYbFNMNmN3cEg1LzY2VnlHV1pFZWJyL1FoWWpp?=
+ =?utf-8?Q?guzuCS/YzWMvxlLrI=3D?=
+X-Forefront-PRVS: 03449D5DD1
+X-Forefront-Antispam-Report:
+	SFV:NSPM;SFS:(10019020)(4630300001)(6049001)(6009001)(39400400002)(39840400002)(39450400003)(39410400002)(28244002)(377454003)(24454002)(13624006)(5180700001)(25786009)(53546009)(47776003)(33646002)(2351001)(65806001)(66066001)(229853002)(90366009)(2361001)(6916009)(2950100002)(6666003)(189998001)(6116002)(36756003)(6486002)(3846002)(4001350100001)(23676002)(230700001)(478600001)(966005)(77096006)(50466002)(305945005)(86362001)(38730400002)(8676002)(7736002)(31696002)(53936002)(6246003)(110136004)(83506001)(81166006)(5660300001)(50986999)(88552002)(65826007)(76176999)(31686004)(42186005)(6306002)(75432002)(54356999)(64126003)(2906002)(221513004)(222073002);DIR:OUT;SFP:1102;SCL:1;SRVR:CY4PR08MB3429;H:[192.168.1.3];FPR:;SPF:None;MLV:sfv;LANG:en;
+X-Microsoft-Exchange-Diagnostics:
+	=?utf-8?B?MTtDWTRQUjA4TUIzNDI5OzIzOjc2YW9ET3BDNDdpSXp1cnRGdndGUXlOUEl3?=
+ =?utf-8?B?TnZDTFN0MG9sODlDdFpOMmpEbjBpbWRLTEdmSVJsN2l6Q1JaYitvUFhKUjVy?=
+ =?utf-8?B?SDQwOThCbkJYbUdCbEdJVUEzck1IZU8zYUNJcytZcDBsMk1ZTjlwTXV1VzIw?=
+ =?utf-8?B?c1o1VG9Pd2xOTFlRQi83aGR4ME56MUVHRXBxQjd0eTk2V3JWbytMcHdZK2lW?=
+ =?utf-8?B?b0xaNFNMMWxIOHUvQk1nczZHVVBHZFByY2FETG5uRTRRVDBWQU1ITVIrRmwx?=
+ =?utf-8?B?ajJHTjVmNTMyWis5eXNqRi9xQ0FYNStsUEtYbUlLdjViYzJsZHBBblBWdldC?=
+ =?utf-8?B?U2FCekJEdVRkMVFENzJITlRCMy9rZ3l2d2hibmlnbWhyTnJVY2lCU0VlZno3?=
+ =?utf-8?B?MTU5TnpwY2phQWlIeDUyVk9RZ29FMGhwWVRSL0tLTnlhSU9mbTUxMmttQkNT?=
+ =?utf-8?B?NHRleWx3M1JxZExjUDJ6UytHL0hKaFRRUnhNa2VVam1yc3J4SVl0eHkvUXZl?=
+ =?utf-8?B?b3AxMFBNWjYwN2oxeENnTnJISVdzT1FqR25GTE8rK0NvbmhwdUZCWFRVNFVH?=
+ =?utf-8?B?TmJlc3RrN2VRRjNITUpNV1ZSUkdjcU9rbTM5WUFyYkphTkMxZzhwamF4K3VE?=
+ =?utf-8?B?dG5KeldteVpsdVQ5L0ZhcmREdU1XVG1DN3FFemp0UzRWa2pUUldCSlNNZk4y?=
+ =?utf-8?B?MTBiOTBNZVphYXFXSE5tWGkzeWwrdlRYcmpkd0dBMG1wZjRNSXVuVXo0ZnZD?=
+ =?utf-8?B?R0hzdTBtOVpKYWxZc0N4cDhFL1BpWVNabThvSEFodnI1QmJ6NSs2QzNJdWFa?=
+ =?utf-8?B?QTZPbzJxMHhkZVhDNEl5MVVKZE1sMm1zT1pWNm5sTndpM2RJS0FjWkErWng3?=
+ =?utf-8?B?SkQ1ci92WWN5NWMxaFNiWEdZUzY3Myt3eHNNeTlzaFZ5VzFvM21PeWQzVzVE?=
+ =?utf-8?B?RW5nMkQvOFlWcVJzY1RKYUNCbzVEdW5iN21FeS8wT3FudDNTNm5JbFllckg1?=
+ =?utf-8?B?SVhNUkdmSVBiZys4M3ZZaTdHWkY5RlEyeWl3S2ovcjl3akxFWjF3MlE2djQ1?=
+ =?utf-8?B?RENWbjFhU3pveWxJZUNRcUt5L1JjdGRVejk5LzI2VEVKcE9KTmpEaHcydG5j?=
+ =?utf-8?B?ZWZGODFhM0JRa2NnTGxFbElKS0xTc2ZraC91ai8xOEEycnNBV0c0TVVxb0hU?=
+ =?utf-8?B?NXg0VCs5Y0w4UWYrUW05VkVWcFZ6Q2J4Zks0OVI4Y2s0ZUhhcEhBbmxXMk4w?=
+ =?utf-8?B?cW5JbXVUY0lZTVRGQ1dibUJUL1EzWXlsMjBSNHBsM2JtTDhIYUU1NE9TaTcx?=
+ =?utf-8?B?czBEOE0yNDQyK0UyTU1YZUtEMFNLS1pEOW9EYm1jMWNub25RWUdQdHRtcmpF?=
+ =?utf-8?B?U0d3dnN1M3YwVDFvelFQcWN5KzZRdDV5Ym5qMUw2SW83Qnp3ZUpnN2phaEJG?=
+ =?utf-8?B?NUwwMlgzZmpkUXZpS25YSDlqTGtGU3pxdUp4cVdSL2N3TSs4elZyMWxEd0VU?=
+ =?utf-8?B?am9rWWFOUHNzNm82MWVWUGxUZFFuVjFTL2hEelY3YzFtanc1Mis2OTFUQjdM?=
+ =?utf-8?B?MnJDcWN1RXVtNkFSZnFUUXRDVzJhbWxuN1BRTEw1dUV5M21rQ0thSUI5Y2Jm?=
+ =?utf-8?B?aGZweThGM29zYXBpRnRuY2JwYWN5ZDlFVWZCM1pqRWlLRjBZeHc5V3pSVGdx?=
+ =?utf-8?B?c3Y5ek4wb0FRWSt3R2llNUVXWlZsbWMyZi85elRUTzVvaS9ZWW9xSy9vNnFw?=
+ =?utf-8?B?VmZXenM5aUYzNndEc0haMWFsTXhqWDFoVmZpYlFOaW14eVEzL1REaUc5SCtR?=
+ =?utf-8?B?aTM5aFdGNFNSMzh3WTltQVRyMXdycnNFZDRCVE1YVEFyb2dqNHdKSzF0QVNU?=
+ =?utf-8?B?a0N6bUJmUUtYWkYwZTlaanZuRTB6WTlRT01mMlZIRTlTSE5pd2tmSzJROXU2?=
+ =?utf-8?B?VFZFUkR4eU9WQTBmcjhuNWdwc1k3OHM5Qkl3M2VUM3pPM1hTVFFZMy9EYlA4?=
+ =?utf-8?B?NzFjeG5JU0dady9VK1lGWkJSOGlIOXZzSUd5Zz09?=
+X-Microsoft-Exchange-Diagnostics:
+	=?utf-8?B?MTtDWTRQUjA4TUIzNDI5OzY6Q3RSWlNtUzBuQ0x4MTJGMHU2SmZxOHd6ekNh?=
+ =?utf-8?B?TEFMQkhNZnZZQWg1MldCRDlMM3NQR1U5Tit1MGxOdU94Q3ZpQVZrWXQzcFBh?=
+ =?utf-8?B?NHYwcEpJOHRQRHNRTjZlSXRJb2tMeVRuZVRHYjZITmZENG9UZkRGT2RlL1RQ?=
+ =?utf-8?B?aUsyMzVQbVMwWnU0emxydzJUVDhtNXRlNVIvYzZzdUkxclFqMjhDcEF0QWxW?=
+ =?utf-8?B?MEZUNEJINDFFaExXeGpCb3haSzJlcEtQVU5Hd2NZdVU3cFB2S3ZRdVRqSk5y?=
+ =?utf-8?B?WXRwN3ZOTmJQZVJmQ212amhpcjBwUVRCT3ZzVWlwUnBocWN1dzBjOWZKenB6?=
+ =?utf-8?B?elRMMDA4aWtCNm90SzNjN1hRSldabzBmUVpDSUZpOFpRWXRJSFMrcXdjZUhO?=
+ =?utf-8?B?RlBGS1hHYW5zaXRUeEJ0SGpiN3VHVmNsRlFkRGhNYURoNmxSUlNhK1BaMWxq?=
+ =?utf-8?B?cWh4ZEdCcEVzWXhXVEdGY056SUNlZmFEVE5FWmZ0SWgxb2g4b2lvWmpnNS9R?=
+ =?utf-8?B?NXBaUHpwL3JEb3ErT0sxQTN6RmVCNmExQUQ1U3JPcFpkMURNUU13dmJXQy93?=
+ =?utf-8?B?QkI0SEFsdi85VHNxa1BFZGh3WEZoMWo1bjJKR3UrRThQdG9LQWJkb2w2R0Vx?=
+ =?utf-8?B?WHIrT0tjUndIOHFZSi9NSXhYVkgvNFQrd21USjA5Uk9nK3VrYVRnTUZ1RnNi?=
+ =?utf-8?B?VDAza05rYTQvMHZaSFZQSitLU3JaZWIzSUMyK3ZMcHVJMExHZ3UzNHFpZGRU?=
+ =?utf-8?B?OXVBYzFLTStJeHdieldhcmZDY1ZzRDdMT3ZyNFdYYXVZdllBbStjcFd4d25G?=
+ =?utf-8?B?WGhRbXo0TlliRDFRTnozeitHS2t2L2dYczNFTTZ1NVdyamM5UUdBbVdacUZl?=
+ =?utf-8?B?bjlJbk1jajNsTVFpcmRrZGF3Y1ZZcmJaSkY3T0taVHBCUUhBaFA4RHR0THAr?=
+ =?utf-8?B?NitVcm4wODhuQVVhbkxOUjJ0bHNJQVNGcjJTUmt6MHJDeVJobGZBMWFtVFpC?=
+ =?utf-8?B?S2VURThWb3pOTmU1L25yelhMWXpiT3huSjVMNExrQ0t6RlZjb3pyTmowTjZD?=
+ =?utf-8?B?MGlEZWFpekd2UTdieklib2V1b293b3ArMmZURTFqREJpUnJETHVmM3FxUk9C?=
+ =?utf-8?B?WXdFZXY0UHVHdElHcDJ2L1doTVV5VEJ1aUFRU0Vkci9ESWlBQ2FTcE5yV09W?=
+ =?utf-8?B?ZS9KeTNMSUJCK2UvZDE1V3ZWNEU3S05KS0Zma1NTU0hzQ3hMazB1bkhrNDRN?=
+ =?utf-8?B?OUkvVjVwVEFGSDI2SWVXRzdSbUhQbG9BVk82SlRtbDhmTEZndWNvYWdDMmpv?=
+ =?utf-8?Q?y34ntbsGRHEzoQ7zkn1wJA9ybyACE24=3D?=
+X-Microsoft-Exchange-Diagnostics:
+	1;CY4PR08MB3429;5:fIWjM0vqHjDrnW9xbLAJYuohh9OoRy5rEjGffQHcKWR9N6kW5HsxoSHJKewDhONlvxjf2KeMOlCXYQ8ZfqYwmUqQlqd68UZtCTJ8gyoAglL3ibBR39+QIHafgD3L2kSBYEmNYr8Zpoa6A1uRPwOnkGnNvRFMqnMN67KCVHIvqZ69VSpKCMNWjD0dB2U3K7/DyfkbettvbQ1zOTc8NrWXsScasSOpOQHkjExdAe6moI5akRJQbN9ajXLsZFBiRd6FRnfgiCfvNZvKVVK9mXoZUBHNHD+2UbJ8AQNxdOxNR0XaMI3CO2uX1wW7Bd5XXUSUP3q/nZrdWTDisjc/XJCK24nsl4gZ+kxhPkF64Dy/DjV0gsP3kvMD+O4iloKdQC/MG23OsUu6/2LXqHMCt9M7Ukf/8hswpE+H71vucFh91RiyLjVCW8RgGp3pVLWNnwebGxOFfI6C0wmOaSwoG1nebKh0AwUeOgVNAA/91zipU1C1Wz17bBU45mvPm1tgR6Lw;24:38mkrqZaSUFKG0GgHrr8Zt2NYa9dEDi69vW2KXifsSs17JmWFhle2vgZ3uR3XJDMGvanihfbOoaUe5odIMhYbrZV+k6r6n+7cE+GX9Zbj5I=
+SpamDiagnosticOutput: 1:99
+SpamDiagnosticMetadata: NSPM
+X-Microsoft-Exchange-Diagnostics:
+	1;CY4PR08MB3429;7:MQumig+kJvM1CUx8Nc2B772kkJ7/B8MSni0KB1jnH8rZjADWrU4NiRE49iaGD5EvdI3oYZT/GPrCHuTV80e1FvwGn3JGRTNigrTT35Q/Xbrqaoih7K/+53lx8JoCLu+SalWcFbfs9zNq+dbuQ0bBb4ws2GlelLuv+Ckk6Fmv9PgjdkTIScoFMNw9OBbO24pgpLIOE9kLkEVcSxBA1sK2Y/LohkUFu7uTCK257myo7mQLNAfS7iXMrtIyiJKqito0JHvFsEgJpfn5d7G6Yl+D/OmRXeAU7wlvMEok6ZS1YBuNpI/UkBAhGrrEg5vtSLrGlcFM6fat+BBLZPIivG1b0Ae26WxpfWE3EFjbsa3/MpPpkNZrQ8CjvQQVgLbZZFdvvNoR2y8/ErMNw6dDOfX0ovu9Kg2DvQQasBvoa3OguqQUEcOOrjGuAWCY1Dov7A0dwJR47fSEymvlETKJ7606PQ7UCJBHpNjxLRa5Bdc3HvlC4nw1+d1Ons6sbaqt9OS16T0CtyinkJzHjiPVzwBpZhzJDzlrBeFQlH61zmlyGUQUT1phMRQf/p8CyX2phQl/jp+hcGnWdBM8jxKBWV/jobuhwlomE/kUL3DR3z1Jntd5D0ElQC63HwsHIfxeqAvFUELB34ctUKf9DheZ6MDA1L+y3gx/STwzM59BmUnH9cUUBSblNgONUyRH7Mj5DGcL/5d+4QCfl97hJY8dK3znKHB5qhmWq2KfVekm5Cu0LvHE40SHJF0B353JFD5TLYJfD/JHD5yQFhvnFMTG1nPQAFX0ldxk0gYDzoMJjFVJvOA=
+X-OriginatorOrg: purdue.edu
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 20 Jun 2017 03:50:09.0771 (UTC)
+X-MS-Exchange-CrossTenant-FromEntityHeader: Hosted
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CY4PR08MB3429
+
+I accept
+
+
+On 06/19/2017 06:44 PM, kurt@seifried.org wrote:
+> This is a confirmation email sent from CVE request form at https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled out the CVE form and want one, we can't use the data until you accept the MITRE CVE Terms of Use).
+>
+> Simply quote the email and reply with "I accept" at the top if you agree to the MITRE CVE Terms of Use and we will add a copy of the email to the DWF MITRE CVE Terms of Use acceptance data at https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>
+> The reason we use a complete copy of the email is that it provides an artifact showing that the email address accepted the Terms of Use, when they were accepted and so on.
+>
+> If you did not submit a CVE request to the DWF you can safely ignore this message, however we may resend it at some point in the future, if you don't want any future emails simply reply with "unsubscribe" or "DON'T SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so we don't spam you with these, please note that this will prevent you from being able to accept the MITRE CVE Terms of Use via the DWF automatically in future (you'll have to manually ask). But again, if you have no idea what a CVE is then you can ignore this/ask to be added to the block list with no problems.
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities and Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and all CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute such materials and derivative works. Unless required by applicable law or agreed to in writing, you provide such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, and distribute Common Vulnerabilities and Exposures (CVE??). Any copy you make for such purposes is authorized provided that you reproduce MITRE's copyright designation and this license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> A copy is available at https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manually with your question/concerns/etc.
+>
+

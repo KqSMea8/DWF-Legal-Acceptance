@@ -1,0 +1,125 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.6.162 with SMTP id g31csp196564uag;
+        Wed, 10 May 2017 00:24:51 -0700 (PDT)
+X-Received: by 10.25.193.1 with SMTP id r1mr1993478lff.127.1494401091887;
+        Wed, 10 May 2017 00:24:51 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1494401091; cv=none;
+        d=google.com; s=arc-20160816;
+        b=bf9icJTz5rlf1LmIazaC6urLKhOAeu80+2qee+BkteTd8dsssFw+v8EbZ/GiNlwZba
+         jz0BAZ5ikToSL4L8cjeQtiRBSNSk4Ws2Oe8PNSd59rUrQKkJanNFJNJRKMIEv0lBxvwh
+         ak+hdGvmXfrSzInlVl8FUWRHUocKwYrFPkZfCATcwo5Zh0AVNERsxyYv1uzQM8fc4PDS
+         gdRZbrVSevASSc5rztzRbDXg0QUFjNHvent0Qhiv4igX7u9rAs2VIoUl/xBT9Cfgoxvm
+         O61gDoUoUTo+PKM5Wn+0eOSt5bMSjIiUF6wr5tbOzB5spleOBG7gEjgsCudS3a2QmL6X
+         e9Mw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-transfer-encoding:content-language
+         :accept-language:in-reply-to:references:message-id:date:thread-index
+         :thread-topic:subject:to:from:arc-authentication-results;
+        bh=2E4ILWi6zXCVpENTLET5QXjuJ9rV9AcVmq4KV8wn2tg=;
+        b=IKRnjpumEqcpVfLMPp2SsBPTSaKA5/A1BMN9buTmnKGQw32uX5bKHeonOFqROeuUmg
+         191+47kuviCaGT5smTiwXO0HJBxfhpb1VSINVwLPIOVYr7zb5YcB403TBjLNRbkXXEKk
+         z6040CwfFYUpXvqxDpNEdrJjqlhFvibibZAJiuggtakkcg3k1ZgRxmJo3tIrsktK1G7/
+         kV30Kapg4lYSriQ4B7uADlevu7ogomLHCf0yJIHpCobaArvjIuz/rSrHRkYF8p9NyOjk
+         ao8a7HsECtw5paHKgQ92Z9Pp3i09A3fLAVvAvtivhHsCV0V8vPs4pKBzVjHxOPeh7fPm
+         6OjA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of bjorn.lunden@2secure.se designates 94.127.36.203 as permitted sender) smtp.mailfrom=bjorn.lunden@2secure.se
+Return-Path: <bjorn.lunden@2secure.se>
+Received: from exch2.inspectit.se (exch.inspectit.se. [94.127.36.203])
+        by mx.google.com with ESMTPS id d30si1231411lfj.34.2017.05.10.00.24.51
+        for <kurt@seifried.org>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Wed, 10 May 2017 00:24:51 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bjorn.lunden@2secure.se designates 94.127.36.203 as permitted sender) client-ip=94.127.36.203;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bjorn.lunden@2secure.se designates 94.127.36.203 as permitted sender) smtp.mailfrom=bjorn.lunden@2secure.se
+Received: from BRAVO.2securemail.local ([fe80::aecd:4d1c:db6d:5c0]) by
+ BRAVO.2securemail.local ([fe80::aecd:4d1c:db6d:5c0%17]) with mapi id
+ 14.02.0387.000; Wed, 10 May 2017 09:25:09 +0200
+From: =?iso-8859-1?Q?Bj=F6rn_Lund=E9n?= <bjorn.lunden@2secure.se>
+To: "kurt@seifried.org" <kurt@seifried.org>
+Subject: RE: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ bjorn.lunden@2secure.se
+Thread-Topic: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ bjorn.lunden@2secure.se
+Thread-Index: AQHSyTWXMFx1SsGD+keke1UHXQ9+GKHtKnsQ
+Date: Wed, 10 May 2017 07:25:09 +0000
+Message-ID: <28FEC14D460EE9428A190E5EF45E4E0B0AAA681C@BRAVO.2securemail.local>
+References: <20170510023126.8102.79891@bigbox.local>
+In-Reply-To: <20170510023126.8102.79891@bigbox.local>
+Accept-Language: sv-SE, en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [10.46.31.124]
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+I accept
+
+-----Original Message-----
+From: kurt@seifried.org [mailto:kurt@seifried.org]=20
+Sent: den 10 maj 2017 04:31
+To: Bj=F6rn Lund=E9n
+Subject: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for bjorn.lunde=
+n@2secure.se
+
+This is a confirmation email sent from CVE request form at https://iwantacv=
+e.org/ asking you to accept the MITRE CVE Terms of Use (assuming you filled=
+ out the CVE form and want one, we can't use the data until you accept the =
+MITRE CVE Terms of Use).=20
+
+Simply quote the email and reply with "I accept" at the top if you agree to=
+ the MITRE CVE Terms of Use and we will add it to the DWF MITRE CVE Terms o=
+f Use acceptance data at https://github.com/distributedweaknessfiling/DWF-L=
+egal-Acceptance/tree/master/Terms-Of-Use
+
+If you did not submit a CVE request to the DWF you can safely ignore this m=
+essage, however we may resend it at some point in the future, if you don't =
+want any future emails simply reply with "unsubscribe" or "DON'T SEND ME TH=
+IS EMAIL EVER AGAIN" and I'll add your email address to the block list so w=
+e don't spam you with these, please note that this will prevent you from be=
+ing able to accept the MITRE CVE Terms of Use via the DWF automatically in =
+future (you'll have to manually ask). But again, if you have no idea what a=
+ CVE is then you can ignore this/ask to be added to the block list with no =
+problems.=20
+
+MITRE CVE Terms of Use
+
+LICENSE
+
+Submissions: For all materials you submit to the Common Vulnerabilities and=
+ Exposures (CVE??), you hereby grant to The MITRE Corporation (MITRE) and a=
+ll CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, =
+no-charge, royalty-free, irrevocable copyright license to reproduce, prepar=
+e derivative works of, publicly display, publicly perform, sublicense, and =
+distribute such materials and derivative works. Unless required by applicab=
+le law or agreed to in writing, you provide such materials on an "AS IS" BA=
+SIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implie=
+d, including, without limitation, any warranties or conditions of TITLE, NO=
+N-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+
+CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, n=
+o-charge, royalty-free, irrevocable copyright license to reproduce, prepare=
+ derivative works of, publicly display, publicly perform, sublicense, and d=
+istribute Common Vulnerabilities and Exposures (CVE??). Any copy you make f=
+or such purposes is authorized provided that you reproduce MITRE's copyrigh=
+t designation and this license in any such copy.
+
+DISCLAIMERS
+
+ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE P=
+ROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE RE=
+PRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF T=
+RUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS =
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE I=
+NFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES O=
+F MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+A copy is available at https://github.com/distributedweaknessfiling/DWF-Dat=
+abase/blob/master/TermsOfUse.md
+
+To contact the DWF either hit reply, or email kurt@seifried.org manually wi=
+th your question/concerns/etc.=20
+

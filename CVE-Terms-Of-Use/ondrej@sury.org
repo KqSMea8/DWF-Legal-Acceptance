@@ -1,0 +1,150 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.3.232 with SMTP id 95csp2119781uau;
+        Sun, 9 Jul 2017 00:49:00 -0700 (PDT)
+X-Received: by 10.55.42.104 with SMTP id q101mr6924183qkh.84.1499586540905;
+        Sun, 09 Jul 2017 00:49:00 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1499586540; cv=none;
+        d=google.com; s=arc-20160816;
+        b=srPSX+FHnphpNVTulreXegKLsBXO9a36IgIB86lqzgPbyB81Z0KHwzGNALBdModwpG
+         59DOLBSVJcuMMl418p8FELPycpNIIUcLrovtJ8Had56otf+xh4tA7u2KUlQSMkJHikre
+         dH899dmo46l197dk3CYhgD7HFBkoArTb55/ZEncwlomEgS3c1eWVvsjOSIb4dY059WXb
+         W3mM1Ru5s1gBeTLzn4va6WWc1QuyzHYFjv6fLPRWys23N8nQJhUUWFDqDMa0coqZOZIE
+         A+QQJwbcAWyV8Gvvffx/GDGMSgc6lnWCFylJKIG0Y5rdmBbIqVUvHIur4YWvSBIjamf/
+         jTPA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:subject:user-agent
+         :references:in-reply-to:message-id:date:to:from:dkim-signature
+         :dkim-signature:arc-authentication-results;
+        bh=KpZmsB1GfYNxfTMxninhPqw+d+yCQ6EssQ6IQayT70M=;
+        b=nWWopwfhWDt4J45byCLS8Mc26JtsXxkvAsVqRjlvnhG8WyplpoqmRDGkfVtouqsIj/
+         Ocqofo2ye9WZSPS7c45qIHd3ZHHAf54i9IZXQPVf0ZLzCYMmZxL61UWg7rm7Dxn6JwZW
+         B90xMe16S24xVYNuLg1nNatAmxT29YHC8GXw+gbBIZUJonPZ2auKMrayb5jFtsWMpNmU
+         aIjxUAJOrQgjxVmeB2vYiUq9IVwPN1l5Z5MRnfjcNRDYHJiXhEUsHCBjOleiHe7GUkzk
+         N+M+YIAU+wE/9Ir8QJokwv6uyicV6PxzOWsFA3ofzMDp1cAtv7aIB1uBQGNhzksa9Clf
+         sVuA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@sury.org header.b=CxuqYKHT;
+       dkim=pass header.i=@messagingengine.com header.b=KPMiV+1R;
+       spf=neutral (google.com: 66.111.4.27 is neither permitted nor denied by best guess record for domain of ondrej@sury.org) smtp.mailfrom=ondrej@sury.org
+Return-Path: <ondrej@sury.org>
+Received: from out3-smtp.messagingengine.com (out3-smtp.messagingengine.com. [66.111.4.27])
+        by mx.google.com with ESMTPS id z64si7696466qtc.2.2017.07.09.00.48.58
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 09 Jul 2017 00:48:58 -0700 (PDT)
+Received-SPF: neutral (google.com: 66.111.4.27 is neither permitted nor denied by best guess record for domain of ondrej@sury.org) client-ip=66.111.4.27;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@sury.org header.b=CxuqYKHT;
+       dkim=pass header.i=@messagingengine.com header.b=KPMiV+1R;
+       spf=neutral (google.com: 66.111.4.27 is neither permitted nor denied by best guess record for domain of ondrej@sury.org) smtp.mailfrom=ondrej@sury.org
+Received: from compute4.internal (compute4.nyi.internal [10.202.2.44])
+	by mailout.nyi.internal (Postfix) with ESMTP id 6975620842
+	for <kurt@seifried.org>; Sun,  9 Jul 2017 03:48:58 -0400 (EDT)
+Received: from frontend1 ([10.202.2.160])
+  by compute4.internal (MEProxy); Sun, 09 Jul 2017 03:48:58 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sury.org; h=
+	content-transfer-encoding:content-type:date:from:in-reply-to
+	:message-id:mime-version:references:subject:to:x-me-sender
+	:x-me-sender:x-sasl-enc:x-sasl-enc; s=mesmtp; bh=KpZmsB1GfYNxfTM
+	xninhPqw+d+yCQ6EssQ6IQayT70M=; b=CxuqYKHTXuYgguKxWURHK9QN17iXGEI
+	jrfQffnFKVoV7z+SXtniQfd60cgGNEcVhOB2m07lEcGbZHE3c3qyc1XSR+AQbPKk
+	h1CXAu3ncPx6TKm7fXtgoJGDnhICkJgZ0EfV30WCo/A83OVGfcEY948BtSLqjgHV
+	jF3yjf8zZ7LA=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=
+	messagingengine.com; h=content-transfer-encoding:content-type
+	:date:from:in-reply-to:message-id:mime-version:references
+	:subject:to:x-me-sender:x-me-sender:x-sasl-enc:x-sasl-enc; s=
+	fm1; bh=KpZmsB1GfYNxfTMxninhPqw+d+yCQ6EssQ6IQayT70M=; b=KPMiV+1R
+	oDXLH8R+o/viYAFqFa4dRNrk99U0UcOVaOQ9IwIhrS7490o4fmn5u8Hq90X4YvE1
+	Zo/zOArJlHHT4TOL3SY/v3SbZ4poiHM5XBNSqkGRCwcl/d3jSTY3AEYkPi7M3mbq
+	3YnqsFRH6Sd0TjQO00Rrg0pylz+gHK6dfeUai6vgWbTFzANX2B6DD63CWgVM7dPs
+	nhVw55pzcK1sMKL4pFmrJdIqzEpZQ+stMjFwLtw8z0oLWAU3tX9uqnIQlLZMo01r
+	qG1xWKW61Ic+nJPqXcywJpsAzzfkptmtuUQISAy2sp8n4Ws2AQvc6jGdNbLn1sfU
+	rmRHVzjufEP59g==
+X-ME-Sender: <xms:6t9hWYKyCZSwm96kKK9w1oyBexXchURWHqGpcwq9Y-4kQwanHjPtWw>
+X-Sasl-enc: AX6RmUSZUpI8QMZruMNuffcGWR/o6oEeuuCI0QB1UeB9 1499586537
+Received: from [10.10.0.171] (dynamic-109-81-209-74.ipv4.broadband.iol.cz [109.81.209.74])
+	by mail.messagingengine.com (Postfix) with ESMTPA id C74457E962
+	for <kurt@seifried.org>; Sun,  9 Jul 2017 03:48:57 -0400 (EDT)
+From: =?UTF-8?B?T25kxZllaiBTdXLDvQ==?= <ondrej@sury.org>
+To: <kurt@seifried.org>
+Date: Sun, 09 Jul 2017 09:48:55 +0200
+Message-ID: <15d26529e58.2768.595dd7c4cc70d453d3914ebcaf051657@sury.org>
+In-Reply-To: <20170709032321.2470.95979@shiny-2.local>
+References: <20170709032321.2470.95979@shiny-2.local>
+User-Agent: AquaMail/1.10.0-403 (build: 101000001)
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for ondrej@sury.org
+MIME-Version: 1.0
+Content-Type: text/plain; format=flowed; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+I accept
+
+
+On 9 July 2017 05:23:30 kurt@seifried.org wrote:
+
+> This is a confirmation email sent from CVE request form at 
+> https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use 
+> (assuming you filled out the CVE form and want one, we can't use the data 
+> until you accept the MITRE CVE Terms of Use).
+>
+> Simply quote the email and reply with "I accept" at the top if you agree to 
+> the MITRE CVE Terms of Use and we will add a copy of the email to the DWF 
+> MITRE CVE Terms of Use acceptance data at 
+> https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>
+> The reason we use a complete copy of the email is that it provides an 
+> artifact showing that the email address accepted the Terms of Use, when 
+> they were accepted and so on.
+>
+> If you did not submit a CVE request to the DWF you can safely ignore this 
+> message, however we may resend it at some point in the future, if you don't 
+> want any future emails simply reply with "unsubscribe" or "DON'T SEND ME 
+> THIS EMAIL EVER AGAIN" and I'll add your email address to the block list so 
+> we don't spam you with these, please note that this will prevent you from 
+> being able to accept the MITRE CVE Terms of Use via the DWF automatically 
+> in future (you'll have to manually ask). But again, if you have no idea 
+> what a CVE is then you can ignore this/ask to be added to the block list 
+> with no problems.
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities and 
+> Exposures (CVE®), you hereby grant to The MITRE Corporation (MITRE) and all 
+> CVE Numbering Authorities (CNAs) a perpetual, worldwide, non-exclusive, 
+> no-charge, royalty-free, irrevocable copyright license to reproduce, 
+> prepare derivative works of, publicly display, publicly perform, 
+> sublicense, and distribute such materials and derivative works. Unless 
+> required by applicable law or agreed to in writing, you provide such 
+> materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY 
+> KIND, either express or implied, including, without limitation, any 
+> warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or 
+> FITNESS FOR A PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive, 
+> no-charge, royalty-free, irrevocable copyright license to reproduce, 
+> prepare derivative works of, publicly display, publicly perform, 
+> sublicense, and distribute Common Vulnerabilities and Exposures (CVE®). Any 
+> copy you make for such purposes is authorized provided that you reproduce 
+> MITRE's copyright designation and this license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE 
+> PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE 
+> REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD OF 
+> TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES, EXPRESS 
+> OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE 
+> INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES 
+> OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> A copy is available at 
+> https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manually 
+> with your question/concerns/etc.
+>
+
+

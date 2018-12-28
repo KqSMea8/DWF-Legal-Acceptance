@@ -1,0 +1,108 @@
+Delivered-To: kurt@seifried.org
+Received: by 10.176.65.42 with SMTP id j39csp498995uad;
+        Wed, 19 Apr 2017 19:18:49 -0700 (PDT)
+X-Received: by 10.200.38.21 with SMTP id u21mr5429609qtu.96.1492654729172;
+        Wed, 19 Apr 2017 19:18:49 -0700 (PDT)
+Return-Path: <ashutoss@andrew.cmu.edu>
+Received: from smtp.andrew.cmu.edu (SMTP.ANDREW.CMU.EDU. [128.2.157.37])
+        by mx.google.com with ESMTPS id o1si4378707qtb.231.2017.04.19.19.18.49
+        for <kurt@seifried.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 19 Apr 2017 19:18:49 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of ashutoss@andrew.cmu.edu designates 128.2.157.37 as permitted sender) client-ip=128.2.157.37;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: best guess record for domain of ashutoss@andrew.cmu.edu designates 128.2.157.37 as permitted sender) smtp.mailfrom=ashutoss@andrew.cmu.edu;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=andrew.cmu.edu
+Received: from webmail.andrew.cmu.edu (WEBMAIL-06.ANDREW.CMU.EDU [128.2.157.18])
+	(user=ashutoss mech=GSSAPI (56 bits))
+	by smtp.andrew.cmu.edu (8.15.2/8.15.2) with ESMTPA id v3K2Ilmc101611
+	for <kurt@seifried.org>; Wed, 19 Apr 2017 22:18:48 -0400
+Received: from 128.2.42.4 (proxying for 128.237.163.193)
+        (SquirrelMail authenticated user ashutoss@andrew.cmu.edu)
+        by webmail.andrew.cmu.edu with HTTP;
+        Wed, 19 Apr 2017 22:18:48 -0400
+Message-ID: <dc1ab6bc51c559990886521405868ac2.squirrel@webmail.andrew.cmu.edu>
+In-Reply-To: <20170420020829.49540.49333@bigbox.local>
+References: <20170420020829.49540.49333@bigbox.local>
+Date: Wed, 19 Apr 2017 22:18:48 -0400
+Subject: Re: DWF/CVE - Acceptance of MITRE Terms of Use for CVE for
+ ashutoss@andrew.cmu.edu
+From: ashutoss@andrew.cmu.edu
+To: kurt@seifried.org
+User-Agent: SquirrelMail/1.4.23 [SVN]
+MIME-Version: 1.0
+Content-Type: text/plain;charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+X-Priority: 3 (Normal)
+Importance: Normal
+X-PMX-Version: 6.3.0.2556906, Antispam-Engine: 2.7.2.2107409, Antispam-Data: 2017.4.20.20916
+X-SMTP-Spam-Clean: 11% (
+ PRIORITY_NO_NAME 0.716, HTML_00_01 0.05, HTML_00_10 0.05, LINES_OF_YELLING_3 0.05, BODY_SIZE_3000_3999 0, BODY_SIZE_5000_LESS 0, BODY_SIZE_7000_LESS 0, DATE_TZ_NA 0, FROM_EDU_TLD 0, IN_REP_TO 0, LEGITIMATE_SIGNS 0, MSG_THREAD 0, NO_REAL_NAME 0, REFERENCES 0, WEBMAIL_SOURCE 0, WEBMAIL_USER_AGENT 0, __ANY_URI 0, __BOUNCE_CHALLENGE_SUBJ 0, __BOUNCE_NDR_SUBJ_EXEMPT 0, __CP_URI_IN_BODY 0, __CT 0, __CTE 0, __CT_TEXT_PLAIN 0, __FORWARDED_MSG 0, __HAS_FROM 0, __HAS_MSGID 0, __HAS_X_PRIORITY 0, __HTTPS_URI 0, __IN_REP_TO 0, __LINES_OF_YELLING 0, __MIME_TEXT_ONLY 0, __MIME_TEXT_P 0, __MIME_TEXT_P1 0, __MIME_VERSION 0, __MULTIPLE_URI_TEXT 0, __NO_HTML_TAG_RAW 0, __PHISH_PHRASE1_A 0, __PHISH_SPEAR_CONSEQUENCES_A 0, __PHISH_SPEAR_HTTP_RECEIVED 0, __PHISH_SPEAR_STRUCTURE_1 0, __PHISH_SPEAR_STRUCTURE_2 0, __REFERENCES 0, __SANE_MSGID 0, __SUBJ_ALPHA_NEGATE 0, __TO_MALFORMED_2 0, __TO_NO_NAME 0,
+ __URI_IN_BODY 0, __URI_NOT_IMG 0, __URI_NO_WWW 0, __URI_NS , __URI_WITHOUT_PATH 0, __URI_WITH_PATH 0, __USER_AGENT 0)
+X-SMTP-Spam-Score: 11%
+X-Scanned-By: MIMEDefang 2.78 on 128.2.157.37
+
+I accept.
+
+> This is a confirmation email sent from CVE request form at
+> https://iwantacve.org/ asking you to accept the MITRE CVE Terms of Use
+> (assuming you filled out the CVE form and want one, we can't use the data
+> until you accept the MITRE CVE Terms of Use).
+>
+> Simply quote the email and reply with "I accept" at the top if you agree
+> to the MITRE CVE Terms of Use and we will add it to the DWF MITRE CVE
+> Terms of Use acceptance data at
+> https://github.com/distributedweaknessfiling/DWF-Legal-Acceptance/tree/master/Terms-Of-Use
+>
+> If you did not submit a CVE request to the DWF you can safely ignore this
+> message, however we may resend it at some point in the future, if you
+> don't want any future emails simply reply with "unsubscribe" or "DON'T
+> SEND ME THIS EMAIL EVER AGAIN" and I'll add your email address to the
+> block list so we don't spam you with these, please note that this will
+> prevent you from being able to accept the MITRE CVE Terms of Use via the
+> DWF automatically in future (you'll have to manually ask). But again, if
+> you have no idea what a CVE is then you can ignore this/ask to be added to
+> the block list with no problems.
+>
+> MITRE CVE Terms of Use
+>
+> LICENSE
+>
+> Submissions: For all materials you submit to the Common Vulnerabilities
+> and Exposures (CVE®), you hereby grant to The MITRE Corporation (MITRE)
+> and all CVE Numbering Authorities (CNAs) a perpetual, worldwide,
+> non-exclusive, no-charge, royalty-free, irrevocable copyright license to
+> reproduce, prepare derivative works of, publicly display, publicly
+> perform, sublicense, and distribute such materials and derivative works.
+> Unless required by applicable law or agreed to in writing, you provide
+> such materials on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+> ANY KIND, either express or implied, including, without limitation, any
+> warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or
+> FITNESS FOR A PARTICULAR PURPOSE.
+>
+> CVE Usage: MITRE hereby grants you a perpetual, worldwide, non-exclusive,
+> no-charge, royalty-free, irrevocable copyright license to reproduce,
+> prepare derivative works of, publicly display, publicly perform,
+> sublicense, and distribute Common Vulnerabilities and Exposures (CVE®).
+> Any copy you make for such purposes is authorized provided that you
+> reproduce MITRE's copyright designation and this license in any such copy.
+>
+> DISCLAIMERS
+>
+> ALL DOCUMENTS AND THE INFORMATION CONTAINED THEREIN PROVIDED BY MITRE ARE
+> PROVIDED ON AN "AS IS" BASIS AND THE CONTRIBUTOR, THE ORGANIZATION HE/SHE
+> REPRESENTS OR IS SPONSORED BY (IF ANY), THE MITRE CORPORATION, ITS BOARD
+> OF TRUSTEES, OFFICERS, AGENTS, AND EMPLOYEES, DISCLAIM ALL WARRANTIES,
+> EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE
+> OF THE INFORMATION THEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED
+> WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+>
+> A copy is available at
+> https://github.com/distributedweaknessfiling/DWF-Database/blob/master/TermsOfUse.md
+>
+> To contact the DWF either hit reply, or email kurt@seifried.org manually
+> with your question/concerns/etc.
+>
+>
+
+
