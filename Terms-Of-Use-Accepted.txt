@@ -118,6 +118,7 @@ cve-dwf-request@leo.gaspard.io
 cve.reporting@gmail.com
 cve.tigusoft@gmail.com
 cve@max-weller.de
+cve@rapid7.com
 cve@sektioneins.de
 cve@unsecure.blog
 cve@whitehats.nl
